@@ -1,0 +1,21 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- angle bracket shown before command -->
+		<polyline id="jsconsole-angle-bracket" points="-40,40 40,0 -40,-40" />
+		<line id="jsconsole-cursor" x1="-50" y1="0" x2="50" y2="0" />
+	</defs>
+	<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+		<!-- angle bracket -->
+		<g>
+			<!-- stroke -->
+			<use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#111" stroke-width="20" />
+			<!-- fill -->
+			<use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#444" stroke-width="12" />
+		</g>
+		<!-- blinking cursor underline -->
+		<g>
+			<use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#111" stroke-width="20" />
+			<use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#444" stroke-width="12" />
+		</g>
+	</g>
+</svg>

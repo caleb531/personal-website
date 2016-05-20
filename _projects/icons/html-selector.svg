@@ -1,0 +1,37 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- element name dot -->
+		<circle id="htmlselector-dot" cx="0" cy="0" r="20" stroke-width="4" />
+		<!-- closing angle bracket -->
+		<polyline id="htmlselector-gt-sign" points="-20,-30 20,0 -20,30" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+		<path id="htmlselector-arrow" d="M 0,-20 L 0,20 M -15,5 L 0,20 L 15,5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+	</defs>
+	<!-- transition arrow -->
+	<g>
+		<use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="#36c" stroke-width="10" />
+		<use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="#69f" stroke-width="4" />
+	</g>
+	<!-- child combinator -->
+	<g>
+		<use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#900" stroke-width="18" />
+		<use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#c33" stroke-width="10" />
+	</g>
+	<g fill="#c33" stroke="#900">
+		<!-- parent name -->
+		<use xlink:href="#htmlselector-dot" x="80" y="80" />
+		<!-- child name -->
+		<use xlink:href="#htmlselector-dot" x="240" y="80" />
+	</g>
+	<!-- opening angle bracket -->
+	<g transform="translate(200,0) scale(-1,1)">
+		<use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="#4a0" stroke-width="18" />
+		<use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="#7d3" stroke-width="10" />
+	</g>
+	<!-- opening angle bracket -->
+	<g>
+		<use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="#4a0" stroke-width="18" />
+		<use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="#7d3" stroke-width="10" />
+	</g>
+	<!-- tag name -->
+	<use xlink:href="#htmlselector-dot" x="160" y="240" fill="#7d3" stroke="#4a0" />
+</svg>

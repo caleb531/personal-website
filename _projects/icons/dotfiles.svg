@@ -1,0 +1,47 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- Terminal window body (frame) -->
+		<path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="#333" stroke="#000" id="dotfiles-terminal-body" />
+		<!-- Standard window titlebar control -->
+		<circle r="5" stroke-width="1" id="dotfiles-terminal-window-control" />
+		<!-- Terminal window titlebar -->
+		<g id="dotfiles-terminal-titlebar">
+			<!-- Titlebar body (frame) -->
+			<path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#ccd" stroke="#aab" />
+			<!-- Window Close button -->
+			<use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="#e44" stroke="#a11" />
+			<!-- Window Minimize button -->
+			<use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="#fc3" stroke="#d80" />
+			<!-- Window Zoom button -->
+			<use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d3" stroke="#4a0" />
+		</g>
+		<g id="dotfiles-terminal-text">
+			<!-- PS1 interactive prompts -->
+			<g fill="#fff">
+				<rect x="-110" y="-48" width="60" height="6" />
+				<rect x="-110" y="0" width="100" height="6" />
+				<rect x="-110" y="48" width="80" height="6" />
+			</g>
+			<!-- ls output -->
+			<g fill="#3cf">
+				<rect x="-110" y="-32" width="130" height="6" />
+				<rect x="-110" y="-16" width="130" height="6" />
+			</g>
+			<!-- diff added lines -->
+			<g fill="#7d3">
+				<rect x="-110" y="32" width="160" height="6" />
+			</g>
+			<!-- diff removed lines -->
+			<g fill="#e33">
+				<rect x="-110" y="16" width="180" height="6" />
+			</g>
+		</g>
+		<!-- Complete terminal -->
+		<g id="dotfiles-terminal">
+			<use xlink:href="#dotfiles-terminal-body" />
+			<use xlink:href="#dotfiles-terminal-text" />
+			<use xlink:href="#dotfiles-terminal-titlebar" />
+		</g>
+	</defs>
+	<use xlink:href="#dotfiles-terminal" x="160" y="167.5" stroke-width="4" />
+</svg>

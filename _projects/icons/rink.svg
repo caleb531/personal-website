@@ -1,0 +1,17 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- reusable icon elements -->
+	<defs>
+		<circle id="rink-ring-outer" cx="160" cy="160" r="110" fill="none" />
+	</defs>
+	<!-- outer ring -->
+	<g>
+		<use xlink:href="#rink-ring-outer" stroke="#596" stroke-width="24" />
+		<use xlink:href="#rink-ring-outer" stroke="#8c9" stroke-width="16" />
+	</g>
+	<g stroke-width="4">
+		<!-- inner circle -->
+		<circle cx="160" cy="160" r="20" fill="#8c9" stroke="#596" />
+		<!-- puck -->
+		<circle cx="90" cy="90" r="40" fill="#69f" stroke="#36c" />
+	</g>
+</svg>

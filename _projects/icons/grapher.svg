@@ -1,0 +1,16 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- quadratic curve -->
+		<path id="grapher-curve" d="M 60,60 Q 160,460,260,60" fill="none" stroke-linecap="round" />
+	</defs>
+	<!-- negative red curve -->
+	<g transform="scale(1,-1) translate(0,-320)">
+		<use xlink:href="#grapher-curve" stroke="#900" stroke-width="20" />
+		<use xlink:href="#grapher-curve" stroke="#c33" stroke-width="12" />
+	</g>
+	<!-- positive green curve -->
+	<g>
+		<use xlink:href="#grapher-curve" stroke="#4a0" stroke-width="20" />
+		<use xlink:href="#grapher-curve" stroke="#7d3" stroke-width="12" />
+	</g>
+</svg>

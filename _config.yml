@@ -18,3 +18,9 @@ github_username:  caleb531
 
 # Build settings
 markdown: kramdown
+
+# Collections used for new content types
+collections:
+  # Personal projects
+  projects:
+    output: false

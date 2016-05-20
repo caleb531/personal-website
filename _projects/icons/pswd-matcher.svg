@@ -1,0 +1,20 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- password chacter bullet -->
+		<circle id="pswdmatcher-bullet" cx="0" cy="0" r="20" stroke-width="4" />
+	</defs>
+	<!-- green (correct) bullets -->
+	<g fill="#6d3" stroke="#3a0">
+		<use xlink:href="#pswdmatcher-bullet" x="70" y="100" />
+		<use xlink:href="#pswdmatcher-bullet" x="130" y="100" />
+		<use xlink:href="#pswdmatcher-bullet" x="190" y="100" />
+		<use xlink:href="#pswdmatcher-bullet" x="250" y="100" />
+	</g>
+	<!-- red (incorrect) bullets -->
+	<g fill="#c33" stroke="#900">
+		<use xlink:href="#pswdmatcher-bullet" x="70" y="220" />
+		<use xlink:href="#pswdmatcher-bullet" x="130" y="220" />
+		<use xlink:href="#pswdmatcher-bullet" x="190" y="220" />
+		<use xlink:href="#pswdmatcher-bullet" x="250" y="220" />
+	</g>
+</svg>

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- icon elements -->
+	<g stroke-width="4">
+		<!-- top peg -->
+		<circle cx="160" cy="100" r="40" fill="#c33" stroke="#900" />
+		<!-- left hole -->
+		<circle cx="100" cy="220" r="20" fill="#444" stroke="#000" />
+		<!-- right peg -->
+		<circle cx="220" cy="220" r="40" fill="#58e" stroke="#25b" />
+	</g>
+</svg>

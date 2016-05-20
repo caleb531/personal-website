@@ -1,0 +1,9 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<!-- letter w -->
+	<polygon points="115,50 85,50 115,160 140,160 160,110 180,160 205,160 235,50 205,50 190,120 175,80 145,80 130,120" fill="#47d" stroke="#149" stroke-width="4" transform="translate(-20,-30) scale(1.1) rotate(15)" />
+
+	<!-- letter l -->
+	<polygon points="130,215 130,320 190,320 190,300 152,300 152,215" fill="#69f" stroke="#36c" stroke-width="4" transform="translate(-15,-25) scale(1.1) rotate(-15)" />
+
+</svg>

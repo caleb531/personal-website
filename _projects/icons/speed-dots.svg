@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- reusable icon elements -->
+	<defs>
+		<circle id="speeddots-dot" r="50" stroke-width="4" />
+	</defs>
+	<!-- green dot -->
+	<use xlink:href="#speeddots-dot" x="200" y="100" fill="#7d3" stroke="#4a0" />
+	<!-- blue dot -->
+	<use xlink:href="#speeddots-dot" x="160" y="220" fill="#58e" stroke="#25b" />
+	<!-- green dot trail (top to bottom) -->
+	<g fill="none" stroke="#7d3" stroke-width="4" stroke-linecap="round">
+		<line x1="140" y1="80" x2="60" y2="80" />
+		<line x1="140" y1="100" x2="90" y2="100" />
+		<line x1="140" y1="120" x2="30" y2="120" />
+	</g>
+	<!-- blue dot trail (top to bottom) -->
+	<g fill="none" stroke="#58e" stroke-width="4" stroke-linecap="round">
+		<line x1="100" y1="200" x2="60" y2="200" />
+		<line x1="100" y1="220" x2="40" y2="220" />
+		<line x1="100" y1="240" x2="80" y2="240" />
+	</g>
+</svg>

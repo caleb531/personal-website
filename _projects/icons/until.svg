@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- reusable icon elements -->
+	<defs>
+		<!-- clock body -->
+		<circle id="until-clock-body" cx="160" cy="160" r="110" />
+		<!-- clock hands -->
+		<polyline id="until-clock-hands" points="115,135 160,160 160,80" />
+	</defs>
+	<!-- icon elements -->
+	<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+		<!-- clock element strokes -->
+		<g stroke="#900" stroke-width="20">
+			<use xlink:href="#until-clock-body" />
+			<use xlink:href="#until-clock-hands" />
+		</g>
+		<!-- clock element fills -->
+		<g stroke="#c33" stroke-width="12">
+			<use xlink:href="#until-clock-body" />
+			<use xlink:href="#until-clock-hands" />
+		</g>
+	</g>
+</svg>

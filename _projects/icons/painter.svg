@@ -1,0 +1,11 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- icon elements -->
+	<g stroke-width="4">
+		<!-- paint circle -->
+		<circle cx="240" cy="80" r="40" fill="#69f" stroke="#36c" />
+		<!-- brush handle -->
+		<path d="M 40,280 Q 190,190,160,160 Q 130,130,40,280 Z" fill="#853" stroke="#520" />
+		<!-- brush tip -->
+		<path d="M 160,160 Q 200,200,220,100 Q 120,120,160,160 Z" fill="#444" stroke="#111" />
+	</g>
+</svg>

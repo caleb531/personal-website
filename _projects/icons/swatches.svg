@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- reusable icon components -->
+	<defs>
+		<!-- color swatch -->
+		<rect id="swatches-swatch" width="120" height="120" rx="16" ry="16" fill="none" />
+	</defs>
+	<!-- blue swatch -->
+	<g>
+		<use xlink:href="#swatches-swatch" x="140" y="140" stroke="#36c" stroke-width="24"  />
+		<use xlink:href="#swatches-swatch" x="140" y="140" stroke="#58e" stroke-width="16"  />
+	</g>
+	<!-- green swatch -->
+	<g>
+		<use xlink:href="#swatches-swatch" x="100" y="100" stroke="#3a0" stroke-width="24"  />
+		<use xlink:href="#swatches-swatch" x="100" y="100" stroke="#6d3" stroke-width="16"  />
+	</g>
+	<!-- red swatch -->
+	<g>
+		<use xlink:href="#swatches-swatch" x="60" y="60" stroke="#900" stroke-width="24"  />
+		<use xlink:href="#swatches-swatch" x="60" y="60" stroke="#c33" stroke-width="16"  />
+	</g>
+</svg>

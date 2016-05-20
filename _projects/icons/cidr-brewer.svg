@@ -1,0 +1,48 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- IP address body (frame) -->
+		<rect x="-120" y="-24" width="240" height="48" rx="4" ry="4" fill="#111" id="cidrbrewer-address-body" />
+		<!-- Generic IP address octet -->
+		<rect x="-25" y="-16" width="50" height="32" rx="0" ry="0" id="cidrbrewer-address-octet" />
+		<!-- First octet -->
+		<use xlink:href="#cidrbrewer-address-octet" x="-87" y="0" id="cidrbrewer-address-octet-1" />
+		<!-- Second octet -->
+		<use xlink:href="#cidrbrewer-address-octet" x="-29" y="0" id="cidrbrewer-address-octet-2" />
+		<!-- Third octet -->
+		<use xlink:href="#cidrbrewer-address-octet" x="29" y="0" id="cidrbrewer-address-octet-3" />
+		<!-- Fourth octet -->
+		<use xlink:href="#cidrbrewer-address-octet" x="87" y="0" id="cidrbrewer-address-octet-4" />
+	</defs>
+	<!-- First IP address -->
+	<g id="cidrbrewer-address-1" transform="translate(160, 64)">
+		<use xlink:href="#cidrbrewer-address-body" />
+		<g id="cidrbrewer-address-1-octets" fill="#36f">
+			<use xlink:href="#cidrbrewer-address-octet-1" />
+			<use xlink:href="#cidrbrewer-address-octet-2" />
+			<use xlink:href="#cidrbrewer-address-octet-3" />
+			<use xlink:href="#cidrbrewer-address-octet-4" />
+		</g>
+	</g>
+	<!-- Second IP address -->
+	<g id="cidrbrewer-address-2" transform="translate(160, 132)">
+		<use xlink:href="#cidrbrewer-address-body" />
+		<g id="cidrbrewer-address-2-octets" fill="#75f">
+			<use xlink:href="#cidrbrewer-address-octet-1" />
+			<use xlink:href="#cidrbrewer-address-octet-2" />
+			<use xlink:href="#cidrbrewer-address-octet-3" />
+			<use xlink:href="#cidrbrewer-address-octet-4" />
+		</g>
+	</g>
+	<!-- Subnet mask -->
+	<g id="cidrbrewer-subnet-mask" transform="translate(160, 256)">
+		<use xlink:href="#cidrbrewer-address-body" />
+		<g id="cidrbrewer-subnet-mask-octets">
+			<g id="cidrbrewer-subnet-mask-green-octets" fill="#7d3 ">
+				<use xlink:href="#cidrbrewer-address-octet-1" />
+				<use xlink:href="#cidrbrewer-address-octet-2" />
+				<use xlink:href="#cidrbrewer-address-octet-3" />
+			</g>
+			<use xlink:href="#cidrbrewer-address-octet-4" fill="#f33" />
+		</g>
+	</g>
+</svg>

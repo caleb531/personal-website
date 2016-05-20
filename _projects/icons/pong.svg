@@ -1,0 +1,18 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- icon elements -->
+	<defs>
+		<!-- line used to make both paddle fill and stroke -->
+		<line id="pong-paddle-line" x1="0" y1="0" x2="0" y2="160" fill="none" stroke-linecap="round" />
+		<!-- combined paddle fill and stroke -->
+		<g id="pong-paddle">
+			<use xlink:href="#pong-paddle-line" stroke="#14a" stroke-width="20" />
+			<use xlink:href="#pong-paddle-line" stroke="#47d" stroke-width="12" />
+		</g>
+	</defs>
+	<!-- ball -->
+	<circle cx="160" cy="160" r="24" fill="#d44" stroke="#a11" stroke-width="4" />
+	<!-- left paddle -->
+	<use xlink:href="#pong-paddle" x="60" y="110" />
+	<!-- right paddle -->
+	<use xlink:href="#pong-paddle" x="260" y="50" />
+</svg>

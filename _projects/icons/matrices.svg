@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- element representing number -->
+		<rect id="matrices-element" x="-15" y="-15" width="30" height="30" stroke-linecap="round" stroke-linejoin="round" />
+		<!-- a single bracket used to surround matrix elements -->
+		<path id="matrices-bracket" d="M 90,54 L 54,54 L 54,266 L 90,266 L 90,254 L 68,254 L 68,66 L 90,66 Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+	</defs>
+	<g fill="#69f" stroke="#36c" stroke-width="4">
+		<!-- left bracket -->
+		<use xlink:href="#matrices-bracket" x="0" y="0" />
+		<!-- right bracket -->
+		<use xlink:href="#matrices-bracket" x="0" y="0" transform="translate(320,0) scale(-1,1)" />
+		<!-- top-left element -->
+		<use xlink:href="#matrices-element" x="120" y="120" />
+		<!-- top-right element -->
+		<use xlink:href="#matrices-element" x="200" y="120" />
+		<!-- bottom-left element -->
+		<use xlink:href="#matrices-element" x="120" y="200" />
+		<!-- bottom-right element -->
+		<use xlink:href="#matrices-element" x="200" y="200" />
+	</g>
+</svg>

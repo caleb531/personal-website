@@ -1,0 +1,34 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- download arrow used for stroke and fill -->
+		<path id="swb-download-arrow" d="M 120,210 L 120,280 M 100,260 L 120,280 L 140,260" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+		<!-- upload arrow used for stroke and fill -->
+		<path id="swb-upload-arrow" d="M 200,280 L 200,210 180,230 L 200,210 L 220,230" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+		<!-- WordPress "W" -->
+		<path id="swb-emblem-w" d="M 115,80 L 122,80 A 1,1,0,0,0,122,75 L 86,75 A 1,1,0,0,0,86,80 L 92,80 L 130,180 L 140,180 L 160,120 L 180,180 L 190,180 L 220,110 C 230,90 230,80 225,70 A 10,10,0,0,0,200,80 C 210,95 212,105 209,115 L 195,152 L 168,80 L 175,80 A 1,1,0,0,0,175,75 L 138,75 A 1,1,0,0,0,138,80 L 145,80 L 156,110 L 143,150 Z" />
+		<!-- WordPress "W" mask  -->
+		<mask id="swb-emblem-w-mask">
+			<rect x="0" y="0" width="100%" height="100%" fill="#fff" />
+			<use xlink:href="#swb-emblem-w" x="0" y="0" fill="#000" />
+		</mask>
+	</defs>
+	<!-- complete WordPress emblem -->
+	<g transform="translate(0,10)">
+		<!-- white emblem background -->
+		<circle cx="160" cy="108" r="83" fill="#fff" />
+		<!-- inner circle dark fill -->
+		<circle cx="160" cy="108" r="73" fill="#444" mask="url(#swb-emblem-w-mask)" />
+		<!-- outer circle dark stroke -->
+		<circle cx="160" cy="108" r="83" fill="none" stroke="#444" stroke-width="4" />
+	</g>
+	<!-- arrow strokes -->
+	<g stroke="#079" stroke-width="16">
+		<use xlink:href="#swb-download-arrow" />
+		<use xlink:href="#swb-upload-arrow" />
+	</g>
+	<!-- arrow fills -->
+	<g stroke="#3ab" stroke-width="8">
+		<use xlink:href="#swb-download-arrow" />
+		<use xlink:href="#swb-upload-arrow" />
+	</g>
+</svg>

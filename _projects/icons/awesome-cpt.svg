@@ -1,0 +1,23 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- taxonomy term -->
+        <rect id="awesomecpt-term" x="0" y="0" width="50" height="60" rx="3" ry="3" fill="#7d3" stroke="#4a0" stroke-width="4" />
+        <!-- meta box field -->
+        <rect id="awesomecpt-metabox-field" />
+    </defs>
+    <!-- post type -->
+    <rect x="40" y="40" width="80" height="150" fill="#c33" stroke="#900" stroke-width="4" rx="3" ry="3" />
+    <!-- taxonomy terms -->
+	<g>
+	    <!-- top-left -->
+	    <use xlink:href="#awesomecpt-term" x="150" y="40" />
+	    <!-- top-right -->
+	    <use xlink:href="#awesomecpt-term" x="230" y="40" />
+	    <!-- bottom-left -->
+	    <use xlink:href="#awesomecpt-term" x="150" y="130" />
+	    <!-- bottom-left -->
+	    <use xlink:href="#awesomecpt-term" x="230" y="130" />
+	</g>
+    <!-- meta box -->
+    <rect x="40" y="220" width="240" height="60" rx="3" ry="3" fill="#96f" stroke="#63c" stroke-width="4" />
+</svg>

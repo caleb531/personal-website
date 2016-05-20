@@ -1,0 +1,9 @@
+# Global metadata used by all projects
+
+# Path template for all project icons
+icon_path: /projects/icons/:slug.svg
+# Projects featured on homepage
+featured_projects:
+  - youversion-suggest
+  - jcanvas
+  - unscrambler
