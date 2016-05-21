@@ -1,37 +1,15 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+  <div class="site-footer-content">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    &copy; 2016 Caleb Evans | <a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a> |
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
+    <form class="donate-form" name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="caleb@calebevans.me">
+      <input type="hidden" name="item_name" value="">
+      <button type="submit" class="donate-button">Donate</button>
+    </form>
 
   </div>
 
