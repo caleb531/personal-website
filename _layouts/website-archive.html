@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<div class="entry-list website-list">
+
+  {% for website in site.websites %}
+
+    <div class="entry website">
+
+      <div class="entry-icon website-image">
+        <a href="{{ website.direct_url }}"><img src="{{ site.baseurl }}/assets/images/websites/1x/{{ website.slug }}.jpg" srcset="{{ site.baseurl }}/assets/images/websites/2x/{{ website.slug }}.jpg 2x" /></a>
+      </div>
+      <div class="entry-main website-main">
+        <header class="entry-header website-header">
+          <h4 class="entry-title website-title"><a href="{{ website.direct_url }}">{{ website.title }}</a></h4>
+        </header>
+        <div class="entry-desc website-desc">
+          {{ website.content }}
+        </div>
+        <div class="website-technologies">
+          <span class="entry-label">Technologies:</span>
+          {{ website.technologies }}
+        </div>
+      </div>
+
+    </div>
+
+  {% endfor %}
+
+</div>

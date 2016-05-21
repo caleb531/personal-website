@@ -1,11 +1,17 @@
 // Styling for website portfolio entries
 
-.ce-website {
+.website {
 	&-desc {
-		margin-top: 10px;
+		margin: 10px 0;
 		font-size: 11pt;
 	}
+	&-image a {
+		width: 256px;
+		height: 160px;
+	}
 	img {
+		width: inherit;
+		height: inherit;
 		border-radius: 3px;
 		border: solid 2px rgba(#000, 0.25);
 	}
@@ -17,7 +23,7 @@
 		}
 	}
 	&-technologies {
-		font-size: 12pt;
+		font-size: 10pt;
 		text-align: left;
 	}
 }

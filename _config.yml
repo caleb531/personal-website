@@ -27,6 +27,9 @@ collections:
   # Personal projects
   projects:
     output: false
+  # Portfolio websites
+  websites:
+    output: false
   # Contact links (displayed in footer and on Contact page)
   contact_links:
     output: false
