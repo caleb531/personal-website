@@ -1,7 +1,7 @@
 # Global metadata used by all projects
 
 # Path template for all project icons
-icon_path: /projects/icons/:slug.svg
+icon_path: /assets/images/projects/:slug.svg
 # Projects featured on homepage
 featured_projects:
   - b-sketcher
