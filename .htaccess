@@ -1,0 +1,45 @@
+# Define UTF-8 encoding for all essential file types
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+    AddCharset utf-8 .css .js .json .xml
+</IfModule>
+
+# Add 'Vary: Accept-Encoding' header
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+# Disable fallback directory indexes
+Options -Indexes
+
+# Provide email address for internal server errors
+SetEnv SERVER_ADMIN caleb@calebevans.me
+
+# Error code pages
+ErrorDocument 404 /404.html
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml image/svg+xml
+</IfModule>
+
+### Headers
+
+<ifModule mod_headers.c>
+
+	# Cache scripts, stylesheets, and images
+	<FilesMatch '\.(css|js|png|jpg|gif)$'>
+		# Set cache to expire after one day
+		Header set Cache-Control 'max-age=604800'
+	</FilesMatch>
+
+	# Force latest rendering engine in IE
+	<FilesMatch '\.html$'>
+		Header set X-UA-Compatible 'IE=edge'
+		# Set cache to expire after one hour
+		Header set Cache-Control 'max-age=3600'
+	</FilesMatch>
+
+</ifModule>

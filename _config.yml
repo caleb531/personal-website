@@ -21,6 +21,8 @@ host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 
 # Build settings
 markdown: kramdown
+include:
+  - .htaccess
 
 # Collections used for new content types
 collections:
