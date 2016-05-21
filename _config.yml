@@ -9,6 +9,7 @@
 title: Caleb Evans
 tagline: Coder for Christ
 email: caleb@calebevans.me
+gravatar_size: 60
 description: > # this means to ignore newlines until "baseurl:"
   This is the personal website of Caleb Evans, rewritten entirely in Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
