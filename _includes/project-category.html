@@ -1,19 +1,23 @@
-<h3 class="project-list-category-title">{{ include.category_title }}</h3>
+<div class="entry-list project-list">
 
-{% for project in site.projects %}
-  {% if project.categories contains include.category_slug %}
-    <div class="entry project">
-      <div class="entry-icon project-icon">
-        <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
-      </div>
-      <div class="entry-main project-main">
-        <header class="entry-header project-header">
-          <h4 class="entry-title project-title"><a href="{{ project.direct_url }}">{{ project.title }}</a></h4>
-        </header>
-        <div class="entry-desc project-desc">
-          {{ project.short_description | markdownify }}
+  <h3 class="entry-list-category-title project-list-category-title">{{ include.category_title }}</h3>
+
+  {% for project in site.projects %}
+    {% if project.categories contains include.category_slug %}
+      <div class="entry project">
+        <div class="entry-icon project-icon">
+          <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
+        </div>
+        <div class="entry-main project-main">
+          <header class="entry-header project-header">
+            <h4 class="entry-title project-title"><a href="{{ project.direct_url }}">{{ project.title }}</a></h4>
+          </header>
+          <div class="entry-desc project-desc">
+            {{ project.short_description | markdownify }}
+          </div>
         </div>
       </div>
-    </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
+
+</div>

@@ -2,22 +2,18 @@
 layout: default
 ---
 
-<div class="home">
+<h2 class="post-title">Hello</h2>
 
-  <h2 class="post-title">Hello</h2>
+<h3 class="page-heading">Featured Projects</h3>
 
-  <h3 class="page-heading">Featured Projects</h3>
-
-  <div class="entry-list project-list project-list-compact">
-    {% for project_slug in site.data.projects.featured_projects %}
-      {% assign project = site.projects | where: 'slug', project_slug | first %}
-      <div class="entry project">
-        <div class="entry-icon project-icon">
-          <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
-        </div>
-        <span class="project-tile">{{ project.title }}</span>
+<div class="entry-list project-list entry-list-compact project-list-compact">
+  {% for project_slug in site.data.projects.featured_projects %}
+    {% assign project = site.projects | where: 'slug', project_slug | first %}
+    <div class="entry project">
+      <div class="entry-icon project-icon">
+        <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
       </div>
-    {% endfor %}
-  </div>
-
+      <span class="project-title">{{ project.title }}</span>
+    </div>
+  {% endfor %}
 </div>

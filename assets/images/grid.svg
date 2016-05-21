@@ -1,0 +1,19 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- grid background -->
+	<defs>
+		<g fill="none" stroke="#ddd" stroke-width="8">
+			<!-- vertical gridlines -->
+			<pattern id="grid-vertical" x="18" width="40" height="100%" patternUnits="userSpaceOnUse">
+				<line x1="0" y1="0" x2="0" y2="100%"></line>
+			</pattern>
+			<!-- horizontal gridlines -->
+			<pattern id="grid-horizontal" y="18" width="100%" height="40" patternUnits="userSpaceOnUse">
+				<line x1="0" y1="0" x2="100%" y2="0"></line>
+			</pattern>
+			<rect id="grid-region" width="100%" height="100%" />
+		</g>
+	</defs>
+	<use xlink:href="#grid-region" fill="#fff" />
+	<use xlink:href="#grid-region" fill="url(#grid-vertical)" />
+	<use xlink:href="#grid-region" fill="url(#grid-horizontal)" />
+</svg>

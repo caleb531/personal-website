@@ -1,0 +1,77 @@
+// Styling for lists of projects and contact links
+
+.entry-list-compact {
+	font-size: 0;
+	.entry {
+		display: inline-block;
+	}
+}
+
+.entry {
+	display: flex;
+	margin: 20px 0;
+	&-icon,
+	&-image {
+		flex-shrink: 0;
+		vertical-align: top;
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+	&-main {
+		flex-grow: 1;
+		padding-left: 10px;
+		vertical-align: top;
+	}
+	&-header {
+		.entry-title {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.entry-edit-link {
+			display: inline-block;
+			margin-left: 5px;
+			font-size: 0;
+			color: #fff;
+			text-align: right;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+	}
+	&-title {
+		margin: 0;
+	}
+	&-desc {
+		margin: 0;
+		font-size: 18px;
+		text-align: left;
+		p:first-child {
+			margin-top: 0;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&-list-category-title {
+		border-bottom: solid 2px #fff;
+	}
+	&-label {
+		font-weight: 400;
+	}
+}
+
+.ce-contact-link {
+	&-icon {
+		$icon-size: 64px;
+		height: $icon-size;
+		span {
+			color: #fff;
+			font-size: $icon-size;
+			vertical-align: top;
+		}
+	}
+	&-main p {
+		margin: 0;
+	}
+}

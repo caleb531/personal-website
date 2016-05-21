@@ -1,0 +1,18 @@
+// Sass Variables
+
+$body-background-color: #25a;
+$font-family-sans-serif: 'Ubuntu', 'Open Sans', sans-serif;
+$link-color: #cf0;
+$strong-color: #cf0;
+$transition-duration: 150ms;
+$transition-easing: ease-in-out;
+
+$body-max-width: 960px;
+
+// Responsive widths
+$layout-widths: (
+	body-max: $body-max-width,
+	hybrid: 768px,
+	compact: 540px,
+	very-compact: 340px
+);

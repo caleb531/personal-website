@@ -1,0 +1,61 @@
+// Page styling
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+
+#page {
+	position: relative;
+	padding: 30px;
+	border-radius: 10px;
+	background-color: rgba(#000, 0.2);
+	@include layout(hybrid) {
+		border-radius: 0;
+	}
+	@include layout(very-compact) {
+		$padding: 15px;
+		padding-left: $padding;
+		padding-right: $padding;
+	}
+}
+
+/* Assistive text */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden !important;
+	position: absolute !important;
+	height: 1px !important;
+	width: 1px !important;
+	&.skip-link:focus {
+		background-color: #f1f1f1 !important;
+		border-radius: 3px !important;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6) !important;
+		clip: auto !important;
+		color: #21759b !important;
+		display: block !important;
+		font-size: 14px !important;
+		font-weight: 400 !important;
+		height: auto !important;
+		outline-width: 0 !important;
+		line-height: normal !important;
+		padding: 15px 23px 14px !important;
+		position: absolute !important;
+		left: 5px !important;
+		top: 5px !important;
+		text-decoration: none !important;
+		width: auto !important;
+		z-index: 100000 !important; /* Above WP toolbar */
+	}
+}
+
+.home .entry-content p {
+	max-width: 460px;
+}

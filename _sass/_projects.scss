@@ -1,0 +1,78 @@
+// Styling for projects
+
+// Ensure that no whitespace separates any two columns
+.project-list-container {
+	font-size: 0;
+}
+
+.project-list-column {
+	display: inline-block;
+	width: 50%;
+	$column-spacing: 15px;
+	padding-right: $column-spacing;
+	font-size: 0;
+	vertical-align: top;
+	&:last-child {
+		padding-right: 0;
+		padding-left: $column-spacing;
+	}
+	@include layout(hybrid) {
+		display: block;
+		width: auto;
+		.project-main {
+			padding-right: 0;
+		}
+		&,
+		&:last-child {
+			padding: 0;
+		}
+	}
+}
+
+.project-list.entry-list-compact {
+
+	@include layout(hybrid) {
+		text-align: center;
+	}
+
+	& > .project {
+		margin: 0 10px;
+		margin-bottom: 10px;
+	}
+
+	& > .project {
+		// Ensure that project label does not exceed width of project icon
+		max-width: 80px;
+		vertical-align: top;
+	}
+
+}
+
+.project-icon {
+	font-size: 0;
+	a {
+		width: 80px;
+		height: 80px;
+	}
+	img, svg {
+		width: inherit;
+		height: inherit;
+		border: solid 2px rgba(#000, 0.25);
+		border-radius: 5px;
+		background-color: #fff;
+		background-image: url('/assets/images/grid.svg');
+		background-clip: padding-box;
+	}
+}
+
+span.project-title {
+	display: block;
+	text-align: center;
+	font-size: 11px;
+}
+
+.project-desc {
+	@include layout(very-compact) {
+		font-size: 16px;
+	}
+}

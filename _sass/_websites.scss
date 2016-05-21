@@ -1,0 +1,23 @@
+// Styling for website portfolio entries
+
+.ce-website {
+	&-desc {
+		margin-top: 10px;
+		font-size: 11pt;
+	}
+	img {
+		border-radius: 3px;
+		border: solid 2px rgba(#000, 0.25);
+	}
+	@include layout(hybrid) {
+		display: block;
+		text-align: center;
+		&-main {
+			padding-left: 0;
+		}
+	}
+	&-technologies {
+		font-size: 12pt;
+		text-align: left;
+	}
+}
