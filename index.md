@@ -11,4 +11,4 @@ layout: home
 
 {% include featured-projects.html %}
 
-To see all of my projects, visit my [Projects page]({{ site.baseurl }}/projects/).
+To see all of my projects, visit my [Projects page]({{ site.baseurl }}/portfolio/projects/).

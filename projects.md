@@ -1,7 +1,7 @@
 ---
 layout: project-archive
 title: Projects
-permalink: /projects/
+permalink: /portfolio/projects/
 ---
 
 This is a collection of projects I've developed in my spare time, including
