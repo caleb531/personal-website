@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+id: about
 ---
 
 ### Who are you?

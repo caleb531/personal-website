@@ -1,0 +1,9 @@
+# Metadata for site navigation
+
+# Navigation hierarchy
+pages:
+  - about:
+  - portfolio:
+    - projects
+    - websites
+  - contact:

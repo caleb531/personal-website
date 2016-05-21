@@ -2,6 +2,7 @@
 layout: page
 title: Privacy Policy
 permalink: /privacy-policy/
+id: privacy-policy
 ---
 
 This privacy policy serves as a straightforward explanation of how this website collects and handles your personal information.
