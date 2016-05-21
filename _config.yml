@@ -17,6 +17,8 @@ url: "http://calebevans.me" # the base hostname & protocol for your site
 twitter_username: caleb531
 github_username:  caleb531
 
+host: 0.0.0.0 # Enables local site to be accessed from other devices on network
+
 # Build settings
 markdown: kramdown
 
