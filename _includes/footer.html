@@ -1,5 +1,16 @@
 <footer class="site-footer">
 
+  <div class="entry-list contact-link-list entry-list-compact contact-link-list-compact">
+    {% for contact_link_slug in site.data.contact_links.contact_links %}
+      {% assign contact_link = site.contact_links | where: 'slug', contact_link_slug | first %}
+      <div class="entry contact-link">
+        <a href="{{ contact_link.direct_url }}" class="entry-icon contact-link-icon">
+          <span class="ce-icon ce-icon-{{ contact_link.icon }}"></span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
   <div class="site-footer-content">
 
     &copy; 2016 Caleb Evans | <a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a><br />

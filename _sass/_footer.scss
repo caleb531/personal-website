@@ -1,7 +1,12 @@
 // Site footer
 
 .site-footer {
+	margin: 0;
+	padding: 20px;
 	padding-top: 10px;
+	text-align: center;
+	word-wrap: break-word;
+	font-size: 14px;
 	text-align: center;
 	font-size: 14px;
 	.donate-form {
@@ -13,19 +18,11 @@
 		font-weight: 400;
 		font-size: 12px;
 	}
-	.site-footer-content {
-		margin: 0;
-		padding: 20px;
-		padding-top: 0;
-		text-align: center;
-		word-wrap: break-word;
-		font-size: 14px;
-		.ce-contact-link {
-			margin: 5px;
-		}
-		.ce-contact-link-icon span {
-			font-size: 40px;
-			vertical-align: middle;
-		}
+	.contact-link {
+		margin: 5px;
+	}
+	.contact-link-icon span {
+		font-size: 40px;
+		vertical-align: middle;
 	}
 }

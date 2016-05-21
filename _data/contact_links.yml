@@ -1,0 +1,7 @@
+# Global metadata used by all contact links
+
+# Contact links to display (in the following order)
+contact_links:
+  - email
+  - github
+  - twitter
