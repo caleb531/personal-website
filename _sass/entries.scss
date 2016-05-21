@@ -10,7 +10,6 @@
 .entry {
 	display: flex;
 	margin: 20px 0;
-	&-icon,
 	&-image {
 		flex-shrink: 0;
 		vertical-align: top;
@@ -63,7 +62,7 @@
 }
 
 .contact-link {
-	&-icon {
+	&-image {
 		$icon-size: 64px;
 		height: $icon-size;
 		span {

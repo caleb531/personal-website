@@ -5,7 +5,7 @@
   {% for project in site.projects %}
     {% if project.categories contains include.category_slug %}
       <div class="entry project">
-        <div class="entry-icon project-icon">
+        <div class="entry-image project-image">
           <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
         </div>
         <div class="entry-main project-main">
