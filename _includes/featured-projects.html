@@ -1,11 +1,3 @@
----
-layout: default
----
-
-<h2 class="post-title">Hello</h2>
-
-<h3 class="page-heading">Featured Projects</h3>
-
 <div class="entry-list project-list entry-list-compact project-list-compact">
   {% for project_slug in site.data.projects.featured_projects %}
     {% assign project = site.projects | where: 'slug', project_slug | first %}
