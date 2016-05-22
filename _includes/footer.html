@@ -4,7 +4,12 @@
     {% for contact_link_slug in site.data.contact_links.contact_links %}
       {% assign contact_link = site.contact_links | where: 'slug', contact_link_slug | first %}
       <div class="entry contact-link">
-        <a href="{{ contact_link.direct_url }}" class="entry-image contact-link-image">
+        {% if contact_link.email %}
+          {% assign direct_url = contact_link.email | antispambot | mailto %}
+        {% else %}
+          {% assign direct_url = contact_link.direct_url %}
+        {% endif %}
+        <a href="{{ direct_url }}" class="entry-image contact-link-image">
           <span class="ce-icon ce-icon-{{ contact_link.icon }}"></span>
         </a>
       </div>
@@ -15,7 +20,7 @@
 
     &copy; {{ site.time | date: '%Y' }} Caleb Evans | <a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a><br />
 
-    Like what I've made? Please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&item_name=&business=caleb@calebevans.me">donate</a>!
+    Like what I've made? Please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&item_name=&business={{ site.email | antispambot }}">donate</a>!
 
   </div>
 
