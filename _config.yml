@@ -23,6 +23,8 @@ host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 markdown: kramdown
 include:
   - .htaccess
+exclude:
+  - README.md
 
 # Collections used for new content types
 collections:
