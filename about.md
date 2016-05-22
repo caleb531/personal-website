@@ -11,7 +11,7 @@ I'm Caleb Evans, a college student with many passions: faith in Christ, programm
 
 ### What do you do?
 
-Since 2010, I've been programming in many languages for school and for fun. My most prominent work includes a plethora of web apps and useful tools—many of which were created to enhance my productivity and actualize my ideas. I've also crafted a number of websites—including this one—using PHP and WordPress.
+Since 2010, I've been programming in many languages for school and for fun. My most prominent work includes a plethora of web apps and useful tools—many of which were created to enhance my productivity and actualize my ideas. I've also crafted a number of websites (for myself and for others) using PHP, WordPress, and even Jekyll.
 
 ### How many languages do you speak?
 
