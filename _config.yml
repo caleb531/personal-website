@@ -15,6 +15,11 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://calebevans.me" # the base hostname & protocol for your site
 
+# Google tokens
+google_site_verify: hgENNCrZvitO_dtrCT_F6VdV1YspqEDh-nBMoq0dL5g
+google_analytics: UA-32415253-1
+
+# Serve settings
 host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 
 # Build settings
