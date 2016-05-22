@@ -33,8 +33,8 @@ That depends. In Atom, spaces behave just like tabs when used for indentation, a
 
 I meticulously crafted each icon using SVG, a vector image format which is both portable and infinitely scalable. I didn't use any sort of vector-drawing application, but rather wrote all of the code by hand for several reasons:
 
-1. *Precision:* I can achieve maximal precision because I have total control over the numbers
+1. Precision: I can achieve maximal precision because I have total control over the numbers
     1. This can also make some icons quite challenging to draw, but I still consider the flexibility worth the additional effort in those cases.
-2. *Portability:* I'm not tied to a specific vector application; I can write SVG anywhere, though I naturally choose to use Atom (I've created [a number of handy-dandy SVG snippets for Emmet](https://github.com/caleb531/dotfiles/blob/master/emmet/snippets.json)).
+2. Portability: I'm not tied to a specific vector application; I can write SVG anywhere, though I naturally choose to use Atom (I've created [a number of handy-dandy SVG snippets for Emmet](https://github.com/caleb531/dotfiles/blob/master/emmet/snippets.json)).
 
 Considering that I have about 40 projects, I had to create about 40 unique icons, where each icon was carefully conceived and designed. Indeed, it took much time and effort, but I had great fun doing it.
