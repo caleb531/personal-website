@@ -1,7 +1,7 @@
 # Define UTF-8 encoding for all essential file types
 AddDefaultCharset utf-8
 <IfModule mod_mime.c>
-    AddCharset utf-8 .css .js .json .xml
+    AddCharset utf-8 .css .js .json .xml .svg
 </IfModule>
 
 # Add 'Vary: Accept-Encoding' header
@@ -30,7 +30,7 @@ ErrorDocument 404 /404/
 <ifModule mod_headers.c>
 
 	# Cache scripts, stylesheets, and images
-	<FilesMatch '\.(css|js|png|jpg|gif)$'>
+	<FilesMatch '\.(css|js|png|jpg|gif|svg)$'>
 		# Set cache to expire after one day
 		Header set Cache-Control 'max-age=604800'
 	</FilesMatch>
