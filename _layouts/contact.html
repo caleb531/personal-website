@@ -14,7 +14,7 @@ layout: page
         {% assign direct_url = contact_link.direct_url %}
       {% endif %}
       <a href="{{ direct_url }}" class="entry-image contact-link-image">
-        <img src="{{ site.data.contact_links.icon_path | replace: ':slug', contact_link.slug }}" alt="{{ contact_link.title }}" />
+        <img src="{{ site.data.contact_links.icon_path | replace: ':slug', contact_link.slug | prepend: site.baseurl }}" alt="{{ contact_link.title }}" />
       </a>
       <div class="entry-main contact-link-main">
         <header class="entry-header contact-link-header">
