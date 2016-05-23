@@ -25,6 +25,7 @@ host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 # Build settings
 markdown: kramdown
 include:
+  - _pages
   - .htaccess
 exclude:
   - README.md
