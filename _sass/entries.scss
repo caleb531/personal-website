@@ -60,18 +60,3 @@
 		font-weight: 400;
 	}
 }
-
-.contact-link {
-	&-image {
-		$icon-size: 64px;
-		height: $icon-size;
-		span {
-			color: #fff;
-			font-size: $icon-size;
-			vertical-align: top;
-		}
-	}
-	&-main p {
-		margin: 0;
-	}
-}

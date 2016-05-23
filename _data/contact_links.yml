@@ -1,5 +1,7 @@
 # Global metadata used by all contact links
 
+# Path template for all contact link icons
+icon_path: /assets/images/contact-links/:slug.svg
 # Contact links to display (in the following order)
 contact_links:
   - email
