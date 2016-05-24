@@ -18,6 +18,7 @@ Options -Indexes
 SetEnv SERVER_ADMIN caleb@calebevans.me
 
 # Error code pages
+ErrorDocument 403 /403/
 ErrorDocument 404 /404/
 
 # Enable gzip compression
