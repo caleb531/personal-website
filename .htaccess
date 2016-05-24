@@ -27,7 +27,7 @@ ErrorDocument 404 /404/
 
 ### Headers
 
-<ifModule mod_headers.c>
+<IfModule mod_headers.c>
 
 	# Cache scripts, stylesheets, and images
 	<FilesMatch '\.(css|js|png|jpg|gif|svg)$'>
@@ -42,4 +42,4 @@ ErrorDocument 404 /404/
 		Header set Cache-Control 'max-age=3600'
 	</FilesMatch>
 
-</ifModule>
+</IfModule>
