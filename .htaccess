@@ -43,3 +43,14 @@ ErrorDocument 404 /404/
 	</FilesMatch>
 
 </IfModule>
+
+<IfModule mod_rewrite.c>
+
+	# Enable URL rewriting
+	RewriteEngine On
+	RewriteBase /
+
+  # Redirect /projects/* to projects.calebevans.me/*
+	RewriteRule ^projects/(.+)$ http://projects.calebevans.me/$1 [R=301,NC,L]
+
+</IfModule>
