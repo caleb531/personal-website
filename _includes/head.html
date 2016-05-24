@@ -3,8 +3,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{% if page.title %}{{ page.title | append: ' | ' | append: site.title | escape }}{% else %}{{ site.title | append: ' | ' | append: site.tagline | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  {% if page.title %}
+    {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
+  {% else %}
+    {% assign page_title = site.title | append: ' | ' | append: site.tagline | escape %}
+  {% endif %}
+  {% if page.excerpt %}
+    {% assign page_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+  {% else %}
+    {% assign page_desc = site.description %}
+  {% endif %}
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_desc }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+  <meta name="twitter:title" content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ page_desc }}" />
+  <meta name="twitter:image" content="{{ site.email | get_gravatar_url: 240 }}" />
+  <meta name="twitter:image:alt" content="Caleb Evans" />
 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu%3A300%2C300italic%2C400%2C400italic" />
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css" />
