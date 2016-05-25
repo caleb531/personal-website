@@ -69,7 +69,7 @@
     }
   }
   @include layout(hybrid) {
-    @include floating-menu("right");
+    @include floating-menu(3px);
     .site-header-nav-open & {
       @include transition-fade-in();
     }
@@ -111,7 +111,7 @@
       color: #fff;
     }
     img {
-      $icon-size: 30px;
+      $icon-size: 24px;
       width: $icon-size;
       height: $icon-size;
     }
