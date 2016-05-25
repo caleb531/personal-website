@@ -1,39 +1,39 @@
 // Site footer
 
 .site-footer {
-	margin: 0;
-	padding: 20px;
-	padding-top: 10px;
-	text-align: center;
-	word-wrap: break-word;
-	font-size: 14px;
-	text-align: center;
-	font-size: 14px;
-	.donate-form {
-		display: inline-block;
-	}
-	.donate-button {
-		margin: 0 2px;
-		padding: 3px 6px;
-		font-weight: 400;
-		font-size: 12px;
-	}
-	.contact-link {
-		margin: 5px;
-		&-image {
-			$icon-size: 40px;
-			width: $icon-size;
-			height: $icon-size;
-			img {
-				width: inherit;
-				height: inherit;
-				vertical-align: top;
-			}
-		}
-	}
-	.contact-link-image {
-		img {
-			vertical-align: middle;
-		}
-	}
+  margin: 0;
+  padding: 20px;
+  padding-top: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 14px;
+  text-align: center;
+  font-size: 14px;
+  .donate-form {
+    display: inline-block;
+  }
+  .donate-button {
+    margin: 0 2px;
+    padding: 3px 6px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .contact-link {
+    margin: 5px;
+    &-image {
+      $icon-size: 40px;
+      width: $icon-size;
+      height: $icon-size;
+      img {
+        width: inherit;
+        height: inherit;
+        vertical-align: top;
+      }
+    }
+  }
+  .contact-link-image {
+    img {
+      vertical-align: middle;
+    }
+  }
 }

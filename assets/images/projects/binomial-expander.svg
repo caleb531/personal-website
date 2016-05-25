@@ -1,39 +1,39 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<!-- transition lines -->
-		<path id="binomialexpander-transition-lines" d="M 160,100 L 87,220 M 160,100 L 160,220 M 160,100 L 233,220" fill="none" stroke-linecap="round" />
-		<path id="binomialexpander-plus" d="M -2,-12 L 2,-12 L 2,-2 L 12,-2 L 12,2 L 2,2 L 2,12 L -2,12 L -2,2 L -12,2 L -12,-2 L -2,-2 Z" fill="#69f" stroke="#36c" stroke-width="2" />
-		<!-- terms -->
-		<circle id="binomialexpander-term" cx="0" cy="0" r="10" stroke-width="2" />
-		<use id="binomialexpander-first-term" xlink:href="#binomialexpander-term" x="0" y="0" fill="#d44" stroke="#a11" />
-		<use id="binomialexpander-second-term" xlink:href="#binomialexpander-term" x="0" y="0" fill="#f93" stroke="#e60" />
-		<!-- exponent term -->
-		<circle id="binomialexpander-exponent" cx="20" cy="-20" r="8" fill="#fe4" stroke="#db1" stroke-width="2" />
-		<!-- parens -->
-		<path id="binomialexpander-paren-opening" d="M 0,20 Q -18,0 0,-20 L 2,-16 Q -12,0 2,16 Z" fill="#69f" stroke="#36c" stroke-width="2" />
-		<use id="binomialexpander-paren-closing" xlink:href="#binomialexpander-paren-opening" transform="scale(-1,1)" />
-	</defs>
-	<use xlink:href="#binomialexpander-paren-opening" x="105" y="60" />
-	<use xlink:href="#binomialexpander-first-term" x="125" y="60" />
-	<use xlink:href="#binomialexpander-plus" x="160" y="60" />
-	<use xlink:href="#binomialexpander-second-term" x="195" y="60" />
-	<use xlink:href="#binomialexpander-paren-closing" x="215" y="60" />
-	<use xlink:href="#binomialexpander-exponent" x="215" y="60" />
-	<!-- transition lines -->
-	<g>
-		<!-- transition line stroke -->
-		<use xlink:href="#binomialexpander-transition-lines" fill="none" stroke="#4a0" stroke-width="14" stroke-linecap="round" />
-		<!-- transition line fill -->
-		<use xlink:href="#binomialexpander-transition-lines" fill="none" stroke="#7d3" stroke-width="6" stroke-linecap="round" />
-	</g>
-	<!-- first expanded term -->
-	<use xlink:href="#binomialexpander-first-term" x="60" y="260" />
-	<use xlink:href="#binomialexpander-plus" x="102" y="260" />
-	<!-- second expanded term -->
-	<use xlink:href="#binomialexpander-first-term" x="144" y="260" />
-	<use xlink:href="#binomialexpander-second-term" x="176" y="260" />
-	<use xlink:href="#binomialexpander-plus" x="218" y="260" />
-	<!-- third expanded term -->
-	<use xlink:href="#binomialexpander-second-term" x="260" y="260" />
+  <defs>
+    <!-- transition lines -->
+    <path id="binomialexpander-transition-lines" d="M 160,100 L 87,220 M 160,100 L 160,220 M 160,100 L 233,220" fill="none" stroke-linecap="round" />
+    <path id="binomialexpander-plus" d="M -2,-12 L 2,-12 L 2,-2 L 12,-2 L 12,2 L 2,2 L 2,12 L -2,12 L -2,2 L -12,2 L -12,-2 L -2,-2 Z" fill="#69f" stroke="#36c" stroke-width="2" />
+    <!-- terms -->
+    <circle id="binomialexpander-term" cx="0" cy="0" r="10" stroke-width="2" />
+    <use id="binomialexpander-first-term" xlink:href="#binomialexpander-term" x="0" y="0" fill="#d44" stroke="#a11" />
+    <use id="binomialexpander-second-term" xlink:href="#binomialexpander-term" x="0" y="0" fill="#f93" stroke="#e60" />
+    <!-- exponent term -->
+    <circle id="binomialexpander-exponent" cx="20" cy="-20" r="8" fill="#fe4" stroke="#db1" stroke-width="2" />
+    <!-- parens -->
+    <path id="binomialexpander-paren-opening" d="M 0,20 Q -18,0 0,-20 L 2,-16 Q -12,0 2,16 Z" fill="#69f" stroke="#36c" stroke-width="2" />
+    <use id="binomialexpander-paren-closing" xlink:href="#binomialexpander-paren-opening" transform="scale(-1,1)" />
+  </defs>
+  <use xlink:href="#binomialexpander-paren-opening" x="105" y="60" />
+  <use xlink:href="#binomialexpander-first-term" x="125" y="60" />
+  <use xlink:href="#binomialexpander-plus" x="160" y="60" />
+  <use xlink:href="#binomialexpander-second-term" x="195" y="60" />
+  <use xlink:href="#binomialexpander-paren-closing" x="215" y="60" />
+  <use xlink:href="#binomialexpander-exponent" x="215" y="60" />
+  <!-- transition lines -->
+  <g>
+    <!-- transition line stroke -->
+    <use xlink:href="#binomialexpander-transition-lines" fill="none" stroke="#4a0" stroke-width="14" stroke-linecap="round" />
+    <!-- transition line fill -->
+    <use xlink:href="#binomialexpander-transition-lines" fill="none" stroke="#7d3" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <!-- first expanded term -->
+  <use xlink:href="#binomialexpander-first-term" x="60" y="260" />
+  <use xlink:href="#binomialexpander-plus" x="102" y="260" />
+  <!-- second expanded term -->
+  <use xlink:href="#binomialexpander-first-term" x="144" y="260" />
+  <use xlink:href="#binomialexpander-second-term" x="176" y="260" />
+  <use xlink:href="#binomialexpander-plus" x="218" y="260" />
+  <!-- third expanded term -->
+  <use xlink:href="#binomialexpander-second-term" x="260" y="260" />
 
 </svg>

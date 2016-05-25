@@ -1,21 +1,21 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- reusable icon elements -->
-	<defs>
-		<line id="flashmath-symbol-line-stroke" x1="-100" y1="0" x2="100" y2="0" />
-		<line id="flashmath-symbol-line-fill" x1="-96" y1="0" x2="96" y2="0" />
-	</defs>
-	<!-- equal sign stroke -->
-	<g stroke="#4a0" stroke-width="40">
-		<!-- top -->
-		<use xlink:href="#flashmath-symbol-line-stroke" x="160" y="120" />
-		<!-- bottom -->
-		<use xlink:href="#flashmath-symbol-line-stroke" x="160" y="200" />
-	</g>
-	<!-- equal sign fill -->
-	<g stroke="#7d3" stroke-width="32">
-		<!-- top -->
-		<use xlink:href="#flashmath-symbol-line-fill" x="160" y="120" />
-		<!-- bottom -->
-		<use xlink:href="#flashmath-symbol-line-fill" x="160" y="200" />
-	</g>
+  <!-- reusable icon elements -->
+  <defs>
+    <line id="flashmath-symbol-line-stroke" x1="-100" y1="0" x2="100" y2="0" />
+    <line id="flashmath-symbol-line-fill" x1="-96" y1="0" x2="96" y2="0" />
+  </defs>
+  <!-- equal sign stroke -->
+  <g stroke="#4a0" stroke-width="40">
+    <!-- top -->
+    <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="120" />
+    <!-- bottom -->
+    <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="200" />
+  </g>
+  <!-- equal sign fill -->
+  <g stroke="#7d3" stroke-width="32">
+    <!-- top -->
+    <use xlink:href="#flashmath-symbol-line-fill" x="160" y="120" />
+    <!-- bottom -->
+    <use xlink:href="#flashmath-symbol-line-fill" x="160" y="200" />
+  </g>
 </svg>

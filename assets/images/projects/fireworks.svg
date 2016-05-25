@@ -1,29 +1,29 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- reusable icon elements -->
-	<defs>
-		<circle id="fireworks-boom-1" cx="160" cy="160" r="35" />
-		<circle id="fireworks-boom-2" cx="160" cy="160" r="75" />
-		<circle id="fireworks-boom-3" cx="160" cy="160" r="115" />
-	</defs>
-	<!-- firework booms (from center going outwards) -->
-	<g fill="none" stroke-linecap="round" stroke-dasharray="40">
-		<!-- boom strokes -->
-		<g stroke-width="16">
-			<!-- boom 1 -->
-			<use xlink:href="#fireworks-boom-1" stroke="#a11" />
-			<!-- boom 2 -->
-			<use xlink:href="#fireworks-boom-2" stroke="#e60" />
-			<!-- boom 3 -->
-			<use xlink:href="#fireworks-boom-3" stroke="#fb1" />
-		</g>
-		<!-- boom fills -->
-		<g stroke-width="8">
-			<!-- boom 1 -->
-			<use xlink:href="#fireworks-boom-1" stroke="#d44" />
-			<!-- boom 2 -->
-			<use xlink:href="#fireworks-boom-2" stroke="#f93" />
-			<!-- boom 3 -->
-			<use xlink:href="#fireworks-boom-3" stroke="#fe4" />
-		</g>
-	</g>
+  <!-- reusable icon elements -->
+  <defs>
+    <circle id="fireworks-boom-1" cx="160" cy="160" r="35" />
+    <circle id="fireworks-boom-2" cx="160" cy="160" r="75" />
+    <circle id="fireworks-boom-3" cx="160" cy="160" r="115" />
+  </defs>
+  <!-- firework booms (from center going outwards) -->
+  <g fill="none" stroke-linecap="round" stroke-dasharray="40">
+    <!-- boom strokes -->
+    <g stroke-width="16">
+      <!-- boom 1 -->
+      <use xlink:href="#fireworks-boom-1" stroke="#a11" />
+      <!-- boom 2 -->
+      <use xlink:href="#fireworks-boom-2" stroke="#e60" />
+      <!-- boom 3 -->
+      <use xlink:href="#fireworks-boom-3" stroke="#fb1" />
+    </g>
+    <!-- boom fills -->
+    <g stroke-width="8">
+      <!-- boom 1 -->
+      <use xlink:href="#fireworks-boom-1" stroke="#d44" />
+      <!-- boom 2 -->
+      <use xlink:href="#fireworks-boom-2" stroke="#f93" />
+      <!-- boom 3 -->
+      <use xlink:href="#fireworks-boom-3" stroke="#fe4" />
+    </g>
+  </g>
 </svg>

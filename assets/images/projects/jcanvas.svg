@@ -1,25 +1,25 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<!-- letter c drawn using arc path -->
-		<path id="jcanvas-letter-c" d="M 190,80 A 20,20 0,0,0 270,220" />
-	</defs>
-	<g fill="none">
-		<!-- letter j body -->
-		<path d="M 114,116 L 114,234 A 20,20 0,0,1 80,245" stroke="#36c" stroke-width="20" />
-		<path d="M 114,120 L 114,230 A 20,20 0,0,1 80,245" stroke="#69f" stroke-width="12" />
-		<!-- stroke cap for button of letter j -->
-		<path d="M 86,237 L 71.75,250.75" stroke="#36c" stroke-width="4" />
-	</g>
-	<!-- dot atop letter j -->
-	<circle cx="114" cy="95" r="10" fill="#69f" stroke="#36c" stroke-width="4" />
-	<!-- <g fill="none">
-		<use xlink:href="#jcanvas-letter-c" stroke="#149" stroke-width="24" />
-		<use xlink:href="#jcanvas-letter-c" stroke="#47d" stroke-width="16" />
-	</g> -->
-	<!-- additional elements -->
-	<g fill="#47d" stroke="#149" stroke-width="4" transform="translate(0,100) rotate(-30)">
-		<!-- dot in letter c -->
-		<circle cx="160" cy="160" r="10" />
-		<path d="M 160,100 A 60,60,0,0,0,160,220 L 160,240 A 80,80,0,0,1,160,80 Z" />
-	</g>
+  <defs>
+    <!-- letter c drawn using arc path -->
+    <path id="jcanvas-letter-c" d="M 190,80 A 20,20 0,0,0 270,220" />
+  </defs>
+  <g fill="none">
+    <!-- letter j body -->
+    <path d="M 114,116 L 114,234 A 20,20 0,0,1 80,245" stroke="#36c" stroke-width="20" />
+    <path d="M 114,120 L 114,230 A 20,20 0,0,1 80,245" stroke="#69f" stroke-width="12" />
+    <!-- stroke cap for button of letter j -->
+    <path d="M 86,237 L 71.75,250.75" stroke="#36c" stroke-width="4" />
+  </g>
+  <!-- dot atop letter j -->
+  <circle cx="114" cy="95" r="10" fill="#69f" stroke="#36c" stroke-width="4" />
+  <!-- <g fill="none">
+    <use xlink:href="#jcanvas-letter-c" stroke="#149" stroke-width="24" />
+    <use xlink:href="#jcanvas-letter-c" stroke="#47d" stroke-width="16" />
+  </g> -->
+  <!-- additional elements -->
+  <g fill="#47d" stroke="#149" stroke-width="4" transform="translate(0,100) rotate(-30)">
+    <!-- dot in letter c -->
+    <circle cx="160" cy="160" r="10" />
+    <path d="M 160,100 A 60,60,0,0,0,160,220 L 160,240 A 80,80,0,0,1,160,80 Z" />
+  </g>
 </svg>

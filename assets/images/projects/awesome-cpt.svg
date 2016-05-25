@@ -8,16 +8,16 @@
     <!-- post type -->
     <rect x="40" y="40" width="80" height="150" fill="#c33" stroke="#900" stroke-width="4" rx="3" ry="3" />
     <!-- taxonomy terms -->
-	<g>
-	    <!-- top-left -->
-	    <use xlink:href="#awesomecpt-term" x="150" y="40" />
-	    <!-- top-right -->
-	    <use xlink:href="#awesomecpt-term" x="230" y="40" />
-	    <!-- bottom-left -->
-	    <use xlink:href="#awesomecpt-term" x="150" y="130" />
-	    <!-- bottom-left -->
-	    <use xlink:href="#awesomecpt-term" x="230" y="130" />
-	</g>
+  <g>
+      <!-- top-left -->
+      <use xlink:href="#awesomecpt-term" x="150" y="40" />
+      <!-- top-right -->
+      <use xlink:href="#awesomecpt-term" x="230" y="40" />
+      <!-- bottom-left -->
+      <use xlink:href="#awesomecpt-term" x="150" y="130" />
+      <!-- bottom-left -->
+      <use xlink:href="#awesomecpt-term" x="230" y="130" />
+  </g>
     <!-- meta box -->
     <rect x="40" y="220" width="240" height="60" rx="3" ry="3" fill="#96f" stroke="#63c" stroke-width="4" />
 </svg>

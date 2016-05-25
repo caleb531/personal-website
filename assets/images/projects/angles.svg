@@ -1,17 +1,17 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- reusable angle elements -->
-	<defs>
-		<path id="angles-arc" d="M 130,160 A 80,80,0,0,1,170,230" />
-		<polyline id="angles-path" points="260,240 60,240 190,90" />
-	</defs>
-	<!-- angle arc -->
-	<g fill="none" stroke-linejoin="round">
-		<use xlink:href="#angles-arc" stroke="#900" stroke-width="32" />
-		<use xlink:href="#angles-arc" stroke="#c33" stroke-width="24" />
-	</g>
-	<!-- angle path -->
-	<g fill="none" stroke-linecap="round" stroke-linejoin="round">
-		<use xlink:href="#angles-path" stroke="#14a" stroke-width="32" />
-		<use xlink:href="#angles-path" stroke="#47d" stroke-width="24" />
-	</g>
+  <!-- reusable angle elements -->
+  <defs>
+    <path id="angles-arc" d="M 130,160 A 80,80,0,0,1,170,230" />
+    <polyline id="angles-path" points="260,240 60,240 190,90" />
+  </defs>
+  <!-- angle arc -->
+  <g fill="none" stroke-linejoin="round">
+    <use xlink:href="#angles-arc" stroke="#900" stroke-width="32" />
+    <use xlink:href="#angles-arc" stroke="#c33" stroke-width="24" />
+  </g>
+  <!-- angle path -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <use xlink:href="#angles-path" stroke="#14a" stroke-width="32" />
+    <use xlink:href="#angles-path" stroke="#47d" stroke-width="24" />
+  </g>
 </svg>

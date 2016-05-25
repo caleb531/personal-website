@@ -23,35 +23,35 @@ ErrorDocument 404 /404/
 
 # Enable gzip compression
 <IfModule mod_deflate.c>
-	AddOutputFilterByType DEFLATE text/html text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml image/svg+xml
 </IfModule>
 
 ### Headers
 
 <IfModule mod_headers.c>
 
-	# Cache scripts, stylesheets, and images
-	<FilesMatch '\.(css|js|png|jpg|gif|svg)$'>
-		# Set cache to expire after one day
-		Header set Cache-Control 'max-age=604800'
-	</FilesMatch>
+  # Cache scripts, stylesheets, and images
+  <FilesMatch '\.(css|js|png|jpg|gif|svg)$'>
+    # Set cache to expire after one day
+    Header set Cache-Control 'max-age=604800'
+  </FilesMatch>
 
-	# Force latest rendering engine in IE
-	<FilesMatch '\.html$'>
-		Header set X-UA-Compatible 'IE=edge'
-		# Set cache to expire after one hour
-		Header set Cache-Control 'max-age=3600'
-	</FilesMatch>
+  # Force latest rendering engine in IE
+  <FilesMatch '\.html$'>
+    Header set X-UA-Compatible 'IE=edge'
+    # Set cache to expire after one hour
+    Header set Cache-Control 'max-age=3600'
+  </FilesMatch>
 
 </IfModule>
 
 <IfModule mod_rewrite.c>
 
-	# Enable URL rewriting
-	RewriteEngine On
-	RewriteBase /
+  # Enable URL rewriting
+  RewriteEngine On
+  RewriteBase /
 
   # Redirect /projects/* to projects.calebevans.me/*
-	RewriteRule ^projects/(.+)$ http://projects.calebevans.me/$1 [R=301,NC,L]
+  RewriteRule ^projects/(.+)$ http://projects.calebevans.me/$1 [R=301,NC,L]
 
 </IfModule>

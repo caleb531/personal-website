@@ -1,29 +1,29 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- icon elements -->
-	<g fill="#96d" stroke="#63a" stroke-width="4">
-		<defs>
-			<!-- dot representing number -->
-			<circle id="quadratical-dot" r="10" fill="#96d" stroke="#63a" stroke-width="4" />
-			<g id="quadratical-plus-minus" stroke-linecap="round">
-				<line x1="-20" y1="0" x2="20" y2="0" />
-				<line x1="0" y1="-20" x2="0" y2="20" />
-				<line x1="-20" y1="35" x2="20" y2="35" />
-			</g>
-			<g id="quadratical-square-root" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<polyline points="-20,0 -10,0 10,35 30,-20 70,-20" />
-			</g>
-		</defs>
-		<!-- dot preceding quadratical-plus-minus symbol -->
-		<use xlink:href="#quadratical-dot" x="80" y="130" />
-		<use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#63a" stroke-width="12" />
-		<use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#96d" stroke-width="4" />
-		<use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#63a" stroke-width="12" />
-		<use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#96d" stroke-width="4" />
-		<!-- dot under square root -->
-		<use xlink:href="#quadratical-dot" x="240" y="130" />
-		<!-- fractional line -->
-		<rect x="40" y="175" width="240" height="10" rx="5" ry="5" />
-		<!-- divisor -->
-		<use xlink:href="#quadratical-dot" x="160" y="220" />
-	</g>
+  <!-- icon elements -->
+  <g fill="#96d" stroke="#63a" stroke-width="4">
+    <defs>
+      <!-- dot representing number -->
+      <circle id="quadratical-dot" r="10" fill="#96d" stroke="#63a" stroke-width="4" />
+      <g id="quadratical-plus-minus" stroke-linecap="round">
+        <line x1="-20" y1="0" x2="20" y2="0" />
+        <line x1="0" y1="-20" x2="0" y2="20" />
+        <line x1="-20" y1="35" x2="20" y2="35" />
+      </g>
+      <g id="quadratical-square-root" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="-20,0 -10,0 10,35 30,-20 70,-20" />
+      </g>
+    </defs>
+    <!-- dot preceding quadratical-plus-minus symbol -->
+    <use xlink:href="#quadratical-dot" x="80" y="130" />
+    <use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#63a" stroke-width="12" />
+    <use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#96d" stroke-width="4" />
+    <use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#63a" stroke-width="12" />
+    <use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#96d" stroke-width="4" />
+    <!-- dot under square root -->
+    <use xlink:href="#quadratical-dot" x="240" y="130" />
+    <!-- fractional line -->
+    <rect x="40" y="175" width="240" height="10" rx="5" ry="5" />
+    <!-- divisor -->
+    <use xlink:href="#quadratical-dot" x="160" y="220" />
+  </g>
 </svg>

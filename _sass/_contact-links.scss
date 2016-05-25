@@ -1,17 +1,17 @@
 // Styling for contact links
 
 .contact-link {
-	&-image {
-		$icon-size: 64px;
-		width: $icon-size;
-		height: $icon-size;
-		img {
-			width: inherit;
-			height: inherit;
-			vertical-align: top;
-		}
-	}
-	&-main p {
-		margin: 0;
-	}
+  &-image {
+    $icon-size: 64px;
+    width: $icon-size;
+    height: $icon-size;
+    img {
+      width: inherit;
+      height: inherit;
+      vertical-align: top;
+    }
+  }
+  &-main p {
+    margin: 0;
+  }
 }

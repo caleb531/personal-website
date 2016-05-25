@@ -1,20 +1,20 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- dpts representing booelans -->
-	<defs>
-		<circle id="truthy-dot" r="50" stroke-width="4" />
-	</defs>
-	<!-- dots representing true -->
-	<g fill="#7d3" stroke="#4a0">
-		<!-- top-left -->
-		<use xlink:href="#truthy-dot" x="100" y="100" />
-		<!-- bottom-right -->
-		<use xlink:href="#truthy-dot" x="220" y="220" />
-	</g>
-	<!-- dots representing false -->
-	<g fill="#d44" stroke="#a11">
-		<!-- top-right -->
-		<use xlink:href="#truthy-dot" x="220" y="100" />
-		<!-- bottom-left -->
-		<use xlink:href="#truthy-dot" x="100" y="220" />
-	</g>
+  <!-- dpts representing booelans -->
+  <defs>
+    <circle id="truthy-dot" r="50" stroke-width="4" />
+  </defs>
+  <!-- dots representing true -->
+  <g fill="#7d3" stroke="#4a0">
+    <!-- top-left -->
+    <use xlink:href="#truthy-dot" x="100" y="100" />
+    <!-- bottom-right -->
+    <use xlink:href="#truthy-dot" x="220" y="220" />
+  </g>
+  <!-- dots representing false -->
+  <g fill="#d44" stroke="#a11">
+    <!-- top-right -->
+    <use xlink:href="#truthy-dot" x="220" y="100" />
+    <!-- bottom-left -->
+    <use xlink:href="#truthy-dot" x="100" y="220" />
+  </g>
 </svg>

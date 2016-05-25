@@ -1,11 +1,11 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<path id="showdown-contender" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" stroke-width="4" />
-	</defs>
-	<!-- lightning bolt -->
-	<polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="#fe4" stroke="#fa0" stroke-width="4" stroke-linejoin="round" />
-	<!-- top-left green contender -->
-	<use xlink:href="#showdown-contender" x="70" y="100" fill="#7d3" stroke="#4a0" />
-	<!-- bottom-right blue contender -->
-	<use xlink:href="#showdown-contender" x="250" y="220" fill="#69f" stroke="#36c" transform="translate(500,0) scale(-1,1)" />
+  <defs>
+    <path id="showdown-contender" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" stroke-width="4" />
+  </defs>
+  <!-- lightning bolt -->
+  <polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="#fe4" stroke="#fa0" stroke-width="4" stroke-linejoin="round" />
+  <!-- top-left green contender -->
+  <use xlink:href="#showdown-contender" x="70" y="100" fill="#7d3" stroke="#4a0" />
+  <!-- bottom-right blue contender -->
+  <use xlink:href="#showdown-contender" x="250" y="220" fill="#69f" stroke="#36c" transform="translate(500,0) scale(-1,1)" />
 </svg>

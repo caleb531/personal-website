@@ -1,119 +1,119 @@
 // Header styling
 
 #site-header {
-	display: flex;
-	align-items: center;
-	position: relative;
-	margin: 0 auto;
-	padding: 20px;
-	ul, li {
-		margin: 0;
-		padding: 0;
-	}
-	@media (max-width: 340px) {
-		padding: 10px;
-	}
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  @media (max-width: 340px) {
+    padding: 10px;
+  }
 }
 
 #site-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	font-size: 30px;
-	color: $strong-color;
-	vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 30px;
+  color: $strong-color;
+  vertical-align: middle;
 }
 
 #site-title-link {
-	display: block;
-	flex-shrink: 0;
-	margin: 0 auto;
-	font-size: 0;
-	text-decoration: none;
-	color: #fff;
+  display: block;
+  flex-shrink: 0;
+  margin: 0 auto;
+  font-size: 0;
+  text-decoration: none;
+  color: #fff;
 }
 
 #site-header-logo {
-	margin-right: 10px;
-	border: solid 2px rgba(#000, 0.5);
-	background-color: $body-background-color;
-	border-radius: 5px;
-	vertical-align: middle;
+  margin-right: 10px;
+  border: solid 2px rgba(#000, 0.5);
+  background-color: $body-background-color;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 
 #site-header-nav {
-	position: relative;
-	clear: both;
-	flex-grow: 1;
-	margin: 0 auto;
-	text-align: right;
-	white-space: nowrap;
-	@media (max-width: 340px) {
-		flex-grow: 0;
-	}
+  position: relative;
+  clear: both;
+  flex-grow: 1;
+  margin: 0 auto;
+  text-align: right;
+  white-space: nowrap;
+  @media (max-width: 340px) {
+    flex-grow: 0;
+  }
 }
 
 #site-header-nav-list {
-	font-size: 0;
-	li {
-		display: inline-block;
-		position: relative;
-		a {
-			color: #fff;
-			display: block;
-			font-size: 15px;
-			line-height: 1;
-			padding: 15px 20px;
-			text-decoration: none;
-		}
-	}
-	@include layout(hybrid) {
-		@include floating-menu("right");
-		.site-header-nav-open & {
-			@include transition-fade-in();
-		}
-	}
-	.sub-menu {
-		@include floating-menu("center");
-		transition-delay: $transition-duration;
-		@include layout(hybrid) {
-			margin-top: $menu-arrow-width / 2;
-		}
-		li {
-			display: block;
-			text-align: center;
-		}
-	}
-	li:hover .sub-menu,
-	.sub-menu-open {
-		@include transition-fade-in();
-		transition-delay: 0s;
-	}
+  font-size: 0;
+  li {
+    display: inline-block;
+    position: relative;
+    a {
+      color: #fff;
+      display: block;
+      font-size: 15px;
+      line-height: 1;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+  }
+  @include layout(hybrid) {
+    @include floating-menu("right");
+    .site-header-nav-open & {
+      @include transition-fade-in();
+    }
+  }
+  .sub-menu {
+    @include floating-menu("center");
+    transition-delay: $transition-duration;
+    @include layout(hybrid) {
+      margin-top: $menu-arrow-width / 2;
+    }
+    li {
+      display: block;
+      text-align: center;
+    }
+  }
+  li:hover .sub-menu,
+  .sub-menu-open {
+    @include transition-fade-in();
+    transition-delay: 0s;
+  }
 }
 
 // Navigation menu toggle for hybrid/compact layout
 #site-header-nav-toggle {
-	display: none;
-	@include layout(hybrid) {
-		cursor: pointer;
-		display: inline-block;
-		margin: 0;
-		margin-top: 6px;
-		padding: 9px;
-		vertical-align: middle;
-		&,
-		&:hover,
-		&:focus,
-		&:active {
-			background: none;
-			border-width: 0;
-			color: #fff;
-		}
-		img {
-			$icon-size: 30px;
-			width: $icon-size;
-			height: $icon-size;
-		}
-	}
+  display: none;
+  @include layout(hybrid) {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    margin-top: 6px;
+    padding: 9px;
+    vertical-align: middle;
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+      border-width: 0;
+      color: #fff;
+    }
+    img {
+      $icon-size: 30px;
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
 }

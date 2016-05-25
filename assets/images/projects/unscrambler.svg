@@ -1,31 +1,31 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<path id="unscrambler-arrow" d="M -50,0 L 50,0 M -30,-20 L -50,0 L -30,20 M 30,-20 L 50,0 L 30,20" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-		<!-- dot representing letter -->
-		<circle id="unscrambler-dot" r="16" />
-	</defs>
-	<!-- double arrow strokes -->
-	<g stroke-width="16">
-		<!-- top -->
-		<use xlink:href="#unscrambler-arrow" x="160" y="100" stroke="#85e" />
-		<!-- bottom -->
-		<use xlink:href="#unscrambler-arrow" x="160" y="220" stroke="#63c" />
-	</g>
-	<g stroke-width="8">
-		<!-- top -->
-		<use xlink:href="#unscrambler-arrow" x="160" y="100" stroke="#b8f" />
-		<!-- bottom -->
-		<use xlink:href="#unscrambler-arrow" x="160" y="220" stroke="#96f" />
-	</g>
-	<!-- letter dots -->
-	<g stroke-width="4">
-		<!-- top-left -->
-		<use xlink:href="#unscrambler-dot" x="60" y="100" fill="#b9f" stroke="#96f" />
-		<!-- top-right -->
-		<use xlink:href="#unscrambler-dot" x="260" y="100" fill="#b9f" stroke="#96f" />
-		<!-- bottom-left -->
-		<use xlink:href="#unscrambler-dot" x="60" y="220" fill="#85e" stroke="#63c" />
-		<!-- bottom-right -->
-		<use xlink:href="#unscrambler-dot" x="260" y="220" fill="#85e" stroke="#63c" />
-	</g>
+  <defs>
+    <path id="unscrambler-arrow" d="M -50,0 L 50,0 M -30,-20 L -50,0 L -30,20 M 30,-20 L 50,0 L 30,20" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- dot representing letter -->
+    <circle id="unscrambler-dot" r="16" />
+  </defs>
+  <!-- double arrow strokes -->
+  <g stroke-width="16">
+    <!-- top -->
+    <use xlink:href="#unscrambler-arrow" x="160" y="100" stroke="#85e" />
+    <!-- bottom -->
+    <use xlink:href="#unscrambler-arrow" x="160" y="220" stroke="#63c" />
+  </g>
+  <g stroke-width="8">
+    <!-- top -->
+    <use xlink:href="#unscrambler-arrow" x="160" y="100" stroke="#b8f" />
+    <!-- bottom -->
+    <use xlink:href="#unscrambler-arrow" x="160" y="220" stroke="#96f" />
+  </g>
+  <!-- letter dots -->
+  <g stroke-width="4">
+    <!-- top-left -->
+    <use xlink:href="#unscrambler-dot" x="60" y="100" fill="#b9f" stroke="#96f" />
+    <!-- top-right -->
+    <use xlink:href="#unscrambler-dot" x="260" y="100" fill="#b9f" stroke="#96f" />
+    <!-- bottom-left -->
+    <use xlink:href="#unscrambler-dot" x="60" y="220" fill="#85e" stroke="#63c" />
+    <!-- bottom-right -->
+    <use xlink:href="#unscrambler-dot" x="260" y="220" fill="#85e" stroke="#63c" />
+  </g>
 </svg>

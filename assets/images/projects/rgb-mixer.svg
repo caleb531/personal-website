@@ -1,26 +1,26 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<!-- color swatch -->
-		<circle id="rgbmixer-color" r="80" stroke-width="4" />
-	</defs>
-	<!-- primary color swatches -->
-	<g>
-		<!-- red -->
-		<use xlink:href="#rgbmixer-color" x="160" y="120" fill="#d44" stroke="#a11" />
-		<!-- blue -->
-		<use xlink:href="#rgbmixer-color" x="200" y="200" fill="#7af" stroke="#47d" />
-		<!-- green -->
-		<use xlink:href="#rgbmixer-color" x="120" y="200" fill="#8e4" stroke="#5b1" />
-	</g>
-	<!-- secondary color intersections -->
-	<g stroke-width="4">
-		<!-- yellow intersection -->
-		<path d="M 80.67,130.335 A 80,80 0,0,0 199.33,189.665 A 80,80 0,0,0 80.67,130.335 Z" fill="#ff0" stroke="#fc0" />
-		<!-- magenta intersection -->
-		<path d="M 239.33,130.335 A 80,80 0,0,0 120.67,189.664 A 80,80 0,0,0 239.33 130.335 Z" fill="#f9f" stroke="#d6d" />
-		<!-- cyan intersection -->
-		<path d="M 160,269.282 A 80,80 0,0,0 160,130.718 A 80,80 0,0,0 160,269.282 Z" fill="#9ff" stroke="#6dd" />
-		<!-- white intersection -->
-		<path d="M 120.670,189.664 A 80,80 0,0,0 199.33,189.664 A 80,80 0,0,0 160,130.335 A 80,80 0,0,0 120.670,189.664 Z" fill="#fff" stroke="#ccc" />
-	</g>
+  <defs>
+    <!-- color swatch -->
+    <circle id="rgbmixer-color" r="80" stroke-width="4" />
+  </defs>
+  <!-- primary color swatches -->
+  <g>
+    <!-- red -->
+    <use xlink:href="#rgbmixer-color" x="160" y="120" fill="#d44" stroke="#a11" />
+    <!-- blue -->
+    <use xlink:href="#rgbmixer-color" x="200" y="200" fill="#7af" stroke="#47d" />
+    <!-- green -->
+    <use xlink:href="#rgbmixer-color" x="120" y="200" fill="#8e4" stroke="#5b1" />
+  </g>
+  <!-- secondary color intersections -->
+  <g stroke-width="4">
+    <!-- yellow intersection -->
+    <path d="M 80.67,130.335 A 80,80 0,0,0 199.33,189.665 A 80,80 0,0,0 80.67,130.335 Z" fill="#ff0" stroke="#fc0" />
+    <!-- magenta intersection -->
+    <path d="M 239.33,130.335 A 80,80 0,0,0 120.67,189.664 A 80,80 0,0,0 239.33 130.335 Z" fill="#f9f" stroke="#d6d" />
+    <!-- cyan intersection -->
+    <path d="M 160,269.282 A 80,80 0,0,0 160,130.718 A 80,80 0,0,0 160,269.282 Z" fill="#9ff" stroke="#6dd" />
+    <!-- white intersection -->
+    <path d="M 120.670,189.664 A 80,80 0,0,0 199.33,189.664 A 80,80 0,0,0 160,130.335 A 80,80 0,0,0 120.670,189.664 Z" fill="#fff" stroke="#ccc" />
+  </g>
 </svg>

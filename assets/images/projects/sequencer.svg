@@ -1,9 +1,9 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<path id="sequencer-bracket" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" fill="#69f" stroke="#36c" stroke-width="4" />
-	</defs>
-	<!-- summation symbol -->
-	<polygon points="220,240 100,240 100,220 160,160 100,100 100,80 220,80 220,100 130,100 190,160 130,220 220,220" fill="#47d" stroke="#14a" stroke-width="4" stroke-linejoin="round" />
-	<use xlink:href="#sequencer-bracket" x="60" y="160" />
-	<use xlink:href="#sequencer-bracket" x="260" y="160" transform="translate(520,0) scale(-1,1)" />
+  <defs>
+    <path id="sequencer-bracket" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" fill="#69f" stroke="#36c" stroke-width="4" />
+  </defs>
+  <!-- summation symbol -->
+  <polygon points="220,240 100,240 100,220 160,160 100,100 100,80 220,80 220,100 130,100 190,160 130,220 220,220" fill="#47d" stroke="#14a" stroke-width="4" stroke-linejoin="round" />
+  <use xlink:href="#sequencer-bracket" x="60" y="160" />
+  <use xlink:href="#sequencer-bracket" x="260" y="160" transform="translate(520,0) scale(-1,1)" />
 </svg>
