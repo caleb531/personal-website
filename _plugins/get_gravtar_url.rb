@@ -6,15 +6,10 @@ module Jekyll
 
     private :hash
 
-    # Compute md5 hash for the given email address
-    def hash(email)
-      email_address = email ? email.downcase.strip : ''
-      Digest::MD5.hexdigest(email_address)
-    end
-
     # Build Gravatar URL for the given email address
     def get_gravatar_url(email, size)
-      "https://www.gravatar.com/avatar/#{hash(email)}?s=#{size}"
+      hash = Digest::MD5.hexdigest(email)
+      "https://www.gravatar.com/avatar/#{hash}?s=#{size}"
     end
 
   end
