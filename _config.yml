@@ -30,6 +30,7 @@ include:
   - .htaccess
 exclude:
   - README.md
+  - deploy.sh
 
 # Collections used for new content types
 collections:
