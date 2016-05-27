@@ -2,7 +2,7 @@
   <!-- chip body -->
   <path d="M 50,50 L 216,50 A 10.25,10.25,0,0,0,236,50 L 270,50 L 270,270 L 236,270 A 10.25,10.25,0,0,0,216,270 L 50,270 Z" fill="#263" stroke="#031" stroke-width="2" />
   <!-- mask which hides some pinheads -->
-  <mask id="masked-pinhead-regions">
+  <mask id="cachesimulator-masked-pinhead-regions">
     <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
     <!-- erase the two pinheads below the top concave region -->
     <rect x="214" y="50" width="24" height="20" fill="#000" />
@@ -13,9 +13,9 @@
   </mask>
   <!-- pinhead grid -->
   <pattern id="cachesimulator-pinhead-pattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-    <circle cx="4" cy="4" r="4" fill="#ffc" />
+    <circle cx="4" cy="4" r="4" fill="#ffb" />
   </pattern>
-  <rect fill="url(#cachesimulator-pinhead-pattern)" x="58" y="58" width="204" height="204" mask="url(#masked-pinhead-regions)" />
+  <rect fill="url(#cachesimulator-pinhead-pattern)" x="58" y="58" width="204" height="204" mask="url(#cachesimulator-masked-pinhead-regions)" />
   <!-- center space -->
   <rect x="118" y="118" width="84" height="84" fill="#263" />
   <!-- microchip grid -->
