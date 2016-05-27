@@ -4,16 +4,16 @@
     <!-- purple star -->
     <polygon id="palomarscheduler-star" points="0,-50 11.7557050458,-16.1803398875 47.5528258148,-15.4508497187 19.0211303259,6.1803398875 29.3892626146,40.4508497187 0,20 -29.3892626146,40.4508497187 -19.0211303259,6.1803398875 -47.5528258148,-15.4508497187 -11.7557050458,-16.1803398875" fill="#63c" stroke="#309" stroke-width="4" />
     <!-- black list item line -->
-    <polygon id="list-item" points="0,-4 0,4 120,4 120,-4" fill="#000" />
+    <polygon id="palomarscheduler-list-item" points="0,-4 0,4 120,4 120,-4" fill="#000" />
   </defs>
   <!-- top star -->
   <use xlink:href="#palomarscheduler-star" x="90" y="100" />
   <!-- top list -->
-  <use xlink:href="#list-item" x="160" y="80" />
-  <use xlink:href="#list-item" x="160" y="120" />
+  <use xlink:href="#palomarscheduler-list-item" x="160" y="80" />
+  <use xlink:href="#palomarscheduler-list-item" x="160" y="120" />
   <!-- bottom star -->
   <use xlink:href="#palomarscheduler-star" x="90" y="220" />
   <!-- bottom list -->
-  <use xlink:href="#list-item" x="160" y="200" />
-  <use xlink:href="#list-item" x="160" y="240" />
+  <use xlink:href="#palomarscheduler-list-item" x="160" y="200" />
+  <use xlink:href="#palomarscheduler-list-item" x="160" y="240" />
 </svg>
