@@ -31,10 +31,12 @@ That depends. In Atom, spaces behave just like tabs when used for indentation, a
 
 ### What's the story behind your project icons?
 
-I meticulously crafted each icon using SVG, a vector image format which is both portable and infinitely scalable. I didn't use any sort of vector-drawing application, but rather wrote all of the code by hand for several reasons:
+I'm so glad you asked! I actually made them myself.
 
-1. Precision: I can achieve maximal precision because I have total control over the numbers
-    1. This can also make some icons quite challenging to draw, but I still consider the flexibility worth the additional effort in those cases.
+I meticulously crafted each icon using SVG, a vector image format which is both portable and infinitely scalable. I didn't use any sort of vector-drawing application to hand-draw each icon, but rather I wrote all of the code by hand.
+
+Considering that I have over 40 projects, I had to write the code for over 40 icons, where each icon was carefully conceived and designed. Indeed, it took much time and effort, but I had great fun doing it. I also found that hand-writing the code for each icon provided the following benefits:
+
+1. Precision: I can achieve maximal precision because I have total control over the numbers; this can also make some icons quite challenging to draw, but I still consider the flexibility worth the additional effort in those cases.
 2. Portability: I'm not tied to a specific vector application; I can write SVG anywhere, though I naturally choose to use Atom (I've created [a number of handy-dandy SVG snippets for Emmet](https://github.com/caleb531/dotfiles/blob/master/emmet/snippets.json)).
-
-Considering that I have about 40 projects, I had to create about 40 unique icons, where each icon was carefully conceived and designed. Indeed, it took much time and effort, but I had great fun doing it.
+3. Maintainability: I can make changes to multiple projects at once simply by using Atom's project-wide **Find And Replace** panel. For instance, I try to use a consistent palette of colors across many of my icons, and if I ever need to change the same color across multiple icons, doing so is as easy as `shift-cmd-f`.
