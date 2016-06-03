@@ -20,7 +20,7 @@
 
     &copy; {{ site.time | date: '%Y' }} Caleb Evans | <a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a><br />
 
-    Like what I've made? Please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&item_name=&business={{ site.email | antispambot }}">donate</a>!
+    Like what I've made? Please <a href="{{ site.email | antispambot | donate_url }}">donate</a>!
 
   </div>
 
