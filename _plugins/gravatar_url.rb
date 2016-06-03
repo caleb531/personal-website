@@ -5,7 +5,7 @@ module Jekyll
   module GetGravatarURL
 
     def gravatar_url(email, size)
-      hash = Digest::MD5.hexdigest(email)
+      hash = Digest::MD5.hexdigest(email.strip.downcase)
       "https://www.gravatar.com/avatar/#{hash}?s=#{size}"
     end
 
