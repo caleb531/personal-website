@@ -3,7 +3,7 @@
     {% assign project = site.projects | where: 'slug', project_slug | first %}
     <div class="entry project">
       <div class="entry-image project-image">
-        <a href="{{ project.direct_url }}"><img src="{{ site.data.projects.icon_path | replace: ':slug', project.slug | prepend: site.baseurl }}" alt="{{ project.title }}" /></a>
+        <a href="{{ project.direct_url }}"><img src="{{ site.baseurl }}{{ site.data.projects.icon_path | replace: ':slug', project.slug }}" alt="{{ project.title }}" /></a>
       </div>
       <span class="project-title">{{ project.title }}</span>
     </div>
