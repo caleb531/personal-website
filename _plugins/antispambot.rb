@@ -5,7 +5,6 @@ module Jekyll
   # (to deter email harvesting)
   module Antispambot
 
-    # Encode email address
     def antispambot(email)
       email_chars = email.split('')
       encoded_email = ''
