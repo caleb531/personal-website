@@ -4,8 +4,6 @@ module Jekyll
   # Liquid filter which returns Gravatar URL for the input email address
   module GetGravatarURL
 
-    private :hash
-
     def gravatar_url(email, size)
       hash = Digest::MD5.hexdigest(email)
       "https://www.gravatar.com/avatar/#{hash}?s=#{size}"
