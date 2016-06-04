@@ -19,7 +19,7 @@
     <!-- state 1 (top-left) -->
     <circle cx="80" cy="80" r="40" />
     <!-- state 2 (final state; bottom-right) -->
-    <circle cx="220 " cy="220" r="52" />
+    <circle cx="220" cy="220" r="52" />
     <circle cx="220" cy="220" r="40" />
   </g>
 </svg>
