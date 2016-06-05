@@ -1,7 +1,7 @@
 (function ( window, $, FastClick ) {
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
-  // Cache jQuery elements
+  // Cache elements
   var $$ = {};
   $$.menuToggle = $( '#site-header-nav-toggle' );
   $$.siteHeaderNav = $( '#site-header-nav' );
@@ -30,4 +30,4 @@ jQuery(document).ready(function () {
   FastClick.attach( $('body')[0] );
 
 });
-}( window, jQuery, window.FastClick ));
+}( window, window.Zepto, window.FastClick ));
