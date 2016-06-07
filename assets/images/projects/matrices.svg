@@ -3,7 +3,7 @@
     <!-- element representing number -->
     <rect id="matrices-element" x="-15" y="-15" width="30" height="30" stroke-linecap="round" stroke-linejoin="round" />
     <!-- a single bracket used to surround matrix elements -->
-    <path id="matrices-bracket" d="M 90,54 L 54,54 L 54,266 L 90,266 L 90,254 L 68,254 L 68,66 L 90,66 Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="matrices-bracket" d="M 90,54 L 54,54 L 54,266 L 90,266 L 90,254 L 66,254 L 66,66 L 90,66 Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
   </defs>
   <g fill="#69f" stroke="#36c" stroke-width="4">
     <!-- left bracket -->
