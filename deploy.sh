@@ -4,7 +4,7 @@
 source .env
 
 # LOCAL_BUILD_DIR must end with a /
-LOCAL_BUILD_DIR="$(mktemp -d)"/_site/
+LOCAL_BUILD_DIR="$(mktemp -d)"/
 # REMOTE_PROD_DEST_DIR is relative to ~ on remote
 REMOTE_PROD_DEST_DIR=./public_html
 
