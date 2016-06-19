@@ -4,9 +4,9 @@
 icon_path: /assets/images/projects/:slug.svg
 # Projects featured on homepage
 featured_projects:
-  - b-sketcher
   - youversion-suggest
   - jcanvas
   - unscrambler
   - binary-brancher
+  - play-song
   - painter
