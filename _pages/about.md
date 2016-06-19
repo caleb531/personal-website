@@ -7,7 +7,7 @@ id: about
 
 ### Who are you?
 
-I'm Caleb Evans, a college student with many passions: faith in Christ, programming for fun, spending time with family, red pandas, and eating impressively large quantities of pizza. I currently reside in Carlsbad, California, attending college with a goal of earning a degree in computer science.
+I'm Caleb Evans, a college student with many passions: coding for Christ, spending time with family, watching red panda videos, and eating impressively large quantities of pizza. I currently reside in Carlsbad, California, attending college with a goal of earning a degree in computer science.
 
 ### What do you do?
 

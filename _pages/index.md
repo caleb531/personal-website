@@ -6,7 +6,7 @@ id: home
 
 ## Hello!
 
-**I'm Caleb**, a college student who loves Christ and enjoys coding awesome apps and tools.  
+**I'm Caleb**, a college student who lives for Christ by coding awesome apps and tools.  
 **Nice to meet you.**
 
 ### Featured Projects
