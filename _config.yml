@@ -32,6 +32,7 @@ include:
   - .htaccess
 exclude:
   - README.md
+  - LICENSE.txt
   - deploy.sh
 
 # Collections used for new content types
