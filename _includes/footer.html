@@ -1,20 +1,6 @@
 <footer class="site-footer">
 
-  <div class="entry-list contact-link-list entry-list-compact contact-link-list-compact">
-    {% for contact_link_slug in site.data.contact_links.contact_links %}
-      {% assign contact_link = site.contact_links | where: 'slug', contact_link_slug | first %}
-      <div class="entry contact-link">
-        {% if contact_link.email %}
-          {% assign direct_url = contact_link.email | antispambot | mailto %}
-        {% else %}
-          {% assign direct_url = contact_link.direct_url %}
-        {% endif %}
-        <a href="{{ direct_url }}" class="entry-image contact-link-image">
-            <img src="{{ site.baseurl }}{{ site.data.contact_links.icon_baseurl }}/{{ contact_link.slug }}.svg" alt="{{ contact_link.title }}" />
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+  {% include contact-links.html compact=true %}
 
   <div class="site-footer-content">
 
