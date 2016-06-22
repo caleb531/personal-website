@@ -1,0 +1,9 @@
+# Global metadata used by all websites
+
+# Base URL for all website images
+icon_baseurl: /assets/images/websites
+# Websites to display in archive (in the following order)
+websites:
+  - iv-north-county
+  - static-stitches
+  - personal-website

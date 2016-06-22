@@ -1,7 +1,7 @@
 # Global metadata used by all projects
 
-# Path template for all project icons
-icon_path: /assets/images/projects/:slug.svg
+# Base URL for all project icons
+icon_baseurl: /assets/images/projects
 # Projects featured on homepage
 featured_projects:
   - youversion-suggest

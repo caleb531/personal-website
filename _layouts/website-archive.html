@@ -6,7 +6,8 @@ layout: page
 
 <div class="entry-list website-list">
 
-  {% for website in site.websites %}
+  {% for website_slug in site.data.websites.websites %}
+    {% assign website = site.websites | where: 'slug', website_slug | first %}
 
     <div class="entry website">
 
