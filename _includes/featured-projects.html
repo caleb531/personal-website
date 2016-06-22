@@ -1,11 +1,18 @@
 <div class="entry-list project-list entry-list-compact project-list-compact">
+
   {% for project_slug in site.data.projects.featured_projects %}
     {% assign project = site.projects | where: 'slug', project_slug | first %}
+
     <div class="entry project">
+
       <div class="entry-image project-image">
         <a href="{{ project.direct_url }}"><img src="{{ site.baseurl }}{{ site.data.projects.icon_baseurl }}/{{ project.slug }}.svg" alt="{{ project.title }}" /></a>
       </div>
+
       <span class="project-title">{{ project.title }}</span>
+
     </div>
+
   {% endfor %}
+
 </div>
