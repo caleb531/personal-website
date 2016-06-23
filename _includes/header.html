@@ -1,8 +1,9 @@
 <header id="site-header">
 
   <a id="site-title-link" href="{{ site.baseurl }}/" rel="home">
-    {% assign retina_gravatar_size = site.gravatar_size | times: 2 %}
-    <img src="{{ site.email | gravatar_url: site.gravatar_size }}" alt="{{ site.title }}" srcset="{{ site.email | gravatar_url: retina_gravatar_size }} 2x" style="width: {{ site.gravatar_size }}px; height: {{ site.gravatar_size }}px;" id="site-header-logo" />
+    {% assign gravatar_size = 60 %}
+    {% assign retina_gravatar_size = gravatar_size | times: 2 %}
+    <img src="{{ site.email | gravatar_url: gravatar_size }}" alt="{{ site.title }}" srcset="{{ site.email | gravatar_url: retina_gravatar_size }} 2x" style="width: {{ gravatar_size }}px; height: {{ gravatar_size }}px;" id="site-header-logo" />
     <h1 id="site-title">{{ site.title }}</h1>
   </a>
 
