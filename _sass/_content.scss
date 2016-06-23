@@ -92,16 +92,15 @@ samp {
 }
 
 pre {
-  background: #f5f5f5;
-  color: #666;
-  font-family: monospace;
-  font-size: 14px;
   margin: 20px 0;
-  overflow: auto;
-  padding: 20px;
+  padding: 6px 10px;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow: auto;
+  code {
+    background: none;
+  }
 }
 
 blockquote,
