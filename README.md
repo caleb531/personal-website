@@ -10,11 +10,17 @@ myself. I built the current theme from the Jekyll 3 default theme.
 
 ### Installing Jekyll
 
-To build this site, you must first install Jekyll (which requires Ruby and
-Node):
+The site requires Jekyll 3 (which in turn requires Ruby 2 and Node):
 
 ```bash
 gem install jekyll
+```
+
+You can also install the site's required gems via Bundler:
+
+```bash
+gem install bundler
+bundle install
 ```
 
 ### Serving the site
