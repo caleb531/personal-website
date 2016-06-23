@@ -56,6 +56,11 @@
   }
 }
 
-.home-content p {
-  max-width: 460px;
+.home-content {
+  p {
+    max-width: 460px;
+  }
+  strong {
+    font-size: 1.25em;
+  }
 }
