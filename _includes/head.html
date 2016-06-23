@@ -17,10 +17,9 @@
   <link rel="shortcut icon" href="{{ site.email | gravatar_url: 32 }}" />
   <link rel="icon" href="{{ site.email | gravatar_url: 192 }}" sizes="192x192" />
 
-  <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 76 }}" sizes="76x76" />
-  <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 120 }}" sizes="120x120" />
-  <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 152 }}" sizes="152x152" />
-  <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 180 }}" sizes="180x180" />
+  {% for icon_size in site.data.gravatar.apple_touch_icon_sizes %}
+    <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: icon_size }}" sizes="{{ icon_size }}x{{ icon_size }}" />
+  {% endfor %}
 
   {% if jekyll.environment == 'production' %}
     <script>
