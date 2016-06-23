@@ -1,5 +1,5 @@
 ---
 title: Twitter
 direct_url: https://twitter.com/caleb531
-description: Where to find updates about me and my projects
+description: Follow me for updates on my projects and interesting things I find on the Web
 ---
