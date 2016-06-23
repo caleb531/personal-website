@@ -85,8 +85,9 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
-  font-size: 14px;
+  padding: 0 2px;
+  background-color: rgba(#000, 0.4);
+  font-family: monospace;
   hyphens: none;
 }
 
