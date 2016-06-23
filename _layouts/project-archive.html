@@ -6,21 +6,18 @@ layout: page
 
 <div class="project-list-container">
 
-  <div class="project-list-column">
+  {% for column in site.data.projects.categories %}
 
-    {% include project-category.html category_slug="libraries" category_title="Libraries" %}
-    {% include project-category.html category_slug="games" category_title="Games" %}
-    {% include project-category.html category_slug="tools" category_title="Tools" %}
+    <div class="project-list-column">
 
-  </div>
+      {% for category in column %}
 
-  <div class="project-list-column">
+        {% include project-category.html category_slug=category.slug category_title=category.title %}
 
-    {% include project-category.html category_slug="fun" category_title="Fun" %}
-    {% include project-category.html category_slug="programs" category_title="Programs" %}
-    {% include project-category.html category_slug="alfred-workflows" category_title="Alfred Workflows" %}
-    {% include project-category.html category_slug="math" category_title="Math" %}
+      {% endfor %}
 
-  </div>
+    </div>
+
+  {% endfor %}
 
 </div>
