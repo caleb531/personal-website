@@ -4,23 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   {% if page.title %}
-    {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
+    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
   {% else %}
-    {% assign page_title = site.title | append: ' | ' | append: site.tagline | escape %}
+    <title>{{ site.title | escape }} | {{ site.tagline | escape }}</title>
   {% endif %}
-  {% if page.excerpt %}
-    {% assign page_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
-  {% else %}
-    {% assign page_desc = site.description %}
-  {% endif %}
-  <title>{{ page_title }}</title>
-  <meta name="description" content="{{ page_desc }}" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:title" content="{{ page_title }}" />
-  <meta name="twitter:description" content="{{ page_desc }}" />
-  <meta name="twitter:image" content="{{ site.email | gravatar_url: 240 }}" />
-  <meta name="twitter:image:alt" content="Caleb Evans" />
+
+  {% seo title=false %}
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400" />
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/main.css" />
@@ -32,8 +21,6 @@
   <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 120 }}" sizes="120x120" />
   <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 152 }}" sizes="152x152" />
   <link rel="apple-touch-icon" href="{{ site.email | gravatar_url: 180 }}" sizes="180x180" />
-
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}" />
 
   {% if jekyll.environment == 'production' %}
     <meta name="google-site-verification" content="{{ site.google_site_verify }}" />
