@@ -51,6 +51,10 @@ ErrorDocument 404 /404/
   RewriteEngine On
   RewriteBase /
 
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.calebevans\.me [NC]
+  RewriteRule ^(.*)$ http://calebevans.me/$1 [R=301,L]
+
   # Redirect /projects/* to projects.calebevans.me/*
   RewriteRule ^projects/(.+)$ http://projects.calebevans.me/$1 [R=301,NC,L]
 
