@@ -30,17 +30,10 @@ ErrorDocument 404 /404/
 
 <IfModule mod_headers.c>
 
-  # Cache scripts, stylesheets, and images
-  <FilesMatch '\.(css|js|png|jpg|gif|svg)$'>
-    # Set cache to expire after one day
+  # Cache HTML, scripts, stylesheets, and images
+  <FilesMatch '\.(html|css|js|png|jpg|gif|svg)$'>
+    # Set cache to expire after one week
     Header set Cache-Control 'max-age=604800'
-  </FilesMatch>
-
-  # Force latest rendering engine in IE
-  <FilesMatch '\.html$'>
-    Header set X-UA-Compatible 'IE=edge'
-    # Set cache to expire after one hour
-    Header set Cache-Control 'max-age=3600'
   </FilesMatch>
 
 </IfModule>
