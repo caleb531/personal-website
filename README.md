@@ -41,3 +41,6 @@ Technically, the site runs on Apache, so you should really create an Apache
 virtual host for the development site and run it locally as such. Otherwise,
 features such as 404 redirection, caching, and gzipping will not be enabled
 (because the site's `.htaccess` file will not be executed).
+
+When serving via Apache, run `jekyll build --watch` to build the site and watch
+for changes.
