@@ -26,9 +26,6 @@ google_analytics: UA-32415253-1
 host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 
 # Build settings
-gems:
-  - jekyll-seo-tag
-  - jekyll-sitemap
 markdown: kramdown
 kramdown:
   input: GFM
