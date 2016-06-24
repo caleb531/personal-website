@@ -1,9 +1,9 @@
 <div class="entry-list project-list">
 
-  <h3 class="entry-list-category-title project-list-category-title">{{ include.category_title }}</h3>
+  <h3 class="entry-list-category-title project-list-category-title">{{ include.category.title }}</h3>
 
   {% for project in site.projects %}
-    {% if project.categories contains include.category_slug %}
+    {% if project.categories contains include.category.slug %}
 
       <div class="entry project">
 
