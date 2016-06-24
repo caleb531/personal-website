@@ -6,7 +6,7 @@
     <div class="entry contact-link">
 
       {% if contact_link.email %}
-        {% assign direct_url = contact_link.email | antispambot | mailto %}
+        {% assign direct_url = contact_link.email | encode_email | mailto %}
       {% else %}
         {% assign direct_url = contact_link.direct_url %}
       {% endif %}
