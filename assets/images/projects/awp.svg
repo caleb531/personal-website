@@ -1,0 +1,26 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Alfred hat -->
+    <g id="awp-hat">
+      <!-- Hat body -->
+      <path id="awp-hat-body" d="M -100,0 L 100,0 L 100,-10 L 70,-10 Q 70,-90 0,-90 Q -70,-90 -70,-10 L -100,-10 Z" fill="#222" stroke="#000" stroke-width="2" />
+      <!-- Purple band around hat -->
+      <path id="awp-hat-band" d="M -70,-10 L 70,-10 Q 71,-20 69,-30 L -69,-30 Q -71,-20 -70,-10 Z" fill="#639" stroke="#306" stroke-width="2" />
+    </g>
+    <g id="awp-box" fill="#963" stroke="#630" stroke-width="2">
+      <!-- Front face -->
+      <rect x="-80" y="0" width="160" height="100" />
+      <!-- Side flaps -->
+      <g fill="none" stroke-width="4">
+        <!-- Left flap -->
+        <line x1="-80" y1="0" x2="-120" y2="50" />
+        <!-- Right flap -->
+        <line x1="80" y1="0" x2="120" y2="50" />
+      </g>
+      <!-- Front flap -->
+      <polygon points="-80,0 -100,50 100,50 80,0" fill="#852" />
+    </g>
+  </defs>
+  <use xlink:href="#awp-hat" x="160" y="140" />
+  <use xlink:href="#awp-box" x="160" y="180" />
+</svg>
