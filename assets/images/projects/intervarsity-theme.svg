@@ -1,0 +1,26 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- homepage content box icon -->
+    <circle id="ivtheme-content-box-icon" cx="0" cy="0" r="30" />
+    <!-- letter "I" in "IV" text -->
+    <polygon id="ivtheme-text-i" points="-20,0 20,0 20,-120 -20,-120" />
+    <!-- letter "V" in "IV" text -->
+    <polygon id="ivtheme-text-v" points="20,0 90,-120 50,-120 0,-30 -50,-120 -90,-120 -20,0" />
+  </defs>
+  <!-- "IV" text -->
+  <g fill="#333" stroke="#000" stroke-width="2">
+    <use xlink:href="#ivtheme-text-i" x="70" y="160" />
+    <use xlink:href="#ivtheme-text-v" x="190" y="160" />
+  </g>
+  <!-- divider line -->
+  <rect x="40" y="180" width="240" height="20" fill="#ccc" stroke="#999" stroke-width="2" />
+  <!-- content box icons -->
+  <g fill="#c30" stroke="#900" stroke-width="2">
+    <!-- left -->
+    <use xlink:href="#ivtheme-content-box-icon" x="70" y="250" />
+    <!-- center -->
+    <use xlink:href="#ivtheme-content-box-icon" x="160" y="250" />
+    <!-- right -->
+    <use xlink:href="#ivtheme-content-box-icon" x="250" y="250" />
+  </g>
+</svg>
