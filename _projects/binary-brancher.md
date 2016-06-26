@@ -1,6 +1,6 @@
 ---
 title: Binary Brancher
 direct_url: http://projects.calebevans.me/binary-brancher/
-categories: tools
+categories: computer-science
 description: Binary search trees made fun
 ---

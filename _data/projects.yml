@@ -6,21 +6,25 @@ icon_baseurl: /assets/images/projects
 # project archive
 categories:
   -
-    - slug: alfred-workflows
-      title: Alfred Workflows
+    - slug: alfred
+      title: Alfred
     - slug: games
       title: Games
-    - slug: libraries
-      title: Libraries
+    - slug: programs
+      title: Programs
     - slug: math
       title: Math
   -
-    - slug: fun
-      title: Fun
-    - slug: programs
-      title: Programs
+    - slug: wordpress
+      title: WordPress
+    - slug: jquery-libraries
+      title: jQuery Libraries
+    - slug: computer-science
+      title: Computer Science
     - slug: tools
       title: Tools
+    - slug: fun
+      title: Fun
 # Projects featured on homepage
 featured_projects:
   - youversion-suggest
