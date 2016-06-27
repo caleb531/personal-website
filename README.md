@@ -3,8 +3,10 @@
 *Copyright 2016, Caleb Evans*  
 *Code released under the MIT license*
 
-This is a [Jekyll](https://jekyllrb.com/)-based personal website I built for
-myself. I built the current theme from the Jekyll 3 default theme.
+This is a [Jekyll](https://jekyllrb.com/)-based personal website I created for
+myself. I built the current theme from the Jekyll 3 default theme. I am
+releasing the full source code for the site so that others may benefit from the
+code I've written.
 
 ## Setup
 
