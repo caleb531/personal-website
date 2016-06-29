@@ -9,7 +9,7 @@
     <title>{{ site.title | escape }} | {{ site.tagline | escape }}</title>
   {% endif %}
 
-  {% if page.id != 'error-403' and page.id != 'error-404' %}
+  {% if page.sitemap != false %}
     {% seo title=false %}
   {% endif %}
 
