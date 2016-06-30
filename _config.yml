@@ -50,3 +50,13 @@ collections:
   # Contact links (displayed in footer and on Contact page)
   contact_links:
     output: false
+
+# Set defaults for YAML Front Matter variables
+defaults:
+  -
+    # Use the page layout for all pages by default (naturally)
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page

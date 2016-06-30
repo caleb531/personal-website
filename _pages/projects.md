@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Projects
 permalink: /portfolio/projects/
 id: projects

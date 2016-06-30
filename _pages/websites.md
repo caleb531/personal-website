@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Websites
 permalink: /portfolio/websites/
 id: websites
