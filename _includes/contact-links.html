@@ -12,7 +12,7 @@
       {% endif %}
 
       <a href="{{ direct_url }}" class="entry-image contact-link-image">
-        <img src="{{ site.baseurl }}{{ site.data.contact_links.icon_baseurl }}/{{ contact_link.slug }}.svg" alt="{{ contact_link.title }}" />
+        {{ site.baseurl | append: site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' | file_contents }}
       </a>
 
       {% if include.compact != true %}

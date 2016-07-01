@@ -8,7 +8,9 @@
       <div class="entry project">
 
         <div class="entry-image project-image">
-          <a href="{{ project.direct_url }}"><img src="{{ site.baseurl }}{{ site.data.projects.icon_baseurl }}/{{ project.slug }}.svg" alt="{{ project.title }}" /></a>
+          <a href="{{ project.direct_url }}">
+            {{ site.baseurl | append: site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | file_contents }}
+          </a>
         </div>
 
         <div class="entry-main project-main">
