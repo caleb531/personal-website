@@ -1,7 +1,7 @@
 // Styling for contact links
 
 .contact-link {
-  &-image {
+  &-image a {
     $icon-size: 64px;
     width: $icon-size;
     height: $icon-size;

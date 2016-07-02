@@ -11,9 +11,11 @@
         {% assign direct_url = contact_link.direct_url %}
       {% endif %}
 
-      <a href="{{ direct_url }}" class="entry-image contact-link-image">
-        {{ site.baseurl | append: site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' | file_contents }}
-      </a>
+      <div class="entry-image contact-link-image">
+        <a href="{{ direct_url }}">
+          {{ site.baseurl | append: site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' | file_contents }}
+        </a>
+      </div>
 
       {% if include.compact != true %}
 

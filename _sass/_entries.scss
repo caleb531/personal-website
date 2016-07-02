@@ -12,10 +12,10 @@
   margin: 20px 0;
   &-image {
     flex-shrink: 0;
-    vertical-align: top;
     a {
       display: inline-block;
       text-decoration: none;
+      vertical-align: top;
     }
   }
   &-main {

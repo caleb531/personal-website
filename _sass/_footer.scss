@@ -20,7 +20,7 @@
   }
   .contact-link {
     margin: 5px;
-    &-image {
+    &-image a {
       $icon-size: 40px;
       width: $icon-size;
       height: $icon-size;
