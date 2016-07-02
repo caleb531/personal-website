@@ -67,7 +67,10 @@ responsive_image:
   # Path to template used for all responsive images
   template: _includes/responsive-image.html
 
-  # Sizes for which to generate resized images
+  # The base width of a 1x image
+  base_width: 256
+
+  # Sizes of smaller images to generate
   sizes:
     - width: 256
 
