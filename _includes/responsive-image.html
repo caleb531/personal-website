@@ -1,6 +1,6 @@
 {% capture srcset %}
   {% for i in resized %}
-    {% assign ratio = site.responsive_image.base_width | divided_by: i.width %}
+    {% assign ratio = i.width | divided_by: site.responsive_image.base_width %}
     {% if ratio == 1 %}
       {% assign base = i %}
     {% else %}
