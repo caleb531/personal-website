@@ -8,7 +8,9 @@
 
   <nav id="site-header-nav">
 
-    <button id="site-header-nav-toggle"><img src="{{ site.baseurl }}/assets/images/nav-toggle.svg" alt="Navigation" /></button>
+    <button id="site-header-nav-toggle">
+      {{ site.baseurl | append: '/assets/images/nav-toggle.svg' | file_contents }}
+    </button>
 
     <ul id="site-header-nav-list">
 
