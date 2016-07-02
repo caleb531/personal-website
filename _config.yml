@@ -60,3 +60,16 @@ defaults:
       type: pages
     values:
       layout: page
+
+# Responsive image configuration for website portfolio
+responsive_image:
+
+  # Path to template used for all responsive images
+  template: _includes/responsive-image.html
+
+  # Sizes for which to generate resized images
+  sizes:
+    - width: 256
+
+  # Output format for resized image paths
+  output_path_format: assets/images/resized/%{width}/%{basename}
