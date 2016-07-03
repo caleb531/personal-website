@@ -12,6 +12,10 @@ I'm Caleb Evans, a college student with many passions: coding for Christ, spendi
 
 Since 2010, I've been programming in many languages for school and for fun. My most prominent work includes a plethora of web apps and useful tools—many of which were created to enhance my productivity and actualize my ideas. I've also crafted a number of websites (for myself and for others) using PHP, WordPress, and even Jekyll.
 
+### Why do you code?
+
+Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who has been and always shall be my Lord, my Friend, and my Savior. I code because I believe the work of my hands glorifies God in a number of ways. Through coding, I am able to reflect God's magnificent creativity by expressing my own. It's also a means for me to enrich people's lives by creating tools that are useful to them (and not just to me); for instance, I frequently receive emails from developers using my [jCanvas](http://calebevans.me/projects/jcanvas/) drawing library who tell me how much they love it and ask me for help in using it.
+
 ### How many languages do you speak?
 
 First and foremost, I am fluent in HTML5, CSS3, JavaScript, and PHP, since most of my projects are Web-based. However, as I have grown very fond of Python over the years, I've also created a handful of useful Python-based utilities (all of which are fully unit tested with 100% coverage). Besides that, I've written numerous AppleScripts to improve my workflow and I've muddled with Bash for configuring my development environment, among other things. I've even worked with Java and C++ for school, though I can't say I'm a fan.
