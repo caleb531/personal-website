@@ -20,6 +20,6 @@ This website uses Google Analytics. I only use this information to examine traff
 
 This privacy policy may change at any time. When changes are made, the date at the top of this policy will be updated.
 
-#### Contacting Me
+### Contacting Me
 
 If you choose to email me through this website, I will not share your email with anyone else, nor will I use it for marketing purposes.
