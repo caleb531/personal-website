@@ -1,4 +1,4 @@
-<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <!-- Terminal window body (frame) -->
     <path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="#333" stroke="#000" id="dotfiles-terminal-body" />
