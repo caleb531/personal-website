@@ -3,7 +3,7 @@ module Jekyll
   module DonateURL
 
     def donate_url(email)
-      "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&item_name=&business=#{email}"
+      "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=#{email}"
     end
 
   end
