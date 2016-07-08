@@ -18,7 +18,7 @@ Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who 
 
 ### How many languages do you speak?
 
-First and foremost, I am fluent in HTML5, CSS3, JavaScript, and PHP, since most of my projects are Web-based. However, as I have grown very fond of Python over the years, I've also created a handful of useful Python-based utilities (all of which are fully unit tested with 100% coverage). Besides that, I've written numerous AppleScripts to improve my workflow and I've muddled with Bash for configuring my development environment, among other things. I've even worked with Java and C++ for school, though I can't say I'm a fan.
+First and foremost, I am fluent in HTML5, CSS3, JavaScript, and PHP, since most of my projects are Web-based. However, as I have grown very fond of Python over the years, I've also created a handful of useful Python-based utilities (all of which are fully unit tested with 100% coverage). Besides that, I've written numerous AppleScripts to improve my workflow and I've fiddled with Bash for configuring my development environment, among other things. I've even worked with Java and C++ for school, though I can't say I'm a fan.
 
 ### What is your favorite language?
 
