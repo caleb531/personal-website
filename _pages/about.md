@@ -26,7 +26,7 @@ By far, Python is my favorite language (especially Python 3). It's a wonderful l
 
 ### What is your code editor of choice?
 
-I use [Atom](https://atom.io/), an open-source editor developed by GitHub. The editor is built with the latest web technologies (HTML/CSS/JS), which makes it impressively customizable while keeping it incredibly easy to use. For those interested in giving it a try, you can view my complete Atom configuration (including the packages I use) on my [dotfiles repository](https://github.com/caleb531/dotfiles).
+I use [Atom](https://atom.io/), an open-source editor developed by GitHub. The editor itself is built with the latest web technologies (HTML/CSS/JS), which makes it impressively customizable while keeping it incredibly easy to use. For those interested in giving it a try, you can view my complete Atom configuration (including the packages I use) on my [dotfiles repository](https://github.com/caleb531/dotfiles).
 
 ### Tabs or spaces?
 
