@@ -2,8 +2,6 @@
     <defs>
         <!-- taxonomy term -->
         <rect id="awesomecpt-term" x="0" y="0" width="50" height="60" rx="3" ry="3" fill="#7d3" stroke="#4a0" stroke-width="4" />
-        <!-- meta box field -->
-        <rect id="awesomecpt-metabox-field" />
     </defs>
     <!-- post type -->
     <rect x="40" y="40" width="80" height="150" fill="#c33" stroke="#900" stroke-width="4" rx="3" ry="3" />
