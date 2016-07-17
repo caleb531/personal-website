@@ -37,7 +37,6 @@ include:
 exclude:
   - README.md
   - LICENSE.txt
-  - deploy.sh
   - Gemfile
   - Gemfile.lock
 
