@@ -14,7 +14,7 @@ Since 2010, I've been programming in many languages for school and for fun. My m
 
 ### Why do you code?
 
-Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who has been and always shall be my Lord, my Friend, and my Savior. I code because I believe the work of my hands glorifies God in a number of ways. Through coding, I am able to reflect God's magnificent creativity by expressing my own. It's also a means for me to enrich people's lives by creating tools that are useful to them (and not just to me); for instance, I frequently receive emails from developers using my [jCanvas](http://calebevans.me/projects/jcanvas/) drawing library who tell me how much they love it and ask me for help in using it.
+Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who has been and always shall be my Lord, my Friend, and my Savior. I code because I believe the work of my hands glorifies God in a number of ways. Through coding, I am able to reflect God's magnificent creativity by expressing my own. It's also a means for me to enrich people's lives by creating tools that are useful to them (and not just to me); for instance, I frequently receive emails from developers using my [jCanvas](http://calebevans.me/projects/jcanvas/) drawing library who tell me how much they love it and ask me for help in using it. Therefore, I would certainly say that I find a great deal of purpose in coding.
 
 ### How many languages do you speak?
 
