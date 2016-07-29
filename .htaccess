@@ -32,8 +32,8 @@ ErrorDocument 404 /404/
 
   # Cache HTML, scripts, stylesheets, and images
   <FilesMatch '\.(html|css|js|png|jpg|gif|svg)$'>
-    # Set cache to expire after one week
-    Header set Cache-Control 'max-age=604800'
+    # Set cache to expire after one day
+    Header set Cache-Control 'max-age=3600'
   </FilesMatch>
 
 </IfModule>
