@@ -11,12 +11,15 @@
         {% assign direct_url = contact_link.direct_url %}
       {% endif %}
 
+      {% if include.compact == true %}
+        {% assign aria_label = contact_link.title %}
+      {% else %}
+        {% assign aria_label = '' %}
+      {% endif %}
+
       <div class="entry-image contact-link-image">
-        <a href="{{ direct_url }}">
+        <a href="{{ direct_url }}" aria-label="{{ aria_label }}">
           {{ site.baseurl | append: site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' | file_contents }}
-          {% if include.compact == true %}
-            {{ contact_link.title }}
-          {% endif %}
         </a>
       </div>
 
