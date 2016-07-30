@@ -8,6 +8,45 @@
   }
 }
 
+// Mixins for vendor-prefixed properties
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin align-items($alignment) {
+  @if $alignment == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $alignment == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  }
+  align-items: $alignment;
+}
+
+@mixin flex-shrink($number) {
+  -webkit-flex-shrink: $number;
+  -ms-flex-negative: $number;
+  flex-shrink: $number;
+}
+
+@mixin flex-grow($number) {
+  -webkit-box-flex: $number;
+  -ms-flex-positive: $number;
+  flex-grow: $number;
+}
+
+@mixin hyphens($value) {
+  -webkit-hyphens: $value;
+  -ms-hyphens: $value;
+  hyphens: $value;
+}
+
+// Mixins for overlay menus
+
 $menu-background-color: rgba(#000, 0.8);
 $menu-arrow-width: 26px;
 $menu-border-radius: 5px;
