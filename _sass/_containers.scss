@@ -3,9 +3,6 @@
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
  * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
  */
-@-ms-viewport {
-  width: device-width;
-}
 @viewport {
   width: device-width;
 }
