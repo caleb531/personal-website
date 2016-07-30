@@ -45,6 +45,12 @@
   hyphens: $value;
 }
 
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
 // Mixins for overlay menus
 
 $menu-background-color: rgba(#000, 0.8);
@@ -77,7 +83,7 @@ $menu-offset-right: -4px;
   top: 100%;
   @if $position == 'center' {
     right: 50%;
-    transform: translateX(50%);
+    @include transform(translateX(50%));
   } @else {
     right: $menu-offset-right;
   }
@@ -92,7 +98,7 @@ $menu-offset-right: -4px;
     border-bottom-color: $menu-background-color;
     position: absolute;
     top: -$menu-arrow-width / 2;
-    transform: translateX(50%);
+    @include transform(translateX(50%));
     @if $position == 'center' {
       right: 50%;
     } @else {
