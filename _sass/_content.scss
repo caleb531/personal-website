@@ -53,15 +53,6 @@ a {
   }
 }
 
-address {
-  font-style: italic;
-  margin: 0 0 24px;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
 b,
 strong {
   font-weight: 400;
@@ -70,11 +61,6 @@ strong {
 
 dfn {
   font-style: italic;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
 }
 
 p {
@@ -107,30 +93,17 @@ blockquote,
 q {
   hyphens: none;
   quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
 }
 
 blockquote {
   margin: 24px 40px;
   font-style: italic;
   font-size: 18px;
-  blockquote {
-    margin-right: 0;
-  }
-  cite,
-  small {
-    font-size: 14px;
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-
   em, i {
     font-style: normal;
   }
@@ -140,35 +113,6 @@ small {
   font-size: smaller;
 }
 
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-dl {
-  margin: 0 20px;
-}
-
-dt {
-  font-weight: 400;
-}
-
-dd {
-  margin: 0 0 20px;
-}
-
-menu,
 ol,
 ul {
   margin: 16px 0;
@@ -192,79 +136,18 @@ li > ol {
 
 img {
   -ms-interpolation-mode: bicubic;
-  border: 0;
+  border-width: 0;
   vertical-align: middle;
 }
 
-svg:not(:root) {
+svg {
   display: inline-block;
   fill: #fff;
   overflow: hidden;
 }
 
-figure {
-  margin: 0;
-}
-
-form {
-  margin: 0;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-  white-space: normal;
-}
-
-table {
-  border-bottom: 1px solid #ededed;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 14px;
-  line-height: 2;
-  margin: 0 0 20px;
-  width: 100%;
-}
-
-caption,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-}
-
-caption {
-  font-size: 16px;
-  margin: 20px 0;
-}
-
-th {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-td {
-  border-top: 1px solid #ededed;
-  padding: 6px 10px 6px 0;
-}
-
-del {
-  color: #333;
-}
-
-ins {
-  background: #fff9c0;
-  text-decoration: none;
-}
-
 hr {
-  border: 0;
+  border-width: 0;
   height: 1px;
   background-color: rgba(#fff, 0.5);
   margin: 0 0 24px;
