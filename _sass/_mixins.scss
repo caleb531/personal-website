@@ -50,7 +50,6 @@
 
 @mixin transform($value) {
   -webkit-transform: $value;
-  -ms-transform: $value;
   transform: $value;
 }
 
