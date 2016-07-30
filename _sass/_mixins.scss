@@ -8,6 +8,53 @@
   }
 }
 
+// Mixins for vendor-prefixed properties
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin align-items($alignment) {
+  @if $alignment == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $alignment == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $alignment;
+    -ms-flex-align: $alignment;
+  }
+  align-items: $alignment;
+}
+
+@mixin flex-shrink($number) {
+  -webkit-flex-shrink: $number;
+  -ms-flex-negative: $number;
+  flex-shrink: $number;
+}
+
+@mixin flex-grow($number) {
+  -webkit-box-flex: $number;
+  -ms-flex-positive: $number;
+  flex-grow: $number;
+}
+
+@mixin hyphens($value) {
+  -webkit-hyphens: $value;
+  -ms-hyphens: $value;
+  hyphens: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+// Mixins for overlay menus
+
 $menu-background-color: rgba(#000, 0.8);
 $menu-arrow-width: 26px;
 $menu-border-radius: 5px;
@@ -38,7 +85,7 @@ $menu-offset-right: -4px;
   top: 100%;
   @if $position == 'center' {
     right: 50%;
-    transform: translateX(50%);
+    @include transform(translateX(50%));
   } @else {
     right: $menu-offset-right;
   }
@@ -53,7 +100,7 @@ $menu-offset-right: -4px;
     border-bottom-color: $menu-background-color;
     position: absolute;
     top: -$menu-arrow-width / 2;
-    transform: translateX(50%);
+    @include transform(translateX(50%));
     @if $position == 'center' {
       right: 50%;
     } @else {

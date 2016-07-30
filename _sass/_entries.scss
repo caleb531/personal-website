@@ -8,10 +8,10 @@
 }
 
 .entry {
-  display: flex;
+  @include display-flex();
   margin: 20px 0;
   &-image {
-    flex-shrink: 0;
+    @include flex-shrink(0);
     a {
       display: inline-block;
       text-decoration: none;
@@ -19,7 +19,7 @@
     }
   }
   &-main {
-    flex-grow: 1;
+    @include flex-grow(1);
     padding-left: 10px;
     vertical-align: top;
   }
