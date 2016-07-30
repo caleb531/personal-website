@@ -74,7 +74,7 @@ samp {
   padding: 0 2px;
   background-color: rgba(#000, 0.4);
   font-family: monospace;
-  hyphens: none;
+  @include hyphens(none);
 }
 
 pre {
@@ -91,7 +91,7 @@ pre {
 
 blockquote,
 q {
-  hyphens: none;
+  @include hyphens(none);
   quotes: none;
   &:before,
   &:after {
