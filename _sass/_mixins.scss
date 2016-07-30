@@ -23,6 +23,9 @@
   } @else if $alignment == flex-end {
     -webkit-box-align: end;
     -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $alignment;
+    -ms-flex-align: $alignment;
   }
   align-items: $alignment;
 }
