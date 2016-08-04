@@ -2,6 +2,7 @@
 title: About
 permalink: /about/
 id: about
+description: About the life and interests of Caleb Evans, coder for Christ
 ---
 
 ### Who are you?

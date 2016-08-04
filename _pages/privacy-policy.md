@@ -2,6 +2,7 @@
 title: Privacy Policy
 permalink: /privacy-policy/
 id: privacy-policy
+description: The privacy policy for apps crafted by Caleb Evans, coder for Christ
 ---
 
 This privacy policy serves as a straightforward explanation of how this website collects and handles your personal information.

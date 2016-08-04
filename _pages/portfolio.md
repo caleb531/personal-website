@@ -2,6 +2,7 @@
 title: Portfolio
 permalink: /portfolio/
 id: portfolio
+description: The complete web portfolio of Caleb Evans, coder for Christ
 ---
 
 This is my portfolio page, where you can find all of my work.
