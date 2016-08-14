@@ -6,12 +6,12 @@
     <div class="entry project">
 
       <div class="entry-image project-image">
-        <a href="{{ project.direct_url }}">
+        <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
           {{ site.baseurl | append: site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | file_contents }}
         </a>
       </div>
 
-      <span class="project-title">{{ project.title }}</span>
+      <span class="project-title" id="project-title-{{ project.slug }}">{{ project.title }}</span>
 
     </div>
 
