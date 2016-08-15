@@ -25,17 +25,13 @@
   &-main {
     display: table-cell;
     padding-left: 10px;
+    font-size: 0;
     vertical-align: top;
   }
-  &-header {
-    font-size: 0;
-    .entry-title {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
   &-title {
+    display: inline-block;
     margin: 0;
+    vertical-align: middle;
   }
   &-desc {
     margin: 0;

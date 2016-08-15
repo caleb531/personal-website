@@ -15,9 +15,7 @@
 
         <div class="entry-main project-main">
 
-          <header class="entry-header project-header">
-            <h4 class="entry-title project-title" id="project-title-{{ project.slug }}"><a href="{{ project.direct_url }}">{{ project.title }}</a></h4>
-          </header>
+          <h4 class="entry-title project-title" id="project-title-{{ project.slug }}"><a href="{{ project.direct_url }}">{{ project.title }}</a></h4>
 
           <div class="entry-desc project-desc">
             {{ project.description | markdownify }}

@@ -23,9 +23,7 @@
 
         <div class="entry-main contact-link-main">
 
-          <header class="entry-header contact-link-header">
-            <h3 class="entry-title contact-link-title"><a href="{{ direct_url }}" id="contact-link-{{ contact_link.slug }}">{{ contact_link.title }}</a></h3>
-          </header>
+          <h3 class="entry-title contact-link-title"><a href="{{ direct_url }}" id="contact-link-{{ contact_link.slug }}">{{ contact_link.title }}</a></h3>
 
           <div class="entry-desc contact-link-desc">
             {{ contact_link.description | markdownify }}
