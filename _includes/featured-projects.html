@@ -1,4 +1,4 @@
-<section class="entry-list project-list entry-list-compact project-list-compact">
+<div class="entry-list project-list entry-list-compact project-list-compact">
 
   {% for project_slug in site.data.projects.featured_projects %}
     {% assign project = site.projects | where: 'slug', project_slug | first %}
@@ -17,4 +17,4 @@
 
   {% endfor %}
 
-</section>
+</div>
