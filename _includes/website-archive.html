@@ -1,9 +1,9 @@
-<div class="entry-list website-list">
+<section class="entry-list website-list">
 
   {% for website_slug in site.data.websites.websites %}
     {% assign website = site.websites | where: 'slug', website_slug | first %}
 
-    <div class="entry website">
+    <article class="entry website">
 
       <div class="entry-image website-image">
         <a href="{{ website.direct_url }}">
@@ -31,8 +31,8 @@
 
       </div>
 
-    </div>
+    </article>
 
   {% endfor %}
 
-</div>
+</section>

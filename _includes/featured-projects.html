@@ -1,9 +1,9 @@
-<div class="entry-list project-list entry-list-compact project-list-compact">
+<section class="entry-list project-list entry-list-compact project-list-compact">
 
   {% for project_slug in site.data.projects.featured_projects %}
     {% assign project = site.projects | where: 'slug', project_slug | first %}
 
-    <div class="entry project">
+    <article class="entry project">
 
       <div class="entry-image project-image">
         <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
@@ -13,8 +13,8 @@
 
       <span class="project-title" id="project-title-{{ project.slug }}">{{ project.title }}</span>
 
-    </div>
+    </article>
 
   {% endfor %}
 
-</div>
+</section>

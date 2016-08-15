@@ -1,9 +1,9 @@
-<div class="entry-list contact-link-list {% if include.compact %}entry-list-compact contact-link-list-compact{% endif %}">
+<section class="entry-list contact-link-list {% if include.compact %}entry-list-compact contact-link-list-compact{% endif %}">
 
   {% for contact_link_slug in site.data.contact_links.contact_links %}
     {% assign contact_link = site.contact_links | where: 'slug', contact_link_slug | first %}
 
-    <div class="entry contact-link">
+    <article class="entry contact-link">
 
       {% if contact_link.email %}
         {% assign direct_url = contact_link.email | encode_email | mailto %}
@@ -43,8 +43,8 @@
 
       {% endif %}
 
-    </div>
+    </article>
 
   {% endfor %}
 
-</div>
+</section>
