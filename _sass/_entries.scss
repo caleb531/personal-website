@@ -9,6 +9,7 @@
     // Force container to always fit to its contents
     width: 1%;
     a {
+      display: inline-block;
       text-decoration: none;
       vertical-align: top;
     }
