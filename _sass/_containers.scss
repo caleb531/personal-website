@@ -66,6 +66,11 @@ main {
   @include layout(hybrid) {
     border-radius: 0;
   }
+  @include layout(compact) {
+    $padding: 20px;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
   @include layout(very-compact) {
     $padding: 15px;
     padding-left: $padding;
