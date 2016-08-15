@@ -2,24 +2,28 @@
 
 .entry-list-compact {
   font-size: 0;
-  .entry {
+  .entry,
+  .entry-image {
     display: inline-block;
+    width: auto;
   }
 }
 
 .entry {
-  @include display-flex();
+  display: table;
+  width: 100%;
   margin: 20px 0;
   &-image {
-    @include flex-shrink(0);
+    display: table-cell;
+    // Force container to always fit to its contents
+    width: 1%;
     a {
-      display: inline-block;
       text-decoration: none;
       vertical-align: top;
     }
   }
   &-main {
-    @include flex-grow(1);
+    display: table-cell;
     padding-left: 10px;
     vertical-align: top;
   }

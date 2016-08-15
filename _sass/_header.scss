@@ -1,8 +1,8 @@
 // Header styling
 
 #site-header {
-  @include display-flex();
-  @include align-items(center);
+  display: table;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   padding: 20px;
@@ -27,12 +27,12 @@
 }
 
 #site-title-link {
-  display: block;
-  @include flex-shrink(0);
+  display: table-cell;
   margin: 0 auto;
   font-size: 0;
   text-decoration: none;
   color: #fff;
+  vertical-align: middle;
 }
 
 #site-header-image {
@@ -44,15 +44,13 @@
 }
 
 #site-header-nav {
+  display: table-cell;
   position: relative;
   clear: both;
-  @include flex-grow(1);
   margin: 0 auto;
   text-align: right;
   white-space: nowrap;
-  @media (max-width: 340px) {
-    @include flex-grow(0);
-  }
+  vertical-align: middle;
 }
 
 #site-header-nav-list {

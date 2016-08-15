@@ -1,10 +1,12 @@
 // Styling for contact links
 
 .contact-link {
-  &-image a {
-    $icon-size: 64px;
-    width: $icon-size;
-    height: $icon-size;
+  &-image {
+    a {
+      $icon-size: 64px;
+      width: $icon-size;
+      height: $icon-size;
+    }
     svg {
       width: inherit;
       height: inherit;
