@@ -1,14 +1,5 @@
 // Styling for lists of projects and contact links
 
-.entry-list-compact {
-  font-size: 0;
-  .entry,
-  .entry-image {
-    display: inline-block;
-    width: auto;
-  }
-}
-
 .entry {
   display: table;
   width: 100%;
@@ -49,5 +40,14 @@
   }
   &-label {
     font-weight: 400;
+  }
+}
+
+.entry-list-compact {
+  font-size: 0;
+  .entry,
+  .entry-image {
+    display: inline-block;
+    width: auto;
   }
 }
