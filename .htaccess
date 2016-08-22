@@ -23,7 +23,7 @@ ErrorDocument 404 /404/
 
 # Enable gzip compression
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
 </IfModule>
 
 ### Headers
