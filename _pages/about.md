@@ -28,9 +28,11 @@ believe the work of my hands glorifies God in a number of ways. Through coding,
 I am able to reflect God's magnificent creativity by expressing my own. It's
 also a means for me to enrich people's lives by creating tools that are useful
 to them (and not just to me); for instance, I frequently receive emails from
-developers using my [jCanvas](http://calebevans.me/projects/jcanvas/) drawing
-library who tell me how much they love it and ask me for help in using it.
-Therefore, I would certainly say that I find a great deal of purpose in coding.
+developers using my [jCanvas][jcanvas] drawing library who tell me how much they
+love it and ask me for help in using it. Therefore, I would certainly say that I
+find a great deal of purpose in coding.
+
+[jcanvas]: http://projects.calebevans.me/jcanvas/
 
 ### How many languages do you speak?
 
@@ -52,26 +54,29 @@ for anyone who enjoys coding for fun.
 
 ### What is your code editor of choice?
 
-I use [Atom](https://atom.io/), an open-source editor developed by GitHub. The
-editor itself is built with the latest web technologies (HTML/CSS/JS), which
-makes it impressively customizable while keeping it incredibly easy to use. For
-those interested in giving it a try, you can view my complete Atom configuration
-(including the packages I use) on my [dotfiles
-repository](https://github.com/caleb531/dotfiles).
+I use [Atom][atom], an open-source editor developed by GitHub. The editor itself
+is built with the latest web technologies (HTML/CSS/JS), which makes it
+impressively customizable while keeping it incredibly easy to use. For those
+interested in giving it a try, you can view my complete Atom configuration
+(including the packages I use) on my [dotfiles repository][dotfiles].
+
+[atom]: https://atom.io/
+[dotfiles]: https://github.com/caleb531/dotfiles
 
 ### Tabs or spaces?
 
 That depends. In Atom, spaces behave just like tabs when used for indentation,
-and the [editorconfig
-package](https://github.com/sindresorhus/atom-editorconfig) I use automatically
-switches between using tabs and spaces on a per-project basis. Therefore, the
-difference feels practically imperceptible to me, and so my choice generally
-depends on the context. For instance, when I write Python, I always use spaces
-in accordance with the [PEP 8 style
-guide](https://www.python.org/dev/peps/pep-0008/#indentation). For my WordPress
-plugins and themes, I use tabs in accordance with the [WordPress coding
-standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/).
-For everything else, I simply default to using tabs.
+and the [editorconfig package][editorconfig] I use automatically switches
+between using tabs and spaces on a per-project basis. Therefore, the difference
+feels practically imperceptible to me, and so my choice generally depends on the
+context. For instance, when I write Python, I always use spaces in accordance
+with the [PEP 8 style guide][pep8]. For my WordPress plugins and themes, I use
+tabs in accordance with the [WordPress coding standards][wp-standards]. For
+everything else, I simply default to using tabs.
+
+[editorconfig]: https://github.com/sindresorhus/atom-editorconfig
+[pep8]: https://www.python.org/dev/peps/pep-0008/#indentation
+[wp-standards]: https://make.wordpress.org/core/handbook/best-practices/coding-standards/
 
 ### What's the story behind your project icons?
 
