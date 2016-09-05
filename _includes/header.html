@@ -2,7 +2,7 @@
 
   <a id="site-title-link" href="{{ site.baseurl }}/" rel="home">
     {% assign retina_header_image_size = site.data.gravatar.header_image_size | times: 2 %}
-    <img src="{{ site.email | gravatar_url: site.data.gravatar.header_image_size }}" alt="" srcset="{{ site.email | gravatar_url: retina_header_image_size }} 2x" style="width: {{ site.data.gravatar.header_image_size }}px; height: {{ site.data.gravatar.header_image_size }}px;" id="site-header-image" />
+    <img src="{{ site.email | gravatar_url: site.data.gravatar.header_image_size }}" alt="" srcset="{{ site.email | gravatar_url: retina_header_image_size }} 2x" width="{{ site.data.gravatar.header_image_size }}" height="{{ site.data.gravatar.header_image_size }}" id="site-header-image" />
     <h1 id="site-title">{{ site.title }}</h1>
   </a>
 
