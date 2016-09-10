@@ -38,7 +38,7 @@ find a great deal of purpose in coding.
 
 First and foremost, I am fluent in HTML5, CSS3, JavaScript, and PHP, since most
 of my projects are Web-based. However, as I have grown very fond of Python over
-the years, I've also created a handful of useful Python-based utilities (all of
+the years, I've also created a handful of useful Python-based utilities (most of
 which are fully unit tested with 100% coverage). Besides that, I've written
 numerous AppleScripts to improve my workflow and I've fiddled with Bash for
 configuring my development environment, among other things. I've even worked
