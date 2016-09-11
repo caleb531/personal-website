@@ -32,7 +32,7 @@ bundle install
 To serve the development site locally via Jekyll's Ruby server, run:
 
 ```bash
-jekyll serve
+bundle exec jekyll serve
 ```
 
 You will then be able to view the site in your browser at `localhost:4000`.
@@ -44,5 +44,5 @@ virtual host for the development site and run it locally as such. Otherwise,
 features such as 404 redirection, caching, and gzipping will not be enabled
 (because the site's `.htaccess` file will not be executed).
 
-When serving via Apache, run `jekyll build --watch` to build the site and watch
-for changes.
+When serving via Apache, run `bundle exec jekyll build --watch` to build the
+site and watch for changes.
