@@ -140,6 +140,8 @@ img {
 
 svg {
   display: inline-block;
+  width: inherit;
+  height: inherit;
   fill: #fff;
   overflow: hidden;
 }
