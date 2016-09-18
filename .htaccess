@@ -1,7 +1,7 @@
 # Define UTF-8 encoding for all essential file types
 AddDefaultCharset utf-8
 <IfModule mod_mime.c>
-    AddCharset utf-8 .css .js .json .xml .svg
+  AddCharset utf-8 .css .js .json .xml .svg
 </IfModule>
 
 # Disable fallback directory indexes
