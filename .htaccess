@@ -4,13 +4,6 @@ AddDefaultCharset utf-8
     AddCharset utf-8 .css .js .json .xml .svg
 </IfModule>
 
-# Add 'Vary: Accept-Encoding' header
-<IfModule mod_headers.c>
-  <FilesMatch ".(js|css|xml|gz|html)$">
-    Header append Vary: Accept-Encoding
-  </FilesMatch>
-</IfModule>
-
 # Disable fallback directory indexes
 Options -Indexes
 
@@ -45,6 +38,12 @@ ErrorDocument 404 /404/
   <FilesMatch "\.(html|css|js|png|jpg|gif|svg)$">
     # Set cache to expire after one day
     Header set Cache-Control "max-age=3600"
+  </FilesMatch>
+
+  # Instruct caches and proxies to store the compressed and uncompressed
+  # versions of resources
+  <FilesMatch ".(html|css|js|gz)$">
+    Header append Vary: Accept-Encoding
   </FilesMatch>
 
 </IfModule>
