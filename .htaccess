@@ -42,7 +42,7 @@ ErrorDocument 404 /404/
 
   # Instruct caches and proxies to store the compressed and uncompressed
   # versions of resources
-  <FilesMatch ".(html|css|js|gz)$">
+  <FilesMatch "\.(html|css|js|gz)$">
     Header append Vary: Accept-Encoding
   </FilesMatch>
 
