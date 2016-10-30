@@ -61,4 +61,9 @@ ErrorDocument 404 /404/
   # Redirect /projects/* to projects.calebevans.me/*
   RewriteRule ^projects/(.+)$ http://projects.calebevans.me/$1 [L,NC,R=301]
 
+  # Redirect /* pages to /*/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*?)$ $1/ [L,NC,R=301]
+
 </IfModule>
