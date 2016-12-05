@@ -27,6 +27,7 @@ host: 0.0.0.0 # Enables local site to be accessed from other devices on network
 
 # Build settings
 markdown: kramdown
+incremental: true
 kramdown:
   input: GFM
 sass:
