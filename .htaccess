@@ -24,7 +24,7 @@ ErrorDocument 404 /404/
 <IfModule mod_headers.c>
 
   # Bolster security on served pages
-	<FilesMatch "\.(php|html)$">
+  <FilesMatch "\.html$">
     # Set restrictive Content Security Policy (CSP)
     # See https://content-security-policy.com/ for a complete reference
     Header always set Content-Security-Policy "default-src 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://www.gravatar.com https://www.google-analytics.com; script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com;"
