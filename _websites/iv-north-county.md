@@ -1,6 +1,6 @@
 ---
 title: InterVarsity North County
-direct_url: http://ivnorthcounty.org/
+direct_url: https://ivnorthcounty.org/
 technologies: WordPress, PHP, HTML5, CSS3, JavaScript
 ---
 

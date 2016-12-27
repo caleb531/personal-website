@@ -1,6 +1,6 @@
 ---
 title: Personal Website
-direct_url: http://calebevans.me/
+direct_url: https://calebevans.me/
 technologies: Jekyll, HTML5, CSS3, JavaScript
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Static Stitches
-direct_url: http://staticstitches.calebevans.me/
+direct_url: https://staticstitches.calebevans.me/
 technologies: Vanilla PHP, HTML5, CSS3, JavaScript
 ---
 
