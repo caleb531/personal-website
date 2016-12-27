@@ -1,6 +1,6 @@
 ---
 title: Painter
-direct_url: http://projects.calebevans.me/painter/
+direct_url: https://projects.calebevans.me/painter/
 categories: fun
 description: A simple painting app for expressing yourself
 ---

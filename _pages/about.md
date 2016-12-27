@@ -32,7 +32,7 @@ developers using my [jCanvas][jcanvas] drawing library who tell me how much they
 love it and ask me for help in using it. Therefore, I would certainly say that I
 find a great deal of purpose in coding.
 
-[jcanvas]: http://projects.calebevans.me/jcanvas/
+[jcanvas]: https://projects.calebevans.me/jcanvas/
 
 ### How many languages do you speak?
 
