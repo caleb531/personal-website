@@ -1,6 +1,6 @@
 ---
 title: Matrices
-direct_url: http://projects.calebevans.me/matrices/
+direct_url: https://projects.calebevans.me/matrices/
 categories: math
 description: Have fun manipulating matrices
 ---
