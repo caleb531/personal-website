@@ -35,6 +35,7 @@ sass:
 include:
   - _pages
   - .htaccess
+  - keybase.txt
 exclude:
   - README.md
   - LICENSE.txt
