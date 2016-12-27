@@ -12,7 +12,7 @@ email: caleb@calebevans.me
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I'm Caleb, a college student who lives for Christ by coding awesome apps and tools. Come see what I've made!
 baseurl: '' # the subpath of your site, e.g. /blog
-url: http://calebevans.me # the base hostname & protocol for your site
+url: https://calebevans.me # the base hostname & protocol for your site
 
 # Twitter SEO settings
 twitter:
