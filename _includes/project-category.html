@@ -1,11 +1,11 @@
-<section class="entry-list project-list">
+<div class="entry-list project-list">
 
   <h3 class="entry-list-category-title project-list-category-title">{{ include.category.title }}</h3>
 
   {% for project in site.projects %}
     {% if project.categories contains include.category.slug %}
 
-      <article class="entry project">
+      <div class="entry project">
 
         <div class="entry-image project-image">
           <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
@@ -23,9 +23,9 @@
 
         </div>
 
-      </article>
+      </div>
 
     {% endif %}
   {% endfor %}
 
-</section>
+</div>
