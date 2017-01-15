@@ -1,20 +1,17 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- dpts representing booelans -->
   <defs>
-    <circle id="truthy-dot" r="50" stroke-width="4" />
+    <rect id="truthy-false-value" width="90" height="90" x="-45" y="-45" rx="10" ry="10" fill="#d44" stroke="#a11" stroke-width="4" />
+    <circle id="truthy-true-value" r="50" fill="#7d3" stroke="#4a0" stroke-width="4" />
   </defs>
-  <!-- dots representing true -->
-  <g fill="#7d3" stroke="#4a0">
+  <!-- table values -->
+  <g>
     <!-- top-left -->
-    <use xlink:href="#truthy-dot" x="100" y="100" />
-    <!-- bottom-right -->
-    <use xlink:href="#truthy-dot" x="220" y="220" />
-  </g>
-  <!-- dots representing false -->
-  <g fill="#d44" stroke="#a11">
+    <use xlink:href="#truthy-true-value" x="90" y="90" />
     <!-- top-right -->
-    <use xlink:href="#truthy-dot" x="220" y="100" />
+    <use xlink:href="#truthy-false-value" x="230" y="90" />
     <!-- bottom-left -->
-    <use xlink:href="#truthy-dot" x="100" y="220" />
+    <use xlink:href="#truthy-false-value" x="90" y="230" />
+    <!-- bottom-right -->
+    <use xlink:href="#truthy-true-value" x="230" y="230" />
   </g>
 </svg>
