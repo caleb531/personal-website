@@ -36,9 +36,13 @@ ErrorDocument 404 /404/
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
   </FilesMatch>
 
-  # Cache HTML, scripts, stylesheets, and images
-  <FilesMatch "\.(html|css|js|png|jpg|gif|svg)$">
-    # Set cache to expire after one day
+  # Cache scripts, stylesheets, and images for a year
+  <FilesMatch "\.(css|js|png|jpg|gif|svg)$">
+    Header set Cache-Control "max-age=31536000"
+  </FilesMatch>
+
+  # Cache HTML for one hour
+  <FilesMatch "\.html$">
     Header set Cache-Control "max-age=3600"
   </FilesMatch>
 
