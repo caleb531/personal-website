@@ -69,6 +69,7 @@ ErrorDocument 404 /404/
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
 
   # Redirect /projects/* to projects.calebevans.me/*
+  RewriteRule ^projects/$ portfolio/projects/ [L,NC,R=301]
   RewriteRule ^projects/(.+)$ https://projects.calebevans.me/$1 [L,NC,R=301]
 
   # Redirect /* pages to /*/
