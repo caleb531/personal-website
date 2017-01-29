@@ -8,86 +8,53 @@ description: About the life and interests of Caleb Evans, coder for Christ
 ### Who are you?
 
 I'm Caleb Evans, a college student with many passions: coding for Christ,
-spending time with family, watching red panda videos, and eating impressively
+spending time with family and friends, watching movies, and eating impressively
 large quantities of pizza. I currently reside in Carlsbad, California, attending
 college with a goal of earning a degree in computer science.
 
 ### What do you do?
 
-Since 2010, I've been programming in many languages for school and for fun. My
-most prominent work includes a plethora of web apps and useful tools—many of
-which were created to enhance my productivity and actualize my ideas. I've also
-crafted a number of websites (for myself and for others) using PHP, WordPress,
-and even Jekyll.
+Since 2010, I've been programming for school and for fun. My most prominent work
+includes a plethora of web apps and useful tools, many of which were created to
+automate what I grew tired of doing manually. Others I created simply for fun.
 
 ### Why do you code?
 
 Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who
 has been and always shall be my Lord, my Friend, and my Savior. I code because I
-believe the work of my hands glorifies God in a number of ways. Through coding,
-I am able to reflect God's magnificent creativity by expressing my own. It's
-also a means for me to enrich people's lives by creating tools that are useful
-to them (and not just to me); for instance, I frequently receive emails from
-developers using my [jCanvas][jcanvas] drawing library who tell me how much they
-love it and ask me for help in using it. Therefore, I would certainly say that I
-find a great deal of purpose in coding.
-
-[jcanvas]: https://projects.calebevans.me/jcanvas/
+believe the work of my hands glorifies God through the creativity I express, and
+ultimately, through the lives enriched by my projects.
 
 ### How many languages do you speak?
 
-First and foremost, I am fluent in HTML5, CSS3, JavaScript, and PHP, since most
-of my projects are Web-based. However, as I have grown very fond of Python over
-the years, I've also created a handful of useful Python-based utilities (most of
-which are fully unit tested with 100% coverage). Besides that, I've written
-numerous AppleScripts to improve my workflow and I've fiddled with Bash for
-configuring my development environment, among other things. I've even worked
-with Java and C++ for school, though I can't say I'm a fan.
+I am fluent in over six million forms of... haha, just kidding. I am fluent in
+HTML5, CSS3, JavaScript, and PHP, since most of my projects are Web-based. I'm
+also well versed in Python, and I fiddle with Bash regularly in an effort to
+improve my developer workflow.
 
 ### What is your favorite language?
 
-By far, Python is my favorite language (especially Python 3). It's a wonderful
-language to work with, as the language itself is highly expressive, flexible,
-powerful, and readable. I have also found that Python makes crafting
-sophisticated projects amazingly easy and quick. I highly recommend the language
-for anyone who enjoys coding for fun.
+If I could choose only one, my favorite language would probably be JavaScript
+because of its elegance and because npm totally rocks. I'm also very fond of
+Python for its expressiveness, extensibility, and comprehensive standard
+library.
 
 ### What is your code editor of choice?
 
 I use [Atom][atom], an open-source editor developed by GitHub. The editor itself
-is built with the latest web technologies (HTML/CSS/JS), which makes it
-impressively customizable while keeping it incredibly easy to use. For those
-interested in giving it a try, you can view my complete Atom configuration
-(including the packages I use) on my [dotfiles repository][dotfiles].
+is built with the latest web technologies (HTML5/CSS/JS), which makes it
+impressively customizable yet incredibly easy to use. For those interested in
+giving it a try, you can view my complete Atom configuration (including the
+packages I use) on my [dotfiles repository][dotfiles].
 
 [atom]: https://atom.io/
 [dotfiles]: https://github.com/caleb531/dotfiles
 
 ### Tabs or spaces?
 
-That depends. In Atom, spaces behave just like tabs when used for indentation,
-and the [editorconfig package][editorconfig] I use automatically switches
-between using tabs and spaces on a per-project basis. Therefore, the difference
-feels practically imperceptible to me, and so my choice generally depends on the
-context. For instance, when I write Python, I always use spaces in accordance
-with the [PEP 8 style guide][pep8]. For my WordPress plugins and themes, I use
-tabs in accordance with the [WordPress coding standards][wp-standards]. For
-everything else, I simply default to using tabs.
+That depends. In Atom, spaces behave the same as tabs when used as indentation,
+so I generally conform to the convention of whatever language I'm writing in.
 
-[editorconfig]: https://github.com/sindresorhus/atom-editorconfig
-[pep8]: https://www.python.org/dev/peps/pep-0008/#indentation
-[wp-standards]: https://make.wordpress.org/core/handbook/best-practices/coding-standards/
+### Did you make all of those project icons?
 
-### What's the story behind your project icons?
-
-I'm so glad you asked! I actually made them myself.
-
-I meticulously crafted each icon using SVG, a vector image format which is both
-portable and infinitely scalable. I didn't use any sort of vector-drawing
-application to hand-draw each icon, but rather I wrote all of the code by hand.
-
-Considering that I have over 40 projects, I had to write the code for over 40
-icons, where each icon was carefully conceived and designed. Indeed, it took
-much time and effort, but I had great fun doing it. I also found that
-hand-writing the code for each icon enabled greater precision, portability, and
-overall maintainability.
+You betcha I did.
