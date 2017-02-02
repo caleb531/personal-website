@@ -1,6 +1,8 @@
 <footer id="site-footer">
 
-  {% include contact-links.html compact=true %}
+  {% if page.id != 'contact' %}
+    {% include contact-links.html compact=true %}
+  {% endif %}
 
   <div id="site-footer-content">
 
