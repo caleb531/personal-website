@@ -34,6 +34,8 @@ ErrorDocument 404 /404/
     Header always set X-Content-Type-Options nosniff
     # Tell browser to always serve HTTPS pages on this site and its subdomains
     Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    # Disable the privacy-sensitive Referer header
+    Header always set Referrer-Policy "no-referrer"
   </FilesMatch>
 
   # Cache scripts, stylesheets, and images for a week
