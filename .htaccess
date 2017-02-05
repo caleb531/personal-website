@@ -33,7 +33,7 @@ ErrorDocument 404 /404/
     # Require every resource to have a valid MIME type
     Header always set X-Content-Type-Options nosniff
     # Tell browser to always serve HTTPS pages on this site and its subdomains
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
   </FilesMatch>
 
   # Cache scripts, stylesheets, and images for a week
