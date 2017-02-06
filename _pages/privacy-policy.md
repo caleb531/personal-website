@@ -26,7 +26,10 @@ privacy policy to understand how they collect and use this information.
 ### Changes
 
 This privacy policy may change at any time. When changes are made, the date at
-the top of this policy will be updated.
+the top of this policy will be updated. You can view the history of changes to
+this policy [on GitHub][policy-history].
+
+[policy-history]: https://github.com/caleb531/personal-website/blame/master/_pages/privacy-policy.md
 
 ### Contacting Me
 
