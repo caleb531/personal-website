@@ -8,7 +8,12 @@ description: The privacy policy for apps crafted by Caleb Evans, coder for Chris
 This privacy policy serves as a straightforward explanation of how this website
 collects and handles your personal information.
 
-This privacy policy was last updated on August 7th, 2013.
+This privacy policy was last updated on February 6th, 2017.
+
+### Secure Connection
+
+Your connection to this website is fully encrypted with HTTPS, including (but
+not limited to) all stylesheets, scripts, and images.
 
 ### Local Storage
 
