@@ -12,8 +12,11 @@ This privacy policy was last updated on February 6th, 2017.
 
 ### Secure Connection
 
-Your connection to this website is fully encrypted with HTTPS, including (but
-not limited to) all stylesheets, scripts, and images.
+Your connection to this website is fully encrypted via HTTPS, including (but not
+limited to) all stylesheets, scripts, and images. For more comprehensive
+details, see the [SSL Labs report for calebevans.me][ssl-report].
+
+[ssl-report]: https://www.ssllabs.com/ssltest/analyze.html?d=calebevans.me
 
 ### Local Storage
 
