@@ -6,7 +6,11 @@ description: The privacy policy for apps crafted by Caleb Evans, coder for Chris
 ---
 
 This privacy policy serves as a straightforward explanation of how this website
-collects and handles your personal information.
+collects and handles your personal information. Please note that the term "this
+website" encompasses:
+
+1. All personal website pages hosted on `calebevans.me`
+2. All web applications and other projects hosted on `projects.calebevans.me`
 
 This privacy policy was last updated on February 6th, 2017.
 
