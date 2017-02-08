@@ -48,12 +48,6 @@ ErrorDocument 404 /404/
     Header set Cache-Control "max-age=3600"
   </FilesMatch>
 
-  # Instruct caches and proxies to store the compressed and uncompressed
-  # versions of resources
-  <FilesMatch "\.(html|css|js|gz)$">
-    Header append Vary: Accept-Encoding
-  </FilesMatch>
-
 </IfModule>
 
 <IfModule mod_rewrite.c>
