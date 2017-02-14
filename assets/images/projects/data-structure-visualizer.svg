@@ -1,27 +1,27 @@
-<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/225b/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <!-- circle end of node pointer -->
     <marker id="dsv-node-pointer-circle" markerWidth="50" markerHeight="50" refX="10" refY="10" orient="auto">
-      <circle r="4" cx="10" cy="10" fill="#fff" stroke="#000" />
+      <circle r="4" cx="10" cy="10" fill="#9cf" stroke="#25b" />
     </marker>
     <!-- arrow end of node pointer -->
     <marker id="dsv-node-pointer-arrow" markerWidth="13" markerHeight="13" refX="4" refY="6" orient="auto">
-      <polygon points="1,2 6,6 1,10" fill="#000" />
+      <polygon points="1,2 6,6 1,10" fill="#25b" />
     </marker>
     <!-- individual node -->
-    <rect id="dsv-node" x="-45" y="-30" width="90" height="60" fill="#fff" stroke="#000" stroke-width="3 " />
+    <rect id="dsv-node" x="-45" y="-30" width="90" height="60" fill="#9cf" stroke="#25b" stroke-width="3 " />
   </defs>
   <!-- front node -->
   <use xlink:href="#dsv-node" x="90" y="190" />
   <!-- rear node -->
   <use xlink:href="#dsv-node" x="230" y="190" />
   <!-- front node's "next" pointer -->
-  <polyline id="dsv-front-next-pointer" points="135,190 175,190" fill="none" stroke="#000" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
+  <polyline id="dsv-front-next-pointer" points="135,190 175,190" fill="none" stroke="#25b" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
   <!-- "front" pointer -->
-  <polyline id="dsv-front-pointer" points="90,110 90,150" fill="none" stroke="#000" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
+  <polyline id="dsv-front-pointer" points="90,110 90,150" fill="none" stroke="#25b" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
   <!-- "front" pointer -->
-  <polyline id="dsv-rear-pointer" points="230,110 230,150" fill="none" stroke="#000" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
+  <polyline id="dsv-rear-pointer" points="230,110 230,150" fill="none" stroke="#25b" stroke-width="3" marker-start="url(#dsv-node-pointer-circle)" marker-end="url(#dsv-node-pointer-arrow)" />
   <!-- rear node's "next" pointer -->
-  <circle id="dsv-rear-next-pointer" r="12" cx="275" cy="190" fill="#fff" stroke="#000" stroke-width="3" />
-  <path id="dsv-null" d="M 266.514718626,198.485281374 L 283.485281374,181.514718626 M 266.514718626,181.514718626 L 283.485281374,198.485281374" fill="none" stroke="#000" stroke-width="3" />
+  <circle id="dsv-rear-next-pointer" r="12" cx="275" cy="190" fill="#9cf" stroke="#25b" stroke-width="3" />
+  <path id="dsv-null" d="M 266.514718626,198.485281374 L 283.485281374,181.514718626 M 266.514718626,181.514718626 L 283.485281374,198.485281374" fill="none" stroke="#25b" stroke-width="3" />
 </svg>
