@@ -2,7 +2,7 @@
   <defs>
     <!-- circle end of node pointer -->
     <marker id="bbrancher-node-pointer-circle" markerWidth="50" markerHeight="50" refX="6" refY="6" orient="auto">
-      <circle r="3" cx="6" cy="6" fill="#8bf" stroke="#25b" />
+      <circle r="3" cx="6" cy="6" fill="#9cf" stroke="#25b" />
     </marker>
     <!-- arrow end of node pointer -->
     <marker id="bbrancher-node-pointer-arrow" markerWidth="13" markerHeight="13" refX="4" refY="6" orient="auto">

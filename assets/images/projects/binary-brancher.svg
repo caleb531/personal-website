@@ -1,9 +1,9 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- connecting lines -->
-  <g stroke="#36c">
+  <g stroke="#25b">
     <polyline points="80,240 160,80 240,240" fill="none" stroke-width="4" />
     <!-- circles -->
-    <g fill="#8bf" stroke-width="4">
+    <g fill="#9cf" stroke-width="4">
       <!-- top -->
       <circle cx="160" cy="80" r="40" />
       <!-- left -->
