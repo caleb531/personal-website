@@ -57,4 +57,4 @@ so I generally conform to the convention of whatever language I'm writing in.
 
 ### Did you make all of those project icons?
 
-You betcha I did.
+*You betcha I did.*
