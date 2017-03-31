@@ -55,6 +55,6 @@ packages I use) on my [dotfiles repository][dotfiles].
 That depends. In Atom, spaces behave the same as tabs when used as indentation,
 so I generally conform to the convention of whatever language I'm writing in.
 
-### Did you make all of those project icons?
+### What's the story behind your project icons?
 
-*You betcha I did.*
+I actually made them myself; each icon is written in pure SVG markup.
