@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-<article>
+<article id="page-{{ page.id }}">
 
-  <h2 id="page-title">{{ page.title }}</h2>
+  {% if page.title %}
+    <h2 id="page-title">{{ page.title }}</h2>
+  {% endif %}
 
   <div id="page-content">
     {{ content }}
