@@ -1,33 +1,40 @@
-(function ( window, $, FastClick ) {
-$(document).ready(function () {
+(function () {
 
-  // Cache elements
-  var $$ = {};
-  $$.menuToggle = $( '#site-header-nav-toggle' );
-  $$.siteHeaderNav = $( '#site-header-nav' );
-  $$.siteHeaderNavList = $( '#site-header-nav-list' );
+function $$(selector) {
+  return document.querySelector(selector);
+}
 
-  // Toggle nav menu when nav control is clicked
-  $$.menuToggle.on( 'click', function () {
-    $$.siteHeaderNav.toggleClass('site-header-nav-open');
-  });
+// Cache elements
+var menuToggle = $$('#site-header-nav-toggle');
+var siteHeaderNav = $$('#site-header-nav');
+var siteHeaderNavList = $$('#site-header-nav-list');
 
-  // Do not visit on first click nav items which have submenus
-  $$.siteHeaderNavList.on( 'click', 'a', function () {
-    var $link = $(this),
-      $subMenu = $link.next( '.sub-menu' );
-    // If nav menu is open and sub menu exists and sub menu is not open
-    if ( $$.siteHeaderNav.hasClass( 'site-header-nav-open' ) && 1 === $subMenu.length && false === $subMenu.hasClass( 'sub-menu-open' ) ) {
-      // Close any open submenus
-      $( '.sub-menu-open' ).removeClass( 'sub-menu-open' );
-      // Open submenu for clicked link
-      $subMenu.addClass( 'sub-menu-open' );
-      return false;
+// Toggle nav menu when nav control is clicked
+menuToggle.addEventListener('click', function () {
+  siteHeaderNav.classList.toggle('site-header-nav-open');
+}, false);
+
+// Do not visit on first click nav items which have submenus
+siteHeaderNavList.addEventListener('click', function (event) {
+  var link = event.target,
+    subMenu = link.nextElementSibling;
+  // If nav menu is open and sub menu exists and sub menu is not open
+  if (link.nodeName === 'A' && siteHeaderNav.classList.contains('site-header-nav-open') && subMenu !== null && !subMenu.classList.contains('sub-menu-open')) {
+    // Close any open submenus
+    var openSubMenus = $$('.sub-menu-open');
+    if (openSubMenus) {
+      openSubMenus.forEach(function (openSubMenu) {
+        openSubMenu.classList.remove('sub-menu-open');
+      });
     }
-  });
+    // Open submenu for clicked link
+    subMenu.classList.add('sub-menu-open');
+    event.preventDefault();
+    event.stopPropagation();
+  }
+}, false);
 
-  // Enable FastClick“
-  FastClick.attach( $('body')[0] );
+// Enable FastClick
+FastClick.attach(document.body);
 
-});
-}( window, window.Zepto, window.FastClick ));
+}());
