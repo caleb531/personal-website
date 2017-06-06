@@ -7,10 +7,10 @@ description: About the life and interests of Caleb Evans, coder for Christ
 
 ### Who are you?
 
-I'm Caleb Evans, a college student with many passions: coding for Christ,
-spending time with family and friends, watching movies, and eating impressively
-large quantities of pizza. I currently reside in Carlsbad, California, attending
-college with a goal of earning a degree in computer science.
+I'm Caleb Evans, a web developer with many passions: programming, spending time
+with family and friends, watching movies, trampolining, and eating pizza. I
+currently reside in Carlsbad, California, having just finished my Bachelor's in
+Computer Science at CSU San Marcos.
 
 ### What do you do?
 
