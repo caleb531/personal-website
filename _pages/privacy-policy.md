@@ -38,6 +38,11 @@ and uses this information.
 
 [privacy]: https://support.google.com/analytics/answer/6004245?hl=en
 
+### Contacting Me
+
+If you choose to email me through this website, I will not share your email with
+anyone else, nor will I use it for marketing purposes.
+
 ### Changes
 
 This privacy policy may change at any time. When changes are made, the date at
@@ -45,8 +50,3 @@ the top of this policy will be updated. You can view the history of changes to
 this policy [on GitHub][policy-history].
 
 [policy-history]: https://github.com/caleb531/personal-website/blame/master/_pages/privacy-policy.md
-
-### Contacting Me
-
-If you choose to email me through this website, I will not share your email with
-anyone else, nor will I use it for marketing purposes.
