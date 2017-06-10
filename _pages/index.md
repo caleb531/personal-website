@@ -5,7 +5,7 @@ id: home
 
 ## Hello!
 
-**I'm Caleb**, a web developer who lives for Christ by coding awesome apps and tools.  
+**I'm Caleb**, a web developer who lives for Christ by coding enjoyable apps and useful tools.  
 **Nice to meet you.**
 
 ### Featured Projects
