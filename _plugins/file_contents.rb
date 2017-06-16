@@ -5,7 +5,7 @@ module Jekyll
     def file_contents(file_path)
       file = File.open(".#{file_path}", 'r')
       begin
-        return file.read
+        file.read
       ensure
         file.close
       end
