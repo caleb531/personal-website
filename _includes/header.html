@@ -9,7 +9,7 @@
   <nav id="site-header-nav">
 
     <button id="site-header-nav-toggle" aria-label="Menu">
-      {{ site.baseurl | append: '/assets/images/nav-toggle.svg' | file_contents | clean_up_svg }}
+      {{ site.baseurl | append: '/assets/images/nav-toggle.svg' | inline_svg }}
     </button>
 
     <ul id="site-header-nav-list">

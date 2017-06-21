@@ -17,7 +17,7 @@
 
         <div class="entry-image contact-link-image">
           <a href="{{ direct_url }}" aria-labelledby="contact-link-{{ contact_link.slug }}">
-            {{ icon_path | file_contents | clean_up_svg }}
+            {{ icon_path | inline_svg }}
           </a>
         </div>
 
@@ -35,7 +35,7 @@
 
         <div class="entry-image contact-link-image">
           <a href="{{ direct_url }}" aria-label="{{ contact_link.title }}">
-            {{ icon_path | file_contents | clean_up_svg }}
+            {{ icon_path | inline_svg }}
           </a>
         </div>
 

@@ -7,7 +7,7 @@
 
       <div class="entry-image project-image">
         <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
-          {{ site.baseurl | append: site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | file_contents | clean_up_svg }}
+          {{ site.baseurl | append: site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | inline_svg }}
         </a>
       </div>
 
