@@ -1,7 +1,7 @@
 # Global metadata used by all projects
 
 # Base URL for all project icons
-icon_baseurl: /assets/images/projects
+icon_baseurl: /_assets/icons/projects
 # Project categories, organized by the column where they are displayed in the
 # project archive
 categories:
