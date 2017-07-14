@@ -4,8 +4,9 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga( 'create', 'UA-32415253-1', 'auto' );
-ga( 'send', 'pageview' );
 
+// The turbolinks:load event fires on the initial page load in addition to
+// successive page loads
 document.addEventListener('turbolinks:load', function (event) {
   if (typeof ga === 'function') {
     ga('set', 'location', event.data.url);
