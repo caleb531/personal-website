@@ -8,8 +8,6 @@ ga( 'create', 'UA-32415253-1', 'auto' );
 // The turbolinks:load event fires on the initial page load in addition to
 // successive page loads
 document.addEventListener('turbolinks:load', function (event) {
-  if (typeof ga === 'function') {
-    ga('set', 'location', event.data.url);
-    ga('send', 'pageview');
-  }
+  ga('set', 'location', event.data.url);
+  ga('send', 'pageview');
 });
