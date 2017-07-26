@@ -29,7 +29,7 @@ ultimately, through the lives enriched by my projects.
 
 I am fluent in over six million forms of... ha, just kidding. I am fluent in
 HTML5, CSS3, JavaScript, and PHP, since most of my projects are Web-based. I'm
-also well versed in Python, and I fiddle with Bash regularly in an effort to
+also well-versed in Python, and I fiddle with Bash regularly in an effort to
 improve my developer workflow.
 
 ### What is your favorite language?
