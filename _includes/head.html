@@ -26,6 +26,6 @@
   <link rel="alternate" hreflang="en-US" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
 
   {% if jekyll.environment == 'production' %}
-    {% js analytics %}
+    {% js analytics async %}
   {% endif %}
 </head>
