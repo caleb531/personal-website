@@ -4,3 +4,4 @@ _site
 .env
 /assets/images/resized/
 .asset-cache
+.jekyll-cache

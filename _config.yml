@@ -73,8 +73,6 @@ responsive_image:
 
 # Static asset management with jekyll-assets
 assets:
-  # Cache-bust static resources on development in addition to production
-  digest: true
   # Sources from which to look for assets to compile
   sources:
     - _assets/styles
