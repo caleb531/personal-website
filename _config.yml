@@ -75,5 +75,4 @@ responsive_image:
 assets:
   # Sources from which to look for assets to compile
   sources:
-    - _assets/styles
-    - _assets/scripts
+    - _assets
