@@ -34,10 +34,9 @@ improve my developer workflow.
 
 ### What is your favorite language?
 
-If I could choose only one, my favorite language would probably be JavaScript
-because of its elegance and because npm totally rocks. I'm also very fond of
-Python for its expressiveness, extensibility, and comprehensive standard
-library.
+If I could choose only one, my favorite language would definitely be Python for
+its simplicity, expressiveness, impressive standard library, and its overall
+coherence as a language.
 
 ### What is your code editor of choice?
 
