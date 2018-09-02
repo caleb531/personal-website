@@ -27,9 +27,9 @@ categories:
       title: Fun
 # Projects featured on homepage
 featured_projects:
+  - flip-book
   - connect-four
   - youversion-suggest
   - jcanvas
   - binary-brancher
-  - quadratical
   - painter
