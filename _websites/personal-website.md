@@ -1,7 +1,7 @@
 ---
 title: Personal Website
 direct_url: https://calebevans.me/
-technologies: Jekyll, HTML5, CSS3, JavaScript
+technologies: Jekyll, HTML5, CSS3, JS
 ---
 
 I created this site (the site you're currently viewing) in 2013 after several

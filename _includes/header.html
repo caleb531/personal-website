@@ -16,27 +16,12 @@
 
       {% for page_item in site.data.navigation.pages %}
         {% assign parent_page_slug = page_item | first | first %}
-        {% assign child_page_slugs = page_item | first | last %}
         {% assign parent_page = site.pages | where: 'id', parent_page_slug | first %}
 
         {% if parent_page %}
           <li>
 
             <a href="{{ site.baseurl }}{{ parent_page.url }}">{{ parent_page.title }}</a>
-
-            {% if child_page_slugs %}
-              <ul class="sub-menu">
-                {% for child_page_slug in child_page_slugs %}
-
-                  {% assign child_page = site.pages | where: 'id', child_page_slug | first %}
-
-                  {% if child_page %}
-                    <li><a href="{{ site.baseurl }}{{ child_page.url }}">{{ child_page.title }}</a></li>
-                  {% endif %}
-
-                {% endfor %}
-              </ul>
-            {% endif %}
 
           </li>
         {% endif %}

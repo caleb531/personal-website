@@ -1,3 +1,5 @@
+<h3 class="entry-list-category-title website-list-category-title">Websites</h3>
+
 <div class="entry-list website-list">
 
   {% for website_slug in site.data.websites.websites %}
@@ -17,10 +19,6 @@
       <div class="entry-main website-main">
 
         <h4 class="entry-title website-title"><a href="{{ website.direct_url }}">{{ website.title }}</a></h4>
-
-        <div class="entry-desc website-desc">
-          {{ website.content }}
-        </div>
 
         <div class="website-technologies">
           <span class="entry-label">Technologies:</span>

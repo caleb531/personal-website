@@ -1,7 +1,7 @@
 ---
 title: Static Stitches
 direct_url: https://staticstitches.calebevans.me/
-technologies: Vanilla PHP, HTML5, CSS3, JavaScript
+technologies: Vanilla PHP, HTML5, CSS3, JS
 ---
 
 I created this site in 2011 for a high school class apart of the [Virtual

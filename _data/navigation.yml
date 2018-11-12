@@ -3,7 +3,5 @@
 # Navigation hierarchy
 pages:
   - about:
-  - portfolio:
-    - projects
-    - websites
+  - projects:
   - contact:

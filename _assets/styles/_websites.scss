@@ -1,13 +1,41 @@
 // Styling for website portfolio entries
 
+// The number of columns to display for the Website gallery
+$website-list-columns: 3;
+
+.website-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 0;
+}
+
 .website {
+  flex-basis: (100% / $website-list-columns);
+  width: auto;
+  text-align: center;
+  &-list-category-title {
+    margin-top: 0;
+  }
+  &-title {
+    margin: 10px 0;
+  }
   &-desc {
     margin: 10px 0;
     font-size: 11pt;
   }
-  &-image a {
-    width: 256px;
-    height: 160px;
+  &-main {
+    display: block;
+    padding-left: 0;
+  }
+  &-image {
+    display: block;
+    width: auto;
+    a {
+      width: 256px;
+      height: 160px;
+    }
   }
   img {
     width: inherit;
@@ -17,10 +45,7 @@
   }
   @include layout(hybrid) {
     display: block;
-    text-align: center;
-    &-main {
-      padding-left: 0;
-    }
+    flex-basis: 100%;
     &-image {
       display: block;
       width: auto;
@@ -28,6 +53,5 @@
   }
   &-technologies {
     font-size: 10pt;
-    text-align: left;
   }
 }
