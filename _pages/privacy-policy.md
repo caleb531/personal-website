@@ -9,8 +9,8 @@ This privacy policy serves as a straightforward explanation of how this website
 collects and handles your personal information. Please note that the term "this
 website" encompasses:
 
-- All personal website pages hosted on **calebevans.me**
-- All web apps, websites, and other projects hosted on **\*.calebevans.me**
+- All personal website pages hosted on the **calebevans.me** domain
+- All web apps, websites, and other projects hosted on all **\*.calebevans.me** subdomains
 
 This privacy policy was last updated on February 9th, 2017.
 
