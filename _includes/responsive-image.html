@@ -9,4 +9,4 @@
   {% endfor %}
 {% endcapture %}
 
-<img src="/{{ base.path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} /{{ original.path }} {{ original.width | divided_by: site.responsive_image.base_width }}x">
+<img src="/{{ base.path }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}">
