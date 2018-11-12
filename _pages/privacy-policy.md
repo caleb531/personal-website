@@ -32,9 +32,9 @@ and the data contains no personally-identifiable information whatsoever.
 ### Google Analytics
 
 This website uses Google Analytics. I only use this information to examine
-traffic trends and visitor statistics. However, you would need to read the
-[Google Analytics privacy summary][privacy] to understand how Google collects
-and uses this information.
+traffic trends and visitor statistics (i.e. the percentage of Chrome users).
+However, you would need to read the [Google Analytics privacy summary][privacy]
+to understand how Google collects and uses this information.
 
 [privacy]: https://support.google.com/analytics/answer/6004245?hl=en
 
