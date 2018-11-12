@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 .env
+/assets/images/websites/
 /assets/images/resized/
 .asset-cache
 .jekyll-cache
