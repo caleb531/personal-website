@@ -1,7 +1,7 @@
 ---
 title: InterVarsity North County
 direct_url: https://ivnorthcounty.org/
-technologies: WordPress, PHP, HTML5, CSS3, JS
+technologies: WordPress, PHP, HTML5, JS
 ---
 
 I created this site in 2014 for the North County chapter of InterVarsity
