@@ -6,25 +6,25 @@ icon_baseurl: /_assets/icons/projects
 # project archive
 categories:
   -
-    - slug: alfred
-      title: Alfred
     - slug: games
       title: Games
     - slug: programs
       title: Programs
     - slug: math
       title: Math
-  -
-    - slug: wordpress
-      title: WordPress
-    - slug: javascript-libraries
-      title: JavaScript Libraries
     - slug: computer-science
       title: Computer Science
-    - slug: tools
-      title: Tools
+  -
+    - slug: javascript-libraries
+      title: JavaScript Libraries
     - slug: fun
       title: Fun
+    - slug: tools
+      title: Tools
+    - slug: alfred
+      title: Alfred
+    - slug: wordpress
+      title: WordPress
 # Projects featured on homepage
 featured_projects:
   - flip-book
