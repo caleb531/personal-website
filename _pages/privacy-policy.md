@@ -24,7 +24,7 @@ details, see the [SSL Labs report for calebevans.me][ssl-report].
 
 ### Local Storage
 
-The apps on this website use the HTML5 local storage API to store user-inputted
+The apps on this website use the HTML5 Local Storage API to store user-inputted
 data and preferences. All of this data remains on your computer, and can be
 cleared through your web browser. To be clear, this data is not sent to anyone,
 and the data contains no personally-identifiable information whatsoever.
