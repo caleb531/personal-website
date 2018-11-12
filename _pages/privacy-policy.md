@@ -12,7 +12,7 @@ website" encompasses:
 - All personal website pages hosted on the **calebevans.me** domain
 - All web apps, websites, and other projects hosted on all **\*.calebevans.me** subdomains
 
-This privacy policy was last updated on February 9th, 2017.
+This privacy policy was last updated on November 11th, 2018.
 
 ### Secure Connection
 
