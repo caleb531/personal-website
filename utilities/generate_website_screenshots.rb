@@ -9,6 +9,8 @@ resize_image_dir = 'assets/resized'
 website_image_extension='jpg'
 window_width = 1024
 window_height = 640
+# The delay (in milliseconds) to wait before taking the screenshot
+screenshot_delay = 1000
 
 # Create website image directory if it doesn't already exist
 FileUtils.mkdir_p(website_image_dir)
@@ -27,6 +29,7 @@ Dir.glob('_websites/*.md') do |website_config_file|
     --disable-gpu \
     --window-size=#{window_width},#{window_height} \
     --hide-scrollbars \
+    --virtual-time-budget=#{screenshot_delay} \
     --screenshot=#{website_image_dir}/#{website_name}.#{website_image_extension} \
     #{parsed['direct_url']}
   """)
