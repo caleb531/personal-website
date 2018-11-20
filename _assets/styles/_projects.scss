@@ -69,3 +69,7 @@ span.project-title {
     font-size: 16px;
   }
 }
+
+#page-projects h3 {
+  @extend .entry-list-category-title;
+}
