@@ -5,7 +5,7 @@ require 'front_matter_parser'
 
 chrome_path = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 website_image_dir = 'assets/images/websites'
-resize_image_dir = 'assets/resized'
+resize_image_dir = 'assets/images/resized'
 website_image_extension='jpg'
 window_width = 1024
 window_height = 640
@@ -27,6 +27,7 @@ Dir.glob('_websites/*.md') do |website_config_file|
   system("""#{chrome_path} \
     --headless \
     --disable-gpu \
+    --disk-cache-dir=/dev/null \
     --window-size=#{window_width},#{window_height} \
     --hide-scrollbars \
     --virtual-time-budget=#{screenshot_delay} \
