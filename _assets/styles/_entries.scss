@@ -3,7 +3,7 @@
 .entry {
   display: table;
   width: 100%;
-  margin: 20px 0;
+  margin: 15px 0;
   &-image {
     display: table-cell;
     // Force container to always fit to its contents
@@ -23,12 +23,15 @@
   &-title {
     display: inline-block;
     margin: 0;
+    margin-bottom: 3px;
+    font-size: 20px;
     vertical-align: middle;
   }
   &-desc {
     margin: 0;
     font-size: 18px;
     text-align: left;
+    line-height: 1.3;
     p:first-child {
       margin-top: 0;
     }
