@@ -1,0 +1,12 @@
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- letter W -->
+  <polygon points="115,50 85,50 115,150 140,150 160,80 180,150 205,150 235,50 205,50 190,120 175,50 145,50 130,120" fill="#47d" stroke="#149" stroke-width="4" transform="translate(-40,0)" />
+
+  <!-- letter T -->
+  <polygon points="40,180 140,180 140,210 105,210 105,290 75,290 75,210 40,210" fill="#6c3" stroke="#070" stroke-width="4" transform="translate(25,-15)" />
+
+  <!-- letter C -->
+  <path d="M 270,100 A 20,20 0,0,0 270,260 L 270,235 A 20,20 0,0,1 270,125 Z" fill="#f93" stroke="#c60" stroke-width="4" transform="translate(-10,-5)" />
+
+</svg>
