@@ -1,7 +1,8 @@
 // Header styling
 
 #site-header {
-  display: table;
+  display: flex;
+  align-items: center;
   width: 100%;
   position: relative;
   margin: 0 auto;
@@ -27,7 +28,6 @@
 }
 
 #site-title-link {
-  display: table-cell;
   margin: 0 auto;
   font-size: 0;
   text-decoration: none;
@@ -45,7 +45,7 @@
 }
 
 #site-header-nav {
-  display: table-cell;
+  flex-grow: 1;
   position: relative;
   clear: both;
   margin: 0 auto;

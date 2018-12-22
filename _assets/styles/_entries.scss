@@ -1,13 +1,12 @@
 // Styling for lists of projects and contact links
 
 .entry {
-  display: table;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   margin: 15px 0;
   &-image {
-    display: table-cell;
-    // Force container to always fit to its contents
-    width: 1%;
     a {
       display: inline-block;
       text-decoration: none;
@@ -15,7 +14,6 @@
     }
   }
   &-main {
-    display: table-cell;
     padding-left: 10px;
     font-size: 0;
     vertical-align: top;
