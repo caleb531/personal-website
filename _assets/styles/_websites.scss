@@ -12,6 +12,7 @@ $website-list-columns: 3;
 }
 
 .website {
+  display: block;
   flex-basis: (100% / $website-list-columns);
   width: auto;
   text-align: center;
@@ -44,7 +45,6 @@ $website-list-columns: 3;
     border: solid 2px rgba(#000, 0.25);
   }
   @include layout(hybrid) {
-    display: block;
     flex-basis: 100%;
     &-image {
       display: block;
