@@ -17,8 +17,15 @@ FileUtils.mkdir_p(website_image_dir)
 # Remove existing directory containing resized images
 FileUtils.remove_dir(resize_image_dir, force=true)
 
+# Generate screenshot for the specified file path(s); otherwise, default to
+# every file in the _websites directory
+website_config_files = ARGV
+if website_config_files.empty?
+  website_config_files = Dir.glob('_websites/*.md')
+end
+
 # Generate screenshot for each portfolio website that has configuration
-Dir.glob('_websites/*.md') do |website_config_file|
+website_config_files.each do |website_config_file|
 
   website_name = File.basename(website_config_file, '.md')
   puts "generating screenshot for #{website_name}"
