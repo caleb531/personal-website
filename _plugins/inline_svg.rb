@@ -3,16 +3,11 @@ module Jekyll
   module InlineSVG
 
     def inline_svg(svg_path)
-      svg_file = File.open(".#{svg_path}", 'r')
-      begin
-        svg = svg_file.read
-        # Strip xmlns attributes, as HTML ignores them
-        svg = svg.gsub(/\s*xmlns(:[a-z]+)?=(['"])(.*?)\2\s*/i, '')
-        # Strip comments
-        svg = svg.gsub(/<!--(.*?)-->/, '')
-      ensure
-        svg_file.close
-      end
+      svg = File.read(".#{svg_path}")
+      # Strip xmlns attributes, as HTML ignores them
+      svg = svg.gsub(/\s*xmlns(:[a-z]+)?=(['"])(.*?)\2\s*/i, '')
+      # Strip comments
+      svg = svg.gsub(/<!--(.*?)-->/, '')
     end
 
   end
