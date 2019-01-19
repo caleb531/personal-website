@@ -20,7 +20,7 @@ $website-list-columns: 3;
     margin-top: 0;
   }
   &-title {
-    margin: 10px 0;
+    margin: 2px 0;
   }
   &-desc {
     margin: 10px 0;
@@ -51,7 +51,10 @@ $website-list-columns: 3;
       width: auto;
     }
   }
-  &-technologies {
+  &-details {
     font-size: 10pt;
+  }
+  &-years {
+    font-weight: 400;
   }
 }

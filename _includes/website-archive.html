@@ -18,9 +18,9 @@
 
         <h4 class="entry-title website-title"><a href="{{ website.direct_url }}">{{ website.title }}</a></h4>
 
-        <div class="website-technologies">
-          <span class="entry-label">Technologies:</span>
-          {{ website.technologies }}
+        <div class="website-details">
+          <div class="website-years">{{ website.start_year }} &ndash; {{ website.end_year }}</div>
+          <div class="website-technologies">{{ website.technologies }}</div>
         </div>
 
       </div>
