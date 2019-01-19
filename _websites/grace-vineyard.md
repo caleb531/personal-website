@@ -1,7 +1,7 @@
 ---
 title: Grace Vineyard
 direct_url: https://gracevcf.org/
-technologies: WordPress, PHP, HTML5, JS
+technologies: WordPress + Underscores, PHP, HTML5, Sass, JS
 start_year: 2017
 end_year: present
 ---
