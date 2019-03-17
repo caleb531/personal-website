@@ -12,7 +12,7 @@ website" encompasses:
 - All personal website pages hosted on the **calebevans.me** domain
 - All web apps, websites, and other projects hosted on all **\*.calebevans.me** subdomains
 
-This privacy policy was last updated on November 11th, 2018.
+This privacy policy was last updated on March 16th, 2019.
 
 ### Secure Connection
 
@@ -28,6 +28,15 @@ The apps on this website use the HTML5 Local Storage API to store user-inputted
 data and preferences. All of this data remains on your computer, and can be
 cleared through your web browser. To be clear, this data is not sent to anyone,
 and the data contains no personally-identifiable information whatsoever.
+
+## Sharing Features
+
+Some of my apps (like [Expressions][expressions]) have sharing features that
+work by uploading your content to this website's server. This content never
+leaves the server and is only used to enable this sharing functionality to
+function.
+
+[expressions]: https://projects.calebevans.me/expressions/
 
 ### Google Analytics
 
