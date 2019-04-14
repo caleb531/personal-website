@@ -8,6 +8,8 @@ categories:
   -
     - slug: games
       title: Games
+    - slug: atom-packages
+      title: Atom Packages
     - slug: programs
       title: Programs
     - slug: math
