@@ -6,10 +6,13 @@
   width: 100%;
   position: relative;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px;
   ul, li {
     margin: 0;
     padding: 0;
+  }
+  @include layout(compact) {
+    padding: 20px 20px;
   }
   @media (max-width: 340px) {
     padding: 10px;
@@ -31,7 +34,7 @@
   margin: 0 auto;
   font-size: 0;
   text-decoration: none;
-  color: #fff;
+  color: currentColor;
   vertical-align: middle;
 }
 
@@ -59,7 +62,7 @@
     display: inline-block;
     position: relative;
     a {
-      color: #fff;
+      color: currentColor;
       display: block;
       font-size: 15px;
       line-height: 1;
@@ -106,7 +109,7 @@
     &:active {
       background: none;
       border-width: 0;
-      color: #fff;
+      color: currentColor;
     }
     svg {
       $icon-size: 24px;
