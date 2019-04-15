@@ -1,4 +1,4 @@
-<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/225b/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <!-- circle end of node pointer -->
     <marker id="dsv-node-pointer-circle" markerWidth="50" markerHeight="50" refX="10" refY="10" orient="auto">
