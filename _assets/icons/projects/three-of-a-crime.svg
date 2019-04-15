@@ -8,6 +8,8 @@
     <use id="toac-suspect-green" xlink:href="#toac-suspect" x="0" y="0" fill="#7d3" stroke="#4a0" />
     <use id="toac-suspect-orange" xlink:href="#toac-suspect" x="0" y="0" fill="#f93" stroke="#e60" />
   </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- all suspects -->
   <g stroke-width="4">
     <!-- top row -->

@@ -3,6 +3,8 @@
     <!-- password chacter bullet -->
     <circle id="pswdmatcher-bullet" cx="0" cy="0" r="20" stroke-width="4" />
   </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- green (correct) bullets -->
   <g fill="#6d3" stroke="#3a0">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="100" />

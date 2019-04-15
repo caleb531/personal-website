@@ -6,6 +6,8 @@
     <!-- circle representing operator -->
     <circle id="calc-operator-circle" cx="160" cy="160" r="50" fill="none" />
   </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- two operands -->
   <use xlink:href="#calc-operand-dot" x="60" y="160" />
   <use xlink:href="#calc-operand-dot" x="260" y="160" />

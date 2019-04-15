@@ -8,6 +8,8 @@
       <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="#000" />
     </mask>
   </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- letter e -->
   <path d="M 185,215 Q 102,240 105,175 L 200,175 Q 205,90 140,90 Q 75,90 80,175 Q 80,265 190,235 Z" fill="#69f" stroke="#36c" stroke-width="4" mask="url(#expressions-letter-e-mask)" />
   <!-- cutout mask in letter e -->

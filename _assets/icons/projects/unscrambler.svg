@@ -4,6 +4,8 @@
     <!-- dot representing letter -->
     <circle id="unscrambler-dot" r="16" />
   </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- double arrow strokes -->
   <g stroke-width="16">
     <!-- top -->
