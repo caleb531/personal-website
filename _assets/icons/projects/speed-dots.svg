@@ -6,9 +6,9 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- green dot -->
-  <use xlink:href="#speeddots-dot" x="200" y="100" fill="#7d3" stroke="#4a0" />
+  <use xlink:href="#speeddots-dot" x="200" y="100" fill="#7d3" stroke="#7d3" />
   <!-- blue dot -->
-  <use xlink:href="#speeddots-dot" x="160" y="220" fill="#58e" stroke="#25b" />
+  <use xlink:href="#speeddots-dot" x="160" y="220" fill="#58e" stroke="#58e" />
   <!-- green dot trail (top to bottom) -->
   <g fill="none" stroke="#7d3" stroke-width="4" stroke-linecap="round">
     <line x1="140" y1="80" x2="60" y2="80" />
