@@ -6,14 +6,14 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- green (correct) bullets -->
-  <g fill="#6d3" stroke="#3a0">
+  <g fill="#6d3" stroke="#6d3">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="130" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="190" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="250" y="100" />
   </g>
   <!-- red (incorrect) bullets -->
-  <g fill="#c33" stroke="#900">
+  <g fill="#c33" stroke="#c33">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="130" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="190" y="220" />

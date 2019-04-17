@@ -10,7 +10,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- handle and magnifier strokes -->
-  <g stroke="#111">
+  <g stroke="#444">
     <use xlink:href="#yvs-handle" stroke-width="30" />
     <use xlink:href="#yvs-magnifier" stroke-width="20" />
   </g>
@@ -22,7 +22,7 @@
   <!-- cross -->
   <g stroke-linecap="round">
     <!-- cross bar strokes -->
-    <g fill="#520">
+    <g fill="#853">
       <rect x="188" y="70" width="24" height="100" rx="2" ry="2" />
       <rect x="160" y="96" width="80" height="20" rx="2" ry="2" />
     </g>

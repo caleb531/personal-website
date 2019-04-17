@@ -2,7 +2,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- play icon -->
-  <polygon points="70,50 70,270 260,160" fill="#7d3" stroke="#4a0" stroke-width="4" />
+  <polygon points="70,50 70,270 260,160" fill="#7d3" stroke="#7d3" stroke-width="4" />
   <!-- music note -->
-  <path d="M 115,135 L 115,195 C 110,188 90,188 90,205 C 90,222 122,222 122,200 L 122,150 L 156,138 L 156,182 C 151,175 131,175 131,192 C 131,209 163,209 163,187 L 163,120 Z" fill="#47d" stroke="#149" stroke-width="2" />
+  <path d="M 115,135 L 115,195 C 110,188 90,188 90,205 C 90,222 122,222 122,200 L 122,150 L 156,138 L 156,182 C 151,175 131,175 131,192 C 131,209 163,209 163,187 L 163,120 Z" fill="#47d" stroke="#47d" stroke-width="2" />
 </svg>

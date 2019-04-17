@@ -3,11 +3,11 @@
     <!-- Alfred hat -->
     <g id="awp-hat">
       <!-- hat body -->
-      <path id="awp-hat-body" d="M -100,0 L 100,0 L 100,-10 L 70,-10 Q 70,-90 0,-90 Q -70,-90 -70,-10 L -100,-10 Z" fill="#222" stroke="#000" stroke-width="2" />
+      <path id="awp-hat-body" d="M -100,0 L 100,0 L 100,-10 L 70,-10 Q 70,-90 0,-90 Q -70,-90 -70,-10 L -100,-10 Z" fill="#222" stroke="#222" stroke-width="2" />
       <!-- purple band around hat -->
-      <path id="awp-hat-band" d="M -70,-10 L 70,-10 Q 71,-20 69,-30 L -69,-30 Q -71,-20 -70,-10 Z" fill="#639" stroke="#306" stroke-width="2" />
+      <path id="awp-hat-band" d="M -70,-10 L 70,-10 Q 71,-20 69,-30 L -69,-30 Q -71,-20 -70,-10 Z" fill="#639" stroke="#639" stroke-width="2" />
     </g>
-    <g id="awp-box" fill="#963" stroke="#630" stroke-width="2">
+    <g id="awp-box" fill="#963" stroke="#963" stroke-width="2">
       <!-- front face -->
       <rect x="-80" y="0" width="160" height="100" />
       <!-- side flaps -->

@@ -19,7 +19,7 @@
     <circle cx="160" cy="108" r="83" fill="none" stroke="#444" stroke-width="4" />
   </g>
   <!-- arrow strokes -->
-  <g stroke="#079" stroke-width="16">
+  <g stroke="#3ab" stroke-width="16">
     <use xlink:href="#swb-download-arrow" />
     <use xlink:href="#swb-upload-arrow" />
   </g>
