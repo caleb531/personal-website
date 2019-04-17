@@ -42,12 +42,12 @@
 .project-image {
   font-size: 0;
   a {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
+    margin-bottom: 2px;
   }
   svg {
-    border: solid 2px rgba(#000, 0.15);
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #fff;
     background-clip: padding-box;
   }
