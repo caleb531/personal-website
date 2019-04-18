@@ -1,19 +1,19 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <!-- Terminal window body (frame) -->
-    <path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="#333" stroke="#000" id="dotfiles-terminal-body" />
+    <path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="#333" stroke="#333" id="dotfiles-terminal-body" />
     <!-- Standard window titlebar control -->
     <circle r="5" stroke-width="1" id="dotfiles-terminal-window-control" />
     <!-- Terminal window titlebar -->
     <g id="dotfiles-terminal-titlebar">
       <!-- Titlebar body (frame) -->
-      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#ccd" stroke="#aab" />
+      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#ccd" stroke="#ccd" />
       <!-- Window Close button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="#e44" stroke="#a11" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="#e44" stroke="#e44" />
       <!-- Window Minimize button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="#fc3" stroke="#d80" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="#fc3" stroke="#fc3" />
       <!-- Window Zoom button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d3" stroke="#4a0" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d3" stroke="#7d3" />
     </g>
     <g id="dotfiles-terminal-text">
       <!-- PS1 interactive prompts -->

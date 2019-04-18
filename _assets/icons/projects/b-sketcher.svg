@@ -2,20 +2,20 @@
   <defs>
     <!-- circle end of node pointer -->
     <marker id="bbrancher-node-pointer-circle" markerWidth="50" markerHeight="50" refX="6" refY="6" orient="auto">
-      <circle r="3" cx="6" cy="6" fill="#9cf" stroke="#25b" />
+      <circle r="3" cx="6" cy="6" fill="#36c" stroke="#fff" />
     </marker>
     <!-- arrow end of node pointer -->
     <marker id="bbrancher-node-pointer-arrow" markerWidth="13" markerHeight="13" refX="4" refY="6" orient="auto">
-      <polygon points="1,2 6,6 1,10" fill="#25b" />
+      <polygon points="1,2 6,6 1,10" fill="#36c" />
     </marker>
     <!-- individual node -->
-    <path id="bbrancher-node" d="M -36,-18 L 36,-18 L 36,18 L -36,18 Z M 0,18 L 0,-18" fill="#9cf" stroke="#25b" stroke-width="3" />
+    <path id="bbrancher-node" d="M -36,-18 L 36,-18 L 36,18 L -36,18 Z M 0,18 L 0,-18" fill="#36c" stroke="#fff" stroke-width="3" />
     <!-- leftmost pointer from root node -->
-    <polyline id="bbrancher-node-pointer-left" points="-36,18 -84,130 -84,142" fill="none" stroke="#25b" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
+    <polyline id="bbrancher-node-pointer-left" points="-36,18 -84,130 -84,142" fill="none" stroke="#36c" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
     <!-- rightmost pointer from root node -->
     <use id="bbrancher-node-pointer-right" xlink:href="#bbrancher-node-pointer-left" transform="scale(-1,1)" />
     <!-- center pointer from root node -->
-    <polyline id="bbrancher-node-pointer-center" points="0,18 0,142" fill="none" stroke="#25b" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
+    <polyline id="bbrancher-node-pointer-center" points="0,18 0,142" fill="none" stroke="#36c" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />

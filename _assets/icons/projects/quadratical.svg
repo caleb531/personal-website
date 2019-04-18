@@ -2,7 +2,7 @@
   <!-- icon elements -->
   <defs>
     <!-- dot representing number -->
-    <circle id="quadratical-dot" r="10" fill="#96d" stroke="#63a" stroke-width="4" />
+    <circle id="quadratical-dot" r="10" fill="#96d" stroke="#96d" stroke-width="4" />
     <g id="quadratical-plus-minus" stroke-linecap="round">
       <line x1="-20" y1="0" x2="20" y2="0" />
       <line x1="0" y1="-20" x2="0" y2="20" />
@@ -14,12 +14,12 @@
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
-  <g fill="#96d" stroke="#63a" stroke-width="4">
+  <g fill="#96d" stroke="#96d" stroke-width="4">
     <!-- dot preceding quadratical-plus-minus symbol -->
     <use xlink:href="#quadratical-dot" x="80" y="130" />
-    <use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#63a" stroke-width="12" />
+    <use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#96d" stroke-width="12" />
     <use xlink:href="#quadratical-square-root" x="190" y="120" stroke="#96d" stroke-width="4" />
-    <use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#63a" stroke-width="12" />
+    <use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#96d" stroke-width="12" />
     <use xlink:href="#quadratical-plus-minus" x="130" y="120" stroke="#96d" stroke-width="4" />
     <!-- dot under square root -->
     <use xlink:href="#quadratical-dot" x="240" y="130" />
