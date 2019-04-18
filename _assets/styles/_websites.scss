@@ -41,8 +41,7 @@ $website-list-columns: 3;
   img {
     width: inherit;
     height: inherit;
-    border-radius: 3px;
-    border: solid 2px rgba(#000, 0.25);
+    border-radius: 5px;
   }
   @include layout(hybrid) {
     flex-basis: 100%;

@@ -17,7 +17,6 @@
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- First IP address -->
   <g id="cidrbrewer-address-1" transform="translate(160, 64)">
-    <use xlink:href="#cidrbrewer-address-body" />
     <g id="cidrbrewer-address-1-octets" fill="#36f">
       <use xlink:href="#cidrbrewer-address-octet-1" />
       <use xlink:href="#cidrbrewer-address-octet-2" />
@@ -27,7 +26,6 @@
   </g>
   <!-- Second IP address -->
   <g id="cidrbrewer-address-2" transform="translate(160, 132)">
-    <use xlink:href="#cidrbrewer-address-body" />
     <g id="cidrbrewer-address-2-octets" fill="#75f">
       <use xlink:href="#cidrbrewer-address-octet-1" />
       <use xlink:href="#cidrbrewer-address-octet-2" />
@@ -37,7 +35,6 @@
   </g>
   <!-- Subnet mask -->
   <g id="cidrbrewer-subnet-mask" transform="translate(160, 256)">
-    <use xlink:href="#cidrbrewer-address-body" />
     <g id="cidrbrewer-subnet-mask-octets">
       <g id="cidrbrewer-subnet-mask-green-octets" fill="#7d3 ">
         <use xlink:href="#cidrbrewer-address-octet-1" />
