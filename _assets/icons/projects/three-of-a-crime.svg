@@ -1,7 +1,7 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <!-- a single suspect -->
-    <rect id="toac-suspect" width="60" height="60" rx="8" ry="8" />
+    <rect id="toac-suspect" width="72" height="60" rx="8" ry="8" />
     <!-- references to particular suspects -->
     <use id="toac-suspect-purple" xlink:href="#toac-suspect" x="0" y="0" fill="#96f" stroke="#96f" />
     <use id="toac-suspect-red" xlink:href="#toac-suspect" x="0" y="0" fill="#c33" stroke="#c33" />
@@ -13,16 +13,16 @@
   <!-- all suspects -->
   <g stroke-width="4">
     <!-- top row -->
-    <use xlink:href="#toac-suspect-purple" x="50" y="50" />
-    <use xlink:href="#toac-suspect-red" x="130" y="50" />
-    <use xlink:href="#toac-suspect-green" x="210" y="50" />
+    <use xlink:href="#toac-suspect-purple" x="44" y="50" />
+    <use xlink:href="#toac-suspect-red" x="124" y="50" />
+    <use xlink:href="#toac-suspect-green" x="204" y="50" />
     <!-- middle row -->
-    <use xlink:href="#toac-suspect-orange" x="50" y="130" />
-    <use xlink:href="#toac-suspect-purple" x="130" y="130" />
-    <use xlink:href="#toac-suspect-green" x="210" y="130" />
+    <use xlink:href="#toac-suspect-orange" x="44" y="130" />
+    <use xlink:href="#toac-suspect-purple" x="124" y="130" />
+    <use xlink:href="#toac-suspect-green" x="204" y="130" />
     <!-- bottom row -->
-    <use xlink:href="#toac-suspect-red" x="50" y="210" />
-    <use xlink:href="#toac-suspect-green" x="130" y="210" />
-    <use xlink:href="#toac-suspect-orange" x="210" y="210" />
+    <use xlink:href="#toac-suspect-red" x="44" y="210" />
+    <use xlink:href="#toac-suspect-green" x="124" y="210" />
+    <use xlink:href="#toac-suspect-orange" x="204" y="210" />
   </g>
 </svg>
