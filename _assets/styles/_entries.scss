@@ -12,6 +12,9 @@
       text-decoration: none;
       vertical-align: top;
     }
+    svg, img {
+      box-shadow: 0 0 10px rgba(#000, 0.3);
+    }
   }
   &-main {
     padding-left: 12px;

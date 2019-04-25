@@ -9,7 +9,8 @@
     }
     svg {
       vertical-align: top;
-      box-shadow: $layer-box-shadow;
+      box-shadow: none;
+      filter: drop-shadow(0 0 5px rgba(#000, 0.3));
     }
   }
   &-main p {
