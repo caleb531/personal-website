@@ -6,8 +6,6 @@
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- Atom logo -->
   <g transform="translate(160, 160)">
     <circle cx="0" cy="0" r="10" fill="#5a0" />
