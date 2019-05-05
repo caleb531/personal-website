@@ -1,0 +1,31 @@
+  <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- reusable icon elements -->
+  <defs>
+    <!-- Brunch logo -->
+    <g id="rsvg-brunch-logo">
+      <polygon points="40,280 150,280 150,110 95,55 40,110" fill="#86ad8a" />
+      <polygon points="40,220 40,280 150,280 150,110" fill="#cecbae" transform="translate(190,0) scale(-1,1)" />
+      <polygon points="40,220 40,280 150,280 150,110" fill="#3f894a" />
+    </g>
+    <!-- SVG spoke dot -->
+    <circle id="rsvg-spoke-dot" cx="0" cy="0" r="8" fill="#e7a420" />
+  </defs>
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
+  <!-- Brunch logo -->
+  <use xlink:href="#rsvg-brunch-logo" x="10" y="-10" />
+  <!-- SVG logo -->
+  <g transform="translate(230,180)">
+    <!--  -->
+    <path d="M 0,0 L 40,0 M 0,0 L 0,-40 M 0,0 L -40,0 M 0,0 L 0,40 M 0,0 L 28.284271247,-28.284271247 M 0,0 L -28.284271247,-28.284271247 M 0,0 L -28.284271247,28.284271247 M 0,0 L 28.284271247,28.284271247" fill="none" stroke="#e7a420" stroke-width="12" stroke-linecap="round" />
+    <!-- spoke dots -->
+    <use xlink:href="#rsvg-spoke-dot" x="40" y="0" />
+    <use xlink:href="#rsvg-spoke-dot" x="0" y="-40" />
+    <use xlink:href="#rsvg-spoke-dot" x="-40" y="0" />
+    <use xlink:href="#rsvg-spoke-dot" x="0" y="40" />
+    <use xlink:href="#rsvg-spoke-dot" x="28.284271247" y="-28.284271247" />
+    <use xlink:href="#rsvg-spoke-dot" x="-28.284271247" y="-28.284271247" />
+    <use xlink:href="#rsvg-spoke-dot" x="-28.284271247" y="28.284271247" />
+    <use xlink:href="#rsvg-spoke-dot" x="28.284271247" y="28.284271247" />
+  </g>
+</svg>
