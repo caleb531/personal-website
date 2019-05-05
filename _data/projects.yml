@@ -25,6 +25,8 @@ categories:
       title: Tools
     - slug: alfred
       title: Alfred
+    - slug: brunch-plugins
+      title: Brunch Plugins
     - slug: wordpress
       title: WordPress
 # Projects featured on homepage
