@@ -1,24 +1,32 @@
   <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
-    <!-- napkin shape of the Brunch logo -->
-    <polygon id="pegjs-brunch-napkin" points="0,-100 100,0 0,100 -100,0" fill="#495" />
+    <!-- Brunch logo -->
+    <g id="pegjs-brunch-logo">
+      <polygon points="40,280 150,280 150,110 95,55 40,110" fill="#86ad8a" />
+      <polygon points="40,220 40,280 150,280 150,110" fill="#cecbae" transform="translate(190,0) scale(-1,1)" />
+      <polygon points="40,220 40,280 150,280 150,110" fill="#3f894a" />
+    </g>
     <!-- PEG.js peg icon -->
-    <circle cx="0" cy="0" r="16" id="pegjs-brunch-peg" fill="#369" />
+    <circle cx="0" cy="0" r="16" id="pegjs-peg" fill="#369" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
-  <!-- Brunch icon -->
-  <use xlink:href="#pegjs-brunch-napkin" x="130" y="130" />
+  <!-- Brunch logo -->
+  <use xlink:href="#pegjs-brunch-logo" x="10" y="-10" />
   <!-- PEG.js grid of pegs -->
   <g>
-    <!-- top-left peg -->
-    <use xlink:href="#pegjs-brunch-peg" x="260" y="210" />
-    <!-- top-right peg -->
-    <use xlink:href="#pegjs-brunch-peg" x="200" y="210" />
-    <!-- top-left peg -->
-    <use xlink:href="#pegjs-brunch-peg" x="260" y="270" />
-    <!-- top-right peg -->
-    <use xlink:href="#pegjs-brunch-peg" x="200" y="270" />
+    <!-- row 1 column 1 -->
+    <use xlink:href="#pegjs-peg" x="260" y="125" />
+    <!-- row 1 column 2 -->
+    <use xlink:href="#pegjs-peg" x="200" y="125" />
+    <!-- row 2 column 1 -->
+    <use xlink:href="#pegjs-peg" x="260" y="185" />
+    <!-- row 2 column 2 -->
+    <use xlink:href="#pegjs-peg" x="200" y="185" />
+    <!-- row 3 column 1 -->
+    <use xlink:href="#pegjs-peg" x="260" y="245" />
+    <!-- row 3 column 2 -->
+    <use xlink:href="#pegjs-peg" x="200" y="245" />
   </g>
 </svg>
