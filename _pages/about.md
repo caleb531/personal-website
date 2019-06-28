@@ -23,7 +23,7 @@ automate what I grew tired of doing manually. Others I created simply for fun.
 Besides the fact that I greatly enjoy coding, I ultimately code for Christ, who
 has been and always shall be my Lord, my Friend, and my Savior. I code because I
 believe the work of my hands glorifies God through the creativity I express, and
-ultimately, by bringing joy to the people who use my projects.
+ultimately, through the lives enriched by my projects.
 
 ### How many languages do you speak?
 
