@@ -1,7 +1,7 @@
 # Global metadata used by all contact links
 
 # Base URL for all contact link icons
-icon_baseurl: /_assets/icons/contact-links
+icon_baseurl: /assets/icons/contact-links
 # Contact links to display (in the following order)
 contact_links:
   - email
