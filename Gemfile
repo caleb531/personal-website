@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem 'front_matter_parser'
 
   gem 'jekyll-email-protect'
-  gem 'jekyll-responsive_image'
+  gem 'jekyll-responsive-image'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
 
