@@ -1,6 +1,6 @@
 # Personal Website
 
-*Copyright 2013-2018, Caleb Evans*  
+*Copyright 2013-2020, Caleb Evans*  
 *Code released under the MIT license*
 
 This is a [Jekyll](https://jekyllrb.com/)-based personal website I created for
