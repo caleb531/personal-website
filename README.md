@@ -4,15 +4,13 @@
 *Code released under the MIT license*
 
 This is a [Jekyll](https://jekyllrb.com/)-based personal website I created for
-myself. I built the current theme from the Jekyll 3 default theme. I am
-releasing the full source code for the site so that others may benefit from the
-code I've written.
+myself. The theme is built from Jekyll 3's default theme.
 
 ## Setup
 
 ### Installing Jekyll
 
-The site requires Jekyll 3 (which in turn requires Ruby 2 and Node):
+The site requires Jekyll 3 or 4 (which in turn requires Ruby >=2.5 and Node):
 
 ```bash
 gem install jekyll
@@ -35,7 +33,8 @@ To serve the development site locally via Jekyll's Ruby server, run:
 bundle exec jekyll serve
 ```
 
-You will then be able to view the site in your browser at `localhost:4000`.
+You will then be able to view the site in your browser at
+`http://localhost:4000`.
 
 #### Via Apache
 
