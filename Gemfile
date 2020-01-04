@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 group :jekyll_plugins do
   gem 'jekyll'
 
-  gem 'jekyll-assets'
-  gem 'sprockets', '~> 4.0.beta8'
   gem 'uglifier'
   gem 'front_matter_parser'
 

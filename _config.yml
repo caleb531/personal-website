@@ -71,9 +71,3 @@ responsive_image:
     - width: 256
   # Output format for resized image paths
   output_path_format: assets/images/resized/%{width}/%{basename}
-
-# Static asset management with jekyll-assets
-assets:
-  # Sources from which to look for assets to compile
-  sources:
-    - _assets
