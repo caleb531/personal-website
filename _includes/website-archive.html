@@ -8,7 +8,7 @@
       <div class="entry-image website-image">
         <a href="{{ website.direct_url }}">
           {% responsive_image_block %}
-            path: {{ site.baseurl | append: site.data.websites.icon_baseurl | append: '/' | append: website.slug | append: '.jpg' | replace_first: '/', '' }}
+            path: {{ site.data.websites.icon_baseurl | append: '/' | append: website.slug | append: '.jpg' | replace_first: '/', '' }}
             alt: {{ website.title }}
           {% endresponsive_image_block %}
         </a>

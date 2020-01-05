@@ -13,7 +13,7 @@
         {% assign direct_url = contact_link.direct_url %}
       {% endif %}
 
-      {% assign icon_path = site.baseurl | append: site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' %}
+      {% assign icon_path = site.data.contact_links.icon_baseurl | append: '/' | append: contact_link.slug | append: '.svg' %}
 
       {% if include.compact != true %}
 
