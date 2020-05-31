@@ -31,9 +31,9 @@ categories:
       title: WordPress
 # Projects featured on homepage
 featured_projects:
+  - inflection-point
   - flip-book
   - connect-four
-  - truthy
   - jcanvas
   - binary-brancher
   - painter
