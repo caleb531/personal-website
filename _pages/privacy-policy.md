@@ -12,7 +12,7 @@ website" encompasses:
 - All personal website pages hosted on the **calebevans.me** domain
 - All web apps, websites, and other projects hosted on all **\*.calebevans.me** subdomains
 
-This privacy policy was last updated on March 16th, 2019.
+This privacy policy was last updated on June 22nd, 2020.
 
 ### Secure Connection
 
@@ -26,10 +26,11 @@ details, see the [SSL Labs report for calebevans.me][ssl-report].
 
 The apps on this website use the HTML5 Local Storage API to store user-inputted
 data and preferences. All of this data remains on your computer, and can be
-cleared through your web browser. To be clear, this data is not sent to anyone,
-and the data contains no personally-identifiable information whatsoever.
+cleared through your web browser. The data contains no personally-identifiable
+information except whatever information you may enter into the app. To be clear,
+however, this data is not sent to anyone.
 
-## Sharing Features
+### Sharing Features
 
 Some of my apps (like [Expressions][expressions]) have sharing features that
 work by uploading your content to this website's server. This content never
@@ -43,7 +44,8 @@ function.
 This website uses Google Analytics. I only use this information to examine
 traffic trends and visitor statistics (i.e. the percentage of Chrome users).
 However, you would need to read the [Google Analytics privacy summary][privacy]
-to understand how Google collects and uses this information.
+to understand how Google collects and uses this information. I do not otherwise
+share this information.
 
 [privacy]: https://support.google.com/analytics/answer/6004245?hl=en
 
@@ -55,7 +57,4 @@ anyone else, nor will I use it for marketing purposes.
 ### Changes
 
 This privacy policy may change at any time. When changes are made, the date at
-the top of this policy will be updated. You can view the history of changes to
-this policy [on GitHub][policy-history].
-
-[policy-history]: https://github.com/caleb531/personal-website/blame/master/_pages/privacy-policy.md
+the top of this policy will be updated.
