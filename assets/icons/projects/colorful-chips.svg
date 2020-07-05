@@ -1,0 +1,18 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- reusable chips -->
+  <defs>
+    <circle id="colorfulchips-chip" r="40" />
+  </defs>
+  <!-- red circle -->
+  <use xlink:href="#colorfulchips-chip" x="100" y="100" fill="#c33" />
+  <!-- green circle -->
+  <use xlink:href="#colorfulchips-chip" x="100" y="160" fill="#6c3  " />
+  <!-- blue circle -->
+  <use xlink:href="#colorfulchips-chip" x="100" y="220" fill="#36c" />
+  <!-- orange circle -->
+  <use xlink:href="#colorfulchips-chip" x="220" y="100" fill="#f93" />
+  <!-- yellow circle -->
+  <use xlink:href="#colorfulchips-chip" x="220" y="160" fill="#fd3  " />
+  <!-- purple circle -->
+  <use xlink:href="#colorfulchips-chip" x="220" y="220" fill="#96f" />
+</svg>
