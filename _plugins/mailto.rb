@@ -5,8 +5,8 @@ module Jekyll
   module Mailto
 
     def mailto(email, subject='')
-      encoded_subject = URI.escape(subject)
-      mailto_url = "mailto:#{email}?subject=#{subject}"
+      encoded_subject = URI.encode_www_form_component(subject)
+      mailto_url = "mailto:#{email}?subject=#{encoded_subject}"
     end
 
   end
