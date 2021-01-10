@@ -34,7 +34,8 @@ website_config_files.each do |website_config_file|
   system("""#{chrome_path} \
     --headless \
     --disable-gpu \
-    --disk-cache-dir=/dev/null \
+    --disk-cache-size=0 \
+    --media-cache-size=0 \
     --window-size=#{window_width},#{window_height} \
     --hide-scrollbars \
     --screenshot=#{website_image_dir}/#{website_name}.#{website_image_extension} \
