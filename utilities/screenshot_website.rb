@@ -37,7 +37,6 @@ website_config_files.each do |website_config_file|
     --disk-cache-dir=/dev/null \
     --window-size=#{window_width},#{window_height} \
     --hide-scrollbars \
-    --virtual-time-budget=#{screenshot_delay} \
     --screenshot=#{website_image_dir}/#{website_name}.#{website_image_extension} \
     #{parsed['direct_url']}
   """)
