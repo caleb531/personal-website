@@ -1,9 +1,9 @@
 // Sass Variables
 
-$body-background-color: #069;
+$body-background: linear-gradient(45deg, #528, #36c);
 $font-family-sans-serif: 'Ubuntu', sans-serif;
-$link-color: #cf0;
-$strong-color: #cf0;
+$link-color: #0cf;
+$strong-color: $link-color;
 $transition-duration: 150ms;
 $transition-easing: ease-in-out;
 
