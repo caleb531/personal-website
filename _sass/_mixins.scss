@@ -24,9 +24,10 @@
 
 // Mixins for overlay menus
 
-$menu-background-color: rgba(#000, 0.8);
+$menu-background-color: rgba(#000, 0.4);
 $menu-arrow-width: 26px;
 $menu-border-radius: 5px;
+$menu-offset-top: 5px;
 $menu-offset-right: -4px;
 
 // Enables a fade transition for the given element (also initially hides it)
@@ -52,6 +53,7 @@ $menu-offset-right: -4px;
   background-color: $menu-background-color;
   position: absolute;
   top: 100%;
+  margin-top: $menu-offset-top !important;
   @if $position == 'center' {
     right: 50%;
     @include transform(translateX(50%));
