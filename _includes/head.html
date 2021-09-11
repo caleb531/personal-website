@@ -12,7 +12,9 @@
     {% seo title=false %}
   {% endif %}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl | append: '/assets/styles/main.css' | cachebust }}" />
 
   <link rel="shortcut icon" href="{{ site.email | gravatar_url: 32 }}" />
