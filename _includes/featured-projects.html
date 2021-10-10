@@ -1,20 +1,26 @@
-<div class="entry-list project-list entry-list-compact project-list-compact">
+<section class="featured-projects">
 
-  {% for project_slug in site.data.projects.featured_projects %}
-    {% assign project = site.projects | where: 'slug', project_slug | first %}
+  <h3>Featured Projects</h3>
 
-    <article class="entry project">
+  <div class="entry-list project-list entry-list-compact project-list-compact">
 
-      <div class="entry-image project-image">
-        <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
-          {{ site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | inline_svg }}
-        </a>
-      </div>
+    {% for project_slug in site.data.projects.featured_projects %}
+      {% assign project = site.projects | where: 'slug', project_slug | first %}
 
-      <span class="project-title" id="project-title-{{ project.slug }}">{{ project.title }}</span>
+      <article class="entry project">
 
-    </article>
+        <div class="entry-image project-image">
+          <a href="{{ project.direct_url }}" aria-labelledby="project-title-{{ project.slug }}">
+            {{ site.data.projects.icon_baseurl | append: '/' | append: project.slug | append: '.svg' | inline_svg }}
+          </a>
+        </div>
 
-  {% endfor %}
+        <span class="project-title" id="project-title-{{ project.slug }}">{{ project.title }}</span>
 
-</div>
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
