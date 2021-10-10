@@ -1,32 +1,41 @@
-<div class="entry-list website-list">
+<section class="website-portfolio">
 
-  {% for website_slug in site.data.websites.websites %}
-    {% assign website = site.websites | where: 'slug', website_slug | first %}
+  <h3>Websites</h3>
 
-    <div class="entry website">
+  <p>These are a number of websites I've built since I started learning web
+  development.</p>
 
-      <div class="entry-image website-image">
-        <a href="{{ website.direct_url }}">
-          {% responsive_image_block %}
-            path: {{ site.data.websites.icon_baseurl | append: '/' | append: website.slug | append: '.jpg' | replace_first: '/', '' }}
-            alt: {{ website.title }}
-          {% endresponsive_image_block %}
-        </a>
-      </div>
+  <div class="entry-list website-list">
 
-      <div class="entry-main website-main">
+    {% for website_slug in site.data.websites.websites %}
+      {% assign website = site.websites | where: 'slug', website_slug | first %}
 
-        <h4 class="entry-title website-title"><a href="{{ website.direct_url }}">{{ website.title }}</a></h4>
+      <article class="entry website">
 
-        <div class="website-details">
-          <div class="website-years">{{ website.start_year }} &ndash; {{ website.end_year }}</div>
-          <div class="website-technologies">{{ website.technologies }}</div>
+        <div class="entry-image website-image">
+          <a href="{{ website.direct_url }}">
+            {% responsive_image_block %}
+              path: {{ site.data.websites.icon_baseurl | append: '/' | append: website.slug | append: '.jpg' | replace_first: '/', '' }}
+              alt: {{ website.title }}
+            {% endresponsive_image_block %}
+          </a>
         </div>
 
-      </div>
+        <div class="entry-main website-main">
 
-    </div>
+          <h4 class="entry-title website-title"><a href="{{ website.direct_url }}">{{ website.title }}</a></h4>
 
-  {% endfor %}
+          <div class="website-details">
+            <div class="website-years">{{ website.start_year }} &ndash; {{ website.end_year }}</div>
+            <div class="website-technologies">{{ website.technologies }}</div>
+          </div>
 
-</div>
+        </div>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+</section>
