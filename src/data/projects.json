@@ -54,11 +54,11 @@
     ]
   ],
   "featuredProjects": [
+    "faith-dashboard",
     "inflection-point",
     "flip-book",
     "connect-four",
     "jcanvas",
-    "sca-for-vscode",
     "painter"
   ]
 }
