@@ -1,6 +1,6 @@
 import React from 'react';
 
-type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: any };
+type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: JSX.Element | JSX.Element[] };
 
 export default function Page({ pageContext: { frontmatter }, children }: Props) {
   return (
