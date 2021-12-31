@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+slug: /about/
 id: about
 description: About the life and interests of Caleb Evans, coder for Christ
 ---

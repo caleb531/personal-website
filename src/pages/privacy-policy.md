@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-permalink: /privacy-policy/
+slug: /privacy-policy/
 id: privacy-policy
 description: The privacy policy for apps crafted by Caleb Evans, coder for Christ
 ---

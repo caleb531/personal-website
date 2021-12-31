@@ -1,5 +1,5 @@
 ---
-permalink: /
+slug: /
 id: home
 ---
 

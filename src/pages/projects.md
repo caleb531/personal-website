@@ -1,6 +1,6 @@
 ---
 title: Projects
-permalink: /projects/
+slug: /projects/
 id: projects
 description: Apps and programs crafted by Caleb Evans, coder for Christ
 ---
