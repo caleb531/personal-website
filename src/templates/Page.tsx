@@ -4,12 +4,12 @@ import React from 'react';
 export default function Page({ data }: { data: any }) {
   const { markdownRemark: { frontmatter, html } } = data;
   return (
-    <article className={`page-${frontmatter.id}`}>
+    <article id={`page-${frontmatter.id}`}>
       {frontmatter.title ? (
-        <h2 className="page-title">{frontmatter.title}</h2>
+        <h2 id="page-title">{frontmatter.title}</h2>
       ) : null}
       <div
-        className="page-content"
+        id="page-content"
         dangerouslySetInnerHTML={{ __html: html }} />
     </article>
   );
