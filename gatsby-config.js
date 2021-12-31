@@ -14,7 +14,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -25,7 +24,15 @@ module.exports = {
       },
       __key: 'images'
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        commonmark: true,
+        defaultLayouts: {
+          pages: '../templates/Page.tsx'
+        }
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
