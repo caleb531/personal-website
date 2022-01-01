@@ -2,8 +2,8 @@ import React from 'react';
 
 // By default, Gatsby compiles Sass to CSS as a inline <style> tag on the page;
 // however, we'd prefer the production build to load styles via <link> tag
-// instead; source:
-// <https://github.com/gatsbyjs/gatsby/issues/1526#issuecomment-583740341>
+// instead (source:
+// <https://github.com/gatsbyjs/gatsby/issues/1526#issuecomment-583740341>)
 export const onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
   // To prevent issues with live reloading of code changes in the development
   // environment, we do not want to mutate the <style> tag in Development mode
