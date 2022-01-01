@@ -1,0 +1,64 @@
+{
+  "iconBaseUrl": "/static/icons/projects",
+  "categories": [
+    [
+      {
+        "slug": "games",
+        "title": "Games"
+      },
+      {
+        "slug": "atom-packages",
+        "title": "Atom Packages"
+      },
+      {
+        "slug": "programs",
+        "title": "Programs"
+      },
+      {
+        "slug": "math",
+        "title": "Math"
+      },
+      {
+        "slug": "computer-science"
+      },
+      {
+        "slug": "vscode-packages",
+        "title": "VS Code Packages"
+      }
+    ],
+    [
+      {
+        "slug": "javascript-libraries",
+        "title": "JavaScript Libraries"
+      },
+      {
+        "slug": "fun",
+        "title": "Fun"
+      },
+      {
+        "slug": "tools",
+        "title": "Tools / Productivity"
+      },
+      {
+        "slug": "alfred",
+        "title": "Alfred"
+      },
+      {
+        "slug": "brunch-plugins",
+        "title": "Brunch Plugins"
+      },
+      {
+        "slug": "wordpress",
+        "title": "WordPress"
+      }
+    ]
+  ],
+  "featuredProjects": [
+    "inflection-point",
+    "flip-book",
+    "connect-four",
+    "jcanvas",
+    "sca-for-vscode",
+    "painter"
+  ]
+}
