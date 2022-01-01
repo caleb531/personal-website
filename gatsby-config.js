@@ -27,6 +27,7 @@ module.exports = {
       },
       __key: 'images'
     },
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -41,6 +42,27 @@ module.exports = {
       options: {
         name: 'pages',
         path: './src/pages'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: './src/projects'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'websites',
+        path: './src/websites'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'contact-links',
+        path: './src/contact-links'
       }
     }
   ]
