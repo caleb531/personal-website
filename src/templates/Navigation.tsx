@@ -15,7 +15,7 @@ function Navigation() {
     return node.fields.contentType === 'pages';
   });
   const pagesById: PageMap = keyBy(allPages, (page: PageData) => {
-    return page.frontmatter.id;
+    return page.fields.id;
   });
 
   return (
@@ -38,11 +38,11 @@ const query = graphql`
     allMdx {
       nodes {
         fields {
+          id
           contentType
         }
         frontmatter {
           slug
-          id
           title
         }
       }
