@@ -1,15 +1,36 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { getGravatar } from '../utilities/gravatar';
 import Navigation from './Navigation';
 
 function Header() {
 
+  const { email, title } = useStaticQuery(query).site.siteMetadata;
+  const headerImageSize = 60;
+
   return (
     <header id="site-header">
       <a href="/" id="site-title-link" rel="home">
-        <img src="" alt="" srcSet="{{ site.email | gravatar_url: retina_header_image_size }} 2x" width="{{ site.data.gravatar.header_image_size }}" height="{{ site.data.gravatar.header_image_size }}" id="site-header-image" />
+        <img
+          id="site-header-image"
+          src={getGravatar(email, headerImageSize)}
+          srcSet={`${getGravatar(email, headerImageSize * 2)} 2x`}
+          width={headerImageSize} height={headerImageSize}
+          alt="" />
+        <h1 id="site-title">{title}</h1>
       </a>
       <Navigation />
     </header>
   );
 }
 export default Header;
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        email
+      }
+    }
+  }
+`;
