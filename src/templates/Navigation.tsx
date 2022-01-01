@@ -3,10 +3,10 @@ import { keyBy } from 'lodash-es';
 import React from 'react';
 import navigation from '../data/navigation.json';
 
-export type PageFields = { id: string, contentType: string };
-export type PageFrontmatter = { title: string, slug: string, id: string };
-export type PageData = { fields: PageFields, frontmatter: PageFrontmatter };
-export type PageMap = { [key: string]: PageData };
+type PageFields = { id: string, contentType: string };
+type PageFrontmatter = { title: string, slug: string, id: string };
+type PageData = { fields: PageFields, frontmatter: PageFrontmatter };
+type PageMap = { [key: string]: PageData };
 
 function Navigation() {
 
