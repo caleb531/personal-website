@@ -3,15 +3,16 @@ import { keyBy } from 'lodash-es';
 import React from 'react';
 import navigation from '../data/navigation.json';
 
+export type PageFields = { id: string, contentType: string };
 export type PageFrontmatter = { title: string, slug: string, id: string };
-export type PageData = { frontmatter: PageFrontmatter };
+export type PageData = { fields: PageFields, frontmatter: PageFrontmatter };
 export type PageMap = { [key: string]: PageData };
 
 function Navigation() {
 
   const { allMdx } = useStaticQuery(query);
-  const allPages: PageData[] = allMdx.edges.map((edge: { node: PageData }) => {
-    return edge.node;
+  const allPages = allMdx.nodes.filter((node: PageData) => {
+    return node.fields.contentType === 'pages';
   });
   const pagesById: PageMap = keyBy(allPages, (page: PageData) => {
     return page.frontmatter.id;
@@ -35,13 +36,14 @@ export default Navigation;
 const query = graphql`
   query {
     allMdx {
-      edges {
-        node {
-          frontmatter {
-            slug
-            id
-            title
-          }
+      nodes {
+        fields {
+          contentType
+        }
+        frontmatter {
+          slug
+          id
+          title
         }
       }
     }
