@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/index.scss';
+import Head from './Head';
 import Header from './Header';
 
 type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: JSX.Element | JSX.Element[] };
@@ -7,6 +8,7 @@ type Props = { pageContext: { frontmatter: { slug: string, id: string, title: st
 function Page({ pageContext: { frontmatter }, children }: Props) {
   return (
     <>
+      <Head />
       <Header />
       <main>
         <article id={`page-${frontmatter.id}`}>
