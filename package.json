@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@types/lodash-es": "^4.17.5",
     "@types/react-helmet": "^6.1.5",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
@@ -34,6 +35,7 @@
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-source-gravatar": "^1.0.2",
     "gatsby-transformer-sharp": "^4.4.0",
+    "lodash-es": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
