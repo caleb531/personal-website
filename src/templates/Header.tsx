@@ -5,7 +5,7 @@ import navigation from '../data/navigation.json';
 export type PageFrontmatter = { title: string, slug: string, id: string };
 export type PageData = { frontmatter: PageFrontmatter };
 
-export default function Header() {
+function Header() {
 
   const data = useStaticQuery(query);
   const pages = data.allMdx.edges
@@ -28,6 +28,7 @@ export default function Header() {
     </header>
   );
 }
+export default Header;
 
 const query = graphql`
   query {

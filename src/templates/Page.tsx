@@ -4,7 +4,7 @@ import Header from './Header';
 
 type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: JSX.Element | JSX.Element[] };
 
-export default function Page({ pageContext: { frontmatter }, children }: Props) {
+function Page({ pageContext: { frontmatter }, children }: Props) {
   return (
     <>
       <Header />
@@ -20,3 +20,4 @@ export default function Page({ pageContext: { frontmatter }, children }: Props) 
     </>
   );
 }
+export default Page;
