@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://calebevans.me',
     title: 'Caleb Evans',
+    tagline: 'Coder for Christ',
     email: 'caleb@calebevans.me'
   },
   plugins: [

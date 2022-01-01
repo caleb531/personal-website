@@ -9,8 +9,8 @@ export type PageMap = { [key: string]: PageData };
 
 function Navigation() {
 
-  const data = useStaticQuery(query);
-  const allPages = data.allMdx.edges.map((edge: { node: PageData }) => {
+  const { allMdx } = useStaticQuery(query);
+  const allPages: PageData[] = allMdx.edges.map((edge: { node: PageData }) => {
     return edge.node;
   });
   const pagesById: PageMap = keyBy(allPages, (page: PageData) => {

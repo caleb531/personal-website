@@ -3,15 +3,21 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { getGravatarUrl } from '../utilities/gravatar';
 
-function Head() {
+type Props = { pageTitle: string };
 
-  const { email } = useStaticQuery(query).site.siteMetadata;
+function Head({ pageTitle }: Props) {
+
+  const { email, title, tagline } = useStaticQuery(query).site.siteMetadata;
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
     return { size, url: getGravatarUrl(email, size) };
   });
 
   return (
     <Helmet>
+      {pageTitle ?
+        <title>{pageTitle} | {title}</title> :
+        <title>{title} | {tagline}</title>
+      }
       <link rel="shortcut icon" href={getGravatarUrl(email, 32)} />
       <link rel="icon" href={getGravatarUrl(email, 192)} sizes="192x192" />
       <meta name="twitter:image" content={getGravatarUrl(email, 250)} />
@@ -33,6 +39,8 @@ const query = graphql`
     site {
       siteMetadata {
         email
+        title
+        tagline
       }
     }
   }

@@ -8,7 +8,7 @@ type Props = { pageContext: { frontmatter: { slug: string, id: string, title: st
 function Page({ pageContext: { frontmatter }, children }: Props) {
   return (
     <>
-      <Head />
+      <Head pageTitle={frontmatter.title} />
       <Header />
       <main>
         <article id={`page-${frontmatter.id}`}>
