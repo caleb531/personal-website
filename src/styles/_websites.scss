@@ -1,4 +1,5 @@
 // Styling for website portfolio entries
+@use 'sass:math';
 
 // The number of columns to display for the Website gallery
 $website-list-columns: 3;
@@ -13,7 +14,7 @@ $website-list-columns: 3;
 
 .website {
   display: block;
-  flex-basis: (100% / $website-list-columns);
+  flex-basis: math.div(100%, $website-list-columns);
   width: auto;
   text-align: center;
   &-list-category-title {

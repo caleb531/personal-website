@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://calebevans.me',
-    title: 'Caleb Evans'
+    title: 'Caleb Evans',
+    email: 'caleb@calebevans.me'
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -11,6 +12,7 @@ module.exports = {
         trackingId: 'UA-32415253-1'
       }
     },
+    'gatsby-source-gravatar',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
