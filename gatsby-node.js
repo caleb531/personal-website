@@ -7,13 +7,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // connect-four)
     actions.createNodeField({
       node,
-      name: 'name',
+      name: 'id',
       value: getNode(node.parent).name
     });
     // Expose the content type of this content instance (e.g. projects)
     actions.createNodeField({
       node,
-      name: 'sourceInstanceName',
+      name: 'contentType',
       value: getNode(node.parent).sourceInstanceName
     });
   }

@@ -3,7 +3,7 @@ import { keyBy } from 'lodash-es';
 import React from 'react';
 import projectMetadata from '../data/projects.json';
 
-export type ProjectFields = { name: string, sourceInstanceName: string };
+export type ProjectFields = { id: string, contentType: string };
 export type ProjectFrontmatter = { title: string, direct_url: string };
 export type ProjectData = {
   fields: ProjectFields,
@@ -15,10 +15,10 @@ function FeaturedProjects() {
 
   const { allMarkdownRemark } = useStaticQuery(query);
   const allProjects = allMarkdownRemark.nodes.filter((node: ProjectData) => {
-    return node.fields.sourceInstanceName === 'projects';
+    return node.fields.contentType === 'projects';
   });
   const projectsById: ProjectMap = keyBy(allProjects, (project: ProjectData) => {
-    return project.fields.name;
+    return project.fields.id;
   });
 
   return (
@@ -46,17 +46,11 @@ export default FeaturedProjects;
 
 const query = graphql`
   query {
-    allFile(filter: {sourceInstanceName: {eq: "projects"}}) {
-      nodes {
-        name
-        sourceInstanceName
-      }
-    }
     allMarkdownRemark {
       nodes {
         fields {
-          name
-          sourceInstanceName
+          id
+          contentType
         }
         frontmatter {
           title
