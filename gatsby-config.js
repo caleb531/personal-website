@@ -23,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/'
+        path: './src/images'
       },
       __key: 'images'
     },
@@ -54,8 +54,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'projects-icons',
+        path: './static/icons/projects'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'websites',
-        path: './src/websites'
+        path: './src/images/websites'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'website-images',
+        path: './src/images/websites'
       }
     },
     {
@@ -63,6 +77,13 @@ module.exports = {
       options: {
         name: 'contact-links',
         path: './src/contact-links'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'contact-link-icons',
+        path: './static/icons/contact-links'
       }
     }
   ]
