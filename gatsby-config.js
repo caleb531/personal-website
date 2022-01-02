@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'projects-icons',
+        name: 'project-icons',
         path: './static/icons/projects'
       }
     },
