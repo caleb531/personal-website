@@ -73,7 +73,7 @@ main {
   }
 }
 
-#page-home {
+#page[data-slug='/'] {
   p {
     max-width: 450px;
   }
