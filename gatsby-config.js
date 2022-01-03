@@ -85,6 +85,7 @@ module.exports = {
         name: 'contact-link-icons',
         path: './static/icons/contact-links'
       }
-    }
+    },
+    'gatsby-plugin-content-classifier'
   ]
 };
