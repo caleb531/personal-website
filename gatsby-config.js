@@ -86,6 +86,7 @@ module.exports = {
         path: './static/icons/contact-links'
       }
     },
-    'gatsby-plugin-content-classifier'
+    'gatsby-plugin-content-classifier',
+    'gatsby-plugin-style-to-link'
   ]
 };
