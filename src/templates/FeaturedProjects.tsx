@@ -18,10 +18,7 @@ export type ProjectMap = { [key: string]: ProjectData };
 function FeaturedProjects() {
 
   const { allMarkdownRemark } = useStaticQuery(query);
-  const allProjects = allMarkdownRemark.nodes.filter((node: ProjectData) => {
-    return node.fields.contentType === 'projects';
-  });
-  const projectsById: ProjectMap = keyBy(allProjects, (project: ProjectData) => {
+  const projectsById: ProjectMap = keyBy(allMarkdownRemark.nodes, (project: ProjectData) => {
     return project.fields.id;
   });
 
@@ -53,7 +50,7 @@ export default FeaturedProjects;
 
 const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { fields: { contentType: { eq: "projects" } } }) {
       nodes {
         fields {
           id
