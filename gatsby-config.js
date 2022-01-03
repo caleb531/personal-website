@@ -87,6 +87,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-content-classifier',
-    'gatsby-plugin-style-to-link'
+    'gatsby-plugin-style-to-link',
+    'gatsby-plugin-inline-svg'
   ]
 };
