@@ -1,0 +1,5 @@
+{
+  "name": "gatsby-plugin-content-fields",
+  "author": "Caleb Evans",
+  "description": "Exposes additional fields to various types of content, including the content entry's filename (minus extension), collection type, and SVG icon"
+}

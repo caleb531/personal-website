@@ -72,7 +72,7 @@ module.exports = {
         path: './src/contact-links'
       }
     },
-    'gatsby-plugin-entries',
+    'gatsby-plugin-content-fields',
     'gatsby-plugin-style-to-link',
     'gatsby-plugin-inline-svg'
   ]
