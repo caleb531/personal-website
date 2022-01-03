@@ -73,6 +73,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-content-classifier',
+    'gatsby-plugin-entry-icons',
     'gatsby-plugin-style-to-link',
     'gatsby-plugin-inline-svg'
   ]
