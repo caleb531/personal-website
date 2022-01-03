@@ -1,5 +1,12 @@
 const fs = require('fs');
 
+// Strip out extraneous information from the contents of an SVG file
+function minifySVGContents(data) {
+  return data
+    .replace(/\s*xmlns(:[a-z]+)?=(['"])(.*?)\2\s*/gi, '')
+    .replace(/<!--(.*?)-->/gi, '');
+}
+
 // Read the contents of SVG files (represented by GraphQL nodes) so that the
 // <svg> contents can be referenced later for inlining in JSX (source:
 // https://stackoverflow.com/a/58151834/560642)
@@ -9,7 +16,7 @@ exports.onCreateNode = ({ node, actions }) => {
       actions.createNodeField({
         node,
         name: 'svgContents',
-        value: data
+        value: minifySVGContents(data)
       });
     });
   }
