@@ -10,7 +10,7 @@ type PageMap = { [key: string]: PageData };
 function Navigation() {
 
   const { allMdx } = useStaticQuery(query);
-  const pagesById: PageMap = keyBy(allMdx.nodes, 'fields.entryId');
+  const pagesById: PageMap = keyBy(allMdx.nodes, 'fields.name');
 
   return (
     <nav id="site-header-nav">
@@ -29,11 +29,11 @@ export default Navigation;
 
 const query = graphql`
   query {
-    allMdx(filter: { fields: { entryType: { eq: "pages" } } }) {
+    allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
       nodes {
         fields {
-          entryId
-          entryType
+          name
+          collection
         }
         frontmatter {
           slug
