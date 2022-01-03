@@ -27,8 +27,8 @@ exports.createResolvers = function ({ createResolvers, getNode }) {
                 // Icon must be an SVG file
                 extension: { eq: 'svg' },
                 // Icon must have the same filename (minus extension) as the
-                // Markdown file
-                name: { eq: source.name }
+                // source Markdown file
+                name: { eq: source.fields.name }
               }
             }
           });
