@@ -46,10 +46,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        commonmark: true,
-        defaultLayouts: {
-          pages: '../templates/Page.tsx'
-        }
+        commonmark: true
+      }
+    },
+    // Per the Gatsby docs, using gatsby-plugin-layout prevents static elements
+    // like the header/footer from unmounting/remounting when navigating
+    // between pages
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/templates/Page.tsx')
       }
     },
     {
