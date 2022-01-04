@@ -76,7 +76,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'websites',
-        path: './src/images/websites'
+        path: './src/websites'
       }
     },
     {
