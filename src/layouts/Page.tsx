@@ -1,7 +1,7 @@
 import React from 'react';
+import Head from '../components/Head';
+import Header from '../components/Header';
 import '../styles/index.scss';
-import Head from '../templates/Head';
-import Header from '../templates/Header';
 
 type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: JSX.Element | JSX.Element[] };
 
