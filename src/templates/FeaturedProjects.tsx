@@ -3,7 +3,7 @@ import { keyBy } from 'lodash-es';
 import React from 'react';
 import projectMetadata from '../data/projects.json';
 
-export type NodeFields = { entryId: string, collection: string };
+export type NodeFields = { name: string, collection: string };
 export type ProjectFrontmatter = { title: string, direct_url: string };
 export type ProjectData = {
   frontmatter: ProjectFrontmatter,
