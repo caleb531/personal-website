@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import navigation from '../data/navigation.json';
@@ -19,7 +19,7 @@ function Navigation() {
         {navigation.map((pageId: string) => {
           const { slug, title } = pagesById[pageId].frontmatter;
           return (
-            <li key={pageId}><a href={slug}>{title}</a></li>
+            <li key={pageId}><Link to={slug}>{title}</Link></li>
           );
         })}
       </ul>

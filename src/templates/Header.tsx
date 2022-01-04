@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { getGravatarUrl } from '../utilities/gravatar';
 import Navigation from './Navigation';
@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <header id="site-header">
-      <a href="/" id="site-title-link" rel="home">
+      <Link to="/" id="site-title-link" rel="home">
         <img
           id="site-header-image"
           src={gravatarUrl}
@@ -20,7 +20,7 @@ function Header() {
           width={headerImageSize} height={headerImageSize}
           alt="" />
         <h1 id="site-title">{title}</h1>
-      </a>
+      </Link>
       <Navigation />
     </header>
   );
