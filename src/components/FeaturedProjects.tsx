@@ -2,17 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import projectMetadata from '../data/projects.json';
-
-export type NodeFields = { name: string, collection: string };
-export type ProjectFrontmatter = { title: string, direct_url: string };
-export type ProjectData = {
-  frontmatter: ProjectFrontmatter,
-  icon: { fields: { svgContents: string } }
-};
-export type FileData = {
-  fields: NodeFields;
-}
-export type ProjectMap = { [key: string]: ProjectData };
+import { ProjectMap } from './types';
 
 function FeaturedProjects() {
 

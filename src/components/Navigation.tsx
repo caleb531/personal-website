@@ -2,11 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import navigation from '../data/navigation.json';
-
-type PageFields = { name: string, collection: string }
-type PageFrontmatter = { title: string, slug: string };
-type PageData = { fields: PageFields, frontmatter: PageFrontmatter };
-type PageMap = { [key: string]: PageData };
+import { PageMap } from './types';
 
 function Navigation() {
 
