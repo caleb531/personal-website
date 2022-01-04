@@ -13,7 +13,15 @@ module.exports = {
         trackingId: 'UA-32415253-1'
       }
     },
-    'gatsby-source-gravatar',
+    {
+      resolve: 'gatsby-source-gravatar',
+      options: {
+        // Generate an empty node to silence the "The plugin has generated no
+        // Gatsby nodes" warning, since we are instead using the plugin's
+        // toUrl() function to generate all gravatar URLs
+        emails: ['']
+      }
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
