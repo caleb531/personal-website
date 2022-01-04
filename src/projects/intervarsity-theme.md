@@ -1,6 +1,6 @@
 ---
 title: InterVarsity Theme
 direct_url: https://github.com/caleb531/intervarsity-theme
-categories: wordpress
+category: wordpress
 description: A WordPress theme for InterVarsity Christian Fellowship chapters
 ---

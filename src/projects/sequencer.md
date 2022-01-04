@@ -1,6 +1,6 @@
 ---
 title: Sequencer
 direct_url: https://projects.calebevans.me/sequencer/
-categories: math
+category: math
 description: Create and examine sequences and series
 ---

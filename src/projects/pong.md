@@ -1,6 +1,6 @@
 ---
 title: Pong
 direct_url: https://projects.calebevans.me/pong/
-categories: games
+category: games
 description: Play an HTML5 remake of the classic game
 ---

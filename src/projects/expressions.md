@@ -1,6 +1,6 @@
 ---
 title: Expressions
 direct_url: https://projects.calebevans.me/expressions/
-categories: math
+category: math
 description: Create beautiful math expressions using TeX
 ---

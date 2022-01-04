@@ -1,6 +1,6 @@
 ---
 title: Speed Dots
 direct_url: https://projects.calebevans.me/speed-dots/
-categories: games
+category: games
 description: Race against the clock to click every dot
 ---

@@ -1,6 +1,6 @@
 ---
 title: HTML Selector
 direct_url: https://projects.calebevans.me/html-selector/
-categories: tools
+category: tools
 description: Create your HTML using CSS selectors
 ---

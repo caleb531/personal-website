@@ -1,6 +1,6 @@
 ---
 title: jCanvas
 direct_url: https://projects.calebevans.me/jcanvas/
-categories: javascript-libraries
+category: javascript-libraries
 description: Take control of the HTML5 canvas, jQuery-style
 ---

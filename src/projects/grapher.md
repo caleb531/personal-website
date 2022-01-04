@@ -1,6 +1,6 @@
 ---
 title: Grapher
 direct_url: https://projects.calebevans.me/grapher/
-categories: math
+category: math
 description: Graph linear and polar equations
 ---
