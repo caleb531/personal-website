@@ -79,3 +79,23 @@ export interface WebsiteData extends MarkdownData<WebsiteFrontmatter> {
   // Equivalent shape for now
 }
 type WebsiteMap = NodeMap<WebsiteData>;
+
+
+// Contact links
+
+
+export interface ContactLinkFrontmatterUrl {
+  title: string;
+  direct_url: string;
+  description: string;
+}
+export interface ContactLinkFrontmatterEmail {
+  title: string;
+  email: string;
+  description: string;
+}
+export type ContactLinkFrontmatter = ContactLinkFrontmatterEmail | ContactLinkFrontmatterEmail;
+export interface ContactLinkData extends MarkdownData<ContactLinkFrontmatter> {
+  // Equivalent shape for now
+}
+type ContactLinkMap = NodeMap<ContactLinkData>;
