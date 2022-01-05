@@ -1,5 +1,4 @@
 {
-  "iconBaseUrl": "/static/icons/projects",
   "categories": [
     [
       {
@@ -19,7 +18,8 @@
         "title": "Math"
       },
       {
-        "slug": "computer-science"
+        "slug": "computer-science",
+        "title": "Computer Science"
       },
       {
         "slug": "vscode-packages",

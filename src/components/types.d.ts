@@ -9,6 +9,7 @@ export interface NodeMap<NodeType> {
   [key: string]: NodeType;
 }
 export interface MarkdownData<FrontmatterType> {
+  fields: NodeFields;
   frontmatter: FrontmatterType;
 }
 
@@ -44,17 +45,21 @@ export interface IconData {
 // Project types
 
 
-export interface ProjectFields extends NodeFields {
-  // Equivalent shape for now
-}
 export interface ProjectFrontmatter {
   title: string;
   direct_url: string;
   category: string;
   description: string;
 }
+export interface ProjectCategoryData {
+  slug: string;
+  title: string;
+}
 export interface ProjectData extends MarkdownData<ProjectFrontmatter> {
   icon: IconData;
+}
+export interface ProjectGroups {
+  [key: string]: ProjectData[];
 }
 type ProjectMap = NodeMap<ProjectData>;
 
@@ -62,9 +67,6 @@ type ProjectMap = NodeMap<ProjectData>;
 // Website types
 
 
-export interface WebsiteFields extends NodeFields {
-  // Equivalent shape for now
-}
 export interface WebsiteFrontmatter {
   title: string;
   direct_url: string;
