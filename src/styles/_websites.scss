@@ -43,6 +43,7 @@ $website-list-columns: 3;
     width: inherit;
     height: inherit;
     border-radius: 5px;
+    transition: none !important;
   }
   @include layout(hybrid) {
     flex-basis: 100%;
