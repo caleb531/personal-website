@@ -58,7 +58,6 @@ const query = graphql`
         frontmatter {
           title
           direct_url
-          category
           technologies
           start_year
           end_year
