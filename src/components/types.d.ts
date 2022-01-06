@@ -70,13 +70,14 @@ type ProjectMap = NodeMap<ProjectData>;
 export interface WebsiteFrontmatter {
   title: string;
   direct_url: string;
-  category: string;
+  technologies: string;
   description: string;
   start_year: number;
   end_year: number;
 }
 export interface WebsiteData extends MarkdownData<WebsiteFrontmatter> {
-  // Equivalent shape for now
+  // TODO: eliminate the use of `any` once we have the Website Archive built
+  image: any;
 }
 type WebsiteMap = NodeMap<WebsiteData>;
 

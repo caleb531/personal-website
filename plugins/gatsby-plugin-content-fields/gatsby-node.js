@@ -1,3 +1,5 @@
+// Attach additional field to each GraphQL node (source:
+// https://stackoverflow.com/a/53563503/560642)
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const targetNode = getNode(node.parent) || node;
   actions.createNodeField({
@@ -12,8 +14,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   });
 };
 
-// Attach additional field to each GraphQL node (source:
-// https://stackoverflow.com/a/53563503/560642)
+// Define resolvers to create foreign-key associations between Markdown files
+// and static assets
 exports.createResolvers = function ({ createResolvers, getNode }) {
   createResolvers({
     MarkdownRemark: {
@@ -27,6 +29,23 @@ exports.createResolvers = function ({ createResolvers, getNode }) {
                 // Icon must be an SVG file
                 extension: { eq: 'svg' },
                 // Icon must have the same filename (minus extension) as the
+                // source Markdown file
+                name: { eq: source.fields.name }
+              }
+            }
+          });
+        }
+      },
+      image: {
+        type: 'File',
+        resolve: (source, args, context, info) => {
+          return context.nodeModel.findOne({
+            type: 'File',
+            query: {
+              filter: {
+                // Image must be a JPEG image
+                extension: { eq: 'jpg' },
+                // Image must have the same filename (minus extension) as the
                 // source Markdown file
                 name: { eq: source.fields.name }
               }
