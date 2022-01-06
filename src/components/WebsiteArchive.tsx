@@ -59,7 +59,7 @@ const query = graphql`
           title
           direct_url
           category
-          description
+          technologies
           start_year
           end_year
         }
