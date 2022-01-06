@@ -7,13 +7,15 @@
   width: 100%;
   margin: 15px 0;
   &-image {
+    display: inline-block;
+    overflow: hidden;
+    // This is key to prevent entry icons/images from being clipped when the
+    // above overflow:hidden is set
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(#000, 0.3);
     a {
       display: inline-block;
       text-decoration: none;
-      vertical-align: top;
-    }
-    svg, img {
-      box-shadow: 0 0 10px rgba(#000, 0.3);
     }
   }
   &-main {
