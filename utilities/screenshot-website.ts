@@ -1,8 +1,10 @@
-const { exec } = require('child_process');
-const fm = require('front-matter');
-const fs = require('fs');
-const glob = require('glob');
-const path = require('path');
+import { exec } from 'child_process';
+import fm from 'front-matter';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
+
+type Frontmatter = { direct_url: string };
 
 const chromePath = path.join('/Applications', 'Google\\ Chrome.app', 'Contents', 'MacOS', 'Google\\ Chrome');
 const websiteImageDir = 'src/images/websites';
@@ -27,11 +29,15 @@ if (websiteConfigFilePaths.length === 0) {
 
 // Generate screenshot for each portfolio website that has configuration
 websiteConfigFilePaths.forEach((websiteConfigFilePath) => {
+
   const websiteName = path.basename(websiteConfigFilePath, '.md');
   console.log(`generating screenshot for ${websiteName}`);
-  fs.promises.readFile(websiteConfigFilePath, 'utf8').then((websiteConfigFileContents) => {
-    const websiteFrontmatter = fm(websiteConfigFileContents).attributes;
+
+  fs.promises.readFile(websiteConfigFilePath, 'utf8').then((websiteConfigFileContents: string) => {
+
+    const websiteFrontmatter = fm(websiteConfigFileContents).attributes as Frontmatter;
     const resizedWebsiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
+
     const cmd = `${chromePath} \
       --headless \
       --disable-gpu \
@@ -42,7 +48,8 @@ websiteConfigFilePaths.forEach((websiteConfigFilePath) => {
       --screenshot=${resizedWebsiteImagePath} \
       ${websiteFrontmatter.direct_url}
     `;
-    exec(cmd, (err, stdout, stderr) => {
+
+    exec(cmd, (err: Error, stdout: string | Buffer, stderr: string | Buffer) => {
       if (stdout) {
         console.log(stdout);
       }
@@ -53,5 +60,7 @@ websiteConfigFilePaths.forEach((websiteConfigFilePath) => {
         console.log(err);
       }
     });
+
   });
+
 });

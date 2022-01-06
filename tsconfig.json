@@ -7,7 +7,8 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "utilities/*"
   ],
   "exclude": ["node_modules"]
 }
