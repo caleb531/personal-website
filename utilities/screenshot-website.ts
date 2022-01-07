@@ -11,8 +11,6 @@ const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
 const windowWidth = 1024;
 const windowHeight = 640;
-// The delay (in milliseconds) to wait before taking the screenshot
-const screenshot_delay = 1000;
 
 // Create website image directory if it doesn't already exist
 fs.mkdir(websiteImageDir, { recursive: true }, () => {/* noop */});
