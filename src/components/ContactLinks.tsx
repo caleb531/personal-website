@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import contactLinkMetadata from '../data/contact-links.json';
+import SvgIcon from './SvgIcon';
 import { ContactLinkMap } from './types';
 
 type Props = { isCompact: boolean };
@@ -25,8 +26,9 @@ function ContactLinks({ isCompact }: Props) {
                 <div className="entry-image contact-link-image">
                   <a
                     href={contactLink.frontmatter.direct_url}
-                    aria-labelledby={`contact-link-${contactLink.fields.name}`}
-                    dangerouslySetInnerHTML={{ __html: contactLink.icon.fields.svgContents }} />
+                    aria-labelledby={`contact-link-${contactLink.fields.name}`}>
+                    <SvgIcon content={contactLink.icon.fields.svgContents} />
+                  </a>
                 </div>
 
                 <div className="entry-main contact-link-main">
@@ -48,8 +50,9 @@ function ContactLinks({ isCompact }: Props) {
                 <div className="entry-image contact-link-image">
                   <a
                     href={contactLink.frontmatter.direct_url}
-                    aria-label={contactLink.frontmatter.title}
-                    dangerouslySetInnerHTML={{ __html: contactLink.icon.fields.svgContents }} />
+                    aria-label={contactLink.frontmatter.title}>
+                    <SvgIcon content={contactLink.icon.fields.svgContents} />
+                  </a>
                 </div>
               </>}
           </article>

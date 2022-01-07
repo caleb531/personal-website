@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import projectMetadata from '../data/projects.json';
+import SvgIcon from './SvgIcon';
 import { ProjectMap } from './types';
 
 function FeaturedProjects() {
@@ -20,9 +21,9 @@ function FeaturedProjects() {
             <article className="entry project" key={projectId}>
 
               <div className="entry-image project-image">
-                <a
-                  href={direct_url}
-                  dangerouslySetInnerHTML={{ __html: icon.fields.svgContents }} />
+                <a href={direct_url}>
+                  <SvgIcon content={icon.fields.svgContents} />
+                </a>
               </div>
               <span className="project-title" id={`project-title-${projectId}`}>{title}</span>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgIcon from './SvgIcon';
 import { ProjectCategoryData, ProjectData } from './types';
 
 type Props = { category: ProjectCategoryData, projects: ProjectData[] };
@@ -18,8 +19,9 @@ function ProjectCategory({ category, projects }: Props) {
             <div className="entry-image project-image">
               <a
                 href={project.frontmatter.direct_url}
-                aria-labelledby={`project-title-${project.fields.name}`}
-                dangerouslySetInnerHTML={{ __html: project.icon.fields.svgContents }} />
+                aria-labelledby={`project-title-${project.fields.name}`}>
+                <SvgIcon content={project.icon.fields.svgContents} />
+              </a>
             </div>
 
             <div className="entry-main project-main">
