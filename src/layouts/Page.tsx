@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Head from '../components/Head';
 import Header from '../components/Header';
 import '../styles/index.scss';
@@ -32,7 +33,7 @@ function Page({ pageContext: { frontmatter }, children }: Props) {
           <div id="page-content">{children}</div>
         </article>
       </main>
-      {/* <Footer /> */}
+      <Footer pageSlug={frontmatter.slug} />
     </>
   );
 }

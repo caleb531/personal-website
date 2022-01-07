@@ -4,9 +4,9 @@ import React from 'react';
 import contactLinkMetadata from '../data/contact-links.json';
 import { ContactLinkMap } from './types';
 
-type Props = { compact: boolean };
+type Props = { isCompact: boolean };
 
-function ContactLinks({ compact }: Props) {
+function ContactLinks({ isCompact }: Props) {
 
   const { allMarkdownRemark } = useStaticQuery(query);
   const contactLinksById: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
@@ -15,33 +15,43 @@ function ContactLinks({ compact }: Props) {
   const contactLinkIds = contactLinkMetadata.contactLinks;
 
   return (
-    <div className={`entry-list contact-link-list ${compact ? 'entry-list-compact contact-link-list-compact' : ''}`}>
+    <div className={`entry-list contact-link-list ${isCompact ? 'entry-list-compact contact-link-list-compact' : ''}`}>
       {contactLinkIds.map((contactLinkId) => {
         const contactLink = contactLinksById[contactLinkId];
         return (
           <article className="entry contact-link" key={contactLinkId}>
-            <div className="entry-image contact-link-image">
-              <a
-                href={contactLink.frontmatter.direct_url}
-                aria-labelledby={`contact-link-${contactLink.fields.name}`}
-                dangerouslySetInnerHTML={{ __html: contactLink.icon.fields.svgContents }} />
-            </div>
+            {!isCompact ?
+              <>
+                <div className="entry-image contact-link-image">
+                  <a
+                    href={contactLink.frontmatter.direct_url}
+                    aria-labelledby={`contact-link-${contactLink.fields.name}`}
+                    dangerouslySetInnerHTML={{ __html: contactLink.icon.fields.svgContents }} />
+                </div>
 
-            <div className="entry-main contact-link-main">
+                <div className="entry-main contact-link-main">
 
-              <h3 className="entry-title contact-link-title">
-                <a
-                  href={contactLink.frontmatter.direct_url}
-                  id={`contact-link-${contactLink.fields.name}`}>
-                  { contactLink.frontmatter.title}
-                </a>
-              </h3>
+                  <h3 className="entry-title contact-link-title">
+                    <a
+                      href={contactLink.frontmatter.direct_url}
+                      id={`contact-link-${contactLink.fields.name}`}>
+                      { contactLink.frontmatter.title}
+                    </a>
+                  </h3>
 
-              <div className="entry-desc contact-link-desc">
-                {contactLink.frontmatter.description}
-              </div>
+                  <div className="entry-desc contact-link-desc">
+                    {contactLink.frontmatter.description}
+                  </div>
 
-            </div>
+                </div>
+              </> : <>
+                <div className="entry-image contact-link-image">
+                  <a
+                    href={contactLink.frontmatter.direct_url}
+                    aria-label={contactLink.frontmatter.title}
+                    dangerouslySetInnerHTML={{ __html: contactLink.icon.fields.svgContents }} />
+                </div>
+              </>}
           </article>
         );
       })}
