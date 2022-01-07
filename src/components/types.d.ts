@@ -61,7 +61,7 @@ export interface ProjectData extends MarkdownData<ProjectFrontmatter> {
 export interface ProjectGroups {
   [key: string]: ProjectData[];
 }
-type ProjectMap = NodeMap<ProjectData>;
+export type ProjectMap = NodeMap<ProjectData>;
 
 
 // Website types
@@ -79,7 +79,7 @@ export interface WebsiteData extends MarkdownData<WebsiteFrontmatter> {
   // TODO: eliminate the use of `any` once we have the Website Archive built
   image: any;
 }
-type WebsiteMap = NodeMap<WebsiteData>;
+export type WebsiteMap = NodeMap<WebsiteData>;
 
 
 // Contact links
@@ -94,4 +94,4 @@ export interface ContactLinkData extends MarkdownData<ContactLinkFrontmatter> {
   // Equivalent shape for now
   icon: IconData;
 }
-type ContactLinkMap = NodeMap<ContactLinkData>;
+export type ContactLinkMap = NodeMap<ContactLinkData>;
