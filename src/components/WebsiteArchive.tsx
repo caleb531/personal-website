@@ -30,8 +30,8 @@ function WebsiteArchive() {
               <h4 className="entry-title website-title">
                 <a href={website.frontmatter.direct_url}>
                   {website.frontmatter.title}
-                  </a>
-                </h4>
+                </a>
+              </h4>
 
               <div className="website-details">
                 <div className="website-years">{website.frontmatter.start_year} &ndash; {website.frontmatter.end_year || 'present'}</div>
