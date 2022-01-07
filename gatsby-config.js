@@ -87,6 +87,14 @@ module.exports = {
         path: './src/contact-links'
       }
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Sans JP:300,400&display=swap']
+        }
+      }
+    },
     'gatsby-plugin-content-fields',
     'gatsby-plugin-style-to-link',
     'gatsby-plugin-inline-svg'
