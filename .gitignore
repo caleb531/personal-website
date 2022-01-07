@@ -1,13 +1,6 @@
-_site
-.sass-cache
-.jekyll-metadata
 .env
-/assets/images/websites/
-/assets/images/resized/
 /src/images/websites/
 /static/images/websites/resized/
-.asset-cache
-.jekyll-cache
 node_modules/
 .cache/
 public
