@@ -85,18 +85,13 @@ type WebsiteMap = NodeMap<WebsiteData>;
 // Contact links
 
 
-export interface ContactLinkFrontmatterUrl {
+export interface ContactLinkFrontmatter {
   title: string;
   direct_url: string;
   description: string;
 }
-export interface ContactLinkFrontmatterEmail {
-  title: string;
-  email: string;
-  description: string;
-}
-export type ContactLinkFrontmatter = ContactLinkFrontmatterEmail | ContactLinkFrontmatterEmail;
 export interface ContactLinkData extends MarkdownData<ContactLinkFrontmatter> {
   // Equivalent shape for now
+  icon: IconData;
 }
 type ContactLinkMap = NodeMap<ContactLinkData>;

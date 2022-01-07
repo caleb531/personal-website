@@ -1,5 +1,5 @@
 ---
 title: Email
-email: caleb@calebevans.me
+direct_url: mailto:caleb@calebevans.me
 description: Questions and comments are always welcome!
 ---
