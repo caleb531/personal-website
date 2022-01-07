@@ -8,7 +8,6 @@ type Frontmatter = { direct_url: string };
 
 const chromePath = path.join('/Applications', 'Google\\ Chrome.app', 'Contents', 'MacOS', 'Google\\ Chrome');
 const websiteImageDir = 'src/images/websites';
-const resizeImageDir = 'static/images/resized/websites';
 const websiteImageExtension = 'jpg';
 const windowWidth = 1024;
 const windowHeight = 640;
@@ -17,8 +16,6 @@ const screenshot_delay = 1000;
 
 // Create website image directory if it doesn't already exist
 fs.mkdir(websiteImageDir, { recursive: true }, () => {/* noop */});
-// Remove existing directory containing resized images
-fs.rmSync(resizeImageDir, { recursive: true, force: true });
 
 // Generate screenshot for the specified file path(s); otherwise, default to
 // every file in the /src/websites directory
