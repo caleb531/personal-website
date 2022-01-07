@@ -6,6 +6,11 @@ import '../styles/index.scss';
 type Props = { pageContext: { frontmatter: { slug: string, id: string, title: string } }, children: JSX.Element | JSX.Element[] };
 
 function Page({ pageContext: { frontmatter }, children }: Props) {
+  // In development mode, Gatsby will inject its own 404 page without any
+  // frontmatter, so we can simply return that page in that scenario
+  if (!frontmatter) {
+    return children;
+  }
   return (
     <>
       <Head pageTitle={frontmatter.title} />
