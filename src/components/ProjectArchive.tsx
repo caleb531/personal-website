@@ -12,7 +12,8 @@ function filterProjects(projects: ProjectData[], searchQuery: string): ProjectDa
   return projects.filter((project) => {
     const keywords = [
       ...project.frontmatter.title.toLowerCase().split(' '),
-      project.frontmatter.category.toLowerCase()
+      project.frontmatter.category.toLowerCase(),
+      ...project.frontmatter.description.toLowerCase().split(' ')
     ];
     return searchQuery.toLowerCase().split(' ').every((searchKeyword) => {
       return keywords.some((keyword) => {
