@@ -2,27 +2,21 @@
 
 // Ensure that no whitespace separates any two columns
 .project-list-container {
-  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project-list-column {
-  display: inline-block;
-  width: 50%;
-  $column-spacing: 15px;
-  padding-right: $column-spacing;
-  font-size: 0;
-  vertical-align: top;
-  &:last-child {
-    padding-right: 0;
-    padding-left: $column-spacing;
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(50% - 30px);
+  &:empty {
+    display: none;
   }
   @include layout(hybrid) {
     display: block;
     width: auto;
-    &,
-    &:last-child {
-      padding: 0;
-    }
   }
 }
 
