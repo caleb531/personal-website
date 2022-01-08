@@ -1,14 +1,14 @@
-import { exec } from 'child_process';
 import fm from 'front-matter';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
+import puppeteer from 'puppeteer';
 
 type Frontmatter = { direct_url: string };
 
-const chromePath = path.join('/Applications', 'Google\\ Chrome.app', 'Contents', 'MacOS', 'Google\\ Chrome');
 const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
+const websiteImageQuality = 85;
 const windowWidth = 1024;
 const windowHeight = 640;
 
@@ -22,40 +22,43 @@ if (websiteConfigFilePaths.length === 0) {
   websiteConfigFilePaths = glob.sync('src/websites/*.md');
 }
 
-// Generate screenshot for each portfolio website that has configuration
-websiteConfigFilePaths.forEach((websiteConfigFilePath) => {
+async function generateScreenshots(websiteConfigFilePaths: string[]) {
 
-  const websiteName = path.basename(websiteConfigFilePath, '.md');
-  console.log(`generating screenshot for ${websiteName}`);
+  const browser = await puppeteer.launch();
 
-  fs.promises.readFile(websiteConfigFilePath, 'utf8').then((websiteConfigFileContents: string) => {
+  // Generate screenshot for each portfolio website that has configuration
+  await Promise.all(websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
 
-    const websiteFrontmatter = fm(websiteConfigFileContents).attributes as Frontmatter;
-    const resizedWebsiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
+    const websiteName = path.basename(websiteConfigFilePath, '.md');
 
-    const cmd = `${chromePath} \
-      --headless \
-      --disable-gpu \
-      --disk-cache-size=0 \
-      --media-cache-size=0 \
-      --window-size=${windowWidth},${windowHeight} \
-      --hide-scrollbars \
-      --screenshot=${resizedWebsiteImagePath} \
-      ${websiteFrontmatter.direct_url}
-    `;
+    await fs.promises.readFile(websiteConfigFilePath, 'utf8').then(async (websiteConfigFileContents: string) => {
 
-    exec(cmd, (err: Error, stdout: string | Buffer, stderr: string | Buffer) => {
-      if (stdout) {
-        console.log(stdout);
-      }
-      if (stderr) {
-        console.log(stderr);
-      }
-      if (err) {
-        console.log(err);
-      }
+      const websiteFrontmatter = fm(websiteConfigFileContents).attributes as Frontmatter;
+      const websiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
+
+      const page = await browser.newPage();
+      await page.setViewport({
+        width: windowWidth,
+        height: windowHeight
+      });
+      await page.goto(websiteFrontmatter.direct_url);
+
+      return page.screenshot({
+        path: websiteImagePath,
+        type: 'jpeg',
+        quality: websiteImageQuality,
+        captureBeyondViewport: false
+      }).then((result) => {
+        console.log(`generated screenshot for ${websiteName}`);
+      }).catch((error) => {
+        console.error(error);
+      });
+
     });
 
-  });
+  }));
 
-});
+  await browser.close();
+
+}
+generateScreenshots(websiteConfigFilePaths);
