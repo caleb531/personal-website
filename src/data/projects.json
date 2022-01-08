@@ -6,8 +6,8 @@
         "title": "Games"
       },
       {
-        "slug": "atom-packages",
-        "title": "Atom Packages"
+        "slug": "atom",
+        "title": "Atom"
       },
       {
         "slug": "programs",
@@ -22,8 +22,8 @@
         "title": "Computer Science"
       },
       {
-        "slug": "vscode-extensions",
-        "title": "VS Code Extensions"
+        "slug": "vscode",
+        "title": "VS Code"
       }
     ],
     [
