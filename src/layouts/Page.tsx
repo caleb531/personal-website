@@ -26,7 +26,7 @@ function Page({ pageContext: { frontmatter }, children }: Props) {
       <Head pageTitle={frontmatter.title} pageSlug={frontmatter.slug} />
       <Header />
       <main>
-        <article id="page" data-slug={frontmatter.slug}>
+        <article id="page">
           {frontmatter.title ? (
             <h2 id="page-title">{frontmatter.title}</h2>
           ) : null}

@@ -1,7 +1,7 @@
 // Styling for projects
 
 // Prevent scroll jumps when no results are returned from a project search
-body[data-slug="/projects/"] {
+body[data-page-slug="/projects/"] {
   min-height: 1000px;
 }
 

@@ -14,7 +14,7 @@ function Head({ pageTitle, pageSlug }: Props) {
   });
 
   return (
-    <Helmet bodyAttributes={{ 'data-slug': pageSlug }}>
+    <Helmet bodyAttributes={{ 'data-page-slug': pageSlug }}>
       {pageTitle ?
         <title>{pageTitle} | {title}</title> :
         <title>{title} | {tagline}</title>
