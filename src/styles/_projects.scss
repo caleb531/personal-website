@@ -1,5 +1,9 @@
 // Styling for projects
 
+.featured-projects {
+  margin-bottom: 5px;
+}
+
 // Prevent scroll jumps when no results are returned from a project search
 body[data-page-slug="/projects/"] {
   min-height: 1000px;
