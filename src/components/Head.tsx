@@ -3,10 +3,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { getGravatarUrl } from '../utilities/gravatar';
 
-type Props = { pageTitle: string };
+type Props = { pageTitle: string, pageSlug: string };
 
 
-function Head({ pageTitle }: Props) {
+function Head({ pageTitle, pageSlug }: Props) {
 
   const { email, title, tagline } = useStaticQuery(query).site.siteMetadata;
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
@@ -14,7 +14,7 @@ function Head({ pageTitle }: Props) {
   });
 
   return (
-    <Helmet>
+    <Helmet bodyAttributes={{ 'data-slug': pageSlug }}>
       {pageTitle ?
         <title>{pageTitle} | {title}</title> :
         <title>{title} | {tagline}</title>

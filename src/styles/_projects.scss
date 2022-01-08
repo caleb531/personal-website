@@ -1,5 +1,10 @@
 // Styling for projects
 
+// Prevent scroll jumps when no results are returned from a project search
+body[data-slug="/projects/"] {
+  min-height: 1000px;
+}
+
 .project-search-container {
   text-align: center;
   margin-bottom: 10px;

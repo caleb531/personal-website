@@ -23,7 +23,7 @@ function Page({ pageContext: { frontmatter }, children }: Props) {
   }
   return (
     <>
-      <Head pageTitle={frontmatter.title} />
+      <Head pageTitle={frontmatter.title} pageSlug={frontmatter.slug} />
       <Header />
       <main>
         <article id="page" data-slug={frontmatter.slug}>
