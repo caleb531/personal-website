@@ -13,7 +13,7 @@ function filterProjects(projects: ProjectData[], searchQuery: string): ProjectDa
     const keywords = [
       ...project.frontmatter.title.toLowerCase().split(' ')
     ];
-    return searchQuery.toLowerCase().split(' ').some((searchKeyword) => {
+    return searchQuery.toLowerCase().split(' ').every((searchKeyword) => {
       return keywords.some((keyword) => {
         return keyword.indexOf(searchKeyword) !== -1;
       });
