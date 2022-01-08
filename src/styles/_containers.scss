@@ -66,7 +66,7 @@ main {
     padding-right: $padding;
   }
   @include layout(very-compact) {
-    $padding: 10px;
+    $padding: 15px;
     padding-left: $padding;
     padding-right: $padding;
   }
