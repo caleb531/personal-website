@@ -48,7 +48,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]) {
         type: 'jpeg',
         quality: websiteImageQuality,
         captureBeyondViewport: false
-      }).then((result) => {
+      }).then(() => {
         console.log(`generated screenshot for ${websiteName}`);
       }).catch((error) => {
         console.error(error);
