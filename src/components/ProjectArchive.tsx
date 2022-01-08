@@ -69,7 +69,10 @@ export default FeaturedProjects;
 
 const query = graphql`
   query {
-    allMarkdownRemark(filter: { fields: { collection: { eq: "projects" } } }) {
+    allMarkdownRemark(
+      filter: { fields: { collection: { eq: "projects" } } }
+      sort: { fields: frontmatter___title }
+    ) {
       nodes {
         fields {
           name
