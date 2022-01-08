@@ -28,6 +28,10 @@ function FeaturedProjects() {
   const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
   const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
 
+  function setSearchQueryFromInput(event: React.FormEvent) {
+    setSearchQuery((event.target as HTMLInputElement).value);
+  }
+
   return (
     <div className="project-archive">
       <div className="project-search-container">
@@ -37,7 +41,7 @@ function FeaturedProjects() {
           name="search"
           id="project-search-input"
           value={searchQuery}
-          onChange={(event) => setSearchQuery(event.target.value)} />
+          onInput={setSearchQueryFromInput} />
       </div>
       <div className="project-list-container">
         {projectMetadata.categories.map((categories, columnIndex) => {
