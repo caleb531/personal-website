@@ -1,6 +1,5 @@
 .env
 /src/images/websites/
-/static/images/websites/resized/
 node_modules/
 .cache/
 public
