@@ -23,6 +23,11 @@ function filterProjects(projects: ProjectData[], searchQuery: string): ProjectDa
   });
 }
 
+// Disable the browser-native search behavior of reloading the page
+function disableNativeSearch(event: React.FormEvent) {
+  event.preventDefault();
+}
+
 function FeaturedProjects() {
 
   const { allMarkdownRemark } = useStaticQuery(query);
@@ -37,7 +42,7 @@ function FeaturedProjects() {
   return (
     <div className="project-archive">
       <div className="project-search-container">
-        <div className="project-search-container-form">
+        <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeSearch}>
           <label htmlFor="project-search-input">Search:</label>
           <input
             type="search"
@@ -46,7 +51,7 @@ function FeaturedProjects() {
             value={searchQuery}
             placeholder="Search for a project"
             onInput={setSearchQueryFromInput} />
-        </div>
+        </form>
         {!projects.length ? (
           <div className="project-search-no-results">
             No Projects Found
