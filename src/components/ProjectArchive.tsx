@@ -41,6 +41,7 @@ function FeaturedProjects() {
           name="search"
           id="project-search-input"
           value={searchQuery}
+          placeholder="Type a project name"
           onInput={setSearchQueryFromInput} />
       </div>
       <div className="project-list-container">
