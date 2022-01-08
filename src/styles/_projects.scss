@@ -9,6 +9,10 @@ body[data-page-slug="/projects/"] {
   text-align: center;
   margin-bottom: 10px;
 }
+.project-search-no-results {
+  margin-top: 30px;
+  font-size: 2rem;
+}
 
 // Ensure that no whitespace separates any two columns
 .project-list-container {

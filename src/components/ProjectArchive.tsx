@@ -36,14 +36,21 @@ function FeaturedProjects() {
   return (
     <div className="project-archive">
       <div className="project-search-container">
-        <label htmlFor="project-search-input">Search:</label>
-        <input
-          type="text"
-          name="search"
-          id="project-search-input"
-          value={searchQuery}
-          placeholder="Type a project name"
-          onInput={setSearchQueryFromInput} />
+        <div className="project-search-container-form">
+          <label htmlFor="project-search-input">Search:</label>
+          <input
+            type="text"
+            name="search"
+            id="project-search-input"
+            value={searchQuery}
+            placeholder="Type a project name"
+            onInput={setSearchQueryFromInput} />
+        </div>
+        {!projects.length ? (
+          <div className="project-search-no-results">
+            No Projects Found
+          </div>
+        ) : null}
       </div>
       <div className="project-list-container">
         {projectMetadata.categories.map((categories, columnIndex) => {
