@@ -6,7 +6,8 @@ type Props = { category: ProjectCategoryData, projects: ProjectData[] };
 
 function ProjectCategory({ category, projects }: Props) {
   return (
-    <section className="entry-list project-list">
+    <>
+    {projects.length ? <section className="entry-list project-list">
 
       <h3 className="entry-list-category-title project-list-category-title">
         {category.title}
@@ -44,7 +45,8 @@ function ProjectCategory({ category, projects }: Props) {
         );
       })}
 
-    </section>
+    </section> : null}
+    </>
   );
 }
 export default ProjectCategory;

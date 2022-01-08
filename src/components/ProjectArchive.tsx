@@ -1,32 +1,61 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { groupBy } from 'lodash-es';
-import React from 'react';
+import React, { useState } from 'react';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
-import { ProjectGroups } from './types';
+import { ProjectData, ProjectGroups } from './types';
+
+function filterProjects(projects: ProjectData[], searchQuery: string): ProjectData[] {
+  if (searchQuery.trim() === '') {
+    return projects;
+  }
+  return projects.filter((project) => {
+    const keywords = [
+      ...project.frontmatter.title.toLowerCase().split(' ')
+    ];
+    return searchQuery.toLowerCase().split(' ').some((searchKeyword) => {
+      return keywords.some((keyword) => {
+        return keyword.indexOf(searchKeyword) !== -1;
+      });
+    });
+  });
+}
 
 function FeaturedProjects() {
 
   const { allMarkdownRemark } = useStaticQuery(query);
-  const projectsByCategory: ProjectGroups = groupBy(allMarkdownRemark.nodes, 'frontmatter.category');
+  const [searchQuery, setSearchQuery] = useState('');
+  const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
+  const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
 
   return (
-    <div className="project-list-container">
-      {projectMetadata.categories.map((categories, columnIndex) => {
-        return (
-          <div key={`column-${columnIndex}`} className="project-list-column">
-            {categories.map((category) => {
-              const projectsInCategory = projectsByCategory[category.slug];
-              return (
-                <ProjectCategory
-                  key={category.slug}
-                  category={category}
-                  projects={projectsInCategory} />
-              );
-            })}
-          </div>
-        );
-      })}
+    <div className="project-archive">
+      <div className="project-search-container">
+        <label htmlFor="project-search-input">Search:</label>
+        <input
+          type="text"
+          name="search"
+          id="project-search-input"
+          value={searchQuery}
+          onChange={(event) => setSearchQuery(event.target.value)} />
+      </div>
+      <div className="project-list-container">
+        {projectMetadata.categories.map((categories, columnIndex) => {
+          return (
+            <div key={`column-${columnIndex}`} className="project-list-column">
+              {categories.map((category) => {
+                const projectsInCategory = projectsByCategory[category.slug] || [];
+                return (
+                  <ProjectCategory
+                    key={category.slug}
+                    category={category}
+                    projects={projectsInCategory} />
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
