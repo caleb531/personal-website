@@ -40,7 +40,7 @@ function FeaturedProjects() {
         <div className="project-search-container-form">
           <label htmlFor="project-search-input">Search:</label>
           <input
-            type="text"
+            type="search"
             name="search"
             id="project-search-input"
             value={searchQuery}
