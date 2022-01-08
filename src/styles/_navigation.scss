@@ -1,0 +1,74 @@
+// Header navigation styling
+@use 'sass:math';
+
+#site-header-nav {
+  flex-grow: 1;
+  position: relative;
+  clear: both;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+#site-header-nav-list {
+  font-size: 0;
+  li {
+    display: inline-block;
+    position: relative;
+    a {
+      color: currentColor;
+      display: block;
+      font-size: 15px;
+      line-height: 1;
+      padding: 15px 15px;
+      text-decoration: none;
+    }
+  }
+  @include layout(hybrid) {
+    @include floating-menu(3px);
+    .site-header-nav-open & {
+      @include transition-fade-in();
+    }
+  }
+  .sub-menu {
+    @include floating-menu("center");
+    transition-delay: $transition-duration;
+    @include layout(hybrid) {
+      margin-top: math.div($menu-arrow-width, 2);
+    }
+    li {
+      display: block;
+      text-align: center;
+    }
+  }
+  li:hover .sub-menu,
+  .sub-menu-open {
+    @include transition-fade-in();
+    transition-delay: 0s;
+  }
+}
+
+// Navigation menu toggle for hybrid/compact layout
+#site-header-nav-toggle {
+  display: none;
+  @include layout(hybrid) {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 9px;
+    font-size: 0;
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background: none;
+      border-width: 0;
+      color: currentColor;
+    }
+    img, svg {
+      $icon-size: 24px;
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
+}
