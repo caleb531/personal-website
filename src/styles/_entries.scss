@@ -17,6 +17,9 @@
       display: inline-block;
       text-decoration: none;
     }
+    svg, img {
+      animation: fade-in 250ms linear both;
+    }
   }
   &-main {
     padding-left: 12px;

@@ -56,14 +56,12 @@ body[data-page-slug="/projects/"] {
 }
 
 .project-image {
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 2px;
   a {
     width: 76px;
     height: 76px;
-    margin-bottom: 2px;
-  }
-  svg {
-    border-radius: 5px;
-    background-color: #fff;
   }
 }
 
