@@ -11,13 +11,13 @@ function Footer({ pageSlug }: Props) {
   const email = useStaticQuery(query).site.siteMetadata.email;
 
   return (
-    <footer id="site-footer">
+    <footer className="site-footer">
 
       {pageSlug !== '/contact/' ?
         <ContactLinks isCompact />
       : null}
 
-      <div id="site-footer-content">
+      <div className="site-footer-content">
 
         <p>&copy; 2013-{new Date().getFullYear()} Caleb Evans | <a href="/privacy-policy/">Privacy Policy</a></p>
 

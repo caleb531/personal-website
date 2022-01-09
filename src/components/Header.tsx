@@ -11,15 +11,15 @@ function Header() {
   const gravatarUrlRetina = getGravatarUrl(email, headerImageSize * 2);
 
   return (
-    <header id="site-header">
-      <Link to="/" id="site-title-link" rel="home">
+    <header className="site-header">
+      <Link to="/" className="site-title-link" rel="home">
         <img
-          id="site-header-image"
+          className="site-header-image"
           src={gravatarUrl}
           srcSet={`${gravatarUrlRetina} 2x`}
           width={headerImageSize} height={headerImageSize}
           alt="" />
-        <h1 id="site-title">{title}</h1>
+        <h1 className="site-title">{title}</h1>
       </Link>
       <Navigation />
     </header>

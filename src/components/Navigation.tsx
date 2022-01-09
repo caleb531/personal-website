@@ -11,11 +11,11 @@ function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav id="site-header-nav" className={isNavOpen ? `site-header-nav-open` : ''}>
-      <button id="site-header-nav-toggle" aria-label="Menu" onClick={() => setIsNavOpen(!isNavOpen)}>
+    <nav className={`site-header-nav ${isNavOpen ? `site-header-nav-open` : ''}`}>
+      <button className="site-header-nav-toggle" aria-label="Menu" onClick={() => setIsNavOpen(!isNavOpen)}>
         <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
       </button>
-      <ul id="site-header-nav-list">
+      <ul className="site-header-nav-list">
         {navigation.map((pageId: string) => {
           const { slug, title } = pagesById[pageId].frontmatter;
           return (

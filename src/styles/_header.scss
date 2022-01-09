@@ -1,7 +1,7 @@
 // Header styling
 @use 'sass:math';
 
-#site-header {
+.site-header {
   display: flex;
   align-items: center;
   width: 100%;
@@ -21,7 +21,7 @@
   }
 }
 
-#site-title {
+.site-title {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -32,14 +32,14 @@
   vertical-align: middle;
 }
 
-#site-title-link {
+.site-title-link {
   margin: 0;
   text-decoration: none;
   color: currentColor;
   vertical-align: middle;
 }
 
-#site-header-image {
+.site-header-image {
   margin-right: 15px;
   box-sizing: content-box;
   border-radius: 10px;
