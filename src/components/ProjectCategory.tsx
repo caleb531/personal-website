@@ -35,9 +35,9 @@ function ProjectCategory({ category, projects }: Props) {
                 </a>
               </h4>
 
-              <div className="entry-desc project-desc">
+              <p className="entry-desc project-desc">
                 {project.frontmatter.description}
-              </div>
+              </p>
 
             </div>
 
