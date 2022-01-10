@@ -4,7 +4,8 @@ module.exports = {
     title: 'Caleb Evans',
     tagline: 'Coder for Christ',
     description: 'Hi, I’m Caleb, a web developer who lives for Christ by coding enjoyable apps and useful tools. Come see what I’ve made!',
-    email: 'caleb@calebevans.me'
+    email: 'caleb@calebevans.me',
+    googleSiteVerification: 'hgENNCrZvitO_dtrCT_F6VdV1YspqEDh-nBMoq0dL5g'
   },
   plugins: [
     'gatsby-plugin-sass',

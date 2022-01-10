@@ -7,7 +7,7 @@ type Props = { pageTitle: string, pageSlug: string };
 
 function Head({ pageTitle, pageSlug }: Props) {
 
-  const { email, title, tagline, description } = useStaticQuery(query).site.siteMetadata;
+  const { email, title, tagline, description, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
   const renderedTitle = pageSlug === '/' ? `${title} | ${tagline}` : `${pageTitle} | ${title}`;
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
     return { size, url: getGravatarUrl(email, size) };
@@ -23,6 +23,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <meta name="og:url" content={window.location.href} />
       <meta name="og:image" content={getGravatarUrl(email, 1200)} />
       <meta name="og:type" content="website" />
+      <meta name="google-site-verification" content={googleSiteVerification} />
       {appleTouchIcons.map(({ url, size }) => {
         return <link
           key={url}
@@ -44,6 +45,7 @@ const query = graphql`
         title
         tagline
         description
+        googleSiteVerification
       }
     }
   }
