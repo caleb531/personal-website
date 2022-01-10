@@ -3,8 +3,8 @@ module.exports = {
     siteUrl: 'https://calebevans.me',
     title: 'Caleb Evans',
     tagline: 'Coder for Christ',
-    email: 'caleb@calebevans.me',
-    description: 'Hi, I’m Caleb, a web developer who lives for Christ by coding enjoyable apps and useful tools. Come see what I’ve made!'
+    description: 'Hi, I’m Caleb, a web developer who lives for Christ by coding enjoyable apps and useful tools. Come see what I’ve made!',
+    email: 'caleb@calebevans.me'
   },
   plugins: [
     'gatsby-plugin-sass',
