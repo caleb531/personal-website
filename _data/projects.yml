@@ -33,9 +33,9 @@ categories:
       title: WordPress
 # Projects featured on homepage
 featured_projects:
+  - faith-dashboard
   - inflection-point
   - flip-book
   - connect-four
   - jcanvas
   - sca-for-vscode
-  - painter
