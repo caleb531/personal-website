@@ -3,8 +3,7 @@ import fs from 'fs';
 import glob from 'glob-promise';
 import path from 'path';
 import puppeteer from 'puppeteer';
-
-type Frontmatter = { direct_url: string };
+import { WebsiteFrontmatter } from '../src/components/types';
 
 const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
@@ -29,7 +28,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]) {
 
     const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
 
-    const websiteFrontmatter = fm(websiteConfigFileContents).attributes as Frontmatter;
+    const websiteFrontmatter = fm(websiteConfigFileContents).attributes as WebsiteFrontmatter;
     const websiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
 
     const page = await browser.newPage();
