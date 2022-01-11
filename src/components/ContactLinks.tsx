@@ -4,6 +4,7 @@ import React from 'react';
 import { ContactLinksQuery } from '../../graphql-types';
 import contactLinkMetadata from '../data/contact-links.json';
 import SvgIcon from './SvgIcon';
+import { ContactLinkMap } from './types';
 
 type Props = { isCompact: boolean };
 
@@ -11,7 +12,7 @@ function ContactLinks({ isCompact }: Props) {
 
   const queryResults: ContactLinksQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
-  const contactLinksById = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const contactLinksById: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
   // A list of the contactLinks to feature in the archive (this is mostly to
   // dictate the order)
   const contactLinkIds = contactLinkMetadata.contactLinks;

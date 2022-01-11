@@ -25,8 +25,8 @@ export interface PageFrontmatter {
   slug?: string;
 }
 export interface PageData {
-  fields: PageFields;
-  frontmatter: PageFrontmatter;
+  fields?: PageFields;
+  frontmatter?: PageFrontmatter;
 }
 type PageMap = NodeMap<PageData>;
 
@@ -68,16 +68,16 @@ export type ProjectMap = NodeMap<ProjectData>;
 
 
 export interface WebsiteFrontmatter {
-  title: string;
-  direct_url: string;
-  technologies: string;
-  description: string;
-  start_year: number;
-  end_year: number;
+  title?: string;
+  direct_url?: string;
+  technologies?: string;
+  description?: string;
+  start_year?: number;
+  end_year?: number;
 }
 export interface WebsiteData extends MarkdownData<WebsiteFrontmatter> {
   // TODO: eliminate the use of `any` once we have the Website Archive built
-  image: any;
+  image?: any;
 }
 export type WebsiteMap = NodeMap<WebsiteData>;
 
@@ -86,12 +86,12 @@ export type WebsiteMap = NodeMap<WebsiteData>;
 
 
 export interface ContactLinkFrontmatter {
-  title: string;
-  direct_url: string;
-  description: string;
+  title?: string;
+  direct_url?: string;
+  description?: string;
 }
 export interface ContactLinkData extends MarkdownData<ContactLinkFrontmatter> {
   // Equivalent shape for now
-  icon: IconData;
+  icon?: IconData;
 }
 export type ContactLinkMap = NodeMap<ContactLinkData>;

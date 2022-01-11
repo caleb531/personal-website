@@ -3,12 +3,13 @@ import { keyBy } from 'lodash-es';
 import React, { useState } from 'react';
 import { NavigationQuery } from '../../graphql-types';
 import navigation from '../data/navigation.json';
+import { PageMap } from './types';
 
 function Navigation() {
 
   const queryResults: NavigationQuery = useStaticQuery(query);
   const { allMdx } = queryResults;
-  const pagesById = keyBy(allMdx.nodes, 'fields.name');
+  const pagesById: PageMap = keyBy(allMdx.nodes, 'fields.name');
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (

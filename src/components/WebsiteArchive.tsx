@@ -2,12 +2,15 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { keyBy } from 'lodash-es';
 import React from 'react';
+import { WebsiteArchiveQuery } from '../../graphql-types';
 import websiteMetadata from '../data/websites.json';
+import { WebsiteMap } from './types';
 
 function WebsiteArchive() {
 
-  const { allMarkdownRemark } = useStaticQuery(query);
-  const websitesById = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const queryResults: WebsiteArchiveQuery = useStaticQuery(query);
+  const { allMarkdownRemark } = queryResults;
+  const websitesById: WebsiteMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
   // A list of the websites to feature in the archive (this is mostly to
   // dictate the order)
   const websiteIds = websiteMetadata.websites;

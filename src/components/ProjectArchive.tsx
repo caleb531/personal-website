@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { ProjectArchiveQuery } from '../../graphql-types';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
-import { ProjectData } from './types';
+import { ProjectData, ProjectGroups } from './types';
 
 function filterProjects(projects: ProjectData[], searchQuery: string): ProjectData[] {
   if (searchQuery.trim() === '') {
@@ -35,7 +35,7 @@ function FeaturedProjects() {
   const { allMarkdownRemark } = queryResults;
   const [searchQuery, setSearchQuery] = useState('');
   const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
-  const projectsByCategory = groupBy(projects, 'frontmatter.category');
+  const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
 
   function setSearchQueryFromInput(event: React.FormEvent) {
     setSearchQuery((event.target as HTMLInputElement).value);
