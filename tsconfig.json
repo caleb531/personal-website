@@ -8,7 +8,8 @@
   },
   "include": [
     "src/**/*",
-    "utilities/*"
+    "utilities/*",
+    "graphql-types.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,9 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { groupBy } from 'lodash-es';
 import React, { useState } from 'react';
+import { ProjectArchiveQuery } from '../../graphql-types';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
-import { ProjectData, ProjectGroups } from './types';
+import { ProjectData } from './types';
 
 function filterProjects(projects: ProjectData[], searchQuery: string): ProjectData[] {
   if (searchQuery.trim() === '') {
@@ -30,10 +31,11 @@ function disableNativeSearch(event: React.FormEvent) {
 
 function FeaturedProjects() {
 
-  const { allMarkdownRemark } = useStaticQuery(query);
+  const queryResults: ProjectArchiveQuery = useStaticQuery(query);
+  const { allMarkdownRemark } = queryResults;
   const [searchQuery, setSearchQuery] = useState('');
   const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
-  const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
+  const projectsByCategory = groupBy(projects, 'frontmatter.category');
 
   function setSearchQueryFromInput(event: React.FormEvent) {
     setSearchQuery((event.target as HTMLInputElement).value);

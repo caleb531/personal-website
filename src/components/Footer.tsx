@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { FooterQuery } from '../../graphql-types';
 import ContactLinks from './ContactLinks';
 
 type Props = { pageSlug: string };
@@ -8,7 +9,8 @@ const donateBaseUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations';
 
 function Footer({ pageSlug }: Props) {
 
-  const { siteEmail } = useStaticQuery(query).site.siteMetadata;
+  const queryResults: FooterQuery = useStaticQuery(query);
+  const { siteEmail } = queryResults.site.siteMetadata;
 
   return (
     <footer className="site-footer">

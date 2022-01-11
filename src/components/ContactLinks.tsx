@@ -1,16 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
+import { ContactLinksQuery } from '../../graphql-types';
 import contactLinkMetadata from '../data/contact-links.json';
 import SvgIcon from './SvgIcon';
-import { ContactLinkMap } from './types';
 
 type Props = { isCompact: boolean };
 
 function ContactLinks({ isCompact }: Props) {
 
-  const { allMarkdownRemark } = useStaticQuery(query);
-  const contactLinksById: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const queryResults: ContactLinksQuery = useStaticQuery(query);
+  const { allMarkdownRemark } = queryResults;
+  const contactLinksById = keyBy(allMarkdownRemark.nodes, 'fields.name');
   // A list of the contactLinks to feature in the archive (this is mostly to
   // dictate the order)
   const contactLinkIds = contactLinkMetadata.contactLinks;

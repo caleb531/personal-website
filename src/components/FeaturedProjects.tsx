@@ -1,14 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
+import { FeaturedProjectsQuery } from '../../graphql-types';
 import projectMetadata from '../data/projects.json';
 import SvgIcon from './SvgIcon';
-import { ProjectMap } from './types';
 
 function FeaturedProjects() {
 
-  const { allMarkdownRemark } = useStaticQuery(query);
-  const projectsById: ProjectMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const queryResults: FeaturedProjectsQuery = useStaticQuery(query);
+  const { allMarkdownRemark } = queryResults;
+  const projectsById = keyBy(allMarkdownRemark.nodes, 'fields.name');
 
   return (
     <section className="featured-projects">

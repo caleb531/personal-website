@@ -7,7 +7,8 @@ type Props = { pageTitle: string, pageSlug: string };
 
 function Head({ pageTitle, pageSlug }: Props) {
 
-  const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
+  const queryResults = useStaticQuery(query);
+  const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = queryResults.site.siteMetadata;
   const isHomepage = pageSlug === '/';
   const pageSeoUrl = siteUrl + pageSlug;
 

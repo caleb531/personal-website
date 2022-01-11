@@ -1,11 +1,13 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { HeaderQuery } from '../../graphql-types';
 import { getGravatarUrl } from '../utilities/gravatar';
 import Navigation from './Navigation';
 
 function Header() {
 
-  const { siteEmail, siteTitle } = useStaticQuery(query).site.siteMetadata;
+  const queryResults: HeaderQuery = useStaticQuery(query);
+  const { siteEmail, siteTitle } = queryResults.site.siteMetadata;
   const headerImageSize = 60;
   const gravatarUrl = getGravatarUrl(siteEmail, headerImageSize);
   const gravatarUrlRetina = getGravatarUrl(siteEmail, headerImageSize * 2);

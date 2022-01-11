@@ -2,15 +2,15 @@
 
 
 export interface NodeFields {
-  name: string;
-  collection: string;
+  name?: string;
+  collection?: string;
 }
 export interface NodeMap<NodeType> {
   [key: string]: NodeType;
 }
 export interface MarkdownData<FrontmatterType> {
-  fields: NodeFields;
-  frontmatter: FrontmatterType;
+  fields?: NodeFields;
+  frontmatter?: FrontmatterType;
 }
 
 
@@ -21,8 +21,8 @@ export interface PageFields extends NodeFields {
   // Equivalent shape for now
 }
 export interface PageFrontmatter {
-  title: string;
-  slug: string;
+  title?: string;
+  slug?: string;
 }
 export interface PageData {
   fields: PageFields;
@@ -34,11 +34,11 @@ type PageMap = NodeMap<PageData>;
 // Icon types
 
 
-export interface IconFields extends NodeFields {
-  svgContents: string;
+export interface IconFields {
+  svgContents?: string;
 }
 export interface IconData {
-  fields: IconFields;
+  fields?: IconFields;
 }
 
 
@@ -46,17 +46,17 @@ export interface IconData {
 
 
 export interface ProjectFrontmatter {
-  title: string;
-  direct_url: string;
-  category: string;
-  description: string;
+  title?: string;
+  direct_url?: string;
+  category?: string;
+  description?: string;
 }
 export interface ProjectCategoryData {
   slug: string;
   title: string;
 }
 export interface ProjectData extends MarkdownData<ProjectFrontmatter> {
-  icon: IconData;
+  icon?: IconData;
 }
 export interface ProjectGroups {
   [key: string]: ProjectData[];
