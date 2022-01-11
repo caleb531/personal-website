@@ -59,8 +59,8 @@ function Head({ pageTitle, pageSlug }: Props) {
 }
 export default Head;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query Head {
     site {
       siteMetadata {
         siteUrl

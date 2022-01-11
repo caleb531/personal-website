@@ -32,8 +32,8 @@ function Navigation() {
 }
 export default Navigation;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query Navigation {
     allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
       nodes {
         fields {

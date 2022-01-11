@@ -80,8 +80,8 @@ function FeaturedProjects() {
 }
 export default FeaturedProjects;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query ProjectArchive {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "projects" } } }
       sort: { fields: frontmatter___title }

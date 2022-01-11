@@ -63,8 +63,8 @@ function ContactLinks({ isCompact }: Props) {
 }
 export default ContactLinks;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query ContactLinks {
     allMarkdownRemark(filter: { fields: { collection: { eq: "contact-links" } } }) {
       nodes {
         fields {

@@ -30,8 +30,8 @@ function Footer({ pageSlug }: Props) {
 }
 export default Footer;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query Footer {
     site {
       siteMetadata {
         siteEmail

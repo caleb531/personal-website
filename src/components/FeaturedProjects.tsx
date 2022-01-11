@@ -36,8 +36,8 @@ function FeaturedProjects() {
 }
 export default FeaturedProjects;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query FeaturedProjects {
     allMarkdownRemark(filter: { fields: { collection: { eq: "projects" } } }) {
       nodes {
         fields {

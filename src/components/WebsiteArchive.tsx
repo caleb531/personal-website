@@ -47,8 +47,8 @@ function WebsiteArchive() {
 }
 export default WebsiteArchive;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query WebsiteArchive {
     allMarkdownRemark(filter: { fields: { collection: { eq: "websites" } } }) {
       nodes {
         fields {

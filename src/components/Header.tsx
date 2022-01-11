@@ -27,8 +27,8 @@ function Header() {
 }
 export default Header;
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query Header {
     site {
       siteMetadata {
         siteEmail
