@@ -29,7 +29,10 @@ function Head({ pageTitle, pageSlug }: Props) {
   };
 
   return (
-    <Helmet htmlAttributes={{ lang: 'en-US' }} title={renderedTitle}>
+    <Helmet
+      htmlAttributes={{ lang: 'en-US' }}
+      bodyAttributes={{ 'data-page-slug': pageSlug }}
+      title={renderedTitle}>
       <link rel="shortcut icon" href={getGravatarUrl(siteEmail, 32)} />
       <link rel="icon" href={getGravatarUrl(siteEmail, 192)} sizes="192x192" />
       <meta name="og:title" content={renderedTitle} />
