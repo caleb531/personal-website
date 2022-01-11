@@ -24,6 +24,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <meta name="og:image" content={getGravatarUrl(email, 1200)} />
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
+      <link rel="alternate" hrefLang="en-US" href={siteUrl} />
       {appleTouchIcons.map(({ url, size }) => {
         return <link
           key={url}
@@ -31,7 +32,6 @@ function Head({ pageTitle, pageSlug }: Props) {
           href={url}
           sizes={`${size}x${size}`} />;
       })}
-      <link rel="alternate" hrefLang="en-US" href={siteUrl} />
     </Helmet>
   );
 
