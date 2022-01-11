@@ -9,6 +9,7 @@ function Head({ pageTitle, pageSlug }: Props) {
 
   const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
   const isHomepage = pageSlug === '/';
+  const seoUrl = siteUrl + pageSlug;
 
   const renderedTitle = isHomepage ?
     `${siteTitle} | ${siteTagline}` :
@@ -21,7 +22,7 @@ function Head({ pageTitle, pageSlug }: Props) {
   const jsonLd = {
     description: siteDescription,
     headline: isHomepage ? siteTitle : pageTitle,
-    url: window.location.href,
+    url: seoUrl,
     '@type': isHomepage ? 'WebSite' : 'WebPage',
     name: isHomepage ? siteTitle : pageTitle,
     '@context': 'https://schema.org'
@@ -33,7 +34,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <link rel="icon" href={getGravatarUrl(siteEmail, 192)} sizes="192x192" />
       <meta name="og:title" content={renderedTitle} />
       <meta name="og:description" content={siteDescription} />
-      <meta name="og:url" content={window.location.href} />
+      <meta name="og:url" content={seoUrl} />
       <meta name="og:image" content={getGravatarUrl(siteEmail, 1200)} />
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
