@@ -5,10 +5,10 @@ import Navigation from './Navigation';
 
 function Header() {
 
-  const { email, title } = useStaticQuery(query).site.siteMetadata;
+  const { siteEmail, siteTitle } = useStaticQuery(query).site.siteMetadata;
   const headerImageSize = 60;
-  const gravatarUrl = getGravatarUrl(email, headerImageSize);
-  const gravatarUrlRetina = getGravatarUrl(email, headerImageSize * 2);
+  const gravatarUrl = getGravatarUrl(siteEmail, headerImageSize);
+  const gravatarUrlRetina = getGravatarUrl(siteEmail, headerImageSize * 2);
 
   return (
     <header className="site-header">
@@ -19,7 +19,7 @@ function Header() {
           srcSet={`${gravatarUrlRetina} 2x`}
           width={headerImageSize} height={headerImageSize}
           alt="" />
-        <h1 className="site-title">{title}</h1>
+        <h1 className="site-title">{siteTitle}</h1>
       </Link>
       <Navigation />
     </header>
@@ -31,8 +31,8 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        email
-        title
+        siteEmail
+        siteTitle
       }
     }
   }

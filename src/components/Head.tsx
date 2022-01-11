@@ -7,21 +7,24 @@ type Props = { pageTitle: string, pageSlug: string };
 
 function Head({ pageTitle, pageSlug }: Props) {
 
-  const { siteUrl, email, title, tagline, description, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
-  const renderedTitle = pageSlug === '/' ? `${title} | ${tagline}` : `${pageTitle} | ${title}`;
-  const appleTouchIcons = [76, 120, 152, 180].map((size) => {
-    return { size, url: getGravatarUrl(email, size) };
-  });
+  const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
 
+  const renderedTitle = pageSlug === '/' ?
+    `${siteTitle} | ${siteTagline}` :
+    `${pageTitle} | ${siteTitle}`;
+
+  const appleTouchIcons = [76, 120, 152, 180].map((size) => {
+    return { size, url: getGravatarUrl(siteEmail, size) };
+  });
 
   return (
     <Helmet htmlAttributes={{ lang: 'en-US' }} title={renderedTitle}>
-      <link rel="shortcut icon" href={getGravatarUrl(email, 32)} />
-      <link rel="icon" href={getGravatarUrl(email, 192)} sizes="192x192" />
+      <link rel="shortcut icon" href={getGravatarUrl(siteEmail, 32)} />
+      <link rel="icon" href={getGravatarUrl(siteEmail, 192)} sizes="192x192" />
       <meta name="og:title" content={renderedTitle} />
-      <meta name="og:description" content={description} />
+      <meta name="og:description" content={siteDescription} />
       <meta name="og:url" content={window.location.href} />
-      <meta name="og:image" content={getGravatarUrl(email, 1200)} />
+      <meta name="og:image" content={getGravatarUrl(siteEmail, 1200)} />
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
       <link rel="alternate" hrefLang="en-US" href={siteUrl} />
@@ -43,10 +46,10 @@ const query = graphql`
     site {
       siteMetadata {
         siteUrl
-        email
-        title
-        tagline
-        description
+        siteEmail
+        siteTitle
+        siteTagline
+        siteDescription
         googleSiteVerification
       }
     }
