@@ -8,14 +8,24 @@ type Props = { pageTitle: string, pageSlug: string };
 function Head({ pageTitle, pageSlug }: Props) {
 
   const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = useStaticQuery(query).site.siteMetadata;
+  const isHomepage = pageSlug === '/';
 
-  const renderedTitle = pageSlug === '/' ?
+  const renderedTitle = isHomepage ?
     `${siteTitle} | ${siteTagline}` :
     `${pageTitle} | ${siteTitle}`;
 
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
     return { size, url: getGravatarUrl(siteEmail, size) };
   });
+
+  const jsonLd = {
+    description: siteDescription,
+    headline: isHomepage ? siteTitle : pageTitle,
+    url: window.location.href,
+    '@type': isHomepage ? 'WebSite' : 'WebPage',
+    name: isHomepage ? siteTitle : pageTitle,
+    '@context': 'https://schema.org'
+  };
 
   return (
     <Helmet htmlAttributes={{ lang: 'en-US' }} title={renderedTitle}>
@@ -28,6 +38,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
       <link rel="alternate" hrefLang="en-US" href={siteUrl} />
+      <script type="application/ld+json">{`${JSON.stringify(jsonLd)}`}</script>
       {appleTouchIcons.map(({ url, size }) => {
         return <link
           key={url}
