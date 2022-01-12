@@ -12,11 +12,11 @@ const windowWidth = 1024;
 const windowHeight = 640;
 
 // Create website image directory if it doesn't already exist
-function createWebsiteImageDirectory() {
+function createWebsiteImageDirectory(): Promise<string> {
   return fs.promises.mkdir(websiteImageDir, { recursive: true });
 }
 
-async function generateScreenshots(websiteConfigFilePaths: string[]) {
+async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
 
   await createWebsiteImageDirectory();
   const browser = await puppeteer.launch();
@@ -56,7 +56,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]) {
 
 }
 
-async function main() {
+async function main(): Promise<void> {
   // Generate screenshot for the specified file path(s); otherwise, default to
   // every file in the /src/websites directory
   let websiteConfigFilePaths = process.argv.slice(2);
