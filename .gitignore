@@ -1,5 +1,4 @@
 .env
-/src/images/websites/
 node_modules/
 .cache/
 public
