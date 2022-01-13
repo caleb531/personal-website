@@ -1,0 +1,72 @@
+# Define UTF-8 encoding for all essential file types
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+  AddCharset utf-8 .css .js .json .xml .svg
+</IfModule>
+
+# Disable fallback directory indexes
+Options -Indexes
+
+# Provide email address for internal server errors
+SetEnv SERVER_ADMIN caleb@calebevans.me
+
+# Error code pages
+ErrorDocument 403 /403/
+ErrorDocument 404 /404/
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>
+
+### Headers
+
+<IfModule mod_headers.c>
+
+  <FilesMatch "\.html$">
+    # Set restrictive Content Security Policy (CSP)
+    # See https://content-security-policy.com/ for a complete reference
+    Header always set Content-Security-Policy "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src data: https://fonts.gstatic.com; img-src 'self' data: https://www.gravatar.com https://www.google-analytics.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; prefetch-src 'self'
+    # Restrict site from being used in any kind of frame
+    Header always set X-Frame-Options SAMEORIGIN
+    # Require every resource to have a valid MIME type
+    Header always set X-Content-Type-Options nosniff
+    # Tell browser to always serve HTTPS pages on this site and its subdomains
+    Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+    # Disable the privacy-sensitive Referer header
+    Header always set Referrer-Policy "no-referrer"
+    # Cache HTML for one hour
+    Header set Cache-Control "max-age=3600"
+  </FilesMatch>
+
+  # Cache scripts and stylesheets for a year (since they are cache-busted)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000"
+  </FilesMatch>
+  # Cache images for a week
+  <FilesMatch "\.(png|jpg|gif|svg)$">
+    Header set Cache-Control "max-age=604800"
+  </FilesMatch>
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+  # Enable URL rewriting
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+  # Redirect HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+  # Redirect /portfolio/* to /projects/
+  RewriteRule ^portfolio(/.+)?/?$ projects/ [L,NC,R=301]
+  # Redirect /projects/* to projects.calebevans.me/*
+  RewriteRule ^projects/(.+)$ https://projects.calebevans.me/$1 [L,NC,R=301]
+
+</IfModule>

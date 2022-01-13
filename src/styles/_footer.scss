@@ -1,0 +1,19 @@
+// Site footer
+
+.site-footer {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .contact-link {
+    margin: 5px;
+    &-image a {
+      $icon-size: 40px;
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
+}

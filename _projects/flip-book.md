@@ -1,6 +1,0 @@
----
-title: Flip Book
-direct_url: https://projects.calebevans.me/flip-book/
-categories: fun
-description: Create flip book-style animations to share with friends!
----

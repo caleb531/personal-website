@@ -1,0 +1,6 @@
+---
+title: Connect Four
+direct_url: https://connectfour.calebevans.me/
+category: games
+description: The slickest way to get 4-in-a-row
+---

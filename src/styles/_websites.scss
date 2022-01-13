@@ -1,0 +1,58 @@
+// Styling for website portfolio entries
+@use 'sass:math';
+
+// The number of columns to display for the Website gallery
+$website-list-columns: 3;
+
+.website-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.website {
+  display: block;
+  flex-basis: math.div(100%, $website-list-columns);
+  width: auto;
+  text-align: center;
+  &-list-category-title {
+    margin-top: 0;
+  }
+  &-title {
+    margin: 2px 0;
+  }
+  &-desc {
+    margin: 10px 0;
+    font-size: 11pt;
+  }
+  &-main {
+    display: block;
+    padding-left: 0;
+  }
+  &-image {
+    width: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    a {
+      width: 256px;
+      height: 160px;
+    }
+    img {
+      transition: none !important;
+    }
+  }
+  @include layout(hybrid) {
+    flex-basis: 100%;
+    &-image {
+      width: auto;
+      overflow: hidden;
+    }
+  }
+  &-details {
+    font-size: 10pt;
+  }
+  &-years {
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-plugin-inline-svg",
+  "author": "Caleb Evans",
+  "description": "Reads the contents of SVG files into GraphQL's File nodes so that they can be inlined in your React JSX",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "svg",
+    "inline"
+  ]
+}

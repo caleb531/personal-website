@@ -1,0 +1,15 @@
+{
+  "sourceMap": true,
+  "compilerOptions": {
+    "jsx": "preserve",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*",
+    "utilities/*",
+    "graphql-types.ts"
+  ],
+  "exclude": ["node_modules"]
+}

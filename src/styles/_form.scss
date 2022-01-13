@@ -1,0 +1,42 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+label {
+  margin-right: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+input[type=text],
+input[type=search],
+input[type=number],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=url] {
+  -webkit-appearance: none;
+  padding: 8px 10px;
+  border-width: 0;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+// Hide Cancel (X) button on search fields
+input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}

@@ -1,11 +1,5 @@
-_site
-.sass-cache
-.jekyll-metadata
 .env
-/assets/images/websites/
-/assets/images/resized/
-.asset-cache
-.jekyll-cache
 node_modules/
 .cache/
 public
+graphql-types.ts

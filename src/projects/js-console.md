@@ -1,0 +1,6 @@
+---
+title: JS Console
+direct_url: https://projects.calebevans.me/js-console/
+category: tools
+description: A JavaScript command line
+---

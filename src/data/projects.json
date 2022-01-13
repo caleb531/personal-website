@@ -1,0 +1,64 @@
+{
+  "categories": [
+    [
+      {
+        "slug": "games",
+        "title": "Games"
+      },
+      {
+        "slug": "atom",
+        "title": "Atom"
+      },
+      {
+        "slug": "programs",
+        "title": "Programs"
+      },
+      {
+        "slug": "math",
+        "title": "Math"
+      },
+      {
+        "slug": "computer-science",
+        "title": "Computer Science"
+      },
+      {
+        "slug": "vscode",
+        "title": "VS Code"
+      }
+    ],
+    [
+      {
+        "slug": "javascript-libraries",
+        "title": "JavaScript Libraries"
+      },
+      {
+        "slug": "fun",
+        "title": "Fun"
+      },
+      {
+        "slug": "tools",
+        "title": "Tools / Productivity"
+      },
+      {
+        "slug": "alfred",
+        "title": "Alfred"
+      },
+      {
+        "slug": "brunch-plugins",
+        "title": "Brunch Plugins"
+      },
+      {
+        "slug": "wordpress",
+        "title": "WordPress"
+      }
+    ]
+  ],
+  "featuredProjects": [
+    "faith-dashboard",
+    "inflection-point",
+    "flip-book",
+    "connect-four",
+    "jcanvas",
+    "painter"
+  ]
+}

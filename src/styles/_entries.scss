@@ -1,0 +1,58 @@
+// Styling for lists of projects and contact links
+
+.entry {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 15px 0;
+  &-image {
+    display: inline-block;
+    overflow: hidden;
+    // This is key to prevent entry icons/images from being clipped when the
+    // above overflow:hidden is set
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(#000, 0.3);
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  &-main {
+    padding-left: 12px;
+    vertical-align: top;
+  }
+  &-title {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 3px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  &-desc {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.4;
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-list-category-title {
+    border-bottom: solid 2px #fff;
+  }
+  &-label {
+    font-weight: 400;
+  }
+}
+
+.entry-list-compact {
+  .entry,
+  .entry-image {
+    display: inline-block;
+    width: auto;
+  }
+}
