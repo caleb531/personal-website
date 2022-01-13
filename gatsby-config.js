@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://calebevans.me',
+    siteUrl: 'https://staging.calebevans.me',
     siteTitle: 'Caleb Evans',
     siteTagline: 'Coder for Christ',
     siteDescription: 'Hi, I’m Caleb, a web developer who lives for Christ by coding enjoyable apps and useful tools. Come see what I’ve made!',
