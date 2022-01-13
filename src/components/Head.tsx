@@ -41,7 +41,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <meta name="og:site_title" content={siteTitle} />
       <meta name="og:description" content={siteDescription} />
       <meta name="og:url" content={pageSeoUrl} />
-      <meta name="og:image" content={getGravatarUrl(siteEmail, 1200)} />
+      <meta name="og:image" content={`${siteUrl}/images/social-preview.jpg`} />
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
       <link rel="canonical" href={pageSeoUrl} />
