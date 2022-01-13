@@ -45,7 +45,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       <meta name="og:type" content="website" />
       <meta name="google-site-verification" content={googleSiteVerification} />
       <link rel="canonical" href={pageSeoUrl} />
-      <link rel="alternate" hrefLang="en-US" href={siteUrl} />
+      <link rel="alternate" hrefLang="en-US" href={pageSeoUrl} />
       <script type="application/ld+json">{`${JSON.stringify(jsonLd)}`}</script>
       {appleTouchIcons.map(({ url, size }) => {
         return <link
