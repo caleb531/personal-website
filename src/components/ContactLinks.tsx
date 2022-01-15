@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
@@ -18,7 +19,12 @@ function ContactLinks({ isCompact = false }: Props) {
   const contactLinkIds = contactLinkMetadata.contactLinks;
 
   return (
-    <div className={`entry-list contact-link-list ${isCompact ? 'entry-list-compact contact-link-list-compact' : ''}`}>
+    <div className={classNames(
+      'entry-list',
+      'contact-link-list',
+      { 'entry-list-compact': isCompact },
+      { 'contact-link-list-compact': isCompact }
+    )}>
       {contactLinkIds.map((contactLinkId) => {
         const contactLink = contactLinksById[contactLinkId];
         return (

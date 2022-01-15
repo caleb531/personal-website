@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import SvgIcon from './SvgIcon';
 import { ProjectData } from './types';
@@ -6,7 +7,11 @@ type Props = { project: ProjectData, isCompact?: boolean };
 
 function Project({ project, isCompact = false }: Props) {
   return (
-    <article className={`entry project ${isCompact ? 'project-compact' : ''}`}>
+    <article className={classNames(
+      'entry',
+      'project',
+      { 'project-compact': isCompact }
+    )}>
 
       <div className="entry-image project-image">
         <a

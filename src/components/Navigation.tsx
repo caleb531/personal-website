@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React, { useState } from 'react';
@@ -13,7 +14,10 @@ function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className={`site-header-nav ${isNavOpen ? `site-header-nav-open` : ''}`}>
+    <nav className={classNames(
+      'site-header-nav',
+      { 'site-header-nav-open': isNavOpen }
+    )}>
       <button className="site-header-nav-toggle" aria-label="Menu" onClick={() => setIsNavOpen(!isNavOpen)}>
         <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
       </button>
