@@ -1,6 +1,6 @@
 // Attach additional field to each GraphQL node (source:
 // https://stackoverflow.com/a/53563503/560642)
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode = ({ node, actions, getNode }) => {
   const targetNode = getNode(node.parent) || node;
   actions.createNodeField({
     node,
@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 // Define resolvers to create foreign-key associations between Markdown files
 // and static assets
-exports.createResolvers = function ({ createResolvers, getNode }) {
+export const createResolvers = function ({ createResolvers, getNode }) {
   createResolvers({
     MarkdownRemark: {
       icon: {

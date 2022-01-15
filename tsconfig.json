@@ -7,6 +7,8 @@
     "resolveJsonModule": true
   },
   "include": [
+    "*",
+    "plugins/**/*",
     "src/**/*",
     "utilities/*",
     "graphql-types.ts"
