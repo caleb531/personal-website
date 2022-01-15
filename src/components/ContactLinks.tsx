@@ -3,7 +3,7 @@ import { keyBy } from 'lodash-es';
 import React from 'react';
 import { ContactLinksQuery } from '../../graphql-types';
 import contactLinkMetadata from '../data/contact-links.json';
-import SvgIcon from './SvgIcon';
+import ContactLink from './ContactLink';
 import { ContactLinkMap } from './types';
 
 type Props = { isCompact?: boolean };
@@ -22,42 +22,10 @@ function ContactLinks({ isCompact = false }: Props) {
       {contactLinkIds.map((contactLinkId) => {
         const contactLink = contactLinksById[contactLinkId];
         return (
-          <article className="entry contact-link" key={contactLinkId}>
-            {!isCompact ?
-              <>
-                <div className="entry-image contact-link-image">
-                  <a
-                    href={contactLink.frontmatter.direct_url}
-                    aria-labelledby={`contact-link-${contactLink.fields.name}`}>
-                    <SvgIcon content={contactLink.icon.fields.svgContents} />
-                  </a>
-                </div>
-
-                <div className="entry-main contact-link-main">
-
-                  <h3 className="entry-title contact-link-title">
-                    <a
-                      href={contactLink.frontmatter.direct_url}
-                      id={`contact-link-${contactLink.fields.name}`}>
-                      { contactLink.frontmatter.title}
-                    </a>
-                  </h3>
-
-                  <div className="entry-desc contact-link-desc">
-                    {contactLink.frontmatter.description}
-                  </div>
-
-                </div>
-              </> : <>
-                <div className="entry-image contact-link-image">
-                  <a
-                    href={contactLink.frontmatter.direct_url}
-                    aria-label={contactLink.frontmatter.title}>
-                    <SvgIcon content={contactLink.icon.fields.svgContents} />
-                  </a>
-                </div>
-              </>}
-          </article>
+          <ContactLink
+            key={contactLink.fields.name}
+            contactLink={contactLink}
+            isCompact={isCompact} />
         );
       })}
     </div>
