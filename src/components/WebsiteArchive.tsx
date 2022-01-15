@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { keyBy } from 'lodash-es';
 import React from 'react';
 import { WebsiteArchiveQuery } from '../../graphql-types';
 import websiteMetadata from '../data/websites.json';
 import { WebsiteMap } from './types';
+import Website from './Website';
 
 function WebsiteArchive() {
 
@@ -19,29 +19,10 @@ function WebsiteArchive() {
     <div className="entry-list website-list">
       {websiteIds.map((websiteId) => {
         const website = websitesById[websiteId];
-        const websiteImage = getImage(website.image);
         return (
-          <article className="entry website" key={websiteId}>
-            <div className="entry-image website-image">
-              <a href={website.frontmatter.direct_url}>
-                <GatsbyImage image={websiteImage} alt="" />
-              </a>
-            </div>
-            <div className="entry-main website-main">
-
-              <h4 className="entry-title website-title">
-                <a href={website.frontmatter.direct_url}>
-                  {website.frontmatter.title}
-                </a>
-              </h4>
-
-              <div className="website-details">
-                <div className="website-years">{website.frontmatter.start_year} &ndash; {website.frontmatter.end_year || 'present'}</div>
-                <div className="website-technologies">{website.frontmatter.technologies}</div>
-              </div>
-
-            </div>
-          </article>
+          <Website
+            key={website.fields.name}
+            website={website} />
         );
       })}
     </div>
