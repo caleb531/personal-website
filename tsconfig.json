@@ -2,9 +2,11 @@
   "sourceMap": true,
   "compilerOptions": {
     "jsx": "preserve",
+    "target": "es6",
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
   },
   "include": [
     "*",
