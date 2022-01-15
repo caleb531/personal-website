@@ -10,6 +10,7 @@ function Project({ project, isCompact = false }: Props) {
     <article className={classNames(
       'entry',
       'project',
+      { 'entry-compact': isCompact },
       { 'project-compact': isCompact }
     )}>
 

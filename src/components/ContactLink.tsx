@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import SvgIcon from './SvgIcon';
 import { ContactLinkData } from './types';
@@ -6,7 +7,12 @@ type Props = { contactLink: ContactLinkData, isCompact?: boolean }
 
 function ContactLink({ contactLink, isCompact = false }: Props) {
   return (
-    <article className="entry contact-link">
+    <article className={classNames(
+      'entry',
+      'contact-link',
+      { 'entry-compact': isCompact },
+      { 'contact-link-compact': isCompact }
+    )}>
       {!isCompact ?
         <>
           <div className="entry-image contact-link-image">
