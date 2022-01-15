@@ -1,6 +1,15 @@
+import { CreateResolversArgs, GatsbyNode, Node } from 'gatsby';
+
+interface NamedNode extends Node {
+  fields: {
+    name: string;
+    collection: string;
+  }
+}
+
 // Attach additional field to each GraphQL node (source:
 // https://stackoverflow.com/a/53563503/560642)
-export const onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const targetNode = getNode(node.parent) || node;
   actions.createNodeField({
     node,
@@ -16,12 +25,12 @@ export const onCreateNode = ({ node, actions, getNode }) => {
 
 // Define resolvers to create foreign-key associations between Markdown files
 // and static assets
-export const createResolvers = function ({ createResolvers, getNode }) {
+export const createResolvers: GatsbyNode['createResolvers'] = function ({ createResolvers }) {
   createResolvers({
     MarkdownRemark: {
       icon: {
         type: 'File',
-        resolve: (source, args, context, info) => {
+        resolve: (source: NamedNode, args: CreateResolversArgs, context: any) => {
           return context.nodeModel.findOne({
             type: 'File',
             query: {
@@ -38,7 +47,7 @@ export const createResolvers = function ({ createResolvers, getNode }) {
       },
       image: {
         type: 'File',
-        resolve: (source, args, context, info) => {
+        resolve: (source: NamedNode, args: CreateResolversArgs, context: any) => {
           return context.nodeModel.findOne({
             type: 'File',
             query: {
