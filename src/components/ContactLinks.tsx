@@ -6,9 +6,9 @@ import contactLinkMetadata from '../data/contact-links.json';
 import SvgIcon from './SvgIcon';
 import { ContactLinkMap } from './types';
 
-type Props = { isCompact: boolean };
+type Props = { isCompact?: boolean };
 
-function ContactLinks({ isCompact }: Props) {
+function ContactLinks({ isCompact = false }: Props) {
 
   const queryResults: ContactLinksQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
