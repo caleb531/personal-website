@@ -24,8 +24,9 @@ function filterProjects(projects: ProjectData[], searchQuery: string): ProjectDa
   });
 }
 
-// Disable the browser-native search behavior of reloading the page
-function disableNativeSearch(event: React.FormEvent) {
+// Disable the browser-native search behavior of reloading the page when the
+// <form> element is submitted
+function disableNativeFormSubmit(event: React.FormEvent) {
   event.preventDefault();
 }
 
@@ -44,7 +45,7 @@ function FeaturedProjects() {
   return (
     <div className="project-archive">
       <div className="project-search-container">
-        <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeSearch}>
+        <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeFormSubmit}>
           <label htmlFor="project-search-input">Search:</label>
           <input
             type="search"
