@@ -16,7 +16,7 @@
   }
 }
 
-.project-image {
+.allow-animations .project-image {
   background-color: #fff;
   & {
     overflow: visible;
@@ -32,7 +32,7 @@
 // We only need to add as many delays as there are projects in the largest
 // project category
 @for $i from 0 through 15 {
-  .project:nth-child(#{$i}) {
+  .allow-animations .project:nth-child(#{$i}) {
     .project-image svg {
       animation-delay: ($i * 150ms);
     }
