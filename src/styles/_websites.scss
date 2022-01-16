@@ -38,9 +38,6 @@ $website-list-columns: 3;
       width: 256px;
       height: 160px;
     }
-    img {
-      transition: none !important;
-    }
   }
   @include layout(hybrid) {
     flex-basis: 100%;
