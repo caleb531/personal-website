@@ -10,15 +10,15 @@ function WebsiteArchive() {
 
   const queryResults: WebsiteArchiveQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
-  const websitesById: WebsiteMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const websitesByName: WebsiteMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
   // A list of the websites to feature in the archive (this is mostly to
   // dictate the order)
-  const websiteIds = websiteMetadata.websites;
+  const websiteNames = websiteMetadata.websites;
 
   return (
     <div className="entry-list website-list">
-      {websiteIds.map((websiteId) => {
-        const website = websitesById[websiteId];
+      {websiteNames.map((websiteName) => {
+        const website = websitesByName[websiteName];
         return (
           <Website
             key={website.fields.name}

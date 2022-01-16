@@ -10,14 +10,14 @@ function FeaturedProjects() {
 
   const queryResults: FeaturedProjectsQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
-  const projectsById: ProjectMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const projectsByName: ProjectMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
 
   return (
     <section className="featured-projects allow-animations">
       <h3>Featured Projects</h3>
       <div className="entry-list project-list entry-list-compact project-list-compact">
-        {projectMetadata.featuredProjects.map((projectId) => {
-          const project = projectsById[projectId];
+        {projectMetadata.featuredProjects.map((projectName) => {
+          const project = projectsByName[projectName];
           return (
             <Project
               key={project.fields.name}

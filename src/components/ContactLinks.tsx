@@ -13,10 +13,7 @@ function ContactLinks({ isCompact = false }: Props) {
 
   const queryResults: ContactLinksQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
-  const contactLinksById: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
-  // A list of the contactLinks to feature in the archive (this is mostly to
-  // dictate the order)
-  const contactLinkIds = contactLinkMetadata.contactLinks;
+  const contactLinksByName: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
 
   return (
     <div className={classNames(
@@ -25,8 +22,8 @@ function ContactLinks({ isCompact = false }: Props) {
       { 'entry-list-compact': isCompact },
       { 'contact-link-list-compact': isCompact }
     )}>
-      {contactLinkIds.map((contactLinkId) => {
-        const contactLink = contactLinksById[contactLinkId];
+      {contactLinkMetadata.contactLinks.map((contactLinkName) => {
+        const contactLink = contactLinksByName[contactLinkName];
         return (
           <ContactLink
             key={contactLink.fields.name}

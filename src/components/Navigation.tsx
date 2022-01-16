@@ -10,7 +10,7 @@ function Navigation() {
 
   const queryResults: NavigationQuery = useStaticQuery(query);
   const { allMdx } = queryResults;
-  const pagesById: PageMap = keyBy(allMdx.nodes, 'fields.name');
+  const pagesByName: PageMap = keyBy(allMdx.nodes, 'fields.name');
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
@@ -22,10 +22,10 @@ function Navigation() {
         <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
       </button>
       <ul className="site-header-nav-list">
-        {navigation.map((pageId: string) => {
-          const { slug, title } = pagesById[pageId].frontmatter;
+        {navigation.map((pageName: string) => {
+          const { slug, title } = pagesByName[pageName].frontmatter;
           return (
-            <li key={pageId}>
+            <li key={pageName}>
               <Link to={slug} onClick={() => setIsNavOpen(false)}>
                 {title}
               </Link>
