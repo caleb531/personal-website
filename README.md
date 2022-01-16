@@ -1,7 +1,7 @@
 
 # Personal Website
 
-*Copyright 2013-2022, Caleb Evans*
+*Copyright 2013-2022, Caleb Evans*  
 *Code released under the MIT license*
 
 This is a [Gatsby](https://www.gatsbyjs.com/)-based personal website I created
