@@ -8,6 +8,8 @@ This is a [Gatsby](https://www.gatsbyjs.com/)-based personal website I created
 for myself. The theme is built from Gatsby's default scaffolding, with all of
 the styling migrated from my previous Jekyll iteration of the site.
 
+Live Site: https://calebevans.me/
+
 ## Setup
 
 ### Installing
