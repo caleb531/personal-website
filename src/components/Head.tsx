@@ -8,9 +8,19 @@ type Props = { pageTitle: string, pageSlug: string };
 function Head({ pageTitle, pageSlug }: Props) {
 
   const queryResults = useStaticQuery(query);
-  const { siteUrl, siteTitle, siteTagline, siteDescription, siteEmail, googleSiteVerification } = queryResults.site.siteMetadata;
+  const {
+    siteUrl,
+    siteTitle,
+    siteTagline,
+    siteDescription,
+    siteEmail,
+    twitterUsername,
+    googleSiteVerification
+  } = queryResults.site.siteMetadata;
   const isHomepage = pageSlug === '/';
+  const pageSeoTitle = (isHomepage ? `${siteTitle} | ${siteTagline}` : pageTitle);
   const pageSeoUrl = siteUrl + pageSlug;
+  const pageSeoImage = `${siteUrl}/images/social-preview.jpg`;
 
   const renderedTitle = isHomepage ?
     `${siteTitle} | ${siteTagline}` :
@@ -37,12 +47,18 @@ function Head({ pageTitle, pageSlug }: Props) {
       <link rel="shortcut icon" href={getGravatarUrl(siteEmail, 32)} />
       <link rel="icon" href={getGravatarUrl(siteEmail, 192)} sizes="192x192" />
 
-      <meta name="og:title" content={isHomepage ? `${siteTitle} | ${siteTagline}` : pageTitle} />
+      <meta name="og:title" content={pageSeoTitle} />
       <meta name="og:site_title" content={siteTitle} />
       <meta name="og:description" content={siteDescription} />
       <meta name="og:url" content={pageSeoUrl} />
-      <meta name="og:image" content={`${siteUrl}/images/social-preview.jpg`} />
+      <meta name="og:image" content={pageSeoImage} />
       <meta name="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={twitterUsername} />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={pageSeoTitle} />
+      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:image" content={pageSeoImage} />
       <meta name="google-site-verification" content={googleSiteVerification} />
       <link rel="canonical" href={pageSeoUrl} />
       <link rel="alternate" hrefLang="en-US" href={pageSeoUrl} />
@@ -69,6 +85,7 @@ export const query = graphql`
         siteTitle
         siteTagline
         siteDescription
+        twitterUsername
         googleSiteVerification
       }
     }
