@@ -28,7 +28,7 @@ $animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 // We only need to add as many delays as there are projects in the largest
 // project category
-@for $i from 0 through 15 {
+@for $i from 1 through 15 {
   .allow-animations .project:nth-child(#{$i}) {
     .project-image svg {
       animation-delay: ($i * 150ms);
@@ -38,7 +38,7 @@ $animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 // We only need to add as many delays as there are projects in the largest
 // project category
-@for $i from 0 through 5 {
+@for $i from 1 through 5 {
   .allow-animations .website:nth-child(#{$i}) {
     .website-image img {
       transition-delay: ($i * 150ms);
