@@ -97,7 +97,7 @@ export const plugins: GatsbyConfig['plugins'] = [
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
       google: {
-        families: ['M PLUS Rounded 1c:400,500&display=swap']
+        families: ['Noto Sans JP:300,400&display=swap']
       }
     }
   },

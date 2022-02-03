@@ -1,19 +1,19 @@
 // Sass Variables
 
 // Colors
-$color-grey: #111;
-$color-blue: #3cf;
+$color-black: #111;
+$color-blue: #068;
 $color-teal: #099;
-$color-green: #9f0;
+$color-green: #cf0;
 $color-orange: #f93;
 $color-red: #d33;
 $color-purple: #93c;
 
 // Layout
-$body-background-color: $color-grey;
-$font-family-sans-serif: 'M PLUS Rounded 1c', sans-serif;
-$link-color: $color-blue;
-$strong-color: $color-green;
+$body-background-color: $color-blue;
+$font-family-sans-serif: 'Noto Sans JP', sans-serif;
+$link-color: $color-green;
+$strong-color: $link-color;
 $transition-duration: 150ms;
 $transition-easing: ease-in-out;
 
