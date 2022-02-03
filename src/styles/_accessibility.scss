@@ -1,6 +1,6 @@
 // The :focus-visible class only shows when the user is explicitly tabbing via
 // the keyboard (or some other accessibility queue); unlike :focus, its styles
-// do not linger after clicking a linkr
+// do not linger after clicking a link; source: https://stackoverflow.com/a/45191208/560642
 a,
 textarea,
 button {
