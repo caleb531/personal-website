@@ -3,12 +3,12 @@
 
 $animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 
-@keyframes fade-in {
+@keyframes grow-in {
   from {
-    opacity: 0;
+    transform: scale(0);
   }
   to {
-    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -22,7 +22,7 @@ $animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
     display: none;
   }
   svg {
-    animation: fade-in 1000ms $animation-easing both;
+    animation: grow-in 1000ms $animation-easing both;
   }
 }
 
