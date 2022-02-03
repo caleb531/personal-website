@@ -73,7 +73,7 @@ main {
 }
 
 .page[data-slug='/'] {
-  p {
+  p:first-of-type {
     max-width: 450px;
   }
   strong {
