@@ -3,9 +3,9 @@ import React from 'react';
 import SvgIcon from './SvgIcon';
 import { ProjectData } from './types';
 
-type Props = { project: ProjectData, isCompact?: boolean };
+type Props = { project: ProjectData, animationDelay: number, isCompact?: boolean };
 
-function Project({ project, isCompact = false }: Props) {
+function Project({ project, animationDelay, isCompact = false }: Props) {
   return (
     <article className={classNames(
       'entry',
@@ -18,7 +18,7 @@ function Project({ project, isCompact = false }: Props) {
         <a
           href={project.frontmatter.direct_url}
           aria-labelledby={`project-title-${project.fields.name}`}>
-          <SvgIcon content={project.icon.fields.svgContents} />
+          <SvgIcon content={project.icon.fields.svgContents} animationDelay={animationDelay} />
         </a>
       </div>
 

@@ -13,10 +13,11 @@ function ProjectCategory({ category, projects }: Props) {
         {category.title}
       </h3>
 
-      {projects.map((project) => {
+      {projects.map((project, p) => {
         return (
           <Project
             key={project.fields.name}
+            animationDelay={150 * p}
             project={project} />
         );
       })}

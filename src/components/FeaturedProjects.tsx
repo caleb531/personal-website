@@ -16,12 +16,13 @@ function FeaturedProjects() {
     <section className="featured-projects allow-animations">
       <h3>Featured Projects</h3>
       <div className="entry-list project-list entry-list-compact project-list-compact">
-        {projectMetadata.featuredProjects.map((projectName) => {
+        {projectMetadata.featuredProjects.map((projectName, p) => {
           const project = projectsByName[projectName];
           return (
             <Project
               key={project.fields.name}
               project={project}
+              animationDelay={150 * p}
               isCompact />
           );
         })}
