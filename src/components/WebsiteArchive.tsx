@@ -16,7 +16,7 @@ function WebsiteArchive() {
   const websiteNames = websiteMetadata.websites;
 
   return (
-    <div className="entry-list website-list">
+    <div className="entry-list website-list allow-animations">
       {websiteNames.map((websiteName) => {
         const website = websitesByName[websiteName];
         return (

@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import { groupBy } from 'lodash-es';
 import React, { useState } from 'react';
@@ -38,12 +39,21 @@ function FeaturedProjects() {
   const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
   const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
 
+  // Start project icon animation when project archive component is mounted
+  const [allowAnimations, setAllowAnimations] = useState(true);
+
   function setSearchQueryFromInput(event: React.FormEvent) {
     setSearchQuery((event.target as HTMLInputElement).value);
+    // Prevent project icon animation from repeatedly restarting while
+    // searching
+    setAllowAnimations(false);
   }
 
   return (
-    <div className="project-archive">
+    <div className={classNames(
+      'project-archive',
+      { 'allow-animations': allowAnimations }
+    )}>
       <div className="project-search-container">
         <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeFormSubmit}>
           <label htmlFor="project-search-input">Search:</label>
