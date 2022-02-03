@@ -1,10 +1,12 @@
 // The :focus-visible class only shows when the user is explicitly tabbing via
 // the keyboard (or some other accessibility queue); unlike :focus, its styles
-// do not linger after clicking a link
-a:focus-visible,
-textarea:focus-visible,
-button:focus-visible {
-  outline-width: 0;
-  box-shadow: 0 0 0 1px $color-green;
-  border-radius: 5px;
+// do not linger after clicking a linkr
+a,
+textarea,
+button {
+  &:focus-visible {
+    outline-width: 0;
+    box-shadow: 0 0 0 1px $color-green;
+    border-radius: 5px;
+  }
 }
