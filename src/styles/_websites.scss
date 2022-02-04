@@ -22,10 +22,6 @@ $website-list-columns: 3;
   &-title {
     margin: 2px 0;
   }
-  &-desc {
-    margin: 10px 0;
-    font-size: 11pt;
-  }
   &-main {
     display: block;
     padding-left: 0;
@@ -50,9 +46,9 @@ $website-list-columns: 3;
     }
   }
   &-details {
-    font-size: 10pt;
+    font-size: $font-size-m;
   }
   &-years {
-    font-weight: 400;
+    font-weight: $font-weight-bold;
   }
 }
