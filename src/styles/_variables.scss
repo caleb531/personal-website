@@ -1,6 +1,7 @@
 // Sass Variables
+@use 'sass:math';
 
-// Colors
+// Base colors
 $color-black: #111;
 $color-blue: #068;
 $color-teal: #099;
@@ -9,13 +10,37 @@ $color-orange: #f93;
 $color-red: #d33;
 $color-purple: #93c;
 
-// Layout
+// Semantic colors
 $body-background-color: $color-blue;
-$font-family-sans-serif: 'Noto Sans JP', sans-serif;
 $link-color: $color-green;
 $strong-color: $link-color;
+
+// Fonts
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-weight-normal: 300;
+$font-weight-bold: 400;
+$line-height: 1.4;
+$font-size-base: 15px;
+$font-size-xxxs: #{math.div(11px, $font-size-base)}rem;
+$font-size-xxs: #{math.div(12px, $font-size-base)}rem;
+$font-size-xs: #{math.div(13px, $font-size-base)}rem;
+$font-size-s: #{math.div(14px, $font-size-base)}rem;
+$font-size-m: 1rem;
+$font-size-l: #{math.div(16px, $font-size-base)}rem;
+$font-size-xl: #{math.div(17px, $font-size-base)}rem;
+$font-size-xxl: #{math.div(18px, $font-size-base)}rem;
+$font-size-xxxl: #{math.div(19px, $font-size-base)}rem;
+
+$font-size-p: #{math.div(22px, $font-size-base)}rem;
+$font-size-h4: #{math.div(22px, $font-size-base)}rem;
+$font-size-h3: #{math.div(28px, $font-size-base)}rem;
+$font-size-h2: #{math.div(40px, $font-size-base)}rem;
+$font-size-h1: #{math.div(30px, $font-size-base)}rem;
+
+// Transitions and animations
 $transition-duration: 150ms;
-$transition-easing: ease-in-out;
+$transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+$animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 $layer-box-shadow: 0 0 20px rgba(#000, 0.1);
 

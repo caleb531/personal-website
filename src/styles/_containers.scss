@@ -18,9 +18,8 @@ body {
   padding: 0;
   background-color: $body-background-color;
   font-family: $font-family-sans-serif;
-  font-weight: 300;
+  font-weight: $font-weight-normal;
   font-size: 0;
-  line-height: 1.5;
   color: #fff;
 }
 
@@ -74,7 +73,7 @@ main {
 
 .page[data-slug='/'] {
   p:first-of-type {
-    max-width: 450px;
-    font-size: 1.5rem;
+    max-width: 500px;
+    font-size: 1.6rem;
   }
 }

@@ -97,7 +97,7 @@ export const plugins: GatsbyConfig['plugins'] = [
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
       google: {
-        families: ['Noto Sans JP:300,400&display=swap']
+        families: ['Source+Sans+Pro:300,400&display=swap']
       }
     }
   },

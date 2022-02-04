@@ -26,14 +26,13 @@
     display: inline-block;
     margin: 0;
     margin-bottom: 3px;
-    font-size: 20px;
     vertical-align: middle;
   }
   &-desc {
     margin: 0;
-    font-size: 18px;
     text-align: left;
     line-height: 1.4;
+    font-size: $font-size-xxxl;
     p:first-child {
       margin-top: 0;
     }
@@ -43,9 +42,6 @@
   }
   &-list-category-title {
     border-bottom: solid 2px #fff;
-  }
-  &-label {
-    font-weight: 400;
   }
 }
 
