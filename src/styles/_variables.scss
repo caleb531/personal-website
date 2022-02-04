@@ -21,21 +21,24 @@ $font-weight-normal: 300;
 $font-weight-bold: 400;
 $line-height: 1.4;
 $font-size-base: 15px;
-$font-size-xxxs: #{math.div(11px, $font-size-base)}rem;
-$font-size-xxs: #{math.div(12px, $font-size-base)}rem;
-$font-size-xs: #{math.div(13px, $font-size-base)}rem;
-$font-size-s: #{math.div(14px, $font-size-base)}rem;
+@function px-to-rem($font-size) {
+  @return #{math.div($font-size, $font-size-base)}rem;
+}
+$font-size-xxxs: px-to-rem(11px);
+$font-size-xxs: px-to-rem(12px);
+$font-size-xs: px-to-rem(13px);
+$font-size-s: px-to-rem(14px);
 $font-size-m: 1rem;
-$font-size-l: #{math.div(16px, $font-size-base)}rem;
-$font-size-xl: #{math.div(17px, $font-size-base)}rem;
-$font-size-xxl: #{math.div(18px, $font-size-base)}rem;
-$font-size-xxxl: #{math.div(19px, $font-size-base)}rem;
+$font-size-l: px-to-rem(16px);
+$font-size-xl: px-to-rem(17px);
+$font-size-xxl: px-to-rem(18px);
+$font-size-xxxl: px-to-rem(19px);
 
-$font-size-p: #{math.div(22px, $font-size-base)}rem;
-$font-size-h4: #{math.div(22px, $font-size-base)}rem;
-$font-size-h3: #{math.div(28px, $font-size-base)}rem;
-$font-size-h2: #{math.div(40px, $font-size-base)}rem;
-$font-size-h1: #{math.div(30px, $font-size-base)}rem;
+$font-size-p: px-to-rem(22px);
+$font-size-h4: px-to-rem(22px);
+$font-size-h3: px-to-rem(28px);
+$font-size-h2: px-to-rem(40px);
+$font-size-h1: px-to-rem(30px);
 
 // Transitions and animations
 $transition-duration: 150ms;
