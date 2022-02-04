@@ -12,16 +12,6 @@ $animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 }
 
-.featured-projects .project-image {
-  background-color: #fff;
-  & {
-    overflow: visible;
-  }
-  // Some 'clearing' rectangles may be used as part of SVG masks; don't hide these, but only hide the top-level white background
-  svg > rect[x='0'][y='0'][width='100%'][height='100%'][fill='#fff'] {
-    display: none;
-  }
-  .svg-icon-wrapper {
-    animation: grow-in 1000ms $animation-easing both;
-  }
+.featured-projects .project-image .svg-icon-wrapper {
+  animation: grow-in 1000ms $animation-easing both;
 }
