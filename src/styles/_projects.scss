@@ -1,6 +1,6 @@
 // Styling for projects
 
-$project-icon-width-compact: 76px;
+$project-icon-width: 80px;
 
 .featured-projects {
   margin-bottom: 5px;
@@ -53,9 +53,10 @@ body[data-page-slug="/projects/"] {
     text-align: center;
   }
 }
+
 .project.project-compact {
   // Ensure that project label does not exceed width of project icon
-  max-width: $project-icon-width-compact;
+  max-width: $project-icon-width;
   margin: 0 10px;
   margin-top: 10px;
   vertical-align: top;
@@ -66,8 +67,8 @@ body[data-page-slug="/projects/"] {
   background-color: #fff;
   margin-bottom: 2px;
   a {
-    width: $project-icon-width-compact;
-    height: $project-icon-width-compact;
+    width: $project-icon-width;
+    height: $project-icon-width;
   }
 }
 
