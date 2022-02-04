@@ -56,10 +56,6 @@ strong {
   color: $strong-color;
 }
 
-dfn {
-  font-style: italic;
-}
-
 p {
   margin: 0;
   font-size: $font-size-p;
@@ -108,12 +104,4 @@ svg {
   height: inherit;
   fill: #fff;
   overflow: hidden;
-}
-
-hr {
-  border-width: 0;
-  height: 1px;
-  background-color: rgba(#fff, 0.5);
-  margin: 0;
-  margin-bottom: 24px;
 }
