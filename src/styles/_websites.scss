@@ -16,39 +16,35 @@ $website-list-columns: 3;
   flex-basis: math.div(100%, $website-list-columns);
   width: auto;
   text-align: center;
-  &-list-category-title {
-    margin-top: 0;
-  }
-  &-title {
-    margin: 2px 0;
-  }
-  &-main {
-    display: block;
-    padding-left: 0;
-  }
-  &-image {
-    width: auto;
-    border-radius: 10px;
-    a {
-      width: 256px;
-      height: 160px;
-    }
-    &,
-    [data-placeholder-image] {
-      background-color: #fff !important;
-    }
-  }
   @include layout(hybrid) {
     flex-basis: 100%;
-    &-image {
-      width: auto;
-      overflow: hidden;
-    }
   }
-  &-details {
-    font-size: $font-size-m;
+}
+.website-list-category-title {
+  margin-top: 0;
+}
+.website-title {
+  margin: 2px 0;
+}
+.website-main {
+  display: block;
+  padding-left: 0;
+}
+.website-image {
+  width: auto;
+  border-radius: 10px;
+  a {
+    width: 256px;
+    height: 160px;
   }
-  &-years {
-    font-weight: $font-weight-bold;
+  &,
+  [data-placeholder-image] {
+    background-color: #fff !important;
   }
+}
+.website-details {
+  font-size: $font-size-m;
+}
+.website-years {
+  font-weight: $font-weight-bold;
 }

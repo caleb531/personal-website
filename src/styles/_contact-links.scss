@@ -1,19 +1,17 @@
 // Styling for contact links
 
-.contact-link {
-  &-image {
-    box-shadow: none;
-    a {
-      $icon-size: 64px;
-      width: $icon-size;
-      height: $icon-size;
-    }
-    svg {
-      vertical-align: top;
-      filter: drop-shadow(0 0 5px rgba(#000, 0.3));
-    }
+.contact-link-image {
+  box-shadow: none;
+  a {
+    $icon-size: 64px;
+    width: $icon-size;
+    height: $icon-size;
   }
-  &-main p {
-    margin: 0;
+  svg {
+    vertical-align: top;
+    filter: drop-shadow(0 0 5px rgba(#000, 0.3));
   }
+}
+.contact-link-main p {
+  margin: 0;
 }
