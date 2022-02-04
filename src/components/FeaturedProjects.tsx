@@ -13,7 +13,7 @@ function FeaturedProjects() {
   const projectsByName: ProjectMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
 
   return (
-    <section className="featured-projects allow-animations">
+    <section className="featured-projects">
       <h3>Featured Projects</h3>
       <div className="entry-list project-list entry-list-compact project-list-compact">
         {projectMetadata.featuredProjects.map((projectName, p) => {
