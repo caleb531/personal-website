@@ -1,29 +1,19 @@
-// Sass Variables
+// Font variables
 @use 'sass:math';
 
-// Base colors
-$color-black: #111;
-$color-blue: #068;
-$color-teal: #099;
-$color-green: #cf0;
-$color-orange: #f93;
-$color-red: #d33;
-$color-purple: #93c;
-
-// Semantic colors
-$body-background-color: $color-blue;
-$link-color: $color-green;
-$strong-color: $link-color;
-
-// Fonts
+// Basic font characteristics
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
 $font-weight-normal: 300;
 $font-weight-bold: 400;
 $line-height: 1.4;
+
+// Base font size
 $font-size-base: 15px;
 @function px-to-rem($font-size) {
   @return #{math.div($font-size, $font-size-base)}rem;
 }
+
+// Generic font sizes
 $font-size-xxxs: px-to-rem(11px);
 $font-size-xxs: px-to-rem(12px);
 $font-size-xs: px-to-rem(13px);
@@ -34,25 +24,9 @@ $font-size-xl: px-to-rem(17px);
 $font-size-xxl: px-to-rem(18px);
 $font-size-xxxl: px-to-rem(19px);
 
+// Semantic font sizes
 $font-size-p: px-to-rem(22px);
 $font-size-h4: px-to-rem(24px);
 $font-size-h3: px-to-rem(28px);
 $font-size-h2: px-to-rem(40px);
 $font-size-h1: px-to-rem(30px);
-
-// Transitions and animations
-$transition-duration: 150ms;
-$transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
-$animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-$layer-box-shadow: 0 0 20px rgba(#000, 0.1);
-
-$body-max-width: 960px;
-
-// Responsive widths
-$layout-widths: (
-  body-max: $body-max-width,
-  hybrid: 768px,
-  compact: 540px,
-  very-compact: 340px
-);

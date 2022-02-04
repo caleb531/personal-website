@@ -1,6 +1,11 @@
+// Transitions and animations
+
+$transition-duration: 150ms;
+$transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+$animation-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+
 // Have each project icon "fall into place" (on a timed delay) when the project
 // icon enters the DOM
-
 @keyframes grow-in {
   from {
     transform: scale(0);

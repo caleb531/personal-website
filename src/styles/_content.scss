@@ -70,46 +70,6 @@ p {
   margin-bottom: 0;
 }
 
-code,
-kbd,
-pre,
-samp {
-  padding: 0 2px;
-  background-color: rgba(#000, 0.4);
-  font-family: monospace;
-  @include hyphens(none);
-}
-
-pre {
-  margin: 20px 0;
-  padding: 6px 10px;
-  white-space: pre-wrap;
-  overflow: auto;
-  code {
-    background: none;
-  }
-}
-
-blockquote,
-q {
-  @include hyphens(none);
-  quotes: none;
-  &:before,
-  &:after {
-    content: "";
-    content: none;
-  }
-}
-
-blockquote {
-  margin: 24px 40px;
-  font-style: italic;
-  font-size: $font-size-xxl;
-  em, i {
-    font-style: normal;
-  }
-}
-
 small {
   font-size: smaller;
 }

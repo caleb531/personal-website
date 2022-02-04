@@ -1,28 +1,6 @@
 // Sass Mixins
 @use 'sass:math';
 
-// Applies the given styling to a media query
-@mixin layout($layout) {
-  $width: map-get($layout-widths, $layout);
-  @media only screen and (max-width: $width) {
-    @content;
-  }
-}
-
-// Mixins for vendor-prefixed properties
-
-@mixin hyphens($value) {
-  -webkit-hyphens: $value;
-  -ms-hyphens: $value;
-  hyphens: $value;
-}
-
-@mixin transform($value) {
-  -webkit-transform: $value;
-  -ms-transform: $value;
-  transform: $value;
-}
-
 // Mixins for overlay menus
 
 $menu-background-color: rgba(#000, 0.4);
@@ -57,7 +35,7 @@ $menu-offset-right: -4px;
   margin-top: $menu-offset-top !important;
   @if $position == 'center' {
     right: 50%;
-    @include transform(translateX(50%));
+    transform: translateX(50%);
   } @else {
     right: $menu-offset-right;
   }
@@ -72,7 +50,7 @@ $menu-offset-right: -4px;
     border-bottom-color: $menu-background-color;
     position: absolute;
     top: math.div(-$menu-arrow-width, 2);
-    @include transform(translateX(50%));
+    transform: translateX(50%);
     @if $position == 'center' {
       right: 50%;
     } @else {
