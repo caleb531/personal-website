@@ -97,7 +97,7 @@ export const plugins: GatsbyConfig['plugins'] = [
   'gatsby-plugin-inline-svg',
   'gatsby-plugin-style-to-link',
   {
-    resolve: 'gatsby-source-google-font-css',
+    resolve: 'gatsby-source-inline-google-fonts',
     options: {
       fontCssUrls: [
         'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap'
