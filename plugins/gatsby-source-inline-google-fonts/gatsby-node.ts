@@ -1,7 +1,9 @@
 import { GatsbyNode, NodeInput, PluginOptions } from 'gatsby';
 import fetch from 'node-fetch';
+import path from 'path';
 
-// Constants for the font content type
+// Plugin constants
+const PLUGIN_NAME = path.basename(__dirname);
 const FONT_NODE_TYPE = 'GoogleFontCss';
 
 // Node types for this plugin
@@ -19,20 +21,37 @@ type SourceNodesArgs = Parameters<GatsbyNode['sourceNodes']>[0];
 // react-helmet (documentation on creating a source plugin:
 // https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/creating-a-source-plugin/)
 export const sourceNodes = (
-  { actions, createNodeId, createContentDigest, cache }: SourceNodesArgs,
+  { actions, createNodeId, createContentDigest, cache, reporter }: SourceNodesArgs,
   pluginOptions: FontPluginOptions
 ) => {
   const { createNode } = actions;
 
-  async function fetchFontCss(fontCssUrl: string): Promise<string> {
-    return (await fetch(fontCssUrl)).text();
+  // Return the contents of the given Google Font URL (then cache the resulting
+  // CSS to speed up subsequent builds)
+  async function getFontCss(fontCssUrl: string): Promise<string> {
+    const cachedCss = await cache.get(fontCssUrl);
+    if (cachedCss) {
+      reporter.info(`[${PLUGIN_NAME}] using cached font CSS`);
+      return cachedCss;
+    } else {
+      reporter.info(`[${PLUGIN_NAME}] font CSS not cached; fetching`);
+      // Ensure that css is not a promise by explicitly specifying the type
+      try {
+        const css: string = await (await fetch(fontCssUrl)).text();
+        await cache.set(fontCssUrl, css);
+        return css;
+      } catch (error) {
+        reporter.error(`[${PLUGIN_NAME}] error fetching fonts; falling back to external stylesheet`);
+        return '';
+      }
+    }
   }
 
   return Promise.all(pluginOptions.fontCssUrls.map(async (fontCssUrl) => {
 
     const fontData: FontData = {
       url: fontCssUrl,
-      css: await fetchFontCss(fontCssUrl)
+      css: await getFontCss(fontCssUrl)
     };
     const nodeMeta: NodeInput = {
       id: createNodeId(`${FONT_NODE_TYPE}-${fontCssUrl}`),
