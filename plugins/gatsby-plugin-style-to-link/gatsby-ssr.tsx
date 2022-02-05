@@ -17,7 +17,7 @@ export const onPreRenderHTML: GatsbySSR['onPreRenderHTML'] = ({ getHeadComponent
   // the <style> tag's data-href attribute to identify the path to the compiled
   // CSS bundle)
   const transformedHeadComponents = headComponents.map((node: JSX.Element) => {
-    if (node.type === 'style' && node.props['data-href'] && !node.props['data-do-not-convert-to-link']) {
+    if (node.type === 'style' && node.props['data-href'] && !node.props['data-keep-inline']) {
       const globalStyleHref = node.props['data-href'];
       if (globalStyleHref) {
         return <link href={globalStyleHref} rel="stylesheet" type="text/css" />;

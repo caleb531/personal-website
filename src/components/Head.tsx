@@ -17,6 +17,7 @@ function Head({ pageTitle, pageSlug }: Props) {
     twitterUsername,
     googleSiteVerification
   } = queryResults.site.siteMetadata;
+  const { allGoogleFontCss } = queryResults;
   const isHomepage = pageSlug === '/';
   const pageSeoTitle = (isHomepage ? `${siteTitle} | ${siteTagline}` : pageTitle);
   const pageSeoUrl = siteUrl + pageSlug;
@@ -70,6 +71,11 @@ function Head({ pageTitle, pageSlug }: Props) {
           href={url}
           sizes={`${size}x${size}`} />;
       })}
+      {allGoogleFontCss.nodes.map(({ url, css }) => {
+        return css ?
+          <style key={url} data-href={url} data-keep-inline>{css}</style> :
+          <link key={url} rel="stylesheet" href={url} />;
+      })}
     </Helmet>
   );
 
@@ -87,6 +93,12 @@ export const query = graphql`
         siteDescription
         twitterUsername
         googleSiteVerification
+      }
+    }
+    allGoogleFontCss {
+      nodes {
+        url
+        css
       }
     }
   }
