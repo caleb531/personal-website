@@ -11,6 +11,8 @@ function FeaturedProjects() {
   const queryResults: FeaturedProjectsQuery = useStaticQuery(query);
   const { allMarkdownRemark } = queryResults;
   const projectsByName: ProjectMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const initialAnimationDelay = 200;
+  const animationDelay = 200;
 
   return (
     <section className="featured-projects">
@@ -22,7 +24,7 @@ function FeaturedProjects() {
             <Project
               key={project.fields.name}
               project={project}
-              animationDelay={150 * p}
+              animationDelay={initialAnimationDelay + (animationDelay * p)}
               isCompact />
           );
         })}
