@@ -93,15 +93,15 @@ export const plugins: GatsbyConfig['plugins'] = [
       path: './src/contact-links'
     }
   },
-  {
-    resolve: 'gatsby-plugin-web-font-loader',
-    options: {
-      google: {
-        families: ['Source+Sans+Pro:300,400&display=swap']
-      }
-    }
-  },
   'gatsby-plugin-content-fields',
+  'gatsby-plugin-inline-svg',
   'gatsby-plugin-style-to-link',
-  'gatsby-plugin-inline-svg'
+  {
+    resolve: 'gatsby-source-google-font-css',
+    options: {
+      fontCssUrls: [
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap'
+      ]
+    }
+  }
 ];

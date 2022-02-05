@@ -1,0 +1,13 @@
+{
+  "name": "gatsby-source-google-font-css",
+  "author": "Caleb Evans",
+  "description": "Pre-fetches Google Font CSS URLs during the Gatsby build step, and saves the CSS contents to GraphQL so they can be inlined as <style> tags with react-helmet",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "css",
+    "style-tag",
+    "google",
+    "fonts"
+  ]
+}
