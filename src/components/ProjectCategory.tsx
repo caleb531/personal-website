@@ -17,7 +17,6 @@ function ProjectCategory({ category, projects }: Props) {
         return (
           <Project
             key={project.fields.name}
-            animationDelay={150 * p}
             project={project} />
         );
       })}

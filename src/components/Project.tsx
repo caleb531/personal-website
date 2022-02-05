@@ -3,9 +3,9 @@ import React from 'react';
 import SvgIcon from './SvgIcon';
 import { ProjectData } from './types';
 
-type Props = { project: ProjectData, animationDelay: number, isCompact?: boolean };
+type Props = { project: ProjectData, animationDelay?: number, isCompact?: boolean };
 
-function Project({ project, animationDelay, isCompact = false }: Props) {
+function Project({ project, animationDelay = null, isCompact = false }: Props) {
   return (
     <article className={classNames(
       'entry',
