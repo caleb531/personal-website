@@ -100,7 +100,7 @@ export const plugins: GatsbyConfig['plugins'] = [
     resolve: 'gatsby-source-inline-google-fonts',
     options: {
       fontCssUrls: [
-        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=block'
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=fallback'
       ]
     }
   }
