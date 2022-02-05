@@ -1,13 +1,14 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { HeadQuery } from '../../graphql-types';
 import { getGravatarUrl } from '../utilities/gravatar';
 
 type Props = { pageTitle: string, pageSlug: string };
 
 function Head({ pageTitle, pageSlug }: Props) {
 
-  const queryResults = useStaticQuery(query);
+  const queryResults: HeadQuery = useStaticQuery(query);
   const {
     siteUrl,
     siteTitle,
