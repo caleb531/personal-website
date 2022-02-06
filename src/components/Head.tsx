@@ -22,7 +22,7 @@ function Head({ pageTitle, pageSlug }: Props) {
   const isHomepage = pageSlug === '/';
   const pageSeoTitle = (isHomepage ? `${siteTitle} | ${siteTagline}` : pageTitle);
   const pageSeoUrl = siteUrl + pageSlug;
-  const pageSeoImage = `${siteUrl}/images/social-preview.jpg`;
+  const pageSeoImage = `${siteUrl}/images/social-preview.png`;
 
   const renderedTitle = isHomepage ?
     `${siteTitle} | ${siteTagline}` :
