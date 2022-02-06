@@ -48,6 +48,7 @@ function Head({ pageTitle, pageSlug }: Props) {
       title={renderedTitle}>
       <link rel="shortcut icon" href={getGravatarUrl(siteEmail, 32)} />
       <link rel="icon" href={getGravatarUrl(siteEmail, 192)} sizes="192x192" />
+      <meta name="description" content={siteDescription} />
 
       <meta name="og:title" content={pageSeoTitle} />
       <meta name="og:site_title" content={siteTitle} />
