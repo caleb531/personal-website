@@ -46,7 +46,7 @@ function FeaturedProjects() {
     <div className="project-archive">
       <div className="project-search-container">
         <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeFormSubmit}>
-          <label htmlFor="project-search-input">Search:</label>
+          <label htmlFor="project-search-input" className="accessibility-only">Search:</label>
           <input
             type="search"
             name="search"
@@ -55,11 +55,13 @@ function FeaturedProjects() {
             placeholder="Search for a project"
             onInput={setSearchQueryFromInput} />
         </form>
-        {!projects.length ? (
+        {projects.length ? (
+          <div className="project-search-result-count">{projects.length === 1 ? 'Showing 1 project' : `Showing ${projects.length} projects`}</div>
+        ) : (
           <div className="project-search-no-results">
             No Projects Found
           </div>
-        ) : null}
+        )}
       </div>
       <div className="project-list-container">
         {projectMetadata.categories.map((categories, columnIndex) => {

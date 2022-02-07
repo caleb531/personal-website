@@ -10,3 +10,10 @@ button {
     border-radius: 5px;
   }
 }
+
+// Hide some labels from the UI but still be readable by screen readers
+.accessibility-only {
+  position: absolute;
+  top: -1000px;
+  left: -10000px;
+}

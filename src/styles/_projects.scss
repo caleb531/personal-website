@@ -21,8 +21,13 @@ body[data-page-slug='/projects/'] {
   align-items: center;
 }
 #project-search-input {
-  width: 200px;
+  width: 240px;
   max-width: 100%;
+}
+.project-search-result-count {
+  display: block;
+  margin-top: 10px;
+  font-size: $font-size-s;
 }
 .project-search-no-results {
   margin-top: 30px;
