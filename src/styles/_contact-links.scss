@@ -1,5 +1,9 @@
 // Styling for contact links
 
+.contact-link-list:not(.contact-link-list-compact) {
+  margin-top: 24px;
+}
+
 .contact-link-image {
   box-shadow: none;
   a {

@@ -30,7 +30,7 @@ function Page({ pageContext: { frontmatter }, children }: Props) {
           {frontmatter.title ? (
             <h2 className="page-title">{frontmatter.title}</h2>
           ) : null}
-          <div className="page-content">{children}</div>
+          {children}
         </article>
       </main>
       <Footer pageSlug={frontmatter.slug} />

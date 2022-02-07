@@ -52,12 +52,12 @@ audio:not([controls]) {
   display: none;
 }
 
-main {
+article.page {
   position: relative;
   margin: 0 auto;
   padding: 30px;
   border-radius: 20px;
-  background-color: rgba(#000, 0.15);
+  background-color: $main-background-color;
   @include layout(compact) {
     $padding: 20px;
     border-radius: 0;
@@ -72,8 +72,13 @@ main {
 }
 
 .page[data-slug='/'] {
-  p:first-of-type {
+  text-align: center;
+  & > p:first-of-type {
     max-width: 500px;
-    font-size: $font-size-h4;
+    margin: 0 auto;
+    font-size: $font-size-h3;
+    @include layout(compact) {
+      font-size: $font-size-h4;
+    }
   }
 }

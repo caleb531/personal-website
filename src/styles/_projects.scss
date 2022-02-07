@@ -3,25 +3,26 @@
 $project-icon-width: 80px;
 
 .featured-projects {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 // Prevent scroll jumps when no results are returned from a project search
-body[data-page-slug="/projects/"] {
+body[data-page-slug='/'],
+body[data-page-slug='/projects/'] {
   min-height: 1000px;
 }
 
 .project-search-container {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 24px;
 }
 .project-search-container-form {
   display: inline-flex;
   align-items: center;
 }
 #project-search-input {
-  width: 100%;
-  max-width: 200px;
+  width: 200px;
+  max-width: 100%;
 }
 .project-search-no-results {
   margin-top: 30px;
@@ -33,6 +34,7 @@ body[data-page-slug="/projects/"] {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .project-list-column {
@@ -78,7 +80,6 @@ body[data-page-slug="/projects/"] {
 
 .project-compact .project-title {
   display: block;
-  min-height: 30px;
   margin-top: 2px;
   text-align: center;
   font-size: $font-size-xxs;
