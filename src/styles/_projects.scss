@@ -3,7 +3,7 @@
 $project-icon-width: 80px;
 
 .featured-projects {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 // Prevent scroll jumps when no results are returned from a project search
@@ -78,7 +78,6 @@ body[data-page-slug="/projects/"] {
 
 .project-compact .project-title {
   display: block;
-  min-height: 30px;
   margin-top: 2px;
   text-align: center;
   font-size: $font-size-xxs;
