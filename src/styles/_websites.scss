@@ -6,6 +6,7 @@ $website-list-columns: 3;
 
 .website-list {
   display: flex;
+  margin-top: 24px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
