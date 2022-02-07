@@ -7,7 +7,8 @@ $project-icon-width: 80px;
 }
 
 // Prevent scroll jumps when no results are returned from a project search
-body[data-page-slug="/projects/"] {
+body[data-page-slug='/'],
+body[data-page-slug='/projects/'] {
   min-height: 1000px;
 }
 
@@ -33,6 +34,7 @@ body[data-page-slug="/projects/"] {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .project-list-column {
