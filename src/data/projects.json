@@ -7,7 +7,7 @@
       },
       {
         "slug": "atom",
-        "title": "Atom"
+        "title": "Atom Packages"
       },
       {
         "slug": "programs",
@@ -23,7 +23,7 @@
       },
       {
         "slug": "vscode",
-        "title": "VS Code"
+        "title": "VS Code Extensions"
       }
     ],
     [
