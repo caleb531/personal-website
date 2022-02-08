@@ -61,9 +61,12 @@ p {
   font-size: $font-size-p;
   line-height: $line-height;
   margin-top: 24px;
-}
-#page-content p:last-child {
-  margin-bottom: 0;
+  .page > &:first-child {
+    margin-top: 0;
+  }
+  .page > &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 small {
