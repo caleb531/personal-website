@@ -29,7 +29,8 @@ input[type=tel],
 input[type=url] {
   -webkit-appearance: none;
   padding: 8px 10px;
-  border-width: 0;
+  background-clip: padding-box;
+  border: solid 2px rgba(#000, 0.25);
   border-radius: 5px;
   font-family: inherit;
   font-size: $font-size-m;
