@@ -4,7 +4,7 @@ export const siteMetadata: GatsbyConfig['siteMetadata'] = {
   siteUrl: 'https://calebevans.me',
   siteTitle: 'Caleb Evans',
   siteTagline: 'Coder for Christ',
-  siteDescription: 'Hi, I\'m Caleb, a web developer who lives for Christ by coding enjoyable apps and useful tools. Come see what I\'ve made!',
+  siteDescription: 'Hi, I\'m Caleb, a web developer who lives for Christ by building enjoyable apps and useful tools. Come see what I\'ve made!',
   siteEmail: 'caleb@calebevans.me',
   twitterUsername: '@caleb531',
   googleSiteVerification: 'hgENNCrZvitO_dtrCT_F6VdV1YspqEDh-nBMoq0dL5g'
