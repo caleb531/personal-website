@@ -6,10 +6,6 @@
         "title": "Games"
       },
       {
-        "slug": "atom",
-        "title": "Atom Packages"
-      },
-      {
         "slug": "programs",
         "title": "Programs"
       },
@@ -20,6 +16,10 @@
       {
         "slug": "computer-science",
         "title": "Computer Science"
+      },
+      {
+        "slug": "atom",
+        "title": "Atom Packages"
       },
       {
         "slug": "vscode",
