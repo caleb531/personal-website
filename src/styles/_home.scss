@@ -1,0 +1,32 @@
+.home-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  @include layout(compact) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.home-intro-left {
+  padding-right: 20px;
+  img {
+    border-radius: 20px;
+  }
+  @include layout(compact) {
+    flex-direction: column;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+.home-intro-right > p {
+  max-width: 450px;
+  margin: 0 auto;
+  font-size: $font-size-home-intro;
+  @include layout(hybrid) {
+    font-size: $font-size-home-intro-hybrid;
+  }
+  @include layout(compact) {
+    font-size: $font-size-home-intro-compact;
+  }
+}
