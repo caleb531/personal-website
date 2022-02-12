@@ -14,11 +14,18 @@
 }
 .home-intro-left {
   padding-right: 20px;
+  $img-border-radius: 20px;
   .gatsby-image-wrapper {
     overflow: hidden;
-    border-radius: 20px;
-    background-color: #fff;
+    border-radius: $img-border-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+  }
+  // On Safari, the un-rounded image will still peek through overflow:hidden,
+  // resulting in non-rounded corners, so we need to apply border-radius to the
+  // contained image as well
+  img,
+  [data-placeholder-image] {
+    border-radius: $img-border-radius;
   }
   @include layout(compact) {
     flex-direction: column;
