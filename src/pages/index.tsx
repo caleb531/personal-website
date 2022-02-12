@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
+import { getEntriesOfType } from '../lib/api';
 import portraitImage from '/src/images/portrait-full.jpg';
 
-function Home() {
+type Props = { projects: ProjectEntry[] };
+
+function Home({ projects }: Props) {
   return (
     <div className="page-home">
       <article className="home-intro">
@@ -17,8 +20,16 @@ function Home() {
         </div>
       </article>
 
-      <ProjectArchive />
+      <ProjectArchive projects={projects} />
     </div>
   );
 }
 export default Home;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      projects: getEntriesOfType('projects')
+    }
+  };
+}
