@@ -4,10 +4,6 @@ import matter from 'gray-matter';
 import path from 'path';
 import { ContactLinkEntry, Entry, PagePropsWrapper, ProjectEntry, WebsiteEntry } from '../components/types';
 
-// Retrieve the path to the raster image for an entry
-function getImagePath(entryType: string, entryId: string): string {
-  return path.join(process.cwd(), 'src', 'images', entryType, `${entryId}.jpg`);
-}
 // Retrieve the path to the SVG icon for the given entry
 function getEntryIconPath(entryType: string, entryId: string): string {
   return path.join(process.cwd(), 'public', 'icons', entryType, `${entryId}.svg`);
