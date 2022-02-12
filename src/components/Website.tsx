@@ -1,28 +1,28 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Image from 'next/image';
 import React from 'react';
-import { WebsiteData } from './types';
+import { WebsiteEntry } from './types';
 
-type Props = { website: WebsiteData }
+type Props = { website: WebsiteEntry }
 
 function Website({ website }: Props) {
   return (
     <article className="entry website">
       <div className="entry-image website-image">
-        <a href={website.frontmatter.direct_url}>
-          <GatsbyImage image={getImage(website.image)} alt="" />
+        <a href={website.direct_url}>
+          <Image src={website.image} alt="" width={256} height={160} />
         </a>
       </div>
       <div className="entry-main website-main">
 
         <h4 className="entry-title website-title">
-          <a href={website.frontmatter.direct_url}>
-            {website.frontmatter.title}
+          <a href={website.direct_url}>
+            {website.title}
           </a>
         </h4>
 
         <div className="website-details">
-          <div className="website-years">{website.frontmatter.start_year} &ndash; {website.frontmatter.end_year || 'present'}</div>
-          <div className="website-technologies">{website.frontmatter.technologies}</div>
+          <div className="website-years">{website.start_year} &ndash; {website.end_year || 'present'}</div>
+          <div className="website-technologies">{website.technologies}</div>
         </div>
 
       </div>

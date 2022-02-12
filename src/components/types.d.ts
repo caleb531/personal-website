@@ -26,10 +26,11 @@ export interface ProjectCategoryData {
   title: string;
 }
 
-export interface WebsiteEntry {
+export interface WebsiteEntry extends Entry {
   technologies: string;
   start_year: number;
   end_year: number;
+  image: string;
 }
 export type WebsiteMap = EntryMap<WebsiteEntry>;
 

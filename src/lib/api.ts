@@ -6,7 +6,7 @@ import { ContactLinkEntry, Entry, ProjectEntry } from '../components/types';
 
 // Retrieve the path to the raster image for an entry
 function getImagePath(entryType: string, entryId: string): string {
-  return path.join(process.cwd(), 'src', 'images', entryType, `${entryId}.svg`);
+  return path.join(process.cwd(), 'src', 'images', entryType, `${entryId}.jpg`);
 }
 // Retrieve the path to the SVG icon for the given entry
 function getEntryIconPath(entryType: string, entryId: string): string {
@@ -56,6 +56,6 @@ export function getContactLinks(): ContactLinkEntry[] {
 
 export function getWebsiteEntries(): ContactLinkEntry[] {
   return getEntries('websites', (entryId) => {
-    return { image: getImagePath('websites', entryId) };
+    return { image: `/images/websites/${entryId}.jpg` };
   });
 }

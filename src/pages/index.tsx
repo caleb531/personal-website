@@ -3,7 +3,6 @@ import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
 import { getProjects } from '../lib/api';
-import portraitImage from '/src/images/portrait-full.jpg';
 
 type Props = { projects: ProjectEntry[] };
 
@@ -13,7 +12,8 @@ function Home({ projects }: Props) {
       <article className="home-intro">
         <div className="home-intro-left">
           <div className="home-intro-photo">
-            <Image src={portraitImage} alt="Caleb Evans" width={180} height={180} />
+            {/* There is a NextJS quirk that requires images to be in the public/ directory, and outside src/, when used with the <Image /> component (source: https://github.com/vercel/next.js/issues/19105#issuecomment-750408928) */}
+            <Image src="/images/portrait-full.jpg" alt="Caleb Evans" width={180} height={180} />
           </div>
         </div>
         <div className="home-intro-right">
