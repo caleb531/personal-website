@@ -17,6 +17,8 @@ function Projects({ projects }: Props) {
 export async function getStaticProps() {
   return {
     props: {
+      title: 'Projects',
+      description: 'Apps and programs crafted by Caleb Evans, coder for Christ',
       projects: getProjects()
     }
   };
