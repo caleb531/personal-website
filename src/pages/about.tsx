@@ -40,4 +40,13 @@ function About() {
   );
 }
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'About',
+      description: 'About the life and interests of Caleb Evans, coder for Christ'
+    }
+  };
+}
+
 export default About;
