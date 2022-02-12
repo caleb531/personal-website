@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 import SvgIcon from './SvgIcon';
-import { ContactLinkData } from './types';
+import { ContactLinkEntry } from './types';
 
-type Props = { contactLink: ContactLinkData, isCompact?: boolean }
+type Props = { contactLink: ContactLinkEntry, isCompact?: boolean }
 
 function ContactLink({ contactLink, isCompact = false }: Props) {
   return (
@@ -17,9 +17,9 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
         <>
           <div className="entry-image contact-link-image">
             <a
-              href={contactLink.frontmatter.direct_url}
-              aria-labelledby={`contact-link-${contactLink.fields.name}`}>
-              <SvgIcon content={contactLink.icon.fields.svgContents} />
+              href={contactLink.direct_url}
+              aria-labelledby={`contact-link-${contactLink.id}`}>
+              <SvgIcon content={contactLink.icon} />
             </a>
           </div>
 
@@ -27,23 +27,23 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
 
             <h3 className="entry-title contact-link-title">
               <a
-                href={contactLink.frontmatter.direct_url}
-                id={`contact-link-${contactLink.fields.name}`}>
-                { contactLink.frontmatter.title}
+                href={contactLink.direct_url}
+                id={`contact-link-${contactLink.id}`}>
+                { contactLink.title}
               </a>
             </h3>
 
             <div className="entry-desc contact-link-desc">
-              {contactLink.frontmatter.description}
+              {contactLink.description}
             </div>
 
           </div>
         </> : <>
           <div className="entry-image contact-link-image">
             <a
-              href={contactLink.frontmatter.direct_url}
-              aria-label={contactLink.frontmatter.title}>
-              <SvgIcon content={contactLink.icon.fields.svgContents} />
+              href={contactLink.direct_url}
+              aria-label={contactLink.title}>
+              <SvgIcon content={contactLink.icon} />
             </a>
           </div>
         </>}

@@ -1,19 +1,15 @@
 import classNames from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
 import { keyBy } from 'lodash-es';
 import React from 'react';
-import { ContactLinksQuery } from '../../graphql-types';
 import contactLinkMetadata from '../data/contact-links.json';
 import ContactLink from './ContactLink';
-import { ContactLinkMap } from './types';
+import { ContactLinkEntry, ContactLinkMap } from './types';
 
-type Props = { isCompact?: boolean };
+type Props = { contactLinks: ContactLinkEntry[], isCompact?: boolean };
 
-function ContactLinks({ isCompact = false }: Props) {
+function ContactLinks({ contactLinks, isCompact = false }: Props) {
 
-  const queryResults: ContactLinksQuery = useStaticQuery(query);
-  const { allMarkdownRemark } = queryResults;
-  const contactLinksByName: ContactLinkMap = keyBy(allMarkdownRemark.nodes, 'fields.name');
+  const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
 
   return (
     <div className={classNames(
@@ -26,7 +22,7 @@ function ContactLinks({ isCompact = false }: Props) {
         const contactLink = contactLinksByName[contactLinkName];
         return (
           <ContactLink
-            key={contactLink.fields.name}
+            key={contactLink.id}
             contactLink={contactLink}
             isCompact={isCompact} />
         );
@@ -35,26 +31,3 @@ function ContactLinks({ isCompact = false }: Props) {
   );
 }
 export default ContactLinks;
-
-export const query = graphql`
-  query ContactLinks {
-    allMarkdownRemark(filter: { fields: { collection: { eq: "contact-links" } } }) {
-      nodes {
-        fields {
-          name
-          collection
-        }
-        frontmatter {
-          title
-          direct_url
-          description
-        }
-        icon {
-          fields {
-            svgContents
-          }
-        }
-      }
-    }
-  }
-`;

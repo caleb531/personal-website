@@ -7,7 +7,6 @@ export interface Entry {
   id: string;
   title: string;
   direct_url: string;
-  category: string;
   description: string;
 }
 export interface EntryMap<SubEntry> {
@@ -15,6 +14,7 @@ export interface EntryMap<SubEntry> {
 }
 
 export interface ProjectEntry extends Entry {
+  category: string;
   icon: string;
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
@@ -35,5 +35,6 @@ export interface WebsiteEntry extends Entry {
 export type WebsiteMap = EntryMap<WebsiteEntry>;
 
 export interface ContactLinkEntry extends Entry {
-  // Equivalent shape for now
+  icon: string;
 }
+export type ContactLinkMap = EntryMap<ContactLinkEntry>;

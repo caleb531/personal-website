@@ -2,7 +2,7 @@ import fs from 'fs';
 import { glob } from 'glob-promise';
 import matter from 'gray-matter';
 import path from 'path';
-import { ContactLinkEntry, Entry, ProjectEntry } from '../components/types';
+import { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../components/types';
 
 // Retrieve the path to the raster image for an entry
 function getImagePath(entryType: string, entryId: string): string {
@@ -29,7 +29,7 @@ function getEntryIconContents(entryType: string, entryId: string): string {
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
 // initialize the entry with
-export function getEntries(entryType: string, defineAddlProps: (id: string) => object = () => undefined): Entry[] {
+export function getEntries<SubEntry>(entryType: string, defineAddlProps: (id: string) => object = () => undefined): (SubEntry)[] {
   const entryDirectory = path.join(process.cwd(), 'src', entryType);
   const entryPaths = glob.sync(`${entryDirectory}/*.md`);
   return entryPaths.map((entryPath) => {
@@ -38,24 +38,33 @@ export function getEntries(entryType: string, defineAddlProps: (id: string) => o
       id: entryId,
       ...matter(fs.readFileSync(entryPath)).data,
       ...defineAddlProps(entryId)
-    } as Entry;
+    } as (Entry & SubEntry);
   });
 }
 
 export function getProjects(): ProjectEntry[] {
-  return getEntries('projects', (entryId) => {
+  return getEntries<ProjectEntry>('projects', (entryId) => {
     return { icon: getEntryIconContents('projects', entryId) };
   });
 }
 
 export function getContactLinks(): ContactLinkEntry[] {
-  return getEntries('contact-links', (entryId) => {
+  return getEntries<ContactLinkEntry>('contact-links', (entryId) => {
     return { icon: getEntryIconContents('contact-links', entryId) };
   });
 }
 
-export function getWebsiteEntries(): ContactLinkEntry[] {
-  return getEntries('websites', (entryId) => {
+export function getWebsiteEntries(): WebsiteEntry[] {
+  return getEntries<WebsiteEntry>('websites', (entryId) => {
     return { image: `/images/websites/${entryId}.jpg` };
   });
+}
+
+// Define props that should be globally available across all pages
+export async function getGlobalStaticProps() {
+  return {
+    props: {
+      contactLinks: getContactLinks()
+    }
+  };
 }

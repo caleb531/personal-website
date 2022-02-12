@@ -1,4 +1,5 @@
 import React from 'react';
+import { getGlobalStaticProps } from '../lib/api';
 
 function About() {
   return (
@@ -43,6 +44,7 @@ function About() {
 export async function getStaticProps() {
   return {
     props: {
+      ...(await getGlobalStaticProps()).props,
       title: 'About',
       description: 'About the life and interests of Caleb Evans, coder for Christ'
     }

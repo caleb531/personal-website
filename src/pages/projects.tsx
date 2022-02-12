@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
-import { getProjects } from '../lib/api';
+import { getGlobalStaticProps, getProjects } from '../lib/api';
 
 type Props = { projects: ProjectEntry[] };
 
@@ -17,6 +17,7 @@ function Projects({ projects }: Props) {
 export async function getStaticProps() {
   return {
     props: {
+      ...(await getGlobalStaticProps()).props,
       title: 'Projects',
       description: 'Apps and programs crafted by Caleb Evans, coder for Christ',
       projects: getProjects()

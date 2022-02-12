@@ -1,7 +1,7 @@
 import React from 'react';
 import { WebsiteEntry } from '../components/types';
 import WebsiteArchive from '../components/WebsiteArchive';
-import { getWebsiteEntries } from '../lib/api';
+import { getGlobalStaticProps, getWebsiteEntries } from '../lib/api';
 
 type Props = { websites: WebsiteEntry[] };
 
@@ -17,6 +17,7 @@ function Websites({ websites }: Props) {
 export async function getStaticProps() {
   return {
     props: {
+      ...(await getGlobalStaticProps()).props,
       title: 'Websites',
       description: 'Professional websites built by Caleb Evans, coder for Christ',
       websites: getWebsiteEntries()
