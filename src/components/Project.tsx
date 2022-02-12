@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 import SvgIcon from './SvgIcon';
-import { ProjectData } from './types';
+import { ProjectEntry } from './types';
 
-type Props = { project: ProjectData, animationDelay?: number, isCompact?: boolean };
+type Props = { project: ProjectEntry, animationDelay?: number, isCompact?: boolean };
 
 function Project({ project, animationDelay = null, isCompact = false }: Props) {
   return (
@@ -16,9 +16,9 @@ function Project({ project, animationDelay = null, isCompact = false }: Props) {
 
       <div className="entry-image project-image">
         <a
-          href={project.frontmatter.direct_url}
-          aria-labelledby={`project-title-${project.fields.name}`}>
-          <SvgIcon content={project.icon.fields.svgContents} animationDelay={animationDelay} />
+          href={project.direct_url}
+          aria-labelledby={`project-title-${project.id}`}>
+          <SvgIcon content={project.icon} animationDelay={animationDelay} />
         </a>
       </div>
 
@@ -26,15 +26,15 @@ function Project({ project, animationDelay = null, isCompact = false }: Props) {
 
         <h4
           className="entry-title project-title"
-          id={`project-title-${project.fields.name}`}>
-          <a href={project.frontmatter.direct_url}>
-            {project.frontmatter.title}
+          id={`project-title-${project.id}`}>
+          <a href={project.direct_url}>
+            {project.title}
           </a>
         </h4>
 
-        {project.frontmatter.description && !isCompact ? (
+        {project.description && !isCompact ? (
           <p className="entry-desc project-desc">
-            {project.frontmatter.description}
+            {project.description}
           </p>
         ) : null}
 

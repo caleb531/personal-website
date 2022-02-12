@@ -2,53 +2,53 @@
   "categories": [
     [
       {
-        "slug": "games",
+        "id": "games",
         "title": "Games"
       },
       {
-        "slug": "programs",
+        "id": "programs",
         "title": "Programs"
       },
       {
-        "slug": "math",
+        "id": "math",
         "title": "Math"
       },
       {
-        "slug": "computer-science",
+        "id": "computer-science",
         "title": "Computer Science"
       },
       {
-        "slug": "atom",
+        "id": "atom",
         "title": "Atom Packages"
       },
       {
-        "slug": "vscode",
+        "id": "vscode",
         "title": "VS Code Extensions"
       }
     ],
     [
       {
-        "slug": "javascript-libraries",
+        "id": "javascript-libraries",
         "title": "JavaScript Libraries"
       },
       {
-        "slug": "fun",
+        "id": "fun",
         "title": "Fun"
       },
       {
-        "slug": "tools",
+        "id": "tools",
         "title": "Tools / Productivity"
       },
       {
-        "slug": "alfred",
+        "id": "alfred",
         "title": "Alfred"
       },
       {
-        "slug": "brunch-plugins",
+        "id": "brunch-plugins",
         "title": "Brunch Plugins"
       },
       {
-        "slug": "wordpress",
+        "id": "wordpress",
         "title": "WordPress"
       }
     ]

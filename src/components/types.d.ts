@@ -1,97 +1,33 @@
-// Core GraphQL node types
-
-
-export interface NodeFields {
-  name?: string;
-  collection?: string;
-}
-export interface NodeMap<NodeType> {
-  [key: string]: NodeType;
-}
-export interface MarkdownData<FrontmatterType> {
-  fields?: NodeFields;
-  frontmatter?: FrontmatterType;
-}
-
-
-// Page types
-
-
-export interface PageFields extends NodeFields {
-  // Equivalent shape for now
-}
-export interface PageFrontmatter {
-  title?: string;
-  slug?: string;
-}
-export interface PageData {
-  fields?: PageFields;
-  frontmatter?: PageFrontmatter;
-}
-type PageMap = NodeMap<PageData>;
-
-
-// Icon types
-
-
-export interface IconFields {
-  svgContents?: string;
-}
-export interface IconData {
-  fields?: IconFields;
-}
-
-
-// Project types
-
-
-export interface ProjectFrontmatter {
-  title?: string;
-  direct_url?: string;
-  category?: string;
-  description?: string;
-}
-export interface ProjectCategoryData {
-  slug: string;
+export interface PageProps {
   title: string;
+  description: string;
 }
-export interface ProjectData extends MarkdownData<ProjectFrontmatter> {
-  icon?: IconData;
+
+export interface Entry {
+  id: string;
+  title: string;
+  direct_url: string;
+  category: string;
+  description: string;
+}
+
+export interface ProjectEntry extends Entry {
+  // Equivalent shape for now
 }
 export interface ProjectGroups {
-  [key: string]: ProjectData[];
+  [key: string]: ProjectEntry[];
 }
-export type ProjectMap = NodeMap<ProjectData>;
-
-
-// Website types
-
-
-export interface WebsiteFrontmatter {
-  title?: string;
-  direct_url?: string;
-  technologies?: string;
-  description?: string;
-  start_year?: number;
-  end_year?: number;
+export interface ProjectCategoryData {
+  id: string;
+  title: string;
 }
-export interface WebsiteData extends MarkdownData<WebsiteFrontmatter> {
-  // TODO: eliminate the use of `any` once we have the Website Archive built
-  image?: any;
+
+export interface WebsiteEntry {
+  technologies: string;
+  start_year: number;
+  end_year: number;
 }
-export type WebsiteMap = NodeMap<WebsiteData>;
 
-
-// Contact links
-
-
-export interface ContactLinkFrontmatter {
-  title?: string;
-  direct_url?: string;
-  description?: string;
-}
-export interface ContactLinkData extends MarkdownData<ContactLinkFrontmatter> {
+export interface ContactLinkEntry extends Entry {
   // Equivalent shape for now
-  icon?: IconData;
 }
-export type ContactLinkMap = NodeMap<ContactLinkData>;

@@ -1,8 +1,8 @@
 import React from 'react';
 import Project from './Project';
-import { ProjectCategoryData, ProjectData } from './types';
+import { ProjectCategoryData, ProjectEntry } from './types';
 
-type Props = { category: ProjectCategoryData, projects: ProjectData[] };
+type Props = { category: ProjectCategoryData, projects: ProjectEntry[] };
 
 function ProjectCategory({ category, projects }: Props) {
   return (
@@ -16,7 +16,7 @@ function ProjectCategory({ category, projects }: Props) {
       {projects.map((project, p) => {
         return (
           <Project
-            key={project.fields.name}
+            key={project.id}
             project={project} />
         );
       })}

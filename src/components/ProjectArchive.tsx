@@ -1,20 +1,18 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { groupBy } from 'lodash-es';
 import React, { useState } from 'react';
-import { ProjectArchiveQuery } from '../../graphql-types';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
-import { ProjectData, ProjectGroups } from './types';
+import { ProjectEntry, ProjectGroups } from './types';
 
-function filterProjects(projects: ProjectData[], searchQuery: string): ProjectData[] {
+function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
   if (searchQuery.trim() === '') {
     return projects;
   }
   return projects.filter((project) => {
     const keywords = [
-      ...project.frontmatter.title.toLowerCase().split(' '),
-      project.frontmatter.category.toLowerCase(),
-      ...project.frontmatter.description.toLowerCase().split(' ')
+      ...project.title.toLowerCase().split(' '),
+      project.category.toLowerCase(),
+      ...project.description.toLowerCase().split(' ')
     ];
     return searchQuery.toLowerCase().split(' ').every((searchKeyword) => {
       return keywords.some((keyword) => {
@@ -30,13 +28,13 @@ function disableNativeFormSubmit(event: React.FormEvent) {
   event.preventDefault();
 }
 
-function FeaturedProjects() {
+type Props = { projects: ProjectEntry[] };
 
-  const queryResults: ProjectArchiveQuery = useStaticQuery(query);
-  const { allMarkdownRemark } = queryResults;
+function FeaturedProjects({ projects }: Props) {
+
   const [searchQuery, setSearchQuery] = useState('');
-  const projects = filterProjects(allMarkdownRemark.nodes, searchQuery);
-  const projectsByCategory: ProjectGroups = groupBy(projects, 'frontmatter.category');
+  projects = filterProjects(projects, searchQuery);
+  const projectsByCategory: ProjectGroups = groupBy(projects, 'category');
 
   function setSearchQueryFromInput(event: React.FormEvent) {
     setSearchQuery((event.target as HTMLInputElement).value);
@@ -68,10 +66,10 @@ function FeaturedProjects() {
           return (
             <div key={`column-${columnIndex}`} className="project-list-column">
               {categories.map((category) => {
-                const projectsInCategory = projectsByCategory[category.slug] || [];
+                const projectsInCategory = projectsByCategory[category.id] || [];
                 return (
                   <ProjectCategory
-                    key={category.slug}
+                    key={category.id}
                     category={category}
                     projects={projectsInCategory} />
                 );
@@ -84,30 +82,3 @@ function FeaturedProjects() {
   );
 }
 export default FeaturedProjects;
-
-export const query = graphql`
-  query ProjectArchive {
-    allMarkdownRemark(
-      filter: { fields: { collection: { eq: "projects" } } }
-      sort: { fields: frontmatter___title }
-    ) {
-      nodes {
-        fields {
-          name
-          collection
-        }
-        frontmatter {
-          title
-          direct_url
-          category
-          description
-        }
-        icon {
-          fields {
-            svgContents
-          }
-        }
-      }
-    }
-  }
-`;

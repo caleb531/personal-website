@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
+import ProjectArchive from '../components/ProjectArchive';
 import portraitImage from '/src/images/portrait-full.jpg';
 
 function Home() {
   return (
-    <>
+    <div className="page-home">
       <article className="home-intro">
         <div className="home-intro-left">
           <div className="home-intro-photo">
@@ -16,8 +17,8 @@ function Home() {
         </div>
       </article>
 
-      {/* <ProjectArchive /> */}
-    </>
+      <ProjectArchive />
+    </div>
   );
 }
 export default Home;
