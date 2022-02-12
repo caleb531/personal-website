@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
-import { getEntriesOfType } from '../lib/api';
+import { getProjects } from '../lib/api';
 
 type Props = { projects: ProjectEntry[] };
 
@@ -17,7 +17,7 @@ function Projects({ projects }: Props) {
 export async function getStaticProps() {
   return {
     props: {
-      projects: getEntriesOfType('projects')
+      projects: getProjects()
     }
   };
 }

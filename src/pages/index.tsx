@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
-import { getEntriesOfType } from '../lib/api';
+import { ProjectEntry } from '../components/types';
+import { getProjects } from '../lib/api';
 import portraitImage from '/src/images/portrait-full.jpg';
 
 type Props = { projects: ProjectEntry[] };
@@ -29,7 +30,7 @@ export default Home;
 export async function getStaticProps() {
   return {
     props: {
-      projects: getEntriesOfType('projects')
+      projects: getProjects()
     }
   };
 }
