@@ -1,6 +1,6 @@
-import fm from 'front-matter';
 import fs from 'fs';
 import glob from 'glob-promise';
+import matter from 'gray-matter';
 import path from 'path';
 import puppeteer from 'puppeteer';
 import { WebsiteFrontmatter } from '../src/components/types';
@@ -28,7 +28,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
 
     const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
 
-    const websiteFrontmatter = fm(websiteConfigFileContents).attributes as WebsiteFrontmatter;
+    const websiteFrontmatter: WebsiteFrontmatter = matter(websiteConfigFileContents).data;
     const websiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
 
     const page = await browser.newPage();
