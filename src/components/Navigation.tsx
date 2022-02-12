@@ -1,16 +1,10 @@
 import classNames from 'classnames';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { keyBy } from 'lodash-es';
+import Link from 'next/link';
 import React, { useState } from 'react';
-import { NavigationQuery } from '../../graphql-types';
 import navigation from '../data/navigation.json';
-import { PageMap } from './types';
 
 function Navigation() {
 
-  const queryResults: NavigationQuery = useStaticQuery(query);
-  const { allMdx } = queryResults;
-  const pagesByName: PageMap = keyBy(allMdx.nodes, 'fields.name');
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
@@ -22,12 +16,11 @@ function Navigation() {
         <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
       </button>
       <ul className="site-header-nav-list">
-        {navigation.map((pageName: string) => {
-          const { slug, title } = pagesByName[pageName].frontmatter;
+        {navigation.map((navigationLink) => {
           return (
-            <li key={pageName}>
-              <Link to={slug} onClick={() => setIsNavOpen(false)}>
-                {title}
+            <li key={navigationLink.url}>
+              <Link href={navigationLink.url}>
+                {navigationLink.title}
               </Link>
             </li>
           );
@@ -37,20 +30,3 @@ function Navigation() {
   );
 }
 export default Navigation;
-
-export const query = graphql`
-  query Navigation {
-    allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
-      nodes {
-        fields {
-          name
-          collection
-        }
-        frontmatter {
-          slug
-          title
-        }
-      }
-    }
-  }
-`;

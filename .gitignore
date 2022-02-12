@@ -1,5 +1,19 @@
 .env*
 node_modules/
 .cache/
-public
 graphql-types.ts
+
+# NextJS
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
