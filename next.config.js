@@ -3,6 +3,8 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Enforce a trailing slash on all page URLs
+  trailingSlash: true,
   async headers() {
     const headers = [
       {

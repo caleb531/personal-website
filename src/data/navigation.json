@@ -1,18 +1,18 @@
 [
   {
     "title": "About",
-    "url": "/about"
+    "url": "/about/"
   },
   {
     "title": "Projects",
-    "url": "/projects"
+    "url": "/projects/"
   },
   {
     "title": "Websites",
-    "url": "/websites"
+    "url": "/websites/"
   },
   {
     "title": "Contact",
-    "url": "/contact"
+    "url": "/contact/"
   }
 ]
