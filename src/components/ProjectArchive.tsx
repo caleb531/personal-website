@@ -30,7 +30,7 @@ function disableNativeFormSubmit(event: React.FormEvent) {
 
 type Props = { projects: ProjectEntry[] };
 
-function FeaturedProjects({ projects }: Props) {
+function ProjectArchive({ projects }: Props) {
 
   const [searchQuery, setSearchQuery] = useState('');
   projects = filterProjects(projects, searchQuery);
@@ -81,4 +81,4 @@ function FeaturedProjects({ projects }: Props) {
     </div>
   );
 }
-export default FeaturedProjects;
+export default ProjectArchive;
