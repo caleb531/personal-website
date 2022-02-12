@@ -1,6 +1,10 @@
 export interface PageProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  [key: string]: string | Array | object;
+}
+export interface PagePropsWrapper {
+  props: PageProps;
 }
 
 export interface Entry {

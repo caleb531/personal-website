@@ -2,7 +2,7 @@ import fs from 'fs';
 import { glob } from 'glob-promise';
 import matter from 'gray-matter';
 import path from 'path';
-import { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../components/types';
+import { ContactLinkEntry, Entry, PagePropsWrapper, ProjectEntry, WebsiteEntry } from '../components/types';
 
 // Retrieve the path to the raster image for an entry
 function getImagePath(entryType: string, entryId: string): string {
@@ -61,10 +61,11 @@ export function getWebsiteEntries(): WebsiteEntry[] {
 }
 
 // Define props that should be globally available across all pages
-export async function getGlobalStaticProps() {
+export async function withGlobalStaticProps(pageProps: PagePropsWrapper) {
   return {
     props: {
-      contactLinks: getContactLinks()
+      contactLinks: getContactLinks(),
+      ...(pageProps.props)
     }
   };
 }

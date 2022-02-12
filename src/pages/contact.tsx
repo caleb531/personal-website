@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 import { ContactLinkEntry } from '../components/types';
-import { getGlobalStaticProps } from '../lib/api';
+import { withGlobalStaticProps } from '../lib/api';
 
 type Props = { contactLinks: ContactLinkEntry[] };
 
@@ -17,11 +17,10 @@ function Contact({ contactLinks }: Props) {
 export default Contact;
 
 export async function getStaticProps() {
-  return {
+  return withGlobalStaticProps({
     props: {
-      ...(await getGlobalStaticProps()).props,
       title: 'Contact',
       description: 'Contact details (including email, Github, and Twitter) for Caleb Evans, coder for Christ'
     }
-  };
+  });
 }

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
-import { getGlobalStaticProps, getProjects } from '../lib/api';
+import { getProjects, withGlobalStaticProps } from '../lib/api';
 
 type Props = { projects: ProjectEntry[] };
 
@@ -28,10 +28,9 @@ function Home({ projects }: Props) {
 export default Home;
 
 export async function getStaticProps() {
-  return {
+  return withGlobalStaticProps({
     props: {
-      projects: getProjects(),
-      ...(await getGlobalStaticProps()).props
+      projects: getProjects()
     }
-  };
+  });
 }
