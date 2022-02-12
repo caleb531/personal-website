@@ -15,7 +15,7 @@ export interface EntryMap<SubEntry> {
 }
 
 export interface ProjectEntry extends Entry {
-  // Equivalent shape for now
+  icon: string;
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
 export interface ProjectGroups {
