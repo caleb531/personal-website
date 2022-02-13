@@ -14,17 +14,16 @@
 }
 .home-intro-left {
   padding-right: 20px;
-  $img-border-radius: 20px;
   .home-intro-photo {
     overflow: hidden;
-    border-radius: $img-border-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
   }
   // On Safari, the un-rounded image will still peek through overflow:hidden,
   // resulting in non-rounded corners, so we need to apply border-radius to the
   // contained image as well
+  .home-intro-photo,
   img {
-    border-radius: $img-border-radius;
+    border-radius: 20px;
   }
   @include layout(compact) {
     flex-direction: column;
