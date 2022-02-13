@@ -13,7 +13,8 @@ function Website({ website }: Props) {
             src={website.imagePath}
             alt=""
             width={256}
-            height={160} />
+            height={160}
+            priority={true} />
         </a>
       </div>
       <div className="entry-main website-main">
