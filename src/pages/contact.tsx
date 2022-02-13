@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactLinks from '../components/ContactLinks';
 import { ContactLinkEntry } from '../components/types';
-import { withGlobalStaticProps } from '../lib/api';
+import { withGlobalStaticProps } from '../lib/page';
 
 type Props = { contactLinks: ContactLinkEntry[] };
 

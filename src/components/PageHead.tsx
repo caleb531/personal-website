@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
 import site from '../data/site.json';
-import { getGravatarUrl } from '../utilities/gravatar';
+import { resizeGravatar } from '../lib/gravatar';
 
-type Props = { pageTitle: string, pagePath: string };
+type Props = { pageTitle: string, pagePath: string, gravatarUrl: string };
 
-function PageHead({ pageTitle, pagePath }: Props) {
+function PageHead({ pageTitle, pagePath, gravatarUrl }: Props) {
 
   const isHomepage = pagePath === '/';
   const pageSeoTitle = (isHomepage ? `${site.title} | ${site.tagline}` : pageTitle);
@@ -17,7 +17,7 @@ function PageHead({ pageTitle, pagePath }: Props) {
     `${pageTitle} | ${site.title}`;
 
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
-    return { size, url: getGravatarUrl(site.email, size) };
+    return { size, url: resizeGravatar(gravatarUrl, size) };
   });
 
   const jsonLd = {
@@ -32,8 +32,8 @@ function PageHead({ pageTitle, pagePath }: Props) {
   return (
     <Head>
       <title>{renderedTitle}</title>
-      <link rel="shortcut icon" href={getGravatarUrl(site.email, 32)} />
-      <link rel="icon" href={getGravatarUrl(site.email, 192)} sizes="192x192" />
+      <link rel="shortcut icon" href={resizeGravatar(gravatarUrl, 32)} />
+      <link rel="icon" href={resizeGravatar(gravatarUrl, 192)} sizes="192x192" />
       <meta name="description" content={site.description} />
 
       <meta name="og:title" content={pageSeoTitle} />

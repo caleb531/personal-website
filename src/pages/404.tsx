@@ -1,6 +1,6 @@
 import React from 'react';
 import site from '../data/site.json';
-import { withGlobalStaticProps } from '../lib/api';
+import { withGlobalStaticProps } from '../lib/page';
 
 function PageNotFound() {
   return (

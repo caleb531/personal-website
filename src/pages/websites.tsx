@@ -1,7 +1,8 @@
 import React from 'react';
 import { WebsiteEntry } from '../components/types';
 import WebsiteArchive from '../components/WebsiteArchive';
-import { getWebsiteEntries, withGlobalStaticProps } from '../lib/api';
+import { getWebsiteEntries } from '../lib/entries';
+import { withGlobalStaticProps } from '../lib/page';
 
 type Props = { websites: WebsiteEntry[] };
 

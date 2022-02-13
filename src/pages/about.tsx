@@ -1,5 +1,5 @@
 import React from 'react';
-import { withGlobalStaticProps } from '../lib/api';
+import { withGlobalStaticProps } from '../lib/page';
 
 function About() {
   return (

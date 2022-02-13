@@ -2,7 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
-import { getProjects, withGlobalStaticProps } from '../lib/api';
+import { getProjects } from '../lib/entries';
+import { withGlobalStaticProps } from '../lib/page';
 
 type Props = { projects: ProjectEntry[] };
 
