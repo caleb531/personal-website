@@ -6,6 +6,6 @@ node_js:
 install:
   - npm install
 before_script:
-  - gatsby build
+  - next build
 script:
   - tsc --noEmit
