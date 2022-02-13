@@ -1,13 +1,18 @@
 // Sass Mixins
 @use 'sass:math';
 
-// Mixins for overlay menus
+// Variables for overlay menus
+
+$transition-duration: 150ms;
+$transition-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 $menu-background-color: rgba(#000, 0.4);
 $menu-arrow-width: 26px;
 $menu-border-radius: 5px;
 $menu-offset-top: 5px;
 $menu-offset-right: -4px;
+
+// Mixins for overlay menus
 
 // Enables a fade transition for the given element (also initially hides it)
 @mixin transition-fade() {
