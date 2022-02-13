@@ -25,7 +25,7 @@ function getEntryIconContents(entryType: string, entryId: string): string {
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
 // initialize the entry with
-export function getEntries<SubEntry>(entryType: string, defineAddlProps: (id: string) => object = () => undefined): (SubEntry)[] {
+export function getEntries<SubEntry>(entryType: string, defineAddlProps: (id: string) => object = () => undefined): SubEntry[] {
   const entryDirectory = path.join(process.cwd(), 'src', entryType);
   const entryPaths = glob.sync(`${entryDirectory}/*.md`);
   return entryPaths.map((entryPath) => {
