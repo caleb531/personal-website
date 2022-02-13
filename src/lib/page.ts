@@ -1,7 +1,7 @@
 import { PagePropsWrapper } from '../components/types';
 import site from '../data/site.json';
-import { getBaseGravatarUrl } from '../lib/gravatar';
 import { getContactLinks } from './entries';
+import { getBaseGravatarUrl } from './gravatar';
 
 // Define props that should be globally available across all pages
 export async function withGlobalStaticProps(pageProps: PagePropsWrapper) {
