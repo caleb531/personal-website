@@ -10,7 +10,7 @@ type Props = { title: string, gravatarUrl: string, contactLinks: ContactLinkEntr
 function Layout({ title, gravatarUrl, contactLinks, children }: Props) {
   const router = useRouter();
   return (
-    <main>
+    <main data-page-path={router.pathname}>
       <PageHead
         pageTitle={title}
         pagePath={router.pathname}

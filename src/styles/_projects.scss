@@ -7,8 +7,8 @@ $project-icon-width: 80px;
 }
 
 // Prevent scroll jumps when no results are returned from a project search
-body[data-page-slug='/'],
-body[data-page-slug='/projects/'] {
+main[data-page-path='/'],
+main[data-page-path='/projects'] {
   min-height: 1000px;
 }
 
