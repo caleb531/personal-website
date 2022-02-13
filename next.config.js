@@ -5,6 +5,22 @@ const nextConfig = {
   reactStrictMode: true,
   // Enforce a trailing slash on all page URLs
   trailingSlash: true,
+  // URL redirects
+  async redirects() {
+    return [
+      {
+        source: '/portfolio/',
+        destination: '/projects/',
+        permanent: true
+      },
+      {
+        source: '/projects/:id/',
+        destination: 'https://projects.calebevans.me/:id/',
+        permanent: true
+      }
+    ];
+  },
+  // Security headers
   async headers() {
     const headers = [
       {
