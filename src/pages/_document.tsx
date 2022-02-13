@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 
-function AppDocument() {
+function Document() {
   return (
     <Html lang="en">
       <Head>
@@ -16,5 +16,4 @@ function AppDocument() {
     </Html>
   );
 }
-
-export default AppDocument;
+export default Document;
