@@ -38,10 +38,6 @@ $website-list-columns: 3;
     width: 256px;
     height: 160px;
   }
-  &,
-  [data-placeholder-image] {
-    background-color: #fff !important;
-  }
 }
 .website-details {
   font-size: $font-size-m;
