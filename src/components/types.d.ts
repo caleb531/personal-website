@@ -19,7 +19,7 @@ export interface EntryMap<SubEntry> {
 
 export interface ProjectEntry extends Entry {
   category: string;
-  icon: string;
+  iconContents: string;
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
 export interface ProjectGroups {
@@ -34,11 +34,11 @@ export interface WebsiteEntry extends Entry {
   technologies: string;
   start_year: number;
   end_year: number;
-  image: string;
+  imagePath: string;
 }
 export type WebsiteMap = EntryMap<WebsiteEntry>;
 
 export interface ContactLinkEntry extends Entry {
-  icon: string;
+  iconContents: string;
 }
 export type ContactLinkMap = EntryMap<ContactLinkEntry>;

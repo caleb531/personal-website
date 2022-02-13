@@ -40,19 +40,19 @@ export function getEntries<SubEntry>(entryType: string, defineAddlProps: (id: st
 
 export function getProjects(): ProjectEntry[] {
   return getEntries<ProjectEntry>('projects', (entryId) => {
-    return { icon: getEntryIconContents('projects', entryId) };
+    return { iconContents: getEntryIconContents('projects', entryId) };
   });
 }
 
 export function getContactLinks(): ContactLinkEntry[] {
   return getEntries<ContactLinkEntry>('contact-links', (entryId) => {
-    return { icon: getEntryIconContents('contact-links', entryId) };
+    return { iconContents: getEntryIconContents('contact-links', entryId) };
   });
 }
 
 export function getWebsiteEntries(): WebsiteEntry[] {
   return getEntries<WebsiteEntry>('websites', (entryId) => {
-    return { image: `/images/websites/${entryId}.jpg` };
+    return { imagePath: `/images/websites/${entryId}.jpg` };
   });
 }
 

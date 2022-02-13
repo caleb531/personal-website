@@ -18,7 +18,7 @@ function Project({ project, animationDelay = null, isCompact = false }: Props) {
         <a
           href={project.direct_url}
           aria-labelledby={`project-title-${project.id}`}>
-          <SvgIcon content={project.icon} animationDelay={animationDelay} />
+          <SvgIcon content={project.iconContents} animationDelay={animationDelay} />
         </a>
       </div>
 

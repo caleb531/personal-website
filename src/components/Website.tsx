@@ -9,7 +9,7 @@ function Website({ website }: Props) {
     <article className="entry website">
       <div className="entry-image website-image">
         <a href={website.direct_url}>
-          <Image src={website.image} alt="" width={256} height={160} />
+          <Image src={website.imagePath} alt="" width={256} height={160} />
         </a>
       </div>
       <div className="entry-main website-main">

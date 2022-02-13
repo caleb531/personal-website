@@ -19,7 +19,7 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
             <a
               href={contactLink.direct_url}
               aria-labelledby={`contact-link-${contactLink.id}`}>
-              <SvgIcon content={contactLink.icon} />
+              <SvgIcon content={contactLink.iconContents} />
             </a>
           </div>
 
@@ -43,7 +43,7 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
             <a
               href={contactLink.direct_url}
               aria-label={contactLink.title}>
-              <SvgIcon content={contactLink.icon} />
+              <SvgIcon content={contactLink.iconContents} />
             </a>
           </div>
         </>}
