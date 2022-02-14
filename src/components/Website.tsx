@@ -10,7 +10,7 @@ function Website({ website }: Props) {
       <div className="entry-image website-image">
         <a href={website.direct_url}>
           <Image
-            src={website.imagePath}
+            src={`/images/websites/${website.id}.jpg`}
             alt=""
             width={256}
             height={160}

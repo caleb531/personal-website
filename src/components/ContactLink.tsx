@@ -1,6 +1,6 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import React from 'react';
-import SvgIcon from './SvgIcon';
 import { ContactLinkEntry } from './types';
 
 type Props = { contactLink: ContactLinkEntry, isCompact?: boolean }
@@ -19,7 +19,12 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
             <a
               href={contactLink.direct_url}
               aria-labelledby={`contact-link-${contactLink.id}`}>
-              <SvgIcon content={contactLink.iconContents} />
+              <Image
+                src={`/icons/contact-links/${contactLink.id}.svg`}
+                alt=""
+                width={64}
+                height={64}
+                priority={true} />
             </a>
           </div>
 
@@ -43,7 +48,11 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
             <a
               href={contactLink.direct_url}
               aria-label={contactLink.title}>
-              <SvgIcon content={contactLink.iconContents} />
+              <Image
+                src={`/icons/contact-links/${contactLink.id}.svg`}
+                alt=""
+                width={40}
+                height={40} />
             </a>
           </div>
         </>}

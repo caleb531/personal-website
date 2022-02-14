@@ -1,6 +1,6 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import React from 'react';
-import SvgIcon from './SvgIcon';
 import { ProjectEntry } from './types';
 
 type Props = { project: ProjectEntry, animationDelay?: number, isCompact?: boolean };
@@ -18,7 +18,11 @@ function Project({ project, animationDelay = null, isCompact = false }: Props) {
         <a
           href={project.direct_url}
           aria-labelledby={`project-title-${project.id}`}>
-          <SvgIcon content={project.iconContents} animationDelay={animationDelay} />
+          <Image
+            src={`/icons/projects/${project.id}.svg`}
+            alt=""
+            width={80}
+            height={80} />
         </a>
       </div>
 
