@@ -17,11 +17,11 @@ function Header({ gravatarUrl }: Props) {
       <Link href="/">
         <a className="site-title-link" rel="home">
           <img
-          className="site-header-image"
-          src={headerGravatarUrl}
-          srcSet={`${headerGravatarUrlRetina} 2x`}
-          width={headerImageSize} height={headerImageSize}
-          alt="" />
+            className="site-header-image"
+            src={headerGravatarUrl}
+            srcSet={`${headerGravatarUrlRetina} 2x`}
+            width={headerImageSize} height={headerImageSize}
+            alt="" />
         <h1 className="site-title">{site.title}</h1>
         </a>
       </Link>
