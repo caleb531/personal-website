@@ -23,7 +23,7 @@
   // contained image as well
   .home-intro-photo,
   img {
-    border-radius: 20px;
+    border-radius: 30px;
   }
   @include layout(compact) {
     flex-direction: column;
