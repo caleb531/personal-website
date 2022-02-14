@@ -18,7 +18,7 @@ function Navigation() {
       <ul className="site-header-nav-list">
         {navigation.map((navigationLink) => {
           return (
-            <li key={navigationLink.url}>
+            <li key={navigationLink.url} onClick={() => setIsNavOpen(false)}>
               <Link href={navigationLink.url}>
                 {navigationLink.title}
               </Link>
