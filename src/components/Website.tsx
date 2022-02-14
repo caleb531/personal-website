@@ -12,6 +12,7 @@ function Website({ website }: Props) {
           <Image
             src={`/images/websites/${website.id}.jpg`}
             alt=""
+            className="website-image-image"
             width={256}
             height={160}
             priority={true} />

@@ -18,6 +18,7 @@ function Home({ projects }: Props) {
               src="/images/portrait-full.jpg" alt="Caleb Evans"
               width={180}
               height={180}
+              className="home-intro-photo-image"
               // Setting priority=true disables lazy loading and enables
               // preloading on the image, since it is above-the-fold (source:
               // https://nextjs.org/docs/api-reference/next/image#priority)
