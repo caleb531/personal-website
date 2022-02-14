@@ -14,8 +14,8 @@ const nextConfig = {
         permanent: true
       },
       {
-        source: '/projects/:id([A-Za-z0-9\-\/]+)',
-        destination: 'https://projects.calebevans.me/:id',
+        source: '/projects/:subpath([A-Za-z0-9\-\/]+)',
+        destination: 'https://projects.calebevans.me/:subpath',
         permanent: true
       }
     ];
