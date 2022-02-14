@@ -35,6 +35,9 @@ input[type=url] {
   font-family: inherit;
   font-size: $font-size-m;
   line-height: 1.3;
+  @include placeholder() {
+    color: $color-gray;
+  }
 }
 input[type=search] {
   padding-left: 34px;
