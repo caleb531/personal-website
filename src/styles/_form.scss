@@ -40,6 +40,7 @@ input[type=search] {
   padding-left: 34px;
   background-image: url('/icons/search.svg');
   background-repeat: no-repeat;
+  background-size: 24px;
   background-position: left 6px center;
   // Hide Cancel (X) button on search fields
   &::-webkit-search-cancel-button {
