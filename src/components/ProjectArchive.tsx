@@ -1,8 +1,14 @@
-import { groupBy } from 'lodash-es';
+import { groupBy, keyBy } from 'lodash-es';
 import React, { useState } from 'react';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
-import { ProjectEntry, ProjectGroups } from './types';
+import { ProjectCategoryMap, ProjectEntry, ProjectGroups } from './types';
+
+// Pregenerate lookup table of project categories IDs to titles so the titles
+// can be added to the available keyword pool (for the user to search from)
+const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce((map, categories) => {
+  return { ...map, ...keyBy(categories, 'id') };
+}, {});
 
 function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
   if (searchQuery.trim() === '') {
@@ -11,7 +17,7 @@ function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectE
   return projects.filter((project) => {
     const keywords = [
       ...project.title.toLowerCase().split(' '),
-      project.category.toLowerCase(),
+      categoriesById[project.category.toLowerCase()].title.toLowerCase(),
       ...project.description.toLowerCase().split(' ')
     ];
     return searchQuery.toLowerCase().split(' ').every((searchKeyword) => {

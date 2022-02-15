@@ -28,6 +28,9 @@ export interface ProjectCategoryData {
   id: string;
   title: string;
 }
+interface ProjectCategoryMap {
+  [key: string]: ProjectCategoryData;
+}
 
 export interface WebsiteEntry extends Entry {
   technologies: string;
