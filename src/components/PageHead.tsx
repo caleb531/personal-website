@@ -51,7 +51,7 @@ function PageHead({ pageTitle, pagePath, gravatarUrl }: Props) {
       <meta name="google-site-verification" content={site.googleSiteVerification} />
       <link rel="canonical" href={pageSeoUrl} />
       <link rel="alternate" hrefLang="en-US" href={pageSeoUrl} />
-      <script type="application/ld+json">{`${JSON.stringify(jsonLd)}`}</script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}></script>
       {appleTouchIcons.map(({ url, size }) => {
         return <link
           key={url}
