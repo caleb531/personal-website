@@ -42,8 +42,8 @@ function ProjectArchive({ projects }: Props) {
   projects = filterProjects(projects, searchQuery);
   const projectsByCategory: ProjectGroups = groupBy(projects, 'category');
 
-  function setSearchQueryFromInput(event: React.FormEvent) {
-    setSearchQuery((event.target as HTMLInputElement).value);
+  function setSearchQueryFromInput(event: React.FormEvent<HTMLInputElement>) {
+    setSearchQuery(event.currentTarget.value);
   }
 
   return (
