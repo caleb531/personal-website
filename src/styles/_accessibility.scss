@@ -16,6 +16,11 @@ textarea {
     box-shadow: 0 0 0 1px $color-blue-dark, 0 0 0 2px $color-green;
   }
 }
+.entry-image {
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $color-blue-dark, 0 0 0 3px $color-green;
+  }
+}
 
 // Hide some labels from the UI but still be readable by screen readers
 .accessibility-only {

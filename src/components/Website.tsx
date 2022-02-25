@@ -7,17 +7,15 @@ type Props = { website: WebsiteEntry }
 function Website({ website }: Props) {
   return (
     <article className="entry website">
-      <div className="entry-image website-image">
-        <a href={website.direct_url}>
-          <Image
-            src={`/images/websites/${website.id}.jpg`}
-            alt=""
-            className="website-image-image"
-            width={256}
-            height={160}
-            priority={true} />
-        </a>
-      </div>
+      <a className="entry-image website-image" href={website.direct_url}>
+        <Image
+          src={`/images/websites/${website.id}.jpg`}
+          alt=""
+          className="website-image-image"
+          width={256}
+          height={160}
+          priority={true} />
+      </a>
       <div className="entry-main website-main">
 
         <h4 className="entry-title website-title">

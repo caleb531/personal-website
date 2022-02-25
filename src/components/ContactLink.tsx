@@ -15,18 +15,17 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
     )}>
       {!isCompact ?
         <>
-          <div className="entry-image contact-link-image">
-            <a
-              href={contactLink.direct_url}
-              aria-labelledby={`contact-link-${contactLink.id}`}>
-              <Image
-                src={`/icons/contact-links/${contactLink.id}.svg`}
-                alt=""
-                width={64}
-                height={64}
-                priority={true} />
-            </a>
-          </div>
+          <a
+            className="entry-image contact-link-image"
+            href={contactLink.direct_url}
+            aria-labelledby={`contact-link-${contactLink.id}`}>
+            <Image
+              src={`/icons/contact-links/${contactLink.id}.svg`}
+              alt=""
+              width={64}
+              height={64}
+              priority={true} />
+          </a>
 
           <div className="entry-main contact-link-main">
 
@@ -44,17 +43,16 @@ function ContactLink({ contactLink, isCompact = false }: Props) {
 
           </div>
         </> : <>
-          <div className="entry-image contact-link-image">
-            <a
-              href={contactLink.direct_url}
-              aria-label={contactLink.title}>
-              <Image
-                src={`/icons/contact-links/${contactLink.id}.svg`}
-                alt=""
-                width={40}
-                height={40} />
-            </a>
-          </div>
+          <a
+            className="entry-image contact-link-image"
+            href={contactLink.direct_url}
+            aria-label={contactLink.title}>
+            <Image
+              src={`/icons/contact-links/${contactLink.id}.svg`}
+              alt=""
+              width={40}
+              height={40} />
+          </a>
         </>}
     </article>
   );

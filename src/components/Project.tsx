@@ -14,17 +14,16 @@ function Project({ project, animationDelay = null, isCompact = false }: Props) {
       { 'project-compact': isCompact }
     )}>
 
-      <div className="entry-image project-image">
-        <a
-          href={project.direct_url}
-          aria-labelledby={`project-title-${project.id}`}>
-          <Image
-            src={`/icons/projects/${project.id}.svg`}
-            alt=""
-            width={80}
-            height={80} />
-        </a>
-      </div>
+      <a
+        className="entry-image project-image"
+        href={project.direct_url}
+        aria-labelledby={`project-title-${project.id}`}>
+        <Image
+          src={`/icons/projects/${project.id}.svg`}
+          alt=""
+          width={80}
+          height={80} />
+      </a>
 
       <div className="entry-main project-main">
 
