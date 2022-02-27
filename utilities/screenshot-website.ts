@@ -5,7 +5,7 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import { WebsiteEntry } from '../src/components/types';
 
-const websiteImageDir = 'src/images/websites';
+const websiteImageDir = 'public/images/websites';
 const websiteImageExtension = 'jpg';
 const websiteImageQuality = 85;
 const windowWidth = 1024;
