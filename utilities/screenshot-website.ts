@@ -1,3 +1,5 @@
+// To run this utility, run `esr utilities/screenshot-website.ts` from the root
+// project directory on the CLI
 import fs from 'fs';
 import glob from 'glob-promise';
 import matter from 'gray-matter';
@@ -19,6 +21,7 @@ function createWebsiteImageDirectory(): Promise<string> {
 async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
 
   await createWebsiteImageDirectory();
+  console.log('launching browser...');
   const browser = await puppeteer.launch();
 
   // Generate screenshot for each portfolio website that has configuration
@@ -52,6 +55,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
 
   }));
 
+  console.log('closing browser...');
   await browser.close();
 
 }
