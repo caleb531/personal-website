@@ -39,7 +39,9 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
       width: windowWidth,
       height: windowHeight
     });
-    await page.goto(websiteEntry.direct_url);
+    await page.goto(websiteEntry.direct_url, {
+      waitUntil: ['load', 'networkidle0']
+    });
 
     return page.screenshot({
       path: websiteImagePath,
