@@ -6,7 +6,9 @@ type Props = { website: WebsiteEntry }
 
 function Website({ website }: Props) {
   return (
-    <article className="entry website">
+    <article
+      data-entry-id={website.id}
+      className="entry website">
       <a className="entry-image website-image" href={website.direct_url}>
         <Image
           src={`/images/websites/${website.id}.jpg`}

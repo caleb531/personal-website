@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import projectMetadata from '../data/projects.json';
 import ProjectCategory from './ProjectCategory';
 import { ProjectCategoryMap, ProjectEntry, ProjectGroups } from './types';
+import useEntryLinkListeners from './useEntryLinkListeners';
 
 // Pregenerate lookup table of project categories IDs to titles so the titles
 // can be added to the available keyword pool (for the user to search from)
@@ -46,8 +47,10 @@ function ProjectArchive({ projects }: Props) {
     setSearchQuery(event.currentTarget.value);
   }
 
+  const gaEventListenerProps = useEntryLinkListeners('projects');
+
   return (
-    <div className="project-archive">
+    <div className="project-archive" {...gaEventListenerProps}>
       <div className="project-search-container">
         <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeFormSubmit}>
           <label htmlFor="project-search-input" className="accessibility-only">Search:</label>

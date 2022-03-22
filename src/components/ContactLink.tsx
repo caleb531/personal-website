@@ -7,12 +7,14 @@ type Props = { contactLink: ContactLinkEntry, isCompact?: boolean }
 
 function ContactLink({ contactLink, isCompact = false }: Props) {
   return (
-    <article className={classNames(
-      'entry',
-      'contact-link',
-      { 'entry-compact': isCompact },
-      { 'contact-link-compact': isCompact }
-    )}>
+    <article
+      data-entry-id={contactLink.id}
+      className={classNames(
+        'entry',
+        'contact-link',
+        { 'entry-compact': isCompact },
+        { 'contact-link-compact': isCompact }
+      )}>
       {!isCompact ?
         <>
           <a

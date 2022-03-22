@@ -7,12 +7,14 @@ type Props = { project: ProjectEntry, animationDelay?: number, isCompact?: boole
 
 function Project({ project, animationDelay = null, isCompact = false }: Props) {
   return (
-    <article className={classNames(
-      'entry',
-      'project',
-      { 'entry-compact': isCompact },
-      { 'project-compact': isCompact }
-    )}>
+    <article
+      data-entry-id={project.id}
+      className={classNames(
+        'entry',
+        'project',
+        { 'entry-compact': isCompact },
+        { 'project-compact': isCompact }
+      )}>
 
       <a
         className="entry-image project-image"
