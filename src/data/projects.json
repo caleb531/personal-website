@@ -3,23 +3,29 @@
     [
       {
         "id": "games",
-        "title": "Games"
+        "title": "Games",
+        "topProjects": ["connect-four", "inflection-point"]
       },
       {
         "id": "programs",
-        "title": "Programs"
+        "title": "Programs",
+        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"]
       },
       {
         "id": "math",
-        "title": "Math"
+        "title": "Math",
+        "bottomProjects": ["sequencer", "flashmath"]
       },
       {
         "id": "computer-science",
-        "title": "Computer Science"
+        "title": "Computer Science",
+        "topProjects": ["automata"],
+        "bottomProjects": ["data-structure-visualizer"]
       },
       {
         "id": "atom",
-        "title": "Atom Packages"
+        "title": "Atom Packages",
+        "bottomProjects": ["language-har"]
       },
       {
         "id": "vscode",
@@ -29,19 +35,26 @@
     [
       {
         "id": "javascript-libraries",
-        "title": "JavaScript Libraries"
+        "title": "JavaScript Libraries",
+        "topProjects": ["jcanvas", "calc"],
+        "bottomProjects": ["jfile"]
       },
       {
         "id": "fun",
-        "title": "Fun"
+        "title": "Fun",
+        "topProjects": ["flip-book", "unscrambler", "painter"],
+        "bottomProjects": ["until", "colorful-chips"]
       },
       {
         "id": "tools",
-        "title": "Tools / Productivity"
+        "title": "Tools / Productivity",
+        "topProjects": ["faith-dashboard", "workday-time-calculator"],
+        "bottomProjects": ["html-selector", "js-console", "bump-anything"]
       },
       {
         "id": "alfred",
-        "title": "Alfred Workflows"
+        "title": "Alfred Workflows",
+        "topProjects": ["youversion-suggest", "play-song", "open-conference-url"]
       },
       {
         "id": "brunch-plugins",
