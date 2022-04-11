@@ -27,6 +27,8 @@ export interface ProjectGroups {
 export interface ProjectCategoryData {
   id: string;
   title: string;
+  topProjects?: string[];
+  bottomProjects?: string[];
 }
 interface ProjectCategoryMap {
   [key: string]: ProjectCategoryData;
