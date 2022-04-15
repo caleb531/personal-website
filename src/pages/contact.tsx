@@ -8,7 +8,6 @@ type Props = { contactLinks: ContactLinkEntry[] };
 function Contact({ contactLinks }: Props) {
   return (
     <div className="page-contact">
-      <p>Please note that I'm not accepting new work opportunities at this time.</p>
       <ContactLinks contactLinks={contactLinks} />
     </div>
   );
