@@ -27,10 +27,6 @@
         "id": "atom",
         "title": "Atom Packages",
         "bottomProjects": ["language-har"]
-      },
-      {
-        "id": "vscode",
-        "title": "VS Code Extensions"
       }
     ],
     [
@@ -64,6 +60,10 @@
       {
         "id": "wordpress",
         "title": "WordPress"
+      },
+      {
+        "id": "vscode",
+        "title": "VS Code Extensions"
       }
     ]
   ]
