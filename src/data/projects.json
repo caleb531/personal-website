@@ -9,7 +9,8 @@
       {
         "id": "programs",
         "title": "CLI Programs",
-        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"]
+        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
+        "bottomProjects": ["bump-anything"]
       },
       {
         "id": "math",
@@ -49,7 +50,7 @@
         "id": "tools",
         "title": "Tools / Productivity",
         "topProjects": ["faith-dashboard", "workday-time-calculator"],
-        "bottomProjects": ["html-selector", "js-console", "bump-anything"]
+        "bottomProjects": ["html-selector", "js-console"]
       },
       {
         "id": "alfred",
