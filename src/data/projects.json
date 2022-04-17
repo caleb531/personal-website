@@ -8,7 +8,7 @@
       },
       {
         "id": "programs",
-        "title": "Programs",
+        "title": "CLI Programs",
         "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"]
       },
       {
