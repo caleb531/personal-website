@@ -14,7 +14,7 @@ const windowWidth = 1024;
 const windowHeight = 640;
 
 // Create website image directory if it doesn't already exist
-function createWebsiteImageDirectory(): Promise<string | undefined> {
+function createWebsiteImageDirectory() {
   return fs.promises.mkdir(websiteImageDir, { recursive: true });
 }
 
