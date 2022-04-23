@@ -13,7 +13,7 @@ function useEntryLinkListeners(entryType: string) {
         action: 'click',
         label: target
           ?.closest('[data-entry-id]')
-          ?.getAttribute('data-entry-id')
+          ?.getAttribute('data-entry-id') || undefined
       });
     }
   }

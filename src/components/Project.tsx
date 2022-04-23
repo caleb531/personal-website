@@ -3,9 +3,9 @@ import Image from 'next/image';
 import React from 'react';
 import { ProjectEntry } from './types';
 
-type Props = { project: ProjectEntry, animationDelay?: number, isCompact?: boolean };
+type Props = { project: ProjectEntry, isCompact?: boolean };
 
-function Project({ project, animationDelay = null, isCompact = false }: Props) {
+function Project({ project, isCompact = false }: Props) {
   return (
     <article
       data-entry-id={project.id}
