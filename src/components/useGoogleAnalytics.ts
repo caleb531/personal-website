@@ -7,7 +7,7 @@ import site from '../data/site.json';
 function useGoogleAnalytics() {
   // Initialize Google Analytics on the initial page load
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
       ReactGA.initialize(site.googleAnalytics);
     }
   }, []);
