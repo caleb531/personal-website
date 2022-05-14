@@ -17,13 +17,13 @@
   <!-- PEG.js grid of pegs -->
   <g>
     <!-- row 1 column 1 -->
-    <use xlink:href="#pegjs-peg" x="260" y="125" />
+    <use xlink:href="#pegjs-peg" x="260" y="135" />
     <!-- row 1 column 2 -->
-    <use xlink:href="#pegjs-peg" x="200" y="125" />
+    <use xlink:href="#pegjs-peg" x="200" y="135" />
     <!-- row 2 column 1 -->
-    <use xlink:href="#pegjs-peg" x="260" y="185" />
+    <use xlink:href="#pegjs-peg" x="260" y="190" />
     <!-- row 2 column 2 -->
-    <use xlink:href="#pegjs-peg" x="200" y="185" />
+    <use xlink:href="#pegjs-peg" x="200" y="190" />
     <!-- row 3 column 1 -->
     <use xlink:href="#pegjs-peg" x="260" y="245" />
     <!-- row 3 column 2 -->
