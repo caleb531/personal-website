@@ -51,7 +51,8 @@
       {
         "id": "alfred",
         "title": "Alfred Workflows",
-        "topProjects": ["youversion-suggest", "play-song", "open-conference-url"]
+        "topProjects": ["youversion-suggest", "play-song", "open-conference-url"],
+        "bottomProjects": ["alfred-workflow-packager"]
       },
       {
         "id": "brunch-plugins",
