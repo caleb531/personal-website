@@ -4,15 +4,15 @@
   <!-- calendar -->
   <g>
     <!-- calendar frame -->
-    <rect x="50" y="50" width="220" height="220" fill="none" stroke="#c33" stroke-width="10" />
-    <!-- calendar header -->
-    <rect x="50" y="50" width="220" height="55" fill="#c33" />
+    <rect x="50" y="50" width="220" height="220" rx="3" ry="3" fill="#c33" stroke="#c33" stroke-width="10" />
+    <!-- calendar inside -->
+    <rect x="60" y="110" width="200" height="150" rx="5" ry="5" fill="#fff" />
   </g>
   <!-- conferencing icon -->
   <g>
     <!-- conferencing icon body -->
-    <rect x="90" y="150" width="90" height="70" fill="#36c" rx="16" ry="16" />
+    <rect x="90" y="150" width="90" height="70" fill="#37f" rx="16" ry="16" />
     <!-- conferencing icon head -->
-    <polygon points="225,155 190,185 225,215" fill="#36c" stroke="#36c" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="225,155 190,185 225,215" fill="#37f" stroke="#37f" stroke-width="10" stroke-linejoin="round" />
   </g>
 </svg>
