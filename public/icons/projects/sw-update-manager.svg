@@ -36,7 +36,7 @@
   </marker>
   <!-- bottom update arrow -->
   <g fill="none" stroke="#5bd" stroke-width="10">
-    <path d="M 90,160 A 70,70 0,0,0 224.671567276,186.787840266" marker-start="url(#swum-update-arrow)" />
-    <path d="M 95.328432724,133.212159734 A 70,70 0,0,1 230,160" marker-end="url(#swum-update-arrow)" />
+    <path d="M 90,160 A 70,70 0,0,0 220.62177826,195" marker-start="url(#swum-update-arrow)" />
+    <path d="M 99.37822174,125 A 70,70 0,0,1 230,160" marker-end="url(#swum-update-arrow)" />
   </g>
 </svg>
