@@ -18,6 +18,7 @@ function useGoogleAnalytics() {
   useEffect(() => {
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
       ReactGA.pageview(window.location.pathname + window.location.search);
+      ReactGA4.send('pageview');
     }
   });
 }
