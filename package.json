@@ -26,7 +26,8 @@
     "next": "^12.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-ga": "^3.3.0"
+    "react-ga": "^3.3.0",
+    "react-ga4": "^1.4.1"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.5",
