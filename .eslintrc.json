@@ -127,6 +127,7 @@
     "react/jsx-curly-spacing": ["warn", { "when": "never", "allowMultiline": true }],
     "react/jsx-no-constructed-context-values": ["error"],
     "react/no-unescaped-entities": ["off"],
+    "react/react-in-jsx-scope": ["off"],
     "rest-spread-spacing": ["warn", "never"],
     "semi-spacing": ["error", { "before": false, "after": true }],
     "semi-style": ["warn"],
