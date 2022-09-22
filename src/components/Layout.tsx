@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import PageHead from './PageHead';
@@ -16,8 +15,9 @@ function Layout({ title, gravatarUrl, contactLinks, children }: Props) {
         pagePath={router.pathname}
         gravatarUrl={gravatarUrl}
       />
+      <a className="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
       <Header gravatarUrl={gravatarUrl} />
-      <article className="page">
+      <article className="page" id="page">
         {title ? <h2 className="page-title">{title}</h2> : null}
         {children}
       </article>

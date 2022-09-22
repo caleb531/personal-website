@@ -28,3 +28,19 @@ textarea {
   top: -1000px;
   left: -10000px;
 }
+
+.skip-to-main-content {
+  &:focus-visible {
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    border-color: #fff;
+    padding: 12px 18px;
+    background-color: $color-teal;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 1px 5px rgba($color-black, 0.25);
+  }
+}
