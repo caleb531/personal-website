@@ -24,6 +24,10 @@
         "bottomProjects": ["data-structure-visualizer"]
       },
       {
+        "id": "raycast",
+        "title": "Raycast Extensions"
+      },
+      {
         "id": "atom",
         "title": "Atom Packages",
         "bottomProjects": ["language-har"]
