@@ -8,7 +8,10 @@ import site from '../data/site.json';
 function useGoogleAnalytics() {
   // Initialize Google Analytics on the initial page load
   useEffect(() => {
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+    if (
+      typeof window !== 'undefined' &&
+      process.env.NODE_ENV === 'production'
+    ) {
       ReactGA.initialize(site.uaTrackingId);
       ReactGA4.initialize(site.ga4TrackingId);
     }
@@ -16,7 +19,10 @@ function useGoogleAnalytics() {
   // Trigger a pageview even on the initial page load and when navigating to
   // another page on the site
   useEffect(() => {
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+    if (
+      typeof window !== 'undefined' &&
+      process.env.NODE_ENV === 'production'
+    ) {
       ReactGA.pageview(window.location.pathname + window.location.search);
       ReactGA4.send('pageview');
     }

@@ -7,11 +7,17 @@ import useEntryLinkListeners from './useEntryLinkListeners';
 
 // Pregenerate lookup table of project categories IDs to titles so the titles
 // can be added to the available keyword pool (for the user to search from)
-const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce((map, categories) => {
-  return { ...map, ...keyBy(categories, 'id') };
-}, {});
+const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce(
+  (map, categories) => {
+    return { ...map, ...keyBy(categories, 'id') };
+  },
+  {}
+);
 
-function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
+function filterProjects(
+  projects: ProjectEntry[],
+  searchQuery: string
+): ProjectEntry[] {
   if (searchQuery.trim() === '') {
     return projects;
   }
@@ -21,11 +27,14 @@ function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectE
       categoriesById[project.category.toLowerCase()].title.toLowerCase(),
       ...project.description.toLowerCase().split(' ')
     ];
-    return searchQuery.toLowerCase().split(' ').every((searchKeyword) => {
-      return keywords.some((keyword) => {
-        return keyword.indexOf(searchKeyword) !== -1;
+    return searchQuery
+      .toLowerCase()
+      .split(' ')
+      .every((searchKeyword) => {
+        return keywords.some((keyword) => {
+          return keyword.indexOf(searchKeyword) !== -1;
+        });
       });
-    });
   });
 }
 
@@ -38,7 +47,6 @@ function disableNativeFormSubmit(event: React.FormEvent) {
 type Props = { projects: ProjectEntry[] };
 
 function ProjectArchive({ projects }: Props) {
-
   const [searchQuery, setSearchQuery] = useState('');
   projects = filterProjects(projects, searchQuery);
   const projectsByCategory: ProjectGroups = groupBy(projects, 'category');
@@ -52,22 +60,32 @@ function ProjectArchive({ projects }: Props) {
   return (
     <div className="project-archive" {...gaEventListenerProps}>
       <div className="project-search-container">
-        <form className="project-search-container-form" method="GET" action="." onSubmit={disableNativeFormSubmit}>
-          <label htmlFor="project-search-input" className="accessibility-only">Search:</label>
+        <form
+          className="project-search-container-form"
+          method="GET"
+          action="."
+          onSubmit={disableNativeFormSubmit}
+        >
+          <label htmlFor="project-search-input" className="accessibility-only">
+            Search:
+          </label>
           <input
             type="search"
             name="search"
             id="project-search-input"
             value={searchQuery}
             placeholder="Search for a project"
-            onInput={setSearchQueryFromInput} />
+            onInput={setSearchQueryFromInput}
+          />
         </form>
         {projects.length ? (
-          <div className="project-search-result-count">{projects.length === 1 ? 'Showing 1 project' : `Showing ${projects.length} projects`}</div>
-        ) : (
-          <div className="project-search-no-results">
-            No Projects Found
+          <div className="project-search-result-count">
+            {projects.length === 1
+              ? 'Showing 1 project'
+              : `Showing ${projects.length} projects`}
           </div>
+        ) : (
+          <div className="project-search-no-results">No Projects Found</div>
         )}
       </div>
       <div className="project-list-container">
@@ -75,12 +93,14 @@ function ProjectArchive({ projects }: Props) {
           return (
             <div key={`column-${columnIndex}`} className="project-list-column">
               {categories.map((category) => {
-                const projectsInCategory = projectsByCategory[category.id] || [];
+                const projectsInCategory =
+                  projectsByCategory[category.id] || [];
                 return (
                   <ProjectCategory
                     key={category.id}
                     category={category}
-                    projects={projectsInCategory} />
+                    projects={projectsInCategory}
+                  />
                 );
               })}
             </div>

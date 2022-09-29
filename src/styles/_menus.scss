@@ -19,7 +19,8 @@ $menu-offset-right: -4px;
   opacity: 0;
   z-index: -1;
   transition-property: opacity, transform, z-index;
-  transition-duration: $menu-transition-duration, $menu-transition-duration, $menu-transition-duration * 2;
+  transition-duration: $menu-transition-duration, $menu-transition-duration,
+    $menu-transition-duration * 2;
   transition-timing-function: $menu-transition-easing;
 }
 
@@ -59,7 +60,12 @@ $menu-offset-right: -4px;
     @if $position == 'center' {
       right: 50%;
     } @else {
-      right: ($menu-border-radius + math.div($menu-arrow-width, 2) + $position - $menu-offset-right);
+      right: (
+        $menu-border-radius +
+          math.div($menu-arrow-width, 2) +
+          $position -
+          $menu-offset-right
+      );
     }
   }
 }

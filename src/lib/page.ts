@@ -9,7 +9,7 @@ export async function withGlobalStaticProps(pageProps: PagePropsWrapper) {
     props: {
       contactLinks: getContactLinks(),
       gravatarUrl: getBaseGravatarUrl(site.email),
-      ...(pageProps.props)
+      ...pageProps.props
     }
   };
 }

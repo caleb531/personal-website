@@ -3,7 +3,7 @@ import React from 'react';
 import Project from './Project';
 import { ProjectCategoryData, ProjectEntry } from './types';
 
-type Props = { category: ProjectCategoryData, projects: ProjectEntry[] };
+type Props = { category: ProjectCategoryData; projects: ProjectEntry[] };
 
 function ProjectCategory({ category, projects }: Props) {
   // Promote some projects to the top of the list
@@ -20,7 +20,10 @@ function ProjectCategory({ category, projects }: Props) {
       // return undefined because topProjects may not include any projects that
       // can be shown; to solve this, we filter out all falsy values
       .filter(Boolean),
-    ...projects.filter((project) => !topProjectsSet.has(project.id) && !bottomProjectsSet.has(project.id)),
+    ...projects.filter(
+      (project) =>
+        !topProjectsSet.has(project.id) && !bottomProjectsSet.has(project.id)
+    ),
     ...(category.bottomProjects || [])
       .map((projectId) => projectsById[projectId])
       // If the user searches for a project, then projectsById[projectId] might
@@ -30,21 +33,17 @@ function ProjectCategory({ category, projects }: Props) {
   ];
   return (
     <>
-    {projects.length ? <section className="entry-list project-list">
+      {projects.length ? (
+        <section className="entry-list project-list">
+          <h3 className="entry-list-category-title project-list-category-title">
+            {category.title}
+          </h3>
 
-      <h3 className="entry-list-category-title project-list-category-title">
-        {category.title}
-      </h3>
-
-      {projects.map((project, p) => {
-        return (
-          <Project
-            key={project.id}
-            project={project} />
-        );
-      })}
-
-    </section> : null}
+          {projects.map((project, p) => {
+            return <Project key={project.id} project={project} />;
+          })}
+        </section>
+      ) : null}
     </>
   );
 }

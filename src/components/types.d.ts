@@ -14,7 +14,7 @@ export interface Entry {
   description: string;
 }
 export interface EntryMap<SubEntry> {
-  [key: string]: SubEntry
+  [key: string]: SubEntry;
 }
 
 export interface ProjectEntry extends Entry {

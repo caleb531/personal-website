@@ -8,7 +8,8 @@ function SvgIcon({ content }: Props) {
       className="svg-icon-wrapper"
       // Because the SVG content is coming from my own server, it is relatively
       // safe to insert into the DOM with dangerouslySetInnerHTML
-      dangerouslySetInnerHTML={{ __html: content }} />
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   );
 }
 export default SvgIcon;

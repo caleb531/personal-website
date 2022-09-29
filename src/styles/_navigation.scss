@@ -34,7 +34,7 @@
     }
   }
   .sub-menu {
-    @include floating-menu("center");
+    @include floating-menu('center');
     transition-delay: $menu-transition-duration;
     @include layout(hybrid) {
       margin-top: math.div($menu-arrow-width, 2);
@@ -67,7 +67,8 @@
       border-width: 0;
       color: currentColor;
     }
-    img, svg {
+    img,
+    svg {
       $icon-size: 32px;
       width: $icon-size;
       height: $icon-size;

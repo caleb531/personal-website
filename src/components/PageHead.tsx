@@ -3,18 +3,19 @@ import React from 'react';
 import site from '../data/site.json';
 import { resizeGravatar } from '../lib/gravatar';
 
-type Props = { pageTitle: string, pagePath: string, gravatarUrl: string };
+type Props = { pageTitle: string; pagePath: string; gravatarUrl: string };
 
 function PageHead({ pageTitle, pagePath, gravatarUrl }: Props) {
-
   const isHomepage = pagePath === '/';
-  const pageSeoTitle = (isHomepage ? `${site.title} | ${site.tagline}` : pageTitle);
+  const pageSeoTitle = isHomepage
+    ? `${site.title} | ${site.tagline}`
+    : pageTitle;
   const pageSeoUrl = site.url + pagePath;
   const pageSeoImage = `${site.url}/images/social-preview.png`;
 
-  const renderedTitle = isHomepage ?
-    `${site.title} | ${site.tagline}` :
-    `${pageTitle} | ${site.title}`;
+  const renderedTitle = isHomepage
+    ? `${site.title} | ${site.tagline}`
+    : `${pageTitle} | ${site.title}`;
 
   const appleTouchIcons = [76, 120, 152, 180].map((size) => {
     return { size, url: resizeGravatar(gravatarUrl, size) };
@@ -33,7 +34,11 @@ function PageHead({ pageTitle, pagePath, gravatarUrl }: Props) {
     <Head>
       <title>{renderedTitle}</title>
       <link rel="shortcut icon" href={resizeGravatar(gravatarUrl, 32)} />
-      <link rel="icon" href={resizeGravatar(gravatarUrl, 192)} sizes="192x192" />
+      <link
+        rel="icon"
+        href={resizeGravatar(gravatarUrl, 192)}
+        sizes="192x192"
+      />
       <meta name="description" content={site.description} />
 
       <meta name="og:title" content={pageSeoTitle} />
@@ -48,19 +53,27 @@ function PageHead({ pageTitle, pagePath, gravatarUrl }: Props) {
       <meta name="twitter:title" content={pageSeoTitle} />
       <meta name="twitter:description" content={site.description} />
       <meta name="twitter:image" content={pageSeoImage} />
-      <meta name="google-site-verification" content={site.googleSiteVerification} />
+      <meta
+        name="google-site-verification"
+        content={site.googleSiteVerification}
+      />
       <link rel="canonical" href={pageSeoUrl} />
       <link rel="alternate" hrefLang="en-US" href={pageSeoUrl} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}></script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      ></script>
       {appleTouchIcons.map(({ url, size }) => {
-        return <link
-          key={url}
-          rel="apple-touch-icon"
-          href={url}
-          sizes={`${size}x${size}`} />;
+        return (
+          <link
+            key={url}
+            rel="apple-touch-icon"
+            href={url}
+            sizes={`${size}x${size}`}
+          />
+        );
       })}
     </Head>
   );
-
 }
 export default PageHead;

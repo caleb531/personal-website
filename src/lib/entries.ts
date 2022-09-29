@@ -2,7 +2,12 @@ import fs from 'fs';
 import { glob } from 'glob-promise';
 import matter from 'gray-matter';
 import path from 'path';
-import { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../components/types';
+import {
+  ContactLinkEntry,
+  Entry,
+  ProjectEntry,
+  WebsiteEntry
+} from '../components/types';
 
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
@@ -15,7 +20,7 @@ export function getEntries<SubEntry>(entryType: string): SubEntry[] {
     return {
       id: entryId,
       ...matter(fs.readFileSync(entryPath)).data
-    } as (Entry & SubEntry);
+    } as Entry & SubEntry;
   });
 }
 

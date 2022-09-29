@@ -12,16 +12,16 @@ function useEntryLinkListeners(entryType: string) {
       ReactGA.event({
         category: entryType,
         action: 'click',
-        label: target
-          ?.closest('[data-entry-id]')
-          ?.getAttribute('data-entry-id') || undefined
+        label:
+          target?.closest('[data-entry-id]')?.getAttribute('data-entry-id') ||
+          undefined
       });
       ReactGA4.event({
         category: entryType,
         action: 'click',
-        label: target
-          ?.closest('[data-entry-id]')
-          ?.getAttribute('data-entry-id') || undefined
+        label:
+          target?.closest('[data-entry-id]')?.getAttribute('data-entry-id') ||
+          undefined
       });
     }
   }

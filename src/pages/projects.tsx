@@ -9,7 +9,10 @@ type Props = { projects: ProjectEntry[] };
 function Projects({ projects }: Props) {
   return (
     <div className="page-projects">
-      <p>This is a collection of projects I've developed in my spare time including one-pager web apps, Python programs, and JavaScript libraries.</p>
+      <p>
+        This is a collection of projects I've developed in my spare time
+        including one-pager web apps, Python programs, and JavaScript libraries.
+      </p>
       <ProjectArchive projects={projects} />
     </div>
   );

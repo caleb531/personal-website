@@ -1,9 +1,3 @@
 {
-  "contactLinks": [
-    "email",
-    "github",
-    "twitter",
-    "linkedin",
-    "keybase"
-  ]
+  "contactLinks": ["email", "github", "twitter", "linkedin", "keybase"]
 }
