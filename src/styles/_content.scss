@@ -84,6 +84,10 @@ ul {
   list-style-type: square;
 }
 
+li {
+  font-size: $font-size-p;
+}
+
 nav ul,
 nav ol {
   list-style: none;
