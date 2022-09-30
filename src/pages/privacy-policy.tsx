@@ -1,4 +1,3 @@
-import React from 'react';
 import { withGlobalStaticProps } from '../lib/page';
 
 function PrivacyPolicy() {
@@ -19,9 +18,13 @@ function PrivacyPolicy() {
           All web apps, websites, and other projects hosted on all{' '}
           <strong>*.calebevans.me</strong> subdomains
         </li>
+        <li>
+          All pages hosted on the <strong>faithdashboard.com</strong> and{' '}
+          <strong>*.faithdashboard.com</strong> domains
+        </li>
       </ul>
 
-      <p>This privacy policy was last updated on June 22nd, 2020.</p>
+      <p>This privacy policy was last updated on September 29th, 2022.</p>
 
       <h3>Secure Connection</h3>
 
@@ -35,15 +38,15 @@ function PrivacyPolicy() {
         .
       </p>
 
-      <h3>Local Storage</h3>
+      <h3>Data Stored Locally</h3>
 
       <p>
-        The apps on this website use the HTML5 Local Storage API to store
-        user-inputted data and preferences. All of this data remains on your
-        computer, and can be cleared through your web browser. The data contains
-        no personally-identifiable information except whatever information you
-        may enter into the app. To be clear, however, this data is not sent to
-        anyone.
+        The apps on this website use the HTML5 Local Storage and IndexedDB APIs
+        to store user-inputted data and preferences. All of this data remains on
+        your computer, and can be cleared through your web browser. The data
+        contains no personally-identifiable information except whatever
+        information you may enter into the app. To be clear, however, this data
+        is not sent to anyone.
       </p>
 
       <h3>Sharing Features</h3>
