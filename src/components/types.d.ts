@@ -1,7 +1,15 @@
+type LayoutProps = {
+  title: string;
+  gravatarUrl: string;
+  contactLinks: ContactLinkEntry[];
+  children: JSX.Element | JSX.Element[];
+};
+
 export interface PageProps {
   title?: string;
   description?: string;
-  [key: string]: string | Array | object;
+  projects?: ProjectEntry[];
+  websites?: WebsiteEntry[];
 }
 export interface PagePropsWrapper {
   props: PageProps;

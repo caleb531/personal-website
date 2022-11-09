@@ -1,4 +1,3 @@
-import React from 'react';
 import { withGlobalStaticProps } from '../lib/page';
 
 function About() {

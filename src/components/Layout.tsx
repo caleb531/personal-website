@@ -2,16 +2,9 @@ import { useRouter } from 'next/router';
 import Footer from './Footer';
 import Header from './Header';
 import PageHead from './PageHead';
-import { ContactLinkEntry } from './types';
+import { LayoutProps } from './types';
 
-type Props = {
-  title: string;
-  gravatarUrl: string;
-  contactLinks: ContactLinkEntry[];
-  children: JSX.Element | JSX.Element[];
-};
-
-function Layout({ title, gravatarUrl, contactLinks, children }: Props) {
+function Layout({ title, gravatarUrl, contactLinks, children }: LayoutProps) {
   const router = useRouter();
   return (
     <main data-page-path={router.pathname}>
