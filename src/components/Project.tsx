@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import Image from 'next/image';
-import React from 'react';
+import Image from 'next/future/image';
 import { ProjectEntry } from './types';
 
 type Props = { project: ProjectEntry; isCompact?: boolean };

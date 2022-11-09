@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from 'next/future/image';
 import { WebsiteEntry } from './types';
 
 type Props = { website: WebsiteEntry };
