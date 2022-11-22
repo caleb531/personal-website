@@ -10,7 +10,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.33.0
   '@typescript-eslint/parser': ^4.33.0
   classnames: ^2.3.1
-  esbuild: ^0.15.14
+  esbuild: ^0.15.15
   esbuild-runner: ^2.2.2
   eslint: ^7.32.0
   eslint-plugin-react: ^7.28.0
@@ -20,9 +20,9 @@ specifiers:
   lodash-es: ^4.17.21
   next: ^12.3.3
   prettier: ^2.7.1
-  puppeteer: ^13.0.1
-  react: ^17.0.1
-  react-dom: ^17.0.1
+  puppeteer: ^13.3.2
+  react: ^17.0.2
+  react-dom: ^17.0.2
   react-ga: ^3.3.0
   react-ga4: ^1.4.1
   sass: ^1.45.2
@@ -30,13 +30,13 @@ specifiers:
 
 dependencies:
   classnames: 2.3.1
-  glob-promise: 4.2.2_glob@7.2.0
+  glob-promise: 4.2.2_glob@7.2.3
   gray-matter: 4.0.3
   lodash-es: 4.17.21
   next: 12.3.3_4qr3n4otjnkrhoeggzku6b5agu
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-ga: 3.3.0_mv67koxdvxhyejehvpcoenu3ai
+  react-ga: 3.3.0_at7mkepldmzoo6silmqc5bca74
   react-ga4: 1.4.1
 
 devDependencies:
@@ -109,7 +109,7 @@ packages:
       ignore: 4.0.6
       import-fresh: 3.3.0
       js-yaml: 3.14.1
-      minimatch: 3.0.4
+      minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
@@ -121,7 +121,7 @@ packages:
     dependencies:
       '@humanwhocodes/object-schema': 1.2.1
       debug: 4.3.3
-      minimatch: 3.0.4
+      minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -340,8 +340,8 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@types/yauzl/2.9.2:
-    resolution: {integrity: sha512-8uALY5LTvSuHgloDVUvWP3pIauILm+8/0pDMokuDYIoNsOkSwd5AiHBTSEJjKTDcZr5z8UpgOWZkxBF4iJftoA==}
+  /@types/yauzl/2.10.0:
+    resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
       '@types/node': 17.0.8
@@ -1059,7 +1059,7 @@ packages:
       eslint: 7.32.0
       estraverse: 5.3.0
       jsx-ast-utils: 3.2.1
-      minimatch: 3.0.4
+      minimatch: 3.1.2
       object.entries: 1.1.5
       object.fromentries: 2.0.5
       object.hasown: 1.1.0
@@ -1139,7 +1139,7 @@ packages:
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
       lodash.merge: 4.6.2
-      minimatch: 3.0.4
+      minimatch: 3.1.2
       natural-compare: 1.4.0
       optionator: 0.9.1
       progress: 2.0.3
@@ -1213,7 +1213,7 @@ packages:
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
-      '@types/yauzl': 2.9.2
+      '@types/yauzl': 2.10.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1337,14 +1337,14 @@ packages:
     dependencies:
       is-glob: 4.0.3
 
-  /glob-promise/4.2.2_glob@7.2.0:
+  /glob-promise/4.2.2_glob@7.2.3:
     resolution: {integrity: sha512-xcUzJ8NWN5bktoTIX7eOclO1Npxd/dyVqUJxlLIDasT4C7KZyqlPIwkdJ0Ypiy3p2ZKahTjK4M9uC3sNSfNMzw==}
     engines: {node: '>=12'}
     peerDependencies:
       glob: ^7.1.6
     dependencies:
       '@types/glob': 7.2.0
-      glob: 7.2.0
+      glob: 7.2.3
     dev: false
 
   /glob/7.2.0:
@@ -1353,9 +1353,21 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.4
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: true
+
+  /glob/7.2.3:
+    resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.1.2
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: false
 
   /globals/13.12.0:
     resolution: {integrity: sha512-uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==}
@@ -1675,8 +1687,8 @@ packages:
       picomatch: 2.3.0
     dev: true
 
-  /minimatch/3.0.4:
-    resolution: {integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==}
+  /minimatch/3.1.2:
+    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
 
@@ -1933,6 +1945,15 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
+    dev: true
+
+  /prop-types/15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
 
   /proxy-from-env/1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
@@ -1989,13 +2010,13 @@ packages:
       scheduler: 0.20.2
     dev: false
 
-  /react-ga/3.3.0_mv67koxdvxhyejehvpcoenu3ai:
+  /react-ga/3.3.0_at7mkepldmzoo6silmqc5bca74:
     resolution: {integrity: sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==}
     peerDependencies:
       prop-types: ^15.6.0
       react: ^15.6.2 || ^16.0 || ^17
     dependencies:
-      prop-types: 15.7.2
+      prop-types: 15.8.1
       react: 17.0.2
     dev: false
 
