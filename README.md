@@ -1,8 +1,7 @@
-
 # Personal Website
 
-*Copyright 2013-2022, Caleb Evans*  
-*Code released under the MIT license*
+_Copyright 2013-2022, Caleb Evans_  
+_Code released under the MIT license_
 
 This is a [NextJS](https://nextjs.org/)-based personal website I created
 for myself. The theme is built from NextJS's default scaffolding, with all of
@@ -14,14 +13,20 @@ Live Site: https://calebevans.me/
 
 ### Installing
 
+This project uses [pnpm][pnpm] (instead of npm) for package installation and
+management.
+
+[pnpm]: https://pnpm.io/
+
 ```bash
-npm install
+npm install -g pnpm
+pnpm install
 ```
 
 ### Serving the site
 
 ```bash
-npx next develop
+pnpm exec next develop
 ```
 
 The site will then be viewable in your browser at http://localhost:3000.
