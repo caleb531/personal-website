@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import ProjectArchive from '../components/ProjectArchive';
 import { ProjectEntry } from '../components/types';
 import { getProjects } from '../lib/entries';

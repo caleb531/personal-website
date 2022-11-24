@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { ContactLinkEntry } from './types';
 
 type Props = { contactLink: ContactLinkEntry; isCompact?: boolean };
