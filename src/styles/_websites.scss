@@ -34,10 +34,9 @@ $website-list-columns: 3;
 .website-image {
   width: auto;
   border-radius: 10px;
-  a {
-    width: 256px;
-    height: 160px;
-  }
+}
+.website-image-image {
+  background-color: #fff;
 }
 .website-details {
   font-size: $font-size-m;
