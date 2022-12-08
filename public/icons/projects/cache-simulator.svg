@@ -15,7 +15,7 @@
   </mask>
   <!-- pinhead grid -->
   <pattern id="cachesimulator-pinhead-pattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-    <circle cx="4" cy="4" r="4" fill="#ffb" />
+    <circle cx="4" cy="4" r="3" fill="#ffb" />
   </pattern>
   <rect fill="url(#cachesimulator-pinhead-pattern)" x="58" y="58" width="204" height="204" mask="url(#cachesimulator-masked-pinhead-regions)" />
   <!-- center space -->
