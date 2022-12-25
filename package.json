@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier -w src/components src/data src/lib src/pages src/styles utilities"
   },
   "cacheDirectories": [
     ".next/cache"
