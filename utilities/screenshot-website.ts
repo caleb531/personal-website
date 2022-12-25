@@ -18,48 +18,58 @@ function createWebsiteImageDirectory(): Promise<string | undefined> {
   return fs.promises.mkdir(websiteImageDir, { recursive: true });
 }
 
-async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
-
+async function generateScreenshots(
+  websiteConfigFilePaths: string[]
+): Promise<void> {
   await createWebsiteImageDirectory();
   console.log('launching browser...');
   const browser = await puppeteer.launch();
 
   // Generate screenshot for each portfolio website that has configuration
-  await Promise.all(websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
+  await Promise.all(
+    websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
+      const websiteName = path.basename(websiteConfigFilePath, '.md');
 
-    const websiteName = path.basename(websiteConfigFilePath, '.md');
+      const websiteConfigFileContents = await fs.promises.readFile(
+        websiteConfigFilePath,
+        'utf8'
+      );
 
-    const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
+      const websiteEntry = matter(websiteConfigFileContents)
+        .data as WebsiteEntry;
+      const websiteImagePath = path.join(
+        websiteImageDir,
+        `${websiteName}.${websiteImageExtension}`
+      );
 
-    const websiteEntry = matter(websiteConfigFileContents).data as WebsiteEntry;
-    const websiteImagePath = path.join(websiteImageDir, `${websiteName}.${websiteImageExtension}`);
+      const page = await browser.newPage();
+      await page.setViewport({
+        width: windowWidth,
+        height: windowHeight
+      });
+      await page.goto(websiteEntry.direct_url, {
+        waitUntil: ['load', 'networkidle0']
+      });
 
-    const page = await browser.newPage();
-    await page.setViewport({
-      width: windowWidth,
-      height: windowHeight
-    });
-    await page.goto(websiteEntry.direct_url, {
-      waitUntil: ['load', 'networkidle0']
-    });
-
-    return page.screenshot({
-      path: websiteImagePath,
-      type: 'jpeg',
-      quality: websiteImageQuality,
-      captureBeyondViewport: false
-    }).then(() => {
-      console.log(`generated screenshot for ${websiteName}`);
-    }).catch((error) => {
-      console.error(error);
-      return error;
-    });
-
-  }));
+      return page
+        .screenshot({
+          path: websiteImagePath,
+          type: 'jpeg',
+          quality: websiteImageQuality,
+          captureBeyondViewport: false
+        })
+        .then(() => {
+          console.log(`generated screenshot for ${websiteName}`);
+        })
+        .catch((error) => {
+          console.error(error);
+          return error;
+        });
+    })
+  );
 
   console.log('closing browser...');
   await browser.close();
-
 }
 
 async function main(): Promise<void> {
