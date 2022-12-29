@@ -45,7 +45,7 @@ const nextConfig = {
         key: 'Content-Security-Policy',
         /* eslint-disable quotes */
         value:
-          "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src data: https://fonts.gstatic.com; img-src 'self' data: https://www.gravatar.com https://www.google-analytics.com https://www.googletagmanager.com; script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' ws: https://www.google-analytics.com https://www.googletagmanager.com; prefetch-src 'self'"
+          "default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src data: https://fonts.gstatic.com; img-src 'self' data: https://www.gravatar.com https://www.google-analytics.com https://www.googletagmanager.com; script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; prefetch-src 'self'"
         /* eslint-enable quotes */
       });
     }
