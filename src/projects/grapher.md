@@ -2,5 +2,5 @@
 title: Grapher
 direct_url: https://projects.calebevans.me/grapher/
 category: math
-description: Graph linear and polar equations
+description: Graph Cartesian and polar equations
 ---
