@@ -46,9 +46,6 @@ main[data-page-id='projects'] {
   display: inline-flex;
   flex-direction: column;
   width: calc(50% - 30px);
-  &:empty {
-    display: none;
-  }
   @include layout(hybrid) {
     display: block;
     width: auto;

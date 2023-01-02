@@ -46,9 +46,17 @@
 	export let projects: ProjectEntry[];
 	let visibleProjects: typeof projects;
 	let visibleProjectsByCategory: ProjectGroups;
+	let columnVisibilityMap: boolean[];
 	$: {
 		visibleProjects = filterProjects(projects, $searchQuery);
 		visibleProjectsByCategory = groupBy(visibleProjects, 'category');
+		// Keep track of which columns contain projects that match the search query
+		// so we can only show those columns
+		columnVisibilityMap = projectMetadata.categoriesByColumn.map((categoriesInColumn) => {
+			return categoriesInColumn.some((category) => {
+				return visibleProjectsByCategory[category.id]?.length > 0;
+			});
+		});
 	}
 
 	// TODO: implement click action for Google Analytics
@@ -78,12 +86,14 @@
 		{/if}
 	</div>
 	<div class="project-list-container">
-		{#each projectMetadata.categoriesByColumn as categoriesInColumn}
-			<div class="project-list-column">
-				{#each categoriesInColumn as category}
-					<ProjectCategory {category} projects={visibleProjectsByCategory[category.id] || []} />
-				{/each}
-			</div>
+		{#each projectMetadata.categoriesByColumn as categoriesInColumn, columnIndex}
+			{#if columnVisibilityMap[columnIndex]}
+				<div class="project-list-column">
+					{#each categoriesInColumn as category}
+						<ProjectCategory {category} projects={visibleProjectsByCategory[category.id] || []} />
+					{/each}
+				</div>
+			{/if}
 		{/each}
 	</div>
 </div>
