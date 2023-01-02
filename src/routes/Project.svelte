@@ -15,7 +15,7 @@
 		href={project.direct_url}
 		aria-labelledby={`project-title-${project.id}`}
 	>
-		<img src={`/icons/projects/${project.id}.svg`} alt="" width={80} height={80} />
+		<img src={`/icons/projects/${project.id}.svg`} alt="" width={80} height={80} loading="lazy" />
 	</a>
 
 	<div class="entry-main project-main">
