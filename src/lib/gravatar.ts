@@ -5,14 +5,9 @@ import crypto from 'crypto';
 // generate the various sizes on-the-fly when rendering
 export function getBaseGravatarUrl(email: string): string {
   const normalizedEmail = String(email).trim().toLowerCase();
-  const hash = crypto.createHash('md5').update(normalizedEmail).digest('hex');
+  const hash = crypto
+    .createHash('md5')
+    .update(normalizedEmail.trim().toLowerCase())
+    .digest('hex');
   return `https://www.gravatar.com/avatar/${hash}`;
-}
-
-// Take an existing gravatar URL and return a gravatar URL that has been
-// resized to the given size
-export function resizeGravatar(gravatarUrl: string, size: number): string {
-  const url = new URL(gravatarUrl);
-  url.searchParams.set('size', String(size));
-  return url.toString();
 }
