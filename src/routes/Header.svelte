@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let gravatarUrl: string;
 	import site from '../data/site.json';
+	import Navigation from './Navigation.svelte';
 
 	// Take an existing gravatar URL and return a gravatar URL that has been
 	// resized to the given size
@@ -27,5 +28,5 @@
 		/>
 		<h1 class="site-title">{site.title}</h1>
 	</a>
-	<!-- <Navigation /> -->
+	<Navigation />
 </header>
