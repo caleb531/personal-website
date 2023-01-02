@@ -7,9 +7,9 @@
 
 	// Pregenerate lookup table of project categories IDs to titles so the titles
 	// can be added to the available keyword pool (for the user to search from)
-	const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce(
-		(map, categories) => {
-			return { ...map, ...keyBy(categories, 'id') };
+	const categoriesById: ProjectCategoryMap = projectMetadata.categoriesByColumn.reduce(
+		(map, categoriesInColumn) => {
+			return { ...map, ...keyBy(categoriesInColumn, 'id') };
 		},
 		{}
 	);
@@ -78,9 +78,9 @@
 		{/if}
 	</div>
 	<div class="project-list-container">
-		{#each projectMetadata.categories as categories}
+		{#each projectMetadata.categoriesByColumn as categoriesInColumn}
 			<div class="project-list-column">
-				{#each categories as category}
+				{#each categoriesInColumn as category}
 					<ProjectCategory {category} projects={visibleProjectsByCategory[category.id] || []} />
 				{/each}
 			</div>
