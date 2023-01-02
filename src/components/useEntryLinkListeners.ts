@@ -25,6 +25,6 @@ function useEntryLinkListeners(entryType: string) {
       });
     }
   }
-  return { onClick };
+  return { 'on:click': onClick };
 }
 export default useEntryLinkListeners;

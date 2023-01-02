@@ -7,7 +7,11 @@
 </script>
 
 <svelte:head>
-	<title>{$page.data.title} | Caleb Evans</title>
+	{#if $page.data.id === 'home'}
+		<title>{data.site.title} | {data.site.tagline}</title>
+	{:else}
+		<title>{$page.data.title} | {data.site.title}</title>
+	{/if}
 	<meta name="description" content={$page.data.description} />
 </svelte:head>
 
