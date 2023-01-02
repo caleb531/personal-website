@@ -6,10 +6,9 @@ type LayoutProps = {
 };
 
 export interface PageProps {
+  id: string;
   title?: string;
   description?: string;
-  projects?: ProjectEntry[];
-  websites?: WebsiteEntry[];
 }
 export interface PagePropsWrapper {
   props: PageProps;

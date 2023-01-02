@@ -41,11 +41,15 @@
 		event.preventDefault();
 	}
 
-	export let projects: ProjectEntry[];
-	$: projects = filterProjects(projects, $searchQuery);
-
 	const searchQuery = writable('');
-	const projectsByCategory: ProjectGroups = groupBy(projects, 'category');
+
+	export let projects: ProjectEntry[];
+	let visibleProjects: typeof projects;
+	let visibleProjectsByCategory: ProjectGroups;
+	$: {
+		visibleProjects = filterProjects(projects, $searchQuery);
+		visibleProjectsByCategory = groupBy(visibleProjects, 'category');
+	}
 
 	// TODO: implement click action for Google Analytics
 	// const gaEventListenerProps = useEntryLinkListeners('projects');
@@ -63,22 +67,23 @@
 				placeholder="Search for a project"
 			/>
 		</form>
-		{#if projects.length}
+		{#if visibleProjects.length}
 			<div class="project-search-result-count">
-				{projects.length === 1 ? 'Showing 1 project' : `Showing ${projects.length} projects`}
+				{visibleProjects.length === 1
+					? 'Showing 1 project'
+					: `Showing ${visibleProjects.length} projects`}
 			</div>
 		{:else}
 			<div class="project-search-no-results">No Projects Found</div>
 		{/if}
 	</div>
 	<div class="project-list-container">
-		{#each projectMetadata.categories as categories, columnIndex}
+		{#each projectMetadata.categories as categories}
 			<div class="project-list-column">
 				{#each categories as category}
-					<ProjectCategory {category} projects={projectsByCategory[category.id] || []} />
+					<ProjectCategory {category} projects={visibleProjectsByCategory[category.id] || []} />
 				{/each}
 			</div>
 		{/each}
 	</div>
 </div>
-); } export default ProjectArchive;

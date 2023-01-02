@@ -15,7 +15,7 @@
 	<meta name="description" content={$page.data.description} />
 </svelte:head>
 
-<main>
+<main data-page-id={$page.data.id}>
 	<Header gravatarUrl={data.gravatarUrl} />
 	<article class="page" id="page">
 		{#if $page.data.title}
