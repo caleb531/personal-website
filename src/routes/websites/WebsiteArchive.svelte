@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
+  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import websiteMetadata from '../../data/websites.json';
-  import { analyticsEntryListeners } from '../analyticsEntryListeners';
   import type { WebsiteMap } from '../types';
   import type { PageData } from './$types';
   import Website from './Website.svelte';

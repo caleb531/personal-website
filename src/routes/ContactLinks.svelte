@@ -1,9 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
+  import { analyticsEntryListeners } from '../actions/analyticsEntryListeners';
   import contactLinkMetadata from '../data/contact-links.json';
   import type { PageData } from './$types';
-  import { analyticsEntryListeners } from './analyticsEntryListeners';
   import ContactLink from './ContactLink.svelte';
   import type { ContactLinkMap } from './types';
 

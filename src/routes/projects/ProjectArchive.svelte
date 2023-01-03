@@ -3,8 +3,8 @@
   import { groupBy, keyBy } from 'lodash-es';
   import { writable } from 'svelte/store';
   import type { PageData } from '../$types';
+  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import projectMetadata from '../../data/projects.json';
-  import { analyticsEntryListeners } from '../analyticsEntryListeners';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
   import ProjectCategory from './ProjectCategory.svelte';
 
