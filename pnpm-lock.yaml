@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@beyonk/svelte-google-analytics': ^2.6.4
   '@fontsource/source-sans-pro': ^4.5.11
   '@sveltejs/adapter-auto': ^1.0.0
   '@sveltejs/kit': ^1.0.0
@@ -25,6 +26,7 @@ specifiers:
   vite-imagetools: ^4.0.12
 
 dependencies:
+  '@beyonk/svelte-google-analytics': 2.6.4
   '@fontsource/source-sans-pro': 4.5.11
   glob-promise: 6.0.0_glob@8.0.3
   gray-matter: 4.0.3
@@ -51,6 +53,16 @@ devDependencies:
   vite-imagetools: 4.0.12
 
 packages:
+
+  /@beyonk/async-script-loader/2.3.0:
+    resolution: {integrity: sha512-/vbDM5j8OHmtnWLx87sef0T/jGWVvZV6ILm3QFLpfRwSg0KmhQoAZnOT4XSaUL/EjOC9eMzgX5qtS2jztKzY2A==}
+    dev: false
+
+  /@beyonk/svelte-google-analytics/2.6.4:
+    resolution: {integrity: sha512-m2P1fs36qObCLtIZ9edLC62RHLrGVknaKuE4uEBQk5+Jfy1apa7DOIT0Jq1PvScyrndV62FvyjUUrWwrXjYbmw==}
+    dependencies:
+      '@beyonk/async-script-loader': 2.3.0
+    dev: false
 
   /@esbuild/android-arm/0.16.12:
     resolution: {integrity: sha512-CTWgMJtpCyCltrvipZrrcjjRu+rzm6pf9V8muCsJqtKujR3kPmU4ffbckvugNNaRmhxAF1ZI3J+0FUIFLFg8KA==}

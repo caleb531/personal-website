@@ -12,6 +12,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
+		"@beyonk/svelte-google-analytics": "^2.6.4",
 		"@fontsource/source-sans-pro": "^4.5.11",
 		"glob-promise": "^6.0.0",
 		"gray-matter": "^4.0.3",
