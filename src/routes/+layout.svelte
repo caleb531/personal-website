@@ -1,5 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import '@fontsource/source-sans-pro/300.css';
+  import '@fontsource/source-sans-pro/400.css';
   import '../styles/index.scss';
   import Footer from './Footer.svelte';
   import Header from './Header.svelte';

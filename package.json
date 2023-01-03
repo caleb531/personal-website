@@ -12,6 +12,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
+		"@fontsource/source-sans-pro": "^4.5.11",
 		"glob-promise": "^6.0.0",
 		"gray-matter": "^4.0.3",
 		"lodash-es": "^4.17.21"
