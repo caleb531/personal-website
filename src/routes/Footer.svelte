@@ -7,7 +7,7 @@
 </script>
 
 <footer class="site-footer">
-	<ContactLinks {contactLinks} isCompact />
+	<ContactLinks isCompact />
 
 	<div class="site-footer-content">
 		<p>

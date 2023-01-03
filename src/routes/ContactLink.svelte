@@ -33,10 +33,14 @@
 		<a
 			class="entry-image contact-link-image"
 			href={contactLink.direct_url}
-			aria-label={contactLink.title}
 			title={contactLink.title}
 		>
-			<img src={`/icons/contact-links/${contactLink.id}.svg`} alt="" width={40} height={40} />
+			<img
+				src={`/icons/contact-links/${contactLink.id}.svg`}
+				alt={contactLink.title}
+				width={40}
+				height={40}
+			/>
 		</a>
 	{/if}
 </article>
