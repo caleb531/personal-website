@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import type { PageData } from './$types';
   import ContactLinks from './ContactLinks.svelte';
-  let { site, contactLinks } = $page.data as PageData;
+  let { site } = $page.data as PageData;
   const donateBaseUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations';
 </script>
 

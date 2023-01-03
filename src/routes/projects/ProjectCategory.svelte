@@ -1,6 +1,6 @@
 <script lang="ts">
   import { keyBy } from 'lodash-es';
-  import type { ProjectCategoryData, ProjectEntry } from '../components/types';
+  import type { ProjectCategoryData, ProjectEntry } from '../types';
   import Project from './Project.svelte';
 
   export let projects: ProjectEntry[];
