@@ -19,18 +19,20 @@
     sortedProjects = [
       ...(category.topProjects || [])
         .map((projectId) => projectsById[projectId])
-        // If the user searches for a project, then projectsById[projectId] might
-        // return undefined because topProjects may not include any projects that
-        // can be shown; to solve this, we filter out all falsy values
+        // If the user searches for a project, then projectsById[projectId]
+        // might return undefined because topProjects may not include any
+        // projects that can be shown; to solve this, we filter out all falsy
+        // values
         .filter(Boolean),
       ...projects.filter(
         (project) => !topProjectsSet.has(project.id) && !bottomProjectsSet.has(project.id)
       ),
       ...(category.bottomProjects || [])
         .map((projectId) => projectsById[projectId])
-        // If the user searches for a project, then projectsById[projectId] might
-        // return undefined because bottomProjects may not include any projects
-        // that can be shown; to solve this, we filter out all falsy values
+        // If the user searches for a project, then projectsById[projectId]
+        // might return undefined because bottomProjects may not include any
+        // projects that can be shown; to solve this, we filter out all falsy
+        // values
         .filter(Boolean)
     ];
   }
