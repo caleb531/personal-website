@@ -2,12 +2,7 @@ import fs from 'fs';
 import { glob } from 'glob-promise';
 import matter from 'gray-matter';
 import path from 'path';
-import type {
-  ContactLinkEntry,
-  Entry,
-  ProjectEntry,
-  WebsiteEntry
-} from '../components/types';
+import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../components/types';
 
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
