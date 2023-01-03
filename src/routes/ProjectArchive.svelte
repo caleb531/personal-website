@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { groupBy, keyBy } from 'lodash-es';
 	import { writable } from 'svelte/store';
 	import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../components/types';
 	import projectMetadata from '../data/projects.json';
+	import type { PageData } from './$types';
 	import ProjectCategory from './ProjectCategory.svelte';
 
 	// Pregenerate lookup table of project categories IDs to titles so the titles
@@ -43,7 +45,7 @@
 
 	const searchQuery = writable('');
 
-	export let projects: ProjectEntry[];
+	let { projects } = $page.data as PageData;
 	let visibleProjects: typeof projects;
 	let visibleProjectsByCategory: ProjectGroups;
 	let columnVisibilityMap: boolean[];
