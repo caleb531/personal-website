@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
-  import type { WebsiteMap } from '../../components/types.d';
   import websiteMetadata from '../../data/websites.json';
+  import type { WebsiteMap } from '../types';
   import type { PageData } from './$types';
   import Website from './Website.svelte';
 

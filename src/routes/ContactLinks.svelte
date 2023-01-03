@@ -1,10 +1,10 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
-  import type { ContactLinkMap } from '../components/types.d';
   import contactLinkMetadata from '../data/contact-links.json';
   import type { PageData } from './$types';
   import ContactLink from './ContactLink.svelte';
+  import type { ContactLinkMap } from './types';
 
   const { contactLinks } = $page.data as PageData;
   export let isCompact: boolean = false;

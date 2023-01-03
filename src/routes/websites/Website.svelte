@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { WebsiteEntry } from '../../components/types.d';
+  import type { WebsiteEntry } from '../types';
   export let website: WebsiteEntry;
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ContactLinkEntry } from '../components/types.d';
+  import type { ContactLinkEntry } from './types';
   export let contactLink: ContactLinkEntry;
   export let isCompact = false;
 </script>
