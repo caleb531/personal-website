@@ -1,9 +1,24 @@
 // Font variables
 @use 'sass:math';
+@use '@fontsource/source-sans-pro/scss/mixins' as SourceSansPro;
+
+// We need to use the Sass mixins (as opposed to TS import) to load our custom
+// fonts so that we can override the default font-display:swap and thus minimize
+// Cumulative Layout Shift (CLS)
+@include SourceSansPro.fontFace(
+  $weight: 300,
+  $display: fallback,
+  $fontDir: '/node_modules/@fontsource/source-sans-pro/files'
+);
+@include SourceSansPro.fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: '/node_modules/@fontsource/source-sans-pro/files'
+);
 
 // Basic font characteristics
-$font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-  'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif;
 $font-weight-normal: 300;
 $font-weight-bold: 400;
 $line-height: 1.4;

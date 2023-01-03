@@ -7,8 +7,8 @@ $project-icon-width: 80px;
 }
 
 // Prevent scroll jumps when no results are returned from a project search
-main[data-page-path='/'],
-main[data-page-path='/projects'] {
+main[data-page-id='home'],
+main[data-page-id='projects'] {
   min-height: 1000px;
 }
 
@@ -46,9 +46,6 @@ main[data-page-path='/projects'] {
   display: inline-flex;
   flex-direction: column;
   width: calc(50% - 30px);
-  &:empty {
-    display: none;
-  }
   @include layout(hybrid) {
     display: block;
     width: auto;
