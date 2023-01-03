@@ -1,5 +1,5 @@
+import { getProjects } from '$lib/entries.server';
 import site from '../data/site.json';
-import { getProjects } from '../lib/entries';
 import type { PageServerLoad } from './$types';
 
 export const load = (() => {
