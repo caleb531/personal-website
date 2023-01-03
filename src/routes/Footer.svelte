@@ -1,0 +1,23 @@
+<script lang="ts">
+	import { page } from '$app/stores';
+	import type { PageData } from './$types';
+	import ContactLinks from './ContactLinks.svelte';
+	let { site, contactLinks } = $page.data as PageData;
+	const donateBaseUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations';
+</script>
+
+<footer class="site-footer">
+	<ContactLinks {contactLinks} isCompact />
+
+	<div class="site-footer-content">
+		<p>
+			&copy; 2013-{new Date().getFullYear()} Caleb Evans |{' '}
+			<a href="/privacy-policy/">Privacy Policy</a>
+		</p>
+
+		<p>
+			Like what I've made? Please{' '}
+			<a href={`${donateBaseUrl}&business=${site.email}`}>donate</a>!
+		</p>
+	</div>
+</footer>

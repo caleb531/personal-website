@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Footer from '../routes/Footer.svelte';
 	import Header from '../routes/Header.svelte';
 	import '../styles/index.scss';
 	import type { LayoutData } from './$types';
@@ -16,11 +17,12 @@
 </svelte:head>
 
 <main data-page-id={$page.data.id}>
-	<Header gravatarUrl={data.gravatarUrl} />
+	<Header />
 	<article class="page" id="page">
 		{#if $page.data.title}
 			<h2>{$page.data.title}</h2>
 		{/if}
 		<slot />
 	</article>
+	<Footer />
 </main>

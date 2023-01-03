@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let gravatarUrl: string;
-	import site from '../data/site.json';
+	import { page } from '$app/stores';
 	import Navigation from './Navigation.svelte';
+	let { gravatarUrl, site } = $page.data;
 
 	// Take an existing gravatar URL and return a gravatar URL that has been
 	// resized to the given size
