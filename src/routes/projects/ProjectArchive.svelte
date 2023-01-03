@@ -2,9 +2,9 @@
 	import { page } from '$app/stores';
 	import { groupBy, keyBy } from 'lodash-es';
 	import { writable } from 'svelte/store';
-	import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../components/types';
-	import projectMetadata from '../data/projects.json';
-	import type { PageData } from './$types';
+	import type { PageData } from '../$types';
+	import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../../components/types';
+	import projectMetadata from '../../data/projects.json';
 	import ProjectCategory from './ProjectCategory.svelte';
 
 	// Pregenerate lookup table of project categories IDs to titles so the titles

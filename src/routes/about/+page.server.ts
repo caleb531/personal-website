@@ -1,4 +1,3 @@
-import type { PageProps } from '../../components/types';
 import type { PageServerLoad } from './$types';
 
 export const load = (() => {
@@ -7,4 +6,4 @@ export const load = (() => {
 		title: 'About',
 		description: 'About the life and interests of Caleb Evans, coder for Christ'
 	};
-}) satisfies PageServerLoad<PageProps>;
+}) satisfies PageServerLoad;
