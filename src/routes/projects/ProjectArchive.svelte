@@ -4,6 +4,7 @@
   import { writable } from 'svelte/store';
   import type { PageData } from '../$types';
   import projectMetadata from '../../data/projects.json';
+  import { analyticsEntryListeners } from '../analyticsEntryListeners';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
   import ProjectCategory from './ProjectCategory.svelte';
 
@@ -60,12 +61,9 @@
       });
     });
   }
-
-  // TODO: implement click action for Google Analytics
-  // const gaEventListenerProps = useEntryLinkListeners('projects');
 </script>
 
-<div class="project-archive">
+<div class="project-archive" use:analyticsEntryListeners={'projects'}>
   <div class="project-search-container">
     <form class="project-search-container-form" on:submit={disableNativeFormSubmit}>
       <label for="project-search-input" class="accessibility-only"> Search: </label>

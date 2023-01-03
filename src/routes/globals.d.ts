@@ -7,6 +7,15 @@ declare module '*&imagetools' {
 }
 
 // The @beyonk/svelte-google-analytics package is missing TypeScript types
+// (source:
+// <https://github.com/beyonk-adventures/svelte-google-analytics/issues/14#issuecomment-1100511233>)
 declare module '@beyonk/svelte-google-analytics' {
-  export const GoogleAnalytics: SvelteComponent;
+	import { SvelteComponentTyped } from 'svelte';
+  export class GoogleAnalytics extends SvelteComponentTyped<{ properties: string[] }> {}
+  export const ga = {
+    addEvent(event: string, data: object): void
+    // repeat if needed for `all`, `ecommerce`, `retail`, `travel`, `games`, `setUserProperties` ...
+    // refer to `svelte-google-analytics/src/generated-functions.js` after `npm run build`
+    // but first install `@beyonk/async-script-loader` dependency to avoid build failure
+  };
 }

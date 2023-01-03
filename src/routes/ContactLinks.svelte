@@ -3,6 +3,7 @@
   import { keyBy } from 'lodash-es';
   import contactLinkMetadata from '../data/contact-links.json';
   import type { PageData } from './$types';
+  import { analyticsEntryListeners } from './analyticsEntryListeners';
   import ContactLink from './ContactLink.svelte';
   import type { ContactLinkMap } from './types';
 
@@ -10,15 +11,13 @@
   export let isCompact: boolean = false;
 
   const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
-
-  // TODO: implement click action for Google Analytics
-  // const gaEventListenerProps = useEntryLinkListeners('contact links');
 </script>
 
 <div
   class="entry-list contact-link-list"
   class:entry-list-compact={isCompact}
   class:contact-link-list-compact={isCompact}
+  use:analyticsEntryListeners={'contact links'}
 >
   {#each contactLinkMetadata.contactLinks as contactLinkName}
     <ContactLink contactLink={contactLinksByName[contactLinkName]} {isCompact} />
