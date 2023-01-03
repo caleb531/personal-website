@@ -1,8 +1,15 @@
 <script lang="ts">
 	import portrait from '../images/portrait-full.jpg?w=180&imagetools';
 	import portraitRetina from '../images/portrait-full.jpg?w=360&imagetools';
+	import type { PageData } from './$types';
 	import ProjectArchive from './projects/ProjectArchive.svelte';
+	export let data: PageData;
 </script>
+
+<svelte:head>
+	<!-- Override the <title> for the homepage only -->
+	<title>{data.site.title} | {data.site.tagline}</title>
+</svelte:head>
 
 <article class="home-intro">
 	<div class="home-intro-left">
