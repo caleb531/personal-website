@@ -10,6 +10,7 @@
   const { contactLinks } = $page.data as PageData;
   export let isCompact: boolean = false;
 
+  console.log('contactLinks', contactLinks);
   const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
 </script>
 
