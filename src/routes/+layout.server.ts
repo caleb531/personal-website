@@ -8,10 +8,10 @@ import type { LayoutServerLoad } from './$types';
 export const prerender = true;
 
 // Define props that should be globally available across all pages
-export const load = (() => {
+export const load = (async () => {
   return {
     site,
     gravatarUrl: getBaseGravatarUrl(site.email),
-    contactLinks: getContactLinks()
+    contactLinks: await getContactLinks()
   };
 }) satisfies LayoutServerLoad;
