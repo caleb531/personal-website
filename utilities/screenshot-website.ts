@@ -5,9 +5,9 @@ import glob from 'glob-promise';
 import matter from 'gray-matter';
 import path from 'path';
 import puppeteer from 'puppeteer';
-import { WebsiteEntry } from '../src/components/types';
+import type { WebsiteEntry } from '../src/routes/types.d';
 
-const websiteImageDir = 'public/images/websites';
+const websiteImageDir = 'static/images/websites';
 const websiteImageExtension = 'jpg';
 const websiteImageQuality = 85;
 const windowWidth = 1024;
@@ -18,9 +18,7 @@ function createWebsiteImageDirectory(): Promise<string | undefined> {
   return fs.promises.mkdir(websiteImageDir, { recursive: true });
 }
 
-async function generateScreenshots(
-  websiteConfigFilePaths: string[]
-): Promise<void> {
+async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
   await createWebsiteImageDirectory();
   console.log('launching browser...');
   const browser = await puppeteer.launch();
@@ -30,13 +28,9 @@ async function generateScreenshots(
     websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
       const websiteName = path.basename(websiteConfigFilePath, '.md');
 
-      const websiteConfigFileContents = await fs.promises.readFile(
-        websiteConfigFilePath,
-        'utf8'
-      );
+      const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
 
-      const websiteEntry = matter(websiteConfigFileContents)
-        .data as WebsiteEntry;
+      const websiteEntry = matter(websiteConfigFileContents).data as WebsiteEntry;
       const websiteImagePath = path.join(
         websiteImageDir,
         `${websiteName}.${websiteImageExtension}`
