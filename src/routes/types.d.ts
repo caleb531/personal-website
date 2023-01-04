@@ -13,26 +13,20 @@ export interface Entry {
   direct_url: string;
   description: string;
 }
-export interface EntryMap<SubEntry> {
-  [key: string]: SubEntry;
-}
+export type EntryMap<SubEntry> = Record<string, SubEntry>;
 
 export interface ProjectEntry extends Entry {
   category: string;
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
-export interface ProjectGroups {
-  [key: string]: ProjectEntry[];
-}
+export type ProjectGroups = Record<string, ProjectEntry[]>;
 export interface ProjectCategoryData {
   id: string;
   title: string;
   topProjects?: string[];
   bottomProjects?: string[];
 }
-interface ProjectCategoryMap {
-  [key: string]: ProjectCategoryData;
-}
+export type ProjectCategoryMap = Record<string, ProjectCategoryData>;
 
 export interface WebsiteEntry extends Entry {
   technologies: string;

@@ -10,7 +10,7 @@
   const topProjectsSet = new Set(category.topProjects);
   // Demote some projects to the end of the list
   const bottomProjectsSet = new Set(category.bottomProjects);
-  let projectsById: { [key: string]: ProjectEntry };
+  let projectsById: Record<string, ProjectEntry>;
   // Re-sort projects list according to the promotion/demotion criteria defined
   // for this category
   let sortedProjects: ProjectEntry[];
