@@ -1,4 +1,4 @@
-import adapterStatic from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,10 +8,7 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    // Enable Static Site Generation (SSG) for all pages; this also requires
-    // that we export const prerender = true; in the root layout
-    // (layout.server.ts, in our case)
-    adapter: adapterStatic()
+    adapter: adapter()
   }
 };
 
