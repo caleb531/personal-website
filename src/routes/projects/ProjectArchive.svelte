@@ -90,7 +90,9 @@
       {#if columnVisibilityMap[columnIndex]}
         <div class="project-list-column">
           {#each categoriesInColumn as category}
-            <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] || []} />
+            {#if visibleProjectsByCategory[category.id]}
+              <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
+            {/if}
           {/each}
         </div>
       {/if}

@@ -16,6 +16,8 @@
 
 <div class="entry-list website-list" use:analyticsEntryListeners={'websites'}>
   {#each websiteNames as websiteName}
-    <Website website={websitesById[websiteName]} />
+    {#if websitesById[websiteName]}
+      <Website website={websitesById[websiteName]} />
+    {/if}
   {/each}
 </div>

@@ -20,6 +20,8 @@
   use:analyticsEntryListeners={'contact links'}
 >
   {#each contactLinkMetadata.contactLinks as contactLinkName}
-    <ContactLink contactLink={contactLinksByName[contactLinkName]} {isCompact} />
+    {#if contactLinksByName[contactLinkName]}
+      <ContactLink contactLink={contactLinksByName[contactLinkName]} {isCompact} />
+    {/if}
   {/each}
 </div>
