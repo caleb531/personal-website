@@ -10,7 +10,7 @@ declare module '*&imagetools' {
 // (source:
 // <https://github.com/beyonk-adventures/svelte-google-analytics/issues/14#issuecomment-1100511233>)
 declare module '@beyonk/svelte-google-analytics' {
-	import { SvelteComponentTyped } from 'svelte';
+  import { SvelteComponentTyped } from 'svelte';
   export class GoogleAnalytics extends SvelteComponentTyped<{ properties: string[] }> {}
   export const ga = {
     addEvent(event: string, data: object): void
