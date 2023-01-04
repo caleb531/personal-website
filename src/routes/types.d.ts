@@ -1,10 +1,3 @@
-type LayoutProps = {
-  title: string;
-  gravatarUrl: string;
-  contactLinks: ContactLinkEntry[];
-  children: JSX.Element | JSX.Element[];
-};
-
 export interface PageProps {
   id: string;
   title?: string;
@@ -48,7 +41,5 @@ export interface WebsiteEntry extends Entry {
 }
 export type WebsiteMap = EntryMap<WebsiteEntry>;
 
-export interface ContactLinkEntry extends Entry {
-  // Equivalent shape for now
-}
+export type ContactLinkEntry = Entry;
 export type ContactLinkMap = EntryMap<ContactLinkEntry>;
