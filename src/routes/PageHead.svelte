@@ -1,12 +1,14 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { resizeGravatar } from '$lib/gravatar';
+  import JsonLd from './JsonLd.svelte';
   let { gravatarUrl, site } = $page.data;
 
   let isHomepage: boolean;
   let pageSeoTitle: string;
   let pageSeoUrl: string;
-  let pageSeoImage = `${$page.data.site.url}/images/social-preview.png`;
+  let pageSeoDescription: string;
+  let pageSeoImage = `${site.url}/images/social-preview.png`;
 
   // SvelteKit does not seem to like if..else blocks within <svelte:head>; if we
   // try to conditionally set the <title> within <svelte:head> itself, then the
@@ -16,16 +18,17 @@
   // the value of 'page' changes
   let renderedTitle: string;
   $: {
-    const data = $page.data;
     isHomepage = $page.data.id === 'home';
     if (isHomepage) {
-      renderedTitle = `${data.site.title} | ${data.site.tagline}`;
-      pageSeoTitle = `${data.site.title} | ${data.site.tagline}`;
+      renderedTitle = `${site.title} | ${site.tagline}`;
+      pageSeoTitle = `${site.title} | ${site.tagline}`;
+      pageSeoDescription = site.description;
     } else {
-      renderedTitle = `${$page.data.title} | ${data.site.title}`;
-      pageSeoTitle = `${$page.data.title}`;
+      renderedTitle = `${$page.data.title} | ${site.title}`;
+      pageSeoTitle = $page.data.title;
+      pageSeoDescription = $page.data.description;
     }
-    pageSeoUrl = $page.data.site.url + $page.url.pathname;
+    pageSeoUrl = site.url + $page.url.pathname;
   }
 
   let appleTouchIcons = [76, 120, 152, 180].map((size) => {
@@ -54,16 +57,12 @@
   <meta name="google-site-verification" content={site.googleSiteVerification} />
   <link rel="canonical" href={pageSeoUrl} />
   <link rel="alternate" hrefLang="en-US" href={pageSeoUrl} />
-  <script type="application/ld+json">
-    {
-      description: site.description,
-      headline: isHomepage ? site.title : renderedTitle,
-      url: pageSeoUrl,
-      '@type': isHomepage ? 'WebSite' : 'WebPage',
-      name: isHomepage ? site.title : renderedTitle,
-      '@context': 'https://schema.org'
-    }
-  </script>
+  <JsonLd
+    title={pageSeoTitle}
+    description={pageSeoDescription}
+    url={pageSeoUrl}
+    type={isHomepage ? 'WebSite' : 'WebPage'}
+  />
   {#each appleTouchIcons as icon}
     <link rel="apple-touch-icon" href={icon.url} sizes={`${icon.size}x${icon.size}`} />
   {/each}

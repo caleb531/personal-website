@@ -22,6 +22,7 @@ specifiers:
   prettier-plugin-svelte: ^2.8.1
   puppeteer: ^19.4.1
   sass: ^1.57.1
+  schema-dts: ^1.1.0
   svelte: ^3.54.0
   svelte-check: ^2.9.2
   tslib: ^2.4.1
@@ -54,6 +55,7 @@ devDependencies:
   prettier-plugin-svelte: 2.9.0_ajxj753sv7dbwexjherrch25ta
   puppeteer: 19.4.1
   sass: 1.57.1
+  schema-dts: 1.1.0_typescript@4.9.4
   svelte: 3.55.0
   svelte-check: 2.10.3_sass@1.57.1+svelte@3.55.0
   tslib: 2.4.1
@@ -2275,6 +2277,14 @@ packages:
       chokidar: 3.5.3
       immutable: 4.2.1
       source-map-js: 1.0.2
+    dev: true
+
+  /schema-dts/1.1.0_typescript@4.9.4:
+    resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 4.9.4
     dev: true
 
   /section-matter/1.0.0:
