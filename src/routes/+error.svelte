@@ -2,6 +2,14 @@
   import { page } from '$app/stores';
 </script>
 
+<svelte:head>
+  {#if $page.status === 404}
+    <title>Page Not Found | {$page.data.site.title}</title>
+  {:else}
+    <title>{$page.status} Error | {$page.data.site.title}</title>
+  {/if}
+</svelte:head>
+
 {#if $page.status === 404}
   <h2>Page Not Found</h2>
   <p>
@@ -11,16 +19,8 @@
   </p>
   <p>
     In the meantime, watch some
-    <a href="https://www.youtube.com/watch?v=y6GaPkkGZGw">
-      adorable red pandas playing in the snow
-    </a>!
-  </p>
-{:else if $page.status === 500}
-  <h2>Internal Server Error</h2>
-  <p>
-    Sorry, my server errored out. Please
-    <a href="mailto:caleb@calebevans.me">email me</a> with the URL page you were trying to access, and
-    I'll check it out.
+    <a href="https://www.youtube.com/watch?v=y6GaPkkGZGw">adorable red pandas playing in the snow</a
+    >!
   </p>
 {:else}
   <h2>{$page.status}: {$page.error?.message}</h2>
