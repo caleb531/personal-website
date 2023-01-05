@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/portfolio/",
+      "source": "/portfolio",
       "destination": "/projects/",
       "permanent": true
     },
