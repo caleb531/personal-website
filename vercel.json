@@ -6,6 +6,11 @@
       "permanent": true
     },
     {
+      "source": "/portfolio/",
+      "destination": "/projects/",
+      "permanent": true
+    },
+    {
       "source": "/projects/:subpath(.+)",
       "destination": "https://projects.calebevans.me/:subpath",
       "permanent": true
