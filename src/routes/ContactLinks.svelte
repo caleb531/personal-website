@@ -19,7 +19,7 @@
   class:contact-link-list-compact={isCompact}
   use:analyticsEntryListeners={'contact links'}
 >
-  {#each contactLinkMetadata.contactLinks as contactLinkName}
+  {#each contactLinkMetadata.contactLinks as contactLinkName (contactLinkName)}
     {#if contactLinksByName[contactLinkName]}
       <ContactLink contactLink={contactLinksByName[contactLinkName]} {isCompact} />
     {/if}

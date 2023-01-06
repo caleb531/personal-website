@@ -63,7 +63,7 @@
     url={pageSeoUrl}
     type={isHomepage ? 'WebSite' : 'WebPage'}
   />
-  {#each appleTouchIcons as icon}
+  {#each appleTouchIcons as icon (icon.url)}
     <link rel="apple-touch-icon" href={icon.url} sizes={`${icon.size}x${icon.size}`} />
   {/each}
   <title>{renderedTitle}</title>

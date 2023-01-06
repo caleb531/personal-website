@@ -89,7 +89,7 @@
     {#each projectMetadata.categoriesByColumn as categoriesInColumn, columnIndex}
       {#if columnVisibilityMap[columnIndex]}
         <div class="project-list-column">
-          {#each categoriesInColumn as category}
+          {#each categoriesInColumn as category (category.id)}
             {#if visibleProjectsByCategory[category.id]}
               <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
             {/if}

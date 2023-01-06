@@ -16,7 +16,7 @@
     <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
   </button>
   <ul class="site-header-nav-list">
-    {#each navigation as navigationLink}
+    {#each navigation as navigationLink (navigationLink.url)}
       <li>
         <a href={navigationLink.url} on:click={closeNav}>
           {navigationLink.title}

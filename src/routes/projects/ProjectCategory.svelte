@@ -44,7 +44,7 @@
       {category.title}
     </h3>
 
-    {#each sortedProjects as project}
+    {#each sortedProjects as project (project.id)}
       <Project {project} />
     {/each}
   </section>
