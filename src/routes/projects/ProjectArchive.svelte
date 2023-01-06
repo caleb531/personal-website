@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { groupBy, keyBy } from 'lodash-es';
-  import { writable } from 'svelte/store';
   import type { PageData } from '../$types';
   import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import projectMetadata from '../../data/projects.json';
@@ -44,14 +43,14 @@
     event.preventDefault();
   }
 
-  const searchQuery = writable('');
+  let searchQuery = '';
 
   let { projects } = $page.data as PageData;
   let visibleProjects: typeof projects;
   let visibleProjectsByCategory: ProjectGroups;
   let columnVisibilityMap: boolean[];
   $: {
-    visibleProjects = filterProjects(projects, $searchQuery);
+    visibleProjects = filterProjects(projects, searchQuery);
     visibleProjectsByCategory = groupBy(visibleProjects, 'category');
     // Keep track of which columns contain projects that match the search query
     // so we can only show those columns
@@ -71,7 +70,7 @@
         type="search"
         name="search"
         id="project-search-input"
-        bind:value={$searchQuery}
+        bind:value={searchQuery}
         placeholder="Search for a project"
       />
     </form>
