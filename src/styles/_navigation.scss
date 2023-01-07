@@ -59,9 +59,9 @@
   }
   .sub-menu {
     @include floating-menu('center');
-    transition-delay: $menu-transition-duration;
+    transition-delay: var(--menu-transition-duration);
     @include layout(hybrid) {
-      margin-top: math.div($menu-arrow-width, 2);
+      margin-top: calc(var(--menu-arrow-width) / 2);
     }
     li {
       display: block;

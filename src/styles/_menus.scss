@@ -3,14 +3,16 @@
 
 // Variables for overlay menus
 
-$menu-transition-duration: 200ms;
-$menu-transition-easing: ease-in-out;
+:root {
+  --menu-transition-duration: 200ms;
+  --menu-transition-easing: ease-in-out;
 
-$menu-background-color: rgba(#000, 0.3);
-$menu-arrow-width: 26px;
-$menu-border-radius: 5px;
-$menu-offset-top: 5px;
-$menu-offset-right: -4px;
+  --menu-background-color: #{rgba(#000, 0.3)};
+  --menu-arrow-width: 26px;
+  --menu-border-radius: 5px;
+  --menu-offset-top: 5px;
+  --menu-offset-right: -4px;
+}
 
 // Mixins for overlay menus
 
@@ -19,9 +21,9 @@ $menu-offset-right: -4px;
   opacity: 0;
   z-index: -1;
   transition-property: opacity, transform, z-index;
-  transition-duration: $menu-transition-duration, $menu-transition-duration,
-    $menu-transition-duration * 2;
-  transition-timing-function: $menu-transition-easing;
+  transition-duration: var(--menu-transition-duration), var(--menu-transition-duration),
+    calc(var(--menu-transition-duration) * 2);
+  transition-timing-function: var(--menu-transition-easing);
 }
 
 // Fade in the given element (one for which fade transition has been enabled)
@@ -29,39 +31,42 @@ $menu-offset-right: -4px;
   opacity: 1;
   z-index: 9999;
   transition-property: opacity, transform;
-  transition-duration: $menu-transition-duration;
+  transition-duration: var(--menu-transition-duration);
 }
 
 @mixin floating-menu($position) {
   @include transition-fade();
-  border-radius: $menu-border-radius;
-  background-color: $menu-background-color;
+  border-radius: var(--menu-border-radius);
+  background-color: var(--menu-background-color);
   position: absolute;
   top: 100%;
-  margin-top: $menu-offset-top !important;
+  margin-top: var(--menu-offset-top) !important;
   @if $position == 'center' {
     right: 50%;
     transform: translateX(50%);
   } @else {
-    right: $menu-offset-right;
+    right: var(--menu-offset-right);
   }
   &:after {
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: math.div($menu-arrow-width, 2);
+    border-width: calc(var(--menu-arrow-width) / 2);
     border-top-width: 0;
     border-color: transparent;
-    border-bottom-color: $menu-background-color;
+    border-bottom-color: var(--menu-background-color);
     position: absolute;
-    top: math.div(-$menu-arrow-width, 2);
+    top: calc(-1 * var(--menu-arrow-width) / 2);
     transform: translateX(50%);
     @if $position == 'center' {
       right: 50%;
     } @else {
-      right: (
-        $menu-border-radius + math.div($menu-arrow-width, 2) + $position - $menu-offset-right
+      right: calc(
+        var(--menu-border-radius) +
+          (var(--menu-arrow-width) / 2) +
+          $position -
+          var(--menu-offset-right)
       );
     }
   }
