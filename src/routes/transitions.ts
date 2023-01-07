@@ -6,6 +6,7 @@ import { fade, slide } from 'svelte/transition';
 export function fadeSlide(node: Element, options: SlideParams): TransitionConfig {
   const slideTrans = slide(node, options);
   return {
+    delay: options.delay,
     duration: options.duration,
     easing: options.easing,
     css: (t, u) => `
