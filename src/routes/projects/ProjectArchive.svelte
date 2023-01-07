@@ -38,12 +38,6 @@
     });
   }
 
-  // Disable the browser-native search behavior of reloading the page when the
-  // <form> element is submitted
-  function disableNativeFormSubmit(event: Event) {
-    event.preventDefault();
-  }
-
   let searchQuery = '';
 
   let { projects } = $page.data as PageData;
@@ -57,7 +51,7 @@
 
 <div class="project-archive" use:analyticsEntryListeners={'projects'}>
   <div class="project-search-container">
-    <form class="project-search-container-form" on:submit={disableNativeFormSubmit}>
+    <form class="project-search-container-form" on:submit|preventDefault>
       <label for="project-search-input" class="accessibility-only"> Search: </label>
       <input
         type="search"
