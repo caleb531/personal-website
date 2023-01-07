@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
-  import { analyticsEntryListeners } from '../actions/analyticsEntryListeners';
-  import contactLinkMetadata from '../data/contact-links.json';
+  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
+  import contactLinkMetadata from '../../data/contact-links.json';
+  import type { ContactLinkMap } from '../types';
   import type { PageData } from './$types';
   import ContactLink from './ContactLink.svelte';
-  import type { ContactLinkMap } from './types';
 
   const { contactLinks } = $page.data as PageData;
   export let isCompact: boolean = false;
