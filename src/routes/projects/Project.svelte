@@ -25,10 +25,8 @@
       <a href={project.direct_url}>{project.title}</a>
     </h4>
 
-    {#if project.description}
-      {#if !isCompact}
-        <p class="entry-desc project-desc">{project.description}</p>
-      {/if}
+    {#if project.description && !isCompact}
+      <p class="entry-desc project-desc">{project.description}</p>
     {/if}
   </div>
 </article>
