@@ -61,10 +61,7 @@ $menu-offset-right: -4px;
       right: 50%;
     } @else {
       right: (
-        $menu-border-radius +
-          math.div($menu-arrow-width, 2) +
-          $position -
-          $menu-offset-right
+        $menu-border-radius + math.div($menu-arrow-width, 2) + $position - $menu-offset-right
       );
     }
   }
