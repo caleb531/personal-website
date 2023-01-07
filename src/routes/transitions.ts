@@ -1,4 +1,4 @@
-import { quintInOut } from 'svelte/easing';
+import { cubicInOut } from 'svelte/easing';
 import type { SlideParams, TransitionConfig } from 'svelte/transition';
 import { slide } from 'svelte/transition';
 
@@ -7,6 +7,7 @@ export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionCo
   const slideTrans = slide(node, options);
   return {
     duration: options.duration,
+    easing: options.easing,
     css: (t, u) => `
         ${slideTrans.css ? slideTrans.css(t, u) : ''};
         opacity: ${t};
@@ -16,5 +17,5 @@ export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionCo
 
 // Supply the transition parameters for projects
 export function projectFadeSlide(node: HTMLElement): TransitionConfig {
-  return fadeSlide(node, { duration: 100, easing: quintInOut });
+  return fadeSlide(node, { duration: 250, easing: cubicInOut });
 }
