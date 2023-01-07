@@ -45,6 +45,9 @@
     }
   }
   @include layout(hybrid) {
+    li:after {
+      display: none;
+    }
     pointer-events: none;
     @include floating-menu(7px);
     transform: translateY(-20px);
