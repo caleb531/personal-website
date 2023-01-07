@@ -1,6 +1,8 @@
 // Styling for projects
 
-:root {
+.project-archive {
+  // The gap between both project columns
+  --project-list-column-gap: 60px;
   // If you change this value, you must also update the <img> width/height in
   // src/routes/projects/Project.svelte
   --project-icon-width: 80px;
@@ -49,7 +51,7 @@ main[data-page-id='projects'] {
 .project-list-column {
   display: inline-flex;
   flex-direction: column;
-  width: calc(50% - 30px);
+  width: calc(50% - (var(--project-list-column-gap) / 2));
   @include layout(hybrid) {
     display: block;
     width: auto;

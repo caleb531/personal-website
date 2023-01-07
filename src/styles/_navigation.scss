@@ -2,6 +2,8 @@
 @use 'sass:math';
 
 .site-header-nav {
+  --site-header-nav-link-padding-v: 15px;
+  --site-header-nav-link-padding-h: 15px;
   flex-grow: 1;
   position: relative;
   clear: both;
@@ -32,7 +34,7 @@
       position: relative;
       &:after {
         opacity: 1;
-        width: calc(100% - 30px);
+        width: calc(100% - (var(--site-header-nav-link-padding-h) * 2));
       }
     }
     a {
@@ -40,7 +42,7 @@
       display: block;
       font-size: var(--font-size-m);
       line-height: 1;
-      padding: 15px 15px;
+      padding: var(--site-header-nav-link-padding-v) var(--site-header-nav-link-padding-h);
       text-decoration: none;
     }
   }
