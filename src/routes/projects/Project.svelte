@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { projectFadeSlide } from '../transitions';
   import type { PageData } from './$types';
   export let project: PageData['projects'][number];
   export let isCompact: boolean = false;
@@ -9,6 +10,7 @@
   class="entry project"
   class:entry-compact={isCompact}
   class:project-compact={isCompact}
+  transition:projectFadeSlide
 >
   <a
     class="entry-image project-image"

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { keyBy } from 'lodash-es';
+  import { projectFadeSlide } from '../transitions';
   import type { ProjectCategoryData, ProjectEntry } from '../types';
   import Project from './Project.svelte';
 
@@ -40,7 +41,7 @@
 
 {#if sortedProjects.length}
   <section class="entry-list project-list">
-    <h3 class="entry-list-category-title project-list-category-title">
+    <h3 class="entry-list-category-title project-list-category-title" transition:projectFadeSlide>
       {category.title}
     </h3>
 

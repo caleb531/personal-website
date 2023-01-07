@@ -4,6 +4,7 @@
   import type { PageData } from '../$types';
   import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import projectMetadata from '../../data/projects.json';
+  import { projectFadeSlide } from '../transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
   import ProjectCategory from './ProjectCategory.svelte';
 
@@ -48,17 +49,9 @@
   let { projects } = $page.data as PageData;
   let visibleProjects: typeof projects;
   let visibleProjectsByCategory: ProjectGroups;
-  let columnVisibilityMap: boolean[];
   $: {
     visibleProjects = filterProjects(projects, searchQuery);
     visibleProjectsByCategory = groupBy(visibleProjects, 'category');
-    // Keep track of which columns contain projects that match the search query
-    // so we can only show those columns
-    columnVisibilityMap = projectMetadata.categoriesByColumn.map((categoriesInColumn) => {
-      return categoriesInColumn.some((category) => {
-        return visibleProjectsByCategory[category.id]?.length > 0;
-      });
-    });
   }
 </script>
 
@@ -75,26 +68,24 @@
       />
     </form>
     {#if visibleProjects.length}
-      <div class="project-search-result-count">
+      <div class="project-search-result-count" transition:projectFadeSlide>
         {visibleProjects.length === 1
           ? 'Showing 1 project'
           : `Showing ${visibleProjects.length} projects`}
       </div>
     {:else}
-      <div class="project-search-no-results">No Projects Found</div>
+      <div class="project-search-no-results" transition:projectFadeSlide>No Projects Found</div>
     {/if}
   </div>
   <div class="project-list-container">
-    {#each projectMetadata.categoriesByColumn as categoriesInColumn, columnIndex}
-      {#if columnVisibilityMap[columnIndex]}
-        <div class="project-list-column">
-          {#each categoriesInColumn as category (category.id)}
-            {#if visibleProjectsByCategory[category.id]}
-              <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
-            {/if}
-          {/each}
-        </div>
-      {/if}
+    {#each projectMetadata.categoriesByColumn as categoriesInColumn}
+      <div class="project-list-column">
+        {#each categoriesInColumn as category (category.id)}
+          {#if visibleProjectsByCategory[category.id]}
+            <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
+          {/if}
+        {/each}
+      </div>
     {/each}
   </div>
 </div>
