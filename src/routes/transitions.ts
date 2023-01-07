@@ -1,6 +1,6 @@
 import { cubicInOut } from 'svelte/easing';
 import type { SlideParams, TransitionConfig } from 'svelte/transition';
-import { slide } from 'svelte/transition';
+import { fade, slide } from 'svelte/transition';
 
 // A transition which combines the slide and fade transitions provided by Svelte
 export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionConfig {
@@ -15,7 +15,12 @@ export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionCo
   };
 }
 
-// Supply the transition parameters for projects
+// Supply the transition parameters for projects (/ and /projects/)
 export function projectFadeSlide(node: HTMLElement): TransitionConfig {
   return fadeSlide(node, { duration: 250, easing: cubicInOut });
+}
+
+// Specify the transition parameters for website entries (/websites/)
+export function websiteFade(node: HTMLElement): TransitionConfig {
+  return fade(node, { duration: 250, easing: cubicInOut });
 }

@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { websiteFade } from '../transitions';
   import type { WebsiteEntry } from '../types';
   export let website: WebsiteEntry;
 </script>
 
 <article data-entry-id={website.id} class="entry website">
-  <a class="entry-image website-image" href={website.direct_url}>
+  <a class="entry-image website-image" href={website.direct_url} in:websiteFade>
     <img
       src={`/images/websites/${website.id}.jpg`}
       alt=""
