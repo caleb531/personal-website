@@ -1,6 +1,10 @@
 // Styling for projects
 
-$project-icon-width: 80px;
+:root {
+  // If you change this value, you must also update the <img> width/height in
+  // src/routes/projects/Project.svelte
+  --project-icon-width: 80px;
+}
 
 .featured-projects {
   margin-bottom: 15px;
@@ -27,11 +31,11 @@ main[data-page-id='projects'] {
 .project-search-result-count {
   display: block;
   margin-top: 10px;
-  font-size: $font-size-s;
+  font-size: var(--font-size-s);
 }
 .project-search-no-results {
   margin-top: 30px;
-  font-size: $font-size-h2;
+  font-size: var(--font-size-h2);
 }
 
 // Ensure that no whitespace separates any two columns
@@ -60,7 +64,7 @@ main[data-page-id='projects'] {
 
 .project.project-compact {
   // Ensure that project label does not exceed width of project icon
-  max-width: $project-icon-width;
+  max-width: var(--project-icon-width);
   margin: 0 10px;
   margin-top: 10px;
   vertical-align: top;
@@ -71,8 +75,8 @@ main[data-page-id='projects'] {
   background-color: #fff;
   margin-bottom: 2px;
   a {
-    width: $project-icon-width;
-    height: $project-icon-width;
+    width: var(--project-icon-width);
+    height: var(--project-icon-width);
   }
 }
 
@@ -84,8 +88,8 @@ main[data-page-id='projects'] {
   display: block;
   margin-top: 2px;
   text-align: center;
-  font-size: $font-size-xxs;
-  font-weight: $font-weight-bold;
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-bold);
   line-height: 1.3;
   a {
     text-decoration: none;
@@ -95,6 +99,6 @@ main[data-page-id='projects'] {
 
 .project-desc {
   @include layout(very-compact) {
-    font-size: $font-size-xl;
+    font-size: var(--font-size-xl);
   }
 }

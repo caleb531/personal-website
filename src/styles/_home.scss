@@ -34,11 +34,11 @@
 .home-intro-right > p {
   max-width: 450px;
   margin: 0 auto;
-  font-size: $font-size-home-intro;
+  font-size: var(--font-size-home-intro);
   @include layout(hybrid) {
-    font-size: $font-size-home-intro-hybrid;
+    font-size: var(--font-size-home-intro-hybrid);
   }
   @include layout(compact) {
-    font-size: $font-size-home-intro-compact;
+    font-size: var(--font-size-home-intro-compact);
   }
 }

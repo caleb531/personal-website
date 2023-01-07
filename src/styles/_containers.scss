@@ -16,9 +16,9 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  background-color: $body-background-color;
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-normal;
+  background-color: var(--body-background-color);
+  font-family: var(--font-family-sans-serif);
+  font-weight: var(--font-weight-normal);
   font-size: 0;
   color: #fff;
 }
@@ -26,18 +26,16 @@ body {
 article.page {
   position: relative;
   margin: 0 auto;
-  padding: 30px;
+  --page-padding-v: 30px;
+  --page-padding-h: 30px;
+  padding: var(--page-padding-v) var(--page-padding-h);
   border-radius: 20px;
-  background-color: $main-background-color;
+  background-color: var(--main-background-color);
   @include layout(compact) {
-    $padding: 20px;
+    --page-padding-h: 20px;
     border-radius: 0;
-    padding-left: $padding;
-    padding-right: $padding;
   }
   @include layout(very-compact) {
-    $padding: 15px;
-    padding-left: $padding;
-    padding-right: $padding;
+    --page-padding-h: 15px;
   }
 }

@@ -1,20 +1,19 @@
 // Styling for website portfolio entries
 @use 'sass:math';
 
-// The number of columns to display for the Website gallery
-$website-list-columns: 3;
-
 .website-list {
   display: flex;
   margin-top: 24px;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  // The number of columns to display for the Website gallery
+  --website-list-columns: 3;
 }
 
 .website {
   display: block;
-  flex-basis: math.div(100%, $website-list-columns);
+  flex-basis: calc(100% / var(--website-list-columns));
   width: auto;
   text-align: center;
   @include layout(hybrid) {
@@ -39,8 +38,8 @@ $website-list-columns: 3;
   background-color: #fff;
 }
 .website-details {
-  font-size: $font-size-m;
+  font-size: var(--font-size-m);
 }
 .website-years {
-  font-weight: $font-weight-bold;
+  font-weight: var(--font-weight-bold);
 }

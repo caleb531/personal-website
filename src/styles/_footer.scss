@@ -6,15 +6,10 @@
   text-align: center;
   p {
     margin: 0;
-    font-size: $font-size-m;
+    font-size: var(--font-size-m);
   }
   .contact-link {
     margin: 5px;
     padding: 0;
-  }
-  .contact-link-image a {
-    $icon-size: 40px;
-    width: $icon-size;
-    height: $icon-size;
   }
 }

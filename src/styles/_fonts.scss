@@ -16,37 +16,40 @@
   $fontDir: '/node_modules/@fontsource/source-sans-pro/files'
 );
 
-// Basic font characteristics
-$font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Helvetica, Arial, sans-serif;
-$font-weight-normal: 300;
-$font-weight-bold: 400;
-$line-height: 1.4;
+:root {
+  // Basic font characteristics
+  --font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-weight-normal: 300;
+  --font-weight-bold: 400;
+  --content-line-height: 1.4;
 
-// Base font size
-$font-size-base: 15px;
-@function px-to-rem($font-size) {
-  @return #{math.div($font-size, $font-size-base)}rem;
+  // Base font size
+  $font-size-base: 15px;
+  --font-size-base: #{$font-size-base};
+  @function px-to-rem($font-size) {
+    @return #{math.div($font-size, $font-size-base)}rem;
+  }
+
+  // Generic font sizes
+  --font-size-xxxs: #{px-to-rem(11px)};
+  --font-size-xxs: #{px-to-rem(12px)};
+  --font-size-xs: #{px-to-rem(13px)};
+  --font-size-s: #{px-to-rem(14px)};
+  --font-size-m: 1rem;
+  --font-size-l: #{px-to-rem(16px)};
+  --font-size-xl: #{px-to-rem(17px)};
+  --font-size-xxl: #{px-to-rem(18px)};
+  --font-size-xxxl: #{px-to-rem(19px)};
+
+  // Semantic font sizes
+  --font-size-p: #{px-to-rem(22px)};
+  --font-size-h4: #{px-to-rem(24px)};
+  --font-size-h3: #{px-to-rem(28px)};
+  --font-size-h2: #{px-to-rem(40px)};
+  --font-size-h1: #{px-to-rem(44px)};
+  --font-size-site-title: #{px-to-rem(30px)};
+  --font-size-home-intro: #{px-to-rem(30px)};
+  --font-size-home-intro-hybrid: #{px-to-rem(27px)};
+  --font-size-home-intro-compact: #{px-to-rem(24px)};
 }
-
-// Generic font sizes
-$font-size-xxxs: px-to-rem(11px);
-$font-size-xxs: px-to-rem(12px);
-$font-size-xs: px-to-rem(13px);
-$font-size-s: px-to-rem(14px);
-$font-size-m: 1rem;
-$font-size-l: px-to-rem(16px);
-$font-size-xl: px-to-rem(17px);
-$font-size-xxl: px-to-rem(18px);
-$font-size-xxxl: px-to-rem(19px);
-
-// Semantic font sizes
-$font-size-p: px-to-rem(22px);
-$font-size-h4: px-to-rem(24px);
-$font-size-h3: px-to-rem(28px);
-$font-size-h2: px-to-rem(40px);
-$font-size-h1: px-to-rem(44px);
-$font-size-site-title: px-to-rem(30px);
-$font-size-home-intro: px-to-rem(30px);
-$font-size-home-intro-hybrid: px-to-rem(27px);
-$font-size-home-intro-compact: px-to-rem(24px);

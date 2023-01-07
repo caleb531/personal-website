@@ -5,7 +5,7 @@ a,
 button {
   &:focus-visible {
     outline-width: 0;
-    box-shadow: 0 0 0 1px $color-green;
+    box-shadow: 0 0 0 1px var(--color-green);
     border-radius: 5px;
   }
 }
@@ -13,12 +13,12 @@ input,
 textarea {
   &:focus-visible {
     outline-width: 0;
-    box-shadow: 0 0 0 1px $color-blue-dark, 0 0 0 2px $color-green;
+    box-shadow: 0 0 0 1px var(--color-blue-dark), 0 0 0 2px var(--color-green);
   }
 }
 .entry-image {
   &:focus-visible {
-    box-shadow: 0 0 0 2px $color-blue-dark, 0 0 0 3px $color-green;
+    box-shadow: 0 0 0 2px var(--color-blue-dark), 0 0 0 3px var(--color-green);
   }
 }
 
@@ -36,11 +36,11 @@ textarea {
     z-index: 1000;
     border-color: #fff;
     padding: 12px 18px;
-    background-color: $color-teal;
+    background-color: var(--color-teal);
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    box-shadow: 0 1px 5px rgba($color-black, 0.25);
+    box-shadow: 0 1px 5px rgba(var(--color-black), 0.25);
   }
 }

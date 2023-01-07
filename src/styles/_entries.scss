@@ -34,7 +34,7 @@
   margin: 0;
   text-align: left;
   line-height: 1.4;
-  font-size: $font-size-xxxl;
+  font-size: var(--font-size-xxxl);
   p:first-child {
     margin-top: 0;
   }

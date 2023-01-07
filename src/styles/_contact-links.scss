@@ -8,9 +8,9 @@
   box-shadow: none;
   filter: drop-shadow(0 0 5px rgba(#000, 0.3));
   a {
-    $icon-size: 64px;
-    width: $icon-size;
-    height: $icon-size;
+    --icon-size: 64px;
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
 }
 .contact-link-main p {

@@ -38,7 +38,7 @@
     a {
       color: currentColor;
       display: block;
-      font-size: $font-size-m;
+      font-size: var(--font-size-m);
       line-height: 1;
       padding: 15px 15px;
       text-decoration: none;
@@ -93,9 +93,9 @@
     }
     img,
     svg {
-      $icon-size: 32px;
-      width: $icon-size;
-      height: $icon-size;
+      --icon-size: 32px;
+      width: var(--icon-size);
+      height: var(--icon-size);
     }
   }
 }
