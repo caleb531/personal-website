@@ -15,11 +15,13 @@
 
 <main data-page-id={$page.data.id}>
   <Header />
-  <article class="page" id="page">
-    {#if $page.data.title}
-      <h2>{$page.data.title}</h2>
-    {/if}
-    <slot />
-  </article>
+  {#key $page}
+    <article class="page" id="page">
+      {#if $page.data.title}
+        <h2>{$page.data.title}</h2>
+      {/if}
+      <slot />
+    </article>
+  {/key}
   <Footer />
 </main>
