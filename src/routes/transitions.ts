@@ -3,7 +3,7 @@ import type { SlideParams, TransitionConfig } from 'svelte/transition';
 import { fade, slide } from 'svelte/transition';
 
 // A transition which combines the slide and fade transitions provided by Svelte
-export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionConfig {
+export function fadeSlide(node: Element, options: SlideParams): TransitionConfig {
   const slideTrans = slide(node, options);
   return {
     duration: options.duration,
@@ -16,11 +16,11 @@ export function fadeSlide(node: HTMLElement, options: SlideParams): TransitionCo
 }
 
 // Supply the transition parameters for projects (/ and /projects/)
-export function projectFadeSlide(node: HTMLElement): TransitionConfig {
+export function projectFadeSlide(node: Element): TransitionConfig {
   return fadeSlide(node, { duration: 250, easing: cubicInOut });
 }
 
 // Specify the transition parameters for website entries (/websites/)
-export function websiteFade(node: HTMLElement): TransitionConfig {
+export function websiteFade(node: Element): TransitionConfig {
   return fade(node, { duration: 250, easing: cubicInOut });
 }
