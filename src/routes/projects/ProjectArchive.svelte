@@ -28,6 +28,7 @@
         ...project.description.toLowerCase().split(' ')
       ];
       return searchQuery
+        .trim()
         .toLowerCase()
         .split(' ')
         .every((searchKeyword) => {
