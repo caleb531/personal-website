@@ -25,9 +25,11 @@ export async function getEntries<SubEntry extends Entry>(
   return Promise.all(
     entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[1]]) => {
       const entryId = path.basename(entryPath, '.md');
+      const rawEntryObj = matter(String(await getEntryContents()));
       return {
         id: entryId,
-        ...matter(String(await getEntryContents())).data
+        ...rawEntryObj.data,
+        content: rawEntryObj.content
       } as SubEntry;
     })
   );

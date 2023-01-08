@@ -2,33 +2,33 @@
 @use 'sass:math';
 
 .website-list {
-  display: flex;
   margin-top: 24px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  // The number of columns to display for the Website gallery
-  --website-list-columns: 3;
 }
 
 .website {
-  display: block;
-  flex-basis: calc(100% / var(--website-list-columns));
+  display: flex;
+  flex-direction: row;
   width: auto;
-  text-align: center;
+  text-align: left;
   @include layout(hybrid) {
-    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .website-list-category-title {
   margin-top: 0;
 }
 .website-title {
-  margin: 2px 0;
+  @include layout(hybrid) {
+    margin: 2px 0;
+  }
 }
 .website-main {
-  display: block;
-  padding-left: 0;
+  padding-left: 20px;
+  @include layout(hybrid) {
+    padding: 0 10px;
+    padding-top: 20px;
+  }
 }
 .website-image {
   width: auto;
@@ -37,9 +37,16 @@
 .website-image-image {
   background-color: #fff;
 }
-.website-details {
-  font-size: var(--font-size-m);
-}
 .website-years {
+  font-size: var(--font-size-l);
   font-weight: var(--font-weight-bold);
+}
+.website-technologies {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+.website-description-full {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: var(--font-size-l);
 }

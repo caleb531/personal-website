@@ -12,6 +12,7 @@ export interface Entry {
   title: string;
   direct_url: string;
   description: string;
+  content?: string;
 }
 export type EntryMap<SubEntry> = Record<string, SubEntry>;
 

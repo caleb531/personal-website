@@ -20,16 +20,9 @@
     padding-bottom: 20px;
   }
 }
-.home-intro-photo {
-  overflow: hidden;
+.home-intro-photo-image {
+  border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  // On Safari, the un-rounded image will still peek through overflow:hidden,
-  // resulting in non-rounded corners, so we need to apply border-radius to the
-  // contained image as well
-  &,
-  img {
-    border-radius: 30px;
-  }
 }
 .home-intro-right > p {
   max-width: 450px;

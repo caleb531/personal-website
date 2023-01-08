@@ -25,5 +25,9 @@
       </div>
       <div class="website-technologies">{website.technologies}</div>
     </div>
+
+    <div class="website-description-full">
+      {@html website.content}
+    </div>
   </div>
 </article>

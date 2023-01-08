@@ -3,7 +3,7 @@
 </script>
 
 <p>
-  This is a collection of websites I've developed in my spare time including one-pager web apps,
-  Python programs, and JavaScript libraries.
+  This is my portfolio of professional websites I've built over the course of my web development
+  career.
 </p>
 <WebsiteArchive />
