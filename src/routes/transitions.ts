@@ -18,7 +18,7 @@ export function fadeSlide(node: Element, options: SlideParams): TransitionConfig
 
 // Supply the transition parameters for projects (/ and /projects/)
 export function projectFadeSlide(node: Element): TransitionConfig {
-  return fadeSlide(node, { duration: 250, easing: cubicInOut });
+  return fadeSlide(node, { duration: 350, easing: cubicInOut });
 }
 
 // Specify the transition parameters for website entries (/websites/)
