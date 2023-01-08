@@ -14,6 +14,7 @@
 {/if}
 
 <main data-page-id={$page.data.id}>
+  <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
   <Header />
   <!-- Keying the page element fixes a bug where the page heading would change
   before the rest of the new page content loads in; this was mostly caused by

@@ -35,13 +35,15 @@ textarea {
     top: 10px;
     left: 10px;
     z-index: 1000;
-    border-color: #fff;
+    border: solid 2px var(--color-turquoise);
+    background-clip: padding-box;
+    border-radius: 10px;
     padding: 12px 18px;
-    background-color: var(--color-teal);
+    background-color: var(--color-blue-dark);
     font-size: 20px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
     color: #fff;
-    box-shadow: 0 1px 5px rgba(var(--color-black), 0.25);
+    box-shadow: 0 1px 10px rgba(#000, 0.25);
   }
 }
