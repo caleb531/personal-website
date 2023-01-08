@@ -43,7 +43,7 @@ h6 {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: underline;
   a:focus {
     outline: none;
@@ -53,7 +53,7 @@ a {
 b,
 strong {
   font-weight: var(--font-weight-bold);
-  color: var(--strong-color);
+  color: var(--color-strong);
 }
 
 p {

@@ -14,10 +14,10 @@
   --color-purple: #93c;
 
   // Semantic colors
-  --body-background-color: var(--color-blue);
-  --main-background-color: var(--color-blue-dark);
-  --link-color: var(--color-green);
-  --strong-color: var(--link-color);
+  --color-body-background: var(--color-blue);
+  --color-main-background: var(--color-blue-dark);
+  --color-link: var(--color-green);
+  --color-strong: var(--color-link);
   --color-focus-inner: var(--color-teal);
   --color-focus-outer: var(--color-turquoise);
 }

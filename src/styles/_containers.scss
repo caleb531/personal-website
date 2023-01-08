@@ -16,7 +16,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  background-color: var(--body-background-color);
+  background-color: var(--color-body-background);
   font-family: var(--font-family-sans-serif);
   font-weight: var(--font-weight-normal);
   font-size: 0;
@@ -30,7 +30,7 @@ article.page {
   --page-padding-h: 30px;
   padding: var(--page-padding-v) var(--page-padding-h);
   border-radius: 20px;
-  background-color: var(--main-background-color);
+  background-color: var(--color-main-background);
   @include layout(compact) {
     --page-padding-h: 20px;
     border-radius: 0;
