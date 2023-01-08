@@ -33,7 +33,7 @@
         .split(' ')
         .every((searchKeyword) => {
           return keywords.some((keyword) => {
-            return keyword.indexOf(searchKeyword) !== -1;
+            return keyword.includes(searchKeyword);
           });
         });
     });
