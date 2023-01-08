@@ -22,11 +22,15 @@
       return projects;
     }
     return projects.filter((project) => {
+      // Build a bank of keywords for this project using its title, description,
+      // and category name
       const keywords = [
         ...project.title.toLowerCase().split(' '),
         categoriesById[project.category.toLowerCase()].title.toLowerCase(),
         ...project.description.toLowerCase().split(' ')
       ];
+      // If every word in the search query is contained within a project's
+      // keyword bank (see above), then the project is considered a match
       return searchQuery
         .trim()
         .toLowerCase()
