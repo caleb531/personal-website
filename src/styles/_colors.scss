@@ -7,6 +7,7 @@
   --color-blue: #068;
   --color-blue-dark: #057;
   --color-teal: #099;
+  --color-turquoise: #3cf;
   --color-green: #cf0;
   --color-orange: #f93;
   --color-red: #d33;
@@ -17,4 +18,6 @@
   --main-background-color: var(--color-blue-dark);
   --link-color: var(--color-green);
   --strong-color: var(--link-color);
+  --color-focus-inner: var(--color-teal);
+  --color-focus-outer: var(--color-turquoise);
 }

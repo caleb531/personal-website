@@ -5,7 +5,7 @@ a,
 button {
   &:focus-visible {
     outline-width: 0;
-    box-shadow: 0 0 0 1px var(--color-green);
+    box-shadow: 0 0 0 2px var(--color-focus-outer);
     border-radius: 5px;
   }
 }
@@ -13,12 +13,13 @@ input,
 textarea {
   &:focus-visible {
     outline-width: 0;
-    box-shadow: 0 0 0 1px var(--color-blue-dark), 0 0 0 2px var(--color-green);
+    border-color: var(--color-focus-inner);
+    box-shadow: 0 0 0 2px var(--color-focus-outer);
   }
 }
 .entry-image {
   &:focus-visible {
-    box-shadow: 0 0 0 2px var(--color-blue-dark), 0 0 0 3px var(--color-green);
+    box-shadow: 0 0 0 2px var(--color-focus-inner), 0 0 0 4px var(--color-focus-outer);
   }
 }
 
