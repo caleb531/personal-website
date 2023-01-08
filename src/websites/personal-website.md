@@ -1,7 +1,7 @@
 ---
 title: Personal Website
 direct_url: https://calebevans.me/
-technologies: NextJS, React, HTML5, Sass
+technologies: Svelte + SvelteKit, HTML5, Sass
 start_year: 2013
 end_year: null
 ---
