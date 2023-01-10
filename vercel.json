@@ -11,8 +11,8 @@
       "permanent": true
     },
     {
-      "source": "/projects/:subpath(.+)",
-      "destination": "https://projects.calebevans.me/:subpath",
+      "source": "/projects/:path(.+)/:subpath(.*)",
+      "destination": "https://projects.calebevans.me/:path/:subpath",
       "permanent": true
     }
   ],
