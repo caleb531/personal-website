@@ -1,6 +1,6 @@
 # Personal Website
 
-_Copyright 2013-2022, Caleb Evans_  
+_Copyright 2013-2023, Caleb Evans_  
 _Code released under the MIT license_
 
 This is a [NextJS](https://nextjs.org/)-based personal website I created
