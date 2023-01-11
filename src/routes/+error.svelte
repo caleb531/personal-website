@@ -1,16 +1,20 @@
 <script lang="ts">
   import { page } from '$app/stores';
+
+  // To ensure that the page transition from this error page works properly, the
+  // status code can only be computed once when the page loads
+  const status = $page.status;
 </script>
 
 <svelte:head>
-  {#if $page.status === 404}
+  {#if status === 404}
     <title>Page Not Found | {$page.data.site.title}</title>
   {:else}
-    <title>{$page.status} Error | {$page.data.site.title}</title>
+    <title>{status} Error | {$page.data.site.title}</title>
   {/if}
 </svelte:head>
 
-{#if $page.status === 404}
+{#if status === 404}
   <h2>Page Not Found</h2>
   <p>
     Sorry, I couldn't find the page you were looking for. Please
@@ -23,6 +27,6 @@
     >!
   </p>
 {:else}
-  <h2>{$page.status}: {$page.error?.message}</h2>
+  <h2>{status}: {$page.error?.message}</h2>
   <p>Not sure what happened here...</p>
 {/if}
