@@ -23,5 +23,10 @@ export function projectFadeSlide(node: Element, options?: SlideParams): Transiti
 
 // Specify the transition parameters for website entries (/websites/)
 export function websiteFade(node: Element, options?: FadeParams): TransitionConfig {
+  return fade(node, { delay: 125, duration: 250, easing: cubicInOut, ...options });
+}
+
+// Specify the transition parameters for page changes
+export function pageFade(node: Element, options?: FadeParams): TransitionConfig {
   return fade(node, { duration: 250, easing: cubicInOut, ...options });
 }

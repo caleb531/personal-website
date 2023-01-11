@@ -24,6 +24,13 @@ body {
 }
 
 article.page {
+  // When the page is transioning to another, both section.page-content child
+  // containers will be in the DOM at the same time; because we want to achieve
+  // a crossfade effect, we can use CSS Grid to superimpose the second child
+  // container above the first while not sacrificing the height of the parent
+  // container (source: <https://stackoverflow.com/a/50086485/560642>)
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
   margin: 0 auto;
   --page-padding-v: 30px;
@@ -38,4 +45,10 @@ article.page {
   @include layout(very-compact) {
     --page-padding-h: 15px;
   }
+}
+
+.page-content {
+  // See comment above about use of CSS grid to overlap page content containers
+  grid-row-start: 1;
+  grid-column-start: 1;
 }

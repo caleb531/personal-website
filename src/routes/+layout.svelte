@@ -6,6 +6,7 @@
   import Footer from './Footer.svelte';
   import Header from './Header.svelte';
   import PageHead from './PageHead.svelte';
+  import { pageFade } from './transitions';
   export let data: LayoutData;
 </script>
 
@@ -25,13 +26,15 @@
   to work around this, we can send down the dynamically-changing pathname from
   the layout server function (+layout.server.ts)
   -->
-  {#key data.pathname}
-    <article class="page" id="page">
-      {#if $page.data.title}
-        <h2>{$page.data.title}</h2>
-      {/if}
-      <slot />
-    </article>
-  {/key}
+  <article class="page" id="page">
+    {#key data.pathname}
+      <section class="page-content" transition:pageFade>
+        {#if $page.data.title}
+          <h2>{$page.data.title}</h2>
+        {/if}
+        <slot />
+      </section>
+    {/key}
+  </article>
   <Footer />
 </main>
