@@ -6,8 +6,9 @@ import type { LayoutServerLoad } from './$types';
 export const prerender = Boolean(process.env.USE_STATIC_ADAPTER);
 
 // Define props that should be globally available across all pages
-export const load = (async () => {
+export const load = (async ({ url: { pathname } }) => {
   return {
+    pathname,
     site,
     gravatarUrl: getBaseGravatarUrl(site.email),
     contactLinks: await getContactLinks()
