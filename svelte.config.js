@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapterVercel from '@sveltejs/adapter-vercel';
 import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
@@ -9,7 +9,7 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapter(),
+    adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ edge: true }),
     csp: {
       directives: {
         'default-src': ["'none'"],
