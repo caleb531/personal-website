@@ -20,7 +20,7 @@
   before the rest of the new page content loads in; this was mostly caused by
   the introduction of CSS transitions on my Projects page (which must complete
   before SvelteKit can finish navigating to the new page) -->
-  {#key $page}
+  {#key $page.url.pathname}
     <article class="page" id="page">
       {#if $page.data.title}
         <h2>{$page.data.title}</h2>
