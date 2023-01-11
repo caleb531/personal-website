@@ -2,7 +2,6 @@
 // project directory on the CLI
 import fs from 'fs';
 import glob from 'glob-promise';
-import matter from 'gray-matter';
 import path from 'path';
 import puppeteer from 'puppeteer';
 import type { WebsiteEntry } from '../src/routes/types.d';
@@ -26,11 +25,11 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
   // Generate screenshot for each portfolio website that has configuration
   await Promise.all(
     websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
-      const websiteName = path.basename(websiteConfigFilePath, '.md');
+      const websiteName = path.basename(websiteConfigFilePath, '.json');
 
       const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
 
-      const websiteEntry = matter(websiteConfigFileContents).data as WebsiteEntry;
+      const websiteEntry = JSON.parse(websiteConfigFileContents) as WebsiteEntry;
       const websiteImagePath = path.join(
         websiteImageDir,
         `${websiteName}.${websiteImageExtension}`
@@ -71,7 +70,7 @@ async function main(): Promise<void> {
   // every file in the /src/websites directory
   let websiteConfigFilePaths = process.argv.slice(2);
   if (websiteConfigFilePaths.length === 0) {
-    websiteConfigFilePaths = await glob.promise('src/websites/*.md');
+    websiteConfigFilePaths = await glob.promise('src/websites/*.json');
   }
   generateScreenshots(websiteConfigFilePaths);
 }
