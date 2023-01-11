@@ -1,5 +1,0 @@
----
-title: Keybase
-direct_url: https://keybase.io/caleb531
-description: Proof that I am who I say I am
----

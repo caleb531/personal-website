@@ -1,6 +1,0 @@
----
-title: Faith Dashboard
-direct_url: https://faithdashboard.com
-category: tools
-description: Your home for strength and encouragement every day.
----

@@ -1,6 +1,0 @@
----
-title: Unscrambler
-direct_url: https://projects.calebevans.me/unscrambler/
-category: fun
-description: Unscramble any scrambled phrase or Boggle board into dictionary words
----

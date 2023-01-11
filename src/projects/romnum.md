@@ -1,6 +1,0 @@
----
-title: Romnum
-direct_url: https://github.com/caleb531/romnum
-category: programs
-description: A bidirectional Roman Numeral converter, written in Python
----

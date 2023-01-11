@@ -1,6 +1,0 @@
----
-title: Planning Center for Alfred
-direct_url: https://github.com/caleb531/planning-center-alfred
-category: alfred
-description: Look up people in your church's Planning Center with Alfred
----

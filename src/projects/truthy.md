@@ -1,6 +1,0 @@
----
-title: Truthy
-direct_url: https://projects.calebevans.me/truthy/
-category: math
-description: Construct truth tables without fatiguing your hand
----

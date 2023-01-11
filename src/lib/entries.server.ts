@@ -1,4 +1,3 @@
-import matter from 'gray-matter';
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../routes/types';
 
 type EntryType = 'contact_link' | 'project' | 'website';
@@ -9,14 +8,14 @@ type EntriesByTypeMap = Record<EntryType, GlobMap>;
 // is a map of that entry type's files (for this submap, the key is the filepath
 // and the value is a function which returns the contents of the file)
 const entriesByType: EntriesByTypeMap = {
-  contact_link: import.meta.glob('../contact-links/*.md', { as: 'raw' }),
-  project: import.meta.glob('../projects/*.md', { as: 'raw' }),
-  website: import.meta.glob('../websites/*.md', { as: 'raw' })
+  contact_link: import.meta.glob('../contact-links/*.json', { as: 'raw' }),
+  project: import.meta.glob('../projects/*.json', { as: 'raw' }),
+  website: import.meta.glob('../websites/*.json', { as: 'raw' })
 };
 
 // Compute the entry ID from the given path
 function getEntryIdFromPath(entryPath: string) {
-  return entryPath.slice(entryPath.lastIndexOf('/') + 1, entryPath.indexOf('.md'));
+  return entryPath.slice(entryPath.lastIndexOf('/') + 1, entryPath.indexOf('.json'));
 }
 
 // Retrieve a list of entries for the given entry type, optionally specifying a
@@ -29,11 +28,10 @@ export async function getEntries<SubEntry extends Entry>(
   return Promise.all(
     entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[1]]) => {
       const entryId = getEntryIdFromPath(entryPath);
-      const rawEntryObj = matter(String(await getEntryContents()));
+      const entryData = JSON.parse(String(await getEntryContents()));
       return {
         id: entryId,
-        ...rawEntryObj.data,
-        content: rawEntryObj.content
+        ...entryData
       } as SubEntry;
     })
   );

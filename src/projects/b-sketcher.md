@@ -1,6 +1,0 @@
----
-title: B-Sketcher
-direct_url: https://projects.calebevans.me/b-sketcher/
-category: computer-science
-description: Draw pretty B-trees with minimal effort
----

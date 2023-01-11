@@ -26,7 +26,6 @@
     "@fontsource/source-sans-pro": "^4.5.11",
     "glob": "^8.0.3",
     "glob-promise": "^6.0.0",
-    "gray-matter": "^4.0.3",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
