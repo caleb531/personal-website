@@ -24,8 +24,6 @@
   "dependencies": {
     "@beyonk/svelte-google-analytics": "^2.6.4",
     "@fontsource/source-sans-pro": "^4.5.11",
-    "glob": "^8.0.3",
-    "glob-promise": "^6.0.0",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -40,6 +38,8 @@
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte3": "^4.0.0",
+    "glob": "^8.0.3",
+    "glob-promise": "^6.0.0",
     "imagetools-core": "^3.2.3",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
