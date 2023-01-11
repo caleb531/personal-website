@@ -1,5 +1,4 @@
 import matter from 'gray-matter';
-import path from 'path';
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../routes/types';
 
 type EntryType = 'contact_link' | 'project' | 'website';
@@ -15,6 +14,11 @@ const entriesByType: EntriesByTypeMap = {
   website: import.meta.glob('../websites/*.md', { as: 'raw' })
 };
 
+// Compute the entry ID from the given path
+function getEntryIdFromPath(entryPath: string) {
+  return entryPath.slice(entryPath.lastIndexOf('/') + 1, entryPath.indexOf('.md'));
+}
+
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
 // initialize the entry with
@@ -24,7 +28,7 @@ export async function getEntries<SubEntry extends Entry>(
   const entryPairs = Object.entries(entriesByType[entryType]);
   return Promise.all(
     entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[1]]) => {
-      const entryId = path.basename(entryPath, '.md');
+      const entryId = getEntryIdFromPath(entryPath);
       const rawEntryObj = matter(String(await getEntryContents()));
       return {
         id: entryId,
