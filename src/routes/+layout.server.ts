@@ -1,5 +1,4 @@
 import { getContactLinks } from '$lib/entries.server';
-import { getBaseGravatarUrl } from '$lib/gravatar.server';
 import site from '../data/site.json';
 import type { LayoutServerLoad } from './$types';
 
@@ -10,7 +9,7 @@ export const load = (async (locals) => {
   return {
     pathname: locals.url.pathname,
     site,
-    gravatarUrl: getBaseGravatarUrl(site.email),
+    gravatarUrl: 'https://www.gravatar.com/avatar/952d736a582fdfdb7d7a9a5e7588bf3e',
     contactLinks: await getContactLinks()
   };
 }) satisfies LayoutServerLoad;
