@@ -1,16 +1,18 @@
 <script lang="ts">
   import { page } from '$app/stores';
-
+  import type { PageData } from './$types';
+  export let data: PageData;
   // To ensure that the page transition from this error page works properly, the
   // status code can only be computed once when the page loads
   const status = $page.status;
+  const errorMessage = $page.error?.message;
 </script>
 
 <svelte:head>
   {#if status === 404}
-    <title>Page Not Found | {$page.data.site.title}</title>
+    <title>Page Not Found | {data.site.title}</title>
   {:else}
-    <title>{status} Error | {$page.data.site.title}</title>
+    <title>{status} Error | {data.site.title}</title>
   {/if}
 </svelte:head>
 
@@ -18,8 +20,8 @@
   <h2>Page Not Found</h2>
   <p>
     Sorry, I couldn't find the page you were looking for. Please
-    <a href={`mailto:${$page.data.site.email}`}>send me an email</a> explaining how you got here and
-    I'll look into it. :)
+    <a href={`mailto:${data.site.email}`}>send me an email</a> explaining how you got here and I'll look
+    into it. :)
   </p>
   <p>
     In the meantime, watch some
@@ -27,6 +29,6 @@
     >!
   </p>
 {:else}
-  <h2>{status}: {$page.error?.message}</h2>
+  <h2>{errorMessage ? `${status}: ${errorMessage}` : `${status} Error`}</h2>
   <p>Not sure what happened here...</p>
 {/if}
