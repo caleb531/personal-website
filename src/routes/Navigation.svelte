@@ -16,7 +16,7 @@
 </script>
 
 <nav class="site-header-nav" class:site-header-nav-open={isNavOpen}>
-  <button class="site-header-nav-toggle" aria-label="Menu" on:click={toggleNav}>
+  <button class="site-header-nav-toggle" on:click={toggleNav}>
     <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
   </button>
   <ul class="site-header-nav-list">
