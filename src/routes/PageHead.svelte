@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { resizeGravatar } from '$lib/gravatar';
   import JsonLd from './JsonLd.svelte';
@@ -69,11 +68,4 @@
   {/each}
   <title>{renderedTitle}</title>
   <meta name="description" content={$page.data.description} />
-  {#if import.meta.env.PROD && browser}
-    <script
-      defer
-      data-domain={window.location.hostname}
-      src="https://plausible.io/js/script.tagged-events.js"
-    ></script>
-  {/if}
 </svelte:head>

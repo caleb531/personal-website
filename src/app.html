@@ -4,10 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     %sveltekit.head%
-    <!-- prettier-ignore -->
-    <script nonce="%sveltekit.nonce%">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">%sveltekit.body%</div>
+    <script
+      defer
+      data-domain="calebevans.me"
+      src="https://plausible.io/js/script.tagged-events.js"
+    ></script>
+    <!-- prettier-ignore -->
+    <script nonce="%sveltekit.nonce%">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   </body>
 </html>
