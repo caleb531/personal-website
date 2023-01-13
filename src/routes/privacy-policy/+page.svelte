@@ -14,7 +14,7 @@
   </li>
 </ul>
 
-<p>This privacy policy was last updated on January 3rd, 2023.</p>
+<p>This privacy policy was last updated on January 13th, 2023.</p>
 
 <h3>Secure Connection</h3>
 
@@ -45,15 +45,14 @@
   is only used to enable this sharing functionality to function.
 </p>
 
-<h3>Google Analytics</h3>
+<h3>Analytics</h3>
 
 <p>
-  This website uses Google Analytics. I only use this information to examine traffic trends and
-  visitor statistics (i.e. the percentage of Chrome users). However, you would need to read the
-  <a href="https://support.google.com/analytics/answer/6004245?hl=en">
-    Google Analytics privacy summary
-  </a>
-  to understand how Google collects and uses this information. I do not otherwise share this information.
+  This website uses <a href="https://plausible.io/">Plausible Analytics</a>, a privacy-focused
+  analytics platform. I only use this information to examine traffic trends and visitor statistics
+  (i.e. the percentage of Chrome users). However, you would need to read the
+  <a href="https://plausible.io/data-policy"> Plausible Analytics data policy </a>
+  to understand how Plausible collects and uses this information. I do not otherwise share this information.
 </p>
 
 <h3>Contacting Me</h3>
