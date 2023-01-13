@@ -9,7 +9,7 @@ export function analyticsEntryListeners(node: HTMLElement, eventName: string) {
     const target = event.target as HTMLElement;
     if (target?.closest('a')?.nodeName === 'A') {
       const entryId = target?.closest('[data-entry-id]')?.getAttribute('data-entry-id');
-      plausible(eventName, { props: { entryId } });
+      plausible(eventName, { props: { 'Entry ID': entryId } });
     }
   }
 
