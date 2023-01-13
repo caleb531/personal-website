@@ -68,4 +68,7 @@
   {/each}
   <title>{renderedTitle}</title>
   <meta name="description" content={$page.data.description} />
+  {#if import.meta.env.PROD}
+    <script defer data-domain="calebevans.me" src="https://plausible.io/js/script.js"></script>
+  {/if}
 </svelte:head>

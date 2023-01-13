@@ -22,7 +22,6 @@
     "screenshot-website": "tsx utilities/screenshot-website.ts"
   },
   "dependencies": {
-    "@beyonk/svelte-google-analytics": "^2.6.4",
     "@fontsource/source-sans-pro": "^4.5.11",
     "lodash-es": "^4.17.21"
   },

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
   import '../styles/index.scss';
   import type { LayoutData } from './$types';
   import Footer from './Footer.svelte';
@@ -11,10 +10,6 @@
 </script>
 
 <PageHead />
-
-{#if import.meta.env.PROD}
-  <GoogleAnalytics properties={[$page.data.site.ga4TrackingId]} />
-{/if}
 
 <main data-page-id={$page.data.id}>
   <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
