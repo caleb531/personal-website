@@ -17,7 +17,7 @@
   class="entry-list contact-link-list"
   class:entry-list-compact={isCompact}
   class:contact-link-list-compact={isCompact}
-  use:analyticsEntryListeners={'contact link'}
+  use:analyticsEntryListeners={'Visit Contact Link'}
 >
   {#each contactLinkMetadata.contactLinks as contactLinkName (contactLinkName)}
     {#if contactLinksByName[contactLinkName]}

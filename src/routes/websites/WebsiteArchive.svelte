@@ -14,7 +14,7 @@
   let websiteNames = websiteMetadata.websites;
 </script>
 
-<div class="entry-list website-list" use:analyticsEntryListeners={'website'}>
+<div class="entry-list website-list" use:analyticsEntryListeners={'Visit Website Entry'}>
   {#each websiteNames as websiteName (websiteName)}
     {#if websitesById[websiteName]}
       <Website website={websitesById[websiteName]} />

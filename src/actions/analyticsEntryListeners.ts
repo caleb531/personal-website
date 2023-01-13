@@ -1,7 +1,7 @@
 // The analyticsEntryListeners() hook provides a single listener to listen for
-// all link clicks within a target element, and fires the appropriate GA event
-// when that link is clicked
-export function analyticsEntryListeners(node: HTMLElement, entryType: string) {
+// all link clicks within a target element, and fires the appropriate Plausible
+// Analytics event when that link is clicked
+export function analyticsEntryListeners(node: HTMLElement, eventName: string) {
   if (!(import.meta.env.PROD && typeof plausible !== 'undefined')) {
     return;
   }
@@ -9,7 +9,7 @@ export function analyticsEntryListeners(node: HTMLElement, entryType: string) {
     const target = event.target as HTMLElement;
     if (target?.closest('a')?.nodeName === 'A') {
       const entryId = target?.closest('[data-entry-id]')?.getAttribute('data-entry-id');
-      plausible(`${entryType} click`, { props: { entryId } });
+      plausible(eventName, { props: { entryId } });
     }
   }
 
