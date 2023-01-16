@@ -55,7 +55,6 @@
 </script>
 
 <div class="project-archive" use:analyticsEntryListeners={'Visit Project'}>
-  <h2 class="accessibility-only">Projects</h2>
   <div class="project-search-container">
     <form class="project-search-container-form" on:submit|preventDefault>
       <label for="project-search-input" class="accessibility-only">Search Projects:</label>
