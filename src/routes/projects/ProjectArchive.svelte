@@ -68,9 +68,11 @@
     </form>
     {#if visibleProjects.length}
       <div class="project-search-result-count" transition:projectFadeSlide>
-        {visibleProjects.length === 1
-          ? 'Showing 1 project'
-          : `Showing ${visibleProjects.length} projects`}
+        {#if visibleProjects.length === 1}
+          Showing 1 project
+        {:else}
+          Showing {visibleProjects.length} projects
+        {/if}
       </div>
     {:else}
       <div class="project-search-no-results" transition:projectFadeSlide>No Projects Found</div>
