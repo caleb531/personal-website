@@ -29,6 +29,10 @@
     >!
   </p>
 {:else}
-  <h2>{errorMessage ? `${status}: ${errorMessage}` : `${status} Error`}</h2>
+  {#if errorMessage}
+    <h2>{status}: {errorMessage}</h2>
+  {:else}
+    <h2>{status} Error</h2>
+  {/if}
   <p>Not sure what happened here...</p>
 {/if}
