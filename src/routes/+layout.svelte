@@ -32,5 +32,6 @@
       </section>
     {/key}
   </article>
-  <Footer />
 </main>
+
+<Footer />
