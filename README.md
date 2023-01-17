@@ -26,7 +26,7 @@ pnpm install
 ### Serving the site
 
 ```bash
-pnpm exec pnpm dev
+pnpm dev
 ```
 
 The site will then be viewable in your browser at http://localhost:5173.
