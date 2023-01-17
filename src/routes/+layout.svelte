@@ -11,9 +11,10 @@
 
 <PageHead />
 
+<a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
+<Header />
+
 <main data-page-id={$page.data.id}>
-  <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
-  <Header />
   <!--
   We cannot key off of the $page store or any property of it because doing so
   will cause the slot contents to change before the transition finishes,
