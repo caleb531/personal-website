@@ -78,7 +78,7 @@
       <div class="project-search-no-results" transition:projectFadeSlide>No Projects Found</div>
     {/if}
   </div>
-  <div class="project-list-container">
+  <div class="project-list-container" aria-live="polite">
     {#each projectMetadata.categoriesByColumn as categoriesInColumn}
       <div class="project-list-column">
         {#each categoriesInColumn as category (category.id)}
