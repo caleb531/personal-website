@@ -65,6 +65,7 @@
         placeholder="Search for a project"
         aria-label="Search for a project"
       />
+      <span class="accessibility-only">Results will update as you type</span>
     </form>
     {#if visibleProjects.length}
       <div class="project-search-result-count" aria-live="polite" transition:projectFadeSlide>
