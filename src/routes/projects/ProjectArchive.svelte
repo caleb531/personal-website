@@ -68,7 +68,12 @@
       <span class="accessibility-only">Results will update as you type</span>
     </form>
     {#if visibleProjects.length}
-      <div class="project-search-result-count" aria-live="polite" transition:projectFadeSlide>
+      <div
+        class="project-search-result-count"
+        aria-live="polite"
+        aria-atomic="true"
+        transition:projectFadeSlide
+      >
         {#if visibleProjects.length === 1}
           Showing 1 project
         {:else}
@@ -76,12 +81,17 @@
         {/if}
       </div>
     {:else}
-      <div class="project-search-no-results" aria-live="polite" transition:projectFadeSlide>
+      <div
+        class="project-search-no-results"
+        aria-live="polite"
+        aria-atomic="true"
+        transition:projectFadeSlide
+      >
         No Projects Found
       </div>
     {/if}
   </div>
-  <div class="project-list-container" aria-live="polite">
+  <div class="project-list-container" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categoriesByColumn as categoriesInColumn}
       <div class="project-list-column">
         {#each categoriesInColumn as category (category.id)}
