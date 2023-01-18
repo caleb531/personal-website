@@ -6,6 +6,6 @@ export const load = (async () => {
   return {
     id: 'home',
     description: site.description,
-    projects: await getProjects()
+    projects: getProjects()
   };
 }) satisfies PageServerLoad;

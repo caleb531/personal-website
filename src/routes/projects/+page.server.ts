@@ -6,6 +6,6 @@ export const load = (async () => {
     id: 'projects',
     title: 'Projects',
     description: 'Apps and programs crafted by Caleb Evans, coder for Christ',
-    projects: await getProjects()
+    projects: getProjects()
   };
 }) satisfies PageServerLoad;

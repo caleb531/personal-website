@@ -10,6 +10,6 @@ export const load = (async (locals) => {
     pathname: locals.url.pathname,
     site,
     gravatarUrl: 'https://www.gravatar.com/avatar/952d736a582fdfdb7d7a9a5e7588bf3e',
-    contactLinks: await getContactLinks()
+    contactLinks: getContactLinks()
   };
 }) satisfies LayoutServerLoad;
