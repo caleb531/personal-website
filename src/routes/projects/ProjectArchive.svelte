@@ -2,7 +2,6 @@
   import { page } from '$app/stores';
   import { groupBy, keyBy } from 'lodash-es';
   import type { PageData } from '../$types';
-  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import projectMetadata from '../../data/projects.json';
   import { projectFadeSlide } from '../transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
@@ -54,7 +53,7 @@
   }
 </script>
 
-<div class="project-archive" use:analyticsEntryListeners={'Visit Project'}>
+<div class="project-archive">
   <div class="project-search-container">
     <form class="project-search-container-form" on:submit|preventDefault>
       <input

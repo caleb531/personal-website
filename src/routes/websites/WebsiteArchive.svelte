@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
-  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import websiteMetadata from '../../data/websites.json';
   import type { WebsiteMap } from '../types';
   import type { PageData } from './$types';
@@ -14,7 +13,7 @@
   let websiteNames = websiteMetadata.websites;
 </script>
 
-<div class="entry-list website-list" use:analyticsEntryListeners={'Visit Website Entry'}>
+<div class="entry-list website-list">
   {#each websiteNames as websiteName (websiteName)}
     {#if websitesById[websiteName]}
       <Website website={websitesById[websiteName]} />

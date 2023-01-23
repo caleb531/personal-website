@@ -73,7 +73,7 @@
     <script
       defer
       data-domain={window.location.hostname}
-      src="https://plausible.io/js/script.tagged-events.js"
+      src="https://plausible.io/js/script.outbound-links.js"
     ></script>
   {/if}
 </svelte:head>

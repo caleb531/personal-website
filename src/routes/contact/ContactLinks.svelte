@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { keyBy } from 'lodash-es';
-  import { analyticsEntryListeners } from '../../actions/analyticsEntryListeners';
   import contactLinkMetadata from '../../data/contact-links.json';
   import type { ContactLinkMap } from '../types';
   import type { PageData } from './$types';
@@ -17,7 +16,6 @@
   class="entry-list contact-link-list"
   class:entry-list-compact={isCompact}
   class:contact-link-list-compact={isCompact}
-  use:analyticsEntryListeners={'Visit Contact Link'}
 >
   {#each contactLinkMetadata.contactLinks as contactLinkName (contactLinkName)}
     {#if contactLinksByName[contactLinkName]}
