@@ -16,7 +16,6 @@
   li {
     display: inline-block;
     position: relative;
-    box-sizing: content-box;
     &:after {
       content: '';
       opacity: 0;
