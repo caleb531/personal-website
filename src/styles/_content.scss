@@ -109,6 +109,6 @@ svg {
   display: inline-block;
   width: inherit;
   height: inherit;
-  fill: #fff;
+  fill: var(--color-text);
   overflow: hidden;
 }
