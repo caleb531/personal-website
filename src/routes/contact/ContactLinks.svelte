@@ -3,10 +3,9 @@
   import { keyBy } from 'lodash-es';
   import contactLinkMetadata from '../../data/contact-links.json';
   import type { ContactLinkMap } from '../types';
-  import type { PageData } from './$types';
   import ContactLink from './ContactLink.svelte';
 
-  const { contactLinks } = $page.data as PageData;
+  const { contactLinks } = $page.data;
   export let isCompact: boolean = false;
 
   const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');

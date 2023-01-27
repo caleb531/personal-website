@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { groupBy, keyBy } from 'lodash-es';
-  import type { PageData } from '../$types';
   import projectMetadata from '../../data/projects.json';
   import { projectFadeSlide } from '../transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
@@ -44,7 +43,7 @@
 
   let searchQuery = '';
 
-  let { projects } = $page.data as PageData;
+  let { projects } = $page.data;
   let visibleProjects: typeof projects;
   let visibleProjectsByCategory: ProjectGroups;
   $: {
