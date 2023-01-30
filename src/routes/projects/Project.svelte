@@ -13,7 +13,7 @@
     <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>
 
-  <div class="entry-main project-main">
+  <section class="entry-main project-main">
     <h4 class="entry-title project-title" id="project-title-{project.id}">
       <a href={project.direct_url}>{project.title}</a>
     </h4>
@@ -21,5 +21,5 @@
     {#if project.description}
       <p class="entry-desc project-desc">{project.description}</p>
     {/if}
-  </div>
+  </section>
 </article>

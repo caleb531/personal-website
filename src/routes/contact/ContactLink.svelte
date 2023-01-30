@@ -18,7 +18,7 @@
     >
       <img src="/icons/contact-links/{contactLink.id}.svg" alt="" width={64} height={64} />
     </a>
-    <div class="entry-main contact-link-main">
+    <section class="entry-main contact-link-main">
       <h3 class="entry-title contact-link-title">
         <a href={contactLink.direct_url} id="contact-link-{contactLink.id}">
           {contactLink.title}
@@ -28,7 +28,7 @@
       <div class="entry-desc contact-link-desc">
         {contactLink.description}
       </div>
-    </div>
+    </section>
   {:else}
     <a
       class="entry-image contact-link-image"

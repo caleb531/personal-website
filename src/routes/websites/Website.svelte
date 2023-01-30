@@ -8,7 +8,7 @@
   <a class="entry-image website-image" href={website.direct_url} in:websiteFade>
     <img src="/images/websites/{website.id}.jpg" alt="" width={256} height={160} />
   </a>
-  <div class="entry-main website-main">
+  <section class="entry-main website-main">
     <h4 class="entry-title website-title">
       <a href={website.direct_url}>{website.title}</a>
     </h4>
@@ -23,5 +23,5 @@
     <div class="website-description-full">
       {@html website.content}
     </div>
-  </div>
+  </section>
 </article>
