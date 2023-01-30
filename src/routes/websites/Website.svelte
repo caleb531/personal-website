@@ -6,13 +6,7 @@
 
 <article data-entry-id={website.id} class="entry website">
   <a class="entry-image website-image" href={website.direct_url} in:websiteFade>
-    <img
-      src="/images/websites/{website.id}.jpg"
-      alt=""
-      class="website-image-image"
-      width={256}
-      height={160}
-    />
+    <img src="/images/websites/{website.id}.jpg" alt="" width={256} height={160} />
   </a>
   <div class="entry-main website-main">
     <h4 class="entry-title website-title">

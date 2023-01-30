@@ -33,9 +33,9 @@
 .website-image {
   width: auto;
   border-radius: 10px;
-}
-.website-image-image {
-  background-color: var(--color-text);
+  img {
+    background-color: var(--color-white);
+  }
 }
 .website-years {
   font-size: var(--font-size-l);
