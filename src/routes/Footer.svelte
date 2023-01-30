@@ -6,16 +6,12 @@
 
 <footer class="site-footer">
   <ContactLinks isCompact />
-
-  <div class="site-footer-content">
-    <p>
-      &copy; 2013-{new Date().getFullYear()} Caleb Evans |
-      <a href="/privacy-policy/">Privacy Policy</a>
-    </p>
-
-    <p>
-      Like what I've made? Please
-      <a href="{donateBaseUrl}&business={site.email}">donate</a>!
-    </p>
-  </div>
+  <p>
+    &copy; 2013-{new Date().getFullYear()} Caleb Evans |
+    <a href="/privacy-policy/">Privacy Policy</a>
+  </p>
+  <p>
+    Like what I've made? Please
+    <a href="{donateBaseUrl}&business={site.email}">donate</a>!
+  </p>
 </footer>
