@@ -2,16 +2,9 @@
   import { projectFadeSlide } from '../transitions';
   import type { PageData } from './$types';
   export let project: PageData['projects'][number];
-  export let isCompact: boolean = false;
 </script>
 
-<article
-  data-entry-id={project.id}
-  class="entry project"
-  class:entry-compact={isCompact}
-  class:project-compact={isCompact}
-  transition:projectFadeSlide
->
+<article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
   <a
     class="entry-image project-image"
     href={project.direct_url}
@@ -25,7 +18,7 @@
       <a href={project.direct_url}>{project.title}</a>
     </h4>
 
-    {#if project.description && !isCompact}
+    {#if project.description}
       <p class="entry-desc project-desc">{project.description}</p>
     {/if}
   </div>
