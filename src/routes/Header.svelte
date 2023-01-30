@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { page } from '$app/stores';
   import { resizeGravatar } from '$lib/gravatar';
+  import site from '../data/site.json';
   import Navigation from './Navigation.svelte';
-  let { gravatarUrl, site } = $page.data;
 
   const headerImageSize = 60;
-  const headerGravatarUrl = resizeGravatar(gravatarUrl, headerImageSize);
-  const headerGravatarUrlRetina = resizeGravatar(gravatarUrl, headerImageSize * 2);
+  const headerGravatarUrl = resizeGravatar(site.gravatarUrl, headerImageSize);
+  const headerGravatarUrlRetina = resizeGravatar(site.gravatarUrl, headerImageSize * 2);
 
   let isNavOpen = false;
 

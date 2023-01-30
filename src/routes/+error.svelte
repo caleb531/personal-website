@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import type { PageData } from './$types';
-  export let data: PageData;
+  import site from '../data/site.json';
   // To ensure that the page transition from this error page works properly, the
   // status code can only be computed once when the page loads
   const status = $page.status;
@@ -10,9 +9,9 @@
 
 <svelte:head>
   {#if status === 404}
-    <title>Page Not Found | {data.site.title}</title>
+    <title>Page Not Found | {site.title}</title>
   {:else}
-    <title>{status} Error | {data.site.title}</title>
+    <title>{status} Error | {site.title}</title>
   {/if}
 </svelte:head>
 
@@ -20,8 +19,8 @@
   <h2>Page Not Found</h2>
   <p>
     Sorry, I couldn't find the page you were looking for. Please
-    <a href="mailto:{data.site.email}">send me an email</a> explaining how you got here and I'll look
-    into it. :)
+    <a href="mailto:{site.email}">send me an email</a> explaining how you got here and I'll look into
+    it. :)
   </p>
   <p>
     In the meantime, watch some

@@ -2,8 +2,8 @@
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import { resizeGravatar } from '$lib/gravatar';
+  import site from '../data/site.json';
   import JsonLd from './JsonLd.svelte';
-  let { gravatarUrl, site } = $page.data;
 
   let isHomepage: boolean;
   let pageSeoTitle: string;
@@ -33,14 +33,14 @@
   }
 
   let appleTouchIcons = [76, 120, 152, 180].map((size) => {
-    return { size, url: resizeGravatar(gravatarUrl, size) };
+    return { size, url: resizeGravatar(site.gravatarUrl, size) };
   });
 </script>
 
 <svelte:head>
   <title>{renderedTitle}</title>
-  <link rel="shortcut icon" href={resizeGravatar(gravatarUrl, 32)} />
-  <link rel="icon" href={resizeGravatar(gravatarUrl, 192)} sizes="192x192" />
+  <link rel="shortcut icon" href={resizeGravatar(site.gravatarUrl, 32)} />
+  <link rel="icon" href={resizeGravatar(site.gravatarUrl, 192)} sizes="192x192" />
   <meta name="description" content={site.description} />
 
   <meta name="og:title" content={pageSeoTitle} />
