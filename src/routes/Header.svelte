@@ -23,7 +23,7 @@
     <img
       class="site-header-image"
       src={headerGravatarUrl}
-      srcSet={`${headerGravatarUrlRetina} 2x`}
+      srcSet="{headerGravatarUrlRetina} 2x"
       width={headerImageSize}
       height={headerImageSize}
       alt=""

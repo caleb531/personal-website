@@ -65,7 +65,7 @@
     type={isHomepage ? 'WebSite' : 'WebPage'}
   />
   {#each appleTouchIcons as icon (icon.url)}
-    <link rel="apple-touch-icon" href={icon.url} sizes={`${icon.size}x${icon.size}`} />
+    <link rel="apple-touch-icon" href={icon.url} sizes="{icon.size}x{icon.size}" />
   {/each}
   <title>{renderedTitle}</title>
   <meta name="description" content={$page.data.description} />

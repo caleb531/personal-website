@@ -9,7 +9,7 @@
     <div class="home-intro-photo">
       <img
         src={portrait}
-        srcset={`${portraitRetina} 2x`}
+        srcset="{portraitRetina} 2x"
         width={180}
         height={180}
         alt="Caleb Evans"

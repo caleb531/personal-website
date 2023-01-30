@@ -16,7 +16,7 @@
 
     <p>
       Like what I've made? Please{' '}
-      <a href={`${donateBaseUrl}&business=${site.email}`}>donate</a>!
+      <a href="{donateBaseUrl}&business={site.email}">donate</a>!
     </p>
   </div>
 </footer>

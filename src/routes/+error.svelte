@@ -20,7 +20,7 @@
   <h2>Page Not Found</h2>
   <p>
     Sorry, I couldn't find the page you were looking for. Please
-    <a href={`mailto:${data.site.email}`}>send me an email</a> explaining how you got here and I'll look
+    <a href="mailto:{data.site.email}">send me an email</a> explaining how you got here and I'll look
     into it. :)
   </p>
   <p>

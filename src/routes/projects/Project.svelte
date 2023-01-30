@@ -15,13 +15,13 @@
   <a
     class="entry-image project-image"
     href={project.direct_url}
-    aria-labelledby={`project-title-${project.id}`}
+    aria-labelledby="project-title-{project.id}"
   >
-    <img src={`/icons/projects/${project.id}.svg`} alt="" width={80} height={80} loading="lazy" />
+    <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>
 
   <div class="entry-main project-main">
-    <h4 class="entry-title project-title" id={`project-title-${project.id}`}>
+    <h4 class="entry-title project-title" id="project-title-{project.id}">
       <a href={project.direct_url}>{project.title}</a>
     </h4>
 
