@@ -7,8 +7,10 @@
 <footer class="site-footer">
   <ContactLinks isCompact />
   <p>
-    &copy; 2013-{new Date().getFullYear()} Caleb Evans |
-    <a href="/privacy-policy/">Privacy Policy</a>
+    <small>
+      &copy; 2013-{new Date().getFullYear()} Caleb Evans |
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </small>
   </p>
   <p>
     Like what I've made? Please
