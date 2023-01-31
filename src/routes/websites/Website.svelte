@@ -5,7 +5,7 @@
 </script>
 
 <article data-entry-id={website.id} class="entry website">
-  <a class="entry-image website-image" href={website.direct_url} in:websiteFade>
+  <a class="entry-image website-image" href={website.direct_url} in:websiteFade aria-hidden="true">
     <img src="/images/websites/{website.id}.jpg" alt="" width={256} height={160} />
   </a>
   <section class="entry-main website-main">

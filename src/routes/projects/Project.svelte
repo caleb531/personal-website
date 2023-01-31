@@ -5,16 +5,12 @@
 </script>
 
 <article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
-  <a
-    class="entry-image project-image"
-    href={project.direct_url}
-    aria-labelledby="project-title-{project.id}"
-  >
+  <a class="entry-image project-image" href={project.direct_url} aria-hidden="true">
     <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>
 
   <section class="entry-main project-main">
-    <h4 class="entry-title project-title" id="project-title-{project.id}">
+    <h4 class="entry-title project-title">
       <a href={project.direct_url}>{project.title}</a>
     </h4>
 

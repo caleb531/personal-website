@@ -11,16 +11,12 @@
   class:contact-link-compact={isCompact}
 >
   {#if !isCompact}
-    <a
-      class="entry-image contact-link-image"
-      href={contactLink.direct_url}
-      aria-labelledby="contact-link-{contactLink.id}"
-    >
+    <a class="entry-image contact-link-image" href={contactLink.direct_url} aria-hidden="true">
       <img src="/icons/contact-links/{contactLink.id}.svg" alt="" width={64} height={64} />
     </a>
     <section class="entry-main contact-link-main">
       <h3 class="entry-title contact-link-title">
-        <a href={contactLink.direct_url} id="contact-link-{contactLink.id}">
+        <a href={contactLink.direct_url}>
           {contactLink.title}
         </a>
       </h3>
