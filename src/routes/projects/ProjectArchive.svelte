@@ -61,9 +61,8 @@
         id="project-search-input"
         bind:value={searchQuery}
         placeholder="Search for a project"
-        aria-label="Search for a project"
+        aria-label="Search for a project; results will update as you type"
       />
-      <span class="accessibility-only">Results will update as you type</span>
     </form>
     {#if visibleProjects.length}
       <div
