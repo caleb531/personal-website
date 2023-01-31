@@ -89,7 +89,7 @@
       </div>
     {/if}
   </div>
-  <div class="project-list-container" aria-live="polite" aria-atomic="true" aria-relevant="all">
+  <div class="project-list-container" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categoriesByColumn as categoriesInColumn}
       <div class="project-list-column">
         {#each categoriesInColumn as category (category.id)}
