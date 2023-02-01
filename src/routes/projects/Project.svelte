@@ -5,7 +5,7 @@
 </script>
 
 <article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
-  <a class="entry-image project-image" href={project.direct_url} aria-hidden="true">
+  <a class="entry-image project-image" href={project.direct_url} aria-hidden="true" tabindex="-1">
     <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>
 
