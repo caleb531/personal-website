@@ -12,7 +12,6 @@
   text-align: left;
   @include layout(hybrid) {
     flex-direction: column;
-    align-items: center;
   }
 }
 .website .entry-title {
@@ -23,7 +22,7 @@
 .website .entry-main {
   padding-left: 20px;
   @include layout(hybrid) {
-    padding: 0 10px;
+    padding: 0;
     padding-top: 20px;
   }
 }
