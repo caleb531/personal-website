@@ -54,8 +54,7 @@ main[data-page-id='projects'] {
   flex-direction: column;
   width: calc(50% - (var(--project-list-column-gap) / 2));
   @include layout(hybrid) {
-    display: block;
-    width: auto;
+    width: 100%;
   }
 }
 
