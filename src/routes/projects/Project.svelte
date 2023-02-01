@@ -5,17 +5,17 @@
 </script>
 
 <article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
-  <a class="entry-image project-image" href={project.direct_url} aria-hidden="true" tabindex="-1">
+  <a class="entry-image" href={project.direct_url} aria-hidden="true" tabindex="-1">
     <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>
 
-  <section class="entry-main project-main">
-    <h4 class="entry-title project-title">
+  <section class="entry-main">
+    <h4 class="entry-title">
       <a href={project.direct_url}>{project.title}</a>
     </h4>
 
     {#if project.description}
-      <p class="entry-desc project-desc">{project.description}</p>
+      <p class="entry-desc">{project.description}</p>
     {/if}
   </section>
 </article>

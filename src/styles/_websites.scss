@@ -15,22 +15,19 @@
     align-items: center;
   }
 }
-.website-list-category-title {
-  margin-top: 0;
-}
-.website-title {
+.website .entry-title {
   @include layout(hybrid) {
     margin: 2px 0;
   }
 }
-.website-main {
+.website .entry-main {
   padding-left: 20px;
   @include layout(hybrid) {
     padding: 0 10px;
     padding-top: 20px;
   }
 }
-.website-image {
+.website .entry-image {
   width: auto;
   border-radius: 10px;
   img {
@@ -45,8 +42,9 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
 }
-.website-description-full {
+.website .entry-desc {
   margin-top: 10px;
   margin-bottom: 10px;
+  line-height: normal;
   font-size: var(--font-size-l);
 }

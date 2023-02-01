@@ -8,10 +8,6 @@
   --project-icon-width: 80px;
 }
 
-.featured-projects {
-  margin-bottom: 15px;
-}
-
 // Prevent scroll jumps when no results are returned from a project search
 main[data-page-id='home'],
 main[data-page-id='projects'] {
@@ -58,13 +54,7 @@ main[data-page-id='projects'] {
   }
 }
 
-.project-list-compact {
-  @include layout(hybrid) {
-    text-align: center;
-  }
-}
-
-.project-image {
+.project .entry-image {
   border-radius: 10px;
   background-color: var(--color-white);
   margin-bottom: 2px;
@@ -74,7 +64,7 @@ main[data-page-id='projects'] {
   }
 }
 
-.project-desc {
+.project .entry-desc {
   @include layout(very-compact) {
     font-size: var(--font-size-xl);
   }

@@ -1,10 +1,10 @@
 // Styling for contact links
 
-.contact-link-list:not(.contact-link-list-compact) {
+.contact-link-list:not(.entry-list-compact) {
   margin-top: 24px;
 }
 
-.contact-link-image {
+.contact-link .entry-image {
   box-shadow: none;
   filter: drop-shadow(0 0 5px rgba(#000, 0.3));
   a {
@@ -13,6 +13,6 @@
     height: var(--icon-size);
   }
 }
-.contact-link-main p {
+.contact-link .entry-main p {
   margin: 0;
 }

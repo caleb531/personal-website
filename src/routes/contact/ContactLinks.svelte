@@ -11,11 +11,7 @@
   const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
 </script>
 
-<div
-  class="entry-list contact-link-list"
-  class:entry-list-compact={isCompact}
-  class:contact-link-list-compact={isCompact}
->
+<div class="entry-list contact-link-list" class:entry-list-compact={isCompact}>
   {#each contactLinkMetadata.contactLinks as contactLinkName (contactLinkName)}
     {#if contactLinksByName[contactLinkName]}
       <ContactLink contactLink={contactLinksByName[contactLinkName]} {isCompact} />
