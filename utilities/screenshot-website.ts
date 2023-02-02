@@ -1,8 +1,8 @@
 // To run this utility, run `esr utilities/screenshot-website.ts` from the root
 // project directory on the CLI
-import fs from 'fs';
 import glob from 'glob-promise';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import puppeteer from 'puppeteer';
 import type { WebsiteEntry } from '../src/routes/types.d';
 
