@@ -7,6 +7,16 @@
   import PageHead from './PageHead.svelte';
   import { pageFade } from './transitions';
   export let data: LayoutData;
+
+  // SvelteKit doesn't currently support adding data-* attributes (or class
+  // names, for that matter) via <svelte:body />, so we must set the attribute
+  // on the DOM element directly via a reactive statement
+  function assignPageId(pageId: string) {
+    if (typeof document !== 'undefined') {
+      document.body.dataset.pageId = pageId;
+    }
+  }
+  $: assignPageId($page.data.id);
 </script>
 
 <PageHead />
@@ -14,7 +24,7 @@
 <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
 <Header />
 
-<main data-page-id={$page.data.id}>
+<main>
   <!--
   We cannot key off of the $page store or any property of it because doing so
   will cause the slot contents to change before the transition finishes,
