@@ -3,8 +3,8 @@
   import '../styles/index.scss';
   import type { LayoutData } from './$types';
   import Footer from './Footer.svelte';
+  import Head from './Head.svelte';
   import Header from './Header.svelte';
-  import PageHead from './PageHead.svelte';
   import { pageFade } from './transitions';
   export let data: LayoutData;
 
@@ -19,7 +19,7 @@
   $: assignPageId($page.data.id);
 </script>
 
-<PageHead />
+<Head />
 
 <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
 <Header />
