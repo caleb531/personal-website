@@ -26,7 +26,7 @@ export async function getEntries<SubEntry extends Entry>(
 ): Promise<SubEntry[]> {
   const entryPairs = Object.entries(entriesByType[entryType]);
   return Promise.all(
-    entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[1]]) => {
+    entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[string]]) => {
       const entryId = getEntryIdFromPath(entryPath);
       const entryData = JSON.parse(String(await getEntryContents()));
       return {
