@@ -6,7 +6,7 @@ import path from 'node:path';
 import puppeteer from 'puppeteer';
 import type { WebsiteEntry } from '../src/routes/types.d';
 
-const websiteImageDir = 'static/images/websites';
+const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
 const websiteImageQuality = 85;
 const windowWidth = 1024;

@@ -2,6 +2,7 @@ import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../rou
 
 type EntryType = 'contact_link' | 'project' | 'website';
 type GlobMap = Record<string, () => Promise<unknown>>;
+type ImagetoolsResult = { default: string[] };
 type EntriesByTypeMap = Record<EntryType, GlobMap>;
 
 // A map where each key name a specific entry type (e.g. project) and each value
@@ -12,6 +13,18 @@ const entriesByType: EntriesByTypeMap = {
   project: import.meta.glob('../projects/*.json', { as: 'raw' }),
   website: import.meta.glob('../websites/*.json', { as: 'raw' })
 };
+
+// Resize the website images at build time so that the appropriate (smaller)
+// versions of each website image can be served
+const resizedWebsiteUrlMap: Record<string, ImagetoolsResult> = import.meta.glob(
+  '../images/websites/*.jpg',
+  {
+    // Generate additional sizes for each pregenerated website image
+    query: { format: 'jpg', width: '256;512' },
+    // Resolve each import promise and store the final values
+    eager: true
+  }
+);
 
 // Compute the entry ID from the given path
 function getEntryIdFromPath(entryPath: string) {
@@ -46,5 +59,14 @@ export async function getContactLinks(): Promise<ContactLinkEntry[]> {
 }
 
 export async function getWebsiteEntries(): Promise<WebsiteEntry[]> {
-  return getEntries<WebsiteEntry>('website');
+  const websiteEntries = await getEntries<WebsiteEntry>('website');
+  return websiteEntries.map((website) => {
+    const [image_url_1x, image_url_2x] =
+      resizedWebsiteUrlMap[`../images/websites/${website.id}.jpg`].default;
+    return {
+      ...website,
+      image_url_1x,
+      image_url_2x
+    };
+  });
 }
