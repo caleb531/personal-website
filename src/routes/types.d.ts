@@ -34,11 +34,7 @@ export interface WebsiteEntry extends Entry {
   start_year: number;
   end_year: number;
 }
-export interface ResizedWebsiteEntry extends WebsiteEntry {
-  image_url_1x: string;
-  image_url_2x: string;
-}
-export type WebsiteMap = EntryMap<ResizedWebsiteEntry>;
+export type WebsiteMap = EntryMap<WebsiteEntry>;
 
 export type ContactLinkEntry = Entry;
 export type ContactLinkMap = EntryMap<ContactLinkEntry>;

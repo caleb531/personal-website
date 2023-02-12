@@ -1,14 +1,15 @@
 <script lang="ts">
   import { websiteFade } from '../transitions';
-  import type { ResizedWebsiteEntry } from '../types';
-  export let website: ResizedWebsiteEntry;
+  import type { WebsiteEntry } from '../types';
+  import { getWebsite1xThumbnailUrl, getWebsite2xThumbnailUrl } from './WebsiteImageStore';
+  export let website: WebsiteEntry;
 </script>
 
 <article data-entry-id={website.id} class="entry website">
   <a class="entry-image" href={website.direct_url} in:websiteFade aria-hidden="true" tabindex="-1">
     <img
-      src={website.image_url_1x}
-      srcset="{website.image_url_2x} 2x"
+      src={getWebsite1xThumbnailUrl(website)}
+      srcset="{getWebsite2xThumbnailUrl(website)} 2x"
       alt=""
       width={256}
       height={160}
