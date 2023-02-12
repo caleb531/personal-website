@@ -3,9 +3,9 @@
 _Copyright 2013-2023, Caleb Evans_  
 _Code released under the MIT license_
 
-This is a [NextJS](https://nextjs.org/)-based personal website I created
-for myself. The theme is built from NextJS's default scaffolding, with all of
-the styling migrated from my previous Gatsby and Jekyll iterations of the site.
+This is a [SvelteKit](https://kit.svelte.dev/)-based personal website I created
+for myself. The theme is built from SvelteKit's default scaffolding, with all of
+the styling migrated from my previous NextJS and Gatsby iterations of the site.
 
 Live Site: https://calebevans.me/
 
