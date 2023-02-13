@@ -6,7 +6,7 @@
   import ContactLink from './ContactLink.svelte';
 
   const { contactLinks } = $page.data;
-  export let isCompact: boolean = false;
+  export let isCompact = false;
 
   const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
 </script>
