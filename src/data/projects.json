@@ -9,11 +9,7 @@
       {
         "id": "programs",
         "title": "CLI Programs",
-        "topProjects": [
-          "imessage-conversation-analyzer",
-          "cache-simulator",
-          "dotfiles"
-        ],
+        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
         "bottomProjects": ["bump-anything"]
       },
       {
@@ -59,11 +55,7 @@
       {
         "id": "alfred",
         "title": "Alfred Workflows",
-        "topProjects": [
-          "youversion-suggest-alfred",
-          "play-song",
-          "open-conference-url"
-        ],
+        "topProjects": ["youversion-suggest-alfred", "play-song", "open-conference-url"],
         "bottomProjects": ["alfred-workflow-packager"]
       },
       {
