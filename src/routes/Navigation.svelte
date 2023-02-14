@@ -10,7 +10,7 @@
   function normalizePathname(pathname: string) {
     return pathname.replace(/(^\/)|(\/$)/gi, '');
   }
-  function isCurrentPage(navigationLink: typeof navigation[number], $currentPage: typeof $page) {
+  function isCurrentPage(navigationLink: (typeof navigation)[number], $currentPage: typeof $page) {
     return normalizePathname(navigationLink.url) === normalizePathname($currentPage.url.pathname);
   }
 </script>
