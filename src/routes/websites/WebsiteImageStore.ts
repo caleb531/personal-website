@@ -9,7 +9,7 @@ type GlobUrlStore = Readable<Record<string, ImagetoolsResult>>;
 export const resizedWebsiteUrlMap: GlobUrlStore = readable(
   import.meta.glob('../../images/websites/*.jpg', {
     // Generate additional sizes for each pregenerated website image
-    query: { format: 'jpg', width: '256;512' },
+    query: { width: '256;512' },
     // Resolve each import promise and store the final values
     eager: true
   })
