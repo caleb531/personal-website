@@ -9,7 +9,7 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ edge: true }),
+    adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ runtime: 'edge' }),
     csp: {
       directives: {
         'default-src': ["'none'"],
