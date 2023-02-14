@@ -6,16 +6,14 @@
 
 <article class="home-intro">
   <div class="home-intro-left">
-    <div class="home-intro-photo">
-      <img
-        src={portrait}
-        srcset="{portraitRetina} 2x"
-        width={180}
-        height={180}
-        alt="Caleb Evans"
-        class="home-intro-photo-image"
-      />
-    </div>
+    <img
+      src={portrait}
+      srcset="{portraitRetina} 2x"
+      width={180}
+      height={180}
+      alt="Caleb Evans"
+      class="home-intro-photo"
+    />
   </div>
   <div class="home-intro-right">
     <p>
