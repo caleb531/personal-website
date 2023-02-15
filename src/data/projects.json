@@ -44,7 +44,7 @@
         "id": "fun",
         "title": "Fun",
         "topProjects": ["flip-book", "unscrambler", "painter"],
-        "bottomProjects": ["until", "colorful-chips"]
+        "bottomProjects": ["until", "atom", "colorful-chips"]
       },
       {
         "id": "tools",
