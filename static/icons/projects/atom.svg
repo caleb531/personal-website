@@ -6,7 +6,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- nucleus -->
-  <circle cx="160" cy="160" r="40" fill="#7d3" />
+  <circle cx="160" cy="160" r="40" fill="#6c3" />
   <!-- ring around nucleus -->
   <circle cx="160" cy="160" r="120" fill="none" stroke="#36c" stroke-width="10" />
   <!-- electron (top-left) -->
