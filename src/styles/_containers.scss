@@ -29,6 +29,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   background-image: url('/images/backgrounds/floorboards-vertical.svg');
   background-repeat: repeat;
 }
