@@ -5,6 +5,7 @@
   import { projectFadeSlide } from '../transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
   import ProjectCategory from './ProjectCategory.svelte';
+  import SearchInput from './SearchInput.svelte';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)
@@ -55,13 +56,12 @@
 <div class="project-archive">
   <div class="project-search-container">
     <form class="project-search-container-form" on:submit|preventDefault>
-      <input
-        type="search"
+      <SearchInput
         name="search"
         id="project-search-input"
         bind:value={searchQuery}
         placeholder="Search for a project"
-        aria-label="Search for a project; results will update as you type"
+        ariaLabel="Search for a project; results will update as you type"
       />
     </form>
     {#if visibleProjects.length}

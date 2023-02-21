@@ -40,8 +40,16 @@ input[type='url'] {
     color: var(--color-gray);
   }
 }
+.search-input-container {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  align-items: center;
+}
 input[type='search'] {
-  padding-left: 34px;
+  --search-input-padding-h: 34px;
+  padding-left: var(--search-input-padding-h);
+  padding-right: var(--search-input-padding-h);
   background-image: url('/icons/search.svg');
   background-repeat: no-repeat;
   background-size: 18px;
@@ -49,5 +57,25 @@ input[type='search'] {
   // Hide Cancel (X) button on search fields
   &::-webkit-search-cancel-button {
     display: none;
+  }
+}
+.search-input-clear-button {
+  --button-space: 4px;
+  position: absolute;
+  top: var(--button-space);
+  right: var(--button-space);
+  height: calc(100% - (2 * var(--button-space)));
+  border-width: 0;
+  border-radius: 6px;
+  padding: 0 6px;
+  background: none;
+  &:hover:active {
+    background-color: var(--color-gray-light);
+  }
+  --icon-size: 20px;
+  img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    pointer-events: none;
   }
 }
