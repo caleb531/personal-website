@@ -69,6 +69,9 @@ input[type='search'] {
   border-radius: 6px;
   padding: 0 6px;
   background: none;
+  &.hidden {
+    display: none;
+  }
   &:hover:active {
     background-color: var(--color-gray-light);
   }

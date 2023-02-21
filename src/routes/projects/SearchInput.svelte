@@ -15,6 +15,7 @@
   <button
     type="button"
     class="search-input-clear-button"
+    class:hidden={value === ''}
     on:pointerdown|preventDefault={clearSearch}
   >
     <img src="/icons/clear.svg" alt="Clear Search Query" />
