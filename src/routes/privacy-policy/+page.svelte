@@ -50,7 +50,8 @@
 <p>
   This website uses <a href="https://plausible.io/">Plausible Analytics</a>, a privacy-focused
   analytics platform. I only use this information to examine traffic trends and visitor statistics
-  (i.e. the percentage of Chrome users). However, you would need to read the
+  (e.g. which pages are visited, or the percentage of desktop users). However, you would need to
+  read the
   <a href="https://plausible.io/data-policy"> Plausible Analytics data policy </a>
   to understand how Plausible collects and uses this information. I do not otherwise share this information.
 </p>
