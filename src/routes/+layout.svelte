@@ -1,12 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import '../styles/index.scss';
-  import type { LayoutData } from './$types';
   import Footer from './Footer.svelte';
   import Head from './Head.svelte';
   import Header from './Header.svelte';
   import { pageFade } from './transitions';
-  export let data: LayoutData;
+  export let data;
 
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute

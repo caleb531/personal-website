@@ -1,7 +1,7 @@
 <script lang="ts">
   import { projectFadeSlide } from '../transitions';
-  import type { PageData } from './$types';
-  export let project: PageData['projects'][number];
+  import type { ProjectEntry } from '../types';
+  export let project: ProjectEntry;
 </script>
 
 <article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
