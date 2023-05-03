@@ -17,8 +17,7 @@ const config = {
         'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
         'img-src': ["'self'", 'data:', 'https://www.gravatar.com'],
         'script-src': ["'self'", 'https://plausible.io'],
-        'connect-src': ["'self'", 'https://plausible.io'],
-        'prefetch-src': ["'self'"]
+        'connect-src': ["'self'", 'https://plausible.io']
       }
     }
   }
