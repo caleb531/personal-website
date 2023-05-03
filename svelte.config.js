@@ -16,8 +16,8 @@ const config = {
     csp: {
       directives: {
         'default-src': ["'none'"],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-        'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
+        'style-src': ["'self'", "'unsafe-inline'"],
+        'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:', 'https://www.gravatar.com'],
         'script-src': ["'self'", 'https://plausible.io'],
         'connect-src': ["'self'", 'https://plausible.io']
