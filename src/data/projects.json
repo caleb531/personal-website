@@ -59,16 +59,16 @@
         "bottomProjects": ["alfred-workflow-packager"]
       },
       {
-        "id": "brunch-plugins",
-        "title": "Brunch Plugins"
+        "id": "vscode",
+        "title": "VS Code Extensions"
       },
       {
         "id": "wordpress",
         "title": "WordPress"
       },
       {
-        "id": "vscode",
-        "title": "VS Code Extensions"
+        "id": "brunch-plugins",
+        "title": "Brunch Plugins"
       }
     ]
   ]
