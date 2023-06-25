@@ -6,7 +6,13 @@
 </script>
 
 <article data-entry-id={website.id} class="entry website">
-  <a class="entry-image" href={website.direct_url} in:websiteFade aria-hidden="true" tabindex="-1">
+  <a
+    class="entry-image"
+    href={website.direct_url}
+    in:websiteFade|global
+    aria-hidden="true"
+    tabindex="-1"
+  >
     <img
       src={getWebsite1xThumbnailUrl(website)}
       srcset="{getWebsite2xThumbnailUrl(website)} 2x"
