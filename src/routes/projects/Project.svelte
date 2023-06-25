@@ -4,7 +4,7 @@
   export let project: ProjectEntry;
 </script>
 
-<article data-entry-id={project.id} class="entry project" transition:projectFadeSlide>
+<article data-entry-id={project.id} class="entry project" transition:projectFadeSlide|global>
   <a class="entry-image" href={project.direct_url} aria-hidden="true" tabindex="-1">
     <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
   </a>

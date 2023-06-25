@@ -69,7 +69,7 @@
         class="project-search-result-count"
         aria-live="polite"
         aria-atomic="true"
-        transition:projectFadeSlide
+        transition:projectFadeSlide|global
       >
         {#if visibleProjects.length === 1}
           Showing 1 project
@@ -82,7 +82,7 @@
         class="project-search-no-results"
         aria-live="polite"
         aria-atomic="true"
-        transition:projectFadeSlide
+        transition:projectFadeSlide|global
       >
         No Projects Found
       </div>
