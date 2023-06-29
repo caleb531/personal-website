@@ -22,8 +22,6 @@
 
 <Head />
 
-<div class="background" />
-
 <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
 <Header />
 

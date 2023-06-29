@@ -52,8 +52,13 @@ a {
 
 b,
 strong {
+  margin-right: 1px;
+  padding: 1px 5px;
+  border-radius: 3px;
   font-weight: var(--font-weight-bold);
-  color: var(--color-strong);
+  -webkit-text-stroke: 1.5px currentColor;
+  background-color: var(--color-green);
+  color: var(--color-main-background);
 }
 
 p {

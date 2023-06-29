@@ -6,7 +6,7 @@
   --color-gray: #666;
   --color-gray-light: #ddd;
   --color-blue: #069;
-  --color-blue-dark: #057;
+  --color-blue-dark: #058;
   --color-teal: #099;
   --color-turquoise: #3cf;
   --color-green: #cf0;
@@ -17,10 +17,9 @@
 
   // Semantic colors
   --color-body-background: var(--color-blue);
-  --color-main-background: rgb(0 0 0 / 0.1);
+  --color-main-background: var(--color-blue-dark);
   --color-text: var(--color-white);
   --color-link: var(--color-green);
-  --color-strong: var(--color-link);
   --color-focus-inner: var(--color-blue);
   --color-focus-outer: var(--color-turquoise);
 }

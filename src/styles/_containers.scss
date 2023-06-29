@@ -23,18 +23,6 @@ body {
   color: var(--color-text);
 }
 
-.background {
-  opacity: 0.5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url('/images/backgrounds/floorboards-vertical.svg');
-  background-repeat: repeat;
-}
-
 article.page {
   // When the page is transioning to another, both section.page-content child
   // containers will be in the DOM at the same time; because we want to achieve
@@ -50,6 +38,7 @@ article.page {
   padding: var(--page-padding-v) var(--page-padding-h);
   border-radius: 20px;
   background-color: var(--color-main-background);
+  box-shadow: inset 0 1px 5px rgba(#000, 0.25);
   @include layout(compact) {
     --page-padding-h: 20px;
     border-radius: 0;
