@@ -31,11 +31,12 @@ input[type='url'] {
   appearance: none;
   padding: 8px 10px;
   background-clip: padding-box;
-  border: solid 2px rgba(#000, 0.25);
   border-radius: 8px;
+  border-width: 0;
   font-family: inherit;
   font-size: var(--font-size-m);
   line-height: 1.3;
+  box-shadow: 0 1px 5px rgba(#000, 0.25);
   @include placeholder() {
     color: var(--color-gray);
   }
