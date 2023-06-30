@@ -28,6 +28,7 @@
   max-width: 450px;
   margin: 0 auto;
   font-size: var(--font-size-home-intro);
+  letter-spacing: -0.5px;
   @include layout(hybrid) {
     font-size: var(--font-size-home-intro-hybrid);
   }
