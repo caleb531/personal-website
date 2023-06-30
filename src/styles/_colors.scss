@@ -25,8 +25,10 @@
   // Semantic colors
   --color-body-background: var(--color-blue);
   --color-main-background: var(--color-blue-dark);
+  --color-accent: var(--color-green);
   --color-text: var(--color-white);
-  --color-link: var(--color-green);
+  --color-link: var(--color-accent);
+  --color-strong: var(--color-accent);
   --color-focus-inner: var(--color-blue);
   --color-focus-outer: var(--color-turquoise);
 }

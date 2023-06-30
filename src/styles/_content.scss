@@ -50,15 +50,19 @@ a {
   }
 }
 
-b,
+// Style strong text with a highlighter aesthetic
 strong {
   margin-right: 1px;
   padding: 1px 5px;
   border-radius: 3px;
+  background-color: var(--color-strong);
   font-weight: var(--font-weight-bold);
-  -webkit-text-stroke: 1.5px currentColor;
-  background-color: var(--color-green);
   color: var(--color-main-background);
+  -webkit-text-stroke: 1.5px currentColor;
+}
+// Style semantically-neutral bold text as simply colored text
+b {
+  color: var(--color-strong);
 }
 
 p {

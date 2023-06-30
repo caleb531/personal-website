@@ -6,11 +6,11 @@
 <ul>
   <li>
     All personal website pages hosted on the
-    <strong>calebevans.me</strong> domain
+    <b>calebevans.me</b> domain
   </li>
   <li>
     All web apps, websites, and other projects hosted on all
-    <strong>*.calebevans.me</strong> subdomains
+    <b>*.calebevans.me</b> subdomains
   </li>
 </ul>
 
@@ -21,10 +21,9 @@
 <p>
   Your connection to this website is fully encrypted via HTTPS, including (but not limited to) all
   stylesheets, scripts, and images. For more comprehensive details, see the
-  <a href="https://www.ssllabs.com/ssltest/analyze.html?d=calebevans.me">
-    SSL Labs report for calebevans.me
-  </a>
-  .
+  <a href="https://www.ssllabs.com/ssltest/analyze.html?d=calebevans.me"
+    >SSL Labs report for calebevans.me</a
+  >.
 </p>
 
 <h3>Data Stored Locally</h3>
