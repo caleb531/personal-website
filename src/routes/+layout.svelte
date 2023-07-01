@@ -10,6 +10,9 @@
   import { pageFade } from './transitions';
   export let data;
 
+  // The scroll-Y position on the page (used for parallax effect)
+  let scrollY: number;
+
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute
   // on the DOM element directly via a reactive statement
@@ -20,6 +23,8 @@
   }
   $: assignPageId($page.data.id);
 </script>
+
+<svelte:window bind:scrollY />
 
 <Head />
 
@@ -34,7 +39,7 @@
   to work around this, we can send down the dynamically-changing pathname from
   the layout server function (+layout.server.ts)
   -->
-  <article class="page" id="page">
+  <article class="page" id="page" style="background-position: 0 {scrollY * 0.5}px">
     {#key data.pathname}
       <section class="page-content" transition:pageFade>
         {#if $page.data.title}

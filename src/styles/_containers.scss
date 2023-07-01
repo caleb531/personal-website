@@ -37,6 +37,9 @@ article.page {
   --page-padding-h: 30px;
   padding: var(--page-padding-v) var(--page-padding-h);
   border-radius: 20px;
+  background-color: var(--color-main-background);
+  background-image: url('images/backgrounds/squares.png');
+  background-repeat: repeat;
   box-shadow: inset 0 1px 5px rgba(#000, 0.25);
   overflow: hidden;
   @include layout(compact) {
@@ -46,21 +49,6 @@ article.page {
   @include layout(very-compact) {
     --page-padding-h: 15px;
   }
-}
-// Page container background image layer (we use a pseudo-element so we can
-// adjust the opacity of the background image)
-article.page:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  opacity: 0.75;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-main-background);
-  background-image: url('images/backgrounds/squares.png');
-  background-repeat: repeat;
 }
 
 .page-content {
