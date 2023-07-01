@@ -2,19 +2,15 @@
 
 :root {
   // Base colors
-  --color-black: #111;
-  --color-gray: #666;
-  --color-gray-light: #ddd;
-  --color-blue-light: #006699;
-  --color-blue-mid: #005e91;
-  --color-blue-dark: #005588;
-  --color-teal: #099;
-  --color-turquoise: #3cf;
-  --color-green: #cf0;
-  --color-orange: #f93;
-  --color-red: #d33;
-  --color-purple: #93c;
-  --color-white: #fff;
+  --color-black: hsl(0, 0%, 7%);
+  --color-gray: hsl(0, 0%, 40%);
+  --color-gray-light: hsl(0, 0%, 87%);
+  --color-blue-light: hsl(200, 100%, 30%);
+  --color-blue-mid: hsl(201, 100%, 28%);
+  --color-blue-dark: hsl(203, 100%, 27%);
+  --color-turquoise: hsl(195, 100%, 60%);
+  --color-green: hsl(72, 100%, 50%);
+  --color-white: hsl(0, 0%, 100%);
 
   // Use more vibrant colors on displays that support a p3-based color gamut
   @media (color-gamut: p3) {
