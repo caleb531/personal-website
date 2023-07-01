@@ -33,7 +33,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-blue-light);
-  background-image: linear-gradient(to bottom, var(--color-blue-light), var(--color-blue-mid));
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-body-background-start),
+    var(--color-body-background-end)
+  );
 }
 
 article.page {
