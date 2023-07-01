@@ -18,7 +18,7 @@
   // static relative to the container; a value of simulates
   // background-attachment:fixed, where the background image moves at the same
   // rate as the user's scroll
-  let parallaxFactor = 0.5;
+  let parallaxFactor = 0.2;
 
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute
