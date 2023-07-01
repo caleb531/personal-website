@@ -5,8 +5,9 @@
   --color-black: #111;
   --color-gray: #666;
   --color-gray-light: #ddd;
-  --color-blue: #069;
-  --color-blue-dark: #058;
+  --color-blue-light: #006699;
+  --color-blue-mid: #005e91;
+  --color-blue-dark: #005588;
   --color-teal: #099;
   --color-turquoise: #3cf;
   --color-green: #cf0;
@@ -17,18 +18,20 @@
 
   // Use more vibrant colors on displays that support a p3-based color gamut
   @media (color-gamut: p3) {
-    --color-blue: oklch(48.09% 0.141 240.76);
+    --color-blue-light: oklch(48.09% 0.141 240.76);
+    --color-blue-mid: oklch(45.09% 0.161 240.76);
     --color-blue-dark: oklch(42.79% 0.128 244.7896917592156);
     --color-green: oklch(92.21% 0.259 123.0901665739297);
   }
 
   // Semantic colors
-  --color-body-background: var(--color-blue);
+  --color-body-background-1: var(--color-blue-light);
+  --color-body-background-2: var(--color-blue-mid);
   --color-main-background: var(--color-blue-dark);
   --color-accent: var(--color-green);
   --color-text: var(--color-white);
   --color-link: var(--color-accent);
   --color-strong: var(--color-accent);
-  --color-focus-inner: var(--color-blue);
+  --color-focus-inner: var(--color-blue-mid);
   --color-focus-outer: var(--color-turquoise);
 }

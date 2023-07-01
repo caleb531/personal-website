@@ -16,11 +16,24 @@ body {
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
-  background-color: var(--color-body-background);
+  background-color: var(--color-body-background-1);
   font-family: var(--font-family-sans-serif);
   font-weight: var(--font-weight-light);
   font-size: 0;
   color: var(--color-text);
+}
+// Because iOS does not support background-attachment:fixed, we must use a
+// separate (position:fixed) element to simulate a fixed background image on the
+// body
+.site-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-blue-light);
+  background-image: linear-gradient(to bottom, var(--color-blue-light), var(--color-blue-mid));
 }
 
 article.page {

@@ -31,6 +31,8 @@
   $: assignPageId($page.data.id);
 </script>
 
+<div class="site-background" />
+
 <svelte:window bind:scrollY />
 
 <Head />
