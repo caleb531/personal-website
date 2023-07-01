@@ -11,7 +11,14 @@
   export let data;
 
   // The scroll-Y position on the page (used for parallax effect)
-  let scrollY: number;
+  let scrollY = 0;
+
+  // A number between 0 and 1 which controls the parallax effect for the page
+  // container background image; a value of 0 means the background image remains
+  // static relative to the container; a value of simulates
+  // background-attachment:fixed, where the background image moves at the same
+  // rate as the user's scroll
+  let parallaxFactor = 0.5;
 
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute
@@ -39,7 +46,7 @@
   to work around this, we can send down the dynamically-changing pathname from
   the layout server function (+layout.server.ts)
   -->
-  <article class="page" id="page" style="background-position: 0 {scrollY * 0.5}px">
+  <article class="page" id="page" style="background-position: 0 {scrollY * parallaxFactor}px">
     {#key data.pathname}
       <section class="page-content" transition:pageFade>
         {#if $page.data.title}
