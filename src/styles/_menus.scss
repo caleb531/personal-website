@@ -7,7 +7,7 @@
   --menu-transition-duration: 200ms;
   --menu-transition-easing: ease-in-out;
 
-  --menu-background-color: #{rgba(#000, 0.3)};
+  --menu-background-color: var(--color-shadow);
   --menu-arrow-width: 26px;
   --menu-border-radius: 5px;
   --menu-offset-top: 5px;

@@ -11,6 +11,7 @@
   --color-turquoise: hsl(195, 100%, 60%);
   --color-green: hsl(72, 100%, 50%);
   --color-white: hsl(0, 0%, 100%);
+  --color-shadow: hsla(0, 0%, 0%, 0.3);
 
   // Use more vibrant colors on displays that support a p3-based color gamut
   @media (color-gamut: p3) {
