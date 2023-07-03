@@ -18,7 +18,7 @@ const config = {
         'default-src': ["'none'"],
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:'],
-        'img-src': ["'self'", 'data:', 'https://www.gravatar.com'],
+        'img-src': ["'self'", 'data:'],
         'script-src': ["'self'", 'https://plausible.io'],
         'connect-src': ["'self'", 'https://plausible.io']
       }

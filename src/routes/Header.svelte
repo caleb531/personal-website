@@ -1,11 +1,10 @@
 <script lang="ts">
-  import { resizeGravatar } from '$lib/gravatar';
   import site from '../data/site.json';
+  import portraitRetina from '../images/self-portrait-v6.jpg?w=120&imagetools';
+  import portrait from '../images/self-portrait-v6.jpg?w=60&imagetools';
   import Navigation from './Navigation.svelte';
 
   const headerImageSize = 60;
-  const headerGravatarUrl = resizeGravatar(site.gravatarUrl, headerImageSize);
-  const headerGravatarUrlRetina = resizeGravatar(site.gravatarUrl, headerImageSize * 2);
 
   let isNavOpen = false;
 
@@ -21,8 +20,8 @@
   <a href="/" class="site-title-link" rel="home" on:click={closeNav}>
     <img
       class="site-header-image"
-      src={headerGravatarUrl}
-      srcSet="{headerGravatarUrlRetina} 2x"
+      src={portrait}
+      srcSet="{portraitRetina} 2x"
       width={headerImageSize}
       height={headerImageSize}
       alt=""

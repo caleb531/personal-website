@@ -1,14 +1,14 @@
 <script lang="ts">
-  import portrait from '../images/portrait-full.jpg?w=180&imagetools';
-  import portraitRetina from '../images/portrait-full.jpg?w=360&imagetools';
+  import portraitFull from '../images/self-portrait-v6-full.jpg?w=180&imagetools';
+  import portraitFullRetina from '../images/self-portrait-v6-full.jpg?w=360&imagetools';
   import ProjectArchive from './projects/ProjectArchive.svelte';
 </script>
 
 <article class="home-intro">
   <div class="home-intro-left">
     <img
-      src={portrait}
-      srcset="{portraitRetina} 2x"
+      src={portraitFull}
+      srcset="{portraitFullRetina} 2x"
       width={180}
       height={180}
       alt="Caleb Evans"

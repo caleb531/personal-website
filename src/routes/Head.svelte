@@ -1,8 +1,13 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
-  import { resizeGravatar } from '$lib/gravatar';
   import site from '../data/site.json';
+  import portrait120 from '../images/self-portrait-v6.jpg?w=120&imagetools';
+  import portrait152 from '../images/self-portrait-v6.jpg?w=152&imagetools';
+  import portrait180 from '../images/self-portrait-v6.jpg?w=180&imagetools';
+  import portrait192 from '../images/self-portrait-v6.jpg?w=192&imagetools';
+  import portrait32 from '../images/self-portrait-v6.jpg?w=32&imagetools';
+  import portrait76 from '../images/self-portrait-v6.jpg?w=76&imagetools';
   import JsonLd from './JsonLd.svelte';
 
   let isHomepage: boolean;
@@ -31,16 +36,12 @@
     }
     pageSeoUrl = site.url + $page.url.pathname;
   }
-
-  let appleTouchIcons = [76, 120, 152, 180].map((size) => {
-    return { size, url: resizeGravatar(site.gravatarUrl, size) };
-  });
 </script>
 
 <svelte:head>
   <title>{renderedTitle}</title>
-  <link rel="shortcut icon" href={resizeGravatar(site.gravatarUrl, 32)} />
-  <link rel="icon" href={resizeGravatar(site.gravatarUrl, 192)} sizes="192x192" />
+  <link rel="shortcut icon" href={portrait32} />
+  <link rel="icon" href={portrait192} sizes="192x192" />
   <meta name="description" content={site.description} />
 
   <meta name="og:title" content={pageSeoTitle} />
@@ -64,9 +65,10 @@
     url={pageSeoUrl}
     type={isHomepage ? 'WebSite' : 'WebPage'}
   />
-  {#each appleTouchIcons as icon (icon.url)}
-    <link rel="apple-touch-icon" href={icon.url} sizes="{icon.size}x{icon.size}" />
-  {/each}
+  <link rel="apple-touch-icon" href={portrait76} sizes="76x76" />
+  <link rel="apple-touch-icon" href={portrait120} sizes="120x120" />
+  <link rel="apple-touch-icon" href={portrait152} sizes="152x152" />
+  <link rel="apple-touch-icon" href={portrait180} sizes="180x180" />
   <title>{renderedTitle}</title>
   <meta name="description" content={$page.data.description} />
   {#if import.meta.env.PROD && browser}
