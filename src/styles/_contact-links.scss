@@ -6,7 +6,7 @@
 
 .contact-link .entry-image {
   box-shadow: none;
-  filter: drop-shadow(0 0 5px var(--color-shadow));
+  filter: drop-shadow(0 0 5px var(--color-shadow-light));
   a {
     --icon-size: 64px;
     width: var(--icon-size);

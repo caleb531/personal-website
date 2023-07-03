@@ -13,7 +13,7 @@
   // This is key to prevent entry icons/images from being clipped when the
   // above overflow:hidden is set
   flex-shrink: 0;
-  box-shadow: 0 0 10px var(--color-shadow);
+  box-shadow: 0 0 10px var(--color-shadow-light);
   a {
     display: inline-block;
     text-decoration: none;
