@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.0.3",
-    "eslint-plugin-svelte": "^2.31.1",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -37,6 +36,7 @@
     "@typescript-eslint/parser": "^5.60.0",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-svelte": "^2.31.1",
     "glob": "^8.1.0",
     "glob-promise": "^6.0.3",
     "imagetools-core": "^4.0.3",
