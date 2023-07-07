@@ -49,7 +49,7 @@
       {
         "id": "tools",
         "title": "Tools / Productivity",
-        "topProjects": ["faith-dashboard", "workday-time-calculator"],
+        "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
         "bottomProjects": ["html-selector", "js-console"]
       },
       {
