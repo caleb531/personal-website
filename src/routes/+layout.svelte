@@ -45,7 +45,7 @@
   to work around this, we can send down the dynamically-changing pathname from
   the layout server function (+layout.server.ts)
   -->
-  <article class="page" id="page" style="background-position: 0 {scrollY * parallaxFactor}px">
+  <article class="page" id="page" style="background-position-y: {scrollY * parallaxFactor}px">
     {#key data.pathname}
       <section class="page-content" transition:pageFade>
         {#if $page.data.title}
