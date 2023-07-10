@@ -1,18 +1,3 @@
-@mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-}
-
 label {
   margin-right: 10px;
   font-family: inherit;
@@ -36,7 +21,7 @@ input[type='url'] {
   font-family: inherit;
   font-size: var(--font-size-m);
   line-height: 1.3;
-  @include placeholder() {
+  &::placeholder {
     color: var(--color-gray);
   }
 }
