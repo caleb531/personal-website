@@ -4,7 +4,7 @@ import glob from 'glob-promise';
 import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
-import type { WebsiteEntry } from '../src/routes/types.d';
+import type { WebsiteEntry } from '../src/routes/types';
 
 const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
