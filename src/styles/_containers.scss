@@ -41,7 +41,7 @@ body {
 }
 
 article.page {
-  // When the page is transioning to another, both section.page-content child
+  // When the page is transitoning to another, both section.page-content child
   // containers will be in the DOM at the same time; because we want to achieve
   // a crossfade effect, we can use CSS Grid to superimpose the second child
   // container above the first while not sacrificing the height of the parent
