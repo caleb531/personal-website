@@ -15,7 +15,7 @@
     </h4>
 
     {#if project.description}
-      <p class="entry-desc">{project.description}</p>
+      <p class="entry-desc">{@html project.description}</p>
     {/if}
   </section>
 </article>

@@ -28,6 +28,10 @@
         "title": "Raycast Extensions"
       },
       {
+        "id": "rollup-plugins",
+        "title": "Rollup Plugins"
+      },
+      {
         "id": "atom",
         "title": "Atom Packages",
         "bottomProjects": ["language-har"]
