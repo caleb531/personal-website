@@ -20,7 +20,7 @@ function createWebsiteImageDirectory(): Promise<string | undefined> {
 async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
   await createWebsiteImageDirectory();
   console.log('launching browser...');
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: 'new' });
 
   // Generate screenshot for each portfolio website that has configuration
   await Promise.all(

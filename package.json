@@ -42,7 +42,7 @@
     "imagetools-core": "^4.0.3",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.1",
-    "puppeteer": "^20.7.3",
+    "puppeteer": "^21.1.1",
     "sass": "^1.63.6",
     "schema-dts": "^1.1.2",
     "svelte": "^4.0.0",
