@@ -39,16 +39,16 @@
     ],
     [
       {
-        "id": "javascript-libraries",
-        "title": "JavaScript Libraries",
-        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"],
-        "bottomProjects": ["jfile"]
-      },
-      {
         "id": "fun",
         "title": "Fun",
         "topProjects": ["flip-book", "unscrambler", "painter"],
         "bottomProjects": ["until", "atom", "colorful-chips"]
+      },
+      {
+        "id": "javascript-libraries",
+        "title": "JavaScript Libraries",
+        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"],
+        "bottomProjects": ["jfile"]
       },
       {
         "id": "tools",
