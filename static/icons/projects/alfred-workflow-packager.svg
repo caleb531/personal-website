@@ -12,7 +12,7 @@
     <!-- right side -->
     <use xlink:href="#awp-box-side" x="195" y="245" transform="translate(195,240) scale(-1,1) translate(-195,-240)" />
     <!-- top -->
-    <use xlink:href="#awp-box-top" x="160" y="155" />
+    <use xlink:href="#awp-box-top" x="160" y="156" />
   </g>
   <!-- Alfred hat -->
   <g fill="#222">
