@@ -1,4 +1,4 @@
-// To run this utility, run `esr utilities/screenshot-website.ts` from the root
+// To run this utility, run `esr utilities/screenshot-websites.ts` from the root
 // project directory on the CLI
 import glob from 'glob-promise';
 import fs from 'node:fs';
