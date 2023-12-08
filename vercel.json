@@ -18,7 +18,7 @@
   ],
   "headers": [
     {
-      "source": "/:path*",
+      "source": "/([^\\.]*)",
       "headers": [
         {
           "key": "X-Frame-Options",
