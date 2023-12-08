@@ -1,17 +1,26 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <polygon id="awp-box-side" points="0,-80 50,0 0,80 -50,0" />
+    <polygon id="awp-box-side" points="-50,-80 30,-40 30,50 -50,10" />
+    <polygon id="awp-box-top" points="-82,0 0,-41 82,0 0,41" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- 3D box -->
-    <g fill="#000">
-      <!-- left side -->
-      <use xlink:href="#awp-box-side" x="112.5" y="220" transform="translate(112.5,220) rotate(147.9946179) translate(-112.5,-220)" />
-      <!-- right side -->
-      <use xlink:href="#awp-box-side" x="207.5" y="220" transform="translate(207.5,220) rotate(32.0053821) translate(-207.5,-220)" />
-      <!-- top -->
-      <use xlink:href="#awp-box-side" x="160" y="140" transform="translate(160,140) rotate(90) translate(-160,-140)" />
-
-    </g>
+  <g fill="#AA7732">
+    <!-- left side -->
+    <use xlink:href="#awp-box-side" x="125" y="245" />
+    <!-- right side -->
+    <use xlink:href="#awp-box-side" x="195" y="245" transform="translate(195,240) scale(-1,1) translate(-195,-240)" />
+    <!-- top -->
+    <use xlink:href="#awp-box-top" x="160" y="155" />
+  </g>
+  <!-- Alfred hat -->
+  <g fill="#222">
+    <!-- top -->
+    <ellipse cx="160" cy="60" rx="40" ry="35" />
+    <!-- middle -->
+    <rect x="120" y="60" width="80" height="20" />
+    <!-- bottom -->
+    <ellipse cx="160" cy="80" rx="60" ry="20" />
+  </g>
 </svg>
