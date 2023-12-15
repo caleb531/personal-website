@@ -19,7 +19,7 @@
     <p>
       <strong>Hi, I'm Caleb</strong>, a web developer who lives for Christ by building enjoyable
       apps &amp; useful tools.
-      <strong>Take&nbsp;a&nbsp;look&nbsp;around!</strong>
+      <strong>Take a look around!</strong>
     </p>
   </div>
 </article>
