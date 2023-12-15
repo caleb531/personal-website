@@ -5,6 +5,6 @@ export async function load() {
     id: 'websites',
     title: 'Websites',
     description: 'Professional websites built by Caleb Evans, coder for Christ',
-    websites: getWebsiteEntries()
+    websites: await getWebsiteEntries()
   };
 }

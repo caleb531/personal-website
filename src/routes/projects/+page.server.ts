@@ -5,6 +5,6 @@ export async function load() {
     id: 'projects',
     title: 'Projects',
     description: 'Apps and programs crafted by Caleb Evans, coder for Christ',
-    projects: getProjects()
+    projects: await getProjects()
   };
 }

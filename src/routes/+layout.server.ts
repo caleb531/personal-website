@@ -6,6 +6,6 @@ export const prerender = Boolean(process.env.USE_STATIC_ADAPTER);
 export async function load(locals) {
   return {
     pathname: locals.url.pathname,
-    contactLinks: getContactLinks()
+    contactLinks: await getContactLinks()
   };
 }
