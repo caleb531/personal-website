@@ -65,8 +65,7 @@
       right: calc(
         var(--menu-border-radius) +
           (var(--menu-arrow-width) / 2) +
-          $position -
-          var(--menu-offset-right)
+          $position - var(--menu-offset-right)
       );
     }
   }

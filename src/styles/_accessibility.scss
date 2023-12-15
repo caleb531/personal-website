@@ -14,12 +14,16 @@ textarea {
   &:focus-visible {
     outline-width: 0;
     border-color: var(--color-focus-inner);
-    box-shadow: 0 0 0 1px var(--color-focus-inner), 0 0 0 3px var(--color-focus-outer);
+    box-shadow:
+      0 0 0 1px var(--color-focus-inner),
+      0 0 0 3px var(--color-focus-outer);
   }
 }
 .entry-image {
   &:focus-visible {
-    box-shadow: 0 0 0 2px var(--color-focus-inner), 0 0 0 4px var(--color-focus-outer);
+    box-shadow:
+      0 0 0 2px var(--color-focus-inner),
+      0 0 0 4px var(--color-focus-outer);
   }
 }
 
