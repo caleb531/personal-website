@@ -22,9 +22,9 @@
     />
   </a>
   <section class="entry-main">
-    <h4 class="entry-title">
+    <h3 class="entry-title">
       <a href={website.direct_url}>{website.title}</a>
-    </h4>
+    </h3>
 
     <div class="website-years">
       {website.start_year} &ndash; {website.end_year || 'present'}

@@ -15,6 +15,7 @@
   }
 }
 .website .entry-title {
+  font-size: var(--font-size-h4);
   @include layout(hybrid) {
     margin: 2px 0;
   }
