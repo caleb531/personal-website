@@ -9,7 +9,7 @@
   <a
     class="entry-image"
     href={website.direct_url}
-    in:websiteFade|global
+    transition:websiteFade|global
     aria-hidden="true"
     tabindex="-1"
   >
