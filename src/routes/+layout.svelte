@@ -34,6 +34,11 @@
 
 <Head />
 
+<!--
+For screen readers, adding a hidden "Skip to Main Content" link at the top of
+the page can help screen reader users jump to the page content; for more, see
+<https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/>
+-->
 <a class="skip-to-main-content accessibility-only" href="#page">Skip to main content</a>
 <Header />
 
