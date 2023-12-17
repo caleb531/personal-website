@@ -26,6 +26,13 @@ export function websiteFade(node: Element, options?: FadeParams): TransitionConf
   return fade(node, { delay: 125, duration: 250, easing: cubicInOut, ...options });
 }
 
+// Specify a transition with zero-duration to effectively achieve the effect of
+// no transition; this is because Svelte's transition: directive cannot be
+// conditionally applied
+export function noopTransition(node: Element): TransitionConfig {
+  return fade(node, { duration: 0 });
+}
+
 // Specify the transition parameters for page changes
 export function pageFade(node: Element, options?: FadeParams): TransitionConfig {
   return fade(node, { duration: 250, easing: cubicInOut, ...options });

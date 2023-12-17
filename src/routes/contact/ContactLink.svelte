@@ -1,31 +1,26 @@
 <script lang="ts">
+  import Entry from '../Entry.svelte';
+  import EntryDesc from '../EntryDesc.svelte';
+  import EntryImage from '../EntryImage.svelte';
+  import EntryMain from '../EntryMain.svelte';
+  import EntryTitle from '../EntryTitle.svelte';
   import type { ContactLinkEntry } from '../types';
   export let contactLink: ContactLinkEntry;
   export let isCompact = false;
 </script>
 
-<article data-entry-id={contactLink.id} class="entry contact-link">
+<Entry type="contact-link" id={contactLink.id}>
   {#if !isCompact}
-    <a class="entry-image" href={contactLink.direct_url} aria-hidden="true" tabindex="-1">
+    <EntryImage href={contactLink.direct_url} hiddenFromAccessibility>
       <img src="/icons/contact-links/{contactLink.id}.svg" alt="" width={64} height={64} />
-    </a>
-    <section class="entry-main">
-      <h3 class="entry-title">
-        <a href={contactLink.direct_url}>
-          {contactLink.title}
-        </a>
-      </h3>
+    </EntryImage>
+    <EntryMain>
+      <EntryTitle href={contactLink.direct_url}>{contactLink.title}</EntryTitle>
 
-      <div class="entry-desc">
-        {contactLink.description}
-      </div>
-    </section>
+      <EntryDesc>{contactLink.description}</EntryDesc>
+    </EntryMain>
   {:else}
-    <a
-      class="entry-image contact-link-image"
-      href={contactLink.direct_url}
-      title={contactLink.title}
-    >
+    <EntryImage href={contactLink.direct_url} title={contactLink.title}>
       <img
         src="/icons/contact-links/{contactLink.id}.svg"
         alt={contactLink.title}
@@ -33,6 +28,6 @@
         height={40}
         loading="lazy"
       />
-    </a>
+    </EntryImage>
   {/if}
-</article>
+</Entry>
