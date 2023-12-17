@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Entry from '../Entry.svelte';
-  import EntryDesc from '../EntryDesc.svelte';
-  import EntryImage from '../EntryImage.svelte';
-  import EntryMain from '../EntryMain.svelte';
-  import EntryTitle from '../EntryTitle.svelte';
+  import Entry from '../(entries)/Entry.svelte';
+  import EntryDesc from '../(entries)/EntryDesc.svelte';
+  import EntryImage from '../(entries)/EntryImage.svelte';
+  import EntryMain from '../(entries)/EntryMain.svelte';
+  import EntryTitle from '../(entries)/EntryTitle.svelte';
   import { websiteFade } from '../transitions';
   import type { WebsiteEntry } from '../types';
   import { getWebsite1xThumbnailUrl, getWebsite2xThumbnailUrl } from './WebsiteImageStore';
