@@ -1,5 +1,5 @@
+import type { WebsiteEntry } from '$routes/types';
 import { get, readable, type Readable } from 'svelte/store';
-import type { WebsiteEntry } from '../types';
 
 type ImagetoolsResult = { default: string[] };
 type GlobUrlStore = Readable<Record<string, ImagetoolsResult>>;

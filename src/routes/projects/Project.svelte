@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Entry from '../(entries)/Entry.svelte';
-  import EntryDesc from '../(entries)/EntryDesc.svelte';
-  import EntryImage from '../(entries)/EntryImage.svelte';
-  import EntryMain from '../(entries)/EntryMain.svelte';
-  import EntryTitle from '../(entries)/EntryTitle.svelte';
-  import { projectFadeSlide } from '../transitions';
-  import type { ProjectEntry } from '../types';
+  import Entry from '$routes/(entries)/Entry.svelte';
+  import EntryDesc from '$routes/(entries)/EntryDesc.svelte';
+  import EntryImage from '$routes/(entries)/EntryImage.svelte';
+  import EntryMain from '$routes/(entries)/EntryMain.svelte';
+  import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
+  import { projectFadeSlide } from '$routes/transitions';
+  import type { ProjectEntry } from '$routes/types';
   export let project: ProjectEntry;
 </script>
 

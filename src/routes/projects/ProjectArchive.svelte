@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import projectMetadata from '$data/projects.json';
+  import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
+  import SearchInput from '$routes/SearchInput.svelte';
+  import { projectFadeSlide } from '$routes/transitions';
+  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types';
   import { groupBy, keyBy } from 'lodash-es';
-  import projectMetadata from '../../data/projects.json';
-  import { projectFadeSlide } from '../transitions';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '../types';
-  import ProjectCategory from './ProjectCategory.svelte';
-  import SearchInput from './SearchInput.svelte';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)

@@ -13,6 +13,13 @@ const config = {
     // renderig (SSR) or as a static site (SSG); this can be controlled on a
     // per-environment basis
     adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ runtime: 'edge' }),
+    // Convenience path aliases
+    alias: {
+      $src: 'src',
+      $data: 'src/data',
+      $images: 'src/images',
+      $routes: 'src/routes'
+    },
     // Content Security Policy
     csp: {
       directives: {

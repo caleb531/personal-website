@@ -1,12 +1,15 @@
 <script lang="ts">
-  import Entry from '../(entries)/Entry.svelte';
-  import EntryDesc from '../(entries)/EntryDesc.svelte';
-  import EntryImage from '../(entries)/EntryImage.svelte';
-  import EntryMain from '../(entries)/EntryMain.svelte';
-  import EntryTitle from '../(entries)/EntryTitle.svelte';
-  import { websiteFade } from '../transitions';
-  import type { WebsiteEntry } from '../types';
-  import { getWebsite1xThumbnailUrl, getWebsite2xThumbnailUrl } from './WebsiteImageStore';
+  import Entry from '$routes/(entries)/Entry.svelte';
+  import EntryDesc from '$routes/(entries)/EntryDesc.svelte';
+  import EntryImage from '$routes/(entries)/EntryImage.svelte';
+  import EntryMain from '$routes/(entries)/EntryMain.svelte';
+  import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
+  import { websiteFade } from '$routes/transitions';
+  import type { WebsiteEntry } from '$routes/types';
+  import {
+    getWebsite1xThumbnailUrl,
+    getWebsite2xThumbnailUrl
+  } from '$routes/websites/WebsiteImageStore';
   export let website: WebsiteEntry;
 </script>
 

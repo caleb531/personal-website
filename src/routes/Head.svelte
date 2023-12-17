@@ -1,14 +1,14 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
-  import site from '../data/site.json';
-  import portrait120 from '../images/self-portrait-v6.jpg?w=120&imagetools';
-  import portrait152 from '../images/self-portrait-v6.jpg?w=152&imagetools';
-  import portrait180 from '../images/self-portrait-v6.jpg?w=180&imagetools';
-  import portrait192 from '../images/self-portrait-v6.jpg?w=192&imagetools';
-  import portrait32 from '../images/self-portrait-v6.jpg?w=32&imagetools';
-  import portrait76 from '../images/self-portrait-v6.jpg?w=76&imagetools';
-  import JsonLd from './JsonLd.svelte';
+  import site from '$data/site.json';
+  import portrait120 from '$images/self-portrait-v6.jpg?w=120&imagetools';
+  import portrait152 from '$images/self-portrait-v6.jpg?w=152&imagetools';
+  import portrait180 from '$images/self-portrait-v6.jpg?w=180&imagetools';
+  import portrait192 from '$images/self-portrait-v6.jpg?w=192&imagetools';
+  import portrait32 from '$images/self-portrait-v6.jpg?w=32&imagetools';
+  import portrait76 from '$images/self-portrait-v6.jpg?w=76&imagetools';
+  import JsonLd from '$routes/JsonLd.svelte';
 
   let isHomepage: boolean;
   let pageSeoTitle: string;

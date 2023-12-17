@@ -1,11 +1,11 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
-  import '../styles/index.scss';
-  import Footer from './Footer.svelte';
-  import Head from './Head.svelte';
-  import Header from './Header.svelte';
-  import { pageFade } from './transitions';
+  import Footer from '$routes/Footer.svelte';
+  import Head from '$routes/Head.svelte';
+  import Header from '$routes/Header.svelte';
+  import { pageFade } from '$routes/transitions';
+  import '$src/styles/index.scss';
   export let data;
 
   // The scroll-Y position on the page (used for parallax effect)

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import site from '../data/site.json';
+  import site from '$data/site.json';
   // To ensure that the page transition from this error page works properly, the
   // status code can only be computed once when the page loads
   const status = $page.status;

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import navigation from '../data/navigation.json';
+  import navigation from '$data/navigation.json';
 
   export let isNavOpen: boolean;
   export let toggleNav: () => void;

@@ -1,9 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import websiteMetadata from '$data/websites.json';
+  import type { WebsiteMap } from '$routes/types';
+  import Website from '$routes/websites/Website.svelte';
   import { keyBy } from 'lodash-es';
-  import websiteMetadata from '../../data/websites.json';
-  import type { WebsiteMap } from '../types';
-  import Website from './Website.svelte';
 
   let { websites } = $page.data;
   let websitesById: WebsiteMap = keyBy(websites, 'id');

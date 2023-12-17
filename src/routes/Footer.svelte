@@ -1,6 +1,6 @@
 <script lang="ts">
-  import site from '../data/site.json';
-  import ContactLinks from './contact/ContactLinks.svelte';
+  import site from '$data/site.json';
+  import ContactLinks from '$routes/contact/ContactLinks.svelte';
   const donateBaseUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations';
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { noopTransition } from '../transitions';
+  import { noopTransition } from '$routes/transitions';
 
   export let id: string;
   export let type: string;

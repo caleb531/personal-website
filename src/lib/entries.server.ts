@@ -1,4 +1,4 @@
-import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '../routes/types';
+import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types';
 
 type EntryType = 'contact_link' | 'project' | 'website';
 type GlobMap = Record<string, () => Promise<unknown>>;

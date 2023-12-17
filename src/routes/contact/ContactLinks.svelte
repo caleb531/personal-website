@@ -1,9 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import contactLinkMetadata from '$data/contact-links.json';
+  import ContactLink from '$routes/contact/ContactLink.svelte';
+  import type { ContactLinkMap } from '$routes/types';
   import { keyBy } from 'lodash-es';
-  import contactLinkMetadata from '../../data/contact-links.json';
-  import type { ContactLinkMap } from '../types';
-  import ContactLink from './ContactLink.svelte';
 
   const { contactLinks } = $page.data;
   export let isCompact = false;

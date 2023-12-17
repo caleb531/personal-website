@@ -1,8 +1,8 @@
 <script lang="ts">
+  import Project from '$routes/projects/Project.svelte';
+  import { projectFadeSlide } from '$routes/transitions';
+  import type { ProjectCategoryData, ProjectEntry } from '$routes/types';
   import { keyBy } from 'lodash-es';
-  import { projectFadeSlide } from '../transitions';
-  import type { ProjectCategoryData, ProjectEntry } from '../types';
-  import Project from './Project.svelte';
 
   export let projects: ProjectEntry[];
   export let category: ProjectCategoryData;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ContactLinks from '../contact/ContactLinks.svelte';
+  import ContactLinks from '$routes/contact/ContactLinks.svelte';
 </script>
 
 <ContactLinks />

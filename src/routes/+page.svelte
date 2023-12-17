@@ -1,7 +1,7 @@
 <script lang="ts">
-  import portraitFull from '../images/self-portrait-v6-full.jpg?w=180&imagetools';
-  import portraitFullRetina from '../images/self-portrait-v6-full.jpg?w=360&imagetools';
-  import ProjectArchive from './projects/ProjectArchive.svelte';
+  import portraitFull from '$images/self-portrait-v6-full.jpg?w=180&imagetools';
+  import portraitFullRetina from '$images/self-portrait-v6-full.jpg?w=360&imagetools';
+  import ProjectArchive from '$routes/projects/ProjectArchive.svelte';
 </script>
 
 <article class="home-intro">
