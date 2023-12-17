@@ -73,3 +73,11 @@ article.page {
   grid-row-start: 1;
   grid-column-start: 1;
 }
+
+// Simply setting duration:0 via noopTransition will cause the element to
+// immediately disappear; however, we can properly disable the transition and
+// keep the element alive by setting animation:none (source:
+// <https://github.com/sveltejs/svelte/issues/3753#issuecomment-728875227>)
+.no-transition {
+  animation: none !important;
+}

@@ -13,6 +13,7 @@
   aria-hidden={hiddenFromAccessibility}
   tabindex={hiddenFromAccessibility ? -1 : 0}
   title={hiddenFromAccessibility ? '' : title}
+  class:no-transition={transition === noopTransition}
   in:transition|global
 >
   <slot />
