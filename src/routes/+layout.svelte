@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import '../styles/index.scss';
   import Footer from './Footer.svelte';
@@ -10,16 +11,24 @@
   // The scroll-Y position on the page (used for parallax effect)
   let scrollY = 0;
 
-  // Detect if the user has elected for reduced motion
-  const isMotionReduced =
-    typeof window !== 'undefined' && window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
-
   // A number between 0 and 1 which controls the parallax effect for the page
   // container background image; a value of 0 means the background image remains
   // static relative to the container; a value of simulates
   // background-attachment:fixed, where the background image moves at the same
   // rate as the user's scroll
-  let parallaxFactor = isMotionReduced ? 0 : 0.2;
+  let parallaxFactor: number = 0.2;
+
+  function updateReducedMotionSetting({ matches }: { matches: boolean }) {
+    parallaxFactor = matches ? 0 : 0.2;
+  }
+
+  if (browser) {
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    reducedMotionQuery.addEventListener('change', (event) => {
+      updateReducedMotionSetting(event);
+    });
+    updateReducedMotionSetting(reducedMotionQuery);
+  }
 
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute
