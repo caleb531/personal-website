@@ -15,6 +15,9 @@
     </h4>
 
     {#if project.description}
+      <!-- eslint-disable-next-line svelte/no-at-html-tags Because the entry
+      description is coming directly from static JSON files and is not sourced
+      from user input, there is no XSS risk -->
       <p class="entry-desc">{@html project.description}</p>
     {/if}
   </section>

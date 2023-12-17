@@ -32,6 +32,9 @@
     <div class="website-technologies">{website.technologies}</div>
 
     <div class="entry-desc">
+      <!-- eslint-disable-next-line svelte/no-at-html-tags Because the entry
+      content is coming directly from static JSON files and is not sourced from
+      user input, there is no XSS risk -->
       {@html website.content}
     </div>
   </section>
