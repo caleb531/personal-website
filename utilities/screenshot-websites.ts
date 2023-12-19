@@ -1,6 +1,6 @@
 // To run this utility, run `esr utilities/screenshot-websites.ts` from the root
 // project directory on the CLI
-import glob from 'glob-promise';
+import { glob } from 'glob';
 import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
@@ -70,7 +70,7 @@ async function main(): Promise<void> {
   // every file in the /src/websites directory
   let websiteConfigFilePaths = process.argv.slice(2);
   if (websiteConfigFilePaths.length === 0) {
-    websiteConfigFilePaths = await glob.promise('src/websites/*.json');
+    websiteConfigFilePaths = await glob('src/websites/*.json');
   }
   generateScreenshots(websiteConfigFilePaths);
 }
