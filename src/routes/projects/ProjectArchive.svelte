@@ -53,7 +53,7 @@
   }
 </script>
 
-<div class="project-archive">
+<article class="project-archive">
   <div class="project-search-container">
     <form class="project-search-container-form" on:submit|preventDefault>
       <SearchInput
@@ -99,4 +99,4 @@
       </div>
     {/each}
   </div>
-</div>
+</article>
