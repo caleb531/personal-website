@@ -30,6 +30,7 @@
 .project-search-result-count {
   display: block;
   margin-top: 10px;
+  margin-bottom: 30px;
   font-size: var(--font-size-s);
 }
 .project-search-no-results {
@@ -41,27 +42,24 @@
 .project-list-container {
   display: flex;
   justify-content: space-between;
+  gap: 0 20px;
   flex-wrap: wrap;
-  text-align: left;
-}
-
-.project-list-column {
-  display: inline-flex;
-  flex-direction: column;
-  width: calc(50% - (var(--project-list-column-gap) / 2));
-  width: 100%;
+  @include layout(hybrid) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .project-category {
-  display: flex;
-  flex-wrap: wrap;
-  .entry-list-category-title {
-    width: 75%;
+  flex-basis: 48%;
+  @include layout(hybrid) {
+    width: 100%;
   }
 }
 .project-category-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 22px;
 }
 .project {
   flex-basis: 50%;
