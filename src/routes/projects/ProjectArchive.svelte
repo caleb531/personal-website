@@ -4,22 +4,8 @@
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
   import SearchInput from '$routes/SearchInput.svelte';
   import { projectFadeSlide } from '$routes/transitions';
-  import type {
-    ProjectCategoryData,
-    ProjectCategoryMap,
-    ProjectEntry,
-    ProjectGroups
-  } from '$routes/types';
-  import { groupBy, times } from 'lodash-es';
-
-  let numberOfColumns = 2;
-  let categoriesByColumn: ProjectCategoryData[][];
-  if (typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches) {
-    numberOfColumns = 1;
-  }
-  categoriesByColumn = times(numberOfColumns, (i) => {
-    return projectMetadata.categories.filter((_, p) => p % numberOfColumns === i);
-  });
+  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types';
+  import { groupBy } from 'lodash-es';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)
