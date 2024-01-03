@@ -7,15 +7,15 @@
         "topProjects": ["connect-four", "inflection-point"]
       },
       {
+        "id": "math",
+        "title": "Math",
+        "bottomProjects": ["sequencer", "flashmath"]
+      },
+      {
         "id": "programs",
         "title": "CLI Programs",
         "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
         "bottomProjects": ["bump-anything"]
-      },
-      {
-        "id": "math",
-        "title": "Math",
-        "bottomProjects": ["sequencer", "flashmath"]
       },
       {
         "id": "computer-science",
