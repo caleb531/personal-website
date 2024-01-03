@@ -2,7 +2,7 @@
 
 .project-archive {
   // The gap between both project columns
-  --project-list-column-gap: 60px;
+  --project-list-column-gap: 40px;
   // If you change this value, you must also update the <img> width/height in
   // src/routes/projects/Project.svelte
   --project-icon-width: 80px;
@@ -40,27 +40,21 @@
 
 // Ensure that no whitespace separates any two columns
 .project-list-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--project-list-column-gap);
   flex-wrap: wrap;
   @include layout(hybrid) {
-    flex-direction: column;
-    flex-wrap: nowrap;
+    grid-template-columns: 1fr;
   }
 }
 
-.project-category {
-  flex-basis: 48%;
-  @include layout(hybrid) {
-    width: 100%;
-  }
-}
 .project-category-list {
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
 }
+
 .project {
   flex-basis: 50%;
   @include layout(hybrid) {
@@ -72,10 +66,8 @@
   border-radius: 10px;
   background-color: var(--color-white);
   margin-bottom: 2px;
-  a {
-    width: var(--project-icon-width);
-    height: var(--project-icon-width);
-  }
+  width: var(--project-icon-width);
+  height: var(--project-icon-width);
 }
 
 .project .entry-desc {
