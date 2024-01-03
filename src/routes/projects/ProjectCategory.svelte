@@ -39,14 +39,20 @@
   }
 </script>
 
-{#if sortedProjects.length}
-  <section class="entry-list project-category">
+<section class="entry-list project-category">
+  {#if sortedProjects.length}
     <h3 class="entry-list-category-title" transition:projectFadeSlide|global>
       {category.title}
     </h3>
+  {/if}
 
-    {#each sortedProjects as project (project.id)}
+  {#each sortedProjects as project (project.id)}
+    <!--
+      The wrapper element is used to ensure that when searching projects,
+      matching projects remain in their original column
+      -->
+    <div class="project-wrapper">
       <Project {project} />
-    {/each}
-  </section>
-{/if}
+    </div>
+  {/each}
+</section>
