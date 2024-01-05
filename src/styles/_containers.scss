@@ -22,6 +22,14 @@ body {
   font-size: 0;
   color: var(--color-text);
 }
+// The `style="display: contents;"` default style in app.html causes a CSP
+// violation, and because this is a security-conscious application, using
+// 'unsafe-inline` or 'unsafe-hashes' is not an option; fortunately, we can move
+// that style to our stylesheet instead, provided we add a class to the element
+// (which we've done)
+.site-wrapper {
+  display: contents;
+}
 // Because iOS does not support background-attachment:fixed, we must use a
 // separate (position:fixed) element to simulate a fixed background image on the
 // body
