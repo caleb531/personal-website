@@ -1,0 +1,30 @@
+<svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- a single 2FA code bullet -->
+		<circle id="tcg-bullet" cx="0" cy="0" r="30" />
+		<!-- lock icon body -->
+		<rect id="tcg-lock-body" x="-30" y="-30" width="60" height="60" rx="10" ry="10" />
+		<!-- lock icon handle -->
+		<path id="tcg-lock-handle" d="M -20,0 A 20,20,0,0,1,20,0" />
+	</defs>
+	<!-- canvas background -->
+	<rect x="0" y="0" width="100%" height="100%" fill="#fff" />
+	<!-- 2FA code bullets -->
+	<g>
+    <!-- orange -->
+    <use xlink:href="#tcg-bullet" x="73.39745962155615"  y="210" fill="hsl(30, 75%, 50%)" />
+    <!-- red -->
+    <use xlink:href="#tcg-bullet" x="73.39745962155613"  y="110" fill="hsl(15, 75%, 50%)" />
+    <!-- green -->
+    <use xlink:href="#tcg-bullet" x="160" y="60" fill="hsl(90, 75%, 50%)" />
+    <!-- lime -->
+    <use xlink:href="#tcg-bullet" x="246.60254037844382"  y="110" fill="hsl(75, 75%, 50%)" />
+    <!-- yellow -->
+    <use xlink:href="#tcg-bullet" x="246.60254037844393"  y="210" fill="hsl(60, 75%, 50%)" />
+    <!-- buttercup -->
+    <use xlink:href="#tcg-bullet" x="160"  y="260" fill="hsl(45, 75%, 50%)" />
+  </g>
+	<!-- lock icon -->
+	<use xlink:href="#tcg-lock-body" x="160" y="170" fill="#222" />
+	<use xlink:href="#tcg-lock-handle" x="160" y="145" fill="none" stroke="#222" stroke-width="10" />
+</svg>
