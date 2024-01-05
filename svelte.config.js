@@ -24,7 +24,7 @@ const config = {
     csp: {
       directives: {
         'default-src': ["'none'"],
-        'style-src': ["'self'"],
+        'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:'],
         'script-src': ["'self'", 'https://plausible.io'],
