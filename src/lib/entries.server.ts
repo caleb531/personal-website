@@ -8,9 +8,9 @@ type EntriesByTypeMap = Record<EntryType, GlobMap>;
 // is a map of that entry type's files (for this submap, the key is the filepath
 // and the value is a function which returns the contents of the file)
 const entriesByType: EntriesByTypeMap = {
-  contact_link: import.meta.glob('../contact-links/*.json', { as: 'raw' }),
-  project: import.meta.glob('../projects/*.json', { as: 'raw' }),
-  website: import.meta.glob('../websites/*.json', { as: 'raw' })
+  contact_link: import.meta.glob('../contact-links/*.json', { query: '?raw', import: 'default' }),
+  project: import.meta.glob('../projects/*.json', { query: '?raw', import: 'default' }),
+  website: import.meta.glob('../websites/*.json', { query: '?raw', import: 'default' })
 };
 
 // Compute the entry ID from the given path
