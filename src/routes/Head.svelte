@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import site from '$data/site.json';
   import portrait120 from '$images/self-portrait-v6.jpg?w=120&imagetools';
@@ -71,11 +70,4 @@
   <link rel="apple-touch-icon" href={portrait180} sizes="180x180" />
   <title>{renderedTitle}</title>
   <meta name="description" content={$page.data.description} />
-  {#if import.meta.env.PROD && browser}
-    <script
-      defer
-      data-domain={window.location.hostname}
-      src="https://plausible.io/js/script.outbound-links.js"
-    ></script>
-  {/if}
 </svelte:head>

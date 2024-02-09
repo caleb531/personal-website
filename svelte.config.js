@@ -27,8 +27,8 @@ const config = {
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:'],
-        'script-src': ["'self'", 'https://plausible.io'],
-        'connect-src': ["'self'", 'https://plausible.io']
+        'script-src': ["'self'"],
+        'connect-src': ["'self'"]
       }
     }
   }

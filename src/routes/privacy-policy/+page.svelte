@@ -14,7 +14,7 @@
   </li>
 </ul>
 
-<p>This privacy policy was last updated on January 13th, 2023.</p>
+<p>This privacy policy was last updated on February 8th, 2024.</p>
 
 <h3>Secure Connection</h3>
 
@@ -46,14 +46,7 @@
 
 <h3>Analytics</h3>
 
-<p>
-  This website uses <a href="https://plausible.io/">Plausible Analytics</a>, a privacy-focused
-  analytics platform. I only use this information to examine traffic trends and visitor statistics
-  (e.g. which pages are visited, or the percentage of desktop users). However, you would need to
-  read the
-  <a href="https://plausible.io/data-policy"> Plausible Analytics data policy </a>
-  to understand how Plausible collects and uses this information. I do not otherwise share this information.
-</p>
+<p>As of Februrary 8th, 2024, this website no longer uses any analytics.</p>
 
 <h3>Contacting Me</h3>
 
