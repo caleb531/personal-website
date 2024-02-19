@@ -7,7 +7,7 @@
     <!-- Terminal window titlebar -->
     <g id="dotfiles-terminal-titlebar">
       <!-- Titlebar body (frame) -->
-      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#ccd" stroke="#ccd" />
+      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#667" stroke="#667" />
       <!-- Window Close button -->
       <use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="#e44" stroke="#e44" />
       <!-- Window Minimize button -->
