@@ -4,7 +4,7 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "[typescript][typescriptreact][svelte]": {
+  "[javascript][javascriptreact][typescript][typescriptreact][svelte]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
