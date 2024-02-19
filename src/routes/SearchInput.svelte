@@ -12,6 +12,9 @@
 
 <div class="search-input-container">
   <input type="search" {name} {id} bind:value {placeholder} aria-label={ariaLabel} />
+  <!-- pointerdown must be used (instead of pointerup) for the Clear Search
+  button to ensure that the preventDefault keeps the input focused after button
+  click -->
   <button
     type="button"
     class="search-input-clear-button"
