@@ -40,7 +40,7 @@
 </script>
 
 {#if sortedProjects.length}
-  <section class="entry-list project-list">
+  <section class="entry-list project-category">
     <h3 class="entry-list-category-title" transition:projectFadeSlide|global>
       {category.title}
     </h3>

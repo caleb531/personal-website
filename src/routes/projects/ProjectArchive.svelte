@@ -4,17 +4,28 @@
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
   import SearchInput from '$routes/SearchInput.svelte';
   import { projectFadeSlide } from '$routes/transitions';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types';
-  import { groupBy, keyBy } from 'lodash-es';
+  import type {
+    ProjectCategoryData,
+    ProjectCategoryMap,
+    ProjectEntry,
+    ProjectGroups
+  } from '$routes/types';
+  import { groupBy, times } from 'lodash-es';
+
+  let numberOfColumns = 2;
+  let categoriesByColumn: ProjectCategoryData[][];
+  if (typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches) {
+    numberOfColumns = 1;
+  }
+  categoriesByColumn = times(numberOfColumns, (i) => {
+    return projectMetadata.categories.filter((_, p) => p % numberOfColumns === i);
+  });
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)
-  const categoriesById: ProjectCategoryMap = projectMetadata.categoriesByColumn.reduce(
-    (map, categoriesInColumn) => {
-      return { ...map, ...keyBy(categoriesInColumn, 'id') };
-    },
-    {}
-  );
+  const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce((map, category) => {
+    return { ...map, [category.id]: category };
+  }, {});
 
   function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
     if (searchQuery.trim() === '') {
@@ -89,14 +100,10 @@
     {/if}
   </div>
   <div class="project-list-container" aria-live="polite" aria-atomic="true">
-    {#each projectMetadata.categoriesByColumn as categoriesInColumn}
-      <div class="project-list-column">
-        {#each categoriesInColumn as category (category.id)}
-          {#if visibleProjectsByCategory[category.id]}
-            <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
-          {/if}
-        {/each}
-      </div>
+    {#each projectMetadata.categories as category}
+      {#if visibleProjectsByCategory[category.id]}
+        <ProjectCategory {category} projects={visibleProjectsByCategory[category.id]} />
+      {/if}
     {/each}
   </div>
 </article>

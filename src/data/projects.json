@@ -1,84 +1,80 @@
 {
-  "categoriesByColumn": [
-    [
-      {
-        "id": "games",
-        "title": "Games",
-        "topProjects": ["connect-four", "inflection-point"]
-      },
-      {
-        "id": "math",
-        "title": "Math",
-        "bottomProjects": ["sequencer", "flashmath"]
-      },
-      {
-        "id": "programs",
-        "title": "CLI Programs",
-        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
-        "bottomProjects": ["bump-anything"]
-      },
-      {
-        "id": "computer-science",
-        "title": "Computer Science",
-        "topProjects": ["automata"],
-        "bottomProjects": ["data-structure-visualizer"]
-      },
-      {
-        "id": "raycast",
-        "title": "Raycast Extensions"
-      },
-      {
-        "id": "rollup-plugins",
-        "title": "Rollup Plugins"
-      },
-      {
-        "id": "atom",
-        "title": "Atom Packages",
-        "bottomProjects": ["language-har"]
-      }
-    ],
-    [
-      {
-        "id": "fun",
-        "title": "Fun",
-        "topProjects": ["flip-book", "unscrambler", "painter"],
-        "bottomProjects": ["until", "atom", "colorful-chips"]
-      },
-      {
-        "id": "javascript-libraries",
-        "title": "JavaScript Libraries",
-        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"],
-        "bottomProjects": ["jfile"]
-      },
-      {
-        "id": "tools",
-        "title": "Tools / Productivity",
-        "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
-        "bottomProjects": ["html-selector", "js-console"]
-      },
-      {
-        "id": "alfred",
-        "title": "Alfred Workflows",
-        "topProjects": [
-          "youversion-suggest-alfred",
-          "play-song",
-          "open-conference-url",
-          "jira-for-alfred"
-        ],
-        "bottomProjects": ["alfred-workflow-packager"]
-      },
-      {
-        "id": "vscode",
-        "title": "VS Code Extensions"
-      },
-      {
-        "id": "wordpress",
-        "title": "WordPress"
-      },
-      {
-        "id": "brunch-plugins",
-        "title": "Brunch Plugins"
-      }
-    ]
+  "categories": [
+    {
+      "id": "games",
+      "title": "Games",
+      "topProjects": ["connect-four", "inflection-point"]
+    },
+    {
+      "id": "fun",
+      "title": "Fun",
+      "topProjects": ["flip-book", "unscrambler", "painter"],
+      "bottomProjects": ["until", "atom", "colorful-chips"]
+    },
+    {
+      "id": "programs",
+      "title": "CLI Programs",
+      "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
+      "bottomProjects": ["bump-anything"]
+    },
+    {
+      "id": "javascript-libraries",
+      "title": "JavaScript Libraries",
+      "topProjects": ["jcanvas", "youversion-suggest-node", "calc"],
+      "bottomProjects": ["jfile"]
+    },
+    {
+      "id": "math",
+      "title": "Math",
+      "bottomProjects": ["sequencer", "flashmath"]
+    },
+    {
+      "id": "tools",
+      "title": "Tools / Productivity",
+      "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
+      "bottomProjects": ["html-selector", "js-console"]
+    },
+    {
+      "id": "computer-science",
+      "title": "Computer Science",
+      "topProjects": ["automata"],
+      "bottomProjects": ["data-structure-visualizer"]
+    },
+    {
+      "id": "alfred",
+      "title": "Alfred Workflows",
+      "topProjects": [
+        "youversion-suggest-alfred",
+        "play-song",
+        "open-conference-url",
+        "jira-for-alfred"
+      ],
+      "bottomProjects": ["alfred-workflow-packager"]
+    },
+    {
+      "id": "raycast",
+      "title": "Raycast Extensions"
+    },
+    {
+      "id": "vscode",
+      "title": "VS Code Extensions"
+    },
+    {
+      "id": "rollup-plugins",
+      "title": "Rollup Plugins"
+    },
+    {
+      "id": "wordpress",
+      "title": "WordPress"
+    },
+    {
+      "id": "atom",
+      "title": "Atom Packages",
+      "bottomProjects": ["language-har"]
+    },
+    {
+      "id": "brunch-plugins",
+      "title": "Brunch Plugins"
+    }
   ]
 }
