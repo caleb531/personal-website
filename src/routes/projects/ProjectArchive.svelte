@@ -4,17 +4,12 @@
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
   import SearchInput from '$routes/SearchInput.svelte';
   import { projectFadeSlide } from '$routes/transitions';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types';
-  import { groupBy, keyBy } from 'lodash-es';
+  import type { ProjectCategoryData, ProjectCategoryMap, ProjectEntry } from '$routes/types';
+  import { groupBy, keyBy, times } from 'lodash-es';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)
-  const categoriesById: ProjectCategoryMap = projectMetadata.categoriesByColumn.reduce(
-    (map, categoriesInColumn) => {
-      return { ...map, ...keyBy(categoriesInColumn, 'id') };
-    },
-    {}
-  );
+  const categoriesById: ProjectCategoryMap = keyBy(projectMetadata.categories, 'id');
 
   function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
     if (searchQuery.trim() === '') {
@@ -45,11 +40,25 @@
   let searchQuery = '';
 
   let { projects } = $page.data;
-  let visibleProjects: typeof projects;
-  let visibleProjectsByCategory: ProjectGroups;
+  let visibleProjects: ProjectEntry[];
+  let visibleProjectsByCategory: Record<string, ProjectEntry[]>;
+  let categoriesByColumn: ProjectCategoryData[][];
+  let columnCount: number;
+  if (typeof matchMedia !== 'undefined') {
+    const mediaQueryList = matchMedia('screen and (max-width: 768px)');
+    mediaQueryList.addEventListener('change', (event) => {
+      columnCount = event.matches ? 1 : 2;
+    });
+    columnCount = mediaQueryList.matches ? 1 : 2;
+  }
   $: {
     visibleProjects = filterProjects(projects, searchQuery);
     visibleProjectsByCategory = groupBy(visibleProjects, 'category');
+    categoriesByColumn = times(columnCount, (columnIndex) => {
+      return projectMetadata.categories.filter((category, categoryIndex) => {
+        return categoryIndex % columnCount === columnIndex;
+      });
+    });
   }
 </script>
 
@@ -89,7 +98,7 @@
     {/if}
   </div>
   <div class="project-list-container" aria-live="polite" aria-atomic="true">
-    {#each projectMetadata.categoriesByColumn as categoriesInColumn}
+    {#each categoriesByColumn as categoriesInColumn}
       <div class="project-list-column">
         {#each categoriesInColumn as category (category.id)}
           {#if visibleProjectsByCategory[category.id]}

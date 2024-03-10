@@ -14,6 +14,8 @@ html {
 body {
   max-width: $body-max-width;
   min-width: 320px;
+  // Prevent scroll jumps when no results are returned from a project search
+  min-height: 1200px;
   margin: 0 auto;
   padding: 0;
   background-color: var(--color-body-background-start);
@@ -28,7 +30,7 @@ body {
 // that style to our stylesheet instead, provided we add a class to the element
 // (which we've done)
 .site-wrapper {
-  display: contents;
+  display: block;
 }
 // Because iOS does not support background-attachment:fixed, we must use a
 // separate (position:fixed) element to simulate a fixed background image on the

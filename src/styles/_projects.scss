@@ -41,14 +41,16 @@
 .project-list-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 0 var(--project-list-column-gap);
   text-align: left;
+  @include layout(hybrid) {
+    flex-wrap: wrap;
+  }
 }
 
 .project-list-column {
   display: inline-flex;
   flex-direction: column;
-  width: calc(50% - (var(--project-list-column-gap) / 2));
   @include layout(hybrid) {
     width: 100%;
   }

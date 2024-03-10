@@ -6,16 +6,6 @@
   import { pageFade } from '$routes/transitions';
   import '$src/styles/index.scss';
   export let data;
-
-  // SvelteKit doesn't currently support adding data-* attributes (or class
-  // names, for that matter) via <svelte:body />, so we must set the attribute
-  // on the DOM element directly via a reactive statement
-  function assignPageId(pageId: string) {
-    if (typeof document !== 'undefined') {
-      document.body.dataset.pageId = pageId;
-    }
-  }
-  $: assignPageId($page.data.id);
 </script>
 
 <div class="site-background" />
