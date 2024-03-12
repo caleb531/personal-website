@@ -39,7 +39,7 @@
   }
 </script>
 
-<section class="entry-list project-category">
+<section class="entry-list project-category desktop-column-{category.column}">
   {#if sortedProjects.length}
     <h3 class="entry-list-category-title" transition:projectFadeSlide|global>
       {category.title}

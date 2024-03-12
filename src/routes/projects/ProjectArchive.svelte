@@ -85,7 +85,7 @@
       </div>
     {/if}
   </div>
-  <div class="project-list-container" aria-live="polite" aria-atomic="true">
+  <div class="projects-by-category" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categories as category}
       <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
     {/each}

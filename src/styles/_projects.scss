@@ -38,28 +38,30 @@
   font-size: var(--font-size-h2);
 }
 
-// Ensure that no whitespace separates any two columns
-.project-list-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 var(--project-list-column-gap);
-  flex-wrap: wrap;
-  @include layout(hybrid) {
-    grid-template-columns: 1fr;
-  }
+.projects-by-category {
+  // The modern replacement to using clearfix and overflow:hidden hacks to force
+  // a correct height on an element containing floats
+  display: flow-root;
 }
 
-.project-category-list {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 22px;
-}
-
-.project {
-  flex-basis: 50%;
+.project-category {
+  width: calc(50% - (var(--project-list-column-gap) / 2));
   @include layout(hybrid) {
-    flex-basis: auto;
+    width: 100%;
+    float: none;
+    clear: none;
   }
+}
+// The projects should be arranged in a two-column layout on desktop, while
+// preserving the relative project order on mobile; surprisingly, we can use CSS
+// floats to achieve this quite well
+.desktop-column-left {
+  float: left;
+  clear: left;
+}
+.desktop-column-right {
+  float: right;
+  clear: right;
 }
 
 .project .entry-image {

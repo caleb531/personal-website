@@ -24,6 +24,7 @@ export type ProjectGroups = Record<string, ProjectEntry[]>;
 export interface ProjectCategoryData {
   id: string;
   title: string;
+  column: string;
   topProjects?: string[];
   bottomProjects?: string[];
 }

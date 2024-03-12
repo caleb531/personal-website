@@ -3,46 +3,54 @@
     {
       "id": "games",
       "title": "Games",
+      "column": "left",
       "topProjects": ["connect-four", "inflection-point"]
     },
     {
       "id": "fun",
       "title": "Fun",
+      "column": "right",
       "topProjects": ["flip-book", "unscrambler", "painter"],
       "bottomProjects": ["until", "atom", "colorful-chips"]
     },
     {
       "id": "programs",
       "title": "CLI Programs",
+      "column": "left",
       "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
       "bottomProjects": ["bump-anything"]
     },
     {
       "id": "javascript-libraries",
       "title": "JavaScript Libraries",
+      "column": "right",
       "topProjects": ["jcanvas", "youversion-suggest-node", "calc"],
       "bottomProjects": ["jfile"]
     },
     {
       "id": "math",
       "title": "Math",
+      "column": "left",
       "bottomProjects": ["sequencer", "flashmath"]
     },
     {
       "id": "tools",
       "title": "Tools / Productivity",
+      "column": "right",
       "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
       "bottomProjects": ["html-selector", "js-console"]
     },
     {
       "id": "computer-science",
       "title": "Computer Science",
+      "column": "left",
       "topProjects": ["automata"],
       "bottomProjects": ["data-structure-visualizer"]
     },
     {
       "id": "alfred",
       "title": "Alfred Workflows",
+      "column": "right",
       "topProjects": [
         "youversion-suggest-alfred",
         "play-song",
@@ -53,28 +61,34 @@
     },
     {
       "id": "raycast",
-      "title": "Raycast Extensions"
-    },
-    {
-      "id": "vscode",
-      "title": "VS Code Extensions"
+      "title": "Raycast Extensions",
+      "column": "left"
     },
     {
       "id": "rollup-plugins",
-      "title": "Rollup Plugins"
+      "title": "Rollup Plugins",
+      "column": "left"
     },
     {
-      "id": "wordpress",
-      "title": "WordPress"
+      "id": "vscode",
+      "title": "VS Code Extensions",
+      "column": "right"
+    },
+    {
+      "id": "brunch-plugins",
+      "title": "Brunch Plugins",
+      "column": "left"
     },
     {
       "id": "atom",
       "title": "Atom Packages",
+      "column": "left",
       "bottomProjects": ["language-har"]
     },
     {
-      "id": "brunch-plugins",
-      "title": "Brunch Plugins"
+      "id": "wordpress",
+      "title": "WordPress",
+      "column": "right"
     }
   ]
 }
