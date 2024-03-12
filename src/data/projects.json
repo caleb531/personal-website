@@ -77,11 +77,6 @@
       "id": "wordpress",
       "title": "WordPress",
       "column": "right"
-    },
-    {
-      "id": "brunch-plugins",
-      "title": "Brunch Plugins",
-      "column": "left"
     }
   ]
 }
