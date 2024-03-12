@@ -21,15 +21,9 @@
       "bottomProjects": ["bump-anything"]
     },
     {
-      "id": "javascript-libraries",
-      "title": "JavaScript Libraries",
-      "column": "right",
-      "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
-    },
-    {
       "id": "math",
       "title": "Math",
-      "column": "left",
+      "column": "right",
       "bottomProjects": ["sequencer", "flashmath"]
     },
     {
@@ -40,16 +34,9 @@
       "bottomProjects": ["html-selector", "js-console"]
     },
     {
-      "id": "computer-science",
-      "title": "Computer Science",
-      "column": "left",
-      "topProjects": ["automata"],
-      "bottomProjects": ["data-structure-visualizer"]
-    },
-    {
       "id": "alfred",
       "title": "Alfred Workflows",
-      "column": "right",
+      "column": "left",
       "topProjects": [
         "youversion-suggest-alfred",
         "play-song",
@@ -62,6 +49,19 @@
       "id": "raycast",
       "title": "Raycast Extensions",
       "column": "left"
+    },
+    {
+      "id": "computer-science",
+      "title": "Computer Science",
+      "column": "left",
+      "topProjects": ["automata"],
+      "bottomProjects": ["data-structure-visualizer"]
+    },
+    {
+      "id": "javascript-libraries",
+      "title": "JavaScript Libraries",
+      "column": "right",
+      "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
     },
     {
       "id": "rollup-plugins",
