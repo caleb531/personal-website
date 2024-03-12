@@ -47,12 +47,6 @@
   {/if}
 
   {#each sortedProjects as project (project.id)}
-    <!--
-      The wrapper element is used to ensure that when searching projects,
-      matching projects remain in their original column
-      -->
-    <div class="project-wrapper">
-      <Project {project} />
-    </div>
+    <Project {project} />
   {/each}
 </section>
