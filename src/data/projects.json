@@ -72,23 +72,17 @@
     {
       "id": "vscode",
       "title": "VS Code Extensions",
+      "column": "left"
+    },
+    {
+      "id": "wordpress",
+      "title": "WordPress",
       "column": "right"
     },
     {
       "id": "brunch-plugins",
       "title": "Brunch Plugins",
       "column": "left"
-    },
-    {
-      "id": "atom",
-      "title": "Atom Packages",
-      "column": "left",
-      "bottomProjects": ["language-har"]
-    },
-    {
-      "id": "wordpress",
-      "title": "WordPress",
-      "column": "right"
     }
   ]
 }
