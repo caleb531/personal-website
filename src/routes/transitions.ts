@@ -10,7 +10,7 @@ export function fadeSlide(node: Element, options: SlideParams): TransitionConfig
     duration: options.duration,
     easing: options.easing,
     css: (t, u) => `
-        ${slideTrans.css ? slideTrans.css(t, u) : ''};
+        ${slideTrans.css ? slideTrans.css(t, u) : ''}
         opacity: ${t};
       `
   };
