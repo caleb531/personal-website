@@ -81,7 +81,7 @@
         aria-atomic="true"
         transition:projectFadeSlide|global
       >
-        No Projects Found
+        No Matching Projects
       </div>
     {/if}
   </div>
