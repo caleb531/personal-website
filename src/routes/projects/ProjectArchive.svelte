@@ -61,20 +61,29 @@
         ariaLabel="Search for a project; results will update as you type"
       />
     </form>
-    <div
-      class="project-search-result-count"
-      aria-live="polite"
-      aria-atomic="true"
-      transition:projectFadeSlide|global
-    >
-      {#if visibleProjects.length === 1}
-        Showing 1 project
-      {:else if visibleProjects.length > 1}
-        Showing {visibleProjects.length} projects
-      {:else}
-        No matching projects
-      {/if}
-    </div>
+    {#if visibleProjects.length}
+      <div
+        class="project-search-result-count"
+        aria-live="polite"
+        aria-atomic="true"
+        transition:projectFadeSlide|global
+      >
+        {#if visibleProjects.length === 1}
+          Showing 1 project
+        {:else}
+          Showing {visibleProjects.length} projects
+        {/if}
+      </div>
+    {:else}
+      <div
+        class="project-search-no-results"
+        aria-live="polite"
+        aria-atomic="true"
+        transition:projectFadeSlide|global
+      >
+        No Projects Found
+      </div>
+    {/if}
   </div>
   <div class="projects-by-category" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categories as category}

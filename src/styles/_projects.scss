@@ -30,8 +30,12 @@
 .project-search-result-count {
   display: block;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: var(--font-size-s);
+}
+.project-search-no-results {
+  margin-top: 30px;
+  font-size: var(--font-size-h2);
 }
 
 .projects-by-category {
