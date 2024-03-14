@@ -6,19 +6,19 @@ import { fade, slide } from 'svelte/transition';
 export function fadeSlide(node: Element, options: SlideParams): TransitionConfig {
   const slideTrans = slide(node, options);
   return {
-    delay: options.delay,
-    duration: options.duration,
-    easing: options.easing,
-    css: (t, u) => `
+    ...options,
+    css: (t, u) => {
+      return `
         ${slideTrans.css ? slideTrans.css(t, u) : ''}
         opacity: ${t};
-      `
+      `;
+    }
   };
 }
 
 // Supply the transition parameters for projects (/ and /projects/)
 export function projectFadeSlide(node: Element, options?: SlideParams): TransitionConfig {
-  return fadeSlide(node, { duration: 350, easing: cubicInOut, ...options });
+  return fadeSlide(node, { duration: 350, easing: cubicInOut, axis: 'y', ...options });
 }
 
 // Specify the transition parameters for website entries (/websites/)
