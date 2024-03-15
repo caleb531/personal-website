@@ -11,12 +11,12 @@
   <!-- icon elements -->
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- clock element strokes -->
-    <g stroke="#c33" stroke-width="20">
+    <g stroke="#e11" stroke-width="20">
       <use xlink:href="#until-clock-body" />
       <use xlink:href="#until-clock-hands" />
     </g>
     <!-- clock element fills -->
-    <g stroke="#c33" stroke-width="12">
+    <g stroke="#e11" stroke-width="12">
       <use xlink:href="#until-clock-body" />
       <use xlink:href="#until-clock-hands" />
     </g>

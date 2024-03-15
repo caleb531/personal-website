@@ -2,11 +2,11 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- terminal prompt -->
-  <polyline points="60,260 120,220 60,180" fill="none" stroke="#084" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  <polyline points="60,260 120,220 60,180" fill="none" stroke="#333" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
   <!-- cross -->
   <g stroke-linecap="round">
     <!-- cross bar -->
-    <g fill="#853">
+    <g fill="#953">
       <!-- vertical beam -->
       <rect x="185" y="50" width="40" height="220" rx="4" ry="4" />
       <!-- horizontal beam -->

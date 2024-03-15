@@ -10,14 +10,14 @@
     <!-- angle bracket -->
     <g>
       <!-- stroke -->
-      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#444" stroke-width="20" />
+      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#333" stroke-width="20" />
       <!-- fill -->
-      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#444" stroke-width="12" />
+      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#333" stroke-width="12" />
     </g>
     <!-- blinking cursor underline -->
     <g>
-      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#444" stroke-width="20" />
-      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#444" stroke-width="12" />
+      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#333" stroke-width="20" />
+      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#333" stroke-width="12" />
     </g>
   </g>
 </svg>

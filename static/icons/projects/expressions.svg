@@ -11,9 +11,9 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- letter e -->
-  <path d="M 185,215 Q 102,240 105,175 L 200,175 Q 205,90 140,90 Q 75,90 80,175 Q 80,265 190,235 Z" fill="#69f" stroke="#69f" stroke-width="4" mask="url(#expressions-letter-e-mask)" />
+  <path d="M 185,215 Q 102,240 105,175 L 200,175 Q 205,90 140,90 Q 75,90 80,175 Q 80,265 190,235 Z" fill="#36e" stroke="#36e" stroke-width="4" mask="url(#expressions-letter-e-mask)" />
   <!-- cutout mask in letter e -->
-  <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="none" stroke="#69f" stroke-width="4" />
+  <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="none" stroke="#36e" stroke-width="4" />
   <!-- letter x -->
-  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="#69f" stroke="#69f" stroke-width="3" />
+  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="#36e" stroke="#36e" stroke-width="3" />
 </svg>

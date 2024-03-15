@@ -10,14 +10,14 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- "IV" text -->
-  <g fill="#333" stroke="#333" stroke-width="2">
+  <g fill="#3ab" stroke="#3ab" stroke-width="2">
     <use xlink:href="#ivtheme-text-i" x="70" y="160" />
     <use xlink:href="#ivtheme-text-v" x="190" y="160" />
   </g>
   <!-- divider line -->
-  <rect x="40" y="180" width="240" height="20" fill="#bbb" stroke="#bbb" stroke-width="2" />
+  <rect x="40" y="180" width="240" height="20" fill="#3ab" stroke="#3ab" stroke-width="2" />
   <!-- content box icons -->
-  <g fill="#c30" stroke="#c30" stroke-width="2">
+  <g fill="#f71" stroke="#f71" stroke-width="2">
     <!-- left -->
     <use xlink:href="#ivtheme-content-box-icon" x="70" y="250" />
     <!-- center -->

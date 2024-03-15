@@ -2,7 +2,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- message bubble -->
-  <g fill="#09f">
+  <g fill="#39f">
     <!-- bubble tail -->
     <path d="M 180,230 Q 100,270 80,270 Q 100,250 100,220 Z" />
     <!-- bubble head -->

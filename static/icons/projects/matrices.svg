@@ -7,7 +7,7 @@
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
-  <g fill="#69f" stroke="#69f" stroke-width="4">
+  <g fill="#36e" stroke="#36e" stroke-width="4">
     <!-- left bracket -->
     <use xlink:href="#matrices-bracket" x="0" y="0" />
     <!-- right bracket -->

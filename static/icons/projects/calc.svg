@@ -2,7 +2,7 @@
   <!-- reusable icon elements -->
   <defs>
     <!-- dot representing operand -->
-    <circle id="calc-operand-dot" r="20" fill="#363" stroke="#363" stroke-width="4" />
+    <circle id="calc-operand-dot" r="20" fill="#3a4" stroke="#3a4" stroke-width="4" />
     <!-- circle representing operator -->
     <circle id="calc-operator-circle" cx="160" cy="160" r="50" fill="none" />
   </defs>
@@ -12,6 +12,6 @@
   <use xlink:href="#calc-operand-dot" x="60" y="160" />
   <use xlink:href="#calc-operand-dot" x="260" y="160" />
   <!-- operator stroke and fill -->
-  <use xlink:href="#calc-operator-circle" stroke="#696" stroke-width="16" />
-  <use xlink:href="#calc-operator-circle" stroke="#696" stroke-width="8" />
+  <use xlink:href="#calc-operator-circle" stroke="#55cc99" stroke-width="16" />
+  <use xlink:href="#calc-operator-circle" stroke="#55cc99" stroke-width="8" />
 </svg>

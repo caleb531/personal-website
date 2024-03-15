@@ -8,20 +8,20 @@
   <!-- primary color swatches -->
   <g>
     <!-- red -->
-    <use xlink:href="#rgbmixer-color" x="160" y="120" fill="#d44" stroke="#d44" />
+    <use xlink:href="#rgbmixer-color" x="160" y="120" fill="#e11" stroke="#e11" />
     <!-- blue -->
-    <use xlink:href="#rgbmixer-color" x="200" y="200" fill="#7af" stroke="#7af" />
+    <use xlink:href="#rgbmixer-color" x="200" y="200" fill="#39f" stroke="#39f" />
     <!-- green -->
-    <use xlink:href="#rgbmixer-color" x="120" y="200" fill="#8e4" stroke="#8e4" />
+    <use xlink:href="#rgbmixer-color" x="120" y="200" fill="#7d4" stroke="#7d4" />
   </g>
   <!-- secondary color intersections -->
   <g stroke-width="4">
     <!-- yellow intersection -->
     <path d="M 80.67,130.335 A 80,80 0,0,0 199.33,189.665 A 80,80 0,0,0 80.67,130.335 Z" fill="#ff0" stroke="#ff0" />
     <!-- magenta intersection -->
-    <path d="M 239.33,130.335 A 80,80 0,0,0 120.67,189.664 A 80,80 0,0,0 239.33 130.335 Z" fill="#f9f" stroke="#f9f" />
+    <path d="M 239.33,130.335 A 80,80 0,0,0 120.67,189.664 A 80,80 0,0,0 239.33 130.335 Z" fill="#f7f" stroke="#f7f" />
     <!-- cyan intersection -->
-    <path d="M 160,269.282 A 80,80 0,0,0 160,130.718 A 80,80 0,0,0 160,269.282 Z" fill="#9ff" stroke="#9ff" />
+    <path d="M 160,269.282 A 80,80 0,0,0 160,130.718 A 80,80 0,0,0 160,269.282 Z" fill="#7ff" stroke="#7ff" />
     <!-- white intersection -->
     <path d="M 120.670,189.664 A 80,80 0,0,0 199.33,189.664 A 80,80 0,0,0 160,130.335 A 80,80 0,0,0 120.670,189.664 Z" fill="#fff" stroke="#fff" />
   </g>

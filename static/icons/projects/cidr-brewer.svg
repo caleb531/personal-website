@@ -36,7 +36,7 @@
   <!-- Subnet mask -->
   <g id="cidrbrewer-subnet-mask" transform="translate(160, 256)">
     <g id="cidrbrewer-subnet-mask-octets">
-      <g id="cidrbrewer-subnet-mask-green-octets" fill="#7d3 ">
+      <g id="cidrbrewer-subnet-mask-green-octets" fill="#7d4 ">
         <use xlink:href="#cidrbrewer-address-octet-1" />
         <use xlink:href="#cidrbrewer-address-octet-2" />
         <use xlink:href="#cidrbrewer-address-octet-3" />

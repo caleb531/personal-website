@@ -4,9 +4,9 @@
     <rect id="toac-suspect" width="72" height="60" rx="8" ry="8" />
     <!-- references to particular suspects -->
     <use id="toac-suspect-purple" xlink:href="#toac-suspect" x="0" y="0" fill="#96f" stroke="#96f" />
-    <use id="toac-suspect-red" xlink:href="#toac-suspect" x="0" y="0" fill="#c33" stroke="#c33" />
-    <use id="toac-suspect-green" xlink:href="#toac-suspect" x="0" y="0" fill="#7d3" stroke="#7d3" />
-    <use id="toac-suspect-orange" xlink:href="#toac-suspect" x="0" y="0" fill="#f93" stroke="#f93" />
+    <use id="toac-suspect-red" xlink:href="#toac-suspect" x="0" y="0" fill="#e11" stroke="#e11" />
+    <use id="toac-suspect-green" xlink:href="#toac-suspect" x="0" y="0" fill="#7d4" stroke="#7d4" />
+    <use id="toac-suspect-orange" xlink:href="#toac-suspect" x="0" y="0" fill="#f71" stroke="#f71" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />

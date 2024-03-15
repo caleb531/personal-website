@@ -4,10 +4,10 @@
   <!-- icon elements -->
   <g stroke-width="4">
     <!-- top peg -->
-    <circle cx="160" cy="100" r="40" fill="#c33" stroke="#c33" />
+    <circle cx="160" cy="100" r="40" fill="#e11" stroke="#e11" />
     <!-- left hole -->
-    <circle cx="100" cy="220" r="20" fill="#444" stroke="#444" />
+    <circle cx="100" cy="220" r="20" fill="#333" stroke="#333" />
     <!-- right peg -->
-    <circle cx="220" cy="220" r="40" fill="#58e" stroke="#58e" />
+    <circle cx="220" cy="220" r="40" fill="#39f" stroke="#39f" />
   </g>
 </svg>

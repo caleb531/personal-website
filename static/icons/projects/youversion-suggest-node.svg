@@ -2,7 +2,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- Node.js logo hexagon outline -->
-  <polygon points="95,272.58330249197707 30,160 95,47.416697508023006 225,47.41669750802292 290,160 225,272.58330249197695" fill="#63985E" />
+  <polygon points="95,272.58330249197707 30,160 95,47.416697508023006 225,47.41669750802292 290,160 225,272.58330249197695" fill="#33aa44" />
     <!-- cross -->
   <g stroke-linecap="round">
     <!-- cross bar -->

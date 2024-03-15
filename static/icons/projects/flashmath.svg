@@ -7,14 +7,14 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- equal sign stroke -->
-  <g stroke="#7d3" stroke-width="40">
+  <g stroke="#7d4" stroke-width="40">
     <!-- top -->
     <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="120" />
     <!-- bottom -->
     <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="200" />
   </g>
   <!-- equal sign fill -->
-  <g stroke="#7d3" stroke-width="32">
+  <g stroke="#7d4" stroke-width="32">
     <!-- top -->
     <use xlink:href="#flashmath-symbol-line-fill" x="160" y="120" />
     <!-- bottom -->

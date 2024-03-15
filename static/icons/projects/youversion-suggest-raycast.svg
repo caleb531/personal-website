@@ -22,7 +22,7 @@
     </mask>
     <!-- logo diamond -->
     <g mask="url(#yvsr-diamond-mask)">
-      <g fill="#F25E5F" transform="translate(160, -66.27416998) rotate(45)">
+      <g fill="#f44" transform="translate(160, -66.27416998) rotate(45)">
         <rect x="70" y="70" width="180" height="20" />
         <rect x="70" y="110" width="180" height="20" />
         <rect x="70" y="150" width="180" height="20" />
@@ -31,6 +31,6 @@
       </g>
     </g>
     <!-- inner cube front -->
-    <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="#F25E5F" />
+    <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="#f44" />
   </g>
 </svg>

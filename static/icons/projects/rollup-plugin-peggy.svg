@@ -2,14 +2,14 @@
 
   <defs>
     <!-- Peggy "peg" -->
-      <circle id="rpp-peg" cx="0" cy="0" r="14" fill="#FBB03F" />
+      <circle id="rpp-peg" cx="0" cy="0" r="14" fill="#fc2" />
   </defs>
 
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
 
   <!-- rollup logo "R" -->
-  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="#FE3332" stroke="#FE3332" stroke-width="10" stroke-linejoin="round" />
+  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="#e11" stroke="#e11" stroke-width="10" stroke-linejoin="round" />
 
   <!-- Peggy "pegs" -->
   <use xlink:href="#rpp-peg" x="115" y="100" />

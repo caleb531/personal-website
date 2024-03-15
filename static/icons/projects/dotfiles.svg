@@ -13,7 +13,7 @@
       <!-- Window Minimize button -->
       <use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="#fc3" stroke="#fc3" />
       <!-- Window Zoom button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d3" stroke="#7d3" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d4" stroke="#7d4" />
     </g>
     <g id="dotfiles-terminal-text">
       <!-- PS1 interactive prompts -->
@@ -28,7 +28,7 @@
         <rect x="-110" y="-16" width="130" height="6" />
       </g>
       <!-- diff added lines -->
-      <g fill="#7d3">
+      <g fill="#7d4">
         <rect x="-110" y="32" width="160" height="6" />
       </g>
       <!-- diff removed lines -->

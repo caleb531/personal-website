@@ -9,12 +9,12 @@
   <!-- squares -->
   <g>
     <!-- red -->
-    <use xlink:href="#repeat-square" x="50" y="50" fill="#d44" stroke="#d44" />
+    <use xlink:href="#repeat-square" x="50" y="50" fill="#e11" stroke="#e11" />
     <!-- orange -->
-    <use xlink:href="#repeat-square" x="170" y="50" fill="#f93" stroke="#f93" />
+    <use xlink:href="#repeat-square" x="170" y="50" fill="#f71" stroke="#f71" />
     <!-- green -->
-    <use xlink:href="#repeat-square" x="50" y="170" fill="#8e4" stroke="#8e4" />
+    <use xlink:href="#repeat-square" x="50" y="170" fill="#7d4" stroke="#7d4" />
     <!-- yellow -->
-    <use xlink:href="#repeat-square" x="170" y="170" fill="#fd3" stroke="#fd3" />
+    <use xlink:href="#repeat-square" x="170" y="170" fill="#fc2" stroke="#fc2" />
   </g>
 </svg>

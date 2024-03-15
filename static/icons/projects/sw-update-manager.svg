@@ -2,12 +2,12 @@
   <!-- reusable icon elements -->
   <defs>
     <!-- generic cog -->
-    <rect x="0" y="-25" width="50" height="50" fill="#234" id="swum-cog" />
+    <rect x="0" y="-25" width="50" height="50" fill="#333" id="swum-cog" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- circular cog body -->
-  <g fill="#234">
+  <g fill="#333">
     <circle cx="160" cy="160" r="100" mask="url(#swum-gear-inner-circle)" id="swum-gear-body" />
     <mask id="swum-gear-inner-circle">
       <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
@@ -32,10 +32,10 @@
   </g>
   <!-- update curve arrow -->
   <marker id="swum-update-arrow" markerWidth="13" markerHeight="13" refX="1.5" refY="3" orient="auto-start-reverse">
-    <polygon points="0.5,1 3,3 0.5,5" fill="#5bd" />
+    <polygon points="0.5,1 3,3 0.5,5" fill="#3bf" />
   </marker>
   <!-- bottom update arrow -->
-  <g fill="none" stroke="#5bd" stroke-width="10">
+  <g fill="none" stroke="#3bf" stroke-width="10">
     <path d="M 90,160 A 70,70 0,0,0 209.49747468,209.49747468" marker-start="url(#swum-update-arrow)" />
     <path d="M 110.50252532,110.50252532 A 70,70 0,0,1 230,160" marker-end="url(#swum-update-arrow)" />
   </g>

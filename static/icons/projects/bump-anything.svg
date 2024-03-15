@@ -8,14 +8,14 @@
   <!-- version components -->
   <g>
     <!-- major version -->
-    <circle cx="100" cy="160" r="50" fill="none" stroke="#c33" stroke-width="8" />
-    <circle cx="100" cy="190" r="8" fill="#c33" />
-    <path d="M 85,140 L 100,125 L 115,140 M 100,130 L 100,170" fill="none" stroke="#c33" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="100" cy="160" r="50" fill="none" stroke="#e11" stroke-width="8" />
+    <circle cx="100" cy="190" r="8" fill="#e11" />
+    <path d="M 85,140 L 100,125 L 115,140 M 100,130 L 100,170" fill="none" stroke="#e11" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
     <!-- minor version -->
-    <circle cx="190" cy="160" r="30" fill="none" stroke="#f93" stroke-width="6" />
-    <circle cx="190" cy="160" r="8" fill="#f93" />
+    <circle cx="190" cy="160" r="30" fill="none" stroke="#f71" stroke-width="6" />
+    <circle cx="190" cy="160" r="8" fill="#f71" />
     <!-- patch version -->
-    <circle cx="250" cy="160" r="20" fill="none" stroke="#6c3" stroke-width="5" />
-    <circle cx="250" cy="160" r="8" fill="#6c3" />
+    <circle cx="250" cy="160" r="20" fill="none" stroke="#7d4" stroke-width="5" />
+    <circle cx="250" cy="160" r="8" fill="#7d4" />
   </g>
 </svg>

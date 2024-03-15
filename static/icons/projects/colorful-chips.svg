@@ -6,15 +6,15 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- red circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="100" fill="#c33" />
+  <use xlink:href="#colorfulchips-chip" x="100" y="100" fill="#e11" />
   <!-- green circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="160" fill="#6c3  " />
+  <use xlink:href="#colorfulchips-chip" x="100" y="160" fill="#7d4" />
   <!-- blue circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="220" fill="#36c" />
+  <use xlink:href="#colorfulchips-chip" x="100" y="220" fill="#36e" />
   <!-- orange circle -->
-  <use xlink:href="#colorfulchips-chip" x="220" y="100" fill="#f93" />
+  <use xlink:href="#colorfulchips-chip" x="220" y="100" fill="#f71" />
   <!-- yellow circle -->
-  <use xlink:href="#colorfulchips-chip" x="220" y="160" fill="#fd3  " />
+  <use xlink:href="#colorfulchips-chip" x="220" y="160" fill="#fd2" />
   <!-- purple circle -->
   <use xlink:href="#colorfulchips-chip" x="220" y="220" fill="#96f" />
 </svg>

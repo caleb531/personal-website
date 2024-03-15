@@ -5,9 +5,9 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- lightning bolt -->
-  <polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="#fc0" stroke="#fc0" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="#fc2" stroke="#fc2" stroke-width="4" stroke-linejoin="round" />
   <!-- top-left green contender -->
-  <use xlink:href="#showdown-contender" x="70" y="100" fill="#7d3" stroke="#7d3" />
+  <use xlink:href="#showdown-contender" x="70" y="100" fill="#7d4" stroke="#7d4" />
   <!-- bottom-right blue contender -->
-  <use xlink:href="#showdown-contender" x="250" y="220" fill="#69f" stroke="#69f" transform="translate(500,0) scale(-1,1)" />
+  <use xlink:href="#showdown-contender" x="250" y="220" fill="#36e" stroke="#36e" transform="translate(500,0) scale(-1,1)" />
 </svg>
