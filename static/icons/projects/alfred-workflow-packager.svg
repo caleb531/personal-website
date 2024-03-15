@@ -6,7 +6,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- 3D box -->
-  <g fill="#c73">
+  <g fill="#953">
     <!-- left side -->
     <use xlink:href="#awp-box-side" x="125" y="245" />
     <!-- right side -->
