@@ -9,7 +9,7 @@
   <!-- squares -->
   <g>
     <!-- red -->
-    <use xlink:href="#repeat-square" x="50" y="50" fill="#e11" stroke="#e11" />
+    <use xlink:href="#repeat-square" x="50" y="50" fill="#e22" stroke="#e22" />
     <!-- orange -->
     <use xlink:href="#repeat-square" x="170" y="50" fill="#f71" stroke="#f71" />
     <!-- green -->

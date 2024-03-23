@@ -4,7 +4,7 @@
   <!-- icon elements -->
   <g stroke-width="4">
     <!-- top peg -->
-    <circle cx="160" cy="100" r="40" fill="#e11" stroke="#e11" />
+    <circle cx="160" cy="100" r="40" fill="#e22" stroke="#e22" />
     <!-- left hole -->
     <circle cx="100" cy="220" r="20" fill="#333" stroke="#333" />
     <!-- right peg -->

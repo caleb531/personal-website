@@ -13,7 +13,7 @@
     <use xlink:href="#pswdmatcher-bullet" x="250" y="100" />
   </g>
   <!-- red (incorrect) bullets -->
-  <g fill="#e11" stroke="#e11">
+  <g fill="#e22" stroke="#e22">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="130" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="190" y="220" />

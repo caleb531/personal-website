@@ -4,7 +4,7 @@
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
 
   <!-- rollup logo "R" -->
-  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="#e11" stroke="#e11" stroke-width="10" stroke-linejoin="round" />
+  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="#e22" stroke="#e22" stroke-width="10" stroke-linejoin="round" />
 
   <!-- glob asterisk -->
   <g transform="translate(150, 120)">

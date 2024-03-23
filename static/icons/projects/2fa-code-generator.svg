@@ -14,7 +14,7 @@
     <!-- bright red -->
     <use xlink:href="#tcg-bullet" x="73.39745962155615" y="210" fill="#f44" />
     <!-- red -->
-    <use xlink:href="#tcg-bullet" x="73.39745962155613" y="110" fill="#e11" />
+    <use xlink:href="#tcg-bullet" x="73.39745962155613" y="110" fill="#e22" />
     <!-- green -->
     <use xlink:href="#tcg-bullet" x="160" y="60" fill="#7d4" />
     <!-- lime -->

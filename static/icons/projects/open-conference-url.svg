@@ -4,7 +4,7 @@
   <!-- calendar -->
   <g>
     <!-- calendar frame -->
-    <rect x="50" y="50" width="220" height="220" rx="10" ry="10" fill="#e11" stroke="#e11" stroke-width="10" />
+    <rect x="50" y="50" width="220" height="220" rx="10" ry="10" fill="#e22" stroke="#e22" stroke-width="10" />
     <!-- calendar inside -->
     <rect x="60" y="100" width="200" height="160" rx="8" ry="8" fill="#fff" />
   </g>

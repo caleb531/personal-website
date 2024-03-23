@@ -8,7 +8,7 @@
   <!-- primary color swatches -->
   <g>
     <!-- red -->
-    <use xlink:href="#rgbmixer-color" x="160" y="120" fill="#e11" stroke="#e11" />
+    <use xlink:href="#rgbmixer-color" x="160" y="120" fill="#e22" stroke="#e22" />
     <!-- blue -->
     <use xlink:href="#rgbmixer-color" x="200" y="200" fill="#39f" stroke="#39f" />
     <!-- green -->

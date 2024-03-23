@@ -3,7 +3,7 @@
     <circle id="c4-chip" cx="0" cy="0" r="24" stroke-width="4" />
     <use id="c4-blue-chip" xlink:href="#c4-chip" fill="#9af" stroke="#9af" />
     <use id="c4-red-chip" xlink:href="#c4-chip" fill="#f99" stroke="#f99" />
-    <use id="c4-winning-red-chip" xlink:href="#c4-chip" fill="#e11" stroke="#e11" />
+    <use id="c4-winning-red-chip" xlink:href="#c4-chip" fill="#e22" stroke="#e22" />
   </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />

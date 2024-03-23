@@ -18,7 +18,7 @@
   </g>
   <!-- red swatch -->
   <g>
-    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e11" stroke-width="24"  />
-    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e11" stroke-width="16"  />
+    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e22" stroke-width="24"  />
+    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e22" stroke-width="16"  />
   </g>
 </svg>

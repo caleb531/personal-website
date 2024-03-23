@@ -15,10 +15,10 @@
   </g>
   <!-- child combinator -->
   <g>
-    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e11" stroke-width="18" />
-    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e11" stroke-width="10" />
+    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e22" stroke-width="18" />
+    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e22" stroke-width="10" />
   </g>
-  <g fill="#e11" stroke="#e11">
+  <g fill="#e22" stroke="#e22">
     <!-- parent name -->
     <use xlink:href="#htmlselector-dot" x="80" y="80" />
     <!-- child name -->
