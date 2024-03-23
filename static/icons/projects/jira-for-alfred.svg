@@ -2,7 +2,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- jira emblem outer diamond -->
-  <polygon points="160,40 280,160 160,280 40,160" fill="#237FFA" stroke="#237FFA" stroke-width="10" stroke-linejoin="round" />
+  <polygon points="160,40 280,160 160,280 40,160" fill="#36e" stroke="#36e" stroke-width="10" stroke-linejoin="round" />
   <!-- Alfred hat -->
   <g fill="#fff">
     <!-- top -->

@@ -15,5 +15,5 @@
   <!-- cutout mask in letter e -->
   <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="none" stroke="#36e" stroke-width="4" />
   <!-- letter x -->
-  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="#36e" stroke="#36e" stroke-width="3" />
+  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="#39f" stroke="#39f" stroke-width="3" />
 </svg>

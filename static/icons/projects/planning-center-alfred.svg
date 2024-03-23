@@ -2,7 +2,7 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- Planning Center hexagon -->
-  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="#2565f4" stroke="#2565f4" stroke-width="50" stroke-linejoin="round" />
+  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="#36e" stroke="#36e" stroke-width="50" stroke-linejoin="round" />
   <!-- Alfred hat -->
   <g fill="#fff">
     <!-- top -->

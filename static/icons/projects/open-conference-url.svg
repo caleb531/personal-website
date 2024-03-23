@@ -11,8 +11,8 @@
   <!-- conferencing icon -->
   <g>
     <!-- conferencing icon body -->
-    <rect x="90" y="145" width="90" height="70" fill="#37f" rx="16" ry="16" />
+    <rect x="90" y="145" width="90" height="70" fill="#36e" rx="16" ry="16" />
     <!-- conferencing icon head -->
-    <polygon points="225,150 190,180 225,210" fill="#37f" stroke="#37f" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="225,150 190,180 225,210" fill="#36e" stroke="#36e" stroke-width="10" stroke-linejoin="round" />
   </g>
 </svg>
