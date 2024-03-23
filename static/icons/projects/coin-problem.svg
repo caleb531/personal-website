@@ -3,7 +3,7 @@
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
 
   <!-- penny -->
-  <circle cx="100" cy="100" r="40" fill="#b63" />
+  <circle cx="100" cy="100" r="40" fill="#b73" />
 
   <!-- nickel -->
   <circle cx="220" cy="100" r="44" fill="#bbb" />
