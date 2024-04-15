@@ -5,7 +5,6 @@
   import portrait152 from '$images/self-portrait-v6.jpg?w=152&imagetools';
   import portrait180 from '$images/self-portrait-v6.jpg?w=180&imagetools';
   import portrait192 from '$images/self-portrait-v6.jpg?w=192&imagetools';
-  import portrait32 from '$images/self-portrait-v6.jpg?w=32&imagetools';
   import portrait76 from '$images/self-portrait-v6.jpg?w=76&imagetools';
   import JsonLd from '$routes/JsonLd.svelte';
 
@@ -39,7 +38,7 @@
 
 <svelte:head>
   <title>{renderedTitle}</title>
-  <link rel="shortcut icon" href={portrait32} />
+  <link rel="shortcut icon" href="/favicon.png" />
   <link rel="icon" href={portrait192} sizes="192x192" />
   <meta name="description" content={site.description} />
 
