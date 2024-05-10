@@ -40,7 +40,7 @@
   <title>{renderedTitle}</title>
   <link rel="shortcut icon" href="/favicon.png" />
   <link rel="icon" href={portrait192} sizes="192x192" />
-  <meta name="description" content={site.description} />
+  <meta name="description" content={pageSeoDescription} />
 
   <meta name="og:title" content={pageSeoTitle} />
   <meta name="og:site_title" content={site.title} />
