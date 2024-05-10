@@ -28,7 +28,8 @@ const config = {
         'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:'],
         'script-src': ["'self'"],
-        'connect-src': ["'self'"]
+        'connect-src': ["'self'"],
+        'base-uri': ["'none'"]
       }
     }
   }
