@@ -43,6 +43,8 @@ the page can help screen reader users jump to the page content; for more, see
       <section class="page-content" transition:pageFade>
         {#if $page.data.title}
           <h2>{$page.data.title}</h2>
+        {:else}
+          <h2 class="accessibility-only">Homepage</h2>
         {/if}
         <slot />
       </section>

@@ -24,4 +24,7 @@
   </div>
 </article>
 
-<ProjectArchive />
+<section>
+  <h2 class="accessibility-only">Projects</h2>
+  <ProjectArchive />
+</section>
