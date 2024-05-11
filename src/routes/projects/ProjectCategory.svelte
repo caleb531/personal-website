@@ -2,7 +2,7 @@
   import Project from '$routes/projects/Project.svelte';
   import { projectFadeSlide } from '$routes/transitions';
   import type { ProjectCategoryData, ProjectEntry } from '$routes/types';
-  import { keyBy } from 'lodash-es';
+  import { objectify } from 'radash';
 
   export let projects: ProjectEntry[];
   export let category: ProjectCategoryData;
@@ -16,7 +16,7 @@
   // for this category
   let sortedProjects: ProjectEntry[];
   $: {
-    projectsById = keyBy(projects, 'id');
+    projectsById = objectify(projects, (project) => project.id);
     sortedProjects = [
       ...(category.topProjects || [])
         .map((projectId) => projectsById[projectId])

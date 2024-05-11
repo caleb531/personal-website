@@ -3,12 +3,16 @@
   import contactLinkMetadata from '$data/contact-links.json';
   import ContactLink from '$routes/contact/ContactLink.svelte';
   import type { ContactLinkMap } from '$routes/types';
-  import { keyBy } from 'lodash-es';
+  import { objectify } from 'radash';
+  import type { PageData } from './$types';
 
-  const { contactLinks } = $page.data;
+  const { contactLinks } = $page.data as Pick<PageData, 'contactLinks'>;
   export let isCompact = false;
 
-  const contactLinksByName: ContactLinkMap = keyBy(contactLinks, 'id');
+  const contactLinksByName: ContactLinkMap = objectify(
+    contactLinks,
+    (contactLink) => contactLink.id
+  );
 </script>
 
 <div class="entry-list contact-link-list" class:entry-list-compact={isCompact}>

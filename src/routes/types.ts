@@ -20,7 +20,7 @@ export interface ProjectEntry extends Entry {
   category: string;
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
-export type ProjectGroups = Record<string, ProjectEntry[]>;
+export type ProjectGroups = Partial<Record<string, ProjectEntry[]>>;
 export interface ProjectCategoryData {
   id: string;
   title: string;

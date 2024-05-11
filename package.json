@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.0.8",
-    "lodash-es": "^4.17.21"
+    "radash": "^12.1.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.2.0",
@@ -31,7 +31,6 @@
     "@sveltejs/adapter-vercel": "^5.3.0",
     "@sveltejs/kit": "^2.5.6",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
