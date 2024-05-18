@@ -43,7 +43,7 @@
   <meta name="description" content={pageSeoDescription} />
 
   <meta name="og:title" content={pageSeoTitle} />
-  <meta name="og:site_title" content={site.title} />
+  <meta name="og:site_name" content={site.title} />
   <meta name="og:description" content={site.description} />
   <meta name="og:url" content={pageSeoUrl} />
   <meta name="og:image" content={pageSeoImage} />
