@@ -44,7 +44,7 @@
 
   <meta name="og:title" content={pageSeoTitle} />
   <meta name="og:site_name" content={site.title} />
-  <meta name="og:description" content={site.description} />
+  <meta name="og:description" content={pageSeoDescription} />
   <meta name="og:url" content={pageSeoUrl} />
   <meta name="og:image" content={pageSeoImage} />
   <meta name="og:type" content="website" />
@@ -52,7 +52,7 @@
   <meta name="twitter:site" content={site.twitterUsername} />
   <meta name="twitter:creator" content={site.twitterUsername} />
   <meta name="twitter:title" content={pageSeoTitle} />
-  <meta name="twitter:description" content={site.description} />
+  <meta name="twitter:description" content={pageSeoDescription} />
   <meta name="twitter:image" content={pageSeoImage} />
   <meta name="google-site-verification" content={site.googleSiteVerification} />
   <link rel="canonical" href={pageSeoUrl} />
@@ -68,5 +68,4 @@
   <link rel="apple-touch-icon" href={portrait152} sizes="152x152" />
   <link rel="apple-touch-icon" href={portrait180} sizes="180x180" />
   <title>{renderedTitle}</title>
-  <meta name="description" content={$page.data.description} />
 </svelte:head>
