@@ -10,7 +10,7 @@ const config = {
 
   kit: {
     // Give me the option of either serving the entire site via server-side
-    // renderig (SSR) or as a static site (SSG); this can be controlled on a
+    // rendering (SSR) or as a static site (SSG); this can be controlled on a
     // per-environment basis
     adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ runtime: 'edge' }),
     // Convenience path aliases
