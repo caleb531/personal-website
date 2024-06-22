@@ -50,5 +50,12 @@
     "vite": "^5.3.1",
     "vite-imagetools": "^7.0.2"
   },
-  "type": "module"
+  "type": "module",
+  "pnpm": {
+    "overrides": {
+      "ip@<1.1.9": ">=1.1.9",
+      "ip@=2.0.0": ">=2.0.1",
+      "braces@<3.0.3": ">=3.0.3"
+    }
+  }
 }
