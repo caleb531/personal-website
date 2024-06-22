@@ -2,6 +2,7 @@
   "name": "personal-website",
   "version": "3.0.0",
   "private": true,
+  "type": "module",
   "description": "The personal website of Caleb Evans, coder for Christ.",
   "author": "Caleb Evans",
   "keywords": [
@@ -50,7 +51,6 @@
     "vite": "^5.3.1",
     "vite-imagetools": "^7.0.2"
   },
-  "type": "module",
   "pnpm": {
     "overrides": {
       "ip@<1.1.9": ">=1.1.9",
