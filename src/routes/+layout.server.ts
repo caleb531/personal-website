@@ -1,6 +1,6 @@
 import { getContactLinks } from '$lib/entries.server';
 
-export const prerender = Boolean(process.env.USE_STATIC_ADAPTER);
+export const prerender = true;
 // Without enforcing trailing slashes, when SvelteKit builds using the static
 // adapter, pages will be written to the build/ directory as mypage.html rather
 // than mypage/index.html (source:

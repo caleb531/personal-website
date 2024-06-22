@@ -1,4 +1,4 @@
-export const prerender = Boolean(process.env.USE_STATIC_ADAPTER);
+export const prerender = true;
 
 // Serve a dynamic robots.txt according to the DISALLOW_BOTS environment
 // variable; this is so we can allow bots for the production site, while

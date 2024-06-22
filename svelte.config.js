@@ -1,5 +1,4 @@
 import adapterStatic from '@sveltejs/adapter-static';
-import adapterVercel from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,7 +11,7 @@ const config = {
     // Give me the option of either serving the entire site via server-side
     // rendering (SSR) or as a static site (SSG); this can be controlled on a
     // per-environment basis
-    adapter: process.env.USE_STATIC_ADAPTER ? adapterStatic() : adapterVercel({ runtime: 'edge' }),
+    adapter: adapterStatic(),
     // Convenience path aliases
     alias: {
       $src: 'src',
