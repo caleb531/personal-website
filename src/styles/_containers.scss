@@ -23,10 +23,9 @@ body {
   color: var(--color-text);
 }
 // The `style="display: contents;"` default style in app.html causes a CSP
-// violation, and because this is a security-conscious application, using
-// 'unsafe-inline` or 'unsafe-hashes' is not an option; fortunately, we can move
-// that style to our stylesheet instead, provided we add a class to the element
-// (which we've done)
+// violation, and using 'unsafe-inline` or 'unsafe-hashes' is also not
+// advisable; fortunately, we can move that style to our stylesheet instead,
+// provided we add a class to the element (which we've done)
 .site-wrapper {
   display: contents;
 }
