@@ -33,5 +33,5 @@
   {:else}
     <h2>{status} Error</h2>
   {/if}
-  <p>Not sure what happened here...</p>
+  <p>Not sure what happened here... sorry about that!</p>
 {/if}
