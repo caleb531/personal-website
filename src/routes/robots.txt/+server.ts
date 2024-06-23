@@ -1,6 +1,6 @@
 export const prerender = true;
 
-// Serve a dynamic robots.txt according to the DISALLOW_BOTS environment
+// Prebuild a robots.txt file according to the DISALLOW_BOTS environment
 // variable; this is so we can allow bots for the production site, while
 // disallowing bots on the staging site
 export function GET() {
