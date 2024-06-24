@@ -7,8 +7,12 @@
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- circular cog body -->
-  <circle cx="160" cy="160" r="70" stroke="#333" stroke-width="50" fill="none" id="swum-cog-body" />
   <g fill="#333">
+    <circle cx="160" cy="160" r="100" mask="url(#swum-gear-inner-circle)" id="swum-gear-body" />
+    <mask id="swum-gear-inner-circle">
+      <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
+      <circle cx="160" cy="160" r="40" fill="#000" />
+    </mask>
     <!-- center-right cog -->
     <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(0) translate(75,0)" />
     <!-- bottom-right cog -->
