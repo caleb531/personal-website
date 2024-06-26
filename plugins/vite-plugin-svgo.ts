@@ -11,7 +11,7 @@ import path from 'node:path';
 import { optimize } from 'svgo';
 import type { PluginOption } from 'vite';
 
-interface ViteSvgoPluginOptions {
+export interface ViteSvgoPluginOptions {
   // The input directory in which SVG files are recursively found and processed;
   // note that this directory should be outside the static/ directory, since
   // Vite copies static assets as-is, and we want to honor that behavior but not
