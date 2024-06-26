@@ -1,11 +1,15 @@
 import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
+import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  extensions: ['.svelte', ...mdsvexConfig.extensions],
+
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
-  preprocess: vitePreprocess(),
+  preprocess: [mdsvex(mdsvexConfig), vitePreprocess()],
 
   kit: {
     // Give me the option of either serving the entire site via server-side
