@@ -24,7 +24,7 @@ interface ViteSvgoPluginOptions {
 
 export default function svgo(options: ViteSvgoPluginOptions): PluginOption {
   return {
-    name: 'vite-plugin-svgo',
+    name: 'svgo',
     // Run plugin before Vite core plugins; this is necessary to ensure that the
     // SVG files return a 200 response (see
     // <https://vitejs.dev/guide/api-plugin#plugin-ordering>)
