@@ -1,4 +1,6 @@
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types';
+import { marked } from 'marked';
+import { objectify } from 'radash';
 
 type EntryType = 'contact_link' | 'project' | 'website';
 type GlobMap = Record<string, () => Promise<unknown>>;
@@ -18,6 +20,20 @@ function getEntryIdFromPath(entryPath: string) {
   return entryPath.slice(entryPath.lastIndexOf('/') + 1, entryPath.indexOf('.json'));
 }
 
+// Return an object of the specified fields within the entry data, where the key
+// name is that field ID, and the value is the value from the given entry
+// object, interpreted as Markdown and converted to HTML
+function parseFieldsAsMarkdownIntoHTML(
+  entry: Omit<Entry, 'id'>,
+  fields: (keyof Omit<Entry, 'id'>)[]
+): object {
+  return objectify(
+    fields,
+    (field) => field,
+    (field) => marked.parseInline(String(entry[field]))
+  );
+}
+
 // Retrieve a list of entries for the given entry type, optionally specifying a
 // callback function that dynamically defines additional properties to
 // initialize the entry with
@@ -28,10 +44,14 @@ export async function getEntries<SubEntry extends Entry>(
   return Promise.all(
     entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[string]]) => {
       const entryId = getEntryIdFromPath(entryPath);
-      const entryData = JSON.parse(String(await getEntryContents()));
+      const entryData = JSON.parse(String(await getEntryContents())) as Omit<SubEntry, 'id'>;
       return {
         id: entryId,
-        ...entryData
+        ...entryData,
+        // If entry has a 'content' or 'description' property, parse the value
+        // as Markdown and convert it to HTML (parseInline ensures there is no
+        // <p> tag wrapper around the formatted value)
+        ...parseFieldsAsMarkdownIntoHTML(entryData, ['content', 'description'])
       } as SubEntry;
     })
   );

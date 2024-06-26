@@ -51,6 +51,9 @@ devDependencies:
   imagetools-core:
     specifier: ^7.0.0
     version: 7.0.0
+  marked:
+    specifier: ^13.0.1
+    version: 13.0.1
   mdsvex:
     specifier: ^0.11.2
     version: 0.11.2(svelte@4.2.18)
@@ -2284,6 +2287,12 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
+
+  /marked@13.0.1:
+    resolution: {integrity: sha512-7kBohS6GrZKvCsNXZyVVXSW7/hGBHe49ng99YPkDCckSUrrG7MSFLCexsRxptzOmyW2eT5dySh4Md1V6my52fA==}
+    engines: {node: '>= 18'}
+    hasBin: true
     dev: true
 
   /mdn-data@2.0.28:
