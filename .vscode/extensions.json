@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "EditorConfig.EditorConfig",
-    "svelte.svelte-vscode"
+    "svelte.svelte-vscode",
+    "sebsojeda.vscode-svx"
   ]
 }
