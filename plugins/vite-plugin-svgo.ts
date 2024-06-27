@@ -11,7 +11,7 @@ import path from 'node:path';
 import { optimize } from 'svgo';
 import type { PluginOption } from 'vite';
 
-export interface ViteSvgoPluginOptions {
+export interface ViteSvgoPluginConfiguration {
   // The input directory in which SVG files are recursively found and processed;
   // note that this directory should be outside the static/ directory, since
   // Vite copies static assets as-is, and we want to honor that behavior but not
@@ -22,7 +22,7 @@ export interface ViteSvgoPluginOptions {
   publicBasePath: string;
 }
 
-export default function svgo(options: ViteSvgoPluginOptions): PluginOption {
+export default function svgo(configurations: ViteSvgoPluginConfiguration[]): PluginOption {
   return {
     name: 'svgo',
     // Run plugin before Vite core plugins; this is necessary to ensure that the
@@ -32,16 +32,21 @@ export default function svgo(options: ViteSvgoPluginOptions): PluginOption {
     // When building for production, write optimized SVGs to the same directory
     // as other static assets
     async generateBundle() {
-      const destDir = path.resolve(`.svelte-kit/output/client/${options.publicBasePath}`);
-      const srcFilePaths = await glob(`${options.inputDir}/**/*.svg`);
+      for (const configuration of configurations) {
+        const destDir = path.resolve(`.svelte-kit/output/client/${configuration.publicBasePath}`);
+        const srcFilePaths = await glob(`${configuration.inputDir}/**/*.svg`);
 
-      for (const srcFilePath of srcFilePaths) {
-        const svgContent = await fs.readFile(srcFilePath, 'utf-8');
-        const optimizedSvg = optimize(svgContent, { path: srcFilePath }).data;
-        const destFilePath = path.join(destDir, path.relative(options.inputDir, srcFilePath));
+        for (const srcFilePath of srcFilePaths) {
+          const svgContent = await fs.readFile(srcFilePath, 'utf-8');
+          const optimizedSvg = optimize(svgContent, { path: srcFilePath }).data;
+          const destFilePath = path.join(
+            destDir,
+            path.relative(configuration.inputDir, srcFilePath)
+          );
 
-        await fs.mkdir(path.dirname(destFilePath), { recursive: true });
-        await fs.writeFile(destFilePath, optimizedSvg, 'utf-8');
+          await fs.mkdir(path.dirname(destFilePath), { recursive: true });
+          await fs.writeFile(destFilePath, optimizedSvg, 'utf-8');
+        }
       }
     },
     // Since the SVG files we are attempting to reference may not actually exist
@@ -53,22 +58,24 @@ export default function svgo(options: ViteSvgoPluginOptions): PluginOption {
       return () => {
         server.middlewares.use(async (req, res, next) => {
           try {
-            if (
-              req.originalUrl?.startsWith(options.publicBasePath) &&
-              req.originalUrl?.endsWith('.svg')
-            ) {
-              res.setHeader('Content-Type', 'image/svg+xml');
-              res.writeHead(200);
-              res.write(
-                await fs.readFile(
-                  `${options.inputDir}/${path.relative(options.publicBasePath, req.originalUrl)}`,
-                  'utf8'
-                )
-              );
-              res.end();
-            } else {
-              next();
+            for (const configuration of configurations) {
+              if (
+                req.originalUrl?.startsWith(configuration.publicBasePath) &&
+                req.originalUrl?.endsWith('.svg')
+              ) {
+                res.setHeader('Content-Type', 'image/svg+xml');
+                res.writeHead(200);
+                res.write(
+                  await fs.readFile(
+                    `${configuration.inputDir}/${path.relative(configuration.publicBasePath, req.originalUrl)}`,
+                    'utf8'
+                  )
+                );
+                res.end();
+                return;
+              }
             }
+            next();
           } catch (error) {
             next(error);
           }

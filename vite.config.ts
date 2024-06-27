@@ -7,10 +7,16 @@ const config: UserConfig = {
   plugins: [
     sveltekit(),
     imagetools(),
-    svgo({
-      inputDir: 'src/icons',
-      publicBasePath: '/icons'
-    })
+    svgo([
+      {
+        inputDir: 'src/icons',
+        publicBasePath: '/icons'
+      },
+      {
+        inputDir: 'src/images',
+        publicBasePath: '/images'
+      }
+    ])
   ],
   build: {
     // Allow us to conditionally enable sourcemaps on a per-environment basis
