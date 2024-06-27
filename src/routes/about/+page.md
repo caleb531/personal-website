@@ -1,42 +1,44 @@
 ### Who are you?
 
-I'm Caleb Evans, a web developer from Carlsbad, California with many passions:
-programming, spending time with family and friends, watching (and quoting)
-movies, trampolining, and eating quality pizza.
+I'm Caleb Evans, a web developer based in Carlsbad, California. My passions
+include programming, spending time with family and friends, enjoying movies,
+trampolining, and savoring quality pizza.
 
 ### What do you do?
 
-Since 2010, I've been programming for work, for school, and for fun. My most
-prominent work includes a plethora of web apps and useful tools, many of which
-were created to automate what I grew tired of doing manually. Others I created
-simply for fun. With a Bachelor's degree in Computer Science under my belt, I
-aim to build apps that are enjoyable, functional, and adhere to best practices.
+Since 2010, I have been engaged in programming (particularly web development)
+for professional, academic, and personal pursuits. My portfolio includes a wide
+range of web applications and tools, many designed to automate repetitive tasks,
+and others created purely for enjoyment. With a Bachelor's degree in Computer
+Science under my belt, I aim to build apps that are enjoyable, functional, and
+high-quality.
 
 ### Why do you code?
 
-Besides the fact that I thoroughly enjoy programming, I make it my aim to code
-for Christ, who has walked with me as my Lord, my Friend, and my Savior. I
-believe the work of my hands glorifies God through the creativity I express, and
-ultimately, through the lives enriched by my projects.
+Besides the fact that I'm deeply passionate about programming, I strive to code
+for Christ, who walks with me as my Lord, Friend, and Savior. I believe the work
+of my hands glorifies God through the creativity I express and the lives
+enriched by my projects.
 
 ### How many languages do you speak?
 
-I am fluent in HTML5, CSS/Sass, and JavaScript/Node, and have recently immersed
-myself in TypeScript. I'm also well-versed in Python, and I fiddle with Bash
-regularly in an effort to improve my development workflow.
+I am fluent in HTML5, CSS/Sass, and TypeScript, and everything in-between: Node,
+PHP, even MySQL. Additionally, I am well-versed in Python and regularly use Bash
+to enhance my development workflow.
 
 ### What is your favorite language?
 
-If I could choose only one, my favorite language would definitely be TypeScript
-because of how many bugs it saves me from every time I write in it. Plus, I
-thoroughly enjoy working with the ES6 language features like promises,
-destructuring, and arrow functions.
+If I had to choose one, my favorite language would be TypeScript due to its
+comprehensive type system, helping me catch more bugs in the moment, and overall
+making my code feel more robust. Plus, I thoroughly enjoy working with the
+expressive ES6 language features like async/await, destructuring, and optional
+chaining.
 
 ### What is your code editor of choice?
 
-For years, I used [Atom][atom], but nowadays, I use [VS Code][vscode] for its
-powerful feature set, excellent TypeScript support, and better performance on M1
-Macs. You can view my configuration for both editors at my public
+For many years, I used [Atom][atom]. However, I now prefer [VS Code][vscode] for
+its powerful feature set, excellent TypeScript support, and impressive
+performance. You can find all of my VS Code configuration in my public
 [dotfiles][dotfiles] repository.
 
 [atom]: https://atom.io/
@@ -45,10 +47,17 @@ Macs. You can view my configuration for both editors at my public
 
 ### Tabs or spaces?
 
-That depends. In VS Code (with the "Sticky Tab Stops" setting enabled), spaces
-behave the same as tabs when used as indentation, so I generally conform to the
-convention of whichever language I'm writing in.
+It depends. In VS Code (with the "Sticky Tab Stops" setting enabled), spaces
+behave the same as tabs when used as indentation. This setting gives me the
+freedom to honor the convention of whichever language I'm writing in.
 
 ### What's the story behind your project icons?
 
-I actually made them myself; each icon is written in pure SVG markup.
+I designed and crafted every project icon in pure SVG markup. Sure, one might
+say it's insane to write SVGs by hand—and it probably is 😅. But I suppose I
+take pleasure in the precision and portability of handwritten SVGs, partly I
+don't have to be dependent on premium apps like [Sketch][sketch]. I just also
+find SVG syntax incredibly powerful and versatile—surely, the spec has its
+limitations, yet I'm always impressed at the level of complexity I can achieve.
+
+[sketch]: https://www.sketch.com/
