@@ -6,7 +6,7 @@ website" encompasses:
 - All web apps, websites, and other projects hosted on all _\*.calebevans.me_
   subdomains
 
-This privacy policy was last updated on February 8th, 2024.
+This privacy policy was last updated on June 27th, 2024.
 
 ### Secure Connection
 
@@ -27,10 +27,11 @@ into the app. To be clear, however, this data is not sent to anyone.
 ### Sharing Features
 
 Some of my apps (like [Expressions][expressions]) have sharing features that
-work by uploading your content to this website's server. This content never
-leaves the server and is only used to enable this sharing functionality to
-function.
+work by uploading your content to this website's server. This content remains on
+the server and is only stored when you use features like this. If you have
+shared data you wish to delete, please [contact me][contact].
 
+[contact]: /contact/
 [expressions]: https://projects.calebevans.me/expressions/
 
 ### Analytics
