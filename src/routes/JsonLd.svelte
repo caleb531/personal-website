@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { WebPage, WebSite } from 'schema-dts';
+
   export let title: string;
   export let description: string;
   export let url: string;

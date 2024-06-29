@@ -5,6 +5,7 @@
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
   import type { ContactLinkEntry } from '$routes/types';
+
   export let contactLink: ContactLinkEntry;
   export let isCompact = false;
 </script>

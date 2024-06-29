@@ -10,6 +10,7 @@
     getWebsite1xThumbnailUrl,
     getWebsite2xThumbnailUrl
   } from '$routes/websites/WebsiteImageStore';
+
   export let website: WebsiteEntry;
 </script>
 

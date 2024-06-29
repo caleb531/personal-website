@@ -6,6 +6,7 @@
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
   import { projectFadeSlide } from '$routes/transitions';
   import type { ProjectEntry } from '$routes/types';
+
   export let project: ProjectEntry;
 </script>
 
