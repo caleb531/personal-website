@@ -5,7 +5,8 @@
   export let placeholder: string = '';
   export let ariaLabel: string;
 
-  function clearSearch() {
+  function clearSearch(event: PointerEvent) {
+    event.preventDefault();
     value = '';
   }
 </script>
@@ -19,8 +20,8 @@
     type="button"
     class="search-input-clear-button"
     class:hidden={value === ''}
-    on:pointerdown|preventDefault
-    on:pointerup|preventDefault={clearSearch}
+    on:pointerdown={(event) => event.preventDefault()}
+    on:pointerup={clearSearch}
     title="Clear Search Query"
   >
     <img src="/icons/clear.svg" alt="Clear Search Query" />

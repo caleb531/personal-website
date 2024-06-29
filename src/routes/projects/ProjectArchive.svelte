@@ -53,7 +53,7 @@
 
 <article class="project-archive">
   <div class="project-search-container">
-    <form class="project-search-container-form" on:submit|preventDefault>
+    <form class="project-search-container-form" on:submit={(event) => event.preventDefault()}>
       <SearchInput
         name="search"
         id="project-search-input"
