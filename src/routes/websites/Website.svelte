@@ -9,7 +9,7 @@
   import {
     getWebsite1xThumbnailUrl,
     getWebsite2xThumbnailUrl
-  } from '$routes/websites/WebsiteImageStore';
+  } from '$src/routes/websites/websiteImageUtils';
 
   export let website: WebsiteEntry;
 </script>
