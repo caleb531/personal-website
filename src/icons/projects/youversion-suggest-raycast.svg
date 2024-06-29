@@ -16,8 +16,8 @@
   <!-- cross -->
   <g fill="#fff">
     <!-- vertical beam -->
-    <rect x="163.63961031" y="106.36038969" width="20" height="80" />
+    <rect x="165.63961031" y="106.36038969" width="16" height="80" />
     <!-- horizontal beam (crossbeam) -->
-    <rect x="143.63961031" y="126.36038969" width="60" height="20" />
+    <rect x="143.63961031" y="126.36038969" width="60" height="16" />
   </g>
 </svg>
