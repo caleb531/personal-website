@@ -1,30 +1,42 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="cachesimulator-capacitor" x="-5" y="-2.5" width="10" height="5" fill="#999" />
+    <rect id="cachesimulator-bulk-capacitor" x="-5" y="-5" width="10" height="10" fill="#999" />
+    <!-- group of 4 capacitors -->
+    <g id="cachesimulator-capacitors-4">
+      <use xlink:href="#cachesimulator-capacitor" x="120" y="80" />
+      <use xlink:href="#cachesimulator-capacitor" x="140" y="80" />
+      <use xlink:href="#cachesimulator-bulk-capacitor" x="160" y="80" />
+      <use xlink:href="#cachesimulator-capacitor" x="180" y="80" />
+      <use xlink:href="#cachesimulator-capacitor" x="200" y="80" />
+    </g>
+    <!-- group of 2 capacitors -->
+    <g id="cachesimulator-capacitors-2">
+      <use xlink:href="#cachesimulator-capacitor" x="140" y="80" />
+      <use xlink:href="#cachesimulator-capacitor" x="180" y="80" />
+    </g>
+  </defs>
   <!-- canvas background -->
   <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- chip body -->
-  <path d="M 50,50 L 216,50 A 10.25,10.25,0,0,0,236,50 L 270,50 L 270,270 L 236,270 A 10.25,10.25,0,0,0,216,270 L 50,270 Z" fill="#085" stroke="#085" stroke-width="2" />
-  <!-- mask which hides some pinheads -->
-  <mask id="cachesimulator-masked-pinhead-regions">
-    <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
-    <!-- erase the two pinheads below the top concave region -->
-    <rect x="214" y="50" width="24" height="20" fill="#000" />
-    <!-- erase the two pinheads above the bottom concave region -->
-    <rect x="214" y="250" width="24" height="20" fill="#000" />
-    <!-- erase the botom-right pinhead -->
-    <rect x="250" y="250" width="20" height="20" fill="#000" />
-  </mask>
-  <!-- pinhead grid -->
-  <pattern id="cachesimulator-pinhead-pattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-    <circle cx="4" cy="4" r="3" fill="#ff6" />
-  </pattern>
-  <rect fill="url(#cachesimulator-pinhead-pattern)" x="58" y="58" width="204" height="204" mask="url(#cachesimulator-masked-pinhead-regions)" />
-  <!-- center space -->
-  <rect x="118" y="118" width="84" height="84" fill="#085" />
-  <!-- microchip grid -->
-  <pattern id="cachesimulator-microchip-pattern" x="0" y="3" width="14" height="24" patternUnits="userSpaceOnUse">
-    <rect x="1" y="6" width="10" height="16" fill="#333" stroke="#333" stroke-width="1" />
-  </pattern>
-  <rect fill="url(#cachesimulator-microchip-pattern)" x="124" y="124" width="72" height="72" />
-  <!-- bottom-right gold triangle pad -->
-  <polygon points="266,266 256,266 266,256" fill="#ff6" />
+  <rect x="50" y="50" width="220" height="220" fill="#667" rx="10" ry="10" />
+  <!-- gold-plated "ceramic package" -->
+  <rect x="105" y="105" width="110" height="110" fill="#fd8" rx="5" ry="5" />
+  <!-- lettering -->
+  <g fill="#ca6">
+    <rect x="130" y="137.5" width="60" height="5" />
+    <rect x="120" y="157.5" width="80" height="5" />
+    <rect x="130" y="177.5" width="30" height="5" />
+    <rect x="170" y="177.5" width="20" height="5" />
+  </g>
+  <!-- capacitor 1 indicator -->
+  <rect x="60" y="240" width="20" height="20" fill="#fd8" rx="4" ry="4" />
+  <!-- top capacitors -->
+  <use xlink:href="#cachesimulator-capacitors-4" x="0" y="0" />
+  <!-- bottom capacitors -->
+  <use xlink:href="#cachesimulator-capacitors-2" x="0" y="0" transform="translate(160, 160) rotate(180) translate(-160, -160)" />
+  <!-- left capacitors -->
+  <use xlink:href="#cachesimulator-capacitors-2" x="0" y="0" transform="translate(160, 160) rotate(-90) translate(-160, -160)" />
+  <!-- left capacitors -->
+  <use xlink:href="#cachesimulator-capacitors-2" x="0" y="0" transform="translate(160, 160) rotate(90) translate(-160, -160)" />
 </svg>
