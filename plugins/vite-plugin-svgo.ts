@@ -23,7 +23,6 @@ export interface ViteSvgoPluginConfiguration {
 
 interface SvgMapEntry {
   id: string;
-  url: string;
   content: string;
 }
 
@@ -44,47 +43,48 @@ export default function svgo(): PluginOption {
     configResolved(cfg) {
       viteConfig = cfg;
       basePath = createBasePath(viteConfig.base);
-      console.log('command:', viteConfig.command);
-      console.log('basePath:', basePath);
+    },
+    // By default, `import.meta.ROLLUP_FILE_URL_${referenceId}` returns the full
+    // file URL to any emitted asset, when we really need the file path relative
+    // to the root of the site
+    resolveFileUrl({ fileName }) {
+      return `"/${fileName}"`;
     },
     async load(id) {
       if (!id.includes('.svg')) {
         return;
       }
 
-      // The URL to the generated SVG
-      let generatedSvgUrl: string;
-
-      const srcFilePath = path.relative(process.cwd(), id.replace(/\?(.*?)$/, ''));
+      const [srcFilePath, query] = path.relative(process.cwd(), id).split('?');
       const origSvgContents = await fs.readFile(srcFilePath, 'utf8');
       const optimizedSvgContents = optimize(origSvgContents, { path: srcFilePath }).data;
+
+      generatedImages[srcFilePath] = {
+        id,
+        content: optimizedSvgContents
+      };
+
+      if (query === 'raw') {
+        return `export default ${JSON.stringify(optimizedSvgContents)}`;
+      }
 
       if (viteConfig.command === 'serve') {
         // For the dev server, although we cannot emit files, we can still
         // provide a path that will be served dynamically at request time (via
         // Vite's configureServer hook)
-        generatedSvgUrl = path.join(basePath, srcFilePath);
-        console.log('icon url on serve', generatedSvgUrl);
+        return `export default ${JSON.stringify(path.join(basePath, srcFilePath))}`;
       } else {
         // When building for production, we need to write a file to the site's
         // assets subdirectory under the build directory, then use that URL
-        const fileHandle = this.emitFile({
-          name: path.basename(id, path.extname(id)),
+        const referenceId = this.emitFile({
+          name: `${path.basename(id, path.extname(id))}.svg`,
+          source: optimizedSvgContents,
           type: 'asset'
         });
-        console.log('fileHandle on build:', fileHandle);
-        generatedSvgUrl = fileHandle;
+        return `export default import.meta.ROLLUP_FILE_URL_${referenceId}`;
       }
-      generatedImages[srcFilePath] = {
-        id,
-        url: generatedSvgUrl,
-        content: optimizedSvgContents
-      };
-      // console.log(fileHandle);
-      return `export default "${generatedSvgUrl}";`;
     },
     configureServer(server) {
-      console.log('basePath', basePath);
       server.middlewares.use((req, res, next) => {
         if (!req.url?.includes('.svg')) {
           next();
