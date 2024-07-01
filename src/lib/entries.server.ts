@@ -1,5 +1,6 @@
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types';
 import { marked } from 'marked';
+import path from 'node:path';
 import { objectify } from 'radash';
 
 type EntryType = 'contact_link' | 'project' | 'website';
@@ -17,7 +18,7 @@ const entriesByType: EntriesByTypeMap = {
 
 // Compute the entry ID from the given path
 function getEntryIdFromPath(entryPath: string) {
-  return entryPath.slice(entryPath.lastIndexOf('/') + 1, entryPath.indexOf('.json'));
+  return path.basename(entryPath, path.extname(entryPath));
 }
 
 // Return an object of the specified fields within the entry data, where the key
