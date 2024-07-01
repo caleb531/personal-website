@@ -8,7 +8,9 @@ const config: UserConfig = {
   build: {
     // Allow us to conditionally enable sourcemaps on a per-environment basis
     // (this does not apply to development mode, since we are not building)
-    sourcemap: Boolean(process.env.ENABLE_SOURCEMAPS)
+    sourcemap: Boolean(process.env.ENABLE_SOURCEMAPS),
+    // Do not inline any assets as base64
+    assetsInlineLimit: 0
   }
 };
 
