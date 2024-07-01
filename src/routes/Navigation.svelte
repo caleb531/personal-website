@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import navigation from '$data/navigation.json';
+  import navToggleSvgUrl from '$src/icons/nav-toggle.svg';
 
   export let isNavOpen: boolean;
   export let toggleNav: () => void;
@@ -23,7 +24,7 @@
     aria-haspopup="true"
     aria-expanded={isNavOpen}
   >
-    <img src="/icons/nav-toggle.svg" alt="Toggle Navigation" />
+    <img src={navToggleSvgUrl} alt="Toggle Navigation" />
   </button>
   <ul class="site-header-nav-list">
     {#each navigation as navigationLink (navigationLink.url)}

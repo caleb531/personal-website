@@ -5,11 +5,10 @@
 // static/ directory (which is the SvelteKit equivalent to Vite's public/
 // directory); the publicBasePath option indicates the base directory from which
 // these SVG paths should be servable
-import { glob } from 'glob';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { optimize } from 'svgo';
-import type { PluginOption } from 'vite';
+import type { PluginOption, ResolvedConfig } from 'vite';
 
 export interface ViteSvgoPluginConfiguration {
   // The input directory in which SVG files are recursively found and processed;
@@ -22,65 +21,88 @@ export interface ViteSvgoPluginConfiguration {
   publicBasePath: string;
 }
 
-export default function svgo(configurations: ViteSvgoPluginConfiguration[]): PluginOption {
+interface SvgMapEntry {
+  id: string;
+  url: string;
+  content: string;
+}
+
+export function createBasePath(base?: string) {
+  return (base?.replace(/\/$/, '') || '') + '/@svgo/';
+}
+
+export default function svgo(): PluginOption {
+  let viteConfig: ResolvedConfig;
+  let basePath: string;
+  const generatedImages: Record<string, SvgMapEntry> = {};
   return {
     name: 'svgo',
     // Run plugin before Vite core plugins; this is necessary to ensure that the
     // SVG files return a 200 response (see
     // <https://vitejs.dev/guide/api-plugin#plugin-ordering>)
     enforce: 'pre',
-    // When building for production, write optimized SVGs to the same directory
-    // as other static assets
-    async generateBundle() {
-      for (const configuration of configurations) {
-        const destDir = path.resolve(`.svelte-kit/output/client/${configuration.publicBasePath}`);
-        const srcFilePaths = await glob(`${configuration.inputDir}/**/*.svg`);
-
-        for (const srcFilePath of srcFilePaths) {
-          const svgContent = await fs.readFile(srcFilePath, 'utf-8');
-          const optimizedSvg = optimize(svgContent, { path: srcFilePath }).data;
-          const destFilePath = path.join(
-            destDir,
-            path.relative(configuration.inputDir, srcFilePath)
-          );
-
-          await fs.mkdir(path.dirname(destFilePath), { recursive: true });
-          await fs.writeFile(destFilePath, optimizedSvg, 'utf-8');
-        }
-      }
+    configResolved(cfg) {
+      viteConfig = cfg;
+      basePath = createBasePath(viteConfig.base);
+      console.log('command:', viteConfig.command);
+      console.log('basePath:', basePath);
     },
-    // Since the SVG files we are attempting to reference may not actually exist
-    // under static/, we need to ensure that they are served like static files
-    // when referenced by the application (e.g. in an <img /> tag); to
-    // accomplish this, we add middleware to virtually serve the unprocessed SVG
-    // files on the local dev server
-    configureServer(server) {
-      return () => {
-        server.middlewares.use(async (req, res, next) => {
-          try {
-            for (const configuration of configurations) {
-              if (
-                req.originalUrl?.startsWith(configuration.publicBasePath) &&
-                req.originalUrl?.endsWith('.svg')
-              ) {
-                res.setHeader('Content-Type', 'image/svg+xml');
-                res.writeHead(200);
-                res.write(
-                  await fs.readFile(
-                    `${configuration.inputDir}/${path.relative(configuration.publicBasePath, req.originalUrl)}`,
-                    'utf8'
-                  )
-                );
-                res.end();
-                return;
-              }
-            }
-            next();
-          } catch (error) {
-            next(error);
-          }
+    async load(id) {
+      if (!id.includes('.svg')) {
+        return;
+      }
+
+      // The URL to the generated SVG
+      let generatedSvgUrl: string;
+
+      const srcFilePath = path.relative(process.cwd(), id.replace(/\?(.*?)$/, ''));
+      const origSvgContents = await fs.readFile(srcFilePath, 'utf8');
+      const optimizedSvgContents = optimize(origSvgContents, { path: srcFilePath }).data;
+
+      if (viteConfig.command === 'serve') {
+        // For the dev server, although we cannot emit files, we can still
+        // provide a path that will be served dynamically at request time (via
+        // Vite's configureServer hook)
+        generatedSvgUrl = path.join(basePath, srcFilePath);
+        console.log('icon url on serve', generatedSvgUrl);
+      } else {
+        // When building for production, we need to write a file to the site's
+        // assets subdirectory under the build directory, then use that URL
+        const fileHandle = this.emitFile({
+          name: path.basename(id, path.extname(id)),
+          type: 'asset'
         });
+        console.log('fileHandle on build:', fileHandle);
+        generatedSvgUrl = fileHandle;
+      }
+      generatedImages[srcFilePath] = {
+        id,
+        url: generatedSvgUrl,
+        content: optimizedSvgContents
       };
+      // console.log(fileHandle);
+      return `export default "${generatedSvgUrl}";`;
+    },
+    configureServer(server) {
+      console.log('basePath', basePath);
+      server.middlewares.use((req, res, next) => {
+        if (!req.url?.includes('.svg')) {
+          next();
+          return;
+        }
+        const id = req.url.replace(basePath, '');
+        const svgMapEntry: SvgMapEntry | undefined = generatedImages[id];
+        if (svgMapEntry) {
+          res.setHeader('Content-Type', 'image/svg+xml');
+          res.writeHead(200);
+          res.write(svgMapEntry.content);
+          res.end();
+        } else {
+          console.log(`could not process: ${req.url}`);
+          next();
+          return;
+        }
+      });
     }
   };
 }

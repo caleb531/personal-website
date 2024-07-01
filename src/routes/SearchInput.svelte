@@ -1,4 +1,6 @@
 <script lang="ts">
+  import clearSearchSvgUrl from '$src/icons/clear-search.svg';
+
   export let id: string;
   export let name: string;
   export let value: string;
@@ -24,6 +26,6 @@
     on:pointerup={clearSearch}
     title="Clear Search Query"
   >
-    <img src="/icons/clear.svg" alt="Clear Search Query" />
+    <img src={clearSearchSvgUrl} alt="Clear Search Query" />
   </button>
 </div>
