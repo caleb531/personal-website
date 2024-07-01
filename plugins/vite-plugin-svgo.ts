@@ -98,7 +98,6 @@ export default function svgo(): PluginOption {
           res.write(svgMapEntry.content);
           res.end();
         } else {
-          console.log(`could not process: ${req.url}`);
           next();
           return;
         }
