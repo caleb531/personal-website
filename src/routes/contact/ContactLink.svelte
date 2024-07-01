@@ -13,7 +13,7 @@
 <Entry type="contact-link" id={contactLink.id}>
   {#if !isCompact}
     <EntryImage href={contactLink.direct_url} hiddenFromAccessibility>
-      <img src="/icons/contact-links/{contactLink.id}.svg" alt="" width={64} height={64} />
+      <img src={contactLink.iconUrl} alt="" width={64} height={64} />
     </EntryImage>
     <EntryMain>
       <EntryTitle href={contactLink.direct_url}>{contactLink.title}</EntryTitle>
@@ -23,7 +23,7 @@
   {:else}
     <EntryImage href={contactLink.direct_url} title={contactLink.title}>
       <img
-        src="/icons/contact-links/{contactLink.id}.svg"
+        src={contactLink.iconUrl}
         alt={contactLink.title}
         width={40}
         height={40}

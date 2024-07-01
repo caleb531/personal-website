@@ -12,7 +12,7 @@
 
 <Entry type="project" id={project.id} transition={projectFadeSlide}>
   <EntryImage href={project.direct_url} hiddenFromAccessibility>
-    <img src="/icons/projects/{project.id}.svg" alt="" width={80} height={80} loading="lazy" />
+    <img src={project.iconUrl} alt="" width={80} height={80} loading="lazy" />
   </EntryImage>
   <EntryMain>
     <EntryTitle href={project.direct_url} type="h4">{project.title}</EntryTitle>
