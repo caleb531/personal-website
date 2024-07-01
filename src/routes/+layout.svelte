@@ -4,6 +4,8 @@
   import Head from '$routes/Head.svelte';
   import Header from '$routes/Header.svelte';
   import { pageFade } from '$routes/transitions';
+  import squaresBackgroundUrl from '$src/images/backgrounds/squares.svg';
+
   import '$src/styles/index.scss';
   export let data;
 
@@ -38,7 +40,7 @@ the page can help screen reader users jump to the page content; for more, see
   to work around this, we can send down the dynamically-changing pathname from
   the layout server function (+layout.server.ts)
   -->
-  <article class="page" id="page">
+  <article class="page" id="page" style:background-image="url({squaresBackgroundUrl})">
     {#key data.pathname}
       <section class="page-content" transition:pageFade>
         {#if $page.data.title}
