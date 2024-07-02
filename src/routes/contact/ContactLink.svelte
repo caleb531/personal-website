@@ -18,7 +18,7 @@
     <EntryMain>
       <EntryTitle href={contactLink.direct_url}>{contactLink.title}</EntryTitle>
 
-      <EntryDesc>{contactLink.description}</EntryDesc>
+      <EntryDesc>{@html contactLink.description}</EntryDesc>
     </EntryMain>
   {:else}
     <EntryImage href={contactLink.direct_url} title={contactLink.title}>
