@@ -17,7 +17,7 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "screenshot-websites": "tsx utilities/screenshot-websites.ts",
-    "generate-social-preview": "type rsvg-convert &> /dev/null && rsvg-convert src/images/social-preview.svg -f png -w 2400 -h 1260 -o src/images/social-preview.png && echo 'social preview successfully generated' || >&2 echo 'rsvg-convert not found; please install librsvg using your preferred package manager'"
+    "generate-social-preview": "tsx utilities/generate-social-preview.ts"
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.0.8",
