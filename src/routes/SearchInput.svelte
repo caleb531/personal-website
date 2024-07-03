@@ -1,5 +1,5 @@
 <script lang="ts">
-  import clearSearchSvgUrl from '$src/icons/clear-search.svg';
+  import clearSearchSvgUrl from '$src/images/clear-search.svg';
 
   export let id: string;
   export let name: string;

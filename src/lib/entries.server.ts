@@ -29,11 +29,11 @@ const entriesByType: EntriesByTypeMap = {
 // value is a map of that entry type's icon files (for this submap, the key is the
 // filepath and the value is a function which returns the entry icon as an SVG file)
 const entryIconsByType: Partial<EntriesByTypeMap> = {
-  contact_link: import.meta.glob('$src/icons/contact-links/*.svg', {
+  contact_link: import.meta.glob('$src/images/contact-links/*.svg', {
     query: '?url',
     import: 'default'
   }),
-  project: import.meta.glob('$src/icons/projects/*.svg', { query: '?url', import: 'default' })
+  project: import.meta.glob('$src/images/projects/*.svg', { query: '?url', import: 'default' })
 };
 
 // Compute the entry ID from the given path
@@ -67,7 +67,7 @@ export async function getEntries<SubEntry extends Entry>(
       const entryId = getEntryIdFromPath(entryPath);
       const entryIconMap = entryIconsByType[entryType];
       const entryIconUrl = entryIconMap
-        ? await entryIconMap[`/src/icons/${entryTypeToDirName[entryType]}/${entryId}.svg`]()
+        ? await entryIconMap[`/src/images/${entryTypeToDirName[entryType]}/${entryId}.svg`]()
         : null;
       const entryData = JSON.parse(String(await getEntryContents())) as Omit<SubEntry, 'id'>;
       return {

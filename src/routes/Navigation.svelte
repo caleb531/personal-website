@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import navigation from '$data/navigation.json';
-  import navToggleSvgUrl from '$src/icons/nav-toggle.svg';
+  import navToggleSvgUrl from '$src/images/nav-toggle.svg';
 
   export let isNavOpen: boolean;
   export let toggleNav: () => void;
