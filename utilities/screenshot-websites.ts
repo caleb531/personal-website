@@ -41,6 +41,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
         height: viewportHeight
       });
       await page.goto(websiteEntry.direct_url, {
+        // Wait until there have been no new network connections for 500ms
         waitUntil: ['load', 'networkidle0']
       });
 
