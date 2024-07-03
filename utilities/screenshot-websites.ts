@@ -36,6 +36,13 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
       );
 
       const page = await browser.newPage();
+      // Enable P3 colors
+      await page.emulateMediaFeatures([
+        {
+          name: 'color-gamut',
+          value: 'p3'
+        }
+      ]);
       await page.setViewport({
         width: VIEWPORT_WIDTH,
         height: VIEWPORT_HEIGHT
