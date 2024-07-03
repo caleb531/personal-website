@@ -1,7 +1,7 @@
 // To run this utility, run `esr utilities/screenshot-websites.ts` from the root
 // project directory on the CLI
 import { glob } from 'glob';
-import fs from 'node:fs';
+import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import type { WebsiteEntry } from '../src/routes/types';
@@ -14,7 +14,7 @@ const VIEWPORT_HEIGHT = 640;
 
 // Create website image directory if it doesn't already exist
 function createWebsiteImageDirectory(): Promise<string | undefined> {
-  return fs.promises.mkdir(WEBSITE_IMAGE_DIR, { recursive: true });
+  return fs.mkdir(WEBSITE_IMAGE_DIR, { recursive: true });
 }
 
 async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
@@ -27,7 +27,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
     websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
       const websiteName = path.basename(websiteConfigFilePath, '.json');
 
-      const websiteConfigFileContents = await fs.promises.readFile(websiteConfigFilePath, 'utf8');
+      const websiteConfigFileContents = await fs.readFile(websiteConfigFilePath, 'utf8');
 
       const websiteEntry = JSON.parse(websiteConfigFileContents) as WebsiteEntry;
       const websiteImagePath = path.join(
