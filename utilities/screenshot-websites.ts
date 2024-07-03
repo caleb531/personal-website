@@ -9,8 +9,8 @@ import type { WebsiteEntry } from '../src/routes/types';
 const websiteImageDir = 'src/images/websites';
 const websiteImageExtension = 'jpg';
 const websiteImageQuality = 85;
-const windowWidth = 1024;
-const windowHeight = 640;
+const viewportWidth = 1024;
+const viewportHeight = 640;
 
 // Create website image directory if it doesn't already exist
 function createWebsiteImageDirectory(): Promise<string | undefined> {
@@ -37,8 +37,8 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
 
       const page = await browser.newPage();
       await page.setViewport({
-        width: windowWidth,
-        height: windowHeight
+        width: viewportWidth,
+        height: viewportHeight
       });
       await page.goto(websiteEntry.direct_url, {
         waitUntil: ['load', 'networkidle0']
