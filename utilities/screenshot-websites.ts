@@ -6,15 +6,15 @@ import path from 'node:path';
 import puppeteer from 'puppeteer';
 import type { WebsiteEntry } from '../src/routes/types';
 
-const websiteImageDir = 'src/images/websites';
-const websiteImageExtension = 'jpg';
-const websiteImageQuality = 85;
-const viewportWidth = 1024;
-const viewportHeight = 640;
+const WEBSITE_IMAGE_DIR = 'src/images/websites';
+const WEBSITE_IMAGE_EXTENSION = 'jpg';
+const WEBSITE_IMAGE_QUALITY = 85;
+const VIEWPORT_WIDTH = 1024;
+const VIEWPORT_HEIGHT = 640;
 
 // Create website image directory if it doesn't already exist
 function createWebsiteImageDirectory(): Promise<string | undefined> {
-  return fs.promises.mkdir(websiteImageDir, { recursive: true });
+  return fs.promises.mkdir(WEBSITE_IMAGE_DIR, { recursive: true });
 }
 
 async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<void> {
@@ -31,14 +31,14 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
 
       const websiteEntry = JSON.parse(websiteConfigFileContents) as WebsiteEntry;
       const websiteImagePath = path.join(
-        websiteImageDir,
-        `${websiteName}.${websiteImageExtension}`
+        WEBSITE_IMAGE_DIR,
+        `${websiteName}.${WEBSITE_IMAGE_EXTENSION}`
       );
 
       const page = await browser.newPage();
       await page.setViewport({
-        width: viewportWidth,
-        height: viewportHeight
+        width: VIEWPORT_WIDTH,
+        height: VIEWPORT_HEIGHT
       });
       await page.goto(websiteEntry.direct_url, {
         // Wait until there have been no new network connections for 500ms
@@ -49,7 +49,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
         .screenshot({
           path: websiteImagePath,
           type: 'jpeg',
-          quality: websiteImageQuality
+          quality: WEBSITE_IMAGE_QUALITY
         })
         .then(() => {
           console.log(`generated screenshot for ${websiteName}`);
