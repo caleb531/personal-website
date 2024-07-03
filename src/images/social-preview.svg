@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 630" width="1200" height="630" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- canvas background -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
+
+  <!-- group containing self portrait and text; the top-left corner is relative to the top-left corner of the (unrounded) self portrait image -->
+  <g transform="translate(100, 65)">
+
+    <!-- website title and subtitle -->
+    <g font-family="Source Sans Pro"  text-anchor="start" font-weight="600" fill="#39f">
+      <text x="220" y="84" font-size="112">Caleb Evans</text>
+      <text x="225" y="158" font-size="56">Coder for Christ</text>
+    </g>
+
+  <!-- self portrait -->
+  <clipPath id="rounded-self-portrait">
+    <rect x="0" y="0" width="170" height="170" rx="28.3333333333" ry="28.3333333333" />
+  </clipPath>
+  <image xlink:href="./self-portrait-v6.jpg" x="0" y="0" width="170" height="170" clip-path="url(#rounded-self-portrait)" />
+
+  </g>
+
+  <!-- projects -->
+  <mask id="project-fade" maskUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+    <linearGradient id="fade-gradient">
+      <stop offset="0%" stop-color="#000" />
+      <stop offset="40%" stop-color="#fff" />
+    </linearGradient>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#fade-gradient)" />
+  </mask>
+  <g transform="translate(100, 280)" mask="url(#project-fade)">
+    <g>
+      <image xlink:href="./projects/unscrambler.svg" x="0" y="0" width="150" height="150" />
+      <image xlink:href="./projects/inflection-point.svg" x="0" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/web-libs.svg" x="150" y="0" width="150" height="150" />
+      <image xlink:href="./projects/swatches.svg" x="150" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/angles.svg" x="300" y="0" width="150" height="150" />
+      <image xlink:href="./projects/grapher.svg" x="300" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/regexper.svg" x="450" y="0" width="150" height="150" />
+      <image xlink:href="./projects/rink.svg" x="450" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/binary-brancher.svg" x="600" y="0" width="150" height="150" />
+      <image xlink:href="./projects/truthy.svg" x="600" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/painter.svg" x="750" y="0" width="150" height="150" />
+      <image xlink:href="./projects/flip-book.svg" x="750" y="150" width="150" height="150" />
+    </g>
+    <g>
+      <image xlink:href="./projects/faith-dashboard.svg" x="900" y="0" width="150" height="150" />
+      <image xlink:href="./projects/connect-four.svg" x="900" y="150" width="150" height="150" />
+    </g>
+  </g>
+
+</svg>
