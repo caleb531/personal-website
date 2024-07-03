@@ -9,11 +9,23 @@
   import socialPreview from '$images/social-preview.png?w=2400&imagetools';
   import JsonLd from '$routes/JsonLd.svelte';
 
+  const siteOrigin: string = $page.data.siteOrigin || '';
+
+  // When the site is built using SSG, imported images only are absolute paths,
+  // when on the frontend, they are fully-qualified URLs; to prevent hydration
+  // mismatches that could cause the site origin to get redundantly prepended to
+  // the path, we must strip the origin from the imported image URLs to make
+  // them paths (and if they are already paths, i.e. as they are on the backend,
+  // then the string should be returned unchanged)
+  function stripOrigin(pathOrUrl: string) {
+    return pathOrUrl.replace(/^https?:\/\/([^\/]+)/, '');
+  }
+
   let isHomepage: boolean;
   let pageSeoTitle: string;
   let pageSeoUrl: string;
   let pageSeoDescription: string;
-  let pageSeoImage = socialPreview;
+  let pageSeoImage = `${siteOrigin}${stripOrigin(socialPreview)}`;
 
   // SvelteKit does not seem to like if..else blocks within <svelte:head>; if we
   // try to conditionally set the <title> within <svelte:head> itself, then the
@@ -33,7 +45,7 @@
       pageSeoTitle = $page.data.title;
       pageSeoDescription = $page.data.description;
     }
-    pageSeoUrl = site.url + $page.url.pathname;
+    pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
   }
 </script>
 

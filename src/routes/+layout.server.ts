@@ -10,6 +10,7 @@ export const trailingSlash = 'always';
 // Define props that should be globally available across all pages
 export async function load(locals) {
   return {
+    siteOrigin: process.env.SITE_ORIGIN,
     pathname: locals.url.pathname,
     contactLinks: await getContactLinks()
   };
