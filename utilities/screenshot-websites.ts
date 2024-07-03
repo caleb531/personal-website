@@ -49,8 +49,7 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
         .screenshot({
           path: websiteImagePath,
           type: 'jpeg',
-          quality: websiteImageQuality,
-          captureBeyondViewport: false
+          quality: websiteImageQuality
         })
         .then(() => {
           console.log(`generated screenshot for ${websiteName}`);
