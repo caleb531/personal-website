@@ -6,13 +6,14 @@
   import portrait180 from '$images/self-portrait-v6.jpg?w=180&imagetools';
   import portrait192 from '$images/self-portrait-v6.jpg?w=192&imagetools';
   import portrait76 from '$images/self-portrait-v6.jpg?w=76&imagetools';
+  import socialPreview from '$images/social-preview.png?w=2400&imagetools';
   import JsonLd from '$routes/JsonLd.svelte';
 
   let isHomepage: boolean;
   let pageSeoTitle: string;
   let pageSeoUrl: string;
   let pageSeoDescription: string;
-  let pageSeoImage = `${site.url}/images/social-preview.png`;
+  let pageSeoImage = socialPreview;
 
   // SvelteKit does not seem to like if..else blocks within <svelte:head>; if we
   // try to conditionally set the <title> within <svelte:head> itself, then the
