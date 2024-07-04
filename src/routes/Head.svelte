@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import site from '$data/site.json';
+  import { PUBLIC_SITE_ORIGIN } from '$env/static/public';
   import portrait120 from '$images/self-portrait-v6.jpg?w=120&imagetools';
   import portrait152 from '$images/self-portrait-v6.jpg?w=152&imagetools';
   import portrait180 from '$images/self-portrait-v6.jpg?w=180&imagetools';
@@ -9,7 +10,7 @@
   import socialPreview from '$images/social-preview.png?w=2400&imagetools';
   import JsonLd from '$routes/JsonLd.svelte';
 
-  const siteOrigin: string = $page.data.siteOrigin || '';
+  const siteOrigin: string = PUBLIC_SITE_ORIGIN || '';
 
   // When the site is built using SSG, imported images only are absolute paths,
   // when on the frontend, they are fully-qualified URLs; to prevent hydration
