@@ -3,6 +3,6 @@ export function load() {
     id: 'contact',
     title: 'Contact',
     description:
-      'Contact details (including email, Github, and Twitter) for Caleb Evans, coder for Christ'
+      'Contact details (including email, Github, and X/Twitter) for Caleb Evans, coder for Christ'
   };
 }
