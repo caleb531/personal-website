@@ -10,8 +10,8 @@ const config: UserConfig = {
     // Since vite-plugin-image-optimizer does not yet support image resizing
     // (although we hope this will be added soon via
     // <https://github.com/FatehAK/vite-plugin-image-optimizer/pull/35>), we
-    // must still use vite-imagetools to handle resizing of JPEGs, while also
-    // using vite-plugin-image-optimizer to optimize SVGs
+    // must still use vite-imagetools to handle resizing of JPEGs and PNGs,
+    // while also using vite-plugin-image-optimizer to optimize SVGs
     ViteImageOptimizer({ test: /\.(svg)$/i })
   ],
   build: {
