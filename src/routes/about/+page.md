@@ -56,8 +56,6 @@ freedom to honor the convention of whichever language I'm writing in.
 I designed and crafted every project icon in pure SVG markup. Sure, one might
 say it's insane to write SVGs by hand—and it probably is 😅. But I suppose I
 take pleasure in the precision and portability of handwritten SVGs, partly I
-don't have to be dependent on premium apps like [Sketch][sketch]. I just also
-find SVG syntax incredibly powerful and versatile—surely, the spec has its
-limitations, yet I'm always impressed at the level of complexity I can achieve.
+don't have to be dependent on premium apps like [Sketch][sketch].
 
 [sketch]: https://www.sketch.com/
