@@ -3,8 +3,8 @@
   import projectMetadata from '$data/projects.json';
   import SearchInput from '$routes/SearchInput.svelte';
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
-  import { projectFadeSlide } from '$routes/transitions';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types';
+  import { projectFadeSlide } from '$routes/transitions.ts';
+  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
   import { group } from 'radash';
   import type { PageData } from './$types';
 

@@ -4,8 +4,8 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { projectFadeSlide } from '$routes/transitions';
-  import type { ProjectEntry } from '$routes/types';
+  import { projectFadeSlide } from '$routes/transitions.ts';
+  import type { ProjectEntry } from '$routes/types.ts';
 
   export let project: ProjectEntry;
 </script>

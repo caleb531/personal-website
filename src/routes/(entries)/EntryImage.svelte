@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { noopTransition } from '$routes/transitions';
+  import { noopTransition } from '$routes/transitions.ts';
 
   export let href: string;
   export let title = '';

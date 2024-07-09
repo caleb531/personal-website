@@ -1,7 +1,7 @@
 <script lang="ts">
   import Project from '$routes/projects/Project.svelte';
-  import { projectFadeSlide } from '$routes/transitions';
-  import type { ProjectCategoryData, ProjectEntry } from '$routes/types';
+  import { projectFadeSlide } from '$routes/transitions.ts';
+  import type { ProjectCategoryData, ProjectEntry } from '$routes/types.ts';
   import { objectify } from 'radash';
 
   export let projects: ProjectEntry[];

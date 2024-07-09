@@ -4,7 +4,7 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import type { ContactLinkEntry } from '$routes/types';
+  import type { ContactLinkEntry } from '$routes/types.ts';
 
   export let contactLink: ContactLinkEntry;
   export let isCompact = false;

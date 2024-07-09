@@ -4,12 +4,12 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { websiteFade } from '$routes/transitions';
-  import type { WebsiteEntry } from '$routes/types';
+  import { websiteFade } from '$routes/transitions.ts';
+  import type { WebsiteEntry } from '$routes/types.ts';
   import {
     getWebsite1xThumbnailUrl,
     getWebsite2xThumbnailUrl
-  } from '$src/routes/websites/websiteImageUtils';
+  } from '$src/routes/websites/websiteImageUtils.ts';
 
   export let website: WebsiteEntry;
 </script>

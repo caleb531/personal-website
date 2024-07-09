@@ -1,4 +1,4 @@
-import { getWebsiteEntries } from '$lib/entries.server';
+import { getWebsiteEntries } from '$lib/entries.server.ts';
 
 export async function load() {
   return {

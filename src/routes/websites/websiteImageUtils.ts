@@ -1,4 +1,4 @@
-import type { WebsiteEntry } from '$routes/types';
+import type { WebsiteEntry } from '$routes/types.ts';
 
 type GlobUrlMap = Record<string, string[]>;
 

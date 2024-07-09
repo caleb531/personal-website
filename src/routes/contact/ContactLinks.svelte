@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import contactLinkMetadata from '$data/contact-links.json';
   import ContactLink from '$routes/contact/ContactLink.svelte';
-  import type { ContactLinkMap } from '$routes/types';
+  import type { ContactLinkMap } from '$routes/types.ts';
   import { objectify } from 'radash';
   import type { PageData } from './$types';
 

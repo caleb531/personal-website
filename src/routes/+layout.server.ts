@@ -1,4 +1,4 @@
-import { getContactLinks } from '$lib/entries.server';
+import { getContactLinks } from '$lib/entries.server.ts';
 
 export const prerender = true;
 // Without enforcing trailing slashes, when SvelteKit builds using the static
