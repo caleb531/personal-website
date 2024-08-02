@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
   import { afterNavigate } from '$app/navigation';
   import { page } from '$app/stores';
   import site from '$data/site.json';
@@ -50,15 +51,22 @@
     pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
   }
 
-  // Ensure that each page navigation counts as one pageview in GoatCounter
-  afterNavigate(({ to }) => {
-    const url = to?.url;
-    if (url) {
-      window.goatcounter?.count({
-        path: url.pathname + url.search + url.hash
-      });
-    }
-  });
+  // Ensure that each page navigation counts as one pageview in GoatCounter; per
+  // the documentation, afterNavigate also runs when the component initially
+  // mounts on page load, so we must also instruct GoatCounter not to
+  // double-count the pageview (see <https://www.goatcounter.com/help/spa> and
+  // <https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate>)
+  if (browser) {
+    window.goatcounter = { no_onload: true } as typeof window.goatcounter;
+    afterNavigate(({ to }) => {
+      const url = to?.url;
+      if (url) {
+        window.goatcounter?.count({
+          path: url.pathname + url.search + url.hash
+        });
+      }
+    });
+  }
 </script>
 
 <svelte:head>
