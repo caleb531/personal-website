@@ -30,8 +30,16 @@ const config = {
         'style-src': ["'self'", "'unsafe-inline'"],
         'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:'],
-        'script-src': ["'self'"],
-        'connect-src': ["'self'"],
+        'script-src': [
+          "'self'",
+          ...(process.env.PUBLIC_ANALYTICS_SITE_ID ? ['https://gc.zgo.at'] : [])
+        ],
+        'connect-src': [
+          "'self'",
+          ...(process.env.PUBLIC_ANALYTICS_SITE_ID
+            ? [`https://${process.env.PUBLIC_ANALYTICS_SITE_ID}.goatcounter.com/count`]
+            : [])
+        ],
         'base-uri': ["'none'"]
       }
     }

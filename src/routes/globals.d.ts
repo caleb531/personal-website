@@ -5,3 +5,10 @@ declare module '*&imagetools' {
   const image: string;
   export default image;
 }
+
+interface Window {
+  // Define type for GoatCounter global object
+  goatcounter?: {
+    count: (options: object) => void;
+  };
+}

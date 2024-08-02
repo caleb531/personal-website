@@ -36,7 +36,14 @@ shared data you wish to delete, please [contact me][contact].
 
 ### Analytics
 
-As of Februrary 8th, 2024, this website no longer uses any analytics.
+This website uses [GoatCounter][goatcounter] for privacy-friendly analytics. I
+only use the collected data to analyze traffic patterns, and none of it can be
+used to personally identity you on the internet. No information is shared with
+third parties. Please see [GoatCounter's privacy policy][privacy] for details
+about the minimal information they collect.
+
+[goatcounter]: https://www.goatcounter.com/
+[privacy]: https://www.goatcounter.com/help/privacy
 
 ### Contacting Me
 

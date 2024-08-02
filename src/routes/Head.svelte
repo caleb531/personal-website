@@ -1,7 +1,8 @@
 <script lang="ts">
+  import { afterNavigate } from '$app/navigation';
   import { page } from '$app/stores';
   import site from '$data/site.json';
-  import { PUBLIC_SITE_ORIGIN } from '$env/static/public';
+  import { PUBLIC_ANALYTICS_SITE_ID, PUBLIC_SITE_ORIGIN } from '$env/static/public';
   import portrait120 from '$images/self-portrait-v6.jpg?w=120&imagetools';
   import portrait152 from '$images/self-portrait-v6.jpg?w=152&imagetools';
   import portrait180 from '$images/self-portrait-v6.jpg?w=180&imagetools';
@@ -48,6 +49,16 @@
     }
     pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
   }
+
+  // Ensure that each page navigation counts as one pageview in GoatCounter
+  afterNavigate(({ to }) => {
+    const url = to?.url;
+    if (url) {
+      window.goatcounter?.count({
+        path: url.pathname + url.search + url.hash
+      });
+    }
+  });
 </script>
 
 <svelte:head>
@@ -81,5 +92,13 @@
   <link rel="apple-touch-icon" href={portrait120} sizes="120x120" />
   <link rel="apple-touch-icon" href={portrait152} sizes="152x152" />
   <link rel="apple-touch-icon" href={portrait180} sizes="180x180" />
-  <title>{renderedTitle}</title>
+  {#if import.meta.env.PROD && PUBLIC_ANALYTICS_SITE_ID}
+    <script
+      data-goatcounter="https://{PUBLIC_ANALYTICS_SITE_ID}.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.v4.js"
+      crossorigin="anonymous"
+      integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+"
+    ></script>
+  {/if}
 </svelte:head>
