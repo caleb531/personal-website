@@ -6,7 +6,7 @@ website" encompasses:
 - All web apps, websites, and other projects hosted on all _\*.calebevans.me_
   subdomains
 
-This privacy policy was last updated on June 27th, 2024.
+This privacy policy was last updated on August 2nd, 2024.
 
 ### Secure Connection
 
