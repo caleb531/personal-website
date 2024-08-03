@@ -57,7 +57,6 @@
   // double-count the pageview (see <https://www.goatcounter.com/help/spa> and
   // <https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate>)
   if (browser) {
-    window.goatcounter = { no_onload: true } as typeof window.goatcounter;
     afterNavigate(({ to }) => {
       const url = to?.url;
       if (url) {
@@ -103,6 +102,7 @@
   {#if import.meta.env.PROD && PUBLIC_ANALYTICS_SITE_ID}
     <script
       data-goatcounter="https://{PUBLIC_ANALYTICS_SITE_ID}.goatcounter.com/count"
+      data-goatcounter-settings={JSON.stringify({ no_onload: true })}
       async
       src="https://gc.zgo.at/count.v4.js"
       crossorigin="anonymous"
