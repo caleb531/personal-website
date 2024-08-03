@@ -102,7 +102,7 @@
   {#if import.meta.env.PROD && PUBLIC_ANALYTICS_SITE_ID}
     <script
       data-goatcounter="https://{PUBLIC_ANALYTICS_SITE_ID}.goatcounter.com/count"
-      data-goatcounter-settings={JSON.stringify({ no_onload: true })}
+      data-goatcounter-settings={JSON.stringify({ no_onload: true, allow_local: true })}
       async
       src="https://gc.zgo.at/count.v4.js"
       crossorigin="anonymous"
