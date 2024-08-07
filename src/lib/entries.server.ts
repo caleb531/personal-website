@@ -1,7 +1,6 @@
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types.ts';
 import { marked } from 'marked';
 import path from 'node:path';
-import { objectify } from 'radash';
 
 type EntryType = 'contact_link' | 'project' | 'website';
 type GlobMap = Record<string, () => Promise<unknown>>;
@@ -48,10 +47,10 @@ function parseFieldsAsMarkdownIntoHTML(
   entry: Omit<Entry, 'id'>,
   fields: (keyof Omit<Entry, 'id'>)[]
 ): object {
-  return objectify(
-    fields,
-    (field) => field,
-    (field) => marked.parseInline(String(entry[field]))
+  return Object.fromEntries(
+    fields.map((field) => {
+      return [field, marked.parseInline(String(entry[field]))];
+    })
   );
 }
 

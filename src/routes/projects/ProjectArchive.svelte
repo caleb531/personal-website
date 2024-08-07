@@ -5,7 +5,7 @@
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
   import { projectFadeSlide } from '$routes/transitions.ts';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
-  import { group } from 'radash';
+  import { groupBy } from 'es-toolkit';
   import type { PageData } from './$types';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
@@ -47,7 +47,7 @@
   let visibleProjectsByCategory: ProjectGroups;
   $: {
     visibleProjects = filterProjects(projects, searchQuery);
-    visibleProjectsByCategory = group(visibleProjects, (project) => project.category);
+    visibleProjectsByCategory = groupBy(visibleProjects, (project) => project.category);
   }
 </script>
 

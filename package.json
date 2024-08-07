@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.0.8",
-    "radash": "^12.1.0"
+    "es-toolkit": "^1.13.1"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.2",
