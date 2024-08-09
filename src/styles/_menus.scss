@@ -12,6 +12,9 @@
   --menu-border-radius: 5px;
   --menu-offset-top: 5px;
   --menu-offset-right: -4px;
+  @media (prefers-reduced-transparency: reduce) {
+    --menu-background-color: var(--color-black);
+  }
 }
 
 // Mixins for overlay menus
