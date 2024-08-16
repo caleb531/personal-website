@@ -32,9 +32,9 @@
     </p>
     <p class="website-technologies">{website.technologies}</p>
 
-    <!-- eslint-disable-next-line svelte/no-at-html-tags Because the entry
-    content is coming directly from static JSON files and is not sourced from
-    user input, there is no XSS risk -->
+    <!-- Because the entry content is coming directly from static JSON files and
+    is not sourced from user input, there is no XSS risk -->
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
     <EntryDesc>{@html website.content}</EntryDesc>
   </EntryMain>
 </Entry>

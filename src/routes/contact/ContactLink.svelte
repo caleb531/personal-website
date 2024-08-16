@@ -18,6 +18,7 @@
     <EntryMain>
       <EntryTitle href={contactLink.direct_url}>{contactLink.title}</EntryTitle>
 
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
       <EntryDesc>{@html contactLink.description}</EntryDesc>
     </EntryMain>
   {:else}
