@@ -1,11 +1,11 @@
-const js = require('@eslint/js');
-const ts = require('typescript-eslint');
-const svelte = require('eslint-plugin-svelte');
-const prettier = require('eslint-config-prettier');
-const globals = require('globals');
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
+import svelte from 'eslint-plugin-svelte';
+import prettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 /** @type {import('eslint').Linter.Config[]} */
-module.exports = [
+export default [
   js.configs.recommended,
   ...ts.configs.recommended,
   ...svelte.configs['flat/recommended'],
