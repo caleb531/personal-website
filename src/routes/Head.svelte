@@ -21,7 +21,7 @@
   // them paths (and if they are already paths, i.e. as they are on the backend,
   // then the string should be returned unchanged)
   function stripOrigin(pathOrUrl: string) {
-    return pathOrUrl.replace(/^https?:\/\/([^\/]+)/, '');
+    return pathOrUrl.replace(/^https?:\/\/([^/]+)/, '');
   }
 
   let isHomepage: boolean;
