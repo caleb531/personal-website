@@ -6,7 +6,7 @@
   },
   "[javascript][javascriptreact][typescript][typescriptreact][svelte]": {
     "editor.codeActionsOnSave": {
-      // "source.organizeImports": "explicit"
+      "source.organizeImports": "explicit"
     }
   },
   "workbench.editor.labelFormat": "short",
