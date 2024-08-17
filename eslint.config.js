@@ -12,18 +12,18 @@ export default [
   prettier,
   ...svelte.configs['flat/prettier'],
   {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      }
-    }
-  },
-  {
     files: ['**/*.svelte'],
     languageOptions: {
       parserOptions: {
         parser: ts.parser
+      }
+    }
+  },
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node
       }
     }
   },
