@@ -25,7 +25,9 @@
     --color-green: oklch(92.21% 0.259 123.09);
     --color-turquoise: oklch(76.76% 0.163 226.17);
   }
+}
 
+:root {
   // Semantic colors
   --color-body-background-start: var(--color-blue-light);
   --color-body-background-end: var(--color-blue-mid);

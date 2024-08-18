@@ -63,8 +63,8 @@ input[type='search'] {
   &:hover:active {
     background-color: var(--color-gray-mid);
   }
-  --icon-size: 20px;
   img {
+    --icon-size: 20px;
     width: var(--icon-size);
     height: var(--icon-size);
     pointer-events: none;

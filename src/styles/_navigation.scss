@@ -47,12 +47,12 @@
     }
   }
   @include layout(hybrid) {
+    pointer-events: none;
+    transform: translateY(-20px);
+    @include floating-menu(7px);
     li:after {
       display: none;
     }
-    pointer-events: none;
-    @include floating-menu(7px);
-    transform: translateY(-20px);
     .site-header-nav-open & {
       pointer-events: auto;
       @include transition-fade-in();
