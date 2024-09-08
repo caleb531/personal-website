@@ -65,8 +65,9 @@ export async function getEntries<SubEntry extends Entry>(
     entryPairs.map(async ([entryPath, getEntryContents]: [string, GlobMap[string]]) => {
       const entryId = getEntryIdFromPath(entryPath);
       const entryIconMap = entryIconsByType[entryType];
-      const entryIconUrl = entryIconMap
-        ? await entryIconMap[`/src/images/${entryTypeToDirName[entryType]}/${entryId}.svg`]()
+      const entryIconPath = `/src/images/${entryTypeToDirName[entryType]}/${entryId}.svg`;
+      const entryIconUrl = entryIconMap?.[entryIconPath]
+        ? await entryIconMap[entryIconPath]()
         : null;
       const entryData = JSON.parse(String(await getEntryContents())) as Omit<SubEntry, 'id'>;
       return {

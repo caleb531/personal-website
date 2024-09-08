@@ -46,6 +46,11 @@
       "bottomProjects": ["alfred-workflow-packager"]
     },
     {
+      "id": "chrome",
+      "title": "Chrome Extensions",
+      "column": "left"
+    },
+    {
       "id": "raycast",
       "title": "Raycast Extensions",
       "column": "left"
@@ -69,14 +74,14 @@
       "column": "left"
     },
     {
-      "id": "vscode",
-      "title": "VS Code Extensions",
-      "column": "left"
-    },
-    {
       "id": "wordpress",
       "title": "WordPress",
       "column": "right"
+    },
+    {
+      "id": "vscode",
+      "title": "VS Code Extensions",
+      "column": "left"
     }
   ]
 }
