@@ -28,7 +28,8 @@
   </button>
   <ul class="site-header-nav-list">
     {#each navigation as navigationLink (navigationLink.url)}
-      <li class:is-current-page={isCurrentPage(navigationLink, $page)}>
+      {@const isCurrent = isCurrentPage(navigationLink, $page)}
+      <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
         <a href={navigationLink.url} on:click={closeNav}>
           {navigationLink.title}
         </a>
