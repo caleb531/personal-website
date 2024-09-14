@@ -44,9 +44,8 @@
     <h3 class="entry-list-category-title" transition:projectFadeSlide|global>
       {category.title}
     </h3>
+    {#each sortedProjects as project (project.id)}
+      <Project {project} />
+    {/each}
   {/if}
-
-  {#each sortedProjects as project (project.id)}
-    <Project {project} />
-  {/each}
 </section>
