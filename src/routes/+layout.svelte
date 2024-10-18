@@ -6,6 +6,9 @@
   import { pageFade } from '$routes/transitions.ts';
 
   import '$src/styles/index.scss';
+  import '@fontsource/source-sans-pro/300.css';
+  import '@fontsource/source-sans-pro/400.css';
+  import '@fontsource/source-sans-pro/600.css';
   export let data;
 
   // SvelteKit doesn't currently support adding data-* attributes (or class

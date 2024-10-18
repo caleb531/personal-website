@@ -1,3 +1,6 @@
+@use "menus";
+@use "responsive";
+
 // Header navigation styling
 @use 'sass:math';
 
@@ -46,16 +49,16 @@
       text-decoration: none;
     }
   }
-  @include layout(hybrid) {
+  @include responsive.layout(hybrid) {
     pointer-events: none;
     transform: translateY(-20px);
-    @include floating-menu(7px);
+    @include menus.floating-menu(7px);
     li:after {
       display: none;
     }
     .site-header-nav-open & {
       pointer-events: auto;
-      @include transition-fade-in();
+      @include menus.transition-fade-in();
       transform: translateY(0);
     }
   }
@@ -64,7 +67,7 @@
 // Navigation menu toggle for hybrid/compact layout
 .site-header-nav-toggle {
   display: none;
-  @include layout(hybrid) {
+  @include responsive.layout(hybrid) {
     cursor: pointer;
     display: inline-block;
     margin: 0;

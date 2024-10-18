@@ -14,6 +14,13 @@ const config: UserConfig = {
     // while also using vite-plugin-image-optimizer to optimize SVGs
     ViteImageOptimizer({ test: /\.(svg)$/i })
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
+    }
+  },
   build: {
     // Allow us to conditionally enable sourcemaps on a per-environment basis
     // (this does not apply to development mode, since we are not building)

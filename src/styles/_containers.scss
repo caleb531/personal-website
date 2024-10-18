@@ -1,3 +1,5 @@
+@use "responsive";
+
 // Styling for various container elements
 
 * {
@@ -12,7 +14,7 @@ html {
 }
 
 body {
-  max-width: $body-max-width;
+  max-width: responsive.$body-max-width;
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -66,11 +68,11 @@ article.page {
   background-repeat: repeat;
   box-shadow: inset 0 1px 5px var(--color-shadow-light);
   overflow: hidden;
-  @include layout(compact) {
+  @include responsive.layout(compact) {
     --page-padding-h: 20px;
     border-radius: 0;
   }
-  @include layout(very-compact) {
+  @include responsive.layout(very-compact) {
     --page-padding-h: 15px;
   }
 }
