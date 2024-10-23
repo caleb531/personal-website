@@ -7,7 +7,11 @@
   import { projectFadeSlide } from '$routes/transitions.ts';
   import type { ProjectEntry } from '$routes/types.ts';
 
-  export let project: ProjectEntry;
+  interface Props {
+    project: ProjectEntry;
+  }
+
+  let { project }: Props = $props();
 </script>
 
 <Entry type="project" id={project.id} transition={projectFadeSlide}>

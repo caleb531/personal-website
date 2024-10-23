@@ -6,7 +6,7 @@
 
   const headerImageSize = 60;
 
-  let isNavOpen = false;
+  let isNavOpen = $state(false);
 
   function toggleNav() {
     isNavOpen = !isNavOpen;
@@ -17,7 +17,7 @@
 </script>
 
 <header class="site-header">
-  <a href="/" class="site-title-link" rel="home" on:click={closeNav}>
+  <a href="/" class="site-title-link" rel="home" onclick={closeNav}>
     <img
       class="site-header-image"
       src={portrait}

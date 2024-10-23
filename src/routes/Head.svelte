@@ -24,32 +24,20 @@
     return pathOrUrl.replace(/^https?:\/\/([^/]+)/, '');
   }
 
-  let isHomepage: boolean;
-  let pageSeoTitle: string;
-  let pageSeoUrl: string;
-  let pageSeoDescription: string;
-  let pageSeoImage = `${siteOrigin}${stripOrigin(socialPreview)}`;
-
   // SvelteKit does not seem to like if..else blocks within <svelte:head>; if we
   // try to conditionally set the <title> within <svelte:head> itself, then the
   // page title stops updating after the first or second page navigate; to fix
   // this, we move the conditional logic to the TypeScript section of the layout
   // component, and use a reactive statement to update the page title whenever
   // the value of 'page' changes
-  let renderedTitle: string;
-  $: {
-    isHomepage = $page.data.id === 'home';
-    if (isHomepage) {
-      renderedTitle = `${site.title} | ${site.tagline}`;
-      pageSeoTitle = `${site.title} | ${site.tagline}`;
-      pageSeoDescription = site.description;
-    } else {
-      renderedTitle = `${$page.data.title} | ${site.title}`;
-      pageSeoTitle = $page.data.title;
-      pageSeoDescription = $page.data.description;
-    }
-    pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
-  }
+  let isHomepage = $derived($page.data.id === 'home');
+  let renderedTitle = $derived(
+    isHomepage ? `${site.title} | ${site.tagline}` : `${$page.data.title} | ${site.title}`
+  );
+  let pageSeoTitle = $derived(isHomepage ? `${site.title} | ${site.tagline}` : $page.data.title);
+  let pageSeoDescription = $derived(isHomepage ? site.description : $page.data.description);
+  let pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
+  let pageSeoImage = `${siteOrigin}${stripOrigin(socialPreview)}`;
 
   // Ensure that each page navigation counts as one pageview in GoatCounter; per
   // the documentation, afterNavigate also runs when the component initially

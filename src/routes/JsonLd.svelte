@@ -1,20 +1,29 @@
 <script lang="ts">
   import type { WebPage, WebSite } from 'schema-dts';
 
-  export let title: string;
-  export let description: string;
-  export let url: string;
-  export let type: 'WebSite' | 'WebPage';
+  interface Props {
+    title: string;
+    description: string;
+    url: string;
+    type: 'WebSite' | 'WebPage';
+  }
 
-  let schema: WebSite | WebPage;
-  $: schema = {
+  let {
+    title,
+    description,
+    url,
+    type
+  }: Props = $props();
+
+  let schema: WebSite | WebPage = $derived({
     '@type': type,
     name: title,
     headline: title,
     url: url,
     description: description,
     '@context': 'https://schema.org'
-  };
+  });
+  
 </script>
 
 <!-- Because JSON.stringify() is guaranteed to be safe from HTML injection,

@@ -1,11 +1,21 @@
 <script lang="ts">
   import clearSearchSvgUrl from '$src/images/clear-search.svg';
 
-  export let id: string;
-  export let name: string;
-  export let value: string;
-  export let placeholder: string = '';
-  export let ariaLabel: string;
+  interface Props {
+    id: string;
+    name: string;
+    value: string;
+    placeholder?: string;
+    ariaLabel: string;
+  }
+
+  let {
+    id,
+    name,
+    value = $bindable(),
+    placeholder = '',
+    ariaLabel
+  }: Props = $props();
 
   function clearSearch(event: PointerEvent) {
     event.preventDefault();
@@ -22,8 +32,8 @@
     type="button"
     class="search-input-clear-button"
     class:hidden={value === ''}
-    on:pointerdown={(event) => event.preventDefault()}
-    on:pointerup={clearSearch}
+    onpointerdown={(event) => event.preventDefault()}
+    onpointerup={clearSearch}
     title="Clear Search Query"
   >
     <img src={clearSearchSvgUrl} alt="Clear Search Query" />

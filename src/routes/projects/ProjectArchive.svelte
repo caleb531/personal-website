@@ -40,20 +40,18 @@
     });
   }
 
-  let searchQuery = '';
+  let searchQuery = $state('');
 
   let { projects } = $page.data as Pick<PageData, 'projects'>;
-  let visibleProjects: typeof projects;
-  let visibleProjectsByCategory: ProjectGroups;
-  $: {
-    visibleProjects = filterProjects(projects, searchQuery);
-    visibleProjectsByCategory = groupBy(visibleProjects, (project) => project.category);
-  }
+  let visibleProjects: typeof projects = $derived(filterProjects(projects, searchQuery));
+  let visibleProjectsByCategory: ProjectGroups = $derived(
+    groupBy(visibleProjects, (project) => project.category)
+  );
 </script>
 
 <article class="project-archive">
   <div class="project-search-container">
-    <form class="project-search-container-form" on:submit={(event) => event.preventDefault()}>
+    <form class="project-search-container-form" onsubmit={(event) => event.preventDefault()}>
       <SearchInput
         name="search"
         id="project-search-input"

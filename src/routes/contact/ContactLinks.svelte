@@ -7,7 +7,11 @@
   import type { PageData } from './$types';
 
   const { contactLinks } = $page.data as Pick<PageData, 'contactLinks'>;
-  export let isCompact = false;
+  interface Props {
+    isCompact?: boolean;
+  }
+
+  let { isCompact = false }: Props = $props();
 
   const contactLinksById: ContactLinkMap = keyBy(contactLinks, (contactLink) => contactLink.id);
 </script>

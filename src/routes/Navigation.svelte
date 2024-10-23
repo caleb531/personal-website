@@ -3,9 +3,13 @@
   import navigation from '$data/navigation.json';
   import navToggleSvgUrl from '$src/images/nav-toggle.svg';
 
-  export let isNavOpen: boolean;
-  export let toggleNav: () => void;
-  export let closeNav: () => void;
+  interface Props {
+    isNavOpen: boolean;
+    toggleNav: () => void;
+    closeNav: () => void;
+  }
+
+  let { isNavOpen, toggleNav, closeNav }: Props = $props();
 
   // Normalize the given URL pathname (e.g. /about/me -> about/me)
   function normalizePathname(pathname: string) {
@@ -20,7 +24,7 @@
   <button
     type="button"
     class="site-header-nav-toggle"
-    on:click={toggleNav}
+    onclick={toggleNav}
     aria-haspopup="true"
     aria-expanded={isNavOpen}
   >
@@ -30,7 +34,7 @@
     {#each navigation as navigationLink (navigationLink.url)}
       {@const isCurrent = isCurrentPage(navigationLink, $page)}
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
-        <a href={navigationLink.url} on:click={closeNav}>
+        <a href={navigationLink.url} onclick={closeNav}>
           {navigationLink.title}
         </a>
       </li>

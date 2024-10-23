@@ -9,7 +9,7 @@
   import '@fontsource/source-sans-pro/300.css';
   import '@fontsource/source-sans-pro/400.css';
   import '@fontsource/source-sans-pro/600.css';
-  export let data;
+  let { data, children } = $props();
 
   // SvelteKit doesn't currently support adding data-* attributes (or class
   // names, for that matter) via <svelte:body />, so we must set the attribute
@@ -19,10 +19,12 @@
       document.body.dataset.pageId = pageId;
     }
   }
-  $: assignPageId($page.data.id);
+  $effect(() => {
+    assignPageId($page.data.id);
+  });
 </script>
 
-<div class="site-background" />
+<div class="site-background"></div>
 
 <Head />
 
@@ -50,7 +52,9 @@ the page can help screen reader users jump to the page content; for more, see
         {:else}
           <h2 class="accessibility-only">Homepage</h2>
         {/if}
-        <slot />
+        {#if children}
+          {@render children()}
+        {/if}
       </section>
     {/key}
   </article>

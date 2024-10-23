@@ -1,9 +1,14 @@
 <script lang="ts">
   import { noopTransition } from '$routes/transitions.ts';
 
-  export let id: string;
-  export let type: string;
-  export let transition = noopTransition;
+  interface Props {
+    id: string;
+    type: string;
+    transition?: any;
+    children?: import('svelte').Snippet;
+  }
+
+  let { id, type, transition = noopTransition, children }: Props = $props();
 </script>
 
 <article
@@ -12,5 +17,7 @@
   class:no-transition={transition === noopTransition}
   transition:transition|global
 >
-  <slot />
+  {#if children}
+    {@render children()}
+  {/if}
 </article>
