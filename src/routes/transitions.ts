@@ -2,6 +2,9 @@ import { cubicInOut } from 'svelte/easing';
 import type { FadeParams, SlideParams, TransitionConfig } from 'svelte/transition';
 import { fade, slide } from 'svelte/transition';
 
+// A type representing a valid Svelte transition function
+export type TransitionType = (node: Element) => TransitionConfig;
+
 // A transition which combines the slide and fade transitions provided by Svelte
 export function fadeSlide(node: Element, options: SlideParams): TransitionConfig {
   const slideTrans = slide(node, options);
