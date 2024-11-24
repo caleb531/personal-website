@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { noopTransition } from '$routes/transitions.ts';
+  import { noopTransition, type TransitionType } from '$routes/transitions.ts';
 
   interface Props {
     href: string;
     title?: string;
     hiddenFromAccessibility?: boolean;
-    transition?: any;
+    transition?: TransitionType;
     children?: import('svelte').Snippet;
   }
 
