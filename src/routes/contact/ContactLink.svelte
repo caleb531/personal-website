@@ -6,8 +6,12 @@
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
   import type { ContactLinkEntry } from '$routes/types.ts';
 
-  export let contactLink: ContactLinkEntry;
-  export let isCompact = false;
+  interface Props {
+    contactLink: ContactLinkEntry;
+    isCompact?: boolean;
+  }
+
+  let { contactLink, isCompact = false }: Props = $props();
 </script>
 
 <Entry type="contact-link" id={contactLink.id}>

@@ -1,8 +1,17 @@
 <script lang="ts">
-  export let href: string;
-  export let type = 'h3';
+  interface Props {
+    href: string;
+    type?: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { href, type = 'h3', children }: Props = $props();
 </script>
 
 <svelte:element this={type} class="entry-title">
-  <a {href}><slot /></a>
+  <a {href}
+    >{#if children}
+      {@render children()}
+    {/if}</a
+  >
 </svelte:element>

@@ -11,7 +11,11 @@
     getWebsite2xThumbnailUrl
   } from '$src/routes/websites/websiteImageUtils.ts';
 
-  export let website: WebsiteEntry;
+  interface Props {
+    website: WebsiteEntry;
+  }
+
+  let { website }: Props = $props();
 </script>
 
 <Entry type="website" id={website.id}>
