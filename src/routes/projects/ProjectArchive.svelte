@@ -1,6 +1,6 @@
 <script lang="ts">
   import { browser } from '$app/environment';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import projectMetadata from '$data/projects.json';
   import SearchInput from '$routes/SearchInput.svelte';
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
@@ -49,7 +49,7 @@
 
   let searchQuery = $state('');
 
-  let { projects } = $page.data as Pick<PageData, 'projects'>;
+  let { projects } = page.data as Pick<PageData, 'projects'>;
   let visibleProjects: typeof projects = $derived(filterProjects(projects, searchQuery));
   let visibleProjectsByCategory: ProjectGroups = $derived(
     groupBy(visibleProjects, (project) => project.category)

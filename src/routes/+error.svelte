@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import site from '$data/site.json';
   // To ensure that the page transition from this error page works properly, the
   // status code can only be computed once when the page loads
-  const status = $page.status;
-  const errorMessage = $page.error?.message;
+  const status = page.status;
+  const errorMessage = page.error?.message;
 </script>
 
 <svelte:head>

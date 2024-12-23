@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import Footer from '$routes/Footer.svelte';
   import Head from '$routes/Head.svelte';
   import Header from '$routes/Header.svelte';
@@ -20,7 +20,7 @@
     }
   }
   $effect(() => {
-    assignPageId($page.data.id);
+    assignPageId(page.data.id);
   });
 </script>
 
@@ -38,7 +38,7 @@ the page can help screen reader users jump to the page content; for more, see
 
 <main>
   <!--
-  We cannot key off of the $page store or any property of it because doing so
+  We cannot key off of the page store or any property of it because doing so
   will cause the slot contents to change before the transition finishes,
   supposedly because the subscription to the page store is not transition-aware;
   to work around this, we can send down the dynamically-changing pathname from
@@ -47,8 +47,8 @@ the page can help screen reader users jump to the page content; for more, see
   <article class="page" id="page">
     {#key data.pathname}
       <section class="page-content" transition:pageFade>
-        {#if $page.data.title}
-          <h2>{$page.data.title}</h2>
+        {#if page.data.title}
+          <h2>{page.data.title}</h2>
         {:else}
           <h2 class="accessibility-only">Homepage</h2>
         {/if}

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import contactLinkMetadata from '$data/contact-links.json';
   import ContactLink from '$routes/contact/ContactLink.svelte';
   import type { ContactLinkMap } from '$routes/types.ts';
   import { keyBy } from 'es-toolkit';
   import type { PageData } from './$types';
 
-  const { contactLinks } = $page.data as Pick<PageData, 'contactLinks'>;
+  const { contactLinks } = page.data as Pick<PageData, 'contactLinks'>;
   interface Props {
     isCompact?: boolean;
   }

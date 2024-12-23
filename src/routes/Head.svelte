@@ -1,7 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { afterNavigate } from '$app/navigation';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import site from '$data/site.json';
   import { PUBLIC_ANALYTICS_SITE_ID, PUBLIC_SITE_ORIGIN } from '$env/static/public';
   import portrait120 from '$images/self-portrait-v6.jpg?w=120&imagetools';
@@ -30,13 +30,13 @@
   // this, we move the conditional logic to the TypeScript section of the layout
   // component, and use a reactive statement to update the page title whenever
   // the value of 'page' changes
-  let isHomepage = $derived($page.data.id === 'home');
+  let isHomepage = $derived(page.data.id === 'home');
   let renderedTitle = $derived(
-    isHomepage ? `${site.title} | ${site.tagline}` : `${$page.data.title} | ${site.title}`
+    isHomepage ? `${site.title} | ${site.tagline}` : `${page.data.title} | ${site.title}`
   );
-  let pageSeoTitle = $derived(isHomepage ? `${site.title} | ${site.tagline}` : $page.data.title);
-  let pageSeoDescription = $derived(isHomepage ? site.description : $page.data.description);
-  let pageSeoUrl = `${siteOrigin}${stripOrigin($page.url.pathname)}`;
+  let pageSeoTitle = $derived(isHomepage ? `${site.title} | ${site.tagline}` : page.data.title);
+  let pageSeoDescription = $derived(isHomepage ? site.description : page.data.description);
+  let pageSeoUrl = `${siteOrigin}${stripOrigin(page.url.pathname)}`;
   let pageSeoImage = `${siteOrigin}${stripOrigin(socialPreview)}`;
 
   // Ensure that each page navigation counts as one pageview in GoatCounter; per
