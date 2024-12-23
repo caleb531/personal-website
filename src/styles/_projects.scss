@@ -75,7 +75,6 @@
 }
 
 .project .entry-desc {
-  padding-right: 10px;
   @include responsive.layout(very-compact) {
     font-size: var(--font-size-xl);
   }
