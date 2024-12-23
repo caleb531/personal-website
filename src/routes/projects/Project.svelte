@@ -4,17 +4,18 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { projectFadeSlide } from '$routes/transitions.ts';
+  import { type TransitionType } from '$routes/transitions.ts';
   import type { ProjectEntry } from '$routes/types.ts';
 
   interface Props {
     project: ProjectEntry;
+    transition: TransitionType;
   }
 
-  let { project }: Props = $props();
+  let { project, transition }: Props = $props();
 </script>
 
-<Entry type="project" id={project.id} transition={projectFadeSlide}>
+<Entry type="project" id={project.id} {transition}>
   <EntryImage href={project.direct_url} hiddenFromAccessibility>
     <img src={project.iconUrl} alt="" width={80} height={80} loading="lazy" />
   </EntryImage>

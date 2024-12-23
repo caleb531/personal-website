@@ -3,9 +3,11 @@
   import projectMetadata from '$data/projects.json';
   import SearchInput from '$routes/SearchInput.svelte';
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
-  import { projectFadeSlide } from '$routes/transitions.ts';
+  import { noopTransition, projectFadeSlide } from '$routes/transitions.ts';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
   import { groupBy } from 'es-toolkit';
+  import { onMount } from 'svelte';
+  import type { TransitionType } from '../transitions';
   import type { PageData } from './$types';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
@@ -47,6 +49,15 @@
   let visibleProjectsByCategory: ProjectGroups = $derived(
     groupBy(visibleProjects, (project) => project.category)
   );
+
+  // Svelte 5 runs global transitions on mount by default, and in SvelteKit,
+  // there's no way to disable this intro transition on mount; this creates a
+  // CLS issue at the time of hydration, so we need to set a noop transition
+  // initially and only set the actual transition when the component mounts
+  let transition: TransitionType = $state(noopTransition);
+  onMount(() => {
+    transition = projectFadeSlide;
+  });
 </script>
 
 <article class="project-archive">
@@ -65,7 +76,7 @@
         class="project-search-result-count"
         aria-live="polite"
         aria-atomic="true"
-        transition:projectFadeSlide|global
+        transition:transition|global
       >
         {#if visibleProjects.length === 1}
           Showing 1 project
@@ -78,7 +89,7 @@
         class="project-search-no-results"
         aria-live="polite"
         aria-atomic="true"
-        transition:projectFadeSlide|global
+        transition:transition|global
       >
         No Matching Projects
       </div>
@@ -86,7 +97,11 @@
   </div>
   <div class="projects-by-category" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categories as category}
-      <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
+      <ProjectCategory
+        {category}
+        projects={visibleProjectsByCategory[category.id] ?? []}
+        {transition}
+      />
     {/each}
   </div>
 </article>
