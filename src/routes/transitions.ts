@@ -37,10 +37,7 @@ export function pageFade(node: Element, options?: FadeParams): TransitionConfig 
 
 // Specify a transition with zero-duration to effectively achieve the effect of
 // no transition; this is because Svelte's `transition:` directive cannot be
-// conditionally applied; note that in conjunction with the use of this noop
-// transition function, the animation must also be conditionally disabled with
-// CSS to prevent the element from immediately disappearing on DOM removal (see
-// the .no-transition class in src/styles/_containers.scss)
+// conditionally applied
 export function noopTransition(node: Element): TransitionConfig {
   return fade(node, { duration: 0 });
 }
