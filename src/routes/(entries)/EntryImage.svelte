@@ -25,7 +25,7 @@
   tabindex={hiddenFromAccessibility ? -1 : 0}
   title={hiddenFromAccessibility ? '' : title}
   class:no-transition={transition === noopTransition}
-  in:transition
+  in:transition|global
 >
   {#if children}
     {@render children()}
