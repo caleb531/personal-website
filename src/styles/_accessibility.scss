@@ -54,21 +54,3 @@ textarea {
     box-shadow: 0 1px 10px var(--color-shadow-light);
   }
 }
-
-// Effectively disable transitions for users who have elected for reduced
-// motion; note that per
-// <https://www.a11yproject.com/posts/understanding-vestibular-disorders/>,
-// "rather than setting animation: none and transition: none, we instead set the
-// animation-duration and transition-duration properties to a short enough
-// duration that the motion itself is no longer noticable. This is to prevent
-// issues in any case there is a dependency on the animation to run (such as
-// when listening to the animationend event)."
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.001s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001s !important;
-  }
-}

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import projectMetadata from '$data/projects.json';
   import SearchInput from '$routes/SearchInput.svelte';
@@ -54,6 +55,12 @@
     groupBy(visibleProjects, (project) => project.category)
   );
 
+  // Check the user's preference for reduced motion so that we can conditionally
+  // enable/disable transitions accordingly
+  const reducedMotionQuery: MediaQueryList | null = browser
+    ? matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+
   // Svelte 5 runs global transitions on mount by default, and in SvelteKit,
   // there's no way to disable this intro transition on mount; this creates a
   // CLS issue at the time of hydration, so we need to set a noop transition
@@ -62,7 +69,19 @@
   setProjectWideOptions(projectOptions);
   let transition = $derived(projectOptions.transition);
   onMount(() => {
-    projectOptions.transition = projectFadeSlide;
+    // Only enable the project fade-slide transition if the user has not
+    // requested reduced motion
+    if (!reducedMotionQuery || !reducedMotionQuery.matches) {
+      projectOptions.transition = projectFadeSlide;
+    }
+  });
+
+  // If the user changes their preference for reduced motion during the lifetime
+  // of the page, update the transition accordingly
+  $effect(() => {
+    reducedMotionQuery?.addEventListener('change', () => {
+      projectOptions.transition = reducedMotionQuery.matches ? noopTransition : projectFadeSlide;
+    });
   });
 </script>
 
