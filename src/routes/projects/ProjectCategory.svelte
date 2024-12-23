@@ -1,6 +1,6 @@
 <script lang="ts">
   import Project from '$routes/projects/Project.svelte';
-  import { getCurrentProjectTransition } from '$routes/transitions';
+  import { getCurrentProjectOptions } from '$routes/transitions';
   import type { ProjectCategoryData, ProjectEntry } from '$routes/types.ts';
   import { keyBy } from 'es-toolkit';
 
@@ -40,11 +40,7 @@
       .filter(Boolean)
   ]);
 
-  let projectOptions = getCurrentProjectTransition();
-  let transition = $state(projectOptions.transition);
-  $effect(() => {
-    transition = projectOptions.transition;
-  });
+  let transition = $derived(getCurrentProjectOptions().transition);
 </script>
 
 <section class="entry-list project-category desktop-column-{category.column}">

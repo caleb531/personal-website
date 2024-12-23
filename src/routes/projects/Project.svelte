@@ -4,7 +4,7 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { getCurrentProjectTransition } from '$routes/transitions';
+  import { getCurrentProjectOptions } from '$routes/transitions';
   import type { ProjectEntry } from '$routes/types.ts';
 
   interface Props {
@@ -12,11 +12,7 @@
   }
 
   let { project }: Props = $props();
-  let projectOptions = getCurrentProjectTransition();
-  let transition = $state(projectOptions.transition);
-  $effect(() => {
-    transition = projectOptions.transition;
-  });
+  let transition = $derived(getCurrentProjectOptions().transition);
 </script>
 
 <Entry type="project" id={project.id} {transition}>
