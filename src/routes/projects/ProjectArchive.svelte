@@ -56,12 +56,9 @@
   // initially and only set the actual transition when the component mounts
   let projectOptions: ProjectOptions = $state({ transition: noopTransition });
   setCurrentProjectOptions(projectOptions);
+  let transition = $derived(projectOptions.transition);
   onMount(() => {
     projectOptions.transition = projectFadeSlide;
-  });
-  let transition = $state(projectOptions.transition);
-  $effect(() => {
-    transition = projectOptions.transition;
   });
 </script>
 

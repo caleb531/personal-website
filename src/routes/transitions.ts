@@ -49,15 +49,13 @@ export function noopTransition(node: Element): TransitionConfig {
 // accessible from any descendant component
 export type ProjectOptions = { transition: TransitionType };
 
-//
+// Persist the project options using context, so the descendants of the current
+// component will have access to the options
 export function setCurrentProjectOptions(projectOptions: ProjectOptions) {
   setContext('projectOptions', projectOptions);
 }
 
-export function getCurrentProjectTransition(): ProjectOptions {
-  return (
-    getContext('projectOptions') ?? {
-      transition: noopTransition
-    }
-  );
+// Retrieve the current project options from the context
+export function getCurrentProjectOptions(): ProjectOptions {
+  return getContext<ProjectOptions>('projectOptions');
 }
