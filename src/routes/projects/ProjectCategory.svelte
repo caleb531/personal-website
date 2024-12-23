@@ -1,16 +1,15 @@
 <script lang="ts">
   import Project from '$routes/projects/Project.svelte';
+  import { getCurrentProjectTransition } from '$routes/transitions';
   import type { ProjectCategoryData, ProjectEntry } from '$routes/types.ts';
   import { keyBy } from 'es-toolkit';
-  import { type TransitionType } from '../transitions';
 
   interface Props {
     projects: ProjectEntry[];
     category: ProjectCategoryData;
-    transition: TransitionType;
   }
 
-  let { projects, category, transition }: Props = $props();
+  let { projects, category }: Props = $props();
 
   // Promote some projects to the top of the list
   const topProjectsSet = new Set(category.topProjects);
@@ -40,6 +39,12 @@
       // values
       .filter(Boolean)
   ]);
+
+  let projectOptions = getCurrentProjectTransition();
+  let transition = $state(projectOptions.transition);
+  $effect(() => {
+    transition = projectOptions.transition;
+  });
 </script>
 
 <section class="entry-list project-category desktop-column-{category.column}">
@@ -48,7 +53,7 @@
       {category.title}
     </h3>
     {#each sortedProjects as project (project.id)}
-      <Project {project} {transition} />
+      <Project {project} />
     {/each}
   {/if}
 </section>

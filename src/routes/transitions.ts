@@ -1,3 +1,4 @@
+import { getContext, setContext } from 'svelte';
 import { cubicInOut } from 'svelte/easing';
 import type { FadeParams, SlideParams, TransitionConfig } from 'svelte/transition';
 import { fade, slide } from 'svelte/transition';
@@ -42,4 +43,21 @@ export function pageFade(node: Element, options?: FadeParams): TransitionConfig 
 // the .no-transition class in src/styles/_containers.scss)
 export function noopTransition(node: Element): TransitionConfig {
   return fade(node, { duration: 0 });
+}
+
+// The options for the project archive to store as context so they can be
+// accessible from any descendant component
+export type ProjectOptions = { transition: TransitionType };
+
+//
+export function setCurrentProjectOptions(projectOptions: ProjectOptions) {
+  setContext('projectOptions', projectOptions);
+}
+
+export function getCurrentProjectTransition(): ProjectOptions {
+  return (
+    getContext('projectOptions') ?? {
+      transition: noopTransition
+    }
+  );
 }

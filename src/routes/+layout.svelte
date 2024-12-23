@@ -3,7 +3,7 @@
   import Footer from '$routes/Footer.svelte';
   import Head from '$routes/Head.svelte';
   import Header from '$routes/Header.svelte';
-  import { pageFade } from '$routes/transitions.ts';
+  import { pageFade } from '$routes/transitions';
 
   import '$src/styles/index.scss';
   import '@fontsource/source-sans-pro/300.css';

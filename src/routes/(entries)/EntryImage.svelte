@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { noopTransition, type TransitionType } from '$routes/transitions.ts';
+  import { noopTransition, type TransitionType } from '$routes/transitions';
 
   interface Props {
     href: string;

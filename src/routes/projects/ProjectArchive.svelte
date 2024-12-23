@@ -3,11 +3,11 @@
   import projectMetadata from '$data/projects.json';
   import SearchInput from '$routes/SearchInput.svelte';
   import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
-  import { noopTransition, projectFadeSlide } from '$routes/transitions.ts';
+  import { noopTransition, projectFadeSlide } from '$routes/transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
   import { groupBy } from 'es-toolkit';
   import { onMount } from 'svelte';
-  import type { TransitionType } from '../transitions';
+  import { setCurrentProjectOptions, type ProjectOptions } from '../transitions';
   import type { PageData } from './$types';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
@@ -54,9 +54,14 @@
   // there's no way to disable this intro transition on mount; this creates a
   // CLS issue at the time of hydration, so we need to set a noop transition
   // initially and only set the actual transition when the component mounts
-  let transition: TransitionType = $state(noopTransition);
+  let projectOptions: ProjectOptions = $state({ transition: noopTransition });
+  setCurrentProjectOptions(projectOptions);
   onMount(() => {
-    transition = projectFadeSlide;
+    projectOptions.transition = projectFadeSlide;
+  });
+  let transition = $state(projectOptions.transition);
+  $effect(() => {
+    transition = projectOptions.transition;
   });
 </script>
 
@@ -97,11 +102,7 @@
   </div>
   <div class="projects-by-category" aria-live="polite" aria-atomic="true">
     {#each projectMetadata.categories as category}
-      <ProjectCategory
-        {category}
-        projects={visibleProjectsByCategory[category.id] ?? []}
-        {transition}
-      />
+      <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
     {/each}
   </div>
 </article>

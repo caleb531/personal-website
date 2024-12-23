@@ -4,7 +4,7 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { websiteFade } from '$routes/transitions.ts';
+  import { websiteFade } from '$routes/transitions';
   import type { WebsiteEntry } from '$routes/types.ts';
   import {
     getWebsite1xThumbnailUrl,
