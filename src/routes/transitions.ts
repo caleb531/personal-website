@@ -7,12 +7,12 @@ export type TransitionType = (node: Element) => TransitionConfig;
 
 // A transition which combines the slide and fade transitions provided by Svelte
 export function fadeSlide(node: Element, options: SlideParams): TransitionConfig {
-  const slideTrans = slide(node, options);
+  const slideTransition = slide(node, options);
   return {
     ...options,
     css: (t, u) => {
       return `
-        ${slideTrans.css ? slideTrans.css(t, u) : ''}
+        ${slideTransition.css ? slideTransition.css(t, u) : ''}
         opacity: ${t};
       `;
     }
