@@ -1,21 +1,12 @@
 <script lang="ts">
-  import { noopTransition, type TransitionType } from '$routes/transitions';
-
   interface Props {
     href: string;
     title?: string;
     hiddenFromAccessibility?: boolean;
-    transition?: TransitionType;
     children?: import('svelte').Snippet;
   }
 
-  let {
-    href,
-    title = '',
-    hiddenFromAccessibility = false,
-    transition = noopTransition,
-    children
-  }: Props = $props();
+  let { href, title = '', hiddenFromAccessibility = false, children }: Props = $props();
 </script>
 
 <a
@@ -24,7 +15,6 @@
   aria-hidden={hiddenFromAccessibility}
   tabindex={hiddenFromAccessibility ? -1 : 0}
   title={hiddenFromAccessibility ? '' : title}
-  in:transition|global
 >
   {#if children}
     {@render children()}

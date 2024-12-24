@@ -4,7 +4,6 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { websiteFade } from '$routes/transitions';
   import type { WebsiteEntry } from '$routes/types.ts';
   import {
     getWebsite1xThumbnailUrl,
@@ -19,7 +18,7 @@
 </script>
 
 <Entry type="website" id={website.id}>
-  <EntryImage href={website.direct_url} hiddenFromAccessibility transition={websiteFade}>
+  <EntryImage href={website.direct_url} hiddenFromAccessibility>
     <img
       src={getWebsite1xThumbnailUrl(website)}
       srcset="{getWebsite2xThumbnailUrl(website)} 2x"
