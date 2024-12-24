@@ -9,13 +9,7 @@
     ariaLabel: string;
   }
 
-  let {
-    id,
-    name,
-    value = $bindable(),
-    placeholder = '',
-    ariaLabel
-  }: Props = $props();
+  let { id, name, value = $bindable(), placeholder = '', ariaLabel }: Props = $props();
 
   function clearSearch(event: PointerEvent) {
     event.preventDefault();

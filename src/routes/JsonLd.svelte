@@ -8,12 +8,7 @@
     type: 'WebSite' | 'WebPage';
   }
 
-  let {
-    title,
-    description,
-    url,
-    type
-  }: Props = $props();
+  let { title, description, url, type }: Props = $props();
 
   let schema: WebSite | WebPage = $derived({
     '@type': type,
@@ -23,7 +18,6 @@
     description: description,
     '@context': 'https://schema.org'
   });
-  
 </script>
 
 <!-- Because JSON.stringify() is guaranteed to be safe from HTML injection,
