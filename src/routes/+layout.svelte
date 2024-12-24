@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { afterNavigate, disableScrollHandling } from '$app/navigation';
   import { page } from '$app/state';
   import Footer from '$routes/Footer.svelte';
   import Head from '$routes/Head.svelte';
   import Header from '$routes/Header.svelte';
-  import { pageFade } from '$routes/transitions';
+  import { pageFade, pageFadeDuration } from '$routes/transitions';
 
   import '$src/styles/index.scss';
   import '@fontsource/source-sans-pro/300.css';
@@ -21,6 +22,22 @@
   }
   $effect(() => {
     assignPageId(page.data.id);
+  });
+
+  afterNavigate((navigation) => {
+    // Disable the automatic scrolling to the top of the page when navigating
+    // between pages
+    disableScrollHandling();
+    // However, we still want to scroll-animate to the top of page when
+    // navigating to the privacy policy (because the only link to to the privacy
+    // policy is at the very bottom of the page, so this is the only page where,
+    // when navigated to, the user will need to be scrolled to the top of the
+    // page)
+    if (navigation?.to?.url.pathname === '/privacy-policy/') {
+      setTimeout(() => {
+        scrollTo({ top: 0, behavior: 'smooth' });
+      }, pageFadeDuration);
+    }
   });
 </script>
 

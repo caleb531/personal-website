@@ -21,13 +21,20 @@ export function fadeSlide(node: Element, options: SlideParams): TransitionConfig
 }
 
 // Supply the transition parameters for projects (/ and /projects/)
+export const projectFadeDuration = 350;
 export function projectFadeSlide(node: Element, options?: SlideParams): TransitionConfig {
-  return fadeSlide(node, { duration: 350, easing: cubicInOut, axis: 'y', ...options });
+  return fadeSlide(node, {
+    duration: projectFadeDuration,
+    easing: cubicInOut,
+    axis: 'y',
+    ...options
+  });
 }
 
 // Specify the transition parameters for page changes
+export const pageFadeDuration = 250;
 export function pageFade(node: Element, options?: FadeParams): TransitionConfig {
-  return fade(node, { duration: 250, easing: cubicInOut, ...options });
+  return fade(node, { duration: pageFadeDuration, easing: cubicInOut, ...options });
 }
 
 // Specify a transition with zero-duration to effectively achieve the effect of
