@@ -35,7 +35,7 @@
     // policy is at the very bottom of the page, so this is the only page where,
     // when navigated to, the user will need to be scrolled to the top of the
     // page)
-    if (navigation?.to?.url.pathname === '/privacy-policy/') {
+    if (navigation.from && navigation.to?.url.pathname === '/privacy-policy/') {
       setTimeout(() => {
         scrollTo({ top: 0, behavior: 'smooth' });
       }, pageFadeDuration);
