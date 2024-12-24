@@ -8,7 +8,7 @@
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
   import { groupBy } from 'es-toolkit';
   import { onMount } from 'svelte';
-  import { setProjectWideOptions, type ProjectOptions } from '../transitions';
+  import { setProjectArchiveOptions, type ProjectOptions } from '../projectArchiveOptions';
   import type { PageData } from './$types';
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
@@ -66,7 +66,7 @@
   // CLS issue at the time of hydration, so we need to set a noop transition
   // initially and only set the actual transition when the component mounts
   let projectOptions: ProjectOptions = $state({ transition: noopTransition });
-  setProjectWideOptions(projectOptions);
+  setProjectArchiveOptions(projectOptions);
   let transition = $derived(projectOptions.transition);
   onMount(() => {
     // Only enable the project fade-slide transition if the user has not

@@ -4,15 +4,15 @@
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import { getProjectWideOptions } from '$routes/transitions';
   import type { ProjectEntry } from '$routes/types.ts';
+  import { getProjectArchiveOptions } from '../projectArchiveOptions';
 
   interface Props {
     project: ProjectEntry;
   }
 
   let { project }: Props = $props();
-  let transition = $derived(getProjectWideOptions().transition);
+  let transition = $derived(getProjectArchiveOptions().transition);
 </script>
 
 <Entry type="project" id={project.id} {transition}>
