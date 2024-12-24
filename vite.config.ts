@@ -2,7 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-import reloadEntryPlugin from './plugins/reload-entry-plugin';
+import reloadBackend from './plugins/vite-plugin-reload-backend';
 
 const config: UserConfig = {
   plugins: [
@@ -14,7 +14,15 @@ const config: UserConfig = {
     // must still use vite-imagetools to handle resizing of JPEGs and PNGs,
     // while also using vite-plugin-image-optimizer to optimize SVGs
     ViteImageOptimizer({ test: /\.(svg)$/i }),
-    reloadEntryPlugin()
+    reloadBackend({
+      include: [
+        'src/routes/**/+page.server.ts',
+        'src/lib/*.ts',
+        'src/projects/*.json',
+        'src/contact-links/*.json',
+        'src/websites/*.json'
+      ]
+    })
   ],
   css: {
     preprocessorOptions: {
