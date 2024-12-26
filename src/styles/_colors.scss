@@ -10,8 +10,7 @@
   --color-blue-mid: hsl(203.48 100% 30%);
   --color-blue-dark: hsl(202.55 100% 26%);
   --color-turquoise: hsl(192.79 100% 49%);
-  --color-green: hsl(128, 96%, 26%);
-  --color-red: hsl(0, 55%, 36%);
+  --color-green: hsl(72.01 100% 49%);
   --color-white: hsl(0, 0%, 100%);
 
   --color-shadow-light: hsla(0, 0%, 0%, 0.3);
@@ -23,28 +22,20 @@
     --color-blue-light: oklch(51.09% 0.151 240.76);
     --color-blue-mid: oklch(46.09% 0.143 246.71);
     --color-blue-dark: oklch(42.79% 0.139 244.79);
-    --color-green: oklch(80.85% 0.2985 134.93);
+    --color-green: oklch(92.21% 0.259 123.09);
     --color-turquoise: oklch(76.76% 0.163 226.17);
   }
 }
 
 :root {
   // Semantic colors
-  --color-body-background-start: var(--color-red);
-  --color-body-background-end: var(--color-red);
-  --color-main-background: var(--color-red);
+  --color-body-background-start: var(--color-blue-light);
+  --color-body-background-end: var(--color-blue-mid);
+  --color-main-background: var(--color-blue-dark);
   --color-accent: var(--color-green);
   --color-text: var(--color-white);
   --color-link: var(--color-accent);
   --color-strong: var(--color-accent);
   --color-focus-inner: var(--color-blue-mid);
   --color-focus-outer: var(--color-turquoise);
-}
-
-// Set Christmas colors
-:root {
-  --color-green: hsl(120, 100%, 50%);
-  --color-red: hsl(0, 55%, 36%);
-  --color-focus-inner: var(--color-red);
-  --color-focus-outer: var(--color-green);
 }
