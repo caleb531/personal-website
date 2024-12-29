@@ -6,8 +6,8 @@
   import { noopTransition, projectFadeSlide } from '$routes/transitions';
   import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
   import { groupBy } from 'es-toolkit';
-  import { onMount } from 'svelte';
   import { prefersReducedMotion } from 'svelte/motion';
+  import MountObserver from '../MountObserver.svelte';
   import { setProjectArchiveOptions, type ProjectOptions } from '../projectArchiveOptions';
   import type { PageData } from './$types';
 
@@ -59,12 +59,9 @@
   // there's no way to disable this intro transition on mount; this creates a
   // CLS issue at the time of hydration, so we need to set a noop transition
   // initially and only set the actual transition when the component mounts
-  let isMounted = $state(false);
-  onMount(() => {
-    isMounted = true;
-  });
+  let isMounted = new MountObserver();
   let transition = $derived(
-    isMounted && !prefersReducedMotion.current ? projectFadeSlide : noopTransition
+    isMounted.current && !prefersReducedMotion.current ? projectFadeSlide : noopTransition
   );
   let projectOptions: ProjectOptions = $state({
     get transition() {
