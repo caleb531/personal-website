@@ -40,5 +40,5 @@ export function pageFade(node: Element, options?: FadeParams): TransitionConfig 
 // no transition; this is because Svelte's `transition:` directive cannot be
 // conditionally applied
 export function noopTransition(node: Element): TransitionConfig {
-  return fade(node, { duration: 0 });
+  return { duration: 0 };
 }
