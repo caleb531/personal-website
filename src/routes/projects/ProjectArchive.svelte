@@ -59,22 +59,19 @@
   // there's no way to disable this intro transition on mount; this creates a
   // CLS issue at the time of hydration, so we need to set a noop transition
   // initially and only set the actual transition when the component mounts
-  let projectOptions: ProjectOptions = $state({ transition: noopTransition });
-  setProjectArchiveOptions(projectOptions);
-  let transition = $derived(projectOptions.transition);
+  let isMounted = $state(false);
   onMount(() => {
-    // Only enable the project fade-slide transition if the user has not
-    // requested reduced motion
-    if (!prefersReducedMotion.current) {
-      projectOptions.transition = projectFadeSlide;
+    isMounted = true;
+  });
+  let transition = $derived(
+    isMounted && !prefersReducedMotion.current ? projectFadeSlide : noopTransition
+  );
+  let projectOptions: ProjectOptions = $state({
+    get transition() {
+      return transition;
     }
   });
-
-  // If the user changes their preference for reduced motion during the lifetime
-  // of the page, update the transition accordingly
-  $effect(() => {
-    projectOptions.transition = prefersReducedMotion.current ? noopTransition : projectFadeSlide;
-  });
+  setProjectArchiveOptions(projectOptions);
 </script>
 
 <article class="project-archive">
