@@ -1,11 +1,12 @@
 <script lang="ts">
   import { type TransitionType, noopTransition } from '$routes/transitions';
+  import type { Snippet } from 'svelte';
 
   interface Props {
     id: string;
     type: string;
     transition?: TransitionType;
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
   let { id, type, transition = noopTransition, children }: Props = $props();

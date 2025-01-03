@@ -1,9 +1,11 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
     href: string;
     title?: string;
     hiddenFromAccessibility?: boolean;
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
   let { href, title = '', hiddenFromAccessibility = false, children }: Props = $props();
