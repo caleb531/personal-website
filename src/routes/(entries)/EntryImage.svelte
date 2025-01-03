@@ -5,7 +5,7 @@
     href: string;
     title?: string;
     hiddenFromAccessibility?: boolean;
-    children?: Snippet;
+    children: Snippet;
   }
 
   let { href, title = '', hiddenFromAccessibility = false, children }: Props = $props();

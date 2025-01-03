@@ -6,7 +6,7 @@
     id: string;
     type: string;
     transition?: TransitionType;
-    children?: Snippet;
+    children: Snippet;
   }
 
   let { id, type, transition = noopTransition, children }: Props = $props();
