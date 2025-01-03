@@ -1,6 +1,6 @@
 # Personal Website
 
-_Copyright 2013-2024, Caleb Evans_  
+_Copyright 2013-2025, Caleb Evans_  
 _Code released under the MIT license_
 
 This is a [SvelteKit](https://kit.svelte.dev/)-based personal website I created
