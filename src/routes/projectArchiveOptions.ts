@@ -6,14 +6,14 @@ import type { TransitionType } from './transitions';
 export type ProjectOptions = { transition: TransitionType };
 
 // The key to use for the context entry that stores the project-wide options
-export const PROJECT_WIDE_OPTIONS_KEY = 'projectOptions';
+export const PROJECT_ARCHIVE_OPTIONS_KEY = 'projectOptions';
 
-// Persist the project-wide options using context, so the descendants of the
+// Persist the project archive options using context, so the descendants of the
 // current component will have access to the options
 export function setProjectArchiveOptions(projectOptions: ProjectOptions) {
-  setContext(PROJECT_WIDE_OPTIONS_KEY, projectOptions);
+  setContext(PROJECT_ARCHIVE_OPTIONS_KEY, projectOptions);
 }
-// Retrieve the current project-wide options from the context
+// Retrieve the current project archive options from the context
 export function getProjectArchiveOptions(): ProjectOptions {
-  return getContext<ProjectOptions>(PROJECT_WIDE_OPTIONS_KEY);
+  return getContext<ProjectOptions>(PROJECT_ARCHIVE_OPTIONS_KEY);
 }
