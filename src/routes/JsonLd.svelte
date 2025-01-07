@@ -20,7 +20,7 @@
   });
 </script>
 
-<!-- Because JSON.stringify() is guaranteed to be safe from HTML injection,
-there is no XSS risk -->
+<!-- The schema being stringified does not contain any user-inputted data, and
+therefore there is no XSS risk -->
 <!-- eslint-disable-next-line svelte/no-at-html-tags -->
 {@html '<script type="application/ld+json">' + JSON.stringify(schema, null, 2) + `<${'/'}script>`}
