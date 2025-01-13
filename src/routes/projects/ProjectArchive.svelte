@@ -93,7 +93,7 @@
         class="project-search-result-count"
         aria-live="polite"
         aria-atomic="true"
-        transition:transition|global
+        transition:transition
       >
         {#if visibleProjects.length === 1}
           Showing 1 project
@@ -106,7 +106,7 @@
         class="project-search-no-results"
         aria-live="polite"
         aria-atomic="true"
-        transition:transition|global
+        transition:transition
       >
         No Matching Projects
       </div>
