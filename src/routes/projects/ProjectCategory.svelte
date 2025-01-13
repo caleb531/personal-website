@@ -43,13 +43,18 @@
   let transition = $derived(getProjectArchiveOptions().transition);
 </script>
 
-<section class="entry-list project-category desktop-column-{category.column}">
-  {#if sortedProjects.length}
-    <h3 class="entry-list-category-title" transition:transition>
-      {category.title}
-    </h3>
-    {#each sortedProjects as project (project.id)}
-      <Project {project} />
-    {/each}
-  {/if}
-</section>
+{#if sortedProjects.length}
+  <section
+    class="entry-list project-category desktop-column-{category.column}"
+    transition:transition
+  >
+    {#if sortedProjects.length}
+      <h3 class="entry-list-category-title" transition:transition>
+        {category.title}
+      </h3>
+      {#each sortedProjects as project (project.id)}
+        <Project {project} />
+      {/each}
+    {/if}
+  </section>
+{/if}
