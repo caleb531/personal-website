@@ -12,7 +12,7 @@ export function fadeSlide(node: Element, options: SlideParams): TransitionConfig
     ...options,
     css: (t, u) => {
       return `
-        ${slideTransition.css ? slideTransition.css(t, u) : ''}
+        ${slideTransition.css ? slideTransition.css(t, u) : ''};
         opacity: ${t};
       `;
     }
