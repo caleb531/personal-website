@@ -1,4 +1,4 @@
-@use 'responsive';
+@use 'responsive' as *;
 
 // Styling for website portfolio entries
 @use 'sass:math';
@@ -12,19 +12,19 @@
   flex-direction: row;
   width: auto;
   text-align: left;
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     flex-direction: column;
   }
 }
 .website .entry-title {
   font-size: var(--font-size-h4);
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     margin: 2px 0;
   }
 }
 .website .entry-main {
   padding-left: 20px;
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     padding: 0;
     padding-top: 20px;
   }

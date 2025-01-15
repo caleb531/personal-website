@@ -1,5 +1,5 @@
 @use 'menus';
-@use 'responsive';
+@use 'responsive' as *;
 
 // Header navigation styling
 @use 'sass:math';
@@ -49,7 +49,7 @@
       text-decoration: none;
     }
   }
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     pointer-events: none;
     transform: translateY(-20px);
     @include menus.floating-menu(7px);
@@ -67,7 +67,7 @@
 // Navigation menu toggle for hybrid/compact layout
 .site-header-nav-toggle {
   display: none;
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     cursor: pointer;
     display: inline-block;
     margin: 0;

@@ -1,4 +1,4 @@
-@use 'responsive';
+@use 'responsive' as *;
 
 // Header styling
 @use 'sass:math';
@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
   }
-  @include responsive.layout(very-compact) {
+  @include layout(very-compact) {
     padding: 15px;
     padding-right: 10px;
   }

@@ -1,4 +1,4 @@
-@use 'responsive';
+@use 'responsive' as *;
 
 // Styling for projects
 
@@ -48,7 +48,7 @@
 
 .project-category {
   width: calc(50% - (var(--project-list-column-gap) / 2));
-  @include responsive.layout(hybrid) {
+  @include layout(hybrid) {
     width: 100%;
     float: none;
     clear: none;
@@ -75,7 +75,7 @@
 }
 
 .project .entry-desc {
-  @include responsive.layout(very-compact) {
+  @include layout(very-compact) {
     font-size: var(--font-size-xl);
   }
 }
