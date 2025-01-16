@@ -1,11 +1,8 @@
 @use 'sass:map';
 // Responsive setup
 
-$body-max-width: 960px;
-
 // Responsive widths
 $layout-widths: (
-  body-max: $body-max-width,
   hybrid: 768px,
   compact: 540px,
   very-compact: 340px
