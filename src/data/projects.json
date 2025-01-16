@@ -7,10 +7,34 @@
         "topProjects": ["connect-four", "inflection-point"]
       },
       {
+        "id": "fun",
+        "title": "Fun",
+        "topProjects": ["flip-book", "unscrambler", "painter"],
+        "bottomProjects": ["until", "atom", "colorful-chips"]
+      },
+      {
+        "id": "math",
+        "title": "Math",
+        "bottomProjects": ["sequencer", "flashmath"]
+      },
+      {
+        "id": "tools",
+        "title": "Tools / Productivity",
+        "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
+        "bottomProjects": ["html-selector", "js-console"]
+      }
+    ],
+    [
+      {
         "id": "programs",
         "title": "CLI Programs",
         "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
         "bottomProjects": ["bump-anything"]
+      },
+      {
+        "id": "javascript-libraries",
+        "title": "JavaScript Libraries",
+        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
       },
       {
         "id": "alfred",
@@ -44,30 +68,6 @@
       {
         "id": "vscode",
         "title": "VS Code Extensions"
-      }
-    ],
-    [
-      {
-        "id": "fun",
-        "title": "Fun",
-        "topProjects": ["flip-book", "unscrambler", "painter"],
-        "bottomProjects": ["until", "atom", "colorful-chips"]
-      },
-      {
-        "id": "math",
-        "title": "Math",
-        "bottomProjects": ["sequencer", "flashmath"]
-      },
-      {
-        "id": "tools",
-        "title": "Tools / Productivity",
-        "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
-        "bottomProjects": ["html-selector", "js-console"]
-      },
-      {
-        "id": "javascript-libraries",
-        "title": "JavaScript Libraries",
-        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
       },
       {
         "id": "wordpress",
