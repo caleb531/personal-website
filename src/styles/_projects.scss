@@ -52,6 +52,16 @@
   flex-basis: 0;
 }
 
+.project-category {
+  // Fix "jump" when animating project category headings
+  .entry-list-category-title {
+    margin: 0;
+    --space-v: 22px;
+    padding-top: var(--space-v);
+    margin-bottom: var(--space-v);
+  }
+}
+
 .project .entry-image {
   border-radius: 10px;
   background-color: var(--color-white);
