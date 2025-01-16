@@ -40,14 +40,19 @@
   font-size: var(--font-size-h3);
 }
 
-.projects-by-category {
-  // The modern replacement to using clearfix and overflow:hidden hacks to force
-  // a correct height on an element containing floats
-  display: flow-root;
+.project-category-columns {
+  display: flex;
+  gap: 0 var(--project-list-column-gap);
+  @include layout(hybrid) {
+    flex-direction: column;
+  }
+}
+.project-category-column {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .project-category {
-  width: calc(50% - (var(--project-list-column-gap) / 2));
   @include layout(hybrid) {
     width: 100%;
     float: none;

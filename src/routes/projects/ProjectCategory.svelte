@@ -44,10 +44,7 @@
 </script>
 
 {#if sortedProjects.length}
-  <section
-    class="entry-list project-category desktop-column-{category.column}"
-    transition:transition
-  >
+  <section class="entry-list project-category" transition:transition>
     {#if sortedProjects.length}
       <h3 class="entry-list-category-title" transition:transition>
         {category.title}

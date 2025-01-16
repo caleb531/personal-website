@@ -13,9 +13,18 @@
 
   // Pregenerate lookup table of project categories IDs to titles so the titles
   // can be added to the available keyword pool (for the user to search from)
-  const categoriesById: ProjectCategoryMap = projectMetadata.categories.reduce((map, category) => {
-    return { ...map, [category.id]: category };
-  }, {});
+  const categoriesById: ProjectCategoryMap = projectMetadata.categoriesByColumn.reduce(
+    (categoryMap, categories) => {
+      Object.assign(
+        categoryMap,
+        categories.reduce((map, category) => {
+          return { ...map, [category.id]: category };
+        }, {})
+      );
+      return categoryMap;
+    },
+    {}
+  );
 
   function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
     if (searchQuery.trim() === '') {
@@ -112,9 +121,13 @@
       </div>
     {/if}
   </div>
-  <div class="projects-by-category" aria-live="polite" aria-atomic="true">
-    {#each projectMetadata.categories as category}
-      <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
+  <div class="project-category-columns" aria-live="polite" aria-atomic="true">
+    {#each projectMetadata.categoriesByColumn as categories}
+      <div class="project-category-column">
+        {#each categories as category}
+          <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
+        {/each}
+      </div>
     {/each}
   </div>
 </article>

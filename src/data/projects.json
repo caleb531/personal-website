@@ -1,87 +1,78 @@
 {
-  "categories": [
-    {
-      "id": "games",
-      "title": "Games",
-      "column": "left",
-      "topProjects": ["connect-four", "inflection-point"]
-    },
-    {
-      "id": "fun",
-      "title": "Fun",
-      "column": "right",
-      "topProjects": ["flip-book", "unscrambler", "painter"],
-      "bottomProjects": ["until", "atom", "colorful-chips"]
-    },
-    {
-      "id": "programs",
-      "title": "CLI Programs",
-      "column": "left",
-      "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
-      "bottomProjects": ["bump-anything"]
-    },
-    {
-      "id": "math",
-      "title": "Math",
-      "column": "right",
-      "bottomProjects": ["sequencer", "flashmath"]
-    },
-    {
-      "id": "tools",
-      "title": "Tools / Productivity",
-      "column": "right",
-      "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
-      "bottomProjects": ["html-selector", "js-console"]
-    },
-    {
-      "id": "alfred",
-      "title": "Alfred Workflows",
-      "column": "left",
-      "topProjects": [
-        "youversion-suggest-alfred",
-        "play-song",
-        "open-conference-url",
-        "jira-for-alfred"
-      ],
-      "bottomProjects": ["alfred-workflow-packager"]
-    },
-    {
-      "id": "chrome",
-      "title": "Chrome Extensions",
-      "column": "left"
-    },
-    {
-      "id": "raycast",
-      "title": "Raycast Extensions",
-      "column": "left"
-    },
-    {
-      "id": "computer-science",
-      "title": "Computer Science",
-      "column": "left",
-      "topProjects": ["automata"],
-      "bottomProjects": ["data-structure-visualizer"]
-    },
-    {
-      "id": "javascript-libraries",
-      "title": "JavaScript Libraries",
-      "column": "right",
-      "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
-    },
-    {
-      "id": "rollup-plugins",
-      "title": "Rollup Plugins",
-      "column": "left"
-    },
-    {
-      "id": "wordpress",
-      "title": "WordPress",
-      "column": "right"
-    },
-    {
-      "id": "vscode",
-      "title": "VS Code Extensions",
-      "column": "left"
-    }
+  "categoriesByColumn": [
+    [
+      {
+        "id": "games",
+        "title": "Games",
+        "topProjects": ["connect-four", "inflection-point"]
+      },
+      {
+        "id": "programs",
+        "title": "CLI Programs",
+        "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
+        "bottomProjects": ["bump-anything"]
+      },
+      {
+        "id": "alfred",
+        "title": "Alfred Workflows",
+        "topProjects": [
+          "youversion-suggest-alfred",
+          "play-song",
+          "open-conference-url",
+          "jira-for-alfred"
+        ],
+        "bottomProjects": ["alfred-workflow-packager"]
+      },
+      {
+        "id": "chrome",
+        "title": "Chrome Extensions"
+      },
+      {
+        "id": "raycast",
+        "title": "Raycast Extensions"
+      },
+      {
+        "id": "computer-science",
+        "title": "Computer Science",
+        "topProjects": ["automata"],
+        "bottomProjects": ["data-structure-visualizer"]
+      },
+      {
+        "id": "rollup-plugins",
+        "title": "Rollup Plugins"
+      },
+      {
+        "id": "vscode",
+        "title": "VS Code Extensions"
+      }
+    ],
+    [
+      {
+        "id": "fun",
+        "title": "Fun",
+        "topProjects": ["flip-book", "unscrambler", "painter"],
+        "bottomProjects": ["until", "atom", "colorful-chips"]
+      },
+      {
+        "id": "math",
+        "title": "Math",
+        "bottomProjects": ["sequencer", "flashmath"]
+      },
+      {
+        "id": "tools",
+        "title": "Tools / Productivity",
+        "topProjects": ["faith-dashboard", "workday-time-calculator", "bg-generator"],
+        "bottomProjects": ["html-selector", "js-console"]
+      },
+      {
+        "id": "javascript-libraries",
+        "title": "JavaScript Libraries",
+        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
+      },
+      {
+        "id": "wordpress",
+        "title": "WordPress"
+      }
+    ]
   ]
 }
