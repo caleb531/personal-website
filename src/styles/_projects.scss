@@ -52,25 +52,6 @@
   flex-basis: 0;
 }
 
-.project-category {
-  @include layout(hybrid) {
-    width: 100%;
-    float: none;
-    clear: none;
-  }
-}
-// The projects should be arranged in a two-column layout on desktop, while
-// preserving the relative project order on mobile; surprisingly, we can use CSS
-// floats to achieve this quite well
-.desktop-column-left {
-  float: left;
-  clear: left;
-}
-.desktop-column-right {
-  float: right;
-  clear: right;
-}
-
 .project .entry-image {
   border-radius: 10px;
   background-color: var(--color-white);
