@@ -29,7 +29,7 @@
         "id": "programs",
         "title": "CLI Programs",
         "topProjects": ["imessage-conversation-analyzer", "cache-simulator", "dotfiles"],
-        "bottomProjects": ["bump-anything"]
+        "bottomProjects": ["three-of-a-crime"]
       },
       {
         "id": "javascript-libraries",
