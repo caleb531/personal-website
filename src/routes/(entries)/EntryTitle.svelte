@@ -4,7 +4,7 @@
   interface Props {
     href: string;
     type?: string;
-    children: Snippet;
+    children?: Snippet;
   }
 
   let { href, type = 'h3', children }: Props = $props();
