@@ -45,13 +45,11 @@
 
 {#if sortedProjects.length}
   <section class="entry-list project-category" transition:transition>
-    {#if sortedProjects.length}
-      <h3 class="entry-list-category-title" transition:transition>
-        {category.title}
-      </h3>
-      {#each sortedProjects as project (project.id)}
-        <Project {project} />
-      {/each}
-    {/if}
+    <h3 class="entry-list-category-title" transition:transition>
+      {category.title}
+    </h3>
+    {#each sortedProjects as project (project.id)}
+      <Project {project} />
+    {/each}
   </section>
 {/if}
