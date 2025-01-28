@@ -46,7 +46,7 @@
 {#if sortedProjects.length}
   <section class="entry-list project-category" transition:transition>
     {#if sortedProjects.length}
-      <h3 class="entry-list-category-title" transition:transition|global>
+      <h3 class="entry-list-category-title" transition:transition>
         {category.title}
       </h3>
       {#each sortedProjects as project (project.id)}
