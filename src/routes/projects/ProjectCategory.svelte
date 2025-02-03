@@ -44,7 +44,7 @@
 </script>
 
 {#if sortedProjects.length}
-  <section class="entry-list project-category" transition:transition>
+  <section class="entry-list project-category">
     <h3 class="entry-list-category-title" transition:transition>
       {category.title}
     </h3>
