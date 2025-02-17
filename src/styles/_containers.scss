@@ -70,7 +70,6 @@ article.page {
   overflow: hidden;
   @include layout(compact) {
     --page-padding-h: 20px;
-    border-radius: 0;
   }
   @include layout(very-compact) {
     --page-padding-h: 15px;
