@@ -54,3 +54,20 @@ textarea {
     box-shadow: 0 1px 10px var(--color-shadow-light);
   }
 }
+
+// Per <https://github.com/sveltejs/kit/issues/11993>, move the Svelte announcer
+// inline styles to a CSS stylesheet to eliminate CSP issues
+#svelte-announcer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  // Override the font-size:0 declaration on the <body> to ensure that the
+  // Svelte announcer is visible in the accessibility tree
+  font-size: 1rem;
+}

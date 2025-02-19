@@ -9,7 +9,22 @@ const config = {
 
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
-  preprocess: [mdsvex(mdsvexConfig), vitePreprocess()],
+  preprocess: [
+    mdsvex(mdsvexConfig),
+    vitePreprocess(),
+    // Per <https://github.com/sveltejs/kit/issues/11993>, move the Svelte
+    // announcer inline styles to a CSS stylesheet to eliminate CSP issues
+    {
+      name: 'strip-announcer-inline-styles',
+      markup: ({ content: code }) => {
+        code = code.replace(
+          /<div id="svelte-announcer" [\s\S]*?>/,
+          '<div id="svelte-announcer" aria-live="assertive" aria-atomic="true">'
+        );
+        return { code };
+      }
+    }
+  ],
 
   kit: {
     // Give me the option of either serving the entire site via server-side
@@ -27,7 +42,7 @@ const config = {
     csp: {
       directives: {
         'default-src': ["'none'"],
-        'style-src': ["'self'", "'unsafe-inline'"],
+        'style-src': ["'self'"],
         'font-src': ["'self'", 'data:'],
         'img-src': ["'self'", 'data:'],
         'script-src': [
