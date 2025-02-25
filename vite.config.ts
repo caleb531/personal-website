@@ -4,7 +4,16 @@ import { imagetools } from 'vite-imagetools';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import reloadBackend from './plugins/vite-plugin-reload-backend';
 
+// Allow the dev site to be served from my local network
+const allowedHosts = ['calebevans-mba.local'];
+
 const config: UserConfig = {
+  server: {
+    allowedHosts
+  },
+  preview: {
+    allowedHosts
+  },
   plugins: [
     sveltekit(),
     imagetools(),
