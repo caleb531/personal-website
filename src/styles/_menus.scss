@@ -24,7 +24,8 @@
   opacity: 0;
   z-index: -1;
   transition-property: opacity, transform, z-index;
-  transition-duration: var(--menu-transition-duration), var(--menu-transition-duration),
+  transition-duration:
+    var(--menu-transition-duration), var(--menu-transition-duration),
     calc(var(--menu-transition-duration) * 2);
   transition-timing-function: var(--menu-transition-easing);
 }
