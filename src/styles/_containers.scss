@@ -64,8 +64,11 @@ article.page {
   padding: var(--page-padding-v) var(--page-padding-h);
   border-radius: 20px;
   background-color: var(--color-main-background);
-  background-image: url('/src/images/backgrounds/squares.svg');
+  // Using a PNG instead of an SVG fixes a strange bug in Safari where an SVG
+  // background image will appear with a black background in link previews
+  background-image: url('/src/images/backgrounds/squares.png');
   background-repeat: repeat;
+  background-size: 200px 80px;
   box-shadow: inset 0 1px 5px var(--color-shadow-light);
   overflow: hidden;
   @include layout(compact) {
