@@ -3,8 +3,6 @@
   <defs>
     <circle id="rink-ring-outer" cx="160" cy="160" r="110" fill="none" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- outer ring -->
   <g>
     <use xlink:href="#rink-ring-outer" stroke="#5c9" stroke-width="24" />

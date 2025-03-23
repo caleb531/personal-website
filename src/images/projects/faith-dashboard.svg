@@ -3,8 +3,6 @@
     <!-- a widget representing a section of the Cross -->
     <rect id="fd-widget" x="-30" y="-30" width="60" height="60" rx="15" ry="15" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <g transform="translate(40,40) scale(0.75)">
     <!-- vertical beam (from top to bottom) -->
     <use xlink:href="#fd-widget" x="160" y="40" fill="#5c9" />

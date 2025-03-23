@@ -17,8 +17,6 @@
     <!-- center pointer from root node -->
     <polyline id="bbrancher-node-pointer-center" points="0,18 0,142" fill="none" stroke="#36e" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- root node -->
   <use xlink:href="#bbrancher-node" x="160" y="76" />
   <!-- leftmost child node -->

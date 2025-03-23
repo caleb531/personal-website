@@ -6,8 +6,6 @@
     <!-- black list item line -->
     <polygon id="palomarscheduler-list-item" points="0,-4 0,4 120,4 120,-4" fill="#000" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- top star -->
   <use xlink:href="#palomarscheduler-star" x="90" y="100" />
   <!-- top list -->

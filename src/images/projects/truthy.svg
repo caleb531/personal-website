@@ -4,8 +4,6 @@
       stroke-width="4" />
     <circle id="truthy-true-value" r="50" fill="#7d4" stroke="#7d4" stroke-width="4" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- table values -->
   <g>
     <!-- top-left -->

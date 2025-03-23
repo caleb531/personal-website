@@ -5,8 +5,6 @@
     <!-- a single bracket used to surround matrix elements -->
     <path id="matrices-bracket" d="M 90,54 L 54,54 L 54,266 L 90,266 L 90,254 L 66,254 L 66,66 L 90,66 Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <g fill="#39f" stroke="#39f" stroke-width="4">
     <!-- left bracket -->
     <use xlink:href="#matrices-bracket" x="0" y="0" />

@@ -3,8 +3,6 @@
   <defs>
     <circle id="bump-version-component" cx="0" cy="0" r="40" fill="none" stroke-width="8" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- version components -->
   <g>
     <!-- major version -->

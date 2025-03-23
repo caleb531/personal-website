@@ -3,8 +3,6 @@
     <!-- electron -->
     <circle id="atom-electron" cx="0" cy="0" r="20" fill="#fc3" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- nucleus -->
   <circle cx="160" cy="160" r="40" fill="#7d4" />
   <!-- ring around nucleus -->

@@ -14,8 +14,6 @@
       </g>
     </g>
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- left SSP tag -->
   <g fill="none" stroke="#e22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(70, 90) scale(2.5)">
       <use xlink:href="#languagesca-bracket" x="0" y="0" />

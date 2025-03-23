@@ -4,8 +4,6 @@
     <line id="flashmath-symbol-line-stroke" x1="-100" y1="0" x2="100" y2="0" />
     <line id="flashmath-symbol-line-fill" x1="-96" y1="0" x2="96" y2="0" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <!-- equal sign stroke -->
   <g stroke="#7d4" stroke-width="40">
     <!-- top -->

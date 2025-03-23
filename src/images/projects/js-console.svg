@@ -4,8 +4,6 @@
     <polyline id="jsconsole-angle-bracket" points="-40,40 40,0 -40,-40" />
     <line id="jsconsole-cursor" x1="-50" y1="0" x2="50" y2="0" />
   </defs>
-  <!-- canvas background -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#fff" />
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- angle bracket -->
     <g>
