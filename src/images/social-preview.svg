@@ -7,7 +7,7 @@
   <g transform="translate(100, 65)">
 
     <!-- website title and subtitle -->
-    <g font-family="Source Sans Pro"  text-anchor="start" font-weight="600" fill="#39f">
+    <g font-family="Source Sans Pro" text-anchor="start" font-weight="600" fill="#39f">
       <text x="220" y="84" font-size="112">Caleb Evans</text>
       <text x="225" y="158" font-size="56">Coder for Christ</text>
     </g>
