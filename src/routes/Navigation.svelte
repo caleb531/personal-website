@@ -5,11 +5,10 @@
 
   interface Props {
     isNavOpen: boolean;
-    toggleNav: () => void;
     closeNav: () => void;
   }
 
-  let { isNavOpen, toggleNav, closeNav }: Props = $props();
+  let { isNavOpen, closeNav }: Props = $props();
 
   // Normalize the given URL pathname (e.g. /about/me -> about/me)
   function normalizePathname(pathname: string) {
@@ -21,12 +20,14 @@
 </script>
 
 <nav class="site-header-nav" class:site-header-nav-open={isNavOpen}>
+  <!-- The tabindex attribute is necessary to allow the button to receive focus
+  when clicked in Safari -->
   <button
     type="button"
     class="site-header-nav-toggle"
-    onclick={toggleNav}
     aria-haspopup="true"
     aria-expanded={isNavOpen}
+    tabindex={0}
   >
     <img src={navToggleSvgUrl} alt="Toggle Navigation" />
   </button>
@@ -34,7 +35,7 @@
     {#each navigation as navigationLink (navigationLink.url)}
       {@const isCurrent = isCurrentPage(navigationLink, page)}
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
-        <a href={navigationLink.url} onclick={closeNav}>
+        <a href={navigationLink.url} onclick={closeNav} tabindex={0}>
           {navigationLink.title}
         </a>
       </li>

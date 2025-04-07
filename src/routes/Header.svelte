@@ -8,9 +8,6 @@
 
   let isNavOpen = $state(false);
 
-  function toggleNav() {
-    isNavOpen = !isNavOpen;
-  }
   function closeNav() {
     isNavOpen = false;
   }
@@ -28,5 +25,5 @@
     />
     <h1 class="site-title">{site.title}</h1>
   </a>
-  <Navigation {isNavOpen} {toggleNav} {closeNav} />
+  <Navigation {isNavOpen} {closeNav} />
 </header>
