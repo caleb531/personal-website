@@ -5,11 +5,10 @@
 
   interface Props {
     isNavOpen: boolean;
-    toggleNav: () => void;
     closeNav: () => void;
   }
 
-  let { isNavOpen, toggleNav, closeNav }: Props = $props();
+  let { isNavOpen, closeNav }: Props = $props();
 
   // Normalize the given URL pathname (e.g. /about/me -> about/me)
   function normalizePathname(pathname: string) {
@@ -24,7 +23,6 @@
   <button
     type="button"
     class="site-header-nav-toggle"
-    onclick={toggleNav}
     aria-haspopup="true"
     aria-expanded={isNavOpen}
   >

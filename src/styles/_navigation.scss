@@ -56,7 +56,8 @@
     li:after {
       display: none;
     }
-    .site-header-nav-open & {
+    .site-header-nav-toggle:focus + &,
+    &:focus-within {
       pointer-events: auto;
       @include menus.transition-fade-in();
       transform: translateY(0);
