@@ -56,6 +56,8 @@
     li:after {
       display: none;
     }
+    // Open navigation menu when the toggle button is focused or if any of the
+    // menu contents are focused
     .site-header-nav-toggle:focus + &,
     &:focus-within {
       pointer-events: auto;
