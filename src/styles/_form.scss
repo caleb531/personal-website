@@ -30,6 +30,11 @@ input[type='url'] {
   position: relative;
   width: fit-content;
   align-items: center;
+  // Hide search input when JavaScript is disabled (source:
+  // <https://ryanmulligan.dev/blog/detect-js-support-in-css/>)
+  @media (scripting: none) {
+    display: none;
+  }
 }
 input[type='search'] {
   --search-input-padding-h: 34px;

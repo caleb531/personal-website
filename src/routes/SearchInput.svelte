@@ -33,11 +33,3 @@
     <img src={clearSearchSvgUrl} alt="Clear Search Query" />
   </button>
 </div>
-<noscript>
-  <style>
-    /* Hide search input when JavaScript is disabled */
-    .search-input-container {
-      display: none;
-    }
-  </style>
-</noscript>
