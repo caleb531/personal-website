@@ -11,7 +11,7 @@
 
   let { id, name, value = $bindable(), placeholder = '', ariaLabel }: Props = $props();
 
-  function clearSearch(event: PointerEvent) {
+  function clearSearch(event: PointerEvent | KeyboardEvent) {
     event.preventDefault();
     value = '';
   }
@@ -28,6 +28,11 @@
     class:hidden={value === ''}
     onpointerdown={(event) => event.preventDefault()}
     onpointerup={clearSearch}
+    onkeyup={(event) => {
+      if (event.key === 'Enter') {
+        clearSearch(event);
+      }
+    }}
     title="Clear Search Query"
   >
     <img src={clearSearchSvgUrl} alt="Clear Search Query" />
