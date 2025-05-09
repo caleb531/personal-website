@@ -62,12 +62,12 @@
   <link rel="icon" href={portrait192} sizes="192x192" />
   <meta name="description" content={pageSeoDescription} />
 
-  <meta name="og:title" content={pageSeoTitle} />
-  <meta name="og:site_name" content={site.title} />
-  <meta name="og:description" content={pageSeoDescription} />
-  <meta name="og:url" content={pageSeoUrl} />
-  <meta name="og:image" content={pageSeoImage} />
-  <meta name="og:type" content="website" />
+  <meta property="og:title" content={pageSeoTitle} />
+  <meta property="og:site_property" content={site.title} />
+  <meta property="og:description" content={pageSeoDescription} />
+  <meta property="og:url" content={pageSeoUrl} />
+  <meta property="og:image" content={pageSeoImage} />
+  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content={site.twitterUsername} />
   <meta name="twitter:creator" content={site.twitterUsername} />
