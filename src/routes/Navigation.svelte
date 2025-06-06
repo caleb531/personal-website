@@ -25,11 +25,12 @@
   <button
     type="button"
     class="site-header-nav-toggle"
+    aria-label="Toggle Navigation"
     aria-haspopup="true"
     aria-expanded={isNavOpen}
     tabindex={0}
   >
-    <img src={navToggleSvgUrl} alt="Toggle Navigation" />
+    <img src={navToggleSvgUrl} alt="" />
   </button>
   <ul class="site-header-nav-list">
     {#each navigation as navigationLink (navigationLink.url)}
