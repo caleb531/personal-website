@@ -42,13 +42,14 @@
     type="button"
     class="site-header-nav-toggle"
     aria-label="Toggle Navigation"
+    aria-controls="site-header-nav-list"
     aria-haspopup="true"
     aria-expanded={isNavOpen}
     tabindex={0}
   >
     <img src={navToggleSvgUrl} alt="" />
   </button>
-  <ul class="site-header-nav-list">
+  <ul class="site-header-nav-list" id="site-header-nav-list">
     {#each navigation as navigationLink (navigationLink.url)}
       {@const isCurrent = isCurrentPage(navigationLink, page)}
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
