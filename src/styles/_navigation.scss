@@ -58,8 +58,7 @@
     }
     // Open navigation menu when the toggle button is focused or if any of the
     // menu contents are focused
-    .site-header-nav-toggle:focus + &,
-    &:focus-within {
+    .site-header-nav:focus-within & {
       pointer-events: auto;
       @include menus.transition-fade-in();
       transform: translateY(0);

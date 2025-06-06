@@ -3,12 +3,28 @@
   import navigation from '$data/navigation.json';
   import navToggleSvgUrl from '$src/images/nav-toggle.svg';
 
-  interface Props {
-    isNavOpen: boolean;
-    closeNav: () => void;
+  let isNavOpen = $state(false);
+
+  // A custom Svelte action to update state a specified element, or any of its
+  // descendants, receives focus
+  function onFocusWithin(node: HTMLElement, setNavOpen: (isOpen: boolean) => void) {
+    function broadcastNavFocus() {
+      setNavOpen(node.matches(':focus-within'));
+    }
+    // Unlike the focus/blur events, the focusin and focusout events bubble
+    node.addEventListener('focusin', broadcastNavFocus);
+    node.addEventListener('focusout', broadcastNavFocus);
+    return {
+      destroy() {
+        node.removeEventListener('focusin', broadcastNavFocus);
+        node.removeEventListener('focusout', broadcastNavFocus);
+      }
+    };
   }
 
-  let { isNavOpen, closeNav }: Props = $props();
+  function setNavOpen(isOpen: boolean) {
+    isNavOpen = isOpen;
+  }
 
   // Normalize the given URL pathname (e.g. /about/me -> about/me)
   function normalizePathname(pathname: string) {
@@ -19,7 +35,7 @@
   }
 </script>
 
-<nav class="site-header-nav" class:site-header-nav-open={isNavOpen}>
+<nav class="site-header-nav" use:onFocusWithin={setNavOpen}>
   <!-- The tabindex attribute is necessary to allow the button to receive focus
   when clicked in Safari -->
   <button
@@ -38,7 +54,7 @@
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
         <!-- The tabindex attribute is necessary to allow the link to receive
         focus when clicked in Safari -->
-        <a href={navigationLink.url} onclick={closeNav} tabindex={0}>
+        <a href={navigationLink.url} tabindex={0}>
           {navigationLink.title}
         </a>
       </li>

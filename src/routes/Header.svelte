@@ -5,16 +5,10 @@
   import Navigation from '$routes/Navigation.svelte';
 
   const headerImageSize = 60;
-
-  let isNavOpen = $state(false);
-
-  function closeNav() {
-    isNavOpen = false;
-  }
 </script>
 
 <header class="site-header">
-  <a href="/" class="site-title-link" rel="home" onclick={closeNav}>
+  <a href="/" class="site-title-link" rel="home">
     <img
       class="site-header-image"
       src={portrait}
@@ -25,5 +19,5 @@
     />
     <h1 class="site-title">{site.title}</h1>
   </a>
-  <Navigation {isNavOpen} {closeNav} />
+  <Navigation />
 </header>
