@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.2.5",
-    "es-toolkit": "^1.39.0"
+    "es-toolkit": "^1.39.1"
   },
   "devDependencies": {
     "@rollup/pluginutils": "^5.1.4",

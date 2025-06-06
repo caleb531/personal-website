@@ -17,8 +17,8 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       es-toolkit:
-        specifier: ^1.39.0
-        version: 1.39.0
+        specifier: ^1.39.1
+        version: 1.39.1
     devDependencies:
       '@rollup/pluginutils':
         specifier: ^5.1.4
@@ -995,8 +995,8 @@ packages:
   error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
 
-  es-toolkit@1.39.0:
-    resolution: {integrity: sha512-EoVtfsblZAUBu1pLM7SS0JH6mOUSln+l7IPkdTAasDFO1jYJIrdFv6usRuGbUFKIuA78OVlvpGldGSztAihQQQ==}
+  es-toolkit@1.39.1:
+    resolution: {integrity: sha512-cJNIXXx861Brn2GaXourDn5h3WRjYVc5hHKBLve8r0vP9TFeyPCiNgJFLn30HiJyCK4lUyjDhBELBwZG1tgZ0A==}
 
   esbuild@0.25.5:
     resolution: {integrity: sha512-P8OtKZRv/5J5hhz0cUAdu/cLuPIKXpQl1R9pZtvmHWQvrAUVd0UNIPT4IB4W3rNOqVO0rlqHmCIbSwxh/c9yUQ==}
@@ -2755,7 +2755,7 @@ snapshots:
     dependencies:
       is-arrayish: 0.2.1
 
-  es-toolkit@1.39.0: {}
+  es-toolkit@1.39.1: {}
 
   esbuild@0.25.5:
     optionalDependencies:
