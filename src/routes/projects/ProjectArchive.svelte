@@ -94,7 +94,7 @@
         id="project-search-input"
         bind:value={searchQuery}
         placeholder="Search for a project"
-        ariaLabel="Search for a project; results will update as you type"
+        aria-label="Search for a project; results will update as you type"
       />
     </form>
     {#if visibleProjects.length}

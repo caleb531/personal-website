@@ -1,15 +1,13 @@
 <script lang="ts">
   import clearSearchSvgUrl from '$src/images/clear-search.svg';
+  import type { HTMLInputAttributes } from 'svelte/elements';
 
-  interface Props {
-    id: string;
-    name: string;
+  interface Props extends HTMLInputAttributes {
     value: string;
     placeholder?: string;
-    ariaLabel: string;
   }
 
-  let { id, name, value = $bindable(), placeholder = '', ariaLabel }: Props = $props();
+  let { value = $bindable(), ...inputProps }: Props = $props();
 
   function clearSearch(event: PointerEvent | KeyboardEvent) {
     event.preventDefault();
@@ -18,7 +16,7 @@
 </script>
 
 <div class="search-input-container">
-  <input type="search" {name} {id} bind:value {placeholder} aria-label={ariaLabel} />
+  <input type="search" bind:value {...inputProps} />
   <!-- pointerdown|preventDefault must be used in conjunction with pointerup to
   ensure that the search input doesn't lose focus when the user initially
   depresses the button -->
