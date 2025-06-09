@@ -47,7 +47,7 @@
     aria-expanded={isNavOpen}
     tabindex={0}
   >
-    <img src={navToggleSvgUrl} alt="" />
+    <img src={navToggleSvgUrl} alt="" aria-hidden="true" />
   </button>
   <ul class="site-header-nav-list" id="site-header-nav-list">
     {#each navigation as navigationLink (navigationLink.url)}
