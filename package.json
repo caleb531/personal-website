@@ -6,7 +6,7 @@
   "description": "The personal website of Caleb Evans, coder for Christ.",
   "author": "Caleb Evans",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "vite dev",
