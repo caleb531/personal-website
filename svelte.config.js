@@ -49,6 +49,7 @@ const config = {
           "'self'",
           ...(process.env.PUBLIC_ANALYTICS_SITE_ID ? ['https://gc.zgo.at'] : [])
         ],
+        'worker-src': ["'self'", 'blob:'],
         'connect-src': [
           "'self'",
           ...(process.env.PUBLIC_ANALYTICS_SITE_ID
