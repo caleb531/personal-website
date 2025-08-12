@@ -4,10 +4,11 @@ import { glob } from 'glob';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
+import { parseEntryDataFromString } from '../src/lib/utilities.server.ts';
 import type { WebsiteEntry } from '../src/routes/types';
 
 const WEBSITE_IMAGE_DIR = 'src/images/websites';
-const WEBSITE_IMAGE_EXTENSION = 'jpg';
+const WEBSITE_IMAGE_EXTENSION = 'jpeg';
 const WEBSITE_IMAGE_QUALITY = 85;
 const VIEWPORT_WIDTH = 1024;
 const VIEWPORT_HEIGHT = 640;
@@ -25,15 +26,14 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
   // Generate screenshot for each portfolio website that has configuration
   await Promise.all(
     websiteConfigFilePaths.map(async (websiteConfigFilePath) => {
-      const websiteName = path.basename(websiteConfigFilePath, '.json');
+      const websiteName = path.basename(websiteConfigFilePath, '.md');
 
       const websiteConfigFileContents = await fs.readFile(websiteConfigFilePath, 'utf8');
 
-      const websiteEntry = JSON.parse(websiteConfigFileContents) as WebsiteEntry;
-      const websiteImagePath = path.join(
-        WEBSITE_IMAGE_DIR,
-        `${websiteName}.${WEBSITE_IMAGE_EXTENSION}`
-      );
+      const websiteEntry = parseEntryDataFromString(
+        websiteConfigFilePath,
+        websiteConfigFileContents
+      ) as WebsiteEntry;
 
       const page = await browser.newPage();
       // Enable P3 colors
@@ -54,7 +54,11 @@ async function generateScreenshots(websiteConfigFilePaths: string[]): Promise<vo
 
       return page
         .screenshot({
-          path: websiteImagePath,
+          // I would like to use path.join() here, however path.join() returns
+          // string Puppeteer's types require that the suffix be either .jpeg,
+          // .png, or .webp; therefore, we must construct the path manually to
+          // ensure that the type of the string literal passes through correctly
+          path: `${WEBSITE_IMAGE_DIR}${path.sep}${websiteName}.${WEBSITE_IMAGE_EXTENSION}`,
           type: 'jpeg',
           quality: WEBSITE_IMAGE_QUALITY
         })
@@ -77,7 +81,7 @@ async function main(): Promise<void> {
   // every file in the /src/websites directory
   let websiteConfigFilePaths = process.argv.slice(2);
   if (websiteConfigFilePaths.length === 0) {
-    websiteConfigFilePaths = await glob('src/websites/*.json');
+    websiteConfigFilePaths = await glob('src/websites/*.md');
   }
   generateScreenshots(websiteConfigFilePaths);
 }
