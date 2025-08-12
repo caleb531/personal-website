@@ -1,0 +1,6 @@
+---
+title: 2FA Code Generator
+direct_url: https://projects.calebevans.me/2fa-code-generator/
+category: tools
+description: Have a handwritten 2FA secret? This is a safe place to generate a code from it!
+---

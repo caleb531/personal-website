@@ -1,6 +1,6 @@
 <script lang="ts">
   import Entry from '$routes/(entries)/Entry.svelte';
-  import EntryDesc from '$routes/(entries)/EntryDesc.svelte';
+  import EntryContent from '$routes/(entries)/EntryContent.svelte';
   import EntryImage from '$routes/(entries)/EntryImage.svelte';
   import EntryMain from '$routes/(entries)/EntryMain.svelte';
   import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
@@ -38,6 +38,6 @@
     <!-- Because the entry content is coming directly from static JSON files and
     is not sourced from user input, there is no XSS risk -->
     <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-    <EntryDesc>{@html website.content}</EntryDesc>
+    <EntryContent>{@html website.content}</EntryContent>
   </EntryMain>
 </Entry>

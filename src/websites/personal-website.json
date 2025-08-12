@@ -1,8 +1,0 @@
-{
-  "title": "Personal Website",
-  "direct_url": "https://calebevans.me/",
-  "technologies": "Svelte + SvelteKit, HTML5, Sass",
-  "start_year": 2013,
-  "end_year": null,
-  "content": "I created this site (the site you're currently viewing) in 2013 after several disappointing attempts to create an aesthetically-pleasing personal website for myself. After much thought and planning, I ultimately settled on a flat, light-on-dark design which utilized translucency and color. I also hand-crafted a whole host of icons to showcase my projects on the site. Since then, I've rewritten the site five times (WordPress, Jekyll, Gatsby, NextJS, and now SvelteKit) and continue to revise it as I make it a fitting home for my presence on the internet."
-}

@@ -1,0 +1,6 @@
+---
+title: rollup-plugin-peggy
+direct_url: https://github.com/caleb531/rollup-plugin-peggy
+category: rollup-plugins
+description: A fork of [rollup-plugin-pegjs](https://www.npmjs.com/package/rollup-plugin-pegjs) that uses PEG.js's successor, Peggy
+---

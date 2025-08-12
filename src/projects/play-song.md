@@ -1,0 +1,6 @@
+---
+title: Play Song
+direct_url: https://alfred.app/workflows/caleb531/play-song/
+category: alfred
+description: Play songs, artists, and more in Apple Music with few keystrokes
+---

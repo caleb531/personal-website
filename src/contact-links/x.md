@@ -1,0 +1,5 @@
+---
+title: Twitter / X
+direct_url: https://twitter.com/caleb531
+description: Follow me for updates on my projects and interesting things I find on the Web
+---

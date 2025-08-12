@@ -1,6 +1,7 @@
 import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types.ts';
 import { marked } from 'marked';
 import path from 'node:path';
+import YAML from 'yaml';
 
 type EntryType = 'contact_link' | 'project' | 'website';
 type GlobMap = Record<string, () => Promise<unknown>>;
@@ -19,9 +20,9 @@ const entryTypeToDirName: Record<EntryType, string> = {
 // the filepath and the value is a function which returns the project details as
 // JSON)
 const entriesByType: EntriesByTypeMap = {
-  contact_link: import.meta.glob('$src/contact-links/*.json', { query: '?raw', import: 'default' }),
-  project: import.meta.glob('$src/projects/*.json', { query: '?raw', import: 'default' }),
-  website: import.meta.glob('$src/websites/*.json', { query: '?raw', import: 'default' })
+  contact_link: import.meta.glob('$src/contact-links/*.md', { query: '?raw', import: 'default' }),
+  project: import.meta.glob('$src/projects/*.md', { query: '?raw', import: 'default' }),
+  website: import.meta.glob('$src/websites/*.md', { query: '?raw', import: 'default' })
 };
 
 // A map where each key name is a specific entry type (e.g. project) and each
@@ -35,23 +36,35 @@ const entryIconsByType: Partial<EntriesByTypeMap> = {
   project: import.meta.glob('$src/images/projects/*.svg', { query: '?url', import: 'default' })
 };
 
+// A regular expression pattern to match the frontmatter of an entry's Markdown
+// file
+const frontmatterPattern = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
+
 // Compute the entry ID from the given path
 function getEntryIdFromPath(entryPath: string) {
   return path.basename(entryPath, path.extname(entryPath));
 }
 
-// Return an object of the specified fields within the entry data, where the key
-// name is that field ID, and the value is the value from the given entry
-// object, interpreted as Markdown and converted to HTML
-function parseFieldsAsMarkdownIntoHTML(
-  entry: Omit<Entry, 'id'>,
-  fields: (keyof Omit<Entry, 'id'>)[]
-): object {
-  return Object.fromEntries(
-    fields.map((field) => {
-      return [field, marked.parseInline(String(entry[field]))];
-    })
-  );
+// Parse the given Markdown string into an object of entry data, combining both
+// the frontmatter from the Markdown file and the remaining Markdown content
+// (after the frontmatter)
+function parseEntryDataFromString(entryPath: string, entryContent: string): Omit<Entry, 'id'> {
+  const match = entryContent.match(frontmatterPattern);
+  if (!match) {
+    throw new Error(`Entry does not contain frontmatter: ${entryPath}`);
+  }
+  const fm = match ? (YAML.parse(match[1]) ?? {}) : {};
+  const md = match ? entryContent.slice(match[0].length) : entryContent;
+  const html = String(marked.parse(md)).trim();
+  return {
+    ...fm,
+    content: html,
+    // If entry has a 'content' or 'description' property, parse the value as
+    // Markdown and convert it to HTML; marked.parseInline() ensures there is no
+    // <p> tag wrapper around the formatted value
+    ...(fm.description ? { description: marked.parseInline(fm.description) } : {}),
+    ...(fm.content ? { content: marked.parse(fm.content) } : {})
+  };
 }
 
 // Retrieve a list of entries for the given entry type, optionally specifying a
@@ -69,16 +82,15 @@ export async function getEntries<SubEntry extends Entry>(
       const entryIconUrl = entryIconMap?.[entryIconPath]
         ? await entryIconMap[entryIconPath]()
         : null;
-      const entryData = JSON.parse(String(await getEntryContents())) as Omit<SubEntry, 'id'>;
+      const entryData = parseEntryDataFromString(
+        entryPath,
+        String(await getEntryContents())
+      ) as Omit<SubEntry, 'id'>;
       return {
         id: entryId,
         ...entryData,
         // If entry has an icon, add its URL to the object
-        ...(entryIconUrl ? { iconUrl: entryIconUrl } : {}),
-        // If entry has a 'content' or 'description' property, parse the value
-        // as Markdown and convert it to HTML (parseInline ensures there is no
-        // <p> tag wrapper around the formatted value)
-        ...parseFieldsAsMarkdownIntoHTML(entryData, ['content', 'description'])
+        ...(entryIconUrl ? { iconUrl: entryIconUrl } : {})
       } as SubEntry;
     })
   );

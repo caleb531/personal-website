@@ -1,0 +1,6 @@
+---
+title: Inflection Point
+direct_url: https://projects.calebevans.me/inflection-point/
+category: games
+description: A rhythmic maze game involving strategic timing and unexpected twists
+---

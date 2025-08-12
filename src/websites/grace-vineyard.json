@@ -1,8 +1,0 @@
-{
-  "title": "Grace Vineyard",
-  "direct_url": "https://gracevcf.org/",
-  "technologies": "WordPress + Underscores, PHP, HTML5, Sass, JS",
-  "start_year": 2017,
-  "end_year": null,
-  "content": "I created this WordPress site for one of my former churches. The previous site was created in the 90s, yet the needs of the church grew to be far beyond what that site could provide. With this new website, I decided to build on WordPress and use the Underscores theme starter for a solid foundation. The site includes a host of customizations for podcast feeds, announcements, and giving."
-}
