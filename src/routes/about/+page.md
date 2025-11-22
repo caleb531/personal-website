@@ -1,61 +1,61 @@
-### Who are you?
+I'm Caleb Evans, a web developer based in Carlsbad, California. My professional
+career spans the past nine years, although I've been creating for the web since 2010. During that time, I've delivered large e-commerce platforms serving tens
+of thousands of users, as well as sophisticated enterprise rebate systems for
+customers like Pfizer and Novartis. Outside of my professional work, you'll
+still find me contributing to open source and exploring the boundaries of
+generative AI in software. I also enjoy spending time with family and friends,
+whether it's over a pizza lunch or a thought-provoking sci-fi thriller.
 
-I'm Caleb Evans, a web developer based in Carlsbad, California. My passions
-include programming, spending time with family and friends, enjoying movies,
-trampolining, and savoring quality pizza.
+### From Curiosity to Craft
 
-### What do you do?
+My journey began with the simple thrill of taking my ideas and making them real.
+That curiosity matured into a discipline: more than 60 personal projects—some
+earning hundreds of GitHub stars and active users—helped me develop a
+versatility to tackle technical and UX challenges across a wide variety of
+domains.
 
-Since 2010, I have been engaged in programming (particularly web development)
-for professional, academic, and personal pursuits. My portfolio includes a wide
-range of web applications and tools, many designed to automate repetitive tasks,
-and others created purely for enjoyment. With a Bachelor's degree in Computer
-Science under my belt, I aim to build apps that are enjoyable, functional, and
-high-quality.
+### Faith & Purpose
 
-### Why do you code?
+I code for Christ—my Lord, Friend, and Savior—through the conviction that my
+expression of creativity can be an act of worship. If an application I build
+reduces friction, empowers a team, or lightens a user's cognitive load, then I
+have glorified Him by creating an experience that is enjoyable and useful.
 
-Besides the fact that I'm deeply passionate about programming, I strive to code
-for Christ, who walks with me as my Lord, Friend, and Savior. I believe the work
-of my hands glorifies God through the creativity I express and the lives
-enriched by my projects.
+### Languages & Tools
 
-### How many languages do you speak?
+By far, I am most fluent in the languages of modern web development:
+TypeScript/JavaScript, HTML, CSS, and Node. I've spent significant time with
+React, although I greatly enjoy working with Svelte+SvelteKit for my more recent
+projects (including this website!). Besides the web, I enjoy programming in
+Python for productivity scripts and Alfred workflows.
 
-I am fluent in HTML5, CSS/Sass, and TypeScript, and everything in-between: Node,
-PHP, even MySQL. Additionally, I am well-versed in Python and regularly use Bash
-to enhance my development workflow.
+### Preferences
 
-### What is your favorite language?
+#### Editor
 
-If I had to choose one, my favorite language would be TypeScript due to its
-comprehensive type system, helping me catch more bugs in the moment, and overall
-making my code feel more robust. Plus, I thoroughly enjoy working with the
-expressive ES6 language features like async/await, destructuring, and optional
-chaining.
+My editor of choice is unsurprisingly [VS Code][vscode] for its performance,
+rich extension ecosystem, and TypeScript ergonomics (my full setup lives in
+[dotfiles][dotfiles]). I used [Atom][atom] for many years, but when its future
+became uncertain, I spent a few months of concerted effort to migrate my
+workflow to VS Code. Years later, I couldn't be happier with my setup,
+especially with the integration of GitHub Copilot for more productive
+development and conceptualization.
 
-### What is your code editor of choice?
+#### Tabs vs. Spaces
 
-For many years, I used [Atom][atom]. However, I now prefer [VS Code][vscode] for
-its powerful feature set, excellent TypeScript support, and impressive
-performance. You can find all of my VS Code configuration in my public
-[dotfiles][dotfiles] repository.
+Regarding the question of tabs vs. spaces, I lean toward clarity over dogma—VS
+Code's "Sticky Tab Stops" setting enables predictable behavior for spaces, so I
+tend to follow the indentation convention for whichever language I'm writing.
+
+#### AI
+
+When I need to tackle, for example, massive and unwieldy refactors, I reach for
+GitHub Copilot with GPT-5 Codex. After much experimentation—and some
+disheartening experiences with Sonnet 4.5—I've found Codex to be the most
+consistently effective model with an impressive understanding of intent. Of
+course, I'm eager to test the future models that emerge from this nascent,
+volatile AI-driven market.
 
 [atom]: https://atom.io/
 [vscode]: https://code.visualstudio.com/
 [dotfiles]: https://github.com/caleb531/dotfiles
-
-### Tabs or spaces?
-
-It depends. In VS Code (with the "Sticky Tab Stops" setting enabled), spaces
-behave the same as tabs when used as indentation. This setting gives me the
-freedom to honor the convention of whichever language I'm writing in.
-
-### What's the story behind your project icons?
-
-I designed and crafted every project icon in pure SVG markup. Sure, one might
-say it's insane to write SVGs by hand—and it probably is 😅. But I suppose I
-take pleasure in the precision and portability of handwritten SVGs, partly I
-don't have to be dependent on premium apps like [Sketch][sketch].
-
-[sketch]: https://www.sketch.com/
