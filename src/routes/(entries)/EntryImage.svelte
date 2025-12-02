@@ -11,6 +11,7 @@
   let { href, title = '', hiddenFromAccessibility = false, children }: Props = $props();
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
 <a
   class="entry-image"
   {href}
@@ -22,3 +23,4 @@
     {@render children()}
   {/if}
 </a>
+<!-- eslint-enable svelte/no-navigation-without-resolve -->
