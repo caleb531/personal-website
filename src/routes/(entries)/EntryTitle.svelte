@@ -11,6 +11,7 @@
 </script>
 
 <svelte:element this={type} class="entry-title">
+  <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
   <a {href}
     >{#if children}
       {@render children()}

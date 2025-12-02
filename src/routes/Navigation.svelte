@@ -55,6 +55,7 @@
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
         <!-- The tabindex attribute is necessary to allow the link to receive
         focus when clicked in Safari -->
+        <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
         <a href={navigationLink.url} tabindex={0}>
           {navigationLink.title}
         </a>

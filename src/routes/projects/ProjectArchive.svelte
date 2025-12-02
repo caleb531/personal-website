@@ -122,9 +122,11 @@
     {/if}
   </div>
   <div class="project-category-columns" aria-live="polite" aria-atomic="true">
-    {#each projectMetadata.categoriesByColumn as categories}
+    <!-- The categories are not named; they are puely indexed-based, so it's
+    actually correct to use the index as the key here -->
+    {#each projectMetadata.categoriesByColumn as categories, categoryIndex (categoryIndex)}
       <div class="project-category-column">
-        {#each categories as category}
+        {#each categories as category (category.id)}
           <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
         {/each}
       </div>
