@@ -12,7 +12,7 @@ button {
 input,
 textarea {
   &:focus-visible {
-    outline-width: 0;
+    outline: none;
     border-color: var(--color-focus-inner);
     box-shadow:
       0 0 0 1px var(--color-focus-inner),
