@@ -12,9 +12,9 @@
   let { projects, category }: Props = $props();
 
   // Promote some projects to the top of the list
-  const topProjectsSet = new Set(category.topProjects);
+  const topProjectsSet = $derived(new Set(category.topProjects));
   // Demote some projects to the end of the list
-  const bottomProjectsSet = new Set(category.bottomProjects);
+  const bottomProjectsSet = $derived(new Set(category.bottomProjects));
   let projectsById: Record<string, ProjectEntry> = $derived(
     keyBy(projects, (project) => project.id)
   );
