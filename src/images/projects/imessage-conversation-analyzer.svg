@@ -11,10 +11,10 @@
     <!-- first bar -->
     <rect x="0" y="0" width="20" height="80" />
     <!-- second bar -->
-    <rect x="30" y="20" width="20" height="60" />
+    <rect x="30" y="60" width="20" height="20" />
     <!-- third bar -->
-    <rect x="60" y="40" width="20" height="40" />
+    <rect x="60" y="20" width="20" height="60" />
     <!-- fourth bar -->
-    <rect x="90" y="60" width="20" height="20" />
+    <rect x="90" y="40" width="20" height="40" />
   </g>
 </svg>
