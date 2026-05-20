@@ -54,18 +54,5 @@
     "vite-imagetools": "^10.0.0",
     "vite-plugin-image-optimizer": "^2.0.3",
     "yaml": "^2.9.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "cookie@<0.7.0": ">=0.7.0",
-      "esbuild@<=0.24.2": ">=0.25.0",
-      "prismjs@<1.30.0": ">=1.30.0"
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "puppeteer",
-      "sharp"
-    ]
   }
 }
