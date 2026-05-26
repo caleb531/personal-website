@@ -12,7 +12,16 @@
   }
 
   let { project }: Props = $props();
-  let transition = $derived(getProjectArchiveOptions().transition);
+  const projectOptions = getProjectArchiveOptions();
+  // Svelte 5.55.3 started freezing deriveds whose owner effects are
+  // destroyed/inert. Project cards can remain in the DOM while outroing after a
+  // search removes them, so a local `$derived(projectOptions.transition)` would
+  // belong to the outgoing card and warn as `derived_inert` when Svelte later
+  // reads the transition. Keep this as a plain callback instead: it gives the
+  // transition directive a stable function without latching onto
+  // `noopTransition` as the initial transition value, and it reads the
+  // archive-owned getter only when the transition actually starts.
+  const transition = (node: Element) => projectOptions.transition(node);
 </script>
 
 <Entry type="project" id={project.id} {transition}>
