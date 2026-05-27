@@ -50,15 +50,14 @@ a {
   }
 }
 
-// Style strong text with a highlighter aesthetic
+// Style strong text as an accent without changing the text's footprint
 strong {
   margin-right: 1px;
-  padding: 1px 5px;
-  border-radius: 3px;
-  background-color: var(--color-strong);
+  padding: 0;
+  background-color: transparent;
   font-weight: var(--font-weight-bold);
   letter-spacing: -1px;
-  color: var(--color-main-background);
+  color: var(--color-strong);
 }
 // Style semantically-neutral bold text as simply colored text
 b {

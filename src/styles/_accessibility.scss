@@ -19,15 +19,12 @@ button {
 }
 input,
 textarea {
+  transition-property: border-color;
+  transition-duration: var(--focus-transition-duration);
+  transition-timing-function: var(--focus-transition-timing-function);
   &:focus-visible {
     outline: none;
     border-color: var(--color-focus-inner);
-    box-shadow:
-      0 0 0 1px var(--color-focus-inner),
-      0 0 0 3px var(--color-focus-outer);
-    transition-property: opacity, box-shadow;
-    transition-duration: var(--focus-transition-duration);
-    transition-timing-function: var(--focus-transition-timing-function);
   }
 }
 .entry-image {

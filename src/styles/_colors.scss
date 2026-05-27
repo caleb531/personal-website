@@ -10,32 +10,99 @@
   --color-blue-mid: hsl(203.48 100% 30%);
   --color-blue-dark: hsl(202.55 100% 26%);
   --color-turquoise: hsl(192.79 100% 49%);
-  --color-green: hsl(72.01 100% 49%);
+  --color-green-dark: hsl(97, 60%, 37%);
+  --color-green-light: hsl(101, 56%, 56%);
   --color-white: hsl(0, 0%, 100%);
+  --color-off-white: hsl(210, 40%, 95%);
+  --color-navy-950: hsl(217, 53%, 8%);
+  --color-navy-900: hsl(216, 48%, 11%);
+  --color-navy-850: hsl(216, 42%, 14%);
+  --color-navy-800: hsl(216, 35%, 18%);
+  --color-slate-700: hsl(217, 16%, 36%);
+  --color-slate-500: hsl(216, 15%, 56%);
+  --color-slate-300: hsl(215, 24%, 82%);
+  --color-slate-200: hsl(214, 30%, 91%);
+  --color-blue: hsl(215, 92%, 56%);
+  --color-blue-soft: hsl(211, 100%, 96%);
+  --color-blue-bright: hsl(215, 100%, 62%);
+  --color-turquoise-bright: hsl(199, 95%, 62%);
+  --color-cool-white: hsl(210, 55%, 95%);
+  --color-text-dark: hsl(220, 49%, 13%);
+  --color-text-light: hsl(217, 38%, 91%);
 
-  --color-shadow-light: hsla(0, 0%, 0%, 0.3);
-  --color-shadow-medium: hsla(0, 0%, 0%, 0.5);
-  --color-shadow-dark: hsla(0, 0%, 0%, 0.7);
+  --color-white-alpha-92: hsla(0, 0%, 100%, 0.92);
+  --color-white-alpha-88: hsla(0, 0%, 100%, 0.88);
+  --color-white-alpha-82: hsla(0, 0%, 100%, 0.82);
+  --color-slate-200-alpha-85: hsla(214, 30%, 78%, 0.85);
+  --color-slate-300-alpha-18: hsla(215, 24%, 82%, 0.18);
+  --color-slate-300-alpha-26: hsla(215, 24%, 82%, 0.26);
+  --color-navy-950-alpha-94: hsla(217, 53%, 8%, 0.94);
+  --color-navy-900-alpha-88: hsla(216, 48%, 11%, 0.88);
+  --color-navy-900-alpha-78: hsla(216, 48%, 11%, 0.78);
+  --color-navy-800-alpha-78: hsla(216, 35%, 18%, 0.78);
+  --color-navy-800-alpha-72: hsla(216, 35%, 18%, 0.72);
+  --color-navy-shadow-light: hsla(215, 32%, 18%, 0.1);
+  --color-navy-shadow-medium: hsla(215, 34%, 12%, 0.18);
+  --color-navy-shadow-dark: hsla(215, 40%, 8%, 0.28);
+  --color-black-alpha-28: hsla(0, 0%, 0%, 0.28);
+  --color-black-alpha-44: hsla(0, 0%, 0%, 0.44);
+  --color-black-alpha-62: hsla(0, 0%, 0%, 0.62);
 
   // Use more vibrant colors on displays that support a p3-based color gamut
   @media (color-gamut: p3) {
     --color-blue-light: oklch(51.09% 0.151 240.76);
     --color-blue-mid: oklch(46.09% 0.143 246.71);
     --color-blue-dark: oklch(42.79% 0.139 244.79);
-    --color-green: oklch(92.21% 0.259 123.09);
+    --color-green: oklch(0.7838 0.2393 149.57);
     --color-turquoise: oklch(76.76% 0.163 226.17);
+    --color-blue: oklch(59.9% 0.219 260.59);
+    --color-blue-soft: oklch(97.52% 0.024 237.71);
+    --color-blue-bright: oklch(64.5% 0.225 260.42);
+    --color-turquoise-bright: oklch(75.23% 0.141 231.53);
   }
 }
 
 :root {
   // Semantic colors
-  --color-body-background-start: var(--color-blue-light);
-  --color-body-background-end: var(--color-blue-mid);
-  --color-main-background: var(--color-blue-dark);
-  --color-accent: var(--color-green);
-  --color-text: var(--color-white);
+  --color-body-background-start: var(--color-off-white);
+  --color-body-background-end: var(--color-cool-white);
+  --color-header-background: var(--color-white-alpha-92);
+  --color-main-background: var(--color-white-alpha-88);
+  --color-card-background: var(--color-white-alpha-82);
+  --color-card-background-subtle: var(--color-blue-soft);
+  --color-card-border: var(--color-slate-200-alpha-85);
+  --color-entry-background: var(--color-off-white);
+  --color-accent: var(--color-green-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-muted: var(--color-slate-700);
   --color-link: var(--color-accent);
   --color-strong: var(--color-accent);
-  --color-focus-inner: var(--color-blue-mid);
-  --color-focus-outer: var(--color-turquoise);
+  --color-input-background: var(--color-white);
+  --color-input-border: var(--color-slate-300);
+  --color-input-placeholder: var(--color-slate-700);
+  --color-icon-surface: var(--color-blue);
+  --color-focus-inner: var(--color-blue-bright);
+  --color-focus-outer: var(--color-blue-bright);
+  --color-shadow-light: var(--color-navy-shadow-light);
+  --color-shadow-medium: var(--color-navy-shadow-medium);
+  --color-shadow-dark: var(--color-navy-shadow-dark);
+
+  @media (prefers-color-scheme: dark) {
+    --color-body-background-start: var(--color-navy-950);
+    --color-body-background-end: var(--color-navy-900);
+    --color-header-background: var(--color-navy-950-alpha-94);
+    --color-main-background: var(--color-navy-900-alpha-88);
+    --color-card-background: var(--color-navy-900-alpha-78);
+    --color-card-background-subtle: var(--color-navy-800-alpha-78);
+    --color-card-border: var(--color-slate-300-alpha-18);
+    --color-text: var(--color-text-light);
+    --color-text-muted: var(--color-slate-300);
+    --color-accent: var(--color-green-light);
+    --color-input-background: var(--color-navy-800-alpha-72);
+    --color-input-border: var(--color-slate-300-alpha-26);
+    --color-input-placeholder: var(--color-slate-300);
+    --color-shadow-light: var(--color-black-alpha-28);
+    --color-shadow-medium: var(--color-black-alpha-44);
+    --color-shadow-dark: var(--color-black-alpha-62);
+  }
 }

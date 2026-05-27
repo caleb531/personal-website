@@ -15,14 +15,16 @@ input[type='url'] {
   -webkit-appearance: none;
   appearance: none;
   padding: 8px 10px;
+  color: var(--color-text);
+  background-color: var(--color-input-background);
   background-clip: padding-box;
-  border: solid 2px var(--color-shadow-light);
+  border: solid 2px var(--color-input-border);
   border-radius: 8px;
   font-family: inherit;
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   &::placeholder {
-    color: var(--color-gray-dark);
+    color: var(--color-input-placeholder);
   }
 }
 .search-input-container {
@@ -30,6 +32,25 @@ input[type='url'] {
   position: relative;
   width: fit-content;
   align-items: center;
+  color: var(--color-input-placeholder);
+  &::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    background-color: currentColor;
+    -webkit-mask-image: url('/src/images/search.svg');
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-image: url('/src/images/search.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    pointer-events: none;
+  }
   // Hide search input when JavaScript is disabled (source:
   // <https://ryanmulligan.dev/blog/detect-js-support-in-css/>)
   @media (scripting: none) {
@@ -40,10 +61,7 @@ input[type='search'] {
   --search-input-padding-h: 34px;
   padding-left: var(--search-input-padding-h);
   padding-right: var(--search-input-padding-h);
-  background-image: url('/src/images/search.svg');
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-position: left 9px center;
+  box-shadow: 0 5px 14px var(--color-shadow-light);
   // Hide Cancel (X) button on search fields
   &::-webkit-search-cancel-button {
     display: none;
@@ -63,10 +81,10 @@ input[type='search'] {
     display: none;
   }
   &:hover {
-    background-color: var(--color-gray-light);
+    background-color: var(--color-card-background-subtle);
   }
   &:hover:active {
-    background-color: var(--color-gray-mid);
+    background-color: var(--color-card-border);
   }
   img {
     --icon-size: 20px;
