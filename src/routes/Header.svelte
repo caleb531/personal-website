@@ -1,8 +1,8 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import site from '$data/site.json';
-  import portraitRetina from '$images/self-portrait-v6.jpg?w=120&imagetools';
-  import portrait from '$images/self-portrait-v6.jpg?w=60&imagetools';
+  import portraitRetina from '$images/self-portrait-v7.jpg?w=120&imagetools';
+  import portrait from '$images/self-portrait-v7.jpg?w=60&imagetools';
   import Navigation from '$routes/Navigation.svelte';
 
   const headerImageSize = 60;
