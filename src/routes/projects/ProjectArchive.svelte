@@ -69,20 +69,17 @@
   // CLS issue at the time of hydration, so we need to set a noop transition
   // initially and only set the actual transition when the component mounts
   let isMounted = new MountObserver();
-  let transition = $derived(
-    isMounted.current && !prefersReducedMotion.current ? projectFadeSlide : noopTransition
-  );
-  let projectOptions: ProjectOptions = $state({
-    // Because of the way JavaScript works, we need to use a getter to ensure
-    // that the derived value remains dynamic and updates when the transition
-    // changes; if we were to use a plain value, the derived value would be set
-    // to the initial value and never update (for more details, see
-    // <https://svelte.dev/docs/svelte/compiler-warnings#state_referenced_locally>
-    // and <https://www.youtube.com/watch?v=NR8L5m73dtE>)
-    get transition() {
-      return transition;
-    }
-  });
+  // Keep this as a callback instead of a `$derived`, since Svelte 5.55.3
+  // started freezing deriveds whose owner effects are destroyed/inert. The
+  // archive can become inert while page navigation outros are still reading
+  // project transitions, so the transition needs to compute from the current
+  // state at call time without belonging to the outgoing archive effect.
+  const transition = (node: Element) => {
+    return isMounted.current && !prefersReducedMotion.current
+      ? projectFadeSlide(node)
+      : noopTransition(node);
+  };
+  const projectOptions: ProjectOptions = { transition };
   setProjectArchiveOptions(projectOptions);
 </script>
 

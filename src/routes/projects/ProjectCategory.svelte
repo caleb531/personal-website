@@ -48,7 +48,7 @@
   // reads the transition. Keep this as a plain callback instead: it gives the
   // transition directive a stable function without latching onto
   // `noopTransition` as the initial transition value, and it reads the
-  // archive-owned getter only when the transition actually starts.
+  // archive-owned transition callback only when the transition actually starts.
   const transition = (node: Element) => projectOptions.transition(node);
 </script>
 
