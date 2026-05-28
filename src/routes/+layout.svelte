@@ -7,9 +7,7 @@
   import { pageFade, pageFadeDuration } from '$routes/transitions';
 
   import '$src/styles/index.scss';
-  import '@fontsource/source-sans-pro/300.css';
-  import '@fontsource/source-sans-pro/400.css';
-  import '@fontsource/source-sans-pro/600.css';
+  import '@fontsource-variable/roboto-flex/index.css';
   let { data, children } = $props();
 
   // SvelteKit doesn't currently support adding data-* attributes (or class

@@ -4,13 +4,13 @@
 :root {
   // Basic font characteristics
   --font-family-sans-serif:
-    'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    'Roboto Flex Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
-  --font-weight-light: 300;
+  --font-weight-light: 200;
   --font-weight-normal: 400;
-  --font-weight-bold: 600;
-  --line-height-m: 1.3;
-  --line-height-l: 1.4;
+  --font-weight-bold: 500;
+  --line-height-m: 1.4;
+  --line-height-l: 1.5;
 
   // Base font size
   $font-size-base: 16px;
@@ -31,14 +31,14 @@
   --font-size-xxxl: #{px-to-rem(20px)};
 
   // Element-specific font sizes
-  --font-size-p: #{px-to-rem(22px)};
-  --font-size-h4: #{px-to-rem(24px)};
-  --font-size-h3: #{px-to-rem(30px)};
-  --font-size-h2: #{px-to-rem(42px)};
+  --font-size-p: #{px-to-rem(20px)};
+  --font-size-h4: #{px-to-rem(22px)};
+  --font-size-h3: #{px-to-rem(26px)};
+  --font-size-h2: #{px-to-rem(40px)};
   --font-size-h1: #{px-to-rem(46px)};
   --font-size-site-title: #{px-to-rem(32px)};
   --font-size-home-intro: #{px-to-rem(32px)};
   --font-size-home-intro-hybrid: #{px-to-rem(28px)};
   --font-size-home-intro-compact: #{px-to-rem(26px)};
-  --font-size-entry-desc: #{px-to-rem(20px)};
+  --font-size-entry-desc: #{px-to-rem(18px)};
 }

@@ -24,10 +24,9 @@
   }
 }
 .home-intro-photo {
-  width: clamp(150px, 22vw, 230px);
-  height: clamp(150px, 22vw, 230px);
+  width: auto;
+  height: clamp(150px, 22vw, 180px);
   border-radius: 12px;
-  object-fit: cover;
   box-shadow: 0 10px 24px var(--color-shadow-medium);
 }
 .home-intro-right > p {
