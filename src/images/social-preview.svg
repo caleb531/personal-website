@@ -6,7 +6,7 @@
   <g transform="translate(100, 65)">
 
     <!-- website title and subtitle -->
-    <g font-family="Roboto" text-anchor="start" font-weight="600" fill="#39f">
+    <g font-family="Roboto" text-anchor="start" font-weight="600" fill="#6ca540">
       <text x="220" y="84" font-size="100">Caleb Evans</text>
       <text x="225" y="158" font-size="56">Coder for Christ</text>
     </g>
