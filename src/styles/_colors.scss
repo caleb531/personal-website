@@ -64,45 +64,26 @@
 
 :root {
   // Semantic colors
-  --color-body-background-start: var(--color-off-white);
-  --color-body-background-end: var(--color-cool-white);
-  --color-header-background: var(--color-white-alpha-92);
-  --color-main-background: var(--color-white-alpha-88);
-  --color-card-background: var(--color-white-alpha-82);
-  --color-card-background-subtle: var(--color-blue-soft);
-  --color-card-border: var(--color-slate-200-alpha-85);
+  --color-body-background-start: var(--color-navy-950);
+  --color-body-background-end: var(--color-navy-900);
+  --color-header-background: var(--color-navy-950-alpha-94);
+  --color-main-background: var(--color-navy-900-alpha-88);
+  --color-card-background: var(--color-navy-900-alpha-78);
+  --color-card-background-subtle: var(--color-navy-800-alpha-78);
+  --color-card-border: var(--color-slate-300-alpha-18);
   --color-entry-background: var(--color-off-white);
-  --color-accent: var(--color-green-dark);
-  --color-text: var(--color-text-dark);
-  --color-text-muted: var(--color-slate-700);
+  --color-accent: var(--color-green-light);
+  --color-text: var(--color-text-light);
+  --color-text-muted: var(--color-slate-300);
   --color-link: var(--color-accent);
   --color-strong: var(--color-accent);
-  --color-input-background: var(--color-white);
-  --color-input-border: var(--color-slate-300);
-  --color-input-placeholder: var(--color-slate-700);
+  --color-input-background: var(--color-navy-800-alpha-72);
+  --color-input-border: var(--color-slate-300-alpha-26);
+  --color-input-placeholder: var(--color-slate-300);
   --color-icon-surface: var(--color-blue);
   --color-focus-inner: var(--color-blue-bright);
   --color-focus-outer: var(--color-blue-bright);
-  --color-shadow-light: var(--color-navy-shadow-light);
-  --color-shadow-medium: var(--color-navy-shadow-medium);
-  --color-shadow-dark: var(--color-navy-shadow-dark);
-
-  @media (prefers-color-scheme: dark) {
-    --color-body-background-start: var(--color-navy-950);
-    --color-body-background-end: var(--color-navy-900);
-    --color-header-background: var(--color-navy-950-alpha-94);
-    --color-main-background: var(--color-navy-900-alpha-88);
-    --color-card-background: var(--color-navy-900-alpha-78);
-    --color-card-background-subtle: var(--color-navy-800-alpha-78);
-    --color-card-border: var(--color-slate-300-alpha-18);
-    --color-text: var(--color-text-light);
-    --color-text-muted: var(--color-slate-300);
-    --color-accent: var(--color-green-light);
-    --color-input-background: var(--color-navy-800-alpha-72);
-    --color-input-border: var(--color-slate-300-alpha-26);
-    --color-input-placeholder: var(--color-slate-300);
-    --color-shadow-light: var(--color-black-alpha-28);
-    --color-shadow-medium: var(--color-black-alpha-44);
-    --color-shadow-dark: var(--color-black-alpha-62);
-  }
+  --color-shadow-light: var(--color-black-alpha-28);
+  --color-shadow-medium: var(--color-black-alpha-44);
+  --color-shadow-dark: var(--color-black-alpha-62);
 }
