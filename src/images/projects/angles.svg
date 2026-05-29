@@ -1,17 +1,29 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable angle elements -->
   <defs>
+    <!-- red gradient -->
+    <linearGradient id="angles-red-gradient" x1="120" y1="150" x2="180" y2="235" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="angles-blue-gradient" x1="60" y1="90" x2="260" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
     <path id="angles-arc" d="M 130,160 A 80,80,0,0,1,170,230" />
     <polyline id="angles-path" points="260,240 60,240 190,90" />
   </defs>
   <!-- angle arc -->
   <g fill="none" stroke-linejoin="round">
-    <use xlink:href="#angles-arc" stroke="#e22" stroke-width="32" />
-    <use xlink:href="#angles-arc" stroke="#e22" stroke-width="24" />
+    <use xlink:href="#angles-arc" stroke="url(#angles-red-gradient)" stroke-width="32" />
+    <use xlink:href="#angles-arc" stroke="url(#angles-red-gradient)" stroke-width="24" />
   </g>
   <!-- angle path -->
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <use xlink:href="#angles-path" stroke="#36e" stroke-width="32" />
-    <use xlink:href="#angles-path" stroke="#36e" stroke-width="24" />
+    <use xlink:href="#angles-path" stroke="url(#angles-blue-gradient)" stroke-width="32" />
+    <use xlink:href="#angles-path" stroke="url(#angles-blue-gradient)" stroke-width="24" />
   </g>
 </svg>

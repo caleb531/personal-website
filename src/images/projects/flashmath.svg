@@ -1,18 +1,24 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- green gradient -->
+    <linearGradient id="flashmath-green-gradient" x1="60" y1="100" x2="260" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7fd34c" />
+      <stop offset="52%" stop-color="#66b936" />
+      <stop offset="100%" stop-color="#4b942b" />
+    </linearGradient>
     <line id="flashmath-symbol-line-stroke" x1="-100" y1="0" x2="100" y2="0" />
     <line id="flashmath-symbol-line-fill" x1="-96" y1="0" x2="96" y2="0" />
   </defs>
   <!-- equal sign stroke -->
-  <g stroke="#7d4" stroke-width="40">
+  <g stroke="url(#flashmath-green-gradient)" stroke-width="40">
     <!-- top -->
     <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="120" />
     <!-- bottom -->
     <use xlink:href="#flashmath-symbol-line-stroke" x="160" y="200" />
   </g>
   <!-- equal sign fill -->
-  <g stroke="#7d4" stroke-width="32">
+  <g stroke="url(#flashmath-green-gradient)" stroke-width="32">
     <!-- top -->
     <use xlink:href="#flashmath-symbol-line-fill" x="160" y="120" />
     <!-- bottom -->

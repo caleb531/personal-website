@@ -1,6 +1,12 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- clock gradient -->
+    <linearGradient id="until-clock-gradient" x1="50" y1="50" x2="270" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
     <!-- clock body -->
     <circle id="until-clock-body" cx="160" cy="160" r="110" />
     <!-- clock hands -->
@@ -9,12 +15,12 @@
   <!-- icon elements -->
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- clock element strokes -->
-    <g stroke="#e22" stroke-width="20">
+    <g stroke="url(#until-clock-gradient)" stroke-width="20">
       <use xlink:href="#until-clock-body" />
       <use xlink:href="#until-clock-hands" />
     </g>
     <!-- clock element fills -->
-    <g stroke="#e22" stroke-width="12">
+    <g stroke="url(#until-clock-gradient)" stroke-width="12">
       <use xlink:href="#until-clock-body" />
       <use xlink:href="#until-clock-hands" />
     </g>

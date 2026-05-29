@@ -1,8 +1,28 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- blue gradient -->
+    <linearGradient id="wdtc-blue-gradient" x1="40" y1="50" x2="240" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a3d8ff" />
+      <stop offset="52%" stop-color="#5fb5ff" />
+      <stop offset="100%" stop-color="#2e82d6" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="wdtc-green-gradient" x1="65" y1="165" x2="165" y2="275" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
+    <!-- orange gradient -->
+    <linearGradient id="wdtc-orange-gradient" x1="240" y1="80" x2="280" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffc47a" />
+      <stop offset="52%" stop-color="#ff8f35" />
+      <stop offset="100%" stop-color="#d85d17" />
+    </linearGradient>
+  </defs>
   <!-- letter W -->
-  <polygon points="115,50 85,50 115,150 140,150 160,80 180,150 205,150 235,50 205,50 190,120 175,50 145,50 130,120" fill="#39f" stroke="#39f" stroke-width="4" transform="translate(-45,0)" />
+  <polygon points="115,50 85,50 115,150 140,150 160,80 180,150 205,150 235,50 205,50 190,120 175,50 145,50 130,120" fill="url(#wdtc-blue-gradient)" stroke="url(#wdtc-blue-gradient)" stroke-width="4" transform="translate(-45,0)" />
   <!-- letter T -->
-  <polygon points="40,180 140,180 140,205 105,205 105,290 75,290 75,205 40,205" fill="#7d4" stroke="#7d4" stroke-width="4" transform="translate(25,-15)" />
+  <polygon points="40,180 140,180 140,205 105,205 105,290 75,290 75,205 40,205" fill="url(#wdtc-green-gradient)" stroke="url(#wdtc-green-gradient)" stroke-width="4" transform="translate(25,-15)" />
   <!-- letter C -->
-  <path d="M 270,100 A 20,20 0,0,0 270,260 L 270,235 A 20,20 0,0,1 270,125 Z" fill="#f71" stroke="#f71" stroke-width="4" transform="translate(-10,-20)" />
+  <path d="M 270,100 A 20,20 0,0,0 270,260 L 270,235 A 20,20 0,0,1 270,125 Z" fill="url(#wdtc-orange-gradient)" stroke="url(#wdtc-orange-gradient)" stroke-width="4" transform="translate(-10,-20)" />
 </svg>

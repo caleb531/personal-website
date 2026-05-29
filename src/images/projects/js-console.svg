@@ -1,5 +1,11 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- gray gradient -->
+    <linearGradient id="jsconsole-gray-gradient" x1="50" y1="100" x2="260" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#555555" />
+      <stop offset="52%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#151515" />
+    </linearGradient>
     <!-- angle bracket shown before command -->
     <polyline id="jsconsole-angle-bracket" points="-40,40 40,0 -40,-40" />
     <line id="jsconsole-cursor" x1="-50" y1="0" x2="50" y2="0" />
@@ -8,14 +14,14 @@
     <!-- angle bracket -->
     <g>
       <!-- stroke -->
-      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#333" stroke-width="20" />
+      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="url(#jsconsole-gray-gradient)" stroke-width="20" />
       <!-- fill -->
-      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="#333" stroke-width="12" />
+      <use xlink:href="#jsconsole-angle-bracket" x="100" y="160" stroke="url(#jsconsole-gray-gradient)" stroke-width="12" />
     </g>
     <!-- blinking cursor underline -->
     <g>
-      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#333" stroke-width="20" />
-      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="#333" stroke-width="12" />
+      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="url(#jsconsole-gray-gradient)" stroke-width="20" />
+      <use xlink:href="#jsconsole-cursor" x="210" y="220" stroke="url(#jsconsole-gray-gradient)" stroke-width="12" />
     </g>
   </g>
 </svg>

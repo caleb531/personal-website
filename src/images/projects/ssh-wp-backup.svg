@@ -1,5 +1,22 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- white gradient -->
+    <linearGradient id="swb-white-gradient" x1="80" y1="30" x2="230" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbe5f4" />
+    </linearGradient>
+    <!-- dark gradient -->
+    <linearGradient id="swb-dark-gradient" x1="80" y1="30" x2="230" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#555555" />
+      <stop offset="52%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#151515" />
+    </linearGradient>
+    <!-- teal gradient -->
+    <linearGradient id="swb-teal-gradient" x1="105" y1="210" x2="220" y2="285" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5bc7d2" />
+      <stop offset="52%" stop-color="#33aabb" />
+      <stop offset="100%" stop-color="#1d7d8f" />
+    </linearGradient>
     <!-- download arrow used for stroke and fill -->
     <path id="swb-download-arrow" d="M 120,210 L 120,280 M 100,260 L 120,280 L 140,260" fill="none" stroke-linecap="round" stroke-linejoin="round" />
     <!-- upload arrow used for stroke and fill -->
@@ -8,21 +25,21 @@
   <!-- complete WordPress emblem -->
   <g transform="translate(0,10)">
     <!-- white emblem background -->
-    <circle cx="160" cy="108" r="83" fill="#fff" />
+    <circle cx="160" cy="108" r="83" fill="url(#swb-white-gradient)" />
     <!-- inner circle dark fill -->
-    <circle cx="160" cy="108" r="73" fill="#333" />
+    <circle cx="160" cy="108" r="73" fill="url(#swb-dark-gradient)" />
     <!-- WordPress "W" -->
-    <path d="M 115,80 L 122,80 A 1,1,0,0,0,122,75 L 86,75 A 1,1,0,0,0,86,80 L 92,80 L 130,180 L 140,180 L 160,120 L 180,180 L 190,180 L 220,110 C 230,90 230,80 225,70 A 10,10,0,0,0,200,80 C 210,95 212,105 209,115 L 195,152 L 168,80 L 175,80 A 1,1,0,0,0,175,75 L 138,75 A 1,1,0,0,0,138,80 L 145,80 L 156,110 L 143,150 Z" fill="#fff" clip-path="url(#swb-inner-circle-clip-path)" />
+    <path d="M 115,80 L 122,80 A 1,1,0,0,0,122,75 L 86,75 A 1,1,0,0,0,86,80 L 92,80 L 130,180 L 140,180 L 160,120 L 180,180 L 190,180 L 220,110 C 230,90 230,80 225,70 A 10,10,0,0,0,200,80 C 210,95 212,105 209,115 L 195,152 L 168,80 L 175,80 A 1,1,0,0,0,175,75 L 138,75 A 1,1,0,0,0,138,80 L 145,80 L 156,110 L 143,150 Z" fill="url(#swb-white-gradient)" clip-path="url(#swb-inner-circle-clip-path)" />
     <!-- outer circle dark stroke -->
-    <circle cx="160" cy="108" r="83" fill="none" stroke="#333" stroke-width="4" />
+    <circle cx="160" cy="108" r="83" fill="none" stroke="url(#swb-dark-gradient)" stroke-width="4" />
   </g>
   <!-- arrow strokes -->
-  <g stroke="#3ab" stroke-width="16">
+  <g stroke="url(#swb-teal-gradient)" stroke-width="16">
     <use xlink:href="#swb-download-arrow" />
     <use xlink:href="#swb-upload-arrow" />
   </g>
   <!-- arrow fills -->
-  <g stroke="#3ab" stroke-width="8">
+  <g stroke="url(#swb-teal-gradient)" stroke-width="8">
     <use xlink:href="#swb-download-arrow" />
     <use xlink:href="#swb-upload-arrow" />
   </g>

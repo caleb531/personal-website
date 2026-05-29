@@ -1,4 +1,12 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- primary gradient -->
+    <linearGradient id="romnum-gradient" x1="40" y1="60" x2="280" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5e6070" />
+      <stop offset="52%" stop-color="#33333b" />
+      <stop offset="100%" stop-color="#17171e" />
+    </linearGradient>
+  </defs>
   <!-- roman numeral VI -->
-  <path d="M 40,60 280,60 280,80 40,80 M 40,260 280,260 280,240 40,240 M 75,80 L 120,260 L 140,260 L 185,80 M 165,80 L 130,220 L 95,80 M 215,80 L 215,240 L 235,240 L 235,80 Z" fill="#333" />
+  <path d="M 40,60 280,60 280,80 40,80 M 40,260 280,260 280,240 40,240 M 75,80 L 120,260 L 140,260 L 185,80 M 165,80 L 130,220 L 95,80 M 215,80 L 215,240 L 235,240 L 235,80 Z" fill="url(#romnum-gradient)" />
 </svg>

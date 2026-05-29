@@ -1,11 +1,31 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- red gradient -->
+    <linearGradient id="pegjump-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f16969" />
+      <stop offset="62%" stop-color="#df3030" />
+      <stop offset="100%" stop-color="#bd252b" />
+    </linearGradient>
+    <!-- hole gradient -->
+    <linearGradient id="pegjump-hole-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c4c55" />
+      <stop offset="62%" stop-color="#34343b" />
+      <stop offset="100%" stop-color="#202026" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="pegjump-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67b8ff" />
+      <stop offset="62%" stop-color="#3394f6" />
+      <stop offset="100%" stop-color="#2677d8" />
+    </linearGradient>
+  </defs>
   <!-- icon elements -->
   <g stroke-width="4">
     <!-- top peg -->
-    <circle cx="160" cy="100" r="40" fill="#e22" stroke="#e22" />
+    <circle cx="160" cy="100" r="40" fill="url(#pegjump-red-gradient)" stroke="url(#pegjump-red-gradient)" />
     <!-- left hole -->
-    <circle cx="100" cy="220" r="20" fill="#333" stroke="#333" />
+    <circle cx="100" cy="220" r="20" fill="url(#pegjump-hole-gradient)" stroke="url(#pegjump-hole-gradient)" />
     <!-- right peg -->
-    <circle cx="220" cy="220" r="40" fill="#39f" stroke="#39f" />
+    <circle cx="220" cy="220" r="40" fill="url(#pegjump-blue-gradient)" stroke="url(#pegjump-blue-gradient)" />
   </g>
 </svg>

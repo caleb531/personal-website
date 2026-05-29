@@ -1,16 +1,36 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- calendar gradient -->
+    <linearGradient id="openconference-calendar-gradient" x1="50" y1="50" x2="270" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- page gradient -->
+    <linearGradient id="openconference-page-gradient" x1="60" y1="100" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#f2f6ff" />
+      <stop offset="100%" stop-color="#c8d4ea" />
+    </linearGradient>
+    <!-- video gradient -->
+    <linearGradient id="openconference-video-gradient" x1="90" y1="145" x2="225" y2="215" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+  </defs>
   <!-- calendar -->
   <g>
     <!-- calendar frame -->
-    <rect x="50" y="50" width="220" height="220" rx="10" ry="10" fill="#e22" stroke="#e22" stroke-width="10" />
+    <rect x="50" y="50" width="220" height="220" rx="10" ry="10" fill="url(#openconference-calendar-gradient)" stroke="url(#openconference-calendar-gradient)" stroke-width="10" />
     <!-- calendar inside -->
-    <rect x="60" y="100" width="200" height="160" rx="8" ry="8" fill="#fff" />
+    <rect x="60" y="100" width="200" height="160" rx="8" ry="8" fill="url(#openconference-page-gradient)" />
   </g>
   <!-- conferencing icon -->
   <g>
     <!-- conferencing icon body -->
-    <rect x="90" y="145" width="90" height="70" fill="#36e" rx="16" ry="16" />
+    <rect x="90" y="145" width="90" height="70" fill="url(#openconference-video-gradient)" rx="16" ry="16" />
     <!-- conferencing icon head -->
-    <polygon points="225,150 190,180 225,210" fill="#36e" stroke="#36e" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="225,150 190,180 225,210" fill="url(#openconference-video-gradient)" stroke="url(#openconference-video-gradient)" stroke-width="10" stroke-linejoin="round" />
   </g>
 </svg>

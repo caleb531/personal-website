@@ -1,8 +1,22 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- deep blue gradient -->
+    <linearGradient id="expressions-deep-blue-gradient" x1="80" y1="90" x2="205" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="expressions-blue-gradient" x1="198" y1="56" x2="242" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#85c9ff" />
+      <stop offset="52%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1e66bd" />
+    </linearGradient>
+  </defs>
   <!-- letter e -->
-  <path d="M 185,215 Q 102,240 105,175 L 200,175 Q 205,90 140,90 Q 75,90 80,175 Q 80,265 190,235 Z M 175,155 Q 175,110 140,112 Q 105,110 105,155 Z" fill="#36e" stroke="#36e" stroke-width="4" fill-rule="evenodd" />
+  <path d="M 185,215 Q 102,240 105,175 L 200,175 Q 205,90 140,90 Q 75,90 80,175 Q 80,265 190,235 Z M 175,155 Q 175,110 140,112 Q 105,110 105,155 Z" fill="url(#expressions-deep-blue-gradient)" stroke="url(#expressions-deep-blue-gradient)" stroke-width="4" fill-rule="evenodd" />
   <!-- cutout mask in letter e -->
-  <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="none" stroke="#36e" stroke-width="4" />
+  <use xlink:href="#expressions-letter-e-cutout" x="0" y="0" fill="none" stroke="url(#expressions-deep-blue-gradient)" stroke-width="4" />
   <!-- letter x -->
-  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="#39f" stroke="#39f" stroke-width="3" />
+  <polygon points="198,100 210,100 220,85 230,100 242,100 225,78 242,56 230,56 220,71 210,56 198,56 215,78" fill="url(#expressions-blue-gradient)" stroke="url(#expressions-blue-gradient)" stroke-width="3" />
 </svg>

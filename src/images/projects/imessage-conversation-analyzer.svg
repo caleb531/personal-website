@@ -1,13 +1,26 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- bubble gradient -->
+    <linearGradient id="imessage-bubble-gradient" x1="56" y1="74" x2="242" y2="254" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67d2ff" />
+      <stop offset="52%" stop-color="#2f8cff" />
+      <stop offset="100%" stop-color="#1960d8" />
+    </linearGradient>
+    <!-- bars gradient -->
+    <linearGradient id="imessage-bars-gradient" x1="105" y1="110" x2="215" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dce9ff" />
+    </linearGradient>
+  </defs>
   <!-- message bubble -->
-  <g fill="#39f">
+  <g fill="url(#imessage-bubble-gradient)">
     <!-- bubble tail -->
     <path d="M 180,230 Q 100,270 80,270 Q 100,250 100,220 Z" />
     <!-- bubble head -->
     <ellipse cx="160" cy="150" rx="120" ry="90" />
   </g>
   <!-- bar graph -->
-  <g fill="#fff" transform="translate(105,110)">
+  <g fill="url(#imessage-bars-gradient)" transform="translate(105,110)">
     <!-- first bar -->
     <rect x="60" y="0" width="20" height="80" />
     <!-- second bar -->

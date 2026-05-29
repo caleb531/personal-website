@@ -1,16 +1,40 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- teal gradient -->
+    <linearGradient id="fd-teal-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7fe3bd" />
+      <stop offset="44%" stop-color="#55c999" />
+      <stop offset="100%" stop-color="#31966f" />
+    </linearGradient>
+    <!-- brown gradient -->
+    <linearGradient id="fd-brown-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#df9856" />
+      <stop offset="44%" stop-color="#c8793d" />
+      <stop offset="100%" stop-color="#96562a" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="fd-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8f276" />
+      <stop offset="44%" stop-color="#84dc4f" />
+      <stop offset="100%" stop-color="#5baa36" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="fd-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86ccff" />
+      <stop offset="44%" stop-color="#57aaf0" />
+      <stop offset="100%" stop-color="#3279bd" />
+    </linearGradient>
     <!-- a widget representing a section of the Cross -->
     <rect id="fd-widget" x="-30" y="-30" width="60" height="60" rx="15" ry="15" />
   </defs>
   <g transform="translate(40,40) scale(0.75)">
     <!-- vertical beam (from top to bottom) -->
-    <use xlink:href="#fd-widget" x="160" y="40" fill="#5c9" />
-    <use xlink:href="#fd-widget" x="160" y="120" fill="#b73" />
-    <use xlink:href="#fd-widget" x="160" y="200" fill="#b73" />
-    <use xlink:href="#fd-widget" x="160" y="280" fill="#b73" />
+    <use xlink:href="#fd-widget" x="160" y="40" fill="url(#fd-teal-gradient)" />
+    <use xlink:href="#fd-widget" x="160" y="120" fill="url(#fd-brown-gradient)" />
+    <use xlink:href="#fd-widget" x="160" y="200" fill="url(#fd-brown-gradient)" />
+    <use xlink:href="#fd-widget" x="160" y="280" fill="url(#fd-brown-gradient)" />
     <!-- horizontal beam (from left to right) -->
-    <use xlink:href="#fd-widget" x="80" y="120" fill="#7d4" />
-    <use xlink:href="#fd-widget" x="240" y="120" fill="#39f" />
+    <use xlink:href="#fd-widget" x="80" y="120" fill="url(#fd-green-gradient)" />
+    <use xlink:href="#fd-widget" x="240" y="120" fill="url(#fd-blue-gradient)" />
   </g>
 </svg>

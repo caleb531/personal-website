@@ -1,20 +1,44 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- green gradient -->
+    <linearGradient id="speeddots-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="speeddots-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#85c9ff" />
+      <stop offset="45%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1e66bd" />
+    </linearGradient>
+    <!-- green trail gradient -->
+    <linearGradient id="speeddots-green-trail-gradient" x1="30" y1="80" x2="140" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3e972f" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#c0f285" />
+    </linearGradient>
+    <!-- blue trail gradient -->
+    <linearGradient id="speeddots-blue-trail-gradient" x1="40" y1="200" x2="100" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e66bd" />
+      <stop offset="45%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#85c9ff" />
+    </linearGradient>
     <circle id="speeddots-dot" r="50" stroke-width="4" />
   </defs>
   <!-- green dot -->
-  <use xlink:href="#speeddots-dot" x="200" y="100" fill="#7d4" stroke="#7d4" />
+  <use xlink:href="#speeddots-dot" x="200" y="100" fill="url(#speeddots-green-gradient)" stroke="url(#speeddots-green-gradient)" />
   <!-- blue dot -->
-  <use xlink:href="#speeddots-dot" x="160" y="220" fill="#39f" stroke="#39f" />
+  <use xlink:href="#speeddots-dot" x="160" y="220" fill="url(#speeddots-blue-gradient)" stroke="url(#speeddots-blue-gradient)" />
   <!-- green dot trail (top to bottom) -->
-  <g fill="none" stroke="#7d4" stroke-width="4" stroke-linecap="round">
+  <g fill="none" stroke="url(#speeddots-green-trail-gradient)" stroke-width="4" stroke-linecap="round">
     <line x1="140" y1="80" x2="60" y2="80" />
     <line x1="140" y1="100" x2="90" y2="100" />
     <line x1="140" y1="120" x2="30" y2="120" />
   </g>
   <!-- blue dot trail (top to bottom) -->
-  <g fill="none" stroke="#39f" stroke-width="4" stroke-linecap="round">
+  <g fill="none" stroke="url(#speeddots-blue-trail-gradient)" stroke-width="4" stroke-linecap="round">
     <line x1="100" y1="200" x2="60" y2="200" />
     <line x1="100" y1="220" x2="40" y2="220" />
     <line x1="100" y1="240" x2="80" y2="240" />

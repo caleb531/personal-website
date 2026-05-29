@@ -1,11 +1,29 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- yellow gradient -->
+    <linearGradient id="showdown-yellow-gradient" x1="80" y1="40" x2="240" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffe164" />
+      <stop offset="50%" stop-color="#ffcc22" />
+      <stop offset="100%" stop-color="#d39100" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="showdown-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91e852" />
+      <stop offset="48%" stop-color="#77dd44" />
+      <stop offset="100%" stop-color="#48aa2e" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="showdown-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#668cff" />
+      <stop offset="52%" stop-color="#3366ee" />
+      <stop offset="100%" stop-color="#2444b8" />
+    </linearGradient>
     <path id="showdown-contender" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" stroke-width="4" />
   </defs>
   <!-- lightning bolt -->
-  <polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="#fc2" stroke="#fc2" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="80,280 150,160 170,200 240,40 170,160 150,120" fill="url(#showdown-yellow-gradient)" stroke="url(#showdown-yellow-gradient)" stroke-width="4" stroke-linejoin="round" />
   <!-- top-left green contender -->
-  <use xlink:href="#showdown-contender" x="70" y="100" fill="#7d4" stroke="#7d4" />
+  <use xlink:href="#showdown-contender" x="70" y="100" fill="url(#showdown-green-gradient)" stroke="url(#showdown-green-gradient)" />
   <!-- bottom-right blue contender -->
-  <use xlink:href="#showdown-contender" x="250" y="220" fill="#36e" stroke="#36e" transform="translate(500,0) scale(-1,1)" />
+  <use xlink:href="#showdown-contender" x="250" y="220" fill="url(#showdown-blue-gradient)" stroke="url(#showdown-blue-gradient)" transform="translate(500,0) scale(-1,1)" />
 </svg>

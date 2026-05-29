@@ -1,38 +1,92 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- body gradient -->
+    <linearGradient id="dotfiles-body-gradient" x1="-120" y1="-60" x2="120" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#484852" />
+      <stop offset="48%" stop-color="#33333b" />
+      <stop offset="100%" stop-color="#17171e" />
+    </linearGradient>
+    <!-- titlebar gradient -->
+    <linearGradient id="dotfiles-titlebar-gradient" x1="-120" y1="-85" x2="120" y2="-60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#85899e" />
+      <stop offset="50%" stop-color="#666a7d" />
+      <stop offset="100%" stop-color="#42465a" />
+    </linearGradient>
+    <!-- close gradient -->
+    <linearGradient id="dotfiles-close-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a7a" />
+      <stop offset="58%" stop-color="#e94f4f" />
+      <stop offset="100%" stop-color="#b9282f" />
+    </linearGradient>
+    <!-- minimize gradient -->
+    <linearGradient id="dotfiles-minimize-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe17a" />
+      <stop offset="58%" stop-color="#f4c743" />
+      <stop offset="100%" stop-color="#bf8120" />
+    </linearGradient>
+    <!-- zoom gradient -->
+    <linearGradient id="dotfiles-zoom-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a9eb78" />
+      <stop offset="58%" stop-color="#7dd24b" />
+      <stop offset="100%" stop-color="#438f29" />
+    </linearGradient>
+    <!-- prompt gradient -->
+    <linearGradient id="dotfiles-prompt-gradient" x1="-110" y1="-48" x2="-10" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="48%" stop-color="#e5ebf4" />
+      <stop offset="100%" stop-color="#aeb9ca" />
+    </linearGradient>
+    <!-- ls gradient -->
+    <linearGradient id="dotfiles-ls-gradient" x1="-110" y1="-32" x2="20" y2="-10" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#75e4ff" />
+      <stop offset="48%" stop-color="#31c8f3" />
+      <stop offset="100%" stop-color="#0e6aa4" />
+    </linearGradient>
+    <!-- added gradient -->
+    <linearGradient id="dotfiles-added-gradient" x1="-110" y1="32" x2="50" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b7f083" />
+      <stop offset="48%" stop-color="#7dd24b" />
+      <stop offset="100%" stop-color="#357d25" />
+    </linearGradient>
+    <!-- removed gradient -->
+    <linearGradient id="dotfiles-removed-gradient" x1="-110" y1="16" x2="70" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="48%" stop-color="#e94242" />
+      <stop offset="100%" stop-color="#981927" />
+    </linearGradient>
     <!-- Terminal window body (frame) -->
-    <path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="#333" stroke="#333" id="dotfiles-terminal-body" />
+    <path d="M -120,-60 L -120,60 A 10,10 0,0,0 -110,70 L 110,70 A 10,10 0,0,0 120,60 L 120,-60" fill="url(#dotfiles-body-gradient)" stroke="url(#dotfiles-body-gradient)" id="dotfiles-terminal-body" />
     <!-- Standard window titlebar control -->
     <circle r="5" stroke-width="1" id="dotfiles-terminal-window-control" />
     <!-- Terminal window titlebar -->
     <g id="dotfiles-terminal-titlebar">
       <!-- Titlebar body (frame) -->
-      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="#667" stroke="#667" />
+      <path d="M -120,-60 L 120,-60 L 120,-75 A 10,10 0,0,0 110,-85 L -110,-85 A 10,10 0,0,0 -120,-75 Z" fill="url(#dotfiles-titlebar-gradient)" stroke="url(#dotfiles-titlebar-gradient)" />
       <!-- Window Close button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="#e44" stroke="#e44" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-106" y="-72.5" fill="url(#dotfiles-close-gradient)" stroke="url(#dotfiles-close-gradient)" />
       <!-- Window Minimize button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="#fc3" stroke="#fc3" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-90" y="-72.5" fill="url(#dotfiles-minimize-gradient)" stroke="url(#dotfiles-minimize-gradient)" />
       <!-- Window Zoom button -->
-      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="#7d4" stroke="#7d4" />
+      <use xlink:href="#dotfiles-terminal-window-control" x="-74" y="-72.5" fill="url(#dotfiles-zoom-gradient)" stroke="url(#dotfiles-zoom-gradient)" />
     </g>
     <g id="dotfiles-terminal-text">
       <!-- PS1 interactive prompts -->
-      <g fill="#fff">
+      <g fill="url(#dotfiles-prompt-gradient)">
         <rect x="-110" y="-48" width="60" height="6" />
         <rect x="-110" y="0" width="100" height="6" />
         <rect x="-110" y="48" width="80" height="6" />
       </g>
       <!-- ls output -->
-      <g fill="#3cf">
+      <g fill="url(#dotfiles-ls-gradient)">
         <rect x="-110" y="-32" width="130" height="6" />
         <rect x="-110" y="-16" width="130" height="6" />
       </g>
       <!-- diff added lines -->
-      <g fill="#7d4">
+      <g fill="url(#dotfiles-added-gradient)">
         <rect x="-110" y="32" width="160" height="6" />
       </g>
       <!-- diff removed lines -->
-      <g fill="#e33">
+      <g fill="url(#dotfiles-removed-gradient)">
         <rect x="-110" y="16" width="180" height="6" />
       </g>
     </g>

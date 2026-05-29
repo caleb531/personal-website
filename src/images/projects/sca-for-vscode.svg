@@ -1,6 +1,12 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- red gradient -->
+    <linearGradient id="languagesca-red-gradient" x1="50" y1="50" x2="230" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6262" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#aa1420" />
+    </linearGradient>
     <!-- angle bracket -->
     <g id="languagesca-bracket">
       <polyline points="10,15 -10,0 10,-15" />
@@ -15,12 +21,12 @@
     </g>
   </defs>
   <!-- left SSP tag -->
-  <g fill="none" stroke="#e22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(70, 90) scale(2.5)">
+  <g fill="none" stroke="url(#languagesca-red-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(70, 90) scale(2.5)">
       <use xlink:href="#languagesca-bracket" x="0" y="0" />
       <use xlink:href="#languagesca-percent" x="30" y="0" />
   </g>
   <!-- right SSP tag -->
-  <g fill="none" stroke="#e22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(160, 230) scale(2.5)">
+  <g fill="none" stroke="url(#languagesca-red-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(160, 230) scale(2.5)">
       <use xlink:href="#languagesca-bracket" x="-30" y="0" transform="scale(-1,1)" />
       <use xlink:href="#languagesca-percent" x="0" y="0" />
   </g>

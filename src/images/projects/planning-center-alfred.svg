@@ -1,13 +1,27 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- planning center gradient -->
+    <linearGradient id="planning-center-gradient" x1="70" y1="70" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <!-- hat gradient -->
+    <linearGradient id="planning-center-hat-gradient" x1="80" y1="110" x2="240" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#f2f6ff" />
+      <stop offset="100%" stop-color="#c8d4ea" />
+    </linearGradient>
+  </defs>
   <!-- Planning Center hexagon -->
-  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="#36e" stroke="#36e" stroke-width="50" stroke-linejoin="round" />
+  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="url(#planning-center-gradient)" stroke="url(#planning-center-gradient)" stroke-width="50" stroke-linejoin="round" />
   <!-- Alfred hat -->
-  <g fill="#fff">
+  <g fill="url(#planning-center-hat-gradient)">
     <!-- top -->
-    <ellipse cx="160" cy="160" rx="55" ry="50" fill="#fff" />
+    <ellipse cx="160" cy="160" rx="55" ry="50" />
     <!-- middle -->
     <rect x="105" y="160" width="110" height="40" />
     <!-- bottom -->
-    <ellipse cx="160" cy="185" rx="80" ry="25" fill="#fff" />
+    <ellipse cx="160" cy="185" rx="80" ry="25" />
   </g>
 </svg>

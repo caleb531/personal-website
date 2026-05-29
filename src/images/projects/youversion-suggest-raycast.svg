@@ -1,18 +1,42 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- stripe gradient -->
+    <linearGradient id="raycast-stripe-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff8a72" />
+      <stop offset="48%" stop-color="#ff4f45" />
+      <stop offset="100%" stop-color="#d63235" />
+    </linearGradient>
+    <!-- front gradient -->
+    <linearGradient id="raycast-front-gradient" x1="123.63961031" y1="96.36038969" x2="223.63961031" y2="196.36038969" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff806b" />
+      <stop offset="48%" stop-color="#ff473f" />
+      <stop offset="100%" stop-color="#cf3033" />
+    </linearGradient>
+    <!-- white gradient -->
+    <linearGradient id="raycast-white-gradient" x1="96" y1="96" x2="224" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#f2f6ff" />
+      <stop offset="100%" stop-color="#c8d4ea" />
+    </linearGradient>
+    <mask id="raycast-stripe-mask" maskUnits="userSpaceOnUse">
+      <rect width="320" height="320" fill="black" />
+      <g fill="white" transform="translate(160, -66.27416998) rotate(45)">
+        <rect x="70" y="70" width="180" height="20" />
+        <rect x="70" y="110" width="180" height="20" />
+        <rect x="70" y="150" width="180" height="20" />
+        <rect x="70" y="190" width="180" height="20" />
+        <rect x="70" y="230" width="180" height="20" />
+      </g>
+    </mask>
+  </defs>
   <!-- logo diamond -->
-  <g fill="#f44" transform="translate(160, -66.27416998) rotate(45)">
-    <rect x="70" y="70" width="180" height="20" />
-    <rect x="70" y="110" width="180" height="20" />
-    <rect x="70" y="150" width="180" height="20" />
-    <rect x="70" y="190" width="180" height="20" />
-    <rect x="70" y="230" width="180" height="20" />
-  </g>
+  <rect width="320" height="320" fill="url(#raycast-stripe-gradient)" mask="url(#raycast-stripe-mask)" />
   <!-- inner cube back -->
-  <polygon points="123.63961031,96.36038969 96.36038969,123.63961031 96.36038969,223.63961031 196.36038969,223.63961031 223.63961031,196.36038969" fill="#fff" />
+  <polygon points="123.63961031,96.36038969 96.36038969,123.63961031 96.36038969,223.63961031 196.36038969,223.63961031 223.63961031,196.36038969" fill="url(#raycast-white-gradient)" />
   <!-- inner cube front -->
-  <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="#f44" />
+  <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="url(#raycast-front-gradient)" />
   <!-- cross -->
-  <g fill="#fff">
+  <g fill="url(#raycast-white-gradient)">
     <!-- vertical beam -->
     <rect x="165.63961031" y="106.36038969" width="16" height="80" />
     <!-- horizontal beam (crossbeam) -->

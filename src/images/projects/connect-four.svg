@@ -1,9 +1,27 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- blue gradient -->
+    <linearGradient id="c4-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8ceff" />
+      <stop offset="62%" stop-color="#99b8f6" />
+      <stop offset="100%" stop-color="#789be5" />
+    </linearGradient>
+    <!-- red gradient -->
+    <linearGradient id="c4-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffbaba" />
+      <stop offset="62%" stop-color="#f99a9f" />
+      <stop offset="100%" stop-color="#e87d86" />
+    </linearGradient>
+    <!-- winning red gradient -->
+    <linearGradient id="c4-winning-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f16969" />
+      <stop offset="62%" stop-color="#df3030" />
+      <stop offset="100%" stop-color="#bd252b" />
+    </linearGradient>
     <circle id="c4-chip" cx="0" cy="0" r="24" stroke-width="4" />
-    <use id="c4-blue-chip" xlink:href="#c4-chip" fill="#9af" stroke="#9af" />
-    <use id="c4-red-chip" xlink:href="#c4-chip" fill="#f99" stroke="#f99" />
-    <use id="c4-winning-red-chip" xlink:href="#c4-chip" fill="#e22" stroke="#e22" />
+    <use id="c4-blue-chip" xlink:href="#c4-chip" fill="url(#c4-blue-gradient)" stroke="url(#c4-blue-gradient)" />
+    <use id="c4-red-chip" xlink:href="#c4-chip" fill="url(#c4-red-gradient)" stroke="url(#c4-red-gradient)" />
+    <use id="c4-winning-red-chip" xlink:href="#c4-chip" fill="url(#c4-winning-red-gradient)" stroke="url(#c4-winning-red-gradient)" />
   </defs>
   <!-- first column -->
   <use xlink:href="#c4-winning-red-chip" x="64" y="64" />

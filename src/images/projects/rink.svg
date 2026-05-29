@@ -1,17 +1,29 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- green gradient -->
+    <linearGradient id="rink-green-gradient" x1="50" y1="50" x2="270" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#78dbb4" />
+      <stop offset="58%" stop-color="#55c99b" />
+      <stop offset="100%" stop-color="#36a777" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="rink-blue-gradient" x1="50" y1="50" x2="130" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#67b8ff" />
+      <stop offset="62%" stop-color="#3394f6" />
+      <stop offset="100%" stop-color="#2677d8" />
+    </linearGradient>
     <circle id="rink-ring-outer" cx="160" cy="160" r="110" fill="none" />
   </defs>
   <!-- outer ring -->
   <g>
-    <use xlink:href="#rink-ring-outer" stroke="#5c9" stroke-width="24" />
-    <use xlink:href="#rink-ring-outer" stroke="#5c9" stroke-width="16" />
+    <use xlink:href="#rink-ring-outer" stroke="url(#rink-green-gradient)" stroke-width="24" />
+    <use xlink:href="#rink-ring-outer" stroke="url(#rink-green-gradient)" stroke-width="16" />
   </g>
   <g stroke-width="4">
     <!-- inner circle -->
-    <circle cx="160" cy="160" r="20" fill="#5c9" stroke="#5c9" />
+    <circle cx="160" cy="160" r="20" fill="url(#rink-green-gradient)" stroke="url(#rink-green-gradient)" />
     <!-- puck -->
-    <circle cx="90" cy="90" r="40" fill="#39f" stroke="#39f" />
+    <circle cx="90" cy="90" r="40" fill="url(#rink-blue-gradient)" stroke="url(#rink-blue-gradient)" />
   </g>
 </svg>

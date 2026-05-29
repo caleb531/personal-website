@@ -1,21 +1,38 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- blue gradient -->
+    <linearGradient id="bbrancher-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#668cff" />
+      <stop offset="52%" stop-color="#3366ee" />
+      <stop offset="100%" stop-color="#2444b8" />
+    </linearGradient>
+    <!-- line blue gradient -->
+    <linearGradient id="bbrancher-line-blue-gradient" x1="70" y1="70" x2="250" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#668cff" />
+      <stop offset="52%" stop-color="#3366ee" />
+      <stop offset="100%" stop-color="#2444b8" />
+    </linearGradient>
+    <!-- white gradient -->
+    <linearGradient id="bbrancher-white-gradient" x1="70" y1="60" x2="250" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbe5f4" />
+    </linearGradient>
     <!-- circle end of node pointer -->
     <marker id="bbrancher-node-pointer-circle" markerWidth="50" markerHeight="50" refX="6" refY="6" orient="auto">
-      <circle r="3" cx="6" cy="6" fill="#36e" stroke="#fff" />
+      <circle r="3" cx="6" cy="6" fill="url(#bbrancher-blue-gradient)" stroke="url(#bbrancher-white-gradient)" />
     </marker>
     <!-- arrow end of node pointer -->
     <marker id="bbrancher-node-pointer-arrow" markerWidth="13" markerHeight="13" refX="4" refY="6" orient="auto">
-      <polygon points="1,2 6,6 1,10" fill="#36e" />
+      <polygon points="1,2 6,6 1,10" fill="url(#bbrancher-blue-gradient)" />
     </marker>
     <!-- individual node -->
-    <path id="bbrancher-node" d="M -36,-18 L 36,-18 L 36,18 L -36,18 Z M 0,18 L 0,-18" fill="#36e" stroke="#fff" stroke-width="3" />
+    <path id="bbrancher-node" d="M -36,-18 L 36,-18 L 36,18 L -36,18 Z M 0,18 L 0,-18" fill="url(#bbrancher-blue-gradient)" stroke="url(#bbrancher-white-gradient)" stroke-width="3" />
     <!-- leftmost pointer from root node -->
-    <polyline id="bbrancher-node-pointer-left" points="-36,18 -84,130 -84,142" fill="none" stroke="#36e" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
+    <polyline id="bbrancher-node-pointer-left" points="-36,18 -84,130 -84,142" fill="none" stroke="url(#bbrancher-line-blue-gradient)" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
     <!-- rightmost pointer from root node -->
     <use id="bbrancher-node-pointer-right" xlink:href="#bbrancher-node-pointer-left" transform="scale(-1,1)" />
     <!-- center pointer from root node -->
-    <polyline id="bbrancher-node-pointer-center" points="0,18 0,142" fill="none" stroke="#36e" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
+    <polyline id="bbrancher-node-pointer-center" points="0,18 0,142" fill="none" stroke="url(#bbrancher-line-blue-gradient)" stroke-width="3" marker-start="url(#bbrancher-node-pointer-circle)" marker-end="url(#bbrancher-node-pointer-arrow)" />
   </defs>
   <!-- root node -->
   <use xlink:href="#bbrancher-node" x="160" y="76" />

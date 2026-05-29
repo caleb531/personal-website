@@ -1,7 +1,37 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- body gradient -->
+    <linearGradient id="cidrbrewer-body-gradient" x1="-120" y1="-24" x2="120" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34343c" />
+      <stop offset="52%" stop-color="#15151b" />
+      <stop offset="100%" stop-color="#050509" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="cidrbrewer-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78c8ff" />
+      <stop offset="52%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1d66bd" />
+    </linearGradient>
+    <!-- purple gradient -->
+    <linearGradient id="cidrbrewer-purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c79aff" />
+      <stop offset="52%" stop-color="#9560f0" />
+      <stop offset="100%" stop-color="#6532bd" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="cidrbrewer-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bef28d" />
+      <stop offset="52%" stop-color="#78cf48" />
+      <stop offset="100%" stop-color="#3f8f2a" />
+    </linearGradient>
+    <!-- pink gradient -->
+    <linearGradient id="cidrbrewer-pink-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff96ac" />
+      <stop offset="52%" stop-color="#f04d74" />
+      <stop offset="100%" stop-color="#b7284f" />
+    </linearGradient>
     <!-- IP address body (frame) -->
-    <rect x="-120" y="-24" width="240" height="48" rx="4" ry="4" fill="#111" id="cidrbrewer-address-body" />
+    <rect x="-120" y="-24" width="240" height="48" rx="4" ry="4" fill="url(#cidrbrewer-body-gradient)" id="cidrbrewer-address-body" />
     <!-- Generic IP address octet -->
     <rect x="-25" y="-16" width="50" height="32" rx="0" ry="0" id="cidrbrewer-address-octet" />
     <!-- First octet -->
@@ -15,7 +45,7 @@
   </defs>
   <!-- First IP address -->
   <g id="cidrbrewer-address-1" transform="translate(160, 64)">
-    <g id="cidrbrewer-address-1-octets" fill="#39f">
+    <g id="cidrbrewer-address-1-octets" fill="url(#cidrbrewer-blue-gradient)">
       <use xlink:href="#cidrbrewer-address-octet-1" />
       <use xlink:href="#cidrbrewer-address-octet-2" />
       <use xlink:href="#cidrbrewer-address-octet-3" />
@@ -24,7 +54,7 @@
   </g>
   <!-- Second IP address -->
   <g id="cidrbrewer-address-2" transform="translate(160, 132)">
-    <g id="cidrbrewer-address-2-octets" fill="#96f">
+    <g id="cidrbrewer-address-2-octets" fill="url(#cidrbrewer-purple-gradient)">
       <use xlink:href="#cidrbrewer-address-octet-1" />
       <use xlink:href="#cidrbrewer-address-octet-2" />
       <use xlink:href="#cidrbrewer-address-octet-3" />
@@ -34,12 +64,12 @@
   <!-- Subnet mask -->
   <g id="cidrbrewer-subnet-mask" transform="translate(160, 256)">
     <g id="cidrbrewer-subnet-mask-octets">
-      <g id="cidrbrewer-subnet-mask-green-octets" fill="#7d4">
+      <g id="cidrbrewer-subnet-mask-green-octets" fill="url(#cidrbrewer-green-gradient)">
         <use xlink:href="#cidrbrewer-address-octet-1" />
         <use xlink:href="#cidrbrewer-address-octet-2" />
         <use xlink:href="#cidrbrewer-address-octet-3" />
       </g>
-      <use xlink:href="#cidrbrewer-address-octet-4" fill="#f46" />
+      <use xlink:href="#cidrbrewer-address-octet-4" fill="url(#cidrbrewer-pink-gradient)" />
     </g>
   </g>
 </svg>

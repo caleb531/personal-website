@@ -1,5 +1,47 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
+		<!-- bright red gradient -->
+		<linearGradient id="tcg-bright-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#ff8b8b" />
+			<stop offset="45%" stop-color="#f44" />
+			<stop offset="100%" stop-color="#b9282f" />
+		</linearGradient>
+		<!-- red gradient -->
+		<linearGradient id="tcg-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#ff7979" />
+			<stop offset="45%" stop-color="#e22d2d" />
+			<stop offset="100%" stop-color="#991b23" />
+		</linearGradient>
+		<!-- green gradient -->
+		<linearGradient id="tcg-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#c0f285" />
+			<stop offset="45%" stop-color="#7fd249" />
+			<stop offset="100%" stop-color="#3e972f" />
+		</linearGradient>
+		<!-- lime gradient -->
+		<linearGradient id="tcg-lime-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#d8f68c" />
+			<stop offset="45%" stop-color="#a6df43" />
+			<stop offset="100%" stop-color="#76a92d" />
+		</linearGradient>
+		<!-- yellow gradient -->
+		<linearGradient id="tcg-yellow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#ffe878" />
+			<stop offset="45%" stop-color="#f5c536" />
+			<stop offset="100%" stop-color="#b98218" />
+		</linearGradient>
+		<!-- orange gradient -->
+		<linearGradient id="tcg-orange-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="#ffb35f" />
+			<stop offset="45%" stop-color="#f2761c" />
+			<stop offset="100%" stop-color="#b5470f" />
+		</linearGradient>
+		<!-- lock gradient -->
+		<linearGradient id="tcg-lock-gradient" x1="120" y1="110" x2="200" y2="210" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" stop-color="#5e6070" />
+			<stop offset="52%" stop-color="#33333b" />
+			<stop offset="100%" stop-color="#17171e" />
+		</linearGradient>
 		<!-- a single 2FA code bullet -->
 		<circle id="tcg-bullet" cx="0" cy="0" r="30" />
 		<!-- lock icon body -->
@@ -10,19 +52,19 @@
 	<!-- 2FA code bullets -->
 	<g>
     <!-- bright red -->
-    <use xlink:href="#tcg-bullet" x="73.39745962155615" y="210" fill="#f44" />
+    <use xlink:href="#tcg-bullet" x="73.39745962155615" y="210" fill="url(#tcg-bright-red-gradient)" />
     <!-- red -->
-    <use xlink:href="#tcg-bullet" x="73.39745962155613" y="110" fill="#e22" />
+    <use xlink:href="#tcg-bullet" x="73.39745962155613" y="110" fill="url(#tcg-red-gradient)" />
     <!-- green -->
-    <use xlink:href="#tcg-bullet" x="160" y="60" fill="#7d4" />
+    <use xlink:href="#tcg-bullet" x="160" y="60" fill="url(#tcg-green-gradient)" />
     <!-- lime -->
-    <use xlink:href="#tcg-bullet" x="246.60254037844382" y="110" fill="#ae4" />
+    <use xlink:href="#tcg-bullet" x="246.60254037844382" y="110" fill="url(#tcg-lime-gradient)" />
     <!-- yellow -->
-    <use xlink:href="#tcg-bullet" x="246.60254037844393" y="210" fill="#fc2" />
+    <use xlink:href="#tcg-bullet" x="246.60254037844393" y="210" fill="url(#tcg-yellow-gradient)" />
     <!-- orange -->
-    <use xlink:href="#tcg-bullet" x="160" y="260" fill="#f71" />
+    <use xlink:href="#tcg-bullet" x="160" y="260" fill="url(#tcg-orange-gradient)" />
   </g>
 	<!-- lock icon -->
-	<use xlink:href="#tcg-lock-body" x="160" y="170" fill="#333" />
-	<use xlink:href="#tcg-lock-handle" x="160" y="145" fill="none" stroke="#333" stroke-width="10" />
+	<use xlink:href="#tcg-lock-body" x="160" y="170" fill="url(#tcg-lock-gradient)" />
+	<use xlink:href="#tcg-lock-handle" x="160" y="145" fill="none" stroke="url(#tcg-lock-gradient)" stroke-width="10" />
 </svg>

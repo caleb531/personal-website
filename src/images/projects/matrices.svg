@@ -1,17 +1,29 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- bracket gradient -->
+    <linearGradient id="matrices-bracket-gradient" x1="54" y1="54" x2="266" y2="266" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#85c9ff" />
+      <stop offset="52%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1e66bd" />
+    </linearGradient>
+    <!-- element gradient -->
+    <linearGradient id="matrices-element-gradient" x1="105" y1="105" x2="215" y2="215" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
     <!-- element representing number -->
     <rect id="matrices-element" x="-15" y="-15" width="30" height="30" stroke-linecap="round" stroke-linejoin="round" />
     <!-- a single bracket used to surround matrix elements -->
     <path id="matrices-bracket" d="M 90,54 L 54,54 L 54,266 L 90,266 L 90,254 L 66,254 L 66,66 L 90,66 Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
   </defs>
-  <g fill="#39f" stroke="#39f" stroke-width="4">
+  <g fill="url(#matrices-bracket-gradient)" stroke="url(#matrices-bracket-gradient)" stroke-width="4">
     <!-- left bracket -->
     <use xlink:href="#matrices-bracket" x="0" y="0" />
     <!-- right bracket -->
     <use xlink:href="#matrices-bracket" x="0" y="0" transform="translate(320,0) scale(-1,1)" />
   </g>
-  <g fill="#36e" stroke="#36e" stroke-width="4">
+  <g fill="url(#matrices-element-gradient)" stroke="url(#matrices-element-gradient)" stroke-width="4">
     <!-- top-left element -->
     <use xlink:href="#matrices-element" x="120" y="120" />
     <!-- top-right element -->

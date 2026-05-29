@@ -1,12 +1,30 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- electron gradient -->
+    <linearGradient id="atom-electron-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe878" />
+      <stop offset="45%" stop-color="#f5c536" />
+      <stop offset="100%" stop-color="#b98218" />
+    </linearGradient>
+    <!-- nucleus gradient -->
+    <linearGradient id="atom-nucleus-gradient" x1="120" y1="120" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
+    <!-- ring gradient -->
+    <linearGradient id="atom-ring-gradient" x1="40" y1="40" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
     <!-- electron -->
-    <circle id="atom-electron" cx="0" cy="0" r="20" fill="#fc3" />
+    <circle id="atom-electron" cx="0" cy="0" r="20" fill="url(#atom-electron-gradient)" />
   </defs>
   <!-- nucleus -->
-  <circle cx="160" cy="160" r="40" fill="#7d4" />
+  <circle cx="160" cy="160" r="40" fill="url(#atom-nucleus-gradient)" />
   <!-- ring around nucleus -->
-  <circle cx="160" cy="160" r="120" fill="none" stroke="#36e" stroke-width="10" />
+  <circle cx="160" cy="160" r="120" fill="none" stroke="url(#atom-ring-gradient)" stroke-width="10" />
   <!-- electron (top-left) -->
   <use xlink:href="#atom-electron" x="75.14718626" y="75.14718626" />
   <!-- electron (bottom-right) -->

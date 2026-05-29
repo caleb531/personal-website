@@ -1,7 +1,30 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <rect id="cachesimulator-capacitor" x="-5" y="-2.5" width="10" height="5" fill="#999" />
-    <rect id="cachesimulator-bulk-capacitor" x="-5" y="-5" width="10" height="10" fill="#999" />
+    <!-- capacitor gradient -->
+    <linearGradient id="cachesimulator-capacitor-gradient" x1="-5" y1="-5" x2="5" y2="5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d7d7dc" />
+      <stop offset="48%" stop-color="#9b9ca6" />
+      <stop offset="100%" stop-color="#5f606b" />
+    </linearGradient>
+    <!-- chip gradient -->
+    <linearGradient id="cachesimulator-chip-gradient" x1="50" y1="50" x2="270" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b8fa2" />
+      <stop offset="58%" stop-color="#62657a" />
+      <stop offset="100%" stop-color="#383b4c" />
+    </linearGradient>
+    <!-- package gradient -->
+    <linearGradient id="cachesimulator-package-gradient" x1="105" y1="105" x2="215" y2="215" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff1ad" />
+      <stop offset="52%" stop-color="#f8ca66" />
+      <stop offset="100%" stop-color="#c58b24" />
+    </linearGradient>
+    <!-- lettering gradient -->
+    <linearGradient id="cachesimulator-lettering-gradient" x1="120" y1="137" x2="200" y2="183" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f2d38a" />
+      <stop offset="100%" stop-color="#a97824" />
+    </linearGradient>
+    <rect id="cachesimulator-capacitor" x="-5" y="-2.5" width="10" height="5" fill="url(#cachesimulator-capacitor-gradient)" />
+    <rect id="cachesimulator-bulk-capacitor" x="-5" y="-5" width="10" height="10" fill="url(#cachesimulator-capacitor-gradient)" />
     <!-- group of 4 capacitors -->
     <g id="cachesimulator-capacitors-4">
       <use xlink:href="#cachesimulator-capacitor" x="120" y="80" />
@@ -17,18 +40,18 @@
     </g>
   </defs>
   <!-- chip body -->
-  <rect x="50" y="50" width="220" height="220" fill="#667" rx="10" ry="10" />
+  <rect x="50" y="50" width="220" height="220" fill="url(#cachesimulator-chip-gradient)" rx="10" ry="10" />
   <!-- gold-plated "ceramic package" -->
-  <rect x="105" y="105" width="110" height="110" fill="#fd8" rx="5" ry="5" />
+  <rect x="105" y="105" width="110" height="110" fill="url(#cachesimulator-package-gradient)" rx="5" ry="5" />
   <!-- lettering -->
-  <g fill="#ca6">
+  <g fill="url(#cachesimulator-lettering-gradient)">
     <rect x="130" y="137.5" width="60" height="5" />
     <rect x="120" y="157.5" width="80" height="5" />
     <rect x="130" y="177.5" width="30" height="5" />
     <rect x="170" y="177.5" width="20" height="5" />
   </g>
   <!-- capacitor 1 indicator -->
-  <rect x="60" y="240" width="20" height="20" fill="#fd8" rx="4" ry="4" />
+  <rect x="60" y="240" width="20" height="20" fill="url(#cachesimulator-package-gradient)" rx="4" ry="4" />
   <!-- top capacitors -->
   <use xlink:href="#cachesimulator-capacitors-4" x="0" y="0" />
   <!-- bottom capacitors -->

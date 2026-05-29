@@ -1,10 +1,28 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- red gradient -->
+    <linearGradient id="awesomecpt-red-gradient" x1="40" y1="40" x2="120" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6262" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#aa1420" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="awesomecpt-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91e852" />
+      <stop offset="48%" stop-color="#77dd44" />
+      <stop offset="100%" stop-color="#48aa2e" />
+    </linearGradient>
+    <!-- purple gradient -->
+    <linearGradient id="awesomecpt-purple-gradient" x1="40" y1="220" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b67aff" />
+      <stop offset="52%" stop-color="#9966ff" />
+      <stop offset="100%" stop-color="#6b35cc" />
+    </linearGradient>
     <!-- taxonomy term -->
-    <rect id="awesomecpt-term" x="0" y="0" width="50" height="60" rx="3" ry="3" fill="#7d4" stroke="#7d4" stroke-width="4" />
+    <rect id="awesomecpt-term" x="0" y="0" width="50" height="60" rx="3" ry="3" fill="url(#awesomecpt-green-gradient)" stroke="url(#awesomecpt-green-gradient)" stroke-width="4" />
   </defs>
   <!-- post type -->
-  <rect x="40" y="40" width="80" height="150" fill="#e22" stroke="#e22" stroke-width="4" rx="3" ry="3" />
+  <rect x="40" y="40" width="80" height="150" fill="url(#awesomecpt-red-gradient)" stroke="url(#awesomecpt-red-gradient)" stroke-width="4" rx="3" ry="3" />
   <!-- taxonomy terms -->
   <g>
     <!-- top-left -->
@@ -17,5 +35,5 @@
     <use xlink:href="#awesomecpt-term" x="230" y="130" />
   </g>
   <!-- meta box -->
-  <rect x="40" y="220" width="240" height="60" rx="3" ry="3" fill="#96f" stroke="#96f" stroke-width="4" />
+  <rect x="40" y="220" width="240" height="60" rx="3" ry="3" fill="url(#awesomecpt-purple-gradient)" stroke="url(#awesomecpt-purple-gradient)" stroke-width="4" />
 </svg>

@@ -1,16 +1,28 @@
 <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs>
+		<!-- dark gradient -->
+		<linearGradient id="masker-dark-gradient" x1="3" y1="5" x2="14" y2="25" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" stop-color="#3d3d45" />
+			<stop offset="52%" stop-color="#1f2026" />
+			<stop offset="100%" stop-color="#101116" />
+		</linearGradient>
+		<!-- gray gradient -->
+		<linearGradient id="masker-gray-gradient" x1="7" y1="5" x2="14" y2="25" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" stop-color="#c4c4ca" />
+			<stop offset="52%" stop-color="#999aa2" />
+			<stop offset="100%" stop-color="#666873" />
+		</linearGradient>
 		<path id="x" d="M -1.75,-2 L 1.75,2 M -1.75,2 L 1.75,-2" fill="none" />
 		<g id="dollar-sign" fill="none">
 			<line x1="5" y1="15" x2="5" y2="23" />
 			<path d="M 3.5,21.5 Q 4,22 5,22 A 1,1 0,0,0 5.5,19 L 5,19 A 1,1 0,0,1 4.5,16 L 5,16 Q 6,16 6.5,16.5" />
 		</g>
 	</defs>
-	<g stroke="#ffffff" stroke-linecap="round" stroke-width="1">
+	<g stroke-linecap="round" stroke-width="1">
 		<!-- whole number -->
-		<use xlink:href="#x" x="12" y="20" transform="scale(2.25) translate(-2.5,-12.2)" stroke="#121212" />
+		<use xlink:href="#x" x="12" y="20" transform="scale(2.25) translate(-2.5,-12.2)" stroke="url(#masker-dark-gradient)" />
 		<!-- dollar sign -->
-		<use xlink:href="#dollar-sign" x="0" y="0" transform="scale(2) translate(0,-11)" stroke="#999999" />
+		<use xlink:href="#dollar-sign" x="0" y="0" transform="scale(2) translate(0,-11)" stroke="url(#masker-gray-gradient)" />
 
 	</g>
 </svg>

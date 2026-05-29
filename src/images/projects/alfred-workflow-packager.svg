@@ -1,24 +1,30 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <polygon id="awp-box-side" points="-50,-80 30,-40 30,50 -50,10" />
-    <polygon id="awp-box-top" points="-82,0 0,-41 82,0 0,41" />
+    <!-- box gradient -->
+    <linearGradient id="awp-box-gradient" x1="78" y1="115" x2="245" y2="295" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#edb56d" />
+      <stop offset="52%" stop-color="#b97838" />
+      <stop offset="100%" stop-color="#633719" />
+    </linearGradient>
+    <!-- hat gradient -->
+    <linearGradient id="awp-hat-gradient" x1="95" y1="35" x2="225" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d6d6de" />
+      <stop offset="36%" stop-color="#575761" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
   </defs>
   <!-- 3D box -->
-  <g fill="#b73">
-    <!-- left side -->
-    <use xlink:href="#awp-box-side" x="125" y="245" />
-    <!-- right side -->
-    <use xlink:href="#awp-box-side" x="195" y="245" transform="translate(195,240) scale(-1,1) translate(-195,-240)" />
-    <!-- top -->
-    <use xlink:href="#awp-box-top" x="160" y="156" />
-  </g>
+  <path
+    d="M 78,156 L 160,115 L 242,156 L 160,197 Z M 75,165 L 155,205 L 155,295 L 75,255 Z M 245,165 L 165,205 L 165,295 L 245,255 Z"
+    fill="url(#awp-box-gradient)"
+  />
   <!-- Alfred hat -->
-  <g fill="#222">
+  <g>
     <!-- top -->
-    <ellipse cx="160" cy="60" rx="40" ry="35" />
+    <ellipse cx="160" cy="60" rx="40" ry="35" fill="url(#awp-hat-gradient)" />
     <!-- middle -->
-    <rect x="120" y="60" width="80" height="20" />
+    <rect x="120" y="60" width="80" height="20" fill="url(#awp-hat-gradient)" />
     <!-- bottom -->
-    <ellipse cx="160" cy="80" rx="60" ry="20" />
+    <ellipse cx="160" cy="80" rx="60" ry="20" fill="url(#awp-hat-gradient)" />
   </g>
 </svg>

@@ -1,10 +1,24 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- node gradient -->
+    <linearGradient id="youversion-node-gradient" x1="47" y1="30" x2="273" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#70ca6c" />
+      <stop offset="52%" stop-color="#3ba34d" />
+      <stop offset="100%" stop-color="#237834" />
+    </linearGradient>
+    <!-- cross gradient -->
+    <linearGradient id="youversion-cross-gradient" x1="100" y1="80" x2="220" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#edf5ee" />
+      <stop offset="100%" stop-color="#bfd2c3" />
+    </linearGradient>
+  </defs>
   <!-- Node.js logo hexagon outline -->
-  <polygon points="47.416697508022985,225 47.41669750802295,95 160,30 272.58330249197695,95 272.5833024919771,225 160,290" fill="#3a4" stroke="#3a4" />
+  <polygon points="47.416697508022985,225 47.41669750802295,95 160,30 272.58330249197695,95 272.5833024919771,225 160,290" fill="url(#youversion-node-gradient)" stroke="url(#youversion-node-gradient)" />
     <!-- cross -->
   <g stroke-linecap="round">
     <!-- cross bar -->
-    <g fill="#fff">
+    <g fill="url(#youversion-cross-gradient)">
       <!-- vertical beam -->
       <rect x="145" y="80" width="30" height="160" rx="4" ry="4" />
       <!-- horizontal beam -->

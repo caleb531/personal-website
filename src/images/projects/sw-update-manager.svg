@@ -1,36 +1,40 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
-    <!-- generic cog -->
-    <rect x="0" y="-25" width="50" height="50" fill="#333" id="swum-cog" />
+    <!-- cog gradient -->
+    <linearGradient id="swum-cog-gradient" x1="35" y1="35" x2="285" y2="285" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5e6070" />
+      <stop offset="52%" stop-color="#33333b" />
+      <stop offset="100%" stop-color="#17171e" />
+    </linearGradient>
+    <!-- arrow gradient -->
+    <linearGradient id="swum-arrow-gradient" x1="80" y1="100" x2="240" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#80d5ff" />
+      <stop offset="52%" stop-color="#33bbff" />
+      <stop offset="100%" stop-color="#1681c9" />
+    </linearGradient>
+    <mask id="swum-cog-mask" maskUnits="userSpaceOnUse">
+      <rect width="320" height="320" fill="black" />
+      <circle cx="160" cy="160" r="100" fill="white" />
+      <rect x="235" y="135" width="50" height="50" fill="white" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(45 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(90 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(135 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(180 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(225 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(270 160 160)" />
+      <rect x="235" y="135" width="50" height="50" fill="white" transform="rotate(315 160 160)" />
+      <circle cx="160" cy="160" r="40" fill="black" />
+    </mask>
   </defs>
   <!-- circular cog body -->
-  <g fill="#333">
-    <!-- cog donut -->
-    <path d="M 60,160 A 100,100 0,0,0 260,160 A 100,100 0,0,0 60,160 Z M 120,160 A 40,40 0,0,0 200,160 A 40,40 0,0,0 120,160 Z" fill-rule="evenodd" />
-    <!-- center-right cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(0) translate(75,0)" />
-    <!-- bottom-right cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(45) translate(75,0)" />
-    <!-- bottom-middle cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(90) translate(75,0)" />
-    <!-- bottom-left cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(135) translate(75,0)" />
-    <!-- center-left cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(180) translate(75,0)" />
-    <!-- top-left cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(225) translate(75,0)" />
-    <!-- top-middle cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(270) translate(75,0)" />
-    <!-- top-right cog -->
-    <use xlink:href="#swum-cog" x="0" y="0" transform="translate(160,160) rotate(315) translate(75,0)" />
-  </g>
+  <rect width="320" height="320" fill="url(#swum-cog-gradient)" mask="url(#swum-cog-mask)" />
   <!-- update curve arrow -->
   <marker id="swum-update-arrow" markerWidth="13" markerHeight="13" refX="1.5" refY="3" orient="auto-start-reverse">
-    <polygon points="0.5,1 3,3 0.5,5" fill="#3bf" />
+    <polygon points="0.5,1 3,3 0.5,5" fill="url(#swum-arrow-gradient)" />
   </marker>
   <!-- bottom update arrow -->
-  <g fill="none" stroke="#3bf" stroke-width="10">
+  <g fill="none" stroke="url(#swum-arrow-gradient)" stroke-width="10">
     <path d="M 90,160 A 70,70 0,0,0 209.49747468,209.49747468" marker-start="url(#swum-update-arrow)" />
     <path d="M 110.50252532,110.50252532 A 70,70 0,0,1 230,160" marker-end="url(#swum-update-arrow)" />
   </g>

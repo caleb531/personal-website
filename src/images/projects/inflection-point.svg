@@ -1,15 +1,27 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+  <defs>
+    <!-- red gradient -->
+    <linearGradient id="inflection-red-gradient" x1="73" y1="60" x2="247" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff9f7a" />
+      <stop offset="52%" stop-color="#ef3d35" />
+      <stop offset="100%" stop-color="#9f1239" />
+    </linearGradient>
+    <!-- marking gradient -->
+    <linearGradient id="inflection-marking-gradient" x1="128" y1="128" x2="192" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#343a46" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+  </defs>
 
   <!-- aura -->
-  <circle cx="160" cy="160" r="120" stroke-dasharray="125.663706144" stroke-dashoffset="125.663706144" fill="none" stroke="#e22" stroke-width="10"></circle>
+  <circle cx="160" cy="160" r="120" stroke-dasharray="125.663706144" stroke-dashoffset="125.663706144" fill="none" stroke="url(#inflection-red-gradient)" stroke-width="10"></circle>
 
   <!-- nucleus -->
   <g>
     <!-- nucleus core -->
-    <polygon points="73.39745962155615,210 160,60 246.6025403784439,210" fill="#e22" />
+    <polygon points="73.39745962155615,210 160,60 246.6025403784439,210" fill="url(#inflection-red-gradient)" />
     <!-- nucleus markings -->
-    <circle cx="160" cy="160" r="30" stroke-dasharray="31.415926536" stroke-dashoffset="31.415926536" fill="none" stroke="#111" stroke-width="10"></circle>
+    <circle cx="160" cy="160" r="30" stroke-dasharray="31.415926536" stroke-dashoffset="31.415926536" fill="none" stroke="url(#inflection-marking-gradient)" stroke-width="10"></circle>
   </g>
 
 </svg>

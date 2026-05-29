@@ -1,5 +1,17 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- teal gradient -->
+    <linearGradient id="ivtheme-teal-gradient" x1="40" y1="40" x2="280" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5bc7d2" />
+      <stop offset="52%" stop-color="#33aabb" />
+      <stop offset="100%" stop-color="#1d7d8f" />
+    </linearGradient>
+    <!-- orange gradient -->
+    <linearGradient id="ivtheme-orange-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a45" />
+      <stop offset="52%" stop-color="#ff7711" />
+      <stop offset="100%" stop-color="#c94c00" />
+    </linearGradient>
     <!-- homepage content box icon -->
     <circle id="ivtheme-content-box-icon" cx="0" cy="0" r="30" />
     <!-- letter "I" in "IV" text -->
@@ -8,14 +20,14 @@
     <polygon id="ivtheme-text-v" points="20,0 90,-120 50,-120 0,-30 -50,-120 -90,-120 -20,0" />
   </defs>
   <!-- "IV" text -->
-  <g fill="#3ab" stroke="#3ab" stroke-width="2">
+  <g fill="url(#ivtheme-teal-gradient)" stroke="url(#ivtheme-teal-gradient)" stroke-width="2">
     <use xlink:href="#ivtheme-text-i" x="70" y="160" />
     <use xlink:href="#ivtheme-text-v" x="190" y="160" />
   </g>
   <!-- divider line -->
-  <rect x="40" y="180" width="240" height="20" fill="#3ab" stroke="#3ab" stroke-width="2" />
+  <rect x="40" y="180" width="240" height="20" fill="url(#ivtheme-teal-gradient)" stroke="url(#ivtheme-teal-gradient)" stroke-width="2" />
   <!-- content box icons -->
-  <g fill="#f71" stroke="#f71" stroke-width="2">
+  <g fill="url(#ivtheme-orange-gradient)" stroke="url(#ivtheme-orange-gradient)" stroke-width="2">
     <!-- left -->
     <use xlink:href="#ivtheme-content-box-icon" x="70" y="250" />
     <!-- center -->

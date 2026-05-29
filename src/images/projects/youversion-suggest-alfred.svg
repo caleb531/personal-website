@@ -1,10 +1,24 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- prompt gradient -->
+    <linearGradient id="alfred-prompt-gradient" x1="60" y1="180" x2="120" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5e6070" />
+      <stop offset="52%" stop-color="#33333b" />
+      <stop offset="100%" stop-color="#17171e" />
+    </linearGradient>
+    <!-- cross gradient -->
+    <linearGradient id="alfred-cross-gradient" x1="130" y1="50" x2="280" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c08752" />
+      <stop offset="52%" stop-color="#965b34" />
+      <stop offset="100%" stop-color="#6f3f24" />
+    </linearGradient>
+  </defs>
   <!-- terminal prompt -->
-  <polyline points="60,260 120,220 60,180" fill="none" stroke="#333" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  <polyline points="60,260 120,220 60,180" fill="none" stroke="url(#alfred-prompt-gradient)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
   <!-- cross -->
   <g stroke-linecap="round">
     <!-- cross bar -->
-    <g fill="#953">
+    <g fill="url(#alfred-cross-gradient)">
       <!-- vertical beam -->
       <rect x="185" y="50" width="40" height="220" rx="4" ry="4" />
       <!-- horizontal beam -->

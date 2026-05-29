@@ -1,14 +1,40 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- penny gradient -->
+    <linearGradient id="coin-penny-gradient" x1="60" y1="60" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d58c4d" />
+      <stop offset="52%" stop-color="#b97838" />
+      <stop offset="100%" stop-color="#8d5426" />
+    </linearGradient>
+    <!-- nickel gradient -->
+    <linearGradient id="coin-nickel-gradient" x1="176" y1="56" x2="264" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d9d9df" />
+      <stop offset="52%" stop-color="#b9bac0" />
+      <stop offset="100%" stop-color="#8f9098" />
+    </linearGradient>
+    <!-- dime gradient -->
+    <linearGradient id="coin-dime-gradient" x1="63" y1="183" x2="137" y2="257" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e6e6eb" />
+      <stop offset="52%" stop-color="#c9c9cf" />
+      <stop offset="100%" stop-color="#9fa0a8" />
+    </linearGradient>
+    <!-- quarter gradient -->
+    <linearGradient id="coin-quarter-gradient" x1="169" y1="169" x2="271" y2="271" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c5c5cb" />
+      <stop offset="52%" stop-color="#9899a1" />
+      <stop offset="100%" stop-color="#73747d" />
+    </linearGradient>
+  </defs>
 
   <!-- penny -->
-  <circle cx="100" cy="100" r="40" fill="#b73" />
+  <circle cx="100" cy="100" r="40" fill="url(#coin-penny-gradient)" />
 
   <!-- nickel -->
-  <circle cx="220" cy="100" r="44" fill="#bbb" />
+  <circle cx="220" cy="100" r="44" fill="url(#coin-nickel-gradient)" />
 
   <!-- dime -->
-  <circle cx="100" cy="220" r="37" fill="#ccc" />
+  <circle cx="100" cy="220" r="37" fill="url(#coin-dime-gradient)" />
 
   <!-- quarter -->
-  <circle cx="220" cy="220" r="51" fill="#999" />
+  <circle cx="220" cy="220" r="51" fill="url(#coin-quarter-gradient)" />
 </svg>

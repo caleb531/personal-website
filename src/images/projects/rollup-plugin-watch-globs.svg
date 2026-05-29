@@ -1,12 +1,26 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+  <defs>
+    <!-- red gradient -->
+    <linearGradient id="rpwg-red-gradient" x1="70" y1="50" x2="240" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6262" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#aa1420" />
+    </linearGradient>
+    <!-- yellow gradient -->
+    <linearGradient id="rpwg-yellow-gradient" x1="115" y1="85" x2="185" y2="155" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffe164" />
+      <stop offset="50%" stop-color="#ffcc22" />
+      <stop offset="100%" stop-color="#d39100" />
+    </linearGradient>
+  </defs>
 
   <!-- rollup logo "R" -->
-  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="#e22" stroke="#e22" stroke-width="10" stroke-linejoin="round" />
+  <path d="M 80,260 80,60 L 175,60 A 63,63,0,0,1,200,180 L 235,260 Z" fill="url(#rpwg-red-gradient)" stroke="url(#rpwg-red-gradient)" stroke-width="10" stroke-linejoin="round" />
 
   <!-- glob asterisk -->
   <g transform="translate(150, 120)">
-    <path d="M 0,-35 L 0,35 M -30.3108891324553,-20 L 30.3108891324553,20 M -30.3108891324553,20 L 30.3108891324553,-20" stroke="#fc2" stroke-width="10" stroke-linecap="round" />
+    <path d="M 0,-35 L 0,35 M -30.3108891324553,-20 L 30.3108891324553,20 M -30.3108891324553,20 L 30.3108891324553,-20" stroke="url(#rpwg-yellow-gradient)" stroke-width="10" stroke-linecap="round" />
   </g>
 
 </svg>

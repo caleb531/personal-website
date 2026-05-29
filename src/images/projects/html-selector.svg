@@ -1,5 +1,23 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- blue gradient -->
+    <linearGradient id="htmlselector-blue-gradient" x1="120" y1="120" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#65b8ff" />
+      <stop offset="52%" stop-color="#3399ff" />
+      <stop offset="100%" stop-color="#1e63c8" />
+    </linearGradient>
+    <!-- red gradient -->
+    <linearGradient id="htmlselector-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6262" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#aa1420" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="htmlselector-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91e852" />
+      <stop offset="48%" stop-color="#77dd44" />
+      <stop offset="100%" stop-color="#48aa2e" />
+    </linearGradient>
     <!-- element name dot -->
     <circle id="htmlselector-dot" cx="0" cy="0" r="20" stroke-width="4" />
     <!-- closing angle bracket -->
@@ -8,15 +26,15 @@
   </defs>
   <!-- transition arrow -->
   <g>
-    <use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="#39f" stroke-width="10" />
-    <use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="#39f" stroke-width="4" />
+    <use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="url(#htmlselector-blue-gradient)" stroke-width="10" />
+    <use xlink:href="#htmlselector-arrow" x="160" y="160" stroke="url(#htmlselector-blue-gradient)" stroke-width="4" />
   </g>
   <!-- child combinator -->
   <g>
-    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e22" stroke-width="18" />
-    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="#e22" stroke-width="10" />
+    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="url(#htmlselector-red-gradient)" stroke-width="18" />
+    <use xlink:href="#htmlselector-gt-sign" x="160" y="80" stroke="url(#htmlselector-red-gradient)" stroke-width="10" />
   </g>
-  <g fill="#e22" stroke="#e22">
+  <g fill="url(#htmlselector-red-gradient)" stroke="url(#htmlselector-red-gradient)">
     <!-- parent name -->
     <use xlink:href="#htmlselector-dot" x="80" y="80" />
     <!-- child name -->
@@ -24,14 +42,14 @@
   </g>
   <!-- opening angle bracket -->
   <g transform="translate(200,0) scale(-1,1)">
-    <use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="#7d4" stroke-width="18" />
-    <use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="#7d4" stroke-width="10" />
+    <use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="url(#htmlselector-green-gradient)" stroke-width="18" />
+    <use xlink:href="#htmlselector-gt-sign" x="100" y="240" stroke="url(#htmlselector-green-gradient)" stroke-width="10" />
   </g>
   <!-- opening angle bracket -->
   <g>
-    <use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="#7d4" stroke-width="18" />
-    <use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="#7d4" stroke-width="10" />
+    <use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="url(#htmlselector-green-gradient)" stroke-width="18" />
+    <use xlink:href="#htmlselector-gt-sign" x="220" y="240" stroke="url(#htmlselector-green-gradient)" stroke-width="10" />
   </g>
   <!-- tag name -->
-  <use xlink:href="#htmlselector-dot" x="160" y="240" fill="#7d4" stroke="#7d4" />
+  <use xlink:href="#htmlselector-dot" x="160" y="240" fill="url(#htmlselector-green-gradient)" stroke="url(#htmlselector-green-gradient)" />
 </svg>

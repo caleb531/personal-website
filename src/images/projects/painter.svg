@@ -1,11 +1,31 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- paint gradient -->
+    <linearGradient id="painter-paint-gradient" x1="200" y1="40" x2="280" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#75c4ff" />
+      <stop offset="52%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1d66bd" />
+    </linearGradient>
+    <!-- handle gradient -->
+    <linearGradient id="painter-handle-gradient" x1="40" y1="280" x2="170" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6f3f24" />
+      <stop offset="52%" stop-color="#965b34" />
+      <stop offset="100%" stop-color="#c08752" />
+    </linearGradient>
+    <!-- tip gradient -->
+    <linearGradient id="painter-tip-gradient" x1="135" y1="185" x2="220" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#17171e" />
+      <stop offset="52%" stop-color="#33333b" />
+      <stop offset="100%" stop-color="#5e6070" />
+    </linearGradient>
+  </defs>
   <!-- icon elements -->
   <g stroke-width="4" stroke-linejoin="round">
     <!-- paint circle -->
-    <circle cx="240" cy="80" r="40" fill="#39f" stroke="#39f" />
+    <circle cx="240" cy="80" r="40" fill="url(#painter-paint-gradient)" stroke="url(#painter-paint-gradient)" />
     <!-- brush handle -->
-    <path d="M 160,160 Q 190,190,40,280 Q 130,130,160,160 L 150,170 Z" fill="#953" stroke="#953" />
+    <path d="M 160,160 Q 190,190,40,280 Q 130,130,160,160 L 150,170 Z" fill="url(#painter-handle-gradient)" stroke="url(#painter-handle-gradient)" />
     <!-- brush tip -->
-    <path d="M 160,160 Q 200,200,220,100 Q 120,120,160,160 L 170,150 Z" fill="#333" stroke="#333" />
+    <path d="M 160,160 Q 200,200,220,100 Q 120,120,160,160 L 170,150 Z" fill="url(#painter-tip-gradient)" stroke="url(#painter-tip-gradient)" />
   </g>
 </svg>

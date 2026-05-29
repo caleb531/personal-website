@@ -1,19 +1,43 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- major gradient -->
+    <linearGradient id="bump-major-gradient" x1="50" y1="110" x2="150" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f16969" />
+      <stop offset="62%" stop-color="#df3030" />
+      <stop offset="100%" stop-color="#bd252b" />
+    </linearGradient>
+    <!-- major action gradient -->
+    <linearGradient id="bump-major-action-gradient" x1="85" y1="125" x2="115" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff8585" />
+      <stop offset="52%" stop-color="#e93535" />
+      <stop offset="100%" stop-color="#ad1d27" />
+    </linearGradient>
+    <!-- minor gradient -->
+    <linearGradient id="bump-minor-gradient" x1="160" y1="130" x2="220" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffae63" />
+      <stop offset="62%" stop-color="#f27a20" />
+      <stop offset="100%" stop-color="#d35b10" />
+    </linearGradient>
+    <!-- patch gradient -->
+    <linearGradient id="bump-patch-gradient" x1="230" y1="140" x2="270" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a6ec75" />
+      <stop offset="62%" stop-color="#78cf48" />
+      <stop offset="100%" stop-color="#55aa32" />
+    </linearGradient>
     <circle id="bump-version-component" cx="0" cy="0" r="40" fill="none" stroke-width="8" />
   </defs>
   <!-- version components -->
   <g>
     <!-- major version -->
-    <circle cx="100" cy="160" r="50" fill="none" stroke="#e22" stroke-width="8" />
-    <circle cx="100" cy="190" r="8" fill="#e22" />
-    <path d="M 85,140 L 100,125 L 115,140 M 100,130 L 100,170" fill="none" stroke="#e22" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="100" cy="160" r="50" fill="none" stroke="url(#bump-major-gradient)" stroke-width="8" />
+    <circle cx="100" cy="190" r="8" fill="url(#bump-major-gradient)" />
+    <path d="M 85,140 L 100,125 L 115,140 M 100,130 L 100,170" fill="none" stroke="url(#bump-major-action-gradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
     <!-- minor version -->
-    <circle cx="190" cy="160" r="30" fill="none" stroke="#f71" stroke-width="6" />
-    <circle cx="190" cy="160" r="8" fill="#f71" />
+    <circle cx="190" cy="160" r="30" fill="none" stroke="url(#bump-minor-gradient)" stroke-width="6" />
+    <circle cx="190" cy="160" r="8" fill="url(#bump-minor-gradient)" />
     <!-- patch version -->
-    <circle cx="250" cy="160" r="20" fill="none" stroke="#7d4" stroke-width="5" />
-    <circle cx="250" cy="160" r="8" fill="#7d4" />
+    <circle cx="250" cy="160" r="20" fill="none" stroke="url(#bump-patch-gradient)" stroke-width="5" />
+    <circle cx="250" cy="160" r="8" fill="url(#bump-patch-gradient)" />
   </g>
 </svg>

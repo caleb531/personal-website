@@ -1,15 +1,35 @@
 <svg viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- icon -->
 	<g transform="translate(2,2)">
+    <defs>
+      <!-- yellow gradient -->
+      <linearGradient id="smartfake-yellow-gradient" x1="31" y1="31" x2="1" y2="1" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#ffe06a" />
+        <stop offset="52%" stop-color="#f5c536" />
+        <stop offset="100%" stop-color="#f0a51f" />
+      </linearGradient>
+      <!-- red gradient -->
+      <linearGradient id="smartfake-red-gradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#ff7979" />
+        <stop offset="52%" stop-color="#e22d2d" />
+        <stop offset="100%" stop-color="#991b23" />
+      </linearGradient>
+      <!-- lines gradient -->
+      <linearGradient id="smartfake-lines-gradient" x1="10" y1="13" x2="22" y2="19" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="52%" stop-color="#f2f6ff" />
+        <stop offset="100%" stop-color="#c8d4ea" />
+      </linearGradient>
+    </defs>
     <!-- AI aura represented by two overlapping heptagons -->
     <g stroke-width="2" stroke-linejoin="round">
       <!-- yellow aura -->
-      <polygon points="9.491743913236629,29.514533018536287 1.3760813172726465,19.33781400934472 4.272527762979552,6.647652972118999 16,1 27.727472237020443,6.647652972118994 30.623918682727354,19.33781400934471 22.508256086763375,29.514533018536284" fill="#fc3" transform="translate(16,16) rotate(180) translate(-16,-16)" />
+      <polygon points="9.491743913236629,29.514533018536287 1.3760813172726465,19.33781400934472 4.272527762979552,6.647652972118999 16,1 27.727472237020443,6.647652972118994 30.623918682727354,19.33781400934471 22.508256086763375,29.514533018536284" fill="url(#smartfake-yellow-gradient)" transform="translate(16,16) rotate(180) translate(-16,-16)" />
       <!-- red aura -->
-      <polygon points="10.793395130589303,26.81162641482903 4.300865053818116,18.670251207475772 6.618022210383641,8.5181223776952 16,4 25.381977789616357,8.518122377695196 27.699134946181886,18.670251207475772 21.2066048694107,26.81162641482903" fill="#f33" />
+      <polygon points="10.793395130589303,26.81162641482903 4.300865053818116,18.670251207475772 6.618022210383641,8.5181223776952 16,4 25.381977789616357,8.518122377695196 27.699134946181886,18.670251207475772 21.2066048694107,26.81162641482903" fill="url(#smartfake-red-gradient)" />
     </g>
     <!-- form field lines -->
-    <g stroke="#fff" stroke-width="2">
+    <g stroke="url(#smartfake-lines-gradient)" stroke-width="2">
       <line x1="10" y1="13" x2="19" y2="13" fill="none"/>
       <line x1="10" y1="16" x2="19" y2="16" fill="none"/>
       <line x1="10" y1="19" x2="22" y2="19" fill="none"/>

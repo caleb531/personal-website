@@ -1,9 +1,22 @@
 <svg viewBox="0 0 320 320"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<!-- background gradient -->
+		<linearGradient id="grid-background-gradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" stop-color="#6e91f4" />
+			<stop offset="52%" stop-color="#3863df" />
+			<stop offset="100%" stop-color="#243fa3" />
+		</linearGradient>
+		<!-- tile gradient -->
+		<linearGradient id="grid-tile-gradient" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" stop-color="rgb(0 0 0 / 0.14)" />
+			<stop offset="100%" stop-color="rgb(0 0 0 / 0.05)" />
+		</linearGradient>
+	</defs>
 	<g transform="translate(60, 60)">
     <!-- gridlines -->
-		<rect x="0" y="0" width="200" height="200" fill="#36e" id="grid-image-background-color" />
+		<rect x="0" y="0" width="200" height="200" fill="url(#grid-background-gradient)" id="grid-image-background-color" />
 		<pattern id="grid-gridlines-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
 			<g fill="rgb(0 0 0 / 0.2)">
 				<rect x="0" y="0" width="1" height="50" id="grid-gridline-vertical" />
@@ -12,7 +25,7 @@
 		</pattern>
 		<rect x="0" y="0" width="200" height="200" fill="url(#grid-gridlines-pattern)" />
     <!-- grid tiles -->
-		<g id="grid-tiles" fill="rgba(0, 0, 0, 0.1)">
+		<g id="grid-tiles" fill="url(#grid-tile-gradient)">
 			<rect x="1" y="1" width="49" height="49" />
 			<rect x="101" y="1" width="49" height="49" />
 			<rect x="51" y="51" width="49" height="49" />

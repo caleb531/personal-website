@@ -1,5 +1,22 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- blue gradient -->
+    <linearGradient id="automata-blue-gradient" x1="100" y1="100" x2="270" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="automata-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a4eb62" />
+      <stop offset="48%" stop-color="#75cf42" />
+      <stop offset="100%" stop-color="#55a936" />
+    </linearGradient>
+    <!-- white gradient -->
+    <linearGradient id="automata-white-gradient" x1="180" y1="180" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dbe5f4" />
+    </linearGradient>
     <!-- diagomal transition arrow -->
     <path id="automata-transition-arrow-diagonal" d="M 0,0 L 78,78 M 62,78 78,78 78,62" />
     <!-- diagomal transition arrow -->
@@ -12,14 +29,14 @@
       <use xlink:href="#automata-transition-arrow-circular" x="220" y="160" />
     </g>
   </defs>
-  <use xlink:href="#automata-transition-arrows" x="0" y="0" stroke="#36e" stroke-width="7" />
-  <use xlink:href="#automata-transition-arrows" x="0" y="0" stroke="#36e" stroke-width="4" />
+  <use xlink:href="#automata-transition-arrows" x="0" y="0" stroke="url(#automata-blue-gradient)" stroke-width="7" />
+  <use xlink:href="#automata-transition-arrows" x="0" y="0" stroke="url(#automata-blue-gradient)" stroke-width="4" />
   <!-- states -->
-  <g fill="#7d4" stroke="#7d4" stroke-width="4">
+  <g fill="url(#automata-green-gradient)" stroke="url(#automata-green-gradient)" stroke-width="4">
     <!-- state 1 (top-left) -->
     <circle cx="80" cy="80" r="40" />
     <!-- state 2 (final state; bottom-right) -->
     <circle cx="220" cy="220" r="52" />
-    <circle cx="220" cy="220" r="40" stroke="#fff" />
+    <circle cx="220" cy="220" r="40" stroke="url(#automata-white-gradient)" />
   </g>
 </svg>

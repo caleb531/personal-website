@@ -1,18 +1,54 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable chips -->
   <defs>
+    <!-- red gradient -->
+    <linearGradient id="colorfulchips-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="45%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="colorfulchips-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="colorfulchips-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="45%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <!-- orange gradient -->
+    <linearGradient id="colorfulchips-orange-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb35f" />
+      <stop offset="45%" stop-color="#f2761c" />
+      <stop offset="100%" stop-color="#b5470f" />
+    </linearGradient>
+    <!-- yellow gradient -->
+    <linearGradient id="colorfulchips-yellow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff07a" />
+      <stop offset="45%" stop-color="#f5cf32" />
+      <stop offset="100%" stop-color="#bc8d18" />
+    </linearGradient>
+    <!-- purple gradient -->
+    <linearGradient id="colorfulchips-purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c79aff" />
+      <stop offset="45%" stop-color="#9560f0" />
+      <stop offset="100%" stop-color="#6532bd" />
+    </linearGradient>
     <circle id="colorfulchips-chip" r="40" />
   </defs>
   <!-- red circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="100" fill="#e22" />
+  <use xlink:href="#colorfulchips-chip" x="100" y="100" fill="url(#colorfulchips-red-gradient)" />
   <!-- green circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="160" fill="#7d4" />
+  <use xlink:href="#colorfulchips-chip" x="100" y="160" fill="url(#colorfulchips-green-gradient)" />
   <!-- blue circle -->
-  <use xlink:href="#colorfulchips-chip" x="100" y="220" fill="#36e" />
+  <use xlink:href="#colorfulchips-chip" x="100" y="220" fill="url(#colorfulchips-blue-gradient)" />
   <!-- orange circle -->
-  <use xlink:href="#colorfulchips-chip" x="220" y="100" fill="#f71" />
+  <use xlink:href="#colorfulchips-chip" x="220" y="100" fill="url(#colorfulchips-orange-gradient)" />
   <!-- yellow circle -->
-  <use xlink:href="#colorfulchips-chip" x="220" y="160" fill="#fd2" />
+  <use xlink:href="#colorfulchips-chip" x="220" y="160" fill="url(#colorfulchips-yellow-gradient)" />
   <!-- purple circle -->
-  <use xlink:href="#colorfulchips-chip" x="220" y="220" fill="#96f" />
+  <use xlink:href="#colorfulchips-chip" x="220" y="220" fill="url(#colorfulchips-purple-gradient)" />
 </svg>

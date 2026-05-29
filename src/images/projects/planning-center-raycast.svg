@@ -1,10 +1,30 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- planning gradient -->
+    <linearGradient id="pcr-planning-gradient" x1="70" y1="70" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <!-- white gradient -->
+    <linearGradient id="pcr-white-gradient" x1="96" y1="96" x2="224" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#f2f6ff" />
+      <stop offset="100%" stop-color="#c8d4ea" />
+    </linearGradient>
+    <!-- blue gradient -->
+    <linearGradient id="pcr-blue-gradient" x1="96" y1="96" x2="224" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+  </defs>
   <!-- Planning Center hexagon -->
-  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="#36e" stroke="#36e" stroke-width="50" stroke-linejoin="round" />
+  <polygon points="160,70 250,100 250,220 160,250 70,220 70,100" fill="url(#pcr-planning-gradient)" stroke="url(#pcr-planning-gradient)" stroke-width="50" stroke-linejoin="round" />
   <!-- Raycast logo -->
   <g transform="translate(160, 160) scale(0.6) translate(-160, -160)">
     <!-- logo diamond -->
-    <g fill="#fff" transform="translate(160, -66.27416998) rotate(45)">
+    <g fill="url(#pcr-white-gradient)" transform="translate(160, -66.27416998) rotate(45)">
       <rect x="70" y="70" width="180" height="20" />
       <rect x="70" y="110" width="180" height="20" />
       <rect x="70" y="150" width="180" height="20" />
@@ -12,8 +32,8 @@
       <rect x="70" y="230" width="180" height="20" />
     </g>
     <!-- inner cube back -->
-    <polygon points="123.63961031,96.36038969 96.36038969,123.63961031 96.36038969,223.63961031 196.36038969,223.63961031 223.63961031,196.36038969" fill="#36e" />
+    <polygon points="123.63961031,96.36038969 96.36038969,123.63961031 96.36038969,223.63961031 196.36038969,223.63961031 223.63961031,196.36038969" fill="url(#pcr-blue-gradient)" />
     <!-- inner cube front -->
-    <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="#fff" />
+    <rect x="123.63961031" y="96.36038969" width="100" height="100" fill="url(#pcr-white-gradient)" />
   </g>
 </svg>

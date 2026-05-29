@@ -1,22 +1,40 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon components -->
   <defs>
+    <!-- blue gradient -->
+    <linearGradient id="swatches-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#65b8ff" />
+      <stop offset="52%" stop-color="#3399ff" />
+      <stop offset="100%" stop-color="#1e63c8" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="swatches-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91e852" />
+      <stop offset="48%" stop-color="#77dd44" />
+      <stop offset="100%" stop-color="#48aa2e" />
+    </linearGradient>
+    <!-- red gradient -->
+    <linearGradient id="swatches-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6262" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#aa1420" />
+    </linearGradient>
     <!-- color swatch -->
     <rect id="swatches-swatch" width="120" height="120" rx="16" ry="16" fill="none" />
   </defs>
   <!-- blue swatch -->
   <g>
-    <use xlink:href="#swatches-swatch" x="140" y="140" stroke="#39f" stroke-width="24"  />
-    <use xlink:href="#swatches-swatch" x="140" y="140" stroke="#39f" stroke-width="16"  />
+    <use xlink:href="#swatches-swatch" x="140" y="140" stroke="url(#swatches-blue-gradient)" stroke-width="24"  />
+    <use xlink:href="#swatches-swatch" x="140" y="140" stroke="url(#swatches-blue-gradient)" stroke-width="16"  />
   </g>
   <!-- green swatch -->
   <g>
-    <use xlink:href="#swatches-swatch" x="100" y="100" stroke="#7d4" stroke-width="24"  />
-    <use xlink:href="#swatches-swatch" x="100" y="100" stroke="#7d4" stroke-width="16"  />
+    <use xlink:href="#swatches-swatch" x="100" y="100" stroke="url(#swatches-green-gradient)" stroke-width="24"  />
+    <use xlink:href="#swatches-swatch" x="100" y="100" stroke="url(#swatches-green-gradient)" stroke-width="16"  />
   </g>
   <!-- red swatch -->
   <g>
-    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e22" stroke-width="24"  />
-    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="#e22" stroke-width="16"  />
+    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="url(#swatches-red-gradient)" stroke-width="24"  />
+    <use xlink:href="#swatches-swatch" x="60" y="60" stroke="url(#swatches-red-gradient)" stroke-width="16"  />
   </g>
 </svg>

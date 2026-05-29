@@ -1,8 +1,20 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <rect id="truthy-false-value" width="100" height="100" x="-50" y="-50" rx="10" ry="10" fill="#e22" stroke="#e22"
+    <!-- boolean false gradient -->
+    <linearGradient id="truthy-false-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- boolean true gradient -->
+    <linearGradient id="truthy-true-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
+    <rect id="truthy-false-value" width="100" height="100" x="-50" y="-50" rx="10" ry="10" fill="url(#truthy-false-gradient)" stroke="url(#truthy-false-gradient)"
       stroke-width="4" />
-    <circle id="truthy-true-value" r="50" fill="#7d4" stroke="#7d4" stroke-width="4" />
+    <circle id="truthy-true-value" r="50" fill="url(#truthy-true-gradient)" stroke="url(#truthy-true-gradient)" stroke-width="4" />
   </defs>
   <!-- table values -->
   <g>

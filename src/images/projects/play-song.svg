@@ -1,8 +1,22 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- play gradient -->
+    <linearGradient id="playsong-play-gradient" x1="70" y1="50" x2="260" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff96ac" />
+      <stop offset="52%" stop-color="#f04d74" />
+      <stop offset="100%" stop-color="#b7284f" />
+    </linearGradient>
+    <!-- note gradient -->
+    <linearGradient id="playsong-note-gradient" x1="90" y1="120" x2="165" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="52%" stop-color="#f2f6ff" />
+      <stop offset="100%" stop-color="#c8d4ea" />
+    </linearGradient>
+  </defs>
   <!-- play icon -->
-  <polygon points="70,50 70,270 260,160" fill="#f46" stroke="#f46" stroke-width="4" />
+  <polygon points="70,50 70,270 260,160" fill="url(#playsong-play-gradient)" stroke="url(#playsong-play-gradient)" stroke-width="4" />
   <!-- music note -->
   <path
     d="M 115,135 L 115,195 C 110,188 90,188 90,205 C 90,222 122,222 122,200 L 122,150 L 156,138 L 156,182 C 151,175 131,175 131,192 C 131,209 163,209 163,187 L 163,120 Z"
-    fill="#fff" stroke="#fff" stroke-width="2" />
+    fill="url(#playsong-note-gradient)" stroke="url(#playsong-note-gradient)" stroke-width="2" />
 </svg>

@@ -1,10 +1,22 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- purple gradient -->
+    <linearGradient id="palomarscheduler-purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9a72e8" />
+      <stop offset="50%" stop-color="#7744dd" />
+      <stop offset="100%" stop-color="#5427aa" />
+    </linearGradient>
+    <!-- black gradient -->
+    <linearGradient id="palomarscheduler-black-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b3d46" />
+      <stop offset="52%" stop-color="#17181d" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
     <!-- purple star -->
-    <polygon id="palomarscheduler-star" points="0,-50 11.7557050458,-16.1803398875 47.5528258148,-15.4508497187 19.0211303259,6.1803398875 29.3892626146,40.4508497187 0,20 -29.3892626146,40.4508497187 -19.0211303259,6.1803398875 -47.5528258148,-15.4508497187 -11.7557050458,-16.1803398875" fill="#74d" stroke="#74d" stroke-width="4" />
+    <polygon id="palomarscheduler-star" points="0,-50 11.7557050458,-16.1803398875 47.5528258148,-15.4508497187 19.0211303259,6.1803398875 29.3892626146,40.4508497187 0,20 -29.3892626146,40.4508497187 -19.0211303259,6.1803398875 -47.5528258148,-15.4508497187 -11.7557050458,-16.1803398875" fill="url(#palomarscheduler-purple-gradient)" stroke="url(#palomarscheduler-purple-gradient)" stroke-width="4" />
     <!-- black list item line -->
-    <polygon id="palomarscheduler-list-item" points="0,-4 0,4 120,4 120,-4" fill="#000" />
+    <polygon id="palomarscheduler-list-item" points="0,-4 0,4 120,4 120,-4" fill="url(#palomarscheduler-black-gradient)" />
   </defs>
   <!-- top star -->
   <use xlink:href="#palomarscheduler-star" x="90" y="100" />

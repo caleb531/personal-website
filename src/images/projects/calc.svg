@@ -1,8 +1,20 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- reusable icon elements -->
   <defs>
+    <!-- green gradient -->
+    <linearGradient id="calc-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4cc85b" />
+      <stop offset="50%" stop-color="#2fa742" />
+      <stop offset="100%" stop-color="#1f7c31" />
+    </linearGradient>
+    <!-- ring gradient -->
+    <linearGradient id="calc-ring-gradient" x1="110" y1="110" x2="210" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8be7c3" />
+      <stop offset="52%" stop-color="#58d1a0" />
+      <stop offset="100%" stop-color="#36ad7e" />
+    </linearGradient>
     <!-- dot representing operand -->
-    <circle id="calc-operand-dot" r="20" fill="#3a4" stroke="#3a4" stroke-width="4" />
+    <circle id="calc-operand-dot" r="20" fill="url(#calc-green-gradient)" stroke="url(#calc-green-gradient)" stroke-width="4" />
     <!-- circle representing operator -->
     <circle id="calc-operator-circle" cx="160" cy="160" r="50" fill="none" />
   </defs>
@@ -10,6 +22,6 @@
   <use xlink:href="#calc-operand-dot" x="60" y="160" />
   <use xlink:href="#calc-operand-dot" x="260" y="160" />
   <!-- operator stroke and fill -->
-  <use xlink:href="#calc-operator-circle" stroke="#55cc99" stroke-width="16" />
-  <use xlink:href="#calc-operator-circle" stroke="#55cc99" stroke-width="8" />
+  <use xlink:href="#calc-operator-circle" stroke="url(#calc-ring-gradient)" stroke-width="16" />
+  <use xlink:href="#calc-operator-circle" stroke="url(#calc-ring-gradient)" stroke-width="8" />
 </svg>

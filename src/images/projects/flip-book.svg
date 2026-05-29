@@ -1,10 +1,42 @@
 <svg viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- page light gradient -->
+    <linearGradient id="flipbook-page-light-gradient" x1="40" y1="50" x2="150" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f0f0f5" />
+      <stop offset="52%" stop-color="#c8c8d0" />
+      <stop offset="100%" stop-color="#9698a2" />
+    </linearGradient>
+    <!-- page mid gradient -->
+    <linearGradient id="flipbook-page-mid-gradient" x1="40" y1="60" x2="150" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c9c9d0" />
+      <stop offset="52%" stop-color="#9899a1" />
+      <stop offset="100%" stop-color="#686a75" />
+    </linearGradient>
+    <!-- page dark gradient -->
+    <linearGradient id="flipbook-page-dark-gradient" x1="40" y1="120" x2="240" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8a8c98" />
+      <stop offset="52%" stop-color="#60626e" />
+      <stop offset="100%" stop-color="#333640" />
+    </linearGradient>
+    <!-- page shadow gradient -->
+    <linearGradient id="flipbook-page-shadow-gradient" x1="40" y1="190" x2="270" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#585a65" />
+      <stop offset="52%" stop-color="#33343c" />
+      <stop offset="100%" stop-color="#15161d" />
+    </linearGradient>
+    <!-- binding gradient -->
+    <linearGradient id="flipbook-binding-gradient" x1="40" y1="260" x2="280" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34343c" />
+      <stop offset="52%" stop-color="#111116" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+  </defs>
   <!-- pages -->
   <g stroke-width="15" fill="none">
-    <path d="M 40,260 Q 150,260,50,50" stroke="#ccc" />
-    <path d="M 40,260 Q 150,260,150,60" stroke="#999" />
-    <path d="M 40,260 Q 150,260,240,120" stroke="#666" />
-    <path d="M 40,260 Q 150,260,270,190" stroke="#333" />
-    <path d="M 40,260 L 280,260" stroke="#000" />
+    <path d="M 40,260 Q 150,260,50,50" stroke="url(#flipbook-page-light-gradient)" />
+    <path d="M 40,260 Q 150,260,150,60" stroke="url(#flipbook-page-mid-gradient)" />
+    <path d="M 40,260 Q 150,260,240,120" stroke="url(#flipbook-page-dark-gradient)" />
+    <path d="M 40,260 Q 150,260,270,190" stroke="url(#flipbook-page-shadow-gradient)" />
+    <path d="M 40,260 L 280,260" stroke="url(#flipbook-binding-gradient)" />
   </g>
 </svg>

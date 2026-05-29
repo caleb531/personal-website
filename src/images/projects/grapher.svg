@@ -1,16 +1,28 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- red gradient -->
+    <linearGradient id="grapher-red-gradient" x1="60" y1="60" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="grapher-green-gradient" x1="60" y1="60" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#c0f285" />
+      <stop offset="45%" stop-color="#7fd249" />
+      <stop offset="100%" stop-color="#3e972f" />
+    </linearGradient>
     <!-- quadratic curve -->
     <path id="grapher-curve" d="M 60,60 Q 160,460,260,60" fill="none" stroke-linecap="round" />
   </defs>
   <!-- negative red curve -->
   <g transform="scale(1,-1) translate(0,-320)">
-    <use xlink:href="#grapher-curve" stroke="#e22" stroke-width="20" />
-    <use xlink:href="#grapher-curve" stroke="#e22" stroke-width="12" />
+    <use xlink:href="#grapher-curve" stroke="url(#grapher-red-gradient)" stroke-width="20" />
+    <use xlink:href="#grapher-curve" stroke="url(#grapher-red-gradient)" stroke-width="12" />
   </g>
   <!-- positive green curve -->
   <g>
-    <use xlink:href="#grapher-curve" stroke="#7d4" stroke-width="20" />
-    <use xlink:href="#grapher-curve" stroke="#7d4" stroke-width="12" />
+    <use xlink:href="#grapher-curve" stroke="url(#grapher-green-gradient)" stroke-width="20" />
+    <use xlink:href="#grapher-curve" stroke="url(#grapher-green-gradient)" stroke-width="12" />
   </g>
 </svg>

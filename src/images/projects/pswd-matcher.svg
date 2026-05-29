@@ -1,17 +1,29 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- green gradient -->
+    <linearGradient id="pswdmatcher-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#91e852" />
+      <stop offset="48%" stop-color="#77dd44" />
+      <stop offset="100%" stop-color="#48aa2e" />
+    </linearGradient>
+    <!-- red gradient -->
+    <linearGradient id="pswdmatcher-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6a6a" />
+      <stop offset="52%" stop-color="#ee2222" />
+      <stop offset="100%" stop-color="#b31822" />
+    </linearGradient>
     <!-- password chacter bullet -->
     <circle id="pswdmatcher-bullet" cx="0" cy="0" r="20" stroke-width="4" />
   </defs>
   <!-- green (correct) bullets -->
-  <g fill="#7d4" stroke="#7d4">
+  <g fill="url(#pswdmatcher-green-gradient)" stroke="url(#pswdmatcher-green-gradient)">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="130" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="190" y="100" />
     <use xlink:href="#pswdmatcher-bullet" x="250" y="100" />
   </g>
   <!-- red (incorrect) bullets -->
-  <g fill="#e22" stroke="#e22">
+  <g fill="url(#pswdmatcher-red-gradient)" stroke="url(#pswdmatcher-red-gradient)">
     <use xlink:href="#pswdmatcher-bullet" x="70" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="130" y="220" />
     <use xlink:href="#pswdmatcher-bullet" x="190" y="220" />

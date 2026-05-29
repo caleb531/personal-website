@@ -1,9 +1,21 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <path id="sequencer-bracket" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" fill="#39f" stroke="#39f" stroke-width="4" />
+    <!-- bracket gradient -->
+    <linearGradient id="sequencer-bracket-gradient" x1="40" y1="100" x2="280" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#85c9ff" />
+      <stop offset="52%" stop-color="#3399f6" />
+      <stop offset="100%" stop-color="#1e66bd" />
+    </linearGradient>
+    <!-- sigma gradient -->
+    <linearGradient id="sequencer-sigma-gradient" x1="100" y1="80" x2="220" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e91f4" />
+      <stop offset="52%" stop-color="#3863df" />
+      <stop offset="100%" stop-color="#243fa3" />
+    </linearGradient>
+    <path id="sequencer-bracket" d="M 20,60 Q -5,60 -5,30 Q -5,10 -20,6 L -20,-6 Q -5,-6 -5,-30 Q -5,-60 20,-60 L 20,-50 Q 5,-50 5,-30 Q 5,0 -10,0 Q 5,0 5,30 Q 5,50 20,50 Z" fill="url(#sequencer-bracket-gradient)" stroke="url(#sequencer-bracket-gradient)" stroke-width="4" />
   </defs>
   <!-- summation symbol -->
-  <polygon points="220,240 100,240 100,220 160,160 100,100 100,80 220,80 220,100 130,100 190,160 130,220 220,220" fill="#36e" stroke="#36e" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="220,240 100,240 100,220 160,160 100,100 100,80 220,80 220,100 130,100 190,160 130,220 220,220" fill="url(#sequencer-sigma-gradient)" stroke="url(#sequencer-sigma-gradient)" stroke-width="4" stroke-linejoin="round" />
   <use xlink:href="#sequencer-bracket" x="60" y="160" />
   <use xlink:href="#sequencer-bracket" x="260" y="160" transform="translate(520,0) scale(-1,1)" />
 </svg>

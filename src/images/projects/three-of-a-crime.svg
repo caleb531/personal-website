@@ -1,12 +1,36 @@
 <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <!-- purple gradient -->
+    <linearGradient id="toac-purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c79aff" />
+      <stop offset="52%" stop-color="#9560f0" />
+      <stop offset="100%" stop-color="#6532bd" />
+    </linearGradient>
+    <!-- red gradient -->
+    <linearGradient id="toac-red-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7979" />
+      <stop offset="52%" stop-color="#e22d2d" />
+      <stop offset="100%" stop-color="#991b23" />
+    </linearGradient>
+    <!-- green gradient -->
+    <linearGradient id="toac-green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b7f083" />
+      <stop offset="52%" stop-color="#7dd24b" />
+      <stop offset="100%" stop-color="#3f8f2a" />
+    </linearGradient>
+    <!-- orange gradient -->
+    <linearGradient id="toac-orange-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb35f" />
+      <stop offset="52%" stop-color="#f2761c" />
+      <stop offset="100%" stop-color="#b5470f" />
+    </linearGradient>
     <!-- a single suspect -->
     <rect id="toac-suspect" width="72" height="60" rx="8" ry="8" />
     <!-- references to particular suspects -->
-    <use id="toac-suspect-purple" xlink:href="#toac-suspect" x="0" y="0" fill="#96f" stroke="#96f" />
-    <use id="toac-suspect-red" xlink:href="#toac-suspect" x="0" y="0" fill="#e22" stroke="#e22" />
-    <use id="toac-suspect-green" xlink:href="#toac-suspect" x="0" y="0" fill="#7d4" stroke="#7d4" />
-    <use id="toac-suspect-orange" xlink:href="#toac-suspect" x="0" y="0" fill="#f71" stroke="#f71" />
+    <use id="toac-suspect-purple" xlink:href="#toac-suspect" x="0" y="0" fill="url(#toac-purple-gradient)" stroke="url(#toac-purple-gradient)" />
+    <use id="toac-suspect-red" xlink:href="#toac-suspect" x="0" y="0" fill="url(#toac-red-gradient)" stroke="url(#toac-red-gradient)" />
+    <use id="toac-suspect-green" xlink:href="#toac-suspect" x="0" y="0" fill="url(#toac-green-gradient)" stroke="url(#toac-green-gradient)" />
+    <use id="toac-suspect-orange" xlink:href="#toac-suspect" x="0" y="0" fill="url(#toac-orange-gradient)" stroke="url(#toac-orange-gradient)" />
   </defs>
   <!-- all suspects -->
   <g stroke-width="4">
