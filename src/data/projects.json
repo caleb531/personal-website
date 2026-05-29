@@ -34,7 +34,7 @@
       {
         "id": "javascript-libraries",
         "title": "JavaScript Libraries",
-        "topProjects": ["jcanvas", "youversion-suggest-node", "calc"]
+        "topProjects": ["jcanvas", "youversion-suggest-api", "calc"]
       },
       {
         "id": "alfred",
