@@ -40,15 +40,9 @@ input[type='url'] {
     z-index: 1;
     width: 18px;
     height: 18px;
-    background-color: currentColor;
-    -webkit-mask-image: url('/src/images/search.svg');
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-image: url('/src/images/search.svg');
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
+    background-image: url('/src/images/search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
     pointer-events: none;
   }
   // Hide search input when JavaScript is disabled (source:
