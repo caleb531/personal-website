@@ -19,6 +19,7 @@
   li {
     display: inline-block;
     position: relative;
+    // Underline for nav link representing current page
     &:after {
       content: '';
       opacity: 0;
