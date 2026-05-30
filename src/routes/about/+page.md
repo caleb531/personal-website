@@ -50,8 +50,8 @@ tend to follow the indentation convention for whichever language I'm writing.
 #### AI
 
 When I need to tackle, for example, massive and unwieldy refactors, I reach for
-GitHub Copilot with GPT-5 Codex. After much experimentation—and some
-disheartening experiences with Sonnet 4.5—I've found Codex to be the most
+the Codex VS Code extension with GPT-5.5. After much experimentation—and some
+disheartening experiences with Sonnet, I've found Codex to be the most
 consistently effective model with an impressive understanding of intent. Of
 course, I'm eager to test the future models that emerge from this nascent,
 volatile AI-driven market.
