@@ -59,6 +59,18 @@ strong {
   letter-spacing: -1px;
   color: var(--color-strong);
 }
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  strong,
+  .site-title {
+    background-image: linear-gradient(to top, var(--color-strong-start), var(--color-strong-end));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 // Style semantically-neutral bold text as simply colored text
 b {
   color: var(--color-strong);
