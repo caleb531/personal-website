@@ -54,6 +54,12 @@
     pointer-events: none;
     transform: translateY(-20px);
     @include menus.floating-menu(7px);
+    &[data-floating-menu-enhanced='true'] {
+      @include menus.floating-menu-svg-backdrop-enhanced();
+    }
+    > li {
+      z-index: 1;
+    }
     li:after {
       display: none;
     }

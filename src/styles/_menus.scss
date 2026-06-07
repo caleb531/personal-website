@@ -9,6 +9,9 @@
   --menu-border-radius: 5px;
   --menu-offset-top: 5px;
   --menu-offset-right: -4px;
+  --menu-arrow-width: 18px;
+  --menu-arrow-height: 9px;
+  --menu-backdrop-stroke-width: 1;
 }
 
 // Mixins for overlay menus
@@ -46,4 +49,12 @@
   } @else {
     right: var(--menu-offset-right);
   }
+}
+
+// Preserve the fallback box metrics, but let the SVG draw the translucent fill
+// and border as one continuous chevron + rectangle outline.
+@mixin floating-menu-svg-backdrop-enhanced() {
+  isolation: isolate;
+  background-color: transparent;
+  border-color: transparent;
 }
