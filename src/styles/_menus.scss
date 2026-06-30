@@ -25,11 +25,14 @@
   // Fallback visual height for SVG-backed floating menu arrows
   --menu-arrow-height: 8px;
 
+  // Fallback horizontal offset from SVG-backed floating menu arrow placement anchors
+  --menu-arrow-offset-x: 30px;
+
   // Backdrop blur amount used behind floating menus
   --menu-blur-amount: 3px;
 
   // Vertical offset between a trigger and its floating menu
-  --menu-offset-top: 5px;
+  --menu-offset-top: 0;
 
   // Horizontal offset used by right-aligned floating menus
   --menu-offset-right: -4px;

@@ -3,6 +3,9 @@
   import navigation from '$data/navigation.json';
   import navToggleSvgUrl from '$src/images/nav-toggle.svg';
 
+  // Allowed horizontal placement modes for the floating navigation arrow
+  type MenuShapeArrowPlacement = 'center' | 'left' | 'right';
+
   // Normalized SVG artboard width for the floating navigation background
   const menuShapeWidth = 100;
 
@@ -15,6 +18,12 @@
   // Normalized height of the floating navigation arrow within the SVG artboard
   const menuShapeArrowHeight = 10;
 
+  // Horizontal placement mode for the floating navigation arrow
+  const menuShapeArrowRightPlacement = 'right' as MenuShapeArrowPlacement;
+
+  // Positive horizontal offset from the floating navigation arrow placement anchor
+  const menuShapeArrowOffsetX = 30;
+
   // Normalized corner radius for the floating navigation body within the SVG artboard
   const menuShapeBorderRadius = 5;
 
@@ -24,11 +33,27 @@
   // CSS length for documenting the floating navigation arrow width alongside its SVG geometry
   const menuShapeArrowWidthStyle = `${menuShapeArrowWidth}px`;
 
+  // CSS length for documenting the floating navigation arrow horizontal offset alongside its SVG geometry
+  const menuShapeArrowOffsetXStyle = `${menuShapeArrowOffsetX}px`;
+
   // CSS length for documenting the floating navigation radius alongside its SVG geometry
   const menuShapeBorderRadiusStyle = `${menuShapeBorderRadius}px`;
 
-  // Center x-coordinate of the floating navigation arrow within the SVG artboard
-  const menuShapeArrowCenter = menuShapeWidth / 2;
+  // Center x-coordinate of the floating navigation arrow placement anchor
+  const menuShapeArrowAnchor =
+    menuShapeArrowRightPlacement === 'left'
+      ? 0
+      : menuShapeArrowRightPlacement === 'right'
+        ? menuShapeWidth
+        : menuShapeWidth / 2;
+
+  // Direction multiplier for applying positive arrow offsets from the placement anchor
+  const menuShapeArrowOffsetDirection =
+    menuShapeArrowRightPlacement === 'left' ? 1 : menuShapeArrowRightPlacement === 'right' ? -1 : 0;
+
+  // Placement-aware center x-coordinate of the floating navigation arrow within the SVG artboard
+  const menuShapeArrowCenter =
+    menuShapeArrowAnchor + menuShapeArrowOffsetDirection * menuShapeArrowOffsetX;
 
   // SVG path for a single continuous filled and stroked shape; viewBox height keeps arrow scaling close to CSS pixels
   const menuShapePath = [
@@ -101,6 +126,7 @@
     id="site-header-nav-list"
     style:--menu-arrow-height={menuShapeArrowHeightStyle}
     style:--menu-arrow-width={menuShapeArrowWidthStyle}
+    style:--menu-arrow-offset-x={menuShapeArrowOffsetXStyle}
     style:--menu-border-radius={menuShapeBorderRadiusStyle}
   >
     <svg
