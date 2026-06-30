@@ -95,6 +95,11 @@
   @include layout(hybrid) {
     cursor: pointer;
     display: inline-block;
+    position: relative;
+    // Button needs to be higher z-index than the mobile navigation menu so that
+    // the backdrop-filter on the menu does not blur the bottom section of the
+    // focus box-shadow of the button
+    z-index: 99999;
     margin: 0;
     padding: 9px;
     &,
