@@ -40,6 +40,7 @@
   position: absolute;
   top: 100%;
   margin-top: var(--menu-offset-top) !important;
+  backdrop-filter: blur(3px);
   @if $position == 'center' {
     right: 50%;
     transform: translateX(50%);
