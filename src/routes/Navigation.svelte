@@ -3,6 +3,53 @@
   import navigation from '$data/navigation.json';
   import navToggleSvgUrl from '$src/images/nav-toggle.svg';
 
+  // Normalized SVG artboard width for the floating navigation background
+  const menuShapeWidth = 100;
+
+  // Normalized SVG artboard height calibrated to the rendered navigation menu height
+  const menuShapeHeight = 200;
+
+  // Normalized width of the floating navigation arrow within the SVG artboard
+  const menuShapeArrowWidth = 20;
+
+  // Normalized height of the floating navigation arrow within the SVG artboard
+  const menuShapeArrowHeight = 10;
+
+  // Normalized corner radius for the floating navigation body within the SVG artboard
+  const menuShapeBorderRadius = 5;
+
+  // CSS length for spacing content below the floating navigation arrow
+  const menuShapeArrowHeightStyle = `${menuShapeArrowHeight}px`;
+
+  // CSS length for documenting the floating navigation arrow width alongside its SVG geometry
+  const menuShapeArrowWidthStyle = `${menuShapeArrowWidth}px`;
+
+  // CSS length for documenting the floating navigation radius alongside its SVG geometry
+  const menuShapeBorderRadiusStyle = `${menuShapeBorderRadius}px`;
+
+  // Center x-coordinate of the floating navigation arrow within the SVG artboard
+  const menuShapeArrowCenter = menuShapeWidth / 2;
+
+  // SVG path for a single continuous filled and stroked shape; viewBox height keeps arrow scaling close to CSS pixels
+  const menuShapePath = [
+    `M ${menuShapeBorderRadius} ${menuShapeArrowHeight}`,
+    `H ${menuShapeArrowCenter - menuShapeArrowWidth / 2}`,
+    `L ${menuShapeArrowCenter} 0`,
+    `L ${menuShapeArrowCenter + menuShapeArrowWidth / 2} ${menuShapeArrowHeight}`,
+    `H ${menuShapeWidth - menuShapeBorderRadius}`,
+    `Q ${menuShapeWidth} ${menuShapeArrowHeight} ${menuShapeWidth} ${menuShapeArrowHeight + menuShapeBorderRadius}`,
+    `V ${menuShapeHeight - menuShapeBorderRadius}`,
+    `Q ${menuShapeWidth} ${menuShapeHeight} ${menuShapeWidth - menuShapeBorderRadius} ${menuShapeHeight}`,
+    `H ${menuShapeBorderRadius}`,
+    `Q 0 ${menuShapeHeight} 0 ${menuShapeHeight - menuShapeBorderRadius}`,
+    `V ${menuShapeArrowHeight + menuShapeBorderRadius}`,
+    `Q 0 ${menuShapeArrowHeight} ${menuShapeBorderRadius} ${menuShapeArrowHeight}`,
+    'Z'
+  ].join(' ');
+
+  // ViewBox for the normalized floating navigation SVG artboard
+  const menuShapeViewBox = `0 0 ${menuShapeWidth} ${menuShapeHeight}`;
+
   let isNavOpen = $state(false);
 
   // A custom Svelte action to update state a specified element, or any of its
@@ -49,7 +96,28 @@
   >
     <img src={navToggleSvgUrl} alt="" aria-hidden="true" />
   </button>
-  <ul class="site-header-nav-list" id="site-header-nav-list">
+  <ul
+    class="site-header-nav-list"
+    id="site-header-nav-list"
+    style:--menu-arrow-height={menuShapeArrowHeightStyle}
+    style:--menu-arrow-width={menuShapeArrowWidthStyle}
+    style:--menu-border-radius={menuShapeBorderRadiusStyle}
+  >
+    <svg
+      class="site-header-nav-list-background"
+      viewBox={menuShapeViewBox}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d={menuShapePath}
+        fill="var(--menu-background-color)"
+        stroke="var(--menu-border-color)"
+        stroke-width="var(--menu-border-width)"
+        vector-effect="non-scaling-stroke"
+      />
+    </svg>
     {#each navigation as navigationLink (navigationLink.url)}
       {@const isCurrent = isCurrentPage(navigationLink, page)}
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>

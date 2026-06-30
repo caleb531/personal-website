@@ -1,13 +1,37 @@
 // Variables for overlay menus
 
 :root {
+  // Duration used by floating menu fade and slide transitions
   --menu-transition-duration: 200ms;
+
+  // Easing used by floating menu fade and slide transitions
   --menu-transition-easing: ease-in-out;
 
+  // Translucent fill color used by SVG-backed floating menus
   --menu-background-color: var(--color-shadow-light);
+
+  // Translucent stroke color used by SVG-backed floating menus
   --menu-border-color: var(--color-slate-300-alpha-18);
+
+  // Fallback corner radius for SVG-backed floating menus
   --menu-border-radius: 5px;
+
+  // Stroke width used by SVG-backed floating menus
+  --menu-border-width: 1px;
+
+  // Fallback visual width for SVG-backed floating menu arrows
+  --menu-arrow-width: 12px;
+
+  // Fallback visual height for SVG-backed floating menu arrows
+  --menu-arrow-height: 8px;
+
+  // Backdrop blur amount used behind floating menus
+  --menu-blur-amount: 3px;
+
+  // Vertical offset between a trigger and its floating menu
   --menu-offset-top: 5px;
+
+  // Horizontal offset used by right-aligned floating menus
   --menu-offset-right: -4px;
 }
 
@@ -34,13 +58,10 @@
 
 @mixin floating-menu($position) {
   @include transition-fade();
-  border: solid 1px var(--menu-border-color);
-  border-radius: var(--menu-border-radius);
-  background-color: var(--menu-background-color);
   position: absolute;
   top: 100%;
   margin-top: var(--menu-offset-top) !important;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(var(--menu-blur-amount));
   @if $position == 'center' {
     right: 50%;
     transform: translateX(50%);
