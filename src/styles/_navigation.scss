@@ -51,19 +51,9 @@
     }
   }
   @include layout(hybrid) {
-    --menu-arrow-right-offset: 29px;
     pointer-events: none;
     transform: translateY(-20px);
     @include menus.floating-menu(7px);
-    &:has(> .floating-menu-backdrop.is-ready) {
-      @include menus.floating-menu-svg-backdrop-enhanced();
-    }
-    > .floating-menu-backdrop {
-      display: block;
-    }
-    > li {
-      z-index: 1;
-    }
     li:after {
       display: none;
     }

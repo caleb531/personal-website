@@ -2,7 +2,6 @@
   import { page } from '$app/state';
   import navigation from '$data/navigation.json';
   import navToggleSvgUrl from '$src/images/nav-toggle.svg';
-  import FloatingMenuBackdrop from './FloatingMenuBackdrop.svelte';
 
   let isNavOpen = $state(false);
 
@@ -51,7 +50,6 @@
     <img src={navToggleSvgUrl} alt="" aria-hidden="true" />
   </button>
   <ul class="site-header-nav-list" id="site-header-nav-list">
-    <FloatingMenuBackdrop arrowPlacement="right" />
     {#each navigation as navigationLink (navigationLink.url)}
       {@const isCurrent = isCurrentPage(navigationLink, page)}
       <li class:is-current-page={isCurrent} aria-current={isCurrent ? 'page' : null}>
