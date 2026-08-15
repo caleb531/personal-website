@@ -1,0 +1,11 @@
+overrides:
+  cookie@<0.7.0: '>=0.7.0'
+  esbuild@<=0.24.2: '>=0.25.0'
+  prismjs@<1.30.0: '>=1.30.0'
+  esbuild@>=0.27.3 <0.28.1: '>=0.28.1'
+engineStrict: true
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  puppeteer: true
+  sharp: true
