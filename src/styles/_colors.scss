@@ -23,6 +23,26 @@
   --color-slate-300: hsl(215, 24%, 82%);
   --color-slate-200: hsl(214, 30%, 91%);
   --color-blue: hsl(215, 92%, 56%);
+  // Muted medium blue for a gentle tint over the page surface
+  --color-blue-600: hsl(207 62% 38%);
+  // Deep, restrained blue for a readable translucent page surface
+  --color-blue-800: hsl(215 54% 22%);
+  // Inky blue for depth at the edges of large page surfaces
+  --color-blue-900: hsl(221 46% 15%);
+  // Bright sky blue for the upper-left background cloud
+  --color-sky-500: hsl(197 100% 47%);
+  // Vivid cobalt blue for the upper-right background cloud
+  --color-cobalt-500: hsl(222 100% 59%);
+  // Rich azure blue for the center background cloud
+  --color-azure-600: hsl(210 96% 43%);
+  // Violet blue for the lower-left background cloud
+  --color-indigo-600: hsl(233 76% 43%);
+  // Deep cyan blue for the lower-right background cloud
+  --color-cyan-700: hsl(192 100% 38%);
+  // Deep royal blue for the background's linear base
+  --color-royal-blue-800: hsl(216 65% 26%);
+  // Lighter royal blue for the background's linear base
+  --color-royal-blue-700: hsl(219 62% 34%);
   --color-blue-soft: hsl(211, 100%, 96%);
   --color-blue-bright: hsl(215, 100%, 62%);
   --color-turquoise-bright: hsl(199, 95%, 62%);
@@ -41,6 +61,24 @@
   --color-navy-900-alpha-78: hsla(216, 48%, 11%, 0.78);
   --color-navy-800-alpha-78: hsla(216, 35%, 18%, 0.78);
   --color-navy-800-alpha-72: hsla(216, 35%, 18%, 0.72);
+  // Deep blue page wash that tempers the vivid body gradients behind content
+  --color-blue-800-alpha-68: hsl(215 54% 22% / 0.68);
+  // Subtle blue fill for inputs sitting on the page surface
+  --color-blue-800-alpha-35: hsl(215 54% 22% / 0.35);
+  // Soft blue highlight for broad gradients on the page surface
+  --color-blue-600-alpha-32: hsl(207 62% 38% / 0.32);
+  // Inky blue shade for broad gradients on the page surface
+  --color-blue-900-alpha-32: hsl(221 46% 15% / 0.32);
+  // Translucent sky blue for the upper-left background cloud
+  --color-sky-500-alpha-72: hsl(197 100% 47% / 0.72);
+  // Translucent cobalt blue for the upper-right background cloud
+  --color-cobalt-500-alpha-70: hsl(222 100% 59% / 0.7);
+  // Translucent azure blue for the center background cloud
+  --color-azure-600-alpha-55: hsl(210 96% 43% / 0.55);
+  // Translucent indigo blue for the lower-left background cloud
+  --color-indigo-600-alpha-50: hsl(233 76% 43% / 0.5);
+  // Translucent cyan blue for the lower-right background cloud
+  --color-cyan-700-alpha-42: hsl(192 100% 38% / 0.42);
   --color-navy-shadow-light: hsla(215, 32%, 18%, 0.1);
   --color-navy-shadow-medium: hsla(215, 34%, 12%, 0.18);
   --color-navy-shadow-dark: hsla(215, 40%, 8%, 0.28);
@@ -67,8 +105,27 @@
   // Semantic colors
   --color-body-background-start: var(--color-navy-950);
   --color-body-background-end: var(--color-navy-900);
+  // Bright sky cloud at the upper-left edge of the body backdrop
+  --color-body-background-cloud-top-left: var(--color-sky-500-alpha-72);
+  // Cobalt cloud at the upper-right edge of the body backdrop
+  --color-body-background-cloud-top-right: var(--color-cobalt-500-alpha-70);
+  // Azure cloud across the middle of the body backdrop
+  --color-body-background-cloud-center: var(--color-azure-600-alpha-55);
+  // Indigo cloud at the lower-left edge of the body backdrop
+  --color-body-background-cloud-bottom-left: var(--color-indigo-600-alpha-50);
+  // Cyan cloud at the lower-right edge of the body backdrop
+  --color-body-background-cloud-bottom-right: var(--color-cyan-700-alpha-42);
+  // Deep blue begins the opaque base beneath the body clouds
+  --color-body-background-gradient-start: var(--color-royal-blue-800);
+  // Lighter blue ends the opaque base beneath the body clouds
+  --color-body-background-gradient-end: var(--color-royal-blue-700);
   --color-header-background: var(--color-navy-950-alpha-94);
-  --color-main-background: var(--color-navy-900-alpha-88);
+  // Keep the page surface readable while letting the blue backdrop show through
+  --color-main-background: var(--color-blue-800-alpha-68);
+  // Brighten a broad area of the page without flattening its blue base
+  --color-main-background-highlight: var(--color-blue-600-alpha-32);
+  // Add a soft darker pocket to give the page surface depth
+  --color-main-background-shade: var(--color-blue-900-alpha-32);
   --color-card-background: var(--color-navy-900-alpha-78);
   --color-card-background-subtle: var(--color-navy-800-alpha-78);
   --color-card-border: var(--color-slate-300-alpha-18);
@@ -80,7 +137,8 @@
   --color-strong: var(--color-accent);
   --color-strong-start: var(--color-green-light);
   --color-strong-end: var(--color-green-dark);
-  --color-input-background: var(--color-navy-800-alpha-72);
+  // Keep form fields in the same blue family as the page surface
+  --color-input-background: var(--color-blue-800-alpha-35);
   --color-input-border: var(--color-slate-300-alpha-26);
   --color-input-placeholder: var(--color-slate-300);
   --color-icon-surface: var(--color-blue);
