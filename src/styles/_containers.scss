@@ -94,7 +94,6 @@ article.page {
   --page-padding-v: 32px;
   --page-padding-h: 32px;
   padding: var(--page-padding-v) var(--page-padding-h);
-  border: 1px solid var(--color-card-border);
   border-radius: 14px;
   background-color: var(--color-main-background);
   // Wide radial fades add contrast without interrupting the page content
