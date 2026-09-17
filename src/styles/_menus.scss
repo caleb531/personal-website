@@ -64,6 +64,7 @@
   position: absolute;
   top: 100%;
   margin-top: var(--menu-offset-top) !important;
+  filter: drop-shadow(0 5px 10px var(--color-shadow-dark));
   backdrop-filter: blur(var(--menu-blur-amount));
   @if $position == 'center' {
     right: 50%;
