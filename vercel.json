@@ -35,5 +35,7 @@
         }
       ]
     }
-  ]
+  ],
+  "installCommand": "corepack pnpm@^12 install --frozen-lockfile",
+  "buildCommand": "corepack pnpm@^12 run build"
 }
