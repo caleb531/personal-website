@@ -25,6 +25,10 @@
   // Source:
   // <https://stackoverflow.com/questions/71648152/snapping-to-the-top-when-doing-svelte-page-transitions>
   afterNavigate((navigation) => {
+    if (navigation.shallow) {
+      return;
+    }
+
     // Disable the automatic jumping to the top of the page when navigating
     // between pages
     disableScrollHandling();

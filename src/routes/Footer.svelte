@@ -8,8 +8,8 @@
   <ContactLinks isCompact />
   <p>
     <small>
-      &copy; 2013-{new Date().getFullYear()} Caleb Evans |
-      <a href={resolve('/privacy-policy/')}>Privacy Policy</a>
+      © 2013-{new Date().getFullYear()} Caleb Evans |
+      <a href={resolve('privacy-policy/')}>Privacy Policy</a>
     </small>
   </p>
   <p>

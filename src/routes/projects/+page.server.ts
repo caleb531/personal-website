@@ -1,4 +1,4 @@
-import { getProjects } from '$lib/entries.server.ts';
+import { getProjects } from '#lib/entries.server.ts';
 
 export async function load() {
   return {
