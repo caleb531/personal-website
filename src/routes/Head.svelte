@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
+  import { browser } from '$app/env';
+  import { PUBLIC_ANALYTICS_SITE_ID, PUBLIC_SITE_ORIGIN } from '$app/env/public';
   import { afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
-  import site from '$data/site.json';
-  import { PUBLIC_ANALYTICS_SITE_ID, PUBLIC_SITE_ORIGIN } from '$env/static/public';
-  import portrait120 from '$images/self-portrait-v7.jpg?w=120&imagetools';
-  import portrait152 from '$images/self-portrait-v7.jpg?w=152&imagetools';
-  import portrait180 from '$images/self-portrait-v7.jpg?w=180&imagetools';
-  import portrait192 from '$images/self-portrait-v7.jpg?w=192&imagetools';
-  import portrait76 from '$images/self-portrait-v7.jpg?w=76&imagetools';
-  import socialPreview from '$images/social-preview.png?w=2400&imagetools';
-  import JsonLd from '$routes/JsonLd.svelte';
+  import site from '#data/site.json';
+  import portrait120 from '#images/self-portrait-v7.jpg?w=120&imagetools';
+  import portrait152 from '#images/self-portrait-v7.jpg?w=152&imagetools';
+  import portrait180 from '#images/self-portrait-v7.jpg?w=180&imagetools';
+  import portrait192 from '#images/self-portrait-v7.jpg?w=192&imagetools';
+  import portrait76 from '#images/self-portrait-v7.jpg?w=76&imagetools';
+  import socialPreview from '#images/social-preview.png?w=2400&imagetools';
+  import JsonLd from '#routes/JsonLd.svelte';
 
   const siteOrigin: string = PUBLIC_SITE_ORIGIN || '';
 
@@ -45,7 +45,11 @@
   // double-count the pageview (see <https://www.goatcounter.com/help/spa> and
   // <https://kit.svelte.dev/docs/modules#$app-navigation-afternavigate>)
   if (browser) {
-    afterNavigate(({ to }) => {
+    afterNavigate(({ to, shallow }) => {
+      if (shallow) {
+        return;
+      }
+
       const url = to?.url;
       if (url) {
         window.goatcounter?.count({

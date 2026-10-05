@@ -1,4 +1,4 @@
-import { DISALLOW_BOTS } from '$env/static/private';
+import { DISALLOW_BOTS } from '$app/env/private';
 
 export const prerender = true;
 

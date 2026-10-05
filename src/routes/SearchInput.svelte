@@ -1,5 +1,5 @@
 <script lang="ts">
-  import clearSearchSvgUrl from '$src/images/clear-search.svg';
+  import clearSearchSvgUrl from '#src/images/clear-search.svg';
   import type { HTMLInputAttributes } from 'svelte/elements';
 
   interface Props extends HTMLInputAttributes {

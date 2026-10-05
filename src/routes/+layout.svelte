@@ -1,12 +1,12 @@
 <script lang="ts">
   import { afterNavigate, disableScrollHandling } from '$app/navigation';
   import { page } from '$app/state';
-  import Footer from '$routes/Footer.svelte';
-  import Head from '$routes/Head.svelte';
-  import Header from '$routes/Header.svelte';
-  import { pageFade, pageFadeDuration } from '$routes/transitions';
+  import Footer from '#routes/Footer.svelte';
+  import Head from '#routes/Head.svelte';
+  import Header from '#routes/Header.svelte';
+  import { pageFade, pageFadeDuration } from '#routes/transitions.ts';
 
-  import '$src/styles/index.scss';
+  import '#src/styles/index.scss';
   import '@fontsource-variable/roboto-flex/index.css';
   let { data, children } = $props();
 
@@ -25,6 +25,10 @@
   // Source:
   // <https://stackoverflow.com/questions/71648152/snapping-to-the-top-when-doing-svelte-page-transitions>
   afterNavigate((navigation) => {
+    if (navigation.shallow) {
+      return;
+    }
+
     // Disable the automatic jumping to the top of the page when navigating
     // between pages
     disableScrollHandling();

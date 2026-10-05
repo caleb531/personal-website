@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ProjectArchive from '$routes/projects/ProjectArchive.svelte';
+  import ProjectArchive from '#routes/projects/ProjectArchive.svelte';
 </script>
 
 <p>

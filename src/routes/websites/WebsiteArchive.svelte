@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import websiteMetadata from '$data/websites.json';
-  import Website from '$routes/websites/Website.svelte';
+  import websiteMetadata from '#data/websites.json';
+  import Website from '#routes/websites/Website.svelte';
   import { keyBy } from 'es-toolkit';
   import type { PageData } from './$types';
 

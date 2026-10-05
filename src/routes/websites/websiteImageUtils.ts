@@ -1,10 +1,11 @@
-import type { WebsiteEntry } from '$routes/types.ts';
+import type { WebsiteEntry } from '#routes/types.ts';
 
 type GlobUrlMap = Record<string, string[]>;
 
 // Resize the website images at build time so that the appropriate (smaller)
 // versions of each website image can be served
-export const resizedWebsiteUrlMap: GlobUrlMap = import.meta.glob('$src/images/websites/*.jpeg', {
+// Use a project-root path so the glob keys match the thumbnail paths below
+export const resizedWebsiteUrlMap: GlobUrlMap = import.meta.glob('/src/images/websites/*.jpeg', {
   // Generate additional sizes for each pregenerated website image (note that as
   // of vite-imagetools v5, the 'width' query parameter has been renamed to 'w';
   // see

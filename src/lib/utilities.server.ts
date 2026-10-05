@@ -1,4 +1,4 @@
-import type { Entry } from '$routes/types.ts';
+import type { Entry } from '#routes/types.ts';
 import { marked } from 'marked';
 import YAML from 'yaml';
 

@@ -1,14 +1,14 @@
 <script lang="ts">
-  import Entry from '$routes/(entries)/Entry.svelte';
-  import EntryContent from '$routes/(entries)/EntryContent.svelte';
-  import EntryImage from '$routes/(entries)/EntryImage.svelte';
-  import EntryMain from '$routes/(entries)/EntryMain.svelte';
-  import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import type { WebsiteEntry } from '$routes/types.ts';
+  import Entry from '#routes/(entries)/Entry.svelte';
+  import EntryContent from '#routes/(entries)/EntryContent.svelte';
+  import EntryImage from '#routes/(entries)/EntryImage.svelte';
+  import EntryMain from '#routes/(entries)/EntryMain.svelte';
+  import EntryTitle from '#routes/(entries)/EntryTitle.svelte';
+  import type { WebsiteEntry } from '#routes/types.ts';
   import {
     getWebsite1xThumbnailUrl,
     getWebsite2xThumbnailUrl
-  } from '$src/routes/websites/websiteImageUtils.ts';
+  } from '#src/routes/websites/websiteImageUtils.ts';
 
   interface Props {
     website: WebsiteEntry;

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import projectMetadata from '$data/projects.json';
-  import SearchInput from '$routes/SearchInput.svelte';
-  import ProjectCategory from '$routes/projects/ProjectCategory.svelte';
-  import { noopTransition, projectFadeSlide } from '$routes/transitions';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '$routes/types.ts';
+  import projectMetadata from '#data/projects.json';
+  import SearchInput from '#routes/SearchInput.svelte';
+  import ProjectCategory from '#routes/projects/ProjectCategory.svelte';
+  import { noopTransition, projectFadeSlide } from '#routes/transitions.ts';
+  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '#routes/types.ts';
   import { groupBy } from 'es-toolkit';
   import { prefersReducedMotion } from 'svelte/motion';
   import MountObserver from '../MountObserver.svelte';
