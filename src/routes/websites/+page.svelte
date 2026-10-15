@@ -1,5 +1,5 @@
 <script lang="ts">
-  import WebsiteArchive from '$routes/websites/WebsiteArchive.svelte';
+  import WebsiteArchive from '#routes/websites/WebsiteArchive.svelte';
 </script>
 
 <p>

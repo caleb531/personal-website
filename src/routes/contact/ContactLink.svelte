@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Entry from '$routes/(entries)/Entry.svelte';
-  import EntryDesc from '$routes/(entries)/EntryDesc.svelte';
-  import EntryImage from '$routes/(entries)/EntryImage.svelte';
-  import EntryMain from '$routes/(entries)/EntryMain.svelte';
-  import EntryTitle from '$routes/(entries)/EntryTitle.svelte';
-  import type { ContactLinkEntry } from '$routes/types.ts';
+  import Entry from '#routes/(entries)/Entry.svelte';
+  import EntryDesc from '#routes/(entries)/EntryDesc.svelte';
+  import EntryImage from '#routes/(entries)/EntryImage.svelte';
+  import EntryMain from '#routes/(entries)/EntryMain.svelte';
+  import EntryTitle from '#routes/(entries)/EntryTitle.svelte';
+  import type { ContactLinkEntry } from '#routes/types.ts';
 
   interface Props {
     contactLink: ContactLinkEntry;

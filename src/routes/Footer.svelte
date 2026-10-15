@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
-  import site from '$data/site.json';
-  import ContactLinks from '$routes/contact/ContactLinks.svelte';
+  import site from '#data/site.json';
+  import ContactLinks from '#routes/contact/ContactLinks.svelte';
 </script>
 
 <footer class="site-footer">

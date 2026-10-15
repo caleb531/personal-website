@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import navigation from '$data/navigation.json';
-  import navToggleSvgUrl from '$src/images/nav-toggle.svg';
+  import navigation from '#data/navigation.json';
+  import navToggleSvgUrl from '#src/images/nav-toggle.svg';
 
   // Allowed horizontal placement modes for the floating navigation arrow
   type MenuShapeArrowPlacement = 'center' | 'left' | 'right';

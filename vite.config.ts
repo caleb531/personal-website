@@ -38,13 +38,6 @@ const config: UserConfig = {
       // per-environment basis
       adapter: adapterStatic(),
 
-      // Convenience path aliases
-      alias: {
-        $src: 'src',
-        $data: 'src/data',
-        $images: 'src/images',
-        $routes: 'src/routes'
-      },
       // Content Security Policy
       csp: {
         // SvelteKit adds the quotes around CSP keywords in the generated policy

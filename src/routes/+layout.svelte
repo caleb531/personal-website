@@ -1,12 +1,12 @@
 <script lang="ts">
   import { afterNavigate, disableScrollHandling } from '$app/navigation';
   import { page } from '$app/state';
-  import Footer from '$routes/Footer.svelte';
-  import Head from '$routes/Head.svelte';
-  import Header from '$routes/Header.svelte';
-  import { pageFade, pageFadeDuration } from '$routes/transitions';
+  import Footer from '#routes/Footer.svelte';
+  import Head from '#routes/Head.svelte';
+  import Header from '#routes/Header.svelte';
+  import { pageFade, pageFadeDuration } from '#routes/transitions.ts';
 
-  import '$src/styles/index.scss';
+  import '#src/styles/index.scss';
   import '@fontsource-variable/roboto-flex/index.css';
   let { data, children } = $props();
 

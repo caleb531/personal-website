@@ -1,4 +1,4 @@
-import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '$routes/types.ts';
+import type { ContactLinkEntry, Entry, ProjectEntry, WebsiteEntry } from '#routes/types.ts';
 import path from 'node:path';
 import { parseEntryDataFromString } from './utilities.server';
 
@@ -18,21 +18,22 @@ const entryTypeToDirName: Record<EntryType, string> = {
 // value is a map of that entry type's data files (for this submap, the key is
 // the filepath and the value is a function which returns the project details as
 // JSON)
+// Use project-root paths so the glob keys match the icon paths below
 const entriesByType: EntriesByTypeMap = {
-  contact_link: import.meta.glob('$src/contact-links/*.md', { query: '?raw', import: 'default' }),
-  project: import.meta.glob('$src/projects/*.md', { query: '?raw', import: 'default' }),
-  website: import.meta.glob('$src/websites/*.md', { query: '?raw', import: 'default' })
+  contact_link: import.meta.glob('/src/contact-links/*.md', { query: '?raw', import: 'default' }),
+  project: import.meta.glob('/src/projects/*.md', { query: '?raw', import: 'default' }),
+  website: import.meta.glob('/src/websites/*.md', { query: '?raw', import: 'default' })
 };
 
 // A map where each key name is a specific entry type (e.g. project) and each
 // value is a map of that entry type's icon files (for this submap, the key is the
 // filepath and the value is a function which returns the entry icon as an SVG file)
 const entryIconsByType: Partial<EntriesByTypeMap> = {
-  contact_link: import.meta.glob('$src/images/contact-links/*.svg', {
+  contact_link: import.meta.glob('/src/images/contact-links/*.svg', {
     query: '?url',
     import: 'default'
   }),
-  project: import.meta.glob('$src/images/projects/*.svg', { query: '?url', import: 'default' })
+  project: import.meta.glob('/src/images/projects/*.svg', { query: '?url', import: 'default' })
 };
 
 // Compute the entry ID from the given path

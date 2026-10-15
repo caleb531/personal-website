@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Project from '$routes/projects/Project.svelte';
-  import type { ProjectCategoryData, ProjectEntry } from '$routes/types.ts';
+  import Project from '#routes/projects/Project.svelte';
+  import type { ProjectCategoryData, ProjectEntry } from '#routes/types.ts';
   import { keyBy } from 'es-toolkit';
   import { getProjectArchiveOptions } from '../projectArchiveOptions';
 

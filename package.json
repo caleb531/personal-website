@@ -64,6 +64,10 @@
   },
   "imports": {
     "#lib": "./src/lib/index.js",
-    "#lib/*": "./src/lib/*"
+    "#lib/*": "./src/lib/*",
+    "#src/*": "./src/*",
+    "#data/*": "./src/data/*",
+    "#images/*": "./src/images/*",
+    "#routes/*": "./src/routes/*"
   }
 }

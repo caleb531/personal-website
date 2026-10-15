@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { type TransitionType, noopTransition } from '$routes/transitions';
+  import { type TransitionType, noopTransition } from '#routes/transitions.ts';
   import type { Snippet } from 'svelte';
 
   interface Props {
