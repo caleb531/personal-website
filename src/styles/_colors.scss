@@ -30,6 +30,15 @@
   --color-text-dark: hsl(220, 49%, 13%);
   --color-text-light: hsl(217, 38%, 91%);
 
+  // The deep sapphire blue at the edges of the site background
+  --color-sapphire-950: hsl(219, 100%, 10%);
+  // The richer sapphire blue beneath the background's sheen
+  --color-sapphire-700: hsl(213, 100%, 21%);
+  // The translucent blue light across the site background
+  --color-sapphire-400-alpha-42: hsla(205, 100%, 37%, 0.42);
+  // The same blue without opacity so the sheen fades without darkening
+  --color-sapphire-400-alpha-0: hsla(205, 100%, 37%, 0);
+
   --color-white-alpha-92: hsla(0, 0%, 100%, 0.92);
   --color-white-alpha-88: hsla(0, 0%, 100%, 0.88);
   --color-white-alpha-82: hsla(0, 0%, 100%, 0.82);
@@ -39,7 +48,11 @@
   --color-navy-950-alpha-94: hsla(217, 53%, 8%, 0.94);
   --color-navy-900-alpha-88: hsla(216, 48%, 11%, 0.88);
   --color-navy-900-alpha-78: hsla(216, 48%, 11%, 0.78);
+  // The dark navy surface that lets more of the sapphire background show through
+  --color-navy-900-alpha-42-5: hsla(216, 48%, 11%, 0.425);
   --color-navy-800-alpha-78: hsla(216, 35%, 18%, 0.78);
+  // The lighter navy surface for subtle cards and translucent gradients
+  --color-navy-800-alpha-42-5: hsla(216, 35%, 18%, 0.425);
   --color-navy-800-alpha-72: hsla(216, 35%, 18%, 0.72);
   --color-navy-shadow-light: hsla(215, 32%, 18%, 0.1);
   --color-navy-shadow-medium: hsla(215, 34%, 12%, 0.18);
@@ -60,6 +73,15 @@
     --color-blue-soft: oklch(97.52% 0.024 237.71);
     --color-blue-bright: oklch(64.5% 0.225 260.42);
     --color-turquoise-bright: oklch(75.23% 0.141 231.53);
+
+    // The deep sapphire blue with saturation beyond the sRGB gamut
+    --color-sapphire-950: oklch(18.528654% 0.075107 253.783873);
+    // The richer sapphire blue with saturation beyond the sRGB gamut
+    --color-sapphire-700: oklch(31.808564% 0.11505584 251.469257);
+    // The translucent sheen with saturation beyond the sRGB gamut
+    --color-sapphire-400-alpha-42: oklch(52.005478% 0.15468079 240.854093 / 0.42);
+    // The transparent end of the same wide-gamut sheen
+    --color-sapphire-400-alpha-0: oklch(52.005478% 0.15468079 240.854093 / 0);
   }
 }
 
@@ -67,10 +89,19 @@
   // Semantic colors
   --color-body-background-start: var(--color-navy-950);
   --color-body-background-end: var(--color-navy-900);
+  // The dark edges and fallback color of the fixed site background
+  --color-site-background-deep: var(--color-sapphire-950);
+  // The blue midtone beneath the fixed site background's sheen
+  --color-site-background-blue: var(--color-sapphire-700);
+  // The soft light across the fixed site background
+  --color-site-background-sheen: var(--color-sapphire-400-alpha-42);
+  // The transparent end of the fixed site background's sheen
+  --color-site-background-sheen-clear: var(--color-sapphire-400-alpha-0);
   --color-header-background: var(--color-navy-950-alpha-94);
-  --color-main-background: var(--color-navy-900-alpha-88);
-  --color-card-background: var(--color-navy-900-alpha-78);
-  --color-card-background-subtle: var(--color-navy-800-alpha-78);
+  // The translucent dark surface shared by cards and the main page
+  --color-card-background: var(--color-navy-900-alpha-42-5);
+  // The lighter surface for subtle cards and the main page gradient
+  --color-card-background-subtle: var(--color-navy-800-alpha-42-5);
   --color-card-border: var(--color-slate-300-alpha-18);
   --color-entry-background: var(--color-off-white);
   --color-accent: var(--color-green-light);
