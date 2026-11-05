@@ -9,3 +9,6 @@ allowBuilds:
   esbuild: true
   puppeteer: true
   sharp: true
+auditConfig:
+  ignoreGhsas:
+    - GHSA-gcqx-w48m-w2h4
