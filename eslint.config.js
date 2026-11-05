@@ -34,6 +34,8 @@ export default [
   {
     ignores: [
       '.DS_Store',
+      'playwright-report',
+      'test-results',
       'node_modules',
       'build',
       '.svelte-kit',

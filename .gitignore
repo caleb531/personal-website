@@ -9,3 +9,7 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 *.tsbuildinfo
+
+# Playwright reports and failure artifacts
+/playwright-report
+/test-results

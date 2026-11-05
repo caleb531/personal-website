@@ -49,3 +49,38 @@ As a UI library, Svelte also proves to be a fantastic foundation for the site. T
 
 [svelte]: https://svelte.dev/
 [sveltekit]: https://kit.svelte.dev/
+
+## Browser tests
+
+The page-focused Playwright suite runs Chromium against a production build at
+http://127.0.0.1:4173. Use Node 24 and pnpm 12. Install the browser once (on Linux,
+use `pnpm exec playwright install --with-deps chromium`):
+
+```bash
+pnpm exec playwright install chromium
+```
+
+Build before every test run after changing application code or content. Tests
+start their own preview server and require port 4173 to be free; they do not
+reuse an existing server or build automatically. Disable analytics and use the
+local origin when building, matching CI:
+
+```bash
+PUBLIC_ANALYTICS_SITE_ID='' PUBLIC_SITE_ORIGIN=http://127.0.0.1:4173 DISALLOW_BOTS=1 pnpm build
+pnpm test
+pnpm test test/projects.spec.ts
+pnpm test --workers=2
+pnpm test test/navigation.spec.ts --headed
+pnpm test test/navigation.spec.ts --debug
+pnpm exec playwright show-report
+```
+
+Each test gets a fresh browser context. Content expectations come from Markdown
+and JSON, so ordinary content edits need no test updates. External destinations
+are checked as link attributes without visiting them. Uncaught browser errors
+and console warnings/errors fail tests. Animations remain enabled.
+
+HTML reports never open automatically. Failed tests retain screenshots and
+traces in `test-results/`; inspect a trace with
+`pnpm exec playwright show-trace test-results/<test-directory>/trace.zip`.
+GitHub Actions uploads reports and results for seven days even when tests fail.

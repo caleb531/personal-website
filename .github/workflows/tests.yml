@@ -1,0 +1,48 @@
+name: tests
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [24.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 12
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Build project
+        run: pnpm build
+        env:
+          PUBLIC_ANALYTICS_SITE_ID: ''
+          PUBLIC_SITE_ORIGIN: http://127.0.0.1:4173
+          DISALLOW_BOTS: '1'
+      - name: Run tests
+        run: pnpm test
+      - name: Upload reports and failure artifacts
+        uses: actions/upload-artifact@v4
+        # Upload diagnostics even if tests fail; skip if the workflow was
+        # cancelled
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-results
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
