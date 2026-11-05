@@ -75,6 +75,16 @@
   // ViewBox for the normalized floating navigation SVG artboard
   const menuShapeViewBox = `0 0 ${menuShapeWidth} ${menuShapeHeight}`;
 
+  // Set the menu dimensions through CSS properties because CSP blocks style
+  // attributes in rendered HTML; use the same values as the SVG geometry
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
+  function setMenuShapeStyles(node: HTMLElement) {
+    node.style.setProperty('--menu-arrow-height', menuShapeArrowHeightStyle);
+    node.style.setProperty('--menu-arrow-width', menuShapeArrowWidthStyle);
+    node.style.setProperty('--menu-arrow-offset-x', menuShapeArrowOffsetXStyle);
+    node.style.setProperty('--menu-border-radius', menuShapeBorderRadiusStyle);
+  }
+
   let isNavOpen = $state(false);
 
   // A custom Svelte action to update state a specified element, or any of its
@@ -121,14 +131,7 @@
   >
     <img src={navToggleSvgUrl} alt="" aria-hidden="true" />
   </button>
-  <ul
-    class="site-header-nav-list"
-    id="site-header-nav-list"
-    style:--menu-arrow-height={menuShapeArrowHeightStyle}
-    style:--menu-arrow-width={menuShapeArrowWidthStyle}
-    style:--menu-arrow-offset-x={menuShapeArrowOffsetXStyle}
-    style:--menu-border-radius={menuShapeBorderRadiusStyle}
-  >
+  <ul class="site-header-nav-list" id="site-header-nav-list" use:setMenuShapeStyles>
     <svg
       class="site-header-nav-list-background"
       viewBox={menuShapeViewBox}

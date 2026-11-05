@@ -23,8 +23,9 @@ const config: UserConfig = {
         {
           name: 'strip-announcer-inline-styles',
           markup: ({ content: code }) => {
+            // SvelteKit's root component can put the announcer attributes on separate lines
             code = code.replace(
-              /<div id="svelte-announcer" [\s\S]*?>/,
+              /<div\s+id="svelte-announcer"\s[\s\S]*?>/,
               '<div id="svelte-announcer" aria-live="assertive" aria-atomic="true">'
             );
 
