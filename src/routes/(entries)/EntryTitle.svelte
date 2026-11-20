@@ -12,9 +12,9 @@
 
 <svelte:element this={type} class="entry-title">
   <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-  <a {href}
-    >{#if children}
+  <a {href}>
+    {#if children}
       {@render children()}
-    {/if}</a
-  >
+    {/if}
+  </a>
 </svelte:element>

@@ -11,12 +11,13 @@ import reloadBackend from './plugins/vite-plugin-reload-backend.ts';
 // The build plugins and SvelteKit settings for the website
 const config: UserConfig = {
   plugins: [
+    // Compile Markdown routes before the Svelte plugin processes them
+    mdsvex(mdsvexConfig),
     sveltekit({
       extensions: ['.svelte', ...mdsvexConfig.extensions],
       // Consult https://kit.svelte.dev/docs/integrations#preprocessors
       // for more information about preprocessors
       preprocess: [
-        mdsvex(mdsvexConfig),
         vitePreprocess(),
         // Per <https://github.com/sveltejs/kit/issues/11993>, move the Svelte
         // announcer inline styles to a CSS stylesheet to eliminate CSP issues

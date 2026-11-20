@@ -1,3 +1,7 @@
+[atom]: https://atom.io/
+[vscode]: https://code.visualstudio.com/
+[dotfiles]: https://github.com/caleb531/dotfiles
+
 I'm Caleb Evans, a web developer based in Carlsbad, California. My professional
 career spans the past nine years, although I've been creating for the web since 2010. During that time, I've delivered large e-commerce platforms serving tens
 of thousands of users, as well as sophisticated enterprise rebate systems for
@@ -55,7 +59,3 @@ disheartening experiences with Sonnet, I've found Codex to be the most
 consistently effective model with an impressive understanding of intent. Of
 course, I'm eager to test the future models that emerge from this nascent,
 volatile AI-driven market.
-
-[atom]: https://atom.io/
-[vscode]: https://code.visualstudio.com/
-[dotfiles]: https://github.com/caleb531/dotfiles

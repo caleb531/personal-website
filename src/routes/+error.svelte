@@ -24,8 +24,9 @@
   </p>
   <p>
     In the meantime, watch some
-    <a href="https://www.youtube.com/watch?v=y6GaPkkGZGw">adorable red pandas playing in the snow</a
-    >!
+    <a href="https://www.youtube.com/watch?v=y6GaPkkGZGw">
+      adorable red pandas playing in the snow
+    </a>!
   </p>
 {:else}
   {#if errorMessage}
