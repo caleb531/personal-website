@@ -1,8 +1,8 @@
 <script lang="ts">
   import Project from '#routes/projects/Project.svelte';
+  import type { TransitionType } from '#routes/transitions.ts';
   import type { ProjectCategoryData, ProjectEntry } from '#routes/types.ts';
   import { keyBy } from 'es-toolkit';
-  import type { TransitionType } from '#routes/transitions.ts';
 
   interface Props {
     projects: ProjectEntry[];
@@ -49,8 +49,10 @@
       <h3>{category.title}</h3>
       <span aria-hidden="true">{sortedProjects.length}</span>
     </div>
-    {#each sortedProjects as project (project.id)}
-      <Project {project} {transition} />
-    {/each}
+    <div class="project-category-listing">
+      {#each sortedProjects as project (project.id)}
+        <Project {project} {transition} />
+      {/each}
+    </div>
   </section>
 {/if}

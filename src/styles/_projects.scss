@@ -162,7 +162,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 7px 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-category-border);
   border-radius: calc(var(--panel-radius) - 1px) calc(var(--panel-radius) - 1px) 0 0;
   background: var(--color-category-heading);
   color: var(--color-text-muted);
@@ -172,24 +173,29 @@
   h3 {
     margin: 0;
     color: var(--color-text);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: inherit;
     line-height: 1.15;
 
     @include layout(hybrid) {
-      font-size: 1.625rem;
+      font-size: 1.5rem;
     }
   }
 }
 
-.project-category > .project {
-  border-top: 1px solid var(--color-category-border);
+.project-category-listing {
+  padding: 5px 0;
 }
 
 .project.entry {
   align-items: center;
   gap: 10px;
-  padding: 7px 11px;
+
+  .project-category & {
+    padding: 10px 14px;
+    align-items: flex-start;
+  }
+
   .entry-image {
     // Keep icon tiles square using the same dimensions in both placements
     --project-icon-size: 40px;
