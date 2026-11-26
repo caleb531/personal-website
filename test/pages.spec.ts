@@ -13,10 +13,11 @@ for (const route of routes) {
 
     test('should render meaningful page content', async ({ page }) => {
       await openPage(page, route);
-      await expect(page.locator('.page-content > h2')).toHaveText(/\S/);
-      if (route !== '/') {
-        await expect(page.locator('.page-content > h2')).toBeVisible();
-      }
+      await expect(page.getByRole('heading', { level: 1 })).toHaveText('Caleb Evans');
+      // The first main heading is the hero or the interior page title
+      const heading = page.getByRole('main').getByRole('heading', { level: 2 }).first();
+      await expect(heading).toBeVisible();
+      await expect(heading).toHaveText(/\S/);
       // Read visible content beyond the page heading without changing the document
       expect(
         await page.locator('.page-content > :not(h2)').evaluateAll((nodes) =>
@@ -29,11 +30,14 @@ for (const route of routes) {
       await expect(page.locator('.page-content > :not(h2)').first()).toBeVisible();
     });
 
-    test('should load all displayed images', async ({ page }) => {
-      test.setTimeout(60_000);
-      await openPage(page, route);
-      await assertImagesLoaded(page.locator('body'));
-    });
+    // The text-only About and Privacy Policy routes have no page images
+    if (route !== '/about/' && route !== '/privacy-policy/') {
+      test('should load all displayed images', async ({ page }) => {
+        test.setTimeout(60_000);
+        await openPage(page, route);
+        await assertImagesLoaded(page.locator('body'));
+      });
+    }
   });
 }
 

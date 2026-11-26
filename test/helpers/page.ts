@@ -132,7 +132,7 @@ export async function assertNavigationDestination(
   expect((await getPageSnapshot(page)).main).not.toBe('');
   await expect(page).toHaveTitle(/\S/);
   if (route !== '/') {
-    await expect(page.locator('nav [aria-current="page"] a')).toHaveAttribute('href', route);
+    await expect(page.locator('nav a[aria-current="page"]')).toHaveAttribute('href', route);
   }
   if (baseline) {
     await expect.poll(() => getPageSnapshot(page)).toEqual(baseline);

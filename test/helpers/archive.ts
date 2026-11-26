@@ -2,17 +2,22 @@ import type { Page } from '@playwright/test';
 import { projects } from './data';
 import { expect, waitForPageReady } from './page';
 
-// Return a locator for the archive's search input using its searchbox role
-export function getProjectSearchInput(page: Page) {
-  return page.getByRole('searchbox');
+// Scope archive assertions to the catalog below any featured groups
+export function getProjectArchive(page: Page) {
+  return page.locator('.project-archive');
 }
 
-// Return the IDs of the project cards currently in the page, sorted
+// Return a locator for the archive's search input using its searchbox role
+export function getProjectSearchInput(page: Page) {
+  return getProjectArchive(page).getByRole('searchbox');
+}
+
+// Return the IDs of the project cards currently in the archive, sorted
 // alphabetically so tests can compare which projects appear without depending
 // on their display order
 export async function getRenderedProjectIds(page: Page) {
   return (
-    await page
+    await getProjectArchive(page)
       .locator('.project[data-entry-id]')
       .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-entry-id')))
   ).sort();
@@ -24,15 +29,17 @@ export async function getRenderedProjectIds(page: Page) {
 // remain
 export async function assertProjectResultCount(page: Page) {
   await waitForPageReady(page);
-  // The number of project cards in the page after animations have finished
+  // The number of project cards in the archive after animations have finished
   const total = (await getRenderedProjectIds(page)).length;
   if (total) {
-    await expect(page.locator('.project-search-result-count')).toHaveText(
+    await expect(getProjectArchive(page).locator('.project-search-result-count')).toHaveText(
       `Showing ${total} ${total === 1 ? 'project' : 'projects'}`
     );
   } else {
-    await expect(page.getByText('No Matching Projects', { exact: true })).toBeVisible();
-    await expect(page.locator('.project-category')).toHaveCount(0);
+    await expect(
+      getProjectArchive(page).getByText('No Matching Projects', { exact: true })
+    ).toBeVisible();
+    await expect(getProjectArchive(page).locator('.project-category')).toHaveCount(0);
   }
 }
 

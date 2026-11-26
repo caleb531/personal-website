@@ -12,6 +12,7 @@ import {
 } from './helpers/page';
 import { projects, columns, navigation } from './helpers/data';
 import {
+  getProjectArchive,
   getProjectSearchInput,
   getRenderedProjectIds,
   searchProjects,
@@ -33,7 +34,7 @@ for (const route of ['/', '/projects/']) {
       test.setTimeout(60_000);
       for (const project of projects) {
         // Entry IDs distinguish cards whose editable titles happen to match
-        const card = page.locator(`.project[data-entry-id="${project.id}"]`);
+        const card = getProjectArchive(page).locator(`.project[data-entry-id="${project.id}"]`);
         await expect(card.locator('.entry-title')).toHaveText(project.title);
         if (project.description) {
           await assertVisibleContent(page, card.locator('.entry-desc'), project.description);
@@ -49,10 +50,12 @@ for (const route of ['/', '/projects/']) {
       const populated = columns
         .flat()
         .filter((category) => projects.some((project) => project.category === category.id));
-      await expect(page.locator('.project-category')).toHaveCount(populated.length);
+      await expect(getProjectArchive(page).locator('.project-category')).toHaveCount(
+        populated.length
+      );
       for (const category of populated) {
         // Match categories through their rendered heading rather than relying on their position
-        const group = page
+        const group = getProjectArchive(page)
           .locator('.project-category')
           .filter({ has: page.getByRole('heading', { name: category.title, exact: true }) });
         await expect(group).toHaveCount(1);
@@ -71,10 +74,12 @@ for (const route of ['/', '/projects/']) {
       }
     });
 
-    test('should respect configured category and featured-project ordering', async ({ page }) => {
+    test('should respect configured category and pinned-project ordering', async ({ page }) => {
       for (const [index, column] of columns.entries()) {
         // The configured column and populated categories determine heading order
-        const renderedColumn = page.locator('.project-category-column').nth(index);
+        const renderedColumn = getProjectArchive(page)
+          .locator('.project-category-column')
+          .nth(index);
         // Ignore categories with no entries, as the application does
         const populated = column.filter((category) =>
           projects.some((project) => project.category === category.id)
@@ -205,7 +210,7 @@ for (const route of ['/', '/projects/']) {
 
     test('should show the empty state for an unmatched query', async ({ page }) => {
       expect(await searchProjects(page, await unmatched(page))).toEqual([]);
-      await expect(page.locator('.project-category h3')).toHaveCount(0);
+      await expect(getProjectArchive(page).locator('.project-category h3')).toHaveCount(0);
     });
 
     test('should restore all projects for whitespace-only input', async ({ page }) => {
@@ -217,7 +222,7 @@ for (const route of ['/', '/projects/']) {
     test('should clear search with the clear button', async ({ page }) => {
       await searchProjects(page, projects[0].title);
       // The clear control image is only displayed when there is a query
-      const clear = page.getByRole('button', { name: 'Clear Search Query' });
+      const clear = getProjectArchive(page).getByRole('button', { name: 'Clear Search Query' });
       await assertImagesLoaded(clear);
       await clear.click();
       await expect(getProjectSearchInput(page)).toHaveValue('');
@@ -228,7 +233,7 @@ for (const route of ['/', '/projects/']) {
 
     test('should clear search using the keyboard', async ({ page }) => {
       await searchProjects(page, projects[0].title);
-      await page.getByRole('button', { name: 'Clear Search Query' }).focus();
+      await getProjectArchive(page).getByRole('button', { name: 'Clear Search Query' }).focus();
       await page.keyboard.press('Enter');
       await expect(getProjectSearchInput(page)).toHaveValue('');
       await assertCompleteProjectArchive(page);
@@ -282,3 +287,22 @@ for (const route of ['/', '/projects/']) {
     });
   });
 }
+
+test('should keep featured cards in order while searching and clearing the archive', async ({
+  page
+}) => {
+  await openPage(page, '/');
+  // The three cards appear in the order specified for the homepage
+  const featured = page.getByRole('region', { name: 'Featured projects', exact: true });
+  // Check the same order at every stage without counting featured cards in the archive
+  const titles = ['Connect Four', 'Faith Dashboard', 'iMessage Conversation Analyzer'];
+  await expect(featured.getByRole('heading', { level: 3 })).toHaveText(titles);
+
+  expect(await searchProjects(page, 'zzunmatchedqueryzz')).toEqual([]);
+  await expect(featured.getByRole('heading', { level: 3 })).toHaveText(titles);
+
+  await getProjectArchive(page).getByRole('button', { name: 'Clear Search Query' }).click();
+  await expect(getProjectSearchInput(page)).toBeFocused();
+  await assertCompleteProjectArchive(page);
+  await expect(featured.getByRole('heading', { level: 3 })).toHaveText(titles);
+});

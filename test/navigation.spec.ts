@@ -125,7 +125,7 @@ test.describe('Mobile navigation', () => {
         'aria-expanded',
         'true'
       );
-      await expect(page.locator('#site-header-nav-list')).toHaveCSS('opacity', '1');
+      await expect(page.locator('#site-header-nav-list')).toBeVisible();
       await page
         .getByRole('navigation')
         .getByRole('link', { name: entry.title, exact: true })
@@ -137,20 +137,44 @@ test.describe('Mobile navigation', () => {
   test('should close the menu when focus leaves it', async ({ page }) => {
     await openPage(page, '/');
     await page.getByRole('button', { name: 'Toggle Navigation' }).click();
-    await expect(page.locator('#site-header-nav-list')).toHaveCSS('opacity', '1');
+    await expect(page.locator('#site-header-nav-list')).toBeVisible();
     await page.locator('a[rel="home"]').focus();
     await expect(page.getByRole('button', { name: 'Toggle Navigation' })).toHaveAttribute(
       'aria-expanded',
       'false'
     );
-    await expect(page.locator('#site-header-nav-list')).toHaveCSS('opacity', '0');
+    await expect(page.locator('#site-header-nav-list')).toBeHidden();
+  });
+
+  test('should keep closed links out of the tab order and restore focus on Escape', async ({
+    page
+  }) => {
+    await openPage(page, '/');
+    // The button controls the links without moving focus when it opens
+    const toggle = page.getByRole('button', { name: 'Toggle Navigation' });
+    await toggle.focus();
+    await page.keyboard.press('Tab');
+    await expect(page.locator('.project-group .entry-title a').first()).toBeFocused();
+
+    await toggle.press('Space');
+    await page.keyboard.press('Tab');
+    await expect(page.getByRole('navigation').getByRole('link').first()).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(toggle).toBeFocused();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#site-header-nav-list')).toBeHidden();
+
+    await toggle.press('Enter');
+    await expect(page.locator('#site-header-nav-list')).toBeVisible();
+    await toggle.press('Enter');
+    await expect(page.locator('#site-header-nav-list')).toBeHidden();
   });
 
   test('should navigate using the keyboard', async ({ page }) => {
     await openPage(page, '/');
     await page.getByRole('button', { name: 'Toggle Navigation' }).focus();
     await page.keyboard.press('Enter');
-    await expect(page.locator('#site-header-nav-list')).toHaveCSS('opacity', '1');
+    await expect(page.locator('#site-header-nav-list')).toBeVisible();
     await page.keyboard.press('Tab');
     await expect(
       page.getByRole('navigation').getByRole('link', { name: navigation[0].title, exact: true })
@@ -169,7 +193,7 @@ test.describe('Mobile navigation', () => {
       );
       await expect(page.getByRole('button', { name: 'Toggle Navigation' })).toBeInViewport();
       await page.getByRole('button', { name: 'Toggle Navigation' }).click();
-      await expect(page.locator('#site-header-nav-list')).toHaveCSS('opacity', '1');
+      await expect(page.locator('#site-header-nav-list')).toBeVisible();
       if (route === '/' || route === '/projects/') {
         await page.getByRole('searchbox').fill(projects[0].title);
         await expect(page.getByRole('searchbox')).toHaveValue(projects[0].title);
