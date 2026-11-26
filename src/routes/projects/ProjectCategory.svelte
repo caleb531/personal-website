@@ -44,8 +44,8 @@
 </script>
 
 {#if sortedProjects.length}
-  <section class="project-category panel">
-    <div class="project-category-header" transition:transition>
+  <section class="project-category panel" transition:transition>
+    <div class="project-category-header">
       <h3>{category.title}</h3>
       <span aria-hidden="true">{sortedProjects.length}</span>
     </div>
