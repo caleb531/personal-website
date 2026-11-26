@@ -1,4 +1,15 @@
 {
+  "groups": [
+    {
+      "id": "featured-projects",
+      "title": "Featured projects",
+      "description": "A mix of workday tools and creative experiments",
+      "projects": ["connect-four", "faith-dashboard", "imessage-conversation-analyzer"]
+    }
+  ],
+  "tags": {
+    "built-with-codex": "Built with Codex"
+  },
   "categoriesByColumn": [
     [
       {

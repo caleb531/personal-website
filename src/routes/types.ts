@@ -19,6 +19,8 @@ export type EntryMap<SubEntry> = Record<string, SubEntry>;
 
 export interface ProjectEntry extends Entry {
   category: string;
+  // IDs of the tags displayed on this project
+  tags?: string[];
 }
 export type ProjectMap = EntryMap<ProjectEntry>;
 export type ProjectGroups = Partial<Record<string, ProjectEntry[]>>;
