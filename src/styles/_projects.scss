@@ -1,85 +1,300 @@
 @use 'responsive' as *;
 
-// Styling for projects
-
-.project-archive {
-  // The gap between both project columns
-  --project-list-column-gap: 40px;
-  // If you change this value, you must also update the <img> width/height in
-  // src/routes/projects/Project.svelte
-  --project-icon-width: 80px;
-}
-
 // Prevent scroll jumps when no results are returned from a project search
 [data-page-id='home'],
 [data-page-id='projects'] {
   min-height: 1200px;
 }
 
-.project-search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 28px auto 18px;
-}
-.project-search-container-form {
-  display: inline-flex;
-  align-items: center;
-}
-#project-search-input {
-  width: min(320px, calc(100vw - 70px));
-  max-width: 100%;
-  font-size: var(--font-size-l);
-}
-.project-search-result-count {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-s);
-}
-.project-search-no-results {
-  margin-top: 30px;
-  font-size: var(--font-size-h3);
-}
+.project-group {
+  margin-top: 28px;
 
-.project-category-columns {
-  display: flex;
-  gap: 0 var(--project-list-column-gap);
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  > p {
+    margin: 4px 0 12px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+
   @include layout(hybrid) {
-    flex-direction: column;
+    margin-top: 18px;
+
+    h2 {
+      font-size: 1.375rem;
+    }
+
+    > p {
+      font-size: 0.875rem;
+    }
   }
 }
-.project-category-column {
-  flex-grow: 1;
-  flex-basis: 0;
+
+.project-group-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+
+  @include layout(hybrid) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}
+
+.project-archive-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'title title'
+    'description description'
+    'search count';
+  gap: 10px clamp(20px, 4vw, 58px);
+  align-items: center;
+  margin-bottom: 17px;
+
+  h2 {
+    grid-area: title;
+    margin: 0;
+  }
+
+  @include layout(hybrid) {
+    grid-template-areas:
+      'title count'
+      'description description'
+      'search search';
+    gap: 8px 10px;
+  }
+}
+
+.home-project-archive .project-archive-header h2 {
+  font-size: 2.125rem;
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+
+  @include layout(hybrid) {
+    font-size: clamp(1.5rem, 7.4vw, 2rem);
+  }
+}
+
+.project-archive-description {
+  grid-area: description;
+  margin: 0;
+}
+
+.home-project-archive .project-archive-description {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+
+  @include layout(hybrid) {
+    font-size: 0.9375rem;
+  }
+}
+
+.project-search-form {
+  grid-area: search;
+  .search-input-container {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    min-width: 0;
+    min-height: 49px;
+    font-size: 1rem;
+
+    @include layout(hybrid) {
+      min-height: 44px;
+    }
+  }
+
+  @media (scripting: none) {
+    display: none;
+  }
+}
+
+.project-search-result-count {
+  grid-area: count;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  text-align: right;
+
+  strong {
+    margin: 0;
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  @include layout(hybrid) {
+    font-size: 0.875rem;
+  }
+}
+
+// Preserve the configured category order within each column
+.project-category-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 15px;
+
+  @include layout(hybrid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .project-category {
-  // Fix "jump" when animating project category headings
-  .entry-list-category-title {
+  --panel-surface: var(--color-category-surface);
+  --panel-border: var(--color-category-border);
+  --panel-radius: 10px;
+
+  margin-bottom: 15px;
+}
+
+.project-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: calc(var(--panel-radius) - 1px) calc(var(--panel-radius) - 1px) 0 0;
+  background: var(--color-category-heading);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  h3 {
     margin: 0;
-    --space-v: 22px;
-    padding-top: var(--space-v);
-    margin-bottom: var(--space-v);
-    border-color: var(--color-card-border);
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: inherit;
+    line-height: 1.15;
+
+    @include layout(hybrid) {
+      font-size: 1.625rem;
+    }
   }
 }
 
-.project .entry-image {
-  border-radius: 10px;
-  border: 1px solid var(--color-card-border);
-  // In case we ever apply a gradient to links
-  background: none;
-  background-color: var(--color-entry-background);
-  margin-bottom: 2px;
-  width: var(--project-icon-width);
-  height: var(--project-icon-width);
+.project-category > .project {
+  border-top: 1px solid var(--color-category-border);
 }
 
-.project .entry-desc {
-  @include layout(very-compact) {
-    font-size: var(--font-size-xl);
+.project.entry {
+  align-items: center;
+  gap: 10px;
+  padding: 7px 11px;
+  .entry-image {
+    // Keep icon tiles square using the same dimensions in both placements
+    --project-icon-size: 40px;
+
+    width: var(--project-icon-size);
+    height: var(--project-icon-size);
+    padding: calc(var(--project-icon-size) * 0.17);
+    border-radius: 7px;
+    background: var(--project-icon-background, var(--color-entry-background));
+    box-shadow: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .entry-main {
+    min-width: 0;
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .entry-title {
+    margin: 0 0 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+        text-underline-offset: 0.15em;
+      }
+    }
+  }
+
+  .entry-desc {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.3;
+  }
+}
+
+.project.featured-project {
+  --panel-surface: var(--color-featured-surface);
+  --panel-border: var(--color-featured-border);
+
+  gap: 14px;
+  min-height: 96px;
+  padding: 14px;
+
+  // Repeat the accent colors in display order for groups with more cards
+  &:nth-child(3n + 1) {
+    --panel-surface: var(--color-featured-blue-surface);
+    --panel-border: var(--color-featured-blue-border);
+    --project-icon-background: var(--color-entry-blue-background);
+  }
+
+  &:nth-child(3n) {
+    --panel-surface: var(--color-featured-violet-surface);
+    --panel-border: var(--color-featured-violet-border);
+    --project-icon-background: var(--color-entry-violet-background);
+  }
+
+  .entry-image {
+    --project-icon-size: clamp(45px, 4.6vw, 66px);
+  }
+
+  .entry-title {
+    font-size: 1.125rem;
+  }
+
+  @include layout(hybrid) {
+    gap: 11px;
+    min-height: 0;
+    padding: 9px;
+    border-radius: 9px;
+
+    .entry-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 2px 6px;
+    border: 1px solid var(--color-featured-blue-border);
+    border-radius: 4px;
+    color: var(--color-link);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-normal);
   }
 }

@@ -1,45 +1,45 @@
 @use 'responsive' as *;
 
-// Header styling
-@use 'sass:math';
-
 .site-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  padding: 20px 20px;
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-  }
-  @include layout(very-compact) {
-    padding: 15px;
-    padding-right: 10px;
-  }
-}
+  min-height: 79px;
+  margin-inline: var(--site-gutter);
+  border-bottom: 1px solid var(--color-card-border);
 
-.site-title {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: var(--font-size-site-title);
-  font-weight: var(--font-weight-normal);
-  vertical-align: middle;
+  @include layout(hybrid) {
+    // Let the mobile menu take a second grid row and push the page down
+    grid-template-rows: 65px auto;
+    min-height: 0;
+    border-bottom: 0;
+
+    &::after {
+      content: '';
+      grid-area: 1 / 1 / 2 / -1;
+      align-self: end;
+      border-bottom: 1px solid var(--color-card-border);
+      pointer-events: none;
+    }
+  }
 }
 
 .site-title-link {
-  margin: 0;
+  grid-area: 1 / 1;
+  justify-self: start;
+  color: var(--color-text);
   text-decoration: none;
-  vertical-align: middle;
+  z-index: 1;
 }
 
-.site-header-image {
-  margin-right: 15px;
-  border-radius: 7px;
-  vertical-align: middle;
-  box-shadow: 0 0 10px var(--color-shadow-light);
+.site-title {
+  margin: 0;
+  font-size: 1.625rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  letter-spacing: -0.03em;
+
+  @include layout(hybrid) {
+    font-size: 1.375rem;
+  }
 }

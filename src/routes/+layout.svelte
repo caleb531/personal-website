@@ -45,8 +45,6 @@
   });
 </script>
 
-<div class="site-background"></div>
-
 <Head />
 
 <!--
@@ -67,11 +65,9 @@ the page can help screen reader users jump to the page content; for more, see
   -->
   <article class="page" id="page">
     {#key data.pathname}
-      <section class="page-content" transition:pageFade>
-        {#if page.data.title}
+      <section class="page-content" class:home-page={data.pathname === '/'} transition:pageFade>
+        {#if page.data.title && page.data.id !== 'projects'}
           <h2>{page.data.title}</h2>
-        {:else}
-          <h2 class="accessibility-only">Homepage</h2>
         {/if}
         {#if children}
           {@render children()}

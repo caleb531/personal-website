@@ -2,14 +2,16 @@
   import Project from '#routes/projects/Project.svelte';
   import type { ProjectCategoryData, ProjectEntry } from '#routes/types.ts';
   import { keyBy } from 'es-toolkit';
-  import { getProjectArchiveOptions } from '../projectArchiveOptions';
+  import type { TransitionType } from '#routes/transitions.ts';
 
   interface Props {
     projects: ProjectEntry[];
     category: ProjectCategoryData;
+    // The archive transition to run when a search changes the results
+    transition: TransitionType;
   }
 
-  let { projects, category }: Props = $props();
+  let { projects, category, transition }: Props = $props();
 
   // Promote some projects to the top of the list
   const topProjectsSet = $derived(new Set(category.topProjects));
@@ -39,26 +41,16 @@
       // values
       .filter(Boolean)
   ]);
-
-  const projectOptions = getProjectArchiveOptions();
-  // Svelte 5.55.3 started freezing deriveds whose owner effects are
-  // destroyed/inert. Project cards can remain in the DOM while outroing after a
-  // search removes them, so a local `$derived(projectOptions.transition)` would
-  // belong to the outgoing card and warn as `derived_inert` when Svelte later
-  // reads the transition. Keep this as a plain callback instead: it gives the
-  // transition directive a stable function without latching onto
-  // `noopTransition` as the initial transition value, and it reads the
-  // archive-owned transition callback only when the transition actually starts.
-  const transition = (node: Element) => projectOptions.transition(node);
 </script>
 
 {#if sortedProjects.length}
-  <section class="entry-list project-category">
-    <h3 class="entry-list-category-title" transition:transition>
-      {category.title}
-    </h3>
+  <section class="project-category panel">
+    <div class="project-category-header" transition:transition>
+      <h3>{category.title}</h3>
+      <span aria-hidden="true">{sortedProjects.length}</span>
+    </div>
     {#each sortedProjects as project (project.id)}
-      <Project {project} />
+      <Project {project} {transition} />
     {/each}
   </section>
 {/if}

@@ -1,132 +1,82 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import projectMetadata from '#data/projects.json';
   import SearchInput from '#routes/SearchInput.svelte';
+  import projectMetadata from '#data/projects.json';
   import ProjectCategory from '#routes/projects/ProjectCategory.svelte';
+  import { filterProjects } from '#routes/projects/projectSearch.ts';
   import { noopTransition, projectFadeSlide } from '#routes/transitions.ts';
-  import type { ProjectCategoryMap, ProjectEntry, ProjectGroups } from '#routes/types.ts';
+  import type { ProjectEntry, ProjectGroups } from '#routes/types.ts';
   import { groupBy } from 'es-toolkit';
   import { prefersReducedMotion } from 'svelte/motion';
   import MountObserver from '../MountObserver.svelte';
-  import { setProjectArchiveOptions, type ProjectOptions } from '../projectArchiveOptions';
-  import type { PageData } from './$types';
 
-  // Pregenerate lookup table of project categories IDs to titles so the titles
-  // can be added to the available keyword pool (for the user to search from)
-  const categoriesById: ProjectCategoryMap = projectMetadata.categoriesByColumn.reduce(
-    (categoryMap, categories) => {
-      Object.assign(
-        categoryMap,
-        categories.reduce((map, category) => {
-          return { ...map, [category.id]: category };
-        }, {})
-      );
-      return categoryMap;
-    },
-    {}
-  );
-
-  function filterProjects(projects: ProjectEntry[], searchQuery: string): ProjectEntry[] {
-    if (searchQuery.trim() === '') {
-      return projects;
-    }
-    return projects.filter((project) => {
-      // Build a bank of keywords for this project using its title, description,
-      // and category name
-      const keywords = [
-        ...project.title.toLowerCase().split(' '),
-        categoriesById[project.category.toLowerCase()].title.toLowerCase(),
-        ...project.description
-          .toLowerCase()
-          // Strip all HTML tags from the description
-          .replace(/<(.+?)>/, '')
-          .split(' ')
-      ];
-      // If every word in the search query is contained within a project's
-      // keyword bank (see above), then the project is considered a match
-      return searchQuery
-        .trim()
-        .toLowerCase()
-        .split(' ')
-        .every((searchKeyword) => {
-          return keywords.some((keyword) => {
-            return keyword.includes(searchKeyword);
-          });
-        });
-    });
+  // The archive content supplied by the homepage or the projects page
+  interface Props {
+    projects: ProjectEntry[];
+    title: string;
+    description: string;
   }
 
+  // The full catalog and the heading and description for this archive
+  let { projects, title, description }: Props = $props();
+
+  // A unique heading ID keeps the two archives distinct while routes crossfade
+  const archiveId = $props.id();
+
+  // The current query, including any whitespace typed into the search field
   let searchQuery = $state('');
 
-  let { projects } = page.data as Pick<PageData, 'projects'>;
-  let visibleProjects: typeof projects = $derived(filterProjects(projects, searchQuery));
-  let visibleProjectsByCategory: ProjectGroups = $derived(
+  // The projects that match the current query, before applying category order
+  const visibleProjects = $derived(filterProjects(projects, searchQuery));
+
+  // The matching projects indexed by the category in their frontmatter
+  const visibleProjectsByCategory: ProjectGroups = $derived(
     groupBy(visibleProjects, (project) => project.category)
   );
 
-  // Svelte 5 runs global transitions on mount by default, and in SvelteKit,
-  // there's no way to disable this intro transition on mount; this creates a
-  // CLS issue at the time of hydration, so we need to set a noop transition
-  // initially and only set the actual transition when the component mounts
-  let isMounted = new MountObserver();
-  // Keep this as a callback instead of a `$derived`, since Svelte 5.55.3
-  // started freezing deriveds whose owner effects are destroyed/inert. The
-  // archive can become inert while page navigation outros are still reading
-  // project transitions, so the transition needs to compute from the current
-  // state at call time without belonging to the outgoing archive effect.
+  // Skip global intro transitions during hydration to avoid layout shifts
+  const isMounted = new MountObserver();
+
+  // Read the current state when the transition starts because outgoing cards
+  // can outlive the effects that created them
   const transition = (node: Element) => {
     return isMounted.current && !prefersReducedMotion.current
       ? projectFadeSlide(node)
       : noopTransition(node);
   };
-  const projectOptions: ProjectOptions = { transition };
-  setProjectArchiveOptions(projectOptions);
 </script>
 
-<article class="project-archive">
-  <div class="project-search-container">
-    <form class="project-search-container-form" onsubmit={(event) => event.preventDefault()}>
+<section class="project-archive" aria-labelledby={archiveId}>
+  <div class="project-archive-header">
+    <h2 id={archiveId}>{title}</h2>
+    <p class="project-archive-description">{description}</p>
+    <form class="project-search-form" onsubmit={(event) => event.preventDefault()}>
       <SearchInput
         name="search"
-        id="project-search-input"
         bind:value={searchQuery}
-        placeholder="Search for a project"
-        aria-label="Search for a project; results will update as you type"
+        placeholder="Search projects"
+        aria-label="Search projects; results will update as you type"
       />
     </form>
-    {#if visibleProjects.length}
-      <div
-        class="project-search-result-count"
-        aria-live="polite"
-        aria-atomic="true"
-        transition:transition
-      >
-        {#if visibleProjects.length === 1}
-          Showing 1 project
-        {:else}
-          Showing {visibleProjects.length} projects
-        {/if}
-      </div>
-    {:else}
-      <div
-        class="project-search-no-results"
-        aria-live="polite"
-        aria-atomic="true"
-        transition:transition
-      >
+    <p class="project-search-result-count" aria-live="polite" aria-atomic="true">
+      {#if visibleProjects.length}
+        Showing <strong>{visibleProjects.length}</strong>
+        {visibleProjects.length === 1 ? 'project' : 'projects'}
+      {:else}
         No Matching Projects
-      </div>
-    {/if}
+      {/if}
+    </p>
   </div>
-  <div class="project-category-columns" aria-live="polite" aria-atomic="true">
-    <!-- The categories are not named; they are puely indexed-based, so it's
-    actually correct to use the index as the key here -->
+  <div class="project-category-columns">
     {#each projectMetadata.categoriesByColumn as categories, categoryIndex (categoryIndex)}
       <div class="project-category-column">
         {#each categories as category (category.id)}
-          <ProjectCategory {category} projects={visibleProjectsByCategory[category.id] ?? []} />
+          <ProjectCategory
+            {category}
+            projects={visibleProjectsByCategory[category.id] ?? []}
+            {transition}
+          />
         {/each}
       </div>
     {/each}
   </div>
-</article>
+</section>

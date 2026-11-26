@@ -1,45 +1,81 @@
 @use 'responsive' as *;
 
 .home-intro {
-  display: flex;
-  justify-content: center;
+  // The text takes the first column; the portrait spans both rows
+  --panel-surface: linear-gradient(110deg, var(--color-hero-start) 45%, var(--color-hero-end));
+  --panel-border: var(--color-hero-border);
+  --panel-radius: 18px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(150px, 18vw, 246px);
+  grid-template-rows: auto auto;
+  gap: 20px clamp(20px, 5vw, 70px);
   align-items: center;
-  text-align: left;
-  gap: 28px;
+  padding: 23px clamp(24px, 3vw, 42px);
+
+  h2 {
+    align-self: end;
+    max-width: 8em;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.375rem);
+    font-weight: 750;
+    line-height: 0.99;
+    letter-spacing: -0.045em;
+
+    span {
+      color: var(--color-link);
+    }
+  }
+
+  p {
+    align-self: start;
+    max-width: 34rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    font-weight: var(--font-weight-normal);
+  }
+
   @include layout(hybrid) {
-    align-items: flex-start;
-  }
-  @include layout(compact) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    --panel-radius: 13px;
+
+    grid-template-columns: minmax(0, 1fr) clamp(64px, 19vw, 120px);
+    gap: 18px 16px;
+    padding: 18px clamp(14px, 4.6vw, 25px);
+
+    h2 {
+      grid-column: span 2;
+      font-size: clamp(1.875rem, 10.3vw, 3.75rem);
+    }
+
+    p {
+      align-self: center;
+      font-size: clamp(0.875rem, 3.85vw, 1.125rem);
+      line-height: 1.4;
+    }
   }
 }
-.home-intro-left {
-  flex: 0 0 auto;
-  @include layout(compact) {
-    flex-direction: column;
-  }
-}
+
 .home-intro-photo {
-  width: auto;
-  height: clamp(150px, 22vw, 180px);
+  grid-area: 1 / 2 / 3;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-portrait-border);
   border-radius: 12px;
-  box-shadow: 0 5px 10px var(--color-shadow-medium);
-}
-.home-intro-right > p {
-  max-width: 450px;
-  margin: 0;
-  font-size: var(--font-size-home-intro);
-  letter-spacing: -0.5px;
+
   @include layout(hybrid) {
-    font-size: var(--font-size-home-intro-hybrid);
-  }
-  @include layout(compact) {
-    font-size: var(--font-size-home-intro-compact);
+    grid-area: 2 / 2;
+    border-radius: 8px;
   }
 }
-.home-intro-invitation {
-  color: var(--color-text-muted);
-  font-weight: var(--font-weight-light);
+
+.home-project-archive {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-card-border);
+
+  @include layout(hybrid) {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
 }

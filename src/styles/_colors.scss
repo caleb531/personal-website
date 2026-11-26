@@ -1,92 +1,87 @@
-// Color variables
+// Dark gallery palette and the roles each color serves
 
 :root {
-  // Base colors
-  --color-black: hsl(0, 0%, 7%);
-  --color-gray-light: hsl(0, 0%, 87%);
-  --color-gray-mid: hsl(0, 0%, 75%);
-  --color-gray-dark: hsl(0, 0%, 40%);
-  --color-blue-light: hsl(199.9 100% 32%);
-  --color-blue-mid: hsl(203.48 100% 30%);
-  --color-blue-dark: hsl(202.55 100% 26%);
-  --color-turquoise: hsl(192.79 100% 49%);
-  --color-green-dark: hsl(97, 60%, 37%);
-  --color-green-light: hsl(101, 56%, 56%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-off-white: hsl(210, 40%, 95%);
-  --color-navy-950: hsl(217, 53%, 8%);
-  --color-navy-900: hsl(216, 48%, 11%);
-  --color-navy-850: hsl(216, 42%, 14%);
-  --color-navy-800: hsl(216, 35%, 18%);
-  --color-slate-700: hsl(217, 16%, 36%);
-  --color-slate-500: hsl(216, 15%, 56%);
-  --color-slate-300: hsl(215, 24%, 82%);
-  --color-slate-200: hsl(214, 30%, 91%);
-  --color-blue: hsl(215, 92%, 56%);
-  --color-blue-soft: hsl(211, 100%, 96%);
-  --color-blue-bright: hsl(215, 100%, 62%);
-  --color-turquoise-bright: hsl(199, 95%, 62%);
-  --color-cool-white: hsl(210, 55%, 95%);
-  --color-text-dark: hsl(220, 49%, 13%);
-  --color-text-light: hsl(217, 38%, 91%);
+  // Base colors with sRGB fallbacks
+  --color-white: #fff;
+  --color-ink-green: #111a18;
+  --color-pine-950: #16231d;
+  --color-pine-900: #17271f;
+  --color-pine-850: #1b2e26;
+  --color-pine-800: #203529;
+  --color-pine-750: #22372d;
+  --color-pine-700: #2c4638;
+  --color-pine-600: #31483d;
+  --color-pine-500: #3f5b4e;
+  --color-pine-400: #537162;
+  --color-pine-300: #648173;
+  --color-fern-white: #edf5ee;
+  --color-fern-light: #d9e7df;
+  --color-fern-muted: #b3c7ba;
+  --color-blue-900: #20324b;
+  --color-blue-600: #3d567b;
+  --color-blue-200: #a7c8fb;
+  --color-blue-100: #dbe7fc;
+  --color-violet-900: #272b39;
+  --color-violet-600: #464d63;
+  --color-violet-100: #e3e1f0;
+  --color-black-alpha-28: rgb(0 0 0 / 28%);
 
-  --color-white-alpha-92: hsla(0, 0%, 100%, 0.92);
-  --color-white-alpha-88: hsla(0, 0%, 100%, 0.88);
-  --color-white-alpha-82: hsla(0, 0%, 100%, 0.82);
-  --color-slate-200-alpha-85: hsla(214, 30%, 78%, 0.85);
-  --color-slate-300-alpha-18: hsla(215, 24%, 82%, 0.18);
-  --color-slate-300-alpha-26: hsla(215, 24%, 82%, 0.26);
-  --color-navy-950-alpha-94: hsla(217, 53%, 8%, 0.94);
-  --color-navy-900-alpha-88: hsla(216, 48%, 11%, 0.88);
-  --color-navy-900-alpha-78: hsla(216, 48%, 11%, 0.78);
-  --color-navy-800-alpha-78: hsla(216, 35%, 18%, 0.78);
-  --color-navy-800-alpha-72: hsla(216, 35%, 18%, 0.72);
-  --color-navy-shadow-light: hsla(215, 32%, 18%, 0.1);
-  --color-navy-shadow-medium: hsla(215, 34%, 12%, 0.18);
-  --color-navy-shadow-dark: hsla(215, 40%, 8%, 0.28);
-  --color-black-alpha-28: hsla(0, 0%, 0%, 0.28);
-  --color-black-alpha-44: hsla(0, 0%, 0%, 0.44);
-  --color-black-alpha-62: hsla(0, 0%, 0%, 0.62);
-
-  // Use more vibrant colors on displays that support a p3-based color gamut
+  // Widen the same palette on displays that support Display P3
   @media (color-gamut: p3) {
-    --color-blue-light: oklch(51.09% 0.151 240.76);
-    --color-blue-mid: oklch(46.09% 0.143 246.71);
-    --color-blue-dark: oklch(42.79% 0.139 244.79);
-    --color-green-dark: oklch(64.23% 0.2097 134.93);
-    --color-green-light: oklch(79.135% 0.21658 131.125);
-    --color-turquoise: oklch(76.76% 0.163 226.17);
-    --color-blue: oklch(59.9% 0.219 260.59);
-    --color-blue-soft: oklch(97.52% 0.024 237.71);
-    --color-blue-bright: oklch(64.5% 0.225 260.42);
-    --color-turquoise-bright: oklch(75.23% 0.141 231.53);
+    --color-ink-green: color(display-p3 0.073 0.101 0.094);
+    --color-pine-950: color(display-p3 0.096 0.136 0.115);
+    --color-pine-900: color(display-p3 0.103 0.152 0.123);
+    --color-pine-850: color(display-p3 0.121 0.179 0.15);
+    --color-pine-800: color(display-p3 0.142 0.206 0.163);
+    --color-pine-750: color(display-p3 0.15 0.214 0.178);
+    --color-pine-700: color(display-p3 0.193 0.272 0.222);
+    --color-pine-600: color(display-p3 0.209 0.28 0.241);
+    --color-pine-500: color(display-p3 0.268 0.355 0.308);
+    --color-pine-400: color(display-p3 0.347 0.441 0.387);
+    --color-pine-300: color(display-p3 0.413 0.503 0.453);
+    --color-blue-900: color(display-p3 0.139 0.194 0.289);
+    --color-blue-600: color(display-p3 0.257 0.335 0.475);
+    --color-blue-200: color(display-p3 0.677 0.781 0.973);
+    --color-blue-100: color(display-p3 0.866 0.904 0.983);
+    --color-violet-900: color(display-p3 0.155 0.168 0.221);
+    --color-violet-600: color(display-p3 0.279 0.301 0.383);
+    --color-violet-100: color(display-p3 0.889 0.882 0.938);
   }
-}
 
-:root {
-  // Semantic colors
-  --color-body-background-start: var(--color-navy-950);
-  --color-body-background-end: var(--color-navy-900);
-  --color-header-background: var(--color-navy-950-alpha-94);
-  --color-main-background: var(--color-navy-900-alpha-88);
-  --color-card-background: var(--color-navy-900-alpha-78);
-  --color-card-background-subtle: var(--color-navy-800-alpha-78);
-  --color-card-border: var(--color-slate-300-alpha-18);
-  --color-entry-background: var(--color-off-white);
-  --color-accent: var(--color-green-light);
-  --color-text: var(--color-text-light);
-  --color-text-muted: var(--color-slate-300);
-  --color-link: var(--color-accent);
-  --color-strong: var(--color-accent);
-  --color-strong-start: var(--color-green-light);
-  --color-strong-end: var(--color-green-dark);
-  --color-input-background: var(--color-navy-800-alpha-72);
-  --color-input-border: var(--color-slate-300-alpha-26);
-  --color-input-placeholder: var(--color-slate-300);
-  --color-icon-surface: var(--color-blue);
-  --color-focus-inner: var(--color-blue-bright);
-  --color-focus-outer: var(--color-blue-bright);
+  // Site surfaces, text, and interactive controls
+  --color-body-background: var(--color-ink-green);
+  --color-card-background: var(--color-pine-950);
+  --color-card-background-subtle: var(--color-pine-800);
+  --color-card-border: var(--color-pine-600);
+  --color-text: var(--color-fern-white);
+  --color-text-muted: var(--color-fern-muted);
+  --color-link: var(--color-blue-200);
+  --color-strong: var(--color-text);
+  --color-input-background: var(--color-pine-900);
+  --color-input-border: var(--color-pine-400);
+  --color-input-placeholder: var(--color-text-muted);
+  --color-focus-inner: var(--color-blue-200);
+  --color-focus-outer: var(--color-blue-200);
   --color-shadow-light: var(--color-black-alpha-28);
-  --color-shadow-medium: var(--color-black-alpha-44);
-  --color-shadow-dark: var(--color-black-alpha-62);
+
+  // Shared gallery panels and their variants
+  --color-hero-start: var(--color-pine-850);
+  --color-hero-end: var(--color-pine-700);
+  --color-hero-border: var(--color-pine-500);
+  --color-portrait-border: var(--color-pine-300);
+  --color-category-surface: var(--color-card-background);
+  --color-category-heading: var(--color-card-background-subtle);
+  --color-category-border: var(--color-card-border);
+  --color-menu-surface: var(--color-pine-900);
+  --color-menu-border: var(--color-pine-500);
+  --color-menu-contact-surface: var(--color-pine-700);
+  --color-featured-surface: var(--color-pine-750);
+  --color-featured-border: var(--color-pine-500);
+  --color-featured-blue-surface: var(--color-blue-900);
+  --color-featured-blue-border: var(--color-blue-600);
+  --color-featured-violet-surface: var(--color-violet-900);
+  --color-featured-violet-border: var(--color-violet-600);
+  --color-entry-background: var(--color-fern-light);
+  --color-entry-blue-background: var(--color-blue-100);
+  --color-entry-violet-background: var(--color-violet-100);
 }

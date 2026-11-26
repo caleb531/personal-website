@@ -1,0 +1,10 @@
+// Apply panel colors and shape without assigning a layout
+@mixin panel {
+  border: 1px solid var(--panel-border, var(--color-card-border));
+  border-radius: var(--panel-radius, 12px);
+  background: var(--panel-surface, var(--color-card-background));
+}
+
+.panel {
+  @include panel;
+}

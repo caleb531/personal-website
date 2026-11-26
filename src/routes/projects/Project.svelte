@@ -5,37 +5,48 @@
   import EntryMain from '#routes/(entries)/EntryMain.svelte';
   import EntryTitle from '#routes/(entries)/EntryTitle.svelte';
   import type { ProjectEntry } from '#routes/types.ts';
-  import { getProjectArchiveOptions } from '../projectArchiveOptions';
+  import { getProjectTagLabels } from '#routes/projects/projectSearch.ts';
+  import { noopTransition, type TransitionType } from '#routes/transitions.ts';
 
+  // The project and its presentation within the gallery or archive
   interface Props {
     project: ProjectEntry;
+    isFeatured?: boolean;
+    transition?: TransitionType;
   }
 
-  let { project }: Props = $props();
-  const projectOptions = getProjectArchiveOptions();
-  // Svelte 5.55.3 started freezing deriveds whose owner effects are
-  // destroyed/inert. Project cards can remain in the DOM while outroing after a
-  // search removes them, so a local `$derived(projectOptions.transition)` would
-  // belong to the outgoing card and warn as `derived_inert` when Svelte later
-  // reads the transition. Keep this as a plain callback instead: it gives the
-  // transition directive a stable function without latching onto
-  // `noopTransition` as the initial transition value, and it reads the
-  // archive-owned transition callback only when the transition actually starts.
-  const transition = (node: Element) => projectOptions.transition(node);
+  // Featured cards stay in place while the archive animates search results
+  let { project, isFeatured = false, transition = noopTransition }: Props = $props();
+
+  // The display labels for any tags assigned to this project
+  const tags = $derived(getProjectTagLabels(project));
 </script>
 
-<Entry type="project" id={project.id} {transition}>
+<Entry
+  type={isFeatured ? 'project featured-project panel' : 'project'}
+  id={project.id}
+  {transition}
+>
   <EntryImage href={project.direct_url} hiddenFromAccessibility>
-    <img src={project.iconUrl} alt="" width={80} height={80} loading="lazy" />
+    <img aria-hidden="true" src={project.iconUrl} alt="" width={80} height={80} loading="lazy" />
   </EntryImage>
   <EntryMain>
-    <EntryTitle href={project.direct_url} type="h4">{project.title}</EntryTitle>
+    <EntryTitle href={project.direct_url} type={isFeatured ? 'h3' : 'h4'}>
+      {project.title}
+    </EntryTitle>
 
     {#if project.description}
       <!-- Because the entry description is coming directly from static JSON
       files and is not sourced from user input, there is no XSS risk -->
       <!-- eslint-disable-next-line svelte/no-at-html-tags -->
       <EntryDesc>{@html project.description}</EntryDesc>
+    {/if}
+    {#if tags.length}
+      <ul class="project-tags">
+        {#each tags as tag (tag)}
+          <li>{tag}</li>
+        {/each}
+      </ul>
     {/if}
   </EntryMain>
 </Entry>
