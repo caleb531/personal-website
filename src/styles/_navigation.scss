@@ -28,13 +28,19 @@
     color: var(--color-text-muted);
     font-size: 1rem;
     font-weight: var(--font-weight-normal);
-    text-decoration: none;
+    // Keep the underline present so its color can fade in and out
+    text-decoration: underline transparent;
+    text-underline-offset: 0.3em;
+    transition-property: opacity, box-shadow, color, text-decoration-color;
 
     &[aria-current='page'],
     &:hover {
       color: var(--color-text);
-      text-decoration: underline;
-      text-underline-offset: 0.3em;
+      text-decoration-color: var(--color-text);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition-property: opacity, box-shadow;
     }
   }
 

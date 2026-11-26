@@ -228,12 +228,18 @@
 
     a {
       color: var(--color-text);
-      text-decoration: none;
+      // Keep the underline present so its color can fade in and out
+      text-decoration: underline transparent;
+      text-underline-offset: 0.15em;
+      transition-property: box-shadow, text-decoration-color;
 
       &:hover,
       &:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 0.15em;
+        text-decoration-color: var(--color-text);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        transition-property: box-shadow;
       }
     }
   }
