@@ -38,13 +38,6 @@
     }
   }
 
-  .contact-nav-link {
-    padding-inline: 17px;
-    border-radius: 7px;
-    background: var(--color-menu-contact-surface);
-    color: var(--color-text);
-  }
-
   @include layout(hybrid) {
     display: none;
     grid-row: 2;
@@ -60,10 +53,8 @@
       border-top: 1px solid var(--color-card-border);
     }
 
-    a,
-    .contact-nav-link {
+    a {
       padding: 12px 8px;
-      background: none;
       color: var(--color-text);
     }
 

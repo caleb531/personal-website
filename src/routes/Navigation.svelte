@@ -66,7 +66,6 @@
         <a
           href={resolve(link.url as Path)}
           aria-current={link.url === page.url.pathname ? 'page' : null}
-          class:contact-nav-link={link.url === '/contact/'}
           tabindex={0}
           onclick={closeNavigation}
         >
