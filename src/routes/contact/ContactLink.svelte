@@ -26,7 +26,14 @@
       <EntryDesc>{@html contactLink.description}</EntryDesc>
     </EntryMain>
   {:else}
-    <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-    <a href={contactLink.direct_url}>{contactLink.title}</a>
+    <EntryImage href={contactLink.direct_url} title={contactLink.title}>
+      <img
+        src={contactLink.iconUrl}
+        alt={contactLink.title}
+        width={40}
+        height={40}
+        loading="lazy"
+      />
+    </EntryImage>
   {/if}
 </Entry>

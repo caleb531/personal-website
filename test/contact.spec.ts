@@ -30,7 +30,7 @@ test.describe('Contact page and footer', () => {
     }
   });
 
-  test('should render configured footer contacts as text in order', async ({ page }) => {
+  test('should render all configured compact footer contacts', async ({ page }) => {
     await openPage(page, '/');
     expect(
       await page
@@ -38,13 +38,12 @@ test.describe('Contact page and footer', () => {
         .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-entry-id')))
     ).toEqual(contacts.map((contact) => contact.id));
     for (const contact of contacts) {
-      // Each compact link exposes its visible title
+      // Compact links expose their names through image alternative text
       const link = page
         .getByRole('contentinfo')
         .getByRole('link', { name: contact.title, exact: true });
       await expect(link).toHaveAttribute('href', contact.direct_url);
-      await expect(link).toHaveText(contact.title);
-      await expect(link.locator('img, svg')).toHaveCount(0);
+      await assertEntryIcon(link, contact.id);
     }
   });
 
