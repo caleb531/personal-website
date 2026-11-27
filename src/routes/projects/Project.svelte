@@ -1,7 +1,6 @@
 <script lang="ts">
   import Entry from '#routes/(entries)/Entry.svelte';
   import EntryDesc from '#routes/(entries)/EntryDesc.svelte';
-  import EntryImage from '#routes/(entries)/EntryImage.svelte';
   import EntryMain from '#routes/(entries)/EntryMain.svelte';
   import EntryTitle from '#routes/(entries)/EntryTitle.svelte';
   import type { ProjectEntry } from '#routes/types.ts';
@@ -27,9 +26,9 @@
   id={project.id}
   {transition}
 >
-  <EntryImage href={project.direct_url} hiddenFromAccessibility>
+  <div class="entry-image">
     <img aria-hidden="true" src={project.iconUrl} alt="" width={80} height={80} loading="lazy" />
-  </EntryImage>
+  </div>
   <EntryMain>
     <EntryTitle href={project.direct_url} type={isFeatured ? 'h3' : 'h4'}>
       {project.title}

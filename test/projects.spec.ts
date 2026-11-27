@@ -40,9 +40,37 @@ for (const route of ['/', '/projects/']) {
           await assertVisibleContent(page, card.locator('.entry-desc'), project.description);
         }
         await expect(card.locator('.entry-title a')).toHaveAttribute('href', project.direct_url);
-        await expect(card.locator('.entry-image')).toHaveAttribute('href', project.direct_url);
         await assertEntryIcon(card, project.id);
       }
+    });
+
+    test('should stretch the title link over the icon and keep description links clickable', async ({
+      page
+    }) => {
+      // This project has an inline link to the original card game
+      const card = getProjectArchive(page).locator('[data-entry-id="three-of-a-crime"]');
+      const title = card.locator('.entry-title a');
+      const icon = card.locator('.entry-image');
+      const inlineLink = card.locator('.entry-desc a');
+
+      await icon.scrollIntoViewIfNeeded();
+      await expect
+        .poll(() =>
+          icon.evaluate((node) => {
+            const { x, y, width, height } = node.getBoundingClientRect();
+            return document
+              .elementFromPoint(x + width / 2, y + height / 2)
+              ?.closest('a')
+              ?.getAttribute('href');
+          })
+        )
+        .toBe(await title.getAttribute('href'));
+
+      await expect(inlineLink).toHaveAttribute(
+        'href',
+        'https://gamewright.com/product/Three-of-a-Crime'
+      );
+      await inlineLink.click({ trial: true });
     });
 
     test('should render projects under their configured categories', async ({ page }) => {
